@@ -132,12 +132,6 @@ int main(int argc, char* argv[])
 		ps5log::Open(ps5paths::kLogs);
 	ps5log::Line("[main] firmware {}", Firmware());
 	ps5log::Line("[main] {}", privileges.summary);
-	{
-		bool image = false;
-		const std::string source = ps5paths::MountSource(&image);
-		ps5log::Line("[main] app folder {}{}", ps5paths::AppDir(),
-			!source.empty() ? fmt::format(" (mounted from {})", source) : image ? " (mounted from an image)" : "");
-	}
 	if (privileges.filesystem)
 		DumpImports();
 	ps5crash::Install(); // Cemu's own replaces it, in a session Cemu runs in
@@ -158,6 +152,13 @@ int main(int argc, char* argv[])
 	// still before any thread: the game folders and drives the HEN may have left out (#16)
 	if (privileges.filesystem)
 		ps5privilege::ReachFolders({settings.gamesFolder, settings.n3ds.gamesFolder});
+	{
+		// the app's folder decided here, the process's root now final (app/paths.h, #26)
+		bool image = false;
+		const std::string source = ps5paths::MountSource(&image);
+		ps5log::Line("[main] app folder {}{}", ps5paths::AppDir(),
+			!source.empty() ? fmt::format(" (mounted from {})", source) : image ? " (mounted from an image)" : "");
+	}
 	ps5threads::SetPinning(settings.pinCpuThreads);
 	ps5log::ForwardDriverMessages();
 	// before either emulator's Vulkan driver starts, which reads it once

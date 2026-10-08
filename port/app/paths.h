@@ -54,19 +54,24 @@ namespace ps5paths
 	// sees the console's root, which has no /app0: there the app is read where the PS5 mounts it,
 	// which follows ShadowMountPlus wherever it found the app (an install on a USB drive with an older
 	// copy left in /data/homebrew included), else where it is usually installed, or where the sandbox
-	// mounts it from (as ProsperoEden's storage_paths.h finds its own). Decided on first use, which
-	// comes after ps5privilege::Acquire.
+	// mounts it from (as ProsperoEden's storage_paths.h finds its own). Looked for afresh each call.
+	inline std::string FindAppDir()
+	{
+		for (const char* candidate : {"/app0", kSystemMount, kInstallDir, "/mnt/sandbox/PPSA99360_000/app0"})
+		{
+			struct stat info{};
+			if (stat((std::string(candidate) + "/eboot.bin").c_str(), &info) == 0 && S_ISREG(info.st_mode))
+				return std::string(candidate);
+		}
+		return std::string(kInstallDir);
+	}
+
+	// FindAppDir, decided on first use, which comes after ps5privilege::ReachFolders: it and
+	// ps5privilege::Acquire may have the elevation helper move the process to the console's root,
+	// which takes /app0 away (#26: an /app0 decided before that left the launcher without its font)
 	inline const std::string& AppDir()
 	{
-		static const std::string directory = [] {
-			for (const char* candidate : {"/app0", kSystemMount, kInstallDir, "/mnt/sandbox/PPSA99360_000/app0"})
-			{
-				struct stat info{};
-				if (stat((std::string(candidate) + "/eboot.bin").c_str(), &info) == 0 && S_ISREG(info.st_mode))
-					return std::string(candidate);
-			}
-			return std::string(kInstallDir);
-		}();
+		static const std::string directory = FindAppDir();
 		return directory;
 	}
 

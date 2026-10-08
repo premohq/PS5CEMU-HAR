@@ -226,8 +226,9 @@ namespace ps5privilege
 			return;
 		// a HEN that opened /data but not the drives (games on USB on 13.x, #16): the bundled helper
 		// gives the whole filesystem, as when /data is out of reach. A jailbroken process has no
-		// /app0, so the helper is asked for where the app is (installed on a USB drive, say).
-		const std::string helper = ps5paths::AppDir() + "/sandbox-elevator.elf";
+		// /app0, so the helper is asked for where the app is (installed on a USB drive, say). Not
+		// AppDir(): it would be decided as /app0, which the helper is about to take away.
+		const std::string helper = ps5paths::FindAppDir() + "/sandbox-elevator.elf";
 		const auto status = elevation::request(elevation::Capability::filesystem, helper.c_str());
 		const bool reached = !Refused(refused);
 		ps5log::Line("[privilege] {} could not be read; elevation helper ({}): {}, {}", refused, helper, (int)status,

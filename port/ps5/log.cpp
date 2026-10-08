@@ -86,12 +86,14 @@ namespace ps5log
 		std::lock_guard lock(s_mutex);
 		if (s_file)
 			return;
+		std::string root = folder;
+		root.erase(root.find_last_of('/'));
+		// the folder above too, which a first start (#26: a fresh install) has not made yet
+		mkdir(root.c_str(), 0777);
 		mkdir(folder, 0777);
 		s_path = std::string(folder) + "/boot.log";
 		Rotate(s_path, folder, "boot", ".log");
 		// Cemu's log.txt, one folder up, is rewritten each start: kept beside the boot logs it goes with
-		std::string root = folder;
-		root.erase(root.find_last_of('/'));
 		Rotate(root + "/log.txt", folder, "cemu", ".txt");
 		s_file = fopen(s_path.c_str(), "w");
 		if (s_file)
