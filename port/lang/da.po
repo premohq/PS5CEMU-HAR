@@ -2275,556 +2275,558 @@ msgid "Linear"
 msgstr "Lineær"
 
 msgid "Setup theme"
-msgstr ""
+msgstr "Opsætningstema"
 
 msgid "Language"
-msgstr ""
+msgstr "Sprog"
 
 msgid "The language of the menus: the PS5's own, unless you choose another."
-msgstr ""
+msgstr "Menuernes sprog: PS5’ens, medmindre du vælger et andet."
 
 msgid "Display"
-msgstr ""
+msgstr "Visning"
 
 msgid "How the launcher looks and where it opens."
-msgstr ""
+msgstr "Hvordan startprogrammet ser ud, og hvor det åbner."
 
 msgid "Sound"
-msgstr ""
+msgstr "Lyd"
 
 msgid "The menus' music and sounds, and the games' volume."
-msgstr ""
+msgstr "Menuernes musik og lyde, og spillenes lydstyrke."
 
 msgid "The DualSense, for every player."
-msgstr ""
+msgstr "DualSense, til hver spiller."
 
 msgid "Games and folders"
-msgstr ""
+msgstr "Spil og mapper"
 
 msgid "Where each side's games are."
-msgstr ""
+msgstr "Hvor hver sides spil ligger."
 
 msgid "Online and updates"
-msgstr ""
+msgstr "Online og opdateringer"
 
 msgid "Box art, graphic packs and PS5CEMU-HAR itself."
-msgstr ""
+msgstr "Omslag, grafikpakker og PS5CEMU-HAR selv."
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Tilgængelighed"
 
 msgid "Larger text, more contrast, less motion."
-msgstr ""
+msgstr "Større tekst, mere kontrast, mindre bevægelse."
 
 msgid "For every Wii U game."
-msgstr ""
+msgstr "Til alle Wii U-spil."
 
 msgid "What each player's DualSense is to the Wii U."
-msgstr ""
+msgstr "Hvad hver spillers DualSense er for Wii U’en."
 
 msgid "Cemu's emulated portals."
-msgstr ""
+msgstr "Cemus emulerede portaler."
 
 msgid "Into the Wii U's storage."
-msgstr ""
+msgstr "Til Wii U’ens lager."
 
 msgid "For every 3DS game."
-msgstr ""
+msgstr "Til alle 3DS-spil."
 
 msgid "Screens and borders"
-msgstr ""
+msgstr "Skærme og rammer"
 
 msgid "For every 3DS game; in a game, its menu changes them at once."
-msgstr ""
+msgstr "Til alle 3DS-spil; i et spil ændrer dets menu dem med det samme."
 
 msgid "The DualSense as the 3DS."
-msgstr ""
+msgstr "DualSense som 3DS."
 
 msgid "System and Home Menu"
-msgstr ""
+msgstr "System og HOME-menu"
 
 msgid "The emulated 3DS's region and language."
-msgstr ""
+msgstr "Den emulerede 3DS’ens region og sprog."
 
 msgid "Into the 3DS's storage."
-msgstr ""
+msgstr "Til 3DS’ens lager."
 
 msgid "Play from your 3DS, over your network."
-msgstr ""
+msgstr "Spil fra din 3DS, via dit netværk."
 
 msgid "Why something does not work, before anything else."
-msgstr ""
+msgstr "Hvorfor noget ikke virker, før alt andet."
 
 msgid "Logs, caches and what this session is."
-msgstr ""
+msgstr "Logfiler, cacher, og hvad denne session er."
 
 msgctxt "app"
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 msgid "Who made what."
-msgstr ""
+msgstr "Hvem der lavede hvad."
 
 msgid "Checking GitHub…"
-msgstr ""
+msgstr "Tjekker GitHub…"
 
 msgid "Downloading: {0}"
-msgstr ""
+msgstr "Henter: {0}"
 
 msgid "Downloading: {0} MB"
-msgstr ""
+msgstr "Henter: {0} MB"
 
 msgid "Installing…"
-msgstr ""
+msgstr "Installerer…"
 
 msgid "Up to date: {0}"
-msgstr ""
+msgstr "Opdateret: {0}"
 
 msgid "Installed: {0}"
-msgstr ""
+msgstr "Installeret: {0}"
 
 msgid "Cross to download"
-msgstr ""
+msgstr "Kryds for at hente"
 
 msgid "{0}: Cross to install"
-msgstr ""
+msgstr "{0}: Kryds for at installere"
 
 msgid "Downloading…"
-msgstr ""
+msgstr "Henter…"
 
 msgid "Checking the download…"
-msgstr ""
+msgstr "Tjekker overførslen…"
 
 msgid "Installed: Cross to restart"
-msgstr ""
+msgstr "Installeret: Kryds for at genstarte"
 
 msgid "Cross to check"
-msgstr ""
+msgstr "Kryds for at tjekke"
 
 msgid "Cross goes to the 3DS side for it."
-msgstr ""
+msgstr "Kryds går til 3DS-siden for det."
 
 msgid "Cross goes to the Wii U side for it."
-msgstr ""
+msgstr "Kryds går til Wii U-siden for det."
 
 msgid "On the 3DS side"
-msgstr ""
+msgstr "På 3DS-siden"
 
 msgid "On the Wii U side"
-msgstr ""
+msgstr "På Wii U-siden"
 
 msgid "Cemu did not start, so this cannot be changed."
-msgstr ""
+msgstr "Cemu startede ikke, så dette kan ikke ændres."
 
 msgid "The menus' language. Game names and descriptions stay as they are."
-msgstr ""
+msgstr "Menuernes sprog. Spillenes navne og beskrivelser forbliver, som de er."
 
 msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
-msgstr ""
+msgstr "PS5CEMU-HAR taler PS5’ens sprog, medmindre du vælger et andet her; opsætningstjekket ved første start giver det samme valg. Spilnavne, deres beskrivelser og grafikpakker kommer fra GameTDB, spillene og pakkernes forfattere og forbliver, som de skrev dem."
 
 msgid "Start on"
-msgstr ""
+msgstr "Start på"
 
 msgid "The side last used"
-msgstr ""
+msgstr "Siden, der sidst blev brugt"
 
 msgid "Ask each time"
-msgstr ""
+msgstr "Spørg hver gang"
 
 msgid "Where PS5CEMU-HAR opens."
-msgstr ""
+msgstr "Hvor PS5CEMU-HAR åbner."
 
 msgid ""
 "The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
 "Ask each time: it shows the two sides first, as the start screen did."
 msgstr ""
+"Siden, der sidst blev brugt: PS5CEMU-HAR åbner på den side, du var på, og efter et spil på det spil.\n"
+"Spørg hver gang: den viser de to sider først, som startskærmen gjorde."
 
 msgid "Game pictures behind menus"
-msgstr ""
+msgstr "Spilbilleder bag menuerne"
 
 msgid "The focused game's cover, softened, behind the screens."
-msgstr ""
+msgstr "Det valgte spils omslag, blødgjort, bag skærmene."
 
 msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
-msgstr ""
+msgstr "Det valgte spils billede fylder skærmen bag menuerne, blødgjort og dæmpet, så det at flytte markeringen ændrer hele skærmen. Fra: kun spillets farver."
 
 msgid "Launcher music"
-msgstr ""
+msgstr "Startprogrammets musik"
 
 msgid "The music under the menus."
-msgstr ""
+msgstr "Musikken under menuerne."
 
 msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
-msgstr ""
+msgstr "Startprogrammets egen musik, i ånden af en konsols opsætningsskærm, eller ingen."
 
 msgid "Music volume"
-msgstr ""
+msgstr "Musiklydstyrke"
 
 msgid "How loud the menus' music is."
-msgstr ""
+msgstr "Hvor højt menuernes musik spiller."
 
 msgid "How loud the launcher's music is. Left and Right change it by 10%."
-msgstr ""
+msgstr "Hvor højt startprogrammets musik spiller. Venstre og højre ændrer den med 10 %."
 
 msgid "Menu sounds"
-msgstr ""
+msgstr "Menulyde"
 
 msgid "The sounds of moving and choosing."
-msgstr ""
+msgstr "Lydene, når man flytter og vælger."
 
 msgid "The launcher's sounds as you move, choose and go back."
-msgstr ""
+msgstr "Startprogrammets lyde, når du flytter, vælger og går tilbage."
 
 msgid "Wii U games' volume"
-msgstr ""
+msgstr "Wii U-spillenes lydstyrke"
 
 msgid "The Wii U games' sound."
-msgstr ""
+msgstr "Wii U-spillenes lyd."
 
 msgid "The Wii U games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Wii U-spillenes lyd. Venstre og højre ændrer den med 10 %."
 
 msgid "3DS games' volume"
-msgstr ""
+msgstr "3DS-spillenes lydstyrke"
 
 msgid "The 3DS games' sound."
-msgstr ""
+msgstr "3DS-spillenes lyd."
 
 msgid "The 3DS games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "3DS-spillenes lyd. Venstre og højre ændrer den med 10 %."
 
 msgid "GamePad speaker"
-msgstr ""
+msgstr "GamePad-højttaler"
 
 msgid "The Wii U GamePad's own sound, on the DualSense."
-msgstr ""
+msgstr "Wii U GamePad’ens egen lyd, på DualSense."
 
 msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
-msgstr ""
+msgstr "Lydene, som spil afspiller i Wii U GamePad’ens højttaler, fra spiller 1’s DualSense-højttaler. Mange spil sender også al deres lyd derhen, så den er slået fra, medmindre du vil have den. Gælder fra næste spil."
 
 msgid "The DualSense's rumble, in games and in the launcher."
-msgstr ""
+msgstr "DualSense-vibrationen, i spil og i startprogrammet."
 
 msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
-msgstr ""
+msgstr "Fra: DualSense vibrerer aldrig, hverken for et spils vibration eller for startprogrammets."
 
 msgid "Wii U players"
-msgstr ""
+msgstr "Wii U-spillere"
 
 msgid "Each player's emulated controller, motion and buttons."
-msgstr ""
+msgstr "Hver spillers emulerede controller, bevægelse og knapper."
 
 msgid "What the Wii U sees in each player's hands."
-msgstr ""
+msgstr "Hvad Wii U’en ser i hver spillers hænder."
 
 msgid "3DS controls"
-msgstr ""
+msgstr "3DS-styring"
 
 msgid "Motion, deadzone and buttons."
-msgstr ""
+msgstr "Bevægelse, dødzone og knapper."
 
 msgid "Where your Wii U games are. Cross picks another."
-msgstr ""
+msgstr "Hvor dine Wii U-spil ligger. Kryds vælger en anden mappe."
 
 msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
-msgstr ""
+msgstr "Dine Wii U-spil: .wua, .wud, .wux eller mapper med code, content og meta. Krypterede .wud og .wux skal have deres nøgler i /data/ps5cemu/keys.txt."
 
 msgid "Where your 3DS games are. Cross picks another."
-msgstr ""
+msgstr "Hvor dine 3DS-spil ligger. Kryds vælger en anden mappe."
 
 msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Dine 3DS-spil: .3ds eller .cci, .cxi, .3dsx og Azahars komprimerede dumps, dekrypterede, her eller i undermapper. CIA-filer installeres (Installer CIA-filer). Krypterede dumps skal have 3DS’ens aes_keys.txt i /data/ps5cemu/azahar/sysdata."
 
 msgid "Look for games now"
-msgstr ""
+msgstr "Led efter spil nu"
 
 msgid "Looking…"
-msgstr ""
+msgstr "Leder…"
 
 msgid "This side's folder, again."
-msgstr ""
+msgstr "Denne sides mappe, igen."
 
 msgid "Looks through this side's folder again, as it does each time the side opens."
-msgstr ""
+msgstr "Gennemgår denne sides mappe igen, som hver gang siden åbnes."
 
 msgid "Wii U disc keys"
-msgstr ""
+msgstr "Wii U-disknøgler"
 
 msgid "keys.txt found"
-msgstr ""
+msgstr "keys.txt fundet"
 
 msgid "keys.txt missing"
-msgstr ""
+msgstr "keys.txt mangler"
 
 msgid "Only encrypted .wud and .wux need them."
-msgstr ""
+msgstr "Kun krypterede .wud og .wux skal bruge dem."
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
-msgstr ""
+msgstr "Krypterede .wud- og .wux-dumps skal have deres disknøgler i /data/ps5cemu/keys.txt, én pr. linje. Dekrypterede dumps, .wua og mapper skal ikke bruge nogen."
 
 msgid "Box art from GameTDB"
-msgstr ""
+msgstr "Omslag fra GameTDB"
 
 msgid "Covers for the library, downloaded once."
-msgstr ""
+msgstr "Omslag til biblioteket, hentet én gang."
 
 msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
-msgstr ""
+msgstr "Første gang et spil dukker op, hentes dets omslag fra GameTDB (art.gametdb.com) ud fra id’et på æsken. Fra: intet mere hentes."
 
 msgid "Community graphic packs"
-msgstr ""
+msgstr "Fællesskabets grafikpakker"
 
 msgid "Cross checks GitHub for newer ones."
-msgstr ""
+msgstr "Kryds leder efter nyere på GitHub."
 
 msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
-msgstr ""
+msgstr "Cemus grafikpakker fra fællesskabet, fra GitHubs seneste udgivelse, når den er nyere end de installerede. Pakkerne, der følger med appen, bliver som reserve."
 
 msgid "PS5CEMU-HAR updates"
-msgstr ""
+msgstr "PS5CEMU-HAR-opdateringer"
 
 msgid "Cross checks GitHub for a newer version."
-msgstr ""
+msgstr "Kryds leder efter en nyere version på GitHub."
 
 msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "PS5CEMU-HAR spørger GitHub om sin seneste udgivelse, hver gang den starter. Kryds spørger igen eller installerer den nyere version, den fandt: udgivelsens filer hentes, tjekkes og sættes i stedet for disse, og appen genstarter. Dine spil, gemte data og indstillinger forbliver, som de er."
 
 msgid "Larger text"
-msgstr ""
+msgstr "Større tekst"
 
 msgid "Every size of text a step up."
-msgstr ""
+msgstr "Hver tekststørrelse et trin større."
 
 msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
-msgstr ""
+msgstr "Hver tekststil et trin større: billedtekster fra 20 til 23, brødtekst fra 26 til 30."
 
 msgid "High contrast"
-msgstr ""
+msgstr "Høj kontrast"
 
 msgid "Opaque panels, full-strength text, a thicker ring."
-msgstr ""
+msgstr "Uigennemsigtige paneler, fuld tekst, en tykkere ring."
 
 msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
-msgstr ""
+msgstr "Uigennemsigtige paneler i stedet for glas, al tekst i fuld styrke, en tykkere markeringsring og ingen kornethed eller billeder bag menuerne."
 
 msgid "Reduce motion"
-msgstr ""
+msgstr "Reducer bevægelse"
 
 msgid "Fades in place of movement."
-msgstr ""
+msgstr "Overtoninger i stedet for bevægelse."
 
 msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
-msgstr ""
+msgstr "Fjedre bliver til korte overtoninger; intet driver, ånder eller stiger bag menuerne."
 
 msgid "Hold to confirm"
-msgstr ""
+msgstr "Hold nede for at bekræfte"
 
 msgid "How long Cross is held for what cannot be undone."
-msgstr ""
+msgstr "Hvor længe Kryds holdes nede for det, der ikke kan fortrydes."
 
 msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
-msgstr ""
+msgstr "Rydning af cacher, Artic Setup og nulstilling af styring bekræftes ved at holde nede, aldrig ved at trykke to gange. Så længe."
 
 msgid "How the picture is scaled to the TV."
-msgstr ""
+msgstr "Hvordan billedet skaleres til tv’et."
 
 msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
-msgstr ""
+msgstr "Bikubisk er skarp, Bikubisk Hermite lidt blødere, Lineær endnu blødere; Nærmeste nabo holder pixels firkantede."
 
 msgid "120 Hz output"
-msgstr ""
+msgstr "120 Hz-output"
 
 msgid "For displays that take 120 Hz."
-msgstr ""
+msgstr "Til skærme, der kan tage 120 Hz."
 
 msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
-msgstr ""
+msgstr "119,88 Hz-tilstanden, på skærme der understøtter den. Spil kører stadig i deres egen hastighed, og et billede, der misser en opdatering, venter 8 ms på den næste i stedet for 17."
 
 msgid "Holds a game to an even frame rate."
-msgstr ""
+msgstr "Holder et spil på en jævn billedhastighed."
 
 msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
-msgstr ""
+msgstr "Hvert billede bliver på skærmen i mindst to eller tre opdateringer, så et spil, der ikke kan holde skærmens takt, kører jævnt: 60 eller 40 fps med 120 Hz-output, 30 eller 20 uden. 60 fps med 120 Hz-output passer til et spil i 4K, der nogle gange falder under 60; 30 fps ved 60 Hz til et i 8K. Også i spilmenuen."
 
 msgid "Frame rate, CPU and memory in a corner."
-msgstr ""
+msgstr "Billedhastighed, CPU og hukommelse i et hjørne."
 
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
-msgstr ""
+msgstr "Billeder pr. sekund, CPU- og hukommelsesforbrug i øverste venstre hjørne, som Cemu viser dem. Også i spilmenuen."
 
 msgid "No stutter while new shaders build."
-msgstr ""
+msgstr "Ingen hakken, mens nye shaders bygges."
 
 msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
-msgstr ""
+msgstr "Til: en ny shader bygges, mens spillet kører videre, så det hakker ikke, men noget kan mangle et øjeblik. Fra: spillet venter på hver shader. Hakken, men intet tegnes forkert."
 
 msgid "Cross: this player's controller, motion and buttons."
-msgstr ""
+msgstr "Kryds: denne spillers controller, bevægelse og knapper."
 
 msgid "No DualSense for this player yet."
-msgstr ""
+msgstr "Ingen DualSense til denne spiller endnu."
 
 msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
-msgstr ""
+msgstr "Hvad spillet ser i denne spillers hænder, og dens bevægelse, vibration, dødzoner og knapper. Spiller 1 er den loggede bruger, der startede appen; de andre loggede brugeres DualSense-controllere er spiller 2 til 4."
 
 msgid "For the Skylanders games."
-msgstr ""
+msgstr "Til Skylanders-spillene."
 
 msgid "For Disney Infinity 3.0."
-msgstr ""
+msgstr "Til Disney Infinity 3.0."
 
 msgid "For LEGO Dimensions."
-msgstr ""
+msgstr "Til LEGO Dimensions."
 
 msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
-msgstr ""
+msgstr "Cemus emulerede portal, tilsluttet når et spil starter. I spillet stiller menuens kategori USB-enheder figurer på den: dumps i {0}. En rigtig portal i PS5’ens USB-port bruges ikke."
 
 msgid "Install from a folder"
-msgstr ""
+msgstr "Installer fra en mappe"
 
 msgid "An update, DLC or game (code, content and meta)."
-msgstr ""
+msgstr "En opdatering, et DLC eller et spil (code, content og meta)."
 
 msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Installerer til Wii U’ens lager (mlc01), som Cemus Install game title, update or DLC gør. Opdateringer og DLC i spilmappen virker også, som de er."
 
 msgid "Higher is sharper and asks more of the GPU."
-msgstr ""
+msgstr "Højere er skarpere og kræver mere af GPU’en."
 
 msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
-msgstr ""
+msgstr "Hvor store 3DS’ens 3D-scener tegnes, før de skaleres til tv’et. Højere er skarpere og kræver mere af GPU’en, og hver gang et spil læser et billede tilbage, vokser ventetiden med."
 
 msgid "Smooths textures as they are scaled up."
-msgstr ""
+msgstr "Udglatter teksturer, når de skaleres op."
 
 msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
-msgstr ""
+msgstr "Udglatter spillets teksturer, når de skaleres op; Ingen lader dem være, som 3DS’en tegner dem. Et filter gentegner hver tekstur i den interne opløsning: ved høje opløsninger er det den tungeste indstilling. Hvis et spil hakker, så prøv Ingen først."
 
 msgid "Custom textures"
-msgstr ""
+msgstr "Egne teksturer"
 
 msgid "Texture packs from azahar/load/textures."
-msgstr ""
+msgstr "Teksturpakker fra azahar/load/textures."
 
 msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
-msgstr ""
+msgstr "Teksturpakker i /data/ps5cemu/azahar/load/textures/<titel-id>, som computerversionen af Azahar indlæser dem."
 
 msgid "Screen layout"
-msgstr ""
+msgstr "Skærmlayout"
 
 msgid "How the two screens share the TV."
-msgstr ""
+msgstr "Hvordan de to skærme deler tv’et."
 
 msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
-msgstr ""
+msgstr "Den ene over den anden, kun den øverste, den øverste stor med den nederste ved siden af, eller begge side om side. I et spil går klik på touchpladen + R1 til det næste."
 
 msgid "Artwork around the screens."
-msgstr ""
+msgstr "Grafik rundt om skærmene."
 
 msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
-msgstr ""
+msgstr "Grafik rundt om 3DS-skærmene, aldrig over dem. Den følger hvert layout, og spilmenuen ændrer den også."
 
 msgid "The DualSense's motion as the 3DS's."
-msgstr ""
+msgstr "DualSense-controllerens bevægelse som 3DS’ens."
 
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
-msgstr ""
+msgstr "DualSense-controllerens gyroskop og accelerometer som 3DS’ens egne, til spil hvor man sigter eller styrer ved at vippe den."
 
 msgid "How far a stick moves before it counts."
-msgstr ""
+msgstr "Hvor langt en pind bevæger sig, før det tæller."
 
 msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Hvor langt en pind bevæger sig, før spillet opdager det, for Circle Pad og C-pind. Hæv den, hvis noget glider, når du slipper pinden; sænk den for finere styring."
 
 msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
-msgstr ""
+msgstr "Hvilken DualSense-knap der er hvilken af 3DS’ens knapper. Som standard sidder A på Cirkel og B på Kryds, hvor 3DS har dem; Circle Pad er venstre pind, C-pinden højre, og touchpladen berøringsskærmen."
 
 msgid "Default buttons, motion and deadzone."
-msgstr ""
+msgstr "Standardknapper, bevægelse og dødzone."
 
 msgid "The default buttons, motion and deadzone."
-msgstr ""
+msgstr "Standardknapperne, bevægelsen og dødzonen."
 
 msgid "Region"
-msgstr ""
+msgstr "Region"
 
 msgid "The emulated 3DS's region."
-msgstr ""
+msgstr "Den emulerede 3DS’ens region."
 
 msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
-msgstr ""
+msgstr "Automatisk tager hvert spils egen region. Et spil lavet til en anden region kan nægte at starte eller vise andre sprog. Gælder fra næste spil."
 
 msgid "The emulated 3DS's language."
-msgstr ""
+msgstr "Den emulerede 3DS’ens sprog."
 
 msgid "The language games that follow the console's show their text in. Applies to the next game."
-msgstr ""
+msgstr "Sproget, som spil, der følger konsollens, viser deres tekst på. Gælder fra næste spil."
 
 msgid "Home Menu"
-msgstr ""
+msgstr "HOME-menu"
 
 msgid "Start"
-msgstr ""
+msgstr "Start"
 
 msgid "Run Artic Setup first"
-msgstr ""
+msgstr "Kør Artic Setup først"
 
 msgid "The 3DS Home Menu, from your console's files."
-msgstr ""
+msgstr "3DS’ens HOME-menu, fra din konsols filer."
 
 msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
-msgstr ""
+msgstr "Starter 3DS’ens HOME-menu, når Artic Base-opsætningen har kopieret din egen konsols systemfiler (Artic Base)."
 
 msgid "Install a CIA file"
-msgstr ""
+msgstr "Installer en CIA-fil"
 
 msgid "A game, an update or DLC."
-msgstr ""
+msgstr "Et spil, en opdatering eller et DLC."
 
 msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
-msgstr ""
+msgstr "Installerer en CIA i 3DS’ens lager, som Azahars Install CIA: en opdatering eller et DLC kommer til sit spil, og et spil kommer i biblioteket. Cirkel annullerer, mens det kører."
 
 msgid "Play a game from your 3DS, and set up from it."
-msgstr ""
+msgstr "Spil et spil fra din 3DS, og opsæt fra den."
 
 msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
-msgstr ""
+msgstr "Artic Base spiller et spil fra en 3DS på dit netværk, med de gemte data på 3DS’en; Artic Setup kopierer en 3DS’s systemfiler til Azahar, til HOME-menuen og de spil, der skal bruge dem."
 
 msgid "Open the Setup check"
-msgstr ""
+msgstr "Åbn opsætningstjekket"
 
 msgid "Storage, recompilers, games, keys and box art, checked."
-msgstr ""
+msgstr "Lager, genkompilere, spil, nøgler og omslag, tjekket."
 
 msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
-msgstr ""
+msgstr "Hvert tjek har en status, hvad den betyder, og hvad man skal gøre. Det vises også ved første start, og når et tjek fejler, mens appen starter."
 
 msgid "Copy logs to USB"
-msgstr ""
+msgstr "Kopiér logfiler til USB"
 
 msgid "The logs a report needs, onto a USB drive."
-msgstr ""
+msgstr "De logfiler, en fejlrapport skal bruge, til et USB-drev."
 
 msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
-msgstr ""
+msgstr "Kopierer de seneste fem sessioners logfiler og indstillingerne til en dateret mappe på et USB-drev, til at vedhæfte en rapport."
 
 msgid "Clear Wii U shader caches"
-msgstr ""
+msgstr "Ryd Wii U-shadercacher"
 
 msgid "For a game that crashes on a bad cache."
-msgstr ""
+msgstr "Til et spil, der går ned på grund af en dårlig cache."
 
 msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Sletter Cemus shadercacher. Spillene bygger dem igen, mens de kører: de første minutter hakker."
 
 msgid "Clear 3DS shader caches"
-msgstr ""
+msgstr "Ryd 3DS-shadercacher"
 
 msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Sletter Azahars shadercacher. Spillene bygger dem igen, mens de kører: de første minutter hakker."
 
 msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
-msgstr ""
+msgstr "Figurdumps lægges i /data/ps5cemu/figures: skylanders, infinity og dimensions. Slå en portal til her, start spillet, og stil så figurer på den fra spilmenuen (klik på touchpladen + OPTIONS > USB-enheder)."
 
 msgid ""
 "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
@@ -2836,495 +2838,503 @@ msgid ""
 "3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
 "\n"
 msgstr ""
+"Cemu, Wii U-emulatoren, af Cemu-holdet og dets bidragydere; RADV på PS5 af Mihawk-99 og mpereiraesaa; forfatterne af fællesskabets grafikpakker.\n"
+"Azahar, 3DS-emulatoren, af Azahar-holdet og før dem Citras bidragydere; Mihawk-99’s PS5-port af den og dynarmic.\n"
+"Omslag og spiloplysninger: GameTDB. Skrifttypen: Lexend.\n"
+"En uofficiel port, uden tilknytning til Cemu- eller Azahar-holdet, Nintendo eller Sony.\n"
+"\n"
+"Wii U-spil: /data/ps5cemu/games, lager og gemte data: /data/ps5cemu/mlc01, nøgler: /data/ps5cemu/keys.txt\n"
+"3DS-spil: /data/ps5cemu/azahar/games, lager: /data/ps5cemu/azahar/sdmc\n"
+"\n"
 
 msgid "Version {0}"
-msgstr ""
+msgstr "Version {0}"
 
 msgid "The PS5's language: {0}"
-msgstr ""
+msgstr "PS5’ens sprog: {0}"
 
 msgid "Language: {0}"
-msgstr ""
+msgstr "Sprog: {0}"
 
 msgctxt "tab"
 msgid "Settings"
-msgstr ""
+msgstr "Indstillinger"
 
 msgid "Starting the 3DS"
-msgstr ""
+msgstr "Starter 3DS’en"
 
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 msgid "Help"
-msgstr ""
+msgstr "Hjælp"
 
 msgid "Preview"
-msgstr ""
+msgstr "Eksempel"
 
 msgid "{0}, with no border."
-msgstr ""
+msgstr "{0}, uden ramme."
 
 msgid "{0}, on the {1} border."
-msgstr ""
+msgstr "{0}, med rammen {1}."
 
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
-msgstr ""
+msgstr "Den nederste skærm er touchpladen: klik for at trykke, hold klikket for at trække."
 
 msgid "About this setting"
-msgstr ""
+msgstr "Om denne indstilling"
 
 msgid "{0} GB free"
-msgstr ""
+msgstr "{0} GB ledigt"
 
 msgid "Storage"
-msgstr ""
+msgstr "Lager"
 
 msgid "the HEN setup guide"
-msgstr ""
+msgstr "HEN-opsætningsvejledningen"
 
 msgid "/data is reachable"
-msgstr ""
+msgstr "/data kan nås"
 
 msgid "Where everything is kept"
-msgstr ""
+msgstr "Hvor alt gemmes"
 
 msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
-msgstr ""
+msgstr "Indstillinger, gemte data, cacher og logfiler ligger i {0}, som din HEN åbner for PS5CEMU-HAR: dens app-jailbreak, eller elfldr med hjælperen, der følger med appen."
 
 msgid "/data is out of reach: nothing can be kept"
-msgstr ""
+msgstr "/data kan ikke nås: intet kan gemmes"
 
 msgid "Let PS5CEMU-HAR out of its sandbox"
-msgstr ""
+msgstr "Lad PS5CEMU-HAR komme ud af sin sandkasse"
 
 msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
-msgstr ""
+msgstr "Føj PPSA99360 til din HEN’s app-jailbreak-liste (etaHEN: dens app-jailbreak-liste; OnionHEN: sidst i exact_title_ids i config.ini, uden komma efter), eller lad elfldr lytte på port 9021. Start så PS5CEMU-HAR igen."
 
 msgid "Recompilers"
-msgstr ""
+msgstr "Genkompilere"
 
 msgid "What runs the games' code"
-msgstr ""
+msgstr "Hvad der kører spillenes kode"
 
 msgid "JIT memory from your HEN: games run at full speed"
-msgstr ""
+msgstr "JIT-hukommelse fra din HEN: spil kører med fuld hastighed"
 
 msgid "Executable memory: games run at full speed, no HEN grant needed"
-msgstr ""
+msgstr "Eksekverbar hukommelse: spil kører med fuld hastighed, ingen HEN-tilladelse nødvendig"
 
 msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
-msgstr ""
+msgstr "Cemus og Azahars genkompilere omsætter spillenes kode til PS5’ens, mens de kører. De skal bruge hukommelse, som de kan skrive kode i og køre den fra: din HEN’s JIT-hukommelse, eller eksekverbar hukommelse, som PS5CEMU-HAR selv laver."
 
 msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
-msgstr ""
+msgstr "Ingen JIT- eller eksekverbar hukommelse: Wii U-spil kører på den meget langsommere fortolker"
 
 msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
-msgstr ""
+msgstr "Hverken din HEN’s JIT-hukommelse eller eksekverbar hukommelse kunne oprettes, så Wii U-spil falder tilbage på Cemus fortolker. Føj PPSA99360 til din HEN’s app-jailbreak-liste, og start så PS5CEMU-HAR igen; Indstillinger > Diagnosticering viser, hvad den fik."
 
 msgid "{0} game in {1}"
 msgid_plural "{0} games in {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} spil i {1}"
+msgstr[1] "{0} spil i {1}"
 
 msgid "None in {0} yet"
-msgstr ""
+msgstr "Ingen i {0} endnu"
 
 msgid "{0} cannot be read"
-msgstr ""
+msgstr "{0} kan ikke læses"
 
 msgid "Where your 3DS games go"
-msgstr ""
+msgstr "Hvor dine 3DS-spil skal ligge"
 
 msgid "Where your Wii U games go"
-msgstr ""
+msgstr "Hvor dine Wii U-spil skal ligge"
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
-msgstr ""
+msgstr "Læg dem i {0}, eller vælg en vilkårlig mappe, som PS5’en kan læse, f.eks. på et USB-drev. Undermapper gennemsøges også. CIA-filer installeres, under Indstillinger > Installer CIA-filer."
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
-msgstr ""
+msgstr "Læg dem i {0}, eller vælg en vilkårlig mappe, som PS5’en kan læse, f.eks. på et USB-drev. Opdateringer og DLC tilføjes under Indstillinger > Installer opdateringer og DLC eller følger med en .wua."
 
 msgid "code · content · meta"
-msgstr ""
+msgstr "code · content · meta"
 
 msgid "the game files page"
-msgstr ""
+msgstr "siden om spilfiler"
 
 msgid "keys.txt is missing: only encrypted .wud and .wux need it"
-msgstr ""
+msgstr "keys.txt mangler: kun krypterede .wud og .wux skal bruge den"
 
 msgid "How to"
-msgstr ""
+msgstr "Sådan gør du"
 
 msgid "Keys for encrypted discs"
-msgstr ""
+msgstr "Nøgler til krypterede diske"
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
-msgstr ""
+msgstr "Krypterede .wud- og .wux-dumps skal have deres disknøgler i {0}/keys.txt, én pr. linje. Dekrypterede dumps, .wua-filer og mapper med code, content og meta skal ikke bruge nogen."
 
 msgid "3DS keys"
-msgstr ""
+msgstr "3DS-nøgler"
 
 msgid "aes_keys.txt found"
-msgstr ""
+msgstr "aes_keys.txt fundet"
 
 msgid "aes_keys.txt is missing: only encrypted dumps need it"
-msgstr ""
+msgstr "aes_keys.txt mangler: kun krypterede dumps skal bruge den"
 
 msgid "Keys for encrypted 3DS dumps"
-msgstr ""
+msgstr "Nøgler til krypterede 3DS-dumps"
 
 msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
-msgstr ""
+msgstr "Krypterede dumps skal have aes_keys.txt fra din egen konsol i {0}/sysdata. Dekrypterede dumps, homebrew og installerede CIA-filer skal ikke bruge nogen. Der følger ingen nøgler med PS5CEMU-HAR."
 
 msgid "3DS system files"
-msgstr ""
+msgstr "3DS-systemfiler"
 
 msgid "Artic Setup has run: the Home Menu can start"
-msgstr ""
+msgstr "Artic Setup er kørt: HOME-menuen kan starte"
 
 msgid "Artic Setup copies them from your 3DS, for the Home Menu"
-msgstr ""
+msgstr "Artic Setup kopierer dem fra din 3DS, til HOME-menuen"
 
 msgid "Your 3DS's own files"
-msgstr ""
+msgstr "Din 3DS’s egne filer"
 
 msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
-msgstr ""
+msgstr "3DS’ens HOME-menu og de få spil, der skal bruge konsollens systemfiler, kører, når Artic Setup har kopieret dem fra din egen 3DS via netværket: start Artic Setup Tool på 3DS’en og så Artic Base her."
 
 msgid "the 3DS page"
-msgstr ""
+msgstr "3DS-siden"
 
 msgid "Box art"
-msgstr ""
+msgstr "Omslag"
 
 msgid "what PS5CEMU-HAR fetches online"
-msgstr ""
+msgstr "hvad PS5CEMU-HAR henter online"
 
 msgid "Covers from GameTDB"
-msgstr ""
+msgstr "Omslag fra GameTDB"
 
 msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
-msgstr ""
+msgstr "Første gang et spil dukker op, kommer dets omslag fra GameTDB (art.gametdb.com), ud fra id’et på æsken. Uden forbindelse vises spillenes ikoner, og næste start prøver igen."
 
 msgid "Off: the games' icons are shown instead"
-msgstr ""
+msgstr "Fra: spillenes ikoner vises i stedet"
 
 msgid "Turn on"
-msgstr ""
+msgstr "Slå til"
 
 msgid "GameTDB did not answer: the games' icons are shown instead"
-msgstr ""
+msgstr "GameTDB svarede ikke: spillenes ikoner vises i stedet"
 
 msgid "GameTDB is reachable · {0} cover"
 msgid_plural "GameTDB is reachable · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "GameTDB kan nås · {0} omslag"
+msgstr[1] "GameTDB kan nås · {0} omslag"
 
 msgid "On · {0} cover"
 msgid_plural "On · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Til · {0} omslag"
+msgstr[1] "Til · {0} omslag"
 
 msgid "On: covers come as your games show up"
-msgstr ""
+msgstr "Til: omslag kommer, efterhånden som dine spil dukker op"
 
 msgid "Checked again"
-msgstr ""
+msgstr "Tjekket igen"
 
 msgid "Welcome to PS5CEMU-HAR"
-msgstr ""
+msgstr "Velkommen til PS5CEMU-HAR"
 
 msgid "Let’s check your setup"
-msgstr ""
+msgstr "Lad os tjekke din opsætning"
 
 msgid "The {0} check is ready."
 msgid_plural "All {0} checks are ready."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} tjek er klar."
+msgstr[1] "Alle {0} tjek er klar."
 
 msgid "The {0} check needs a look."
 msgid_plural "All {0} checks need a look."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} tjek kræver opmærksomhed."
+msgstr[1] "Alle {0} tjek kræver opmærksomhed."
 
 msgid "{0} of {1} is ready."
 msgid_plural "{0} of {1} are ready."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} af {1} er klar."
+msgstr[1] "{0} af {1} er klar."
 
 msgid "{0} needs a look."
 msgid_plural "{0} need a look."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} kræver opmærksomhed."
+msgstr[1] "{0} kræver opmærksomhed."
 
 msgid "{0} · as the PS5"
-msgstr ""
+msgstr "{0} · som PS5’en"
 
 msgid "· optional"
-msgstr ""
+msgstr "· valgfrit"
 
 msgid "The menus' language"
-msgstr ""
+msgstr "Menuernes sprog"
 
 msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
-msgstr ""
+msgstr "PS5CEMU-HAR taler det sprog, din PS5 er indstillet til. Kryds vælger et andet; Indstillinger > Generelt > Sprog ændrer det når som helst."
 
 msgid "The guide, on your phone"
-msgstr ""
+msgstr "Vejledningen, på din telefon"
 
 msgid "Scan it for {0}: {1}"
-msgstr ""
+msgstr "Scan den for {0}: {1}"
 
 msgid "Not in this build"
-msgstr ""
+msgstr "Ikke i denne version"
 
 msgid "Open to look for games"
-msgstr ""
+msgstr "Åbn for at lede efter spil"
 
 msgid "Saved your place in the library"
-msgstr ""
+msgstr "Din plads i biblioteket blev gemt"
 
 msgid "The game could not start"
-msgstr ""
+msgstr "Spillet kunne ikke starte"
 
 msgid "{0} min played"
 msgid_plural "{0} min played"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} min spillet"
+msgstr[1] "{0} min spillet"
 
 msgid "{0} h played"
 msgid_plural "{0} h played"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} t spillet"
+msgstr[1] "{0} t spillet"
 
 msgid "today"
-msgstr ""
+msgstr "i dag"
 
 msgid "yesterday"
-msgstr ""
+msgstr "i går"
 
 msgid "{0} day ago"
 msgid_plural "{0} days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "for {0} dag siden"
+msgstr[1] "for {0} dage siden"
 
 msgid "{0} week ago"
 msgid_plural "{0} weeks ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "for {0} uge siden"
+msgstr[1] "for {0} uger siden"
 
 msgid "{0} month ago"
 msgid_plural "{0} months ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "for {0} måned siden"
+msgstr[1] "for {0} måneder siden"
 
 msgid "Cemu is still starting"
-msgstr ""
+msgstr "Cemu starter stadig"
 
 msgid "Starting Azahar"
-msgstr ""
+msgstr "Starter Azahar"
 
 msgctxt "tab"
 msgid "Home"
-msgstr ""
+msgstr "Hjem"
 
 msgid "Done"
-msgstr ""
+msgstr "Færdig"
 
 msgid "Close"
-msgstr ""
+msgstr "Luk"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Annuller"
 
 msgid "Tabs"
-msgstr ""
+msgstr "Faner"
 
 msgid "Switch"
-msgstr ""
+msgstr "Skift"
 
 msgid "Open"
-msgstr ""
+msgstr "Åbn"
 
 msgid "Change the language"
-msgstr ""
+msgstr "Skift sprog"
 
 msgid "Check again"
-msgstr ""
+msgstr "Tjek igen"
 
 msgid "Continue"
-msgstr ""
+msgstr "Fortsæt"
 
 msgid "Continue to Home"
-msgstr ""
+msgstr "Fortsæt til Hjem"
 
 msgid "Options"
-msgstr ""
+msgstr "Valgmuligheder"
 
 msgid "Move"
-msgstr ""
+msgstr "Flyt"
 
 msgid "Filters"
-msgstr ""
+msgstr "Filtre"
 
 msgid "Jump by letter"
-msgstr ""
+msgstr "Spring efter bogstav"
 
 msgid "Back to the buttons"
-msgstr ""
+msgstr "Tilbage til knapperne"
 
 msgid "Scroll"
-msgstr ""
+msgstr "Rul"
 
 msgid "Pages"
-msgstr ""
+msgstr "Sider"
 
 msgid "More about it"
-msgstr ""
+msgstr "Mere om det"
 
 msgid "Back to the packs"
-msgstr ""
+msgstr "Tilbage til pakkerne"
 
 msgid "On / off"
-msgstr ""
+msgstr "Til / fra"
 
 msgid "Assign"
-msgstr ""
+msgstr "Tildel"
 
 msgid "Clear"
-msgstr ""
+msgstr "Ryd"
 
 msgid "Use this folder"
-msgstr ""
+msgstr "Brug denne mappe"
 
 msgid "Number"
-msgstr ""
+msgstr "Tal"
 
 msgid "Keep"
-msgstr ""
+msgstr "Behold"
 
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 msgid "Connect"
-msgstr ""
+msgstr "Forbind"
 
 msgid "Hold to set up"
-msgstr ""
+msgstr "Hold nede for at opsætte"
 
 msgid "Not a favourite"
-msgstr ""
+msgstr "Fjern fra favoritter"
 
 msgid "Show where it is"
-msgstr ""
+msgstr "Vis, hvor den ligger"
 
 msgid "Added to Favourites"
-msgstr ""
+msgstr "Føjet til favoritter"
 
 msgid "Taken out of Favourites"
-msgstr ""
+msgstr "Fjernet fra favoritter"
 
 msgid "The PS5's storage"
-msgstr ""
+msgstr "PS5’ens lager"
 
 msgid "Title ID {0}"
-msgstr ""
+msgstr "Titel-id {0}"
 
 msgid "PS5CEMU-HAR {0} is out"
-msgstr ""
+msgstr "PS5CEMU-HAR {0} er udkommet"
 
 msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "Det er {0}. Hent og installer nu? Dine spil, gemte data og indstillinger forbliver, som de er."
 
 msgid "Update now"
-msgstr ""
+msgstr "Opdater nu"
 
 msgid "Later"
-msgstr ""
+msgstr "Senere"
 
 msgid "Updating to {0}"
-msgstr ""
+msgstr "Opdaterer til {0}"
 
 msgid "Downloading: {0} of {1} MB"
-msgstr ""
+msgstr "Henter: {0} af {1} MB"
 
 msgid "Checking the download"
-msgstr ""
+msgstr "Tjekker overførslen"
 
 msgid "Installing"
-msgstr ""
+msgstr "Installerer"
 
 msgid "{0} is installed"
-msgstr ""
+msgstr "{0} er installeret"
 
 msgid "PS5CEMU-HAR starts again to finish the update."
-msgstr ""
+msgstr "PS5CEMU-HAR starter igen for at fuldføre opdateringen."
 
 msgid "Restart now"
-msgstr ""
+msgstr "Genstart nu"
 
 msgid "The update did not finish"
-msgstr ""
+msgstr "Opdateringen blev ikke færdig"
 
 msgid "PS5CEMU-HAR is still {0}."
-msgstr ""
+msgstr "PS5CEMU-HAR er stadig {0}."
 
 msgid "Checking for updates"
-msgstr ""
+msgstr "Søger efter opdateringer"
 
 msgid "PS5CEMU-HAR update"
-msgstr ""
+msgstr "PS5CEMU-HAR-opdatering"
 
 msgid "Select"
-msgstr ""
+msgstr "Vælg"
 
 msgid "Restart"
-msgstr ""
+msgstr "Genstart"
 
 msgid "Firmware {0}"
-msgstr ""
+msgstr "Firmware {0}"
 
 msgid "Logs: {0}, {1}/log.txt"
-msgstr ""
+msgstr "Logfiler: {0}, {1}/log.txt"
 
 msgid "Boot log not written (/data is unreachable)"
-msgstr ""
+msgstr "Opstartsloggen blev ikke skrevet (/data kan ikke nås)"
 
 msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
-msgstr ""
+msgstr "PS5CEMU-HAR kan ikke nå /data. Indlæs en HEN med PPSA99360 på dens app-jailbreak-liste, eller elfldr, og genstart så PS5CEMU-HAR."
 
 msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
-msgstr ""
+msgstr "Denne session: Azahar (3DS); Cemus emulerede Wii U er ikke startet"
 
 msgid "This session: Cemu (Wii U); Azahar's core is not started"
-msgstr ""
+msgstr "Denne session: Cemu (Wii U); Azahars kerne er ikke startet"
 
 msgid "Cemu did not start: {0}"
-msgstr ""
+msgstr "Cemu startede ikke: {0}"
 
 msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
-msgstr ""
+msgstr "Ingen JIT-hukommelse: Wii U-spil kører på fortolkeren, meget langsommere. Er PPSA99360 på din HEN’s app-jailbreak-liste?"
 
 msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
-msgstr ""
+msgstr "Startprogrammet kunne ikke starte. Opstartsloggen i /data/ps5cemu/logs siger hvorfor."
 
 msgid "{0} fps"
-msgstr ""
+msgstr "{0} fps"
 
 msgctxt "compatibility note"
 msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
-msgstr ""
+msgstr "Kører med omkring 60 fps i 1440p. Op til 2.0.0 C frøs og lukkede det, når Magnesis eller andre runer, eller Sheikah-kikkerten (R3), fremhævede genstande; rettet efter 2.0.0 C (en nyere Cemu)"
 
 msgctxt "compatibility note"
 msgid "About half the textures are missing during races"
-msgstr ""
+msgstr "Omkring halvdelen af teksturerne mangler under løb"
 
 msgctxt "compatibility note"
 msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
-msgstr ""
+msgstr "Spilles med sin 60 FPS-grafikpakke slået fra; slået til giver den grafikfejl og går ned, så snart spillet indlæses. Op til 2.0.0 C gik det ned der under alle omstændigheder (Cemu løb tør for Vulkan-deskriptorer)"
 
 msgctxt "compatibility note"
 msgid "Save states work from the in-game menu"
-msgstr ""
+msgstr "Gemte tilstande virker fra spilmenuen"
