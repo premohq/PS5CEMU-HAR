@@ -887,7 +887,7 @@ msgid "Slot {0}: {1}"
 msgstr "{0}. hely: {1}"
 
 msgid "Slot {0} is empty"
-msgstr "A(z) {0}. hely üres"
+msgstr "{0}. hely: üres"
 
 msgid "Saving…"
 msgstr "Mentés…"
@@ -1159,722 +1159,722 @@ msgid "The download did not finish"
 msgstr "A letöltés nem fejeződött be"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Nem sikerült telepíteni: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Az új csomagok nem tudták felváltani a régieket"
 
 msgid "Hold"
-msgstr ""
+msgstr "Tartsd"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Tartsd nyomva a keresztet, amíg a gyűrű megtelik."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "Nem sikerült kiírni: {0} (megtelt a /data?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "a letöltésben nincs eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "A legújabb kiadás verziója ({0}) nem olvasható"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Nem sikerült letölteni a kiadás ellenőrzőösszegeit"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "A kiadási ágban nincs ellenőrzőösszeg ehhez: {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "A letöltés nem tudott elindulni"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "A letöltés nem fejeződött be: online a PS5?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "A letöltés sérült (SHA-256: {0}, nem {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "A PS5CEMU-HAR egy lemezképről fut, amelynek fájljai nem cserélhetők: telepítsd kézzel az új kiadást"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Nem sikerült kicsomagolni: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "Nem sikerült lecserélni: {0} ({1}): másold rá kézzel a kiadás PPSA99360 mappáját"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "1. hely"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "2. hely"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "3. hely"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "4. hely"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Játékkészlet / erőkorong"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "2. erőkorong"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "3. erőkorong"
 
 msgid "Player 1"
-msgstr ""
+msgstr "1. játékos"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "1. játékos, 1. képesség"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "1. játékos, 2. képesség"
 
 msgid "Player 2"
-msgstr ""
+msgstr "2. játékos"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "2. játékos, 1. képesség"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "2. játékos, 2. képesség"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "1. bal mező"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Középső mező"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "1. jobb mező"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "2. bal mező"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "3. bal mező"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "2. jobb mező"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "3. jobb mező"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "Nem sikerült megnyitni: {0}"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} túl kicsi egy Skylanderhez"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "A portál megtelt"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} túl kicsi egy Infinity-figurához"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} túl kicsi egy Dimensions-figurához"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Túl sok számjegy."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "A @ jel itt nem megengedett."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "A % jel itt nem megengedett."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "A \\ jel itt nem megengedett."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Ez a szó nem megengedett."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "A szövegnek pontosan a kért hosszúságúnak kell lennie."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "A szöveg túl hosszú."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "A szöveg nem állhat csak szóközökből."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "A szöveg nem lehet üres."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "A játék nem fogadta el."
 
 msgid "saved"
-msgstr ""
+msgstr "mentve"
 
 msgid "another version's"
-msgstr ""
+msgstr "másik verzióé"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Nincs amiibo-olvasó"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Elvéve"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Ez nem amiibo-dump"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: be"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: ki"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "{0}. hely betöltve"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Mentve: {0}. hely"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Másik verzió készítette"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Nem sikerült"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Ez nem olyan 3DS-játék, amelyet az Azahar el tud indítani."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "A játékot nem sikerült betölteni."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "A játék titkosított: oldd fel a titkosítását, vagy tedd a 3DS aes_keys.txt fájlját a /data/ps5cemu/azahar/sysdata mappába."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "A játék formátuma nem támogatott."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "A GBA Virtual Console-játékok nem támogatottak."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "A játék rendszermódja nem található."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "A játéknak olyan 3DS-rendszerfájlok kellenek, amelyek az Azaharnak nincsenek meg."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "A játék javításait nem sikerült alkalmazni."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Az Azahar megjelenítője vagy CPU-ja nem indult el."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Az Artic Base kiszolgáló nem válaszolt: ellenőrizd a 3DS címét, hogy fut-e rajta az Artic Base, és hogy a 3DS és a PS5 ugyanazon a hálózaton van-e."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "A játék foglalt: próbáld újra"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "A 3DS-játék leállt: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "A CIA-fájlt telepíteni kell, nem játszani: telepítsd a Beállítások > CIA-fájlok telepítése menüben, majd indítsd el a játékot."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Az Azahar nem indult el: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Érintőpanel-kattintás + OPTIONS: a játék menüje. Csak érintőpanel-kattintás: az alsó képernyő"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "titkosított, maga a CIA vagy a benne lévő játék. Az Azahar csak teljesen visszafejtett CIA-fájlokat telepít: fejtsd vissza a GodMode9-cel egy 3DS-en, vagy játszd inkább a játék visszafejtett .3ds vagy .cci fájlját"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "ez nem CIA-fájl, vagy sérült (ellenőrizd a fájl méretét)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "a fájlt nem sikerült beolvasni"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Az Azahar félúton leállt; az okát a /data/ps5cemu/azahar/log/azahar_log.txt írja le"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "ez nem olyan CIA, amelyet az Azahar telepíteni tud"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "A PS5-nek elfogyott a memóriája ehhez a Wii U-játékhoz, ezért le kell állnia. A részletek az indítási naplóban."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} fájl az USB-meghajtóra ({1})"
+msgstr[1] "{0} fájl az USB-meghajtóra ({1})"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Nem található USB-meghajtó"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} fájl törölve ({1} MB)"
+msgstr[1] "{0} fájl törölve ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Nincs mit törölni"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "{0} USB-meghajtó"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "{0} bővített tárhely"
 
 msgid "Game"
-msgstr ""
+msgstr "Játék"
 
 msgid "Update"
-msgstr ""
+msgstr "Frissítés"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Rendszercím"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demó"
 
 msgid "Title"
-msgstr ""
+msgstr "Cím"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Kereszt"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Kör"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Négyzet"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Háromszög"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Érintőpanel"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Iránygomb fel"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Iránygomb le"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Iránygomb balra"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Iránygomb jobbra"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Bal kar fel"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Bal kar le"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Bal kar balra"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Bal kar jobbra"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Bal kar lenyomása"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Jobb kar fel"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Jobb kar le"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Jobb kar balra"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Jobb kar jobbra"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Jobb kar lenyomása"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad fel"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad le"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad balra"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad jobbra"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-kar fel"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-kar le"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-kar balra"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-kar jobbra"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Nunchuk kar fel"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Nunchuk kar le"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Nunchuk kar balra"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Nunchuk kar jobbra"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Fújás a mikrofonba"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "A GamePad képernyőjének mutatása"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 msgid "Setup"
-msgstr ""
+msgstr "Beüzemelés"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Valami figyelmet igényel"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Beüzemelési ellenőrzés"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnosztika"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "A Cemu indul"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Betöltődnek a beállításai, grafikus csomagjai és kontrollerei, aztán megkeresi a játékaidat."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Játékok keresése…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "Helye: {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Üdv"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Ide kerülnek a játékaid"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Tedd a 3DS-játékaidat (.3ds, .cci, .cxi, .3dsx, visszafejtve) ide: {0}, vagy válassz bármelyik mappát, amelyet a PS5 olvasni tud, például egy USB-meghajtón. Az almappákban is keres."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Tedd a Wii U-játékaidat (.wua, .wud, .wux, vagy code, content és meta mappák) ide: {0}, vagy válassz bármelyik mappát, amelyet a PS5 olvasni tud, például egy USB-meghajtón."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Mappa választása"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Összes játék: {0}"
+msgstr[1] "Összes játék: {0}"
 
 msgid "In your library"
-msgstr ""
+msgstr "A könyvtáradban"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Folytatás · utoljára: {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Utoljára: {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "A könyvtárad"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Új játékok keresése…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "A–Z, év szerint, futás szerint"
 
 msgid "Play"
-msgstr ""
+msgstr "Játék"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Játékoldal"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Könyvtár megnyitása"
 
 msgid "None on"
-msgstr ""
+msgstr "Egy sincs bekapcsolva"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} csomag ehhez a játékhoz"
+msgstr[1] "{0} csomag ehhez a játékhoz"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} – P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Kontrollerek"
 
 msgid "One player"
-msgstr ""
+msgstr "Egy játékos"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Hogyan fut"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "A kompatibilitási lista szerint"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Frissítések és DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Nincs frissítés"
 
 msgid "This dump"
-msgstr ""
+msgstr "Ez a dump"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Frissítés: v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Kedvenc"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Grafikus csomagok · {0} bekapcsolva"
+msgstr[1] "Grafikus csomagok · {0} bekapcsolva"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "A játékról"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "A GameTDB a dobozon lévő azonosítóról ismeri fel a játékot, ez a dump viszont nem rendelkezik vele."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "A GameTDB-ben még nincs leírás ehhez a játékhoz."
 
 msgid "Developer"
-msgstr ""
+msgstr "Fejlesztő"
 
 msgid "Released"
-msgstr ""
+msgstr "Megjelenés"
 
 msgid "Genre"
-msgstr ""
+msgstr "Műfaj"
 
 msgid "Rating"
-msgstr ""
+msgstr "Korhatár"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Kiadó"
 
 msgid "Players"
-msgstr ""
+msgstr "Játékosok"
 
 msgid "Title ID"
-msgstr ""
+msgstr "Címazonosító"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Jól fut PS5-ön"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "A kompatibilitási lista szerint: „{0}”."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Legutóbb játszott"
 
 msgid "A to Z"
-msgstr ""
+msgstr "A–Z"
 
 msgid "Release year"
-msgstr ""
+msgstr "Megjelenés éve"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Könyvtár"
 
 msgid "Sort"
-msgstr ""
+msgstr "Rendezés"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Mind"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Nemrég hozzáadott"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Kedvencek"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Grafikus csomaggal"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Rendezés: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Keresés"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Keresés: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Nincs találat erre: „{0}”"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Még nincs itt semmi"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Még nincsenek játékok"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "A kör törli a keresést."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS egy játékon, majd Kedvenc, és ide kerül."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "A Mind minden játékot mutat."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "A Beállítások > Játékok és mappák megmondja, hova kerülnek."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Játék a 3DS-edről"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, a hálózatodon át"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "A kereszt be- vagy kikapcsol egy csomagot; jobbra az előbeállításaihoz visz. Egy előbeállítás választása bekapcsolja a csomagját. A változások a következő indításkor lépnek életbe."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Ehhez a játékhoz nincsenek grafikus csomagok"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "A Beállítások > Online és frissítések letölti a közösség legújabbjait."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} / {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Grafikus csomag"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Ennek a csomagnak nincs leírása."
 
 msgid "No presets"
-msgstr ""
+msgstr "Nincsenek előbeállítások"
 
 msgid "Presets"
-msgstr ""
+msgstr "Előbeállítások"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Előbeállítások · választás bekapcsolja"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Kész"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1883,373 +1883,396 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Amit a játék e játékos kezében lát.\n"
+"\n"
+"A legtöbb játék az 1. játékoshoz a Wii U GamePadet kéri: a képernyője a második, amelyet a PS5CEMU-HAR mutat, és az érintőpanel érinti. Mások Pro Controllert vagy Wii Remote-ot használnak, például a New Super Mario Bros. U.\n"
+"A Wii Remote oda mutat, ahol egy ujj nyugszik az érintőpanelen, vagy ahová a DualSense-t irányítod.\n"
+"A Cemu legfeljebb két GamePadet kezel."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"A DualSense giroszkópja és gyorsulásmérője a kontrolleré helyett, azokhoz a játékokhoz, ahol a GamePad vagy a Wii Remote döntésével céloz vagy kormányoz az ember.\n"
+"A Pro Controllernek és a Classic Controllernek nincs."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Milyen erősen rezeg a DualSense, amikor a játék megrezegteti a kontrollert.\n"
+"Balra és jobbra 10%-kal változtatja."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Mennyit mozdul a bal kar, mielőtt a játék észreveszi. Növeld, ha egy szereplő magától megy, miután elengedted a kart; csökkentsd a finomabb irányításért."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Mennyit mozdul a jobb kar, mielőtt a játék észreveszi. Növeld, ha a kamera magától forog, miután elengedted a kart; csökkentsd a finomabb irányításért."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Melyik DualSense-gomb a kontroller melyik gombja.\n"
+"Alapértelmezés szerint az A a körön, a B a kereszten van, ahol a Wii U-n."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "A kontroller alapértelmezett gombjai, rezgése, mozgása és holtzónái. Nyomva tartással kell megerősíteni."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Gombok"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Alapértékek visszaállítása"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "{0}. játékos"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, ennek a játékosnak a DualSense-én"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, egy nem csatlakoztatott DualSense-en"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Amit a játék e játékos kezében lát."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "A DualSense mozgása a kontrolleré helyett."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "A Pro és a Classic Controllernek nincs."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Milyen erősen rezeg a DualSense."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Mennyit mozdul a bal kar, mielőtt számít."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Mennyit mozdul a jobb kar, mielőtt számít."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} gomb beállítva"
+msgstr[1] "{0} gomb beállítva"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Melyik DualSense-gomb melyik."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Tartsd nyomva a keresztet"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Az alapértelmezett gombok, rezgés, mozgás és holtzónák."
 
 msgid "Connected"
-msgstr ""
+msgstr "Csatlakoztatva"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Nincs DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Törölve: most egyik DualSense-gomb sem ez."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Nem nyomtál meg gombot, így minden maradt a régiben."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Megszakítva: minden maradt a régiben."
 
 msgid "Done."
-msgstr ""
+msgstr "Kész."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "A DualSense gombjai a 3DS gombjaihoz"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "{0}. játékos: a DualSense gombjai ehhez: {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Nincs beállítva"
 
 msgid "This button"
-msgstr ""
+msgstr "Ez a gomb"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Nyomj meg egy gombot"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Nyomd meg most a DualSense gombját, ravaszát vagy karirányát ehhez: {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Még {0} másodperc. Érintőpanel-kattintással megszakítható."
+msgstr[1] "Még {0} másodperc. Érintőpanel-kattintással megszakítható."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Kereszt, majd egy DualSense-gomb, -ravasz vagy -karirány: az lesz ez a gomb.\n"
+"A négyzet törli."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Megszakítás: a másolt fájlok törlődnek…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Megszakítás: a korábbi telepítés visszaáll…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Ez a mappa nem nyitható meg."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Nem sikerült menteni a mappát. Próbáld újra."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Mentve. A PS5CEMU-HAR ott keres játékokat."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Mentve. Az az oldal ott keres majd játékokat, amikor megnyílik."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Játékok keresése itt: {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Először válassz egy CIA-fájlt."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "A Cemu nem indult el, így semmit nem lehet telepíteni."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Telepítés: {0}, {1} / {2}.\n"
+"\n"
+"A kör megszakítja."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Telepítés: fájlok számlálása…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Telepítve. A könyvtár a játéka mellett mutatja."
 
 msgid "Installed"
-msgstr ""
+msgstr "Telepítve"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Megszakítva. A másolt fájlok törlődtek, az ugyanannak a címnek a korábbi példányával együtt: a játékhoz telepítsd újra. A mentései megmaradtak."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Megszakítva. A korábbi telepítés olyan, amilyen volt."
 
 msgid "Install"
-msgstr ""
+msgstr "Telepítés"
 
 msgid "3DS games"
-msgstr ""
+msgstr "3DS-játékok"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Wii U-játékok"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "CIA-fájlok telepítése"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Frissítések és DLC telepítése"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Válassz egy CIA-fájlt: játékot, frissítést vagy DLC-t"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Válassz egy mappát frissítéssel, DLC-vel vagy játékkal (code, content és meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Válaszd ki a 3DS-játékaidat tartalmazó mappát"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Válaszd ki a Wii U-játékaidat tartalmazó mappát"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Ez a mappa üres."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Szülőmappa"
 
 msgid "Drive"
-msgstr ""
+msgstr "Meghajtó"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Típus"
 
 msgid "A folder"
-msgstr ""
+msgstr "Egy mappa"
 
 msgid "Version"
-msgstr ""
+msgstr "Verzió"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "A háromszög a 3DS tárhelyére telepíti: a frissítés vagy DLC a játékához kerül, a játék pedig a könyvtárba."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Válassz egy telepítendő CIA-fájlt: játékot, frissítést vagy DLC-t."
 
 msgid "Games here"
-msgstr ""
+msgstr "Itteni játékok"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Nem olvasható"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} játék"
+msgstr[1] "{0} játék"
 
 msgid "Found"
-msgstr ""
+msgstr "Megtalálva"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Hiányzik (csak a titkosított dumpokhoz kell)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Megtalálva itt: /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Hiányzik (csak .wud/.wux esetén kell)"
 
 msgid "In use"
-msgstr ""
+msgstr "Használatban"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "A játékok lehetnek .3ds vagy .cci, .cxi, .cia vagy .3dsx fájlok, visszafejtve, itt vagy az almappákban. A háromszög a mutatott mappát választja."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "A játékok lehetnek .wua, .wud, .wux fájlok, vagy code, content és meta mappák. A háromszög a mutatott mappát választja."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Nincs mit telepíteni"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, még nincs telepítve"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, most a v{1} van telepítve"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "A háromszög a Wii U tárhelyére (mlc01) telepíti. A játékok mappájában lévő frissítések és DLC-k úgy is működnek, ahogy vannak."
 
 msgid "To install"
-msgstr ""
+msgstr "Telepítendő"
 
 msgid "This folder"
-msgstr ""
+msgstr "Ez a mappa"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Kapcsolódás: {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Játssz egy játékot a 3DS-edről a hálózaton át, vagy állítsd be vele az Azahart"
 
 msgid "3DS address"
-msgstr ""
+msgstr "A 3DS címe"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"A cím, amelyet az Artic Base a 3DS képernyőjén mutat, amikor kész.\n"
+"A kereszt szerkeszti: balra és jobbra egy számot választ, fel és le 1-gyel, L1 és R1 10-zel változtatja, és még egy kereszt elmenti.\n"
+"A 3DS-nek és a PS5-nek ugyanazon a hálózaton kell lennie."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Kapcsolódás és játék"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Indítsd el a 3DS-en az Artic Base alkalmazást (homebrew az Azahar csapatától), és válassz benne egy játékot: a kártyát vagy egy telepítettet. Aztán kapcsolódj innen: a játék a PS5-ön fut a 3DS-ről, a mentései pedig a 3DS-en maradnak.\n"
+"Csak olyan gördülékeny, mint a hálózat: segít a 3DS erős Wi-Fi-jele és a kábellel csatlakozó PS5."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Beállítás régi 3DS-ről"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Egy régi 3DS-en vagy 2DS-en futó Artic Setup Tool alkalmazással: átmásolja a rendszerfájljait és saját adatait (rendszerbeállítások, barátkód, Mii- és eShop-adatok) az Azaharba, hogy elinduljanak azok a játékok, amelyeknek a 3DS rendszerkisalkalmazásai vagy fájljai kellenek, és a HOME menü is (Beállítások > Rendszer és HOME menü).\n"
+"Ezek a te konzolod adatai: ne oszd meg utána az Azahar mappáját."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Beállítás New 3DS-ről"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Mint fent, egy Artic Setup Toolt futtató New 3DS-ről vagy New 2DS-ről."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Automatikus"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japán"
 
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 msgid "Europe"
-msgstr ""
+msgstr "Európa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Ausztrália"
 
 msgid "China"
-msgstr ""
+msgstr "Kína"
 
 msgid "Korea"
-msgstr ""
+msgstr "Korea"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Tajvan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Japán"
 
 msgid "English"
-msgstr ""
+msgstr "Angol"
 
 msgid "French"
-msgstr ""
+msgstr "Francia"
 
 msgid "German"
-msgstr ""
+msgstr "Német"
 
 msgid "Italian"
-msgstr ""
+msgstr "Olasz"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Spanyol"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Kínai (egyszerűsített)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Koreai"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Holland"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugál"
 
 msgid "Russian"
-msgstr ""
+msgstr "Orosz"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Kínai (hagyományos)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Lineáris"
 
 msgid "Setup theme"
 msgstr ""
