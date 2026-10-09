@@ -1159,722 +1159,722 @@ msgid "The download did not finish"
 msgstr "Lataus ei valmistunut"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Sitä ei voitu asentaa: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Uudet paketit eivät voineet korvata vanhoja"
 
 msgid "Hold"
-msgstr ""
+msgstr "Pidä"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Pidä Ristiä pohjassa, kunnes rengas täyttyy."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "Tiedostoa {0} ei voitu kirjoittaa (onko /data täynnä?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "latauksessa ei ole eboot.bin-tiedostoa"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "Uusimman julkaisun versiota ({0}) ei voi lukea"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Julkaisun tarkistussummia ei voitu ladata"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "Julkaisuhaarassa ei ole tarkistussummaa tiedostolle {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Latausta ei voitu aloittaa"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "Lataus ei valmistunut: onko PS5 verkossa?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "Lataus on vioittunut (SHA-256 {0}, ei {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "PS5CEMU-HAR toimii levykuvasta, jonka tiedostoja ei voi korvata: asenna uusi julkaisu käsin"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Sitä ei voitu purkaa: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "Tiedostoa {0} ei voitu korvata ({1}): kopioi julkaisun PPSA99360-kansio päälle käsin"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Paikka 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Paikka 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Paikka 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Paikka 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Pelisarja / voimalevy"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Voimalevy 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Voimalevy 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Pelaaja 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Pelaaja 1, kyky 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Pelaaja 1, kyky 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Pelaaja 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Pelaaja 2, kyky 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Pelaaja 2, kyky 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Vasen alusta 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Keskialusta"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Oikea alusta 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Vasen alusta 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Vasen alusta 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Oikea alusta 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Oikea alusta 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "Tiedostoa {0} ei voitu avata"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} on liian pieni Skylanderille"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Portaali on täynnä"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} on liian pieni Infinity-hahmolle"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} on liian pieni Dimensions-hahmolle"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Liian monta numeroa."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "@-merkki ei ole sallittu tässä."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "%-merkki ei ole sallittu tässä."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "\\-merkki ei ole sallittu tässä."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Tuo sana ei ole sallittu."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "Tekstin on oltava täsmälleen pyydetyn pituinen."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "Teksti on liian pitkä."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "Teksti ei voi olla pelkkiä välilyöntejä."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "Teksti ei voi olla tyhjä."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "Peli ei hyväksynyt sitä."
 
 msgid "saved"
-msgstr ""
+msgstr "tallennettu"
 
 msgid "another version's"
-msgstr ""
+msgstr "toisesta versiosta"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Ei amiibo-lukijaa"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Poistettu"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Ei amiibo-dumppi"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: päällä"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: pois"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Paikka {0} ladattu"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Tallennettu paikkaan {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Toisen version tekemä"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Se ei toiminut"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Tämä ei ole 3DS-peli, jonka Azahar voi käynnistää."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Peliä ei voitu ladata."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Peli on salattu: pura salaus tai laita 3DS:n aes_keys.txt kansioon /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "Pelin muotoa ei tueta."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "GBA Virtual Console -pelejä ei tueta."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "Pelin järjestelmätilaa ei löytynyt."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "Peli tarvitsee 3DS-järjestelmätiedostoja, joita Azaharilla ei ole."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Pelin korjauksia ei voitu ottaa käyttöön."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Azaharin renderöijä tai suoritin ei käynnistynyt."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Artic Base -palvelin ei vastannut: tarkista 3DS:n osoite, että Artic Base on käynnissä siinä ja että 3DS ja PS5 ovat samassa verkossa."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "Peli on varattu: yritä uudelleen"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "3DS-peli pysähtyi: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "CIA-tiedosto asennetaan, sitä ei pelata: asenna se kohdassa Asetukset > Asenna CIA-tiedostoja ja käynnistä sitten peli."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Azahar ei käynnistynyt: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Kosketuslevyn painallus + OPTIONS: pelin sisäinen valikko. Pelkkä kosketuslevyn painallus: alanäyttö"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "se on salattu, itse CIA tai sen sisällä oleva peli. Azahar asentaa vain täysin salauksesta puretut CIA-tiedostot: pura sen salaus GodMode9:llä 3DS:llä tai pelaa sen sijaan pelin salauksesta purettua .3ds- tai .cci-tiedostoa"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "se ei ole CIA-tiedosto, tai se on vioittunut (tarkista tiedoston koko)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "tiedostoa ei voitu lukea"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Azahar pysähtyi kesken; syy on tiedostossa /data/ps5cemu/azahar/log/azahar_log.txt"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "se ei ole CIA, jonka Azahar voi asentaa"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "PS5:ltä loppui muisti tälle Wii U -pelille, joten sen on pysähdyttävä. Käynnistyslokissa on tiedot."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} Gt"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} tiedosto USB-asemalle {1}"
+msgstr[1] "{0} tiedostoa USB-asemalle {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "USB-asemaa ei löytynyt"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} tiedosto poistettu ({1} Mt)"
+msgstr[1] "{0} tiedostoa poistettu ({1} Mt)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Ei mitään poistettavaa"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "USB-asema {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Laajennettu tallennustila {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Peli"
 
 msgid "Update"
-msgstr ""
+msgstr "Päivitys"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Järjestelmänimike"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Nimike"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Risti"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Ympyrä"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Neliö"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Kolmio"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Kosketuslevy"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Suuntanäppäin ylös"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Suuntanäppäin alas"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Suuntanäppäin vasemmalle"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Suuntanäppäin oikealle"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Vasen tikku ylös"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Vasen tikku alas"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Vasen tikku vasemmalle"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Vasen tikku oikealle"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Vasemman tikun painallus"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Oikea tikku ylös"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Oikea tikku alas"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Oikea tikku vasemmalle"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Oikea tikku oikealle"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Oikean tikun painallus"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad ylös"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad alas"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad vasemmalle"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad oikealle"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-tikku ylös"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-tikku alas"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-tikku vasemmalle"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-tikku oikealle"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Nunchukin tikku ylös"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Nunchukin tikku alas"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Nunchukin tikku vasemmalle"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Nunchukin tikku oikealle"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Puhalla mikrofoniin"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Näytä GamePadin näyttö"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 msgid "Setup"
-msgstr ""
+msgstr "Käyttöönotto"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Jokin vaatii huomiota"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Käyttöönoton tarkistus"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Vianmääritys"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Cemu käynnistyy"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Sen asetukset, grafiikkapaketit ja ohjaimet latautuvat, ja sitten se etsii pelisi."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Etsitään pelejä…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "Sijainti: {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Tervetuloa"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Pelisi tulevat tähän"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Laita 3DS-pelisi (.3ds, .cci, .cxi, .3dsx, salauksesta purettuina) kansioon {0} tai valitse mikä tahansa kansio, jota PS5 voi lukea, esimerkiksi USB-asemalla. Myös alikansiot käydään läpi."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Laita Wii U -pelisi (.wua, .wud, .wux tai kansiot, joissa on code, content ja meta) kansioon {0} tai valitse mikä tahansa kansio, jota PS5 voi lukea, esimerkiksi USB-asemalla."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Valitse kansio"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} peli"
+msgstr[1] "Kaikki {0} peliä"
 
 msgid "In your library"
-msgstr ""
+msgstr "Kirjastossasi"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Jatka · viimeksi pelattu {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Viimeksi pelattu {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Kirjastosi"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Etsitään uusia pelejä…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "A–Ö, vuoden mukaan, toimivuuden mukaan"
 
 msgid "Play"
-msgstr ""
+msgstr "Pelaa"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Pelin sivu"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Avaa kirjasto"
 
 msgid "None on"
-msgstr ""
+msgstr "Ei yhtään päällä"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} paketti tälle pelille"
+msgstr[1] "{0} pakettia tälle pelille"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} – P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Ohjaimet"
 
 msgid "One player"
-msgstr ""
+msgstr "Yksi pelaaja"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Miten se toimii"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "Yhteensopivuusluettelon mukaan"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Päivitykset ja DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Ei päivitystä"
 
 msgid "This dump"
-msgstr ""
+msgstr "Tämä dumppi"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Päivitys v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Suosikki"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Grafiikkapaketit · {0} päällä"
+msgstr[1] "Grafiikkapaketit · {0} päällä"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Tietoja pelistä"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "GameTDB tunnistaa pelin kotelon tunnuksesta, jota tällä dumpilla ei ole."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "GameTDB:ssä ei ole vielä kuvausta tästä pelistä."
 
 msgid "Developer"
-msgstr ""
+msgstr "Kehittäjä"
 
 msgid "Released"
-msgstr ""
+msgstr "Julkaistu"
 
 msgid "Genre"
-msgstr ""
+msgstr "Lajityyppi"
 
 msgid "Rating"
-msgstr ""
+msgstr "Ikäraja"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Julkaisija"
 
 msgid "Players"
-msgstr ""
+msgstr "Pelaajat"
 
 msgid "Title ID"
-msgstr ""
+msgstr "Nimiketunnus"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Toimii hyvin PS5:llä"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "Yhteensopivuusluettelossa: ”{0}”."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Äskettäin pelatut"
 
 msgid "A to Z"
-msgstr ""
+msgstr "A–Ö"
 
 msgid "Release year"
-msgstr ""
+msgstr "Julkaisuvuosi"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Kirjasto"
 
 msgid "Sort"
-msgstr ""
+msgstr "Lajittele"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Kaikki"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Äskettäin lisätyt"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Suosikit"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Grafiikkapaketti päällä"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Lajittelu: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Haku"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Haku: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Mikään ei vastaa hakua ”{0}”"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Täällä ei ole vielä mitään"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Ei vielä pelejä"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Ympyrä tyhjentää haun."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS pelin kohdalla ja sitten Suosikki tuo sen tänne."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Kaikki näyttää jokaisen pelin."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Asetukset > Pelit ja kansiot kertoo, minne ne kuuluvat."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Pelaa 3DS:ltäsi"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, verkkosi kautta"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Risti kytkee paketin päälle tai pois; oikea siirtyy sen esiasetuksiin. Esiasetuksen valitseminen kytkee sen paketin päälle. Muutokset tulevat voimaan seuraavassa käynnistyksessä."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Tälle pelille ei ole grafiikkapaketteja"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Asetukset > Verkko ja päivitykset hakee yhteisön uusimmat."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0}/{1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Grafiikkapaketti"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Tällä paketilla ei ole kuvausta."
 
 msgid "No presets"
-msgstr ""
+msgstr "Ei esiasetuksia"
 
 msgid "Presets"
-msgstr ""
+msgstr "Esiasetukset"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Esiasetukset · valinta kytkee paketin päälle"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Valmis"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1883,373 +1883,396 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Mitä peli näkee tämän pelaajan käsissä.\n"
+"\n"
+"Useimmat pelit haluavat Wii U GamePadin pelaajalle 1: sen näyttö on toinen, jonka PS5CEMU-HAR näyttää, ja kosketuslevy koskettaa sitä. Toiset käyttävät Pro Controller -ohjaimia tai Wii Remote -ohjaimia, kuten New Super Mario Bros. U.\n"
+"Wii Remote osoittaa kohtaan, jossa sormi lepää kosketuslevyllä, tai sinne, minne osoitat DualSensella.\n"
+"Cemu tukee enintään kahta GamePadia."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"DualSensen gyroskooppi ja kiihtyvyysanturi ohjaimen omien sijaan peleihin, joissa tähdätään tai ohjataan kallistamalla GamePadia tai Wii Remotea.\n"
+"Pro Controllerissa ja Classic Controllerissa niitä ei ole."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Kuinka voimakkaasti DualSense värisee, kun peli saa ohjaimen värisemään.\n"
+"Vasen ja oikea muuttavat sitä 10 %."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Kuinka paljon vasen tikku liikkuu ennen kuin peli huomaa sen. Suurenna, jos hahmo jatkaa kävelyä, kun päästät tikusta irti; pienennä tarkempaa ohjausta varten."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Kuinka paljon oikea tikku liikkuu ennen kuin peli huomaa sen. Suurenna, jos kamera jatkaa liikettä, kun päästät tikusta irti; pienennä tarkempaa ohjausta varten."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Mikä DualSensen painike on mikäkin ohjaimen painike.\n"
+"Oletuksena A on Ympyrässä ja B Ristissä, kuten Wii U:ssa."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Tämän ohjaimen oletuspainikkeet, värinä, liike ja kuolleet alueet. Vahvistetaan pitämällä pohjassa."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Painikkeet"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Palauta oletukset"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Pelaaja {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, tämän pelaajan DualSensessa"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, DualSensessa, joka ei ole yhdistetty"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Mitä peli näkee tämän pelaajan käsissä."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "DualSensen liike ohjaimen liikkeenä."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "Pro- ja Classic Controllerissa niitä ei ole."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Kuinka voimakkaasti DualSense värisee."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Kuinka paljon vasen tikku liikkuu ennen kuin se lasketaan."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Kuinka paljon oikea tikku liikkuu ennen kuin se lasketaan."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} painike asetettu"
+msgstr[1] "{0} painiketta asetettu"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Mikä DualSensen painike on mikäkin."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Pidä Ristiä pohjassa"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Oletuspainikkeet, värinä, liike ja kuolleet alueet."
 
 msgid "Connected"
-msgstr ""
+msgstr "Yhdistetty"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Ei DualSensea"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Tyhjennetty: mikään DualSensen painike ei ole nyt tämä."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Painiketta ei painettu, joten se pysyy ennallaan."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Peruttu: se pysyy ennallaan."
 
 msgid "Done."
-msgstr ""
+msgstr "Valmis."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "DualSensen painikkeet 3DS:n painikkeille"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Pelaaja {0}: DualSensen painikkeet ohjaimelle {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Ei asetettu"
 
 msgid "This button"
-msgstr ""
+msgstr "Tämä painike"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Paina painiketta"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Paina nyt DualSensen painiketta, liipaisinta tai tikun suuntaa kohteelle {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} sekunti jäljellä. Kosketuslevyn painallus peruu."
+msgstr[1] "{0} sekuntia jäljellä. Kosketuslevyn painallus peruu."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Risti, sitten DualSensen painike, liipaisin tai tikun suunta: siitä tulee tämä.\n"
+"Neliö tyhjentää sen."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Perutaan: kopioitu poistetaan…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Perutaan: aiemmin asennettu palautetaan…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Tätä kansiota ei voi avata."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Kansiota ei voitu tallentaa. Yritä uudelleen."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Tallennettu. PS5CEMU-HAR etsii sieltä pelejä."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Tallennettu. Se puoli etsii sieltä pelejä, kun se avataan."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Etsitään pelejä: {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Valitse ensin CIA-tiedosto."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Cemu ei käynnistynyt, joten mitään ei voi asentaa."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Asennetaan: {0}, {1}/{2}.\n"
+"\n"
+"Ympyrä peruu."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Asennetaan: lasketaan tiedostoja…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Asennettu. Kirjasto näyttää sen pelinsä kohdalla."
 
 msgid "Installed"
-msgstr ""
+msgstr "Asennettu"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Peruttu. Kopioitu poistettiin yhdessä saman nimikkeen aiempien kopioiden kanssa: asenna se uudelleen pelataksesi. Sen tallennukset säilytettiin."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Peruttu. Aiemmin asennettu on ennallaan."
 
 msgid "Install"
-msgstr ""
+msgstr "Asenna"
 
 msgid "3DS games"
-msgstr ""
+msgstr "3DS-pelit"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Wii U -pelit"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Asenna CIA-tiedostoja"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Asenna päivityksiä ja DLC:tä"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Valitse CIA-tiedosto: peli, päivitys tai DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Valitse kansio, jossa on päivitys, DLC tai peli (code, content ja meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Valitse kansio, jossa 3DS-pelisi ovat"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Valitse kansio, jossa Wii U -pelisi ovat"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Tämä kansio on tyhjä."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Yläkansio"
 
 msgid "Drive"
-msgstr ""
+msgstr "Asema"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 msgid "A folder"
-msgstr ""
+msgstr "Kansio"
 
 msgid "Version"
-msgstr ""
+msgstr "Versio"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Kolmio asentaa sen 3DS:n tallennustilaan: päivitys tai DLC liitetään peliinsä, ja peli lisätään kirjastoon."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Valitse asennettava CIA-tiedosto: peli, päivitys tai DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Pelejä täällä"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Ei voi lukea"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} peli"
+msgstr[1] "{0} peliä"
 
 msgid "Found"
-msgstr ""
+msgstr "Löytyi"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Puuttuu (vain salatut dumpit tarvitsevat sen)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Löytyi kansiosta /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Puuttuu (vain .wud/.wux tarvitsevat sen)"
 
 msgid "In use"
-msgstr ""
+msgstr "Käytössä"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Pelit voivat olla .3ds- tai .cci-, .cxi-, .cia- tai .3dsx-tiedostoja, salauksesta purettuina, täällä tai alikansioissa. Kolmio käyttää näytettyä kansiota."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Pelit voivat olla .wua-, .wud- tai .wux-tiedostoja tai kansioita, joissa on code, content ja meta. Kolmio käyttää näytettyä kansiota."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Ei mitään asennettavaa"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, ei vielä asennettu"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, nyt asennettuna v{1}"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Kolmio asentaa sen Wii U:n tallennustilaan (mlc01). Pelikansiossa olevat päivitykset ja DLC:t toimivat myös sellaisinaan."
 
 msgid "To install"
-msgstr ""
+msgstr "Asennettavaksi"
 
 msgid "This folder"
-msgstr ""
+msgstr "Tämä kansio"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Yhdistetään: {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Pelaa peliä 3DS:ltäsi verkon kautta tai ota Azahar käyttöön sen avulla"
 
 msgid "3DS address"
-msgstr ""
+msgstr "3DS:n osoite"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Osoite, jonka Artic Base näyttää 3DS:n näytöllä, kun se on valmis.\n"
+"Risti muokkaa sitä: vasen ja oikea valitsevat numeron, ylös ja alas muuttavat sitä 1:llä, L1 ja R1 10:llä, ja Risti uudelleen säilyttää sen.\n"
+"3DS:n ja PS5:n on oltava samassa verkossa."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Yhdistä ja pelaa"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Käynnistä 3DS:llä Artic Base -sovellus (homebrew Azaharin tiimiltä) ja valitse siinä peli: pelikortti tai asennettu peli. Yhdistä sitten täältä: peli toimii PS5:llä 3DS:ltä, ja sen tallennukset pysyvät 3DS:llä.\n"
+"Se on vain niin sujuva kuin verkko: vahva Wi-Fi-signaali 3DS:lle ja kaapelilla kytketty PS5 auttavat."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Ota käyttöön vanhalta 3DS:ltä"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Kun Artic Setup Tool -sovellus on käynnissä vanhalla 3DS:llä tai 2DS:llä: kopioi sen järjestelmätiedostot ja omat tiedot (järjestelmäasetukset, kaverikoodin, Mii- ja eShop-tiedot) Azahariin, jotta 3DS:n järjestelmäsovelmia tai -tiedostoja tarvitsevat pelit käynnistyvät, ja myös HOME-valikko (Asetukset > Järjestelmä ja HOME-valikko).\n"
+"Ne tiedot ovat konsolisi: älä jaa Azaharin kansiota sen jälkeen."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Ota käyttöön New 3DS:ltä"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Kuten yllä, New 3DS:ltä tai New 2DS:ltä, jolla Artic Setup Tool -sovellus on käynnissä."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Automaattinen"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japani"
 
 msgid "USA"
-msgstr ""
+msgstr "Yhdysvallat"
 
 msgid "Europe"
-msgstr ""
+msgstr "Eurooppa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australia"
 
 msgid "China"
-msgstr ""
+msgstr "Kiina"
 
 msgid "Korea"
-msgstr ""
+msgstr "Korea"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Japani"
 
 msgid "English"
-msgstr ""
+msgstr "Englanti"
 
 msgid "French"
-msgstr ""
+msgstr "Ranska"
 
 msgid "German"
-msgstr ""
+msgstr "Saksa"
 
 msgid "Italian"
-msgstr ""
+msgstr "Italia"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Espanja"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Kiina (yksinkertaistettu)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Korea"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Hollanti"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugali"
 
 msgid "Russian"
-msgstr ""
+msgstr "Venäjä"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Kiina (perinteinen)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Lineaarinen"
 
 msgid "Setup theme"
 msgstr ""
