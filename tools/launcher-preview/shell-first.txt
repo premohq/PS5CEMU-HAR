@@ -1,7 +1,15 @@
 # The new launcher's first start (PREVIEW_FIRST=1 tools/preview-shell.sh tools/launcher-preview/shell-first.txt):
 # the Setup check, then Home on the side with games, nothing asking which.
 wait 90
-shot first-setup              # the Setup check, the first check needing a look focused
+shot first-setup              # the Setup check, its language focused
+press cross                   # the languages
+wait 40
+shot first-setup-language
+press circle
+wait 20
+press down                    # the first check
+wait 20
+shot first-setup-check
 press down
 wait 20
 shot first-setup-next

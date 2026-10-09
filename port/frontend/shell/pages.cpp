@@ -82,7 +82,12 @@ namespace ps5shell
 		canvas.PushAlpha(Enter(0));
 		canvas.Text(Style(kOverlineStyle), kSafeX, 64, kicker, Secondary(), 1500, 1);
 		canvas.Text(Style(kTitleStyle), kSafeX, 94, title, kText, 1500, 1);
-		canvas.Text(Style({24, ui::Weight::Regular, 1.3f}), kSafeX, 158, copy, Secondary(), 1500, 1);
+		// on one line, a little smaller if need be; a longer language's on two smaller ones, in the same room
+		const ui::TextStyle one = Style({24, ui::Weight::Regular, 1.3f});
+		if (canvas.GetFonts().Width(one, copy) * one.minScale <= 1500)
+			canvas.Text(one, kSafeX, 158, copy, Secondary(), 1500, 1);
+		else
+			canvas.Text(Style({20, ui::Weight::Regular, 1.12f}), kSafeX, 151, copy, Secondary(), 1500, 2);
 		canvas.PopAlpha();
 	}
 
@@ -713,8 +718,8 @@ namespace ps5shell
 				canvas.Rect(box, 16, focused ? Surface2() : Surface());
 				canvas.Text(Style(kBodyStyle), box.x + 24, box.CentreY() - 19, ButtonName(mappings[i].button), kText, box.w * 0.55f, 1);
 				const bool unset = mappings[i].input.empty();
-				canvas.Text(Style(kLabelStyle), box.Right() - 24, box.CentreY() - 16, unset ? std::string(Tr("Not set")) : InputName(mappings[i].input),
-					unset ? Tertiary() : Accent(), box.w * 0.4f, 1, ui::Align::Right);
+				canvas.Text(Style(kLabelStyle), box.Right() - 24 - box.w * 0.4f, box.CentreY() - 16,
+					unset ? std::string(Tr("Not set")) : InputName(mappings[i].input), unset ? Tertiary() : Accent(), box.w * 0.4f, 1, ui::Align::Right);
 				if (focused)
 					Focus(box, 16);
 			});
@@ -1024,7 +1029,7 @@ namespace ps5shell
 						meta = KindName(candidate.kind);
 				}
 				if (!meta.empty())
-					canvas.Text(Style(kCaptionStyle), box.Right() - 24, box.CentreY() - 13, meta, Tertiary(), 170, 1, ui::Align::Right);
+					canvas.Text(Style(kCaptionStyle), box.Right() - 24 - 170, box.CentreY() - 13, meta, Tertiary(), 170, 1, ui::Align::Right);
 				if (focused)
 					Focus(box, 16);
 			});
@@ -1039,7 +1044,7 @@ namespace ps5shell
 			const bool file = IsFileEntry(m_browseSelected);
 			const auto title = file ? ps5azahar::Inspect(JoinPath(m_browseFolder, m_browseEntries[m_browseSelected])) : ps5azahar::Title{};
 			current = !file ? ShortPath(m_browseFolder, 40) : title.name.empty() ? m_browseEntries[m_browseSelected] : title.name;
-			lines[0] = {Tr("Type"), !file ? Tr("A folder") : title.titleId ? CiaKind(title.titleId) : "CIA"};
+			lines[0] = {TrC("kind", "Type"), !file ? Tr("A folder") : title.titleId ? CiaKind(title.titleId) : "CIA"};
 			lines[1] = {Tr("Title ID"), file && title.titleId ? Hex(title.titleId) : "-"};
 			lines[2] = {Tr("Version"), file && title.titleId ? fmt::format("v{}", title.version) : "-"};
 			ready[0] = ready[1] = ready[2] = file;

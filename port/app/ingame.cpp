@@ -285,7 +285,7 @@ namespace
 			{"right", Tr("Right stick deadzone"), Percent(controls.rightDeadzone), true,
 				Tr("How far the right stick moves before the game sees it. Raise it if the camera drifts.")},
 			{"layout", Tr("A and B"), !faceButtons ? std::string("-") : aOnCircle ? Tr("A on Circle") : Tr("A on Cross"), true,
-				Tr("A on Circle as on the Wii U, or on Cross, with X and Y swapped to match. Every button: launcher's Settings > Controls.")},
+				Tr("A on Circle as on the Wii U, or on Cross, with X and Y swapped to match. Every button: the launcher's Settings > Wii U > Controllers.")},
 		}});
 		Row library{"library", Tr("Quit to the library"), "", false,
 			Tr("Leaves the game for the library. What you have not saved in the game is lost, so Cross is held.")};

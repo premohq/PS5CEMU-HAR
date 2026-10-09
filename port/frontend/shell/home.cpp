@@ -359,11 +359,21 @@ namespace ps5shell
 				canvas.Rect(box, kRadiusCard, 0x0affffff);
 				canvas.Ring(box, kRadiusCard, 2, 0x26ffffff);
 				canvas.Draw(Icon::ChevronRight, {box.CentreX() - 18, box.y + box.h * 0.28f, 36, 36}, Secondary());
-				// as many lines as the tile has room for under its chevron
-				const ui::TextStyle allStyle = Style({26, ui::Weight::Medium, 1.2f});
-				const int lines = std::max(1, (int)((box.h * 0.46f - 8) / (allStyle.size * allStyle.lineHeight)));
-				canvas.Text(allStyle, box.x + 10, box.y + box.h * 0.52f, TrP((long long)m_games.size(), "All {0} game", "All {0} games"), Secondary(),
-					box.w - 20, lines, ui::Align::Centre);
+				// on as many lines as the tile has room for under its chevron, smaller before it is cut (a
+				// longer language's words on the 3DS's smaller tiles)
+				const std::string all = TrP((long long)m_games.size(), "All {0} game", "All {0} games");
+				const float top = box.y + box.h * 0.28f + 42, room = box.Bottom() - 8 - top;
+				ui::TextStyle allStyle = Style({26, ui::Weight::Medium, 1.15f});
+				allStyle.minScale = 1;
+				const float smallest = std::min(allStyle.size, 18.0f);
+				int lines = 1;
+				for (;; allStyle.size -= 2)
+				{
+					lines = std::max(1, (int)(room / (allStyle.size * allStyle.lineHeight)));
+					if (allStyle.size <= smallest || !m_fonts.Layout(allStyle, all, box.w - 20, lines).truncated)
+						break;
+				}
+				canvas.Text(allStyle, box.x + 10, top, all, Secondary(), box.w - 20, lines, ui::Align::Centre);
 				if (focused)
 					Focus(box, kRadiusCard);
 			}

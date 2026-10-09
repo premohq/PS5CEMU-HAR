@@ -1355,7 +1355,13 @@ namespace ps5shell
 			Scrim(canvas, 0.7f * a);
 			const int count = (int)m_picker.options.size(), visible = std::min(count, 8);
 			const float rowH = 64;
-			const Box sheet{1920 - kSafeX - 620, 540 - (visible * rowH + 170) / 2, 620, visible * rowH + 170};
+			// wider, to 900, for a longer language's options (the one in use has a check and "In use" after it)
+			float widest = 0;
+			for (const std::string& option : m_picker.options)
+				widest = std::max(widest, m_fonts.Width(Style(kBodyStyle), option));
+			const float inUseWidth = m_fonts.Width(Style(kCaptionStyle), Tr("In use"));
+			const float sheetWidth = std::clamp(widest + 40 + 20 + 20 + 56 + std::min(160.0f, inUseWidth) + 40, 620.0f, 900.0f);
+			const Box sheet{1920 - kSafeX - sheetWidth, 540 - (visible * rowH + 170) / 2, sheetWidth, visible * rowH + 170};
 			canvas.PushAlpha(a);
 			canvas.PushOffset((1 - a) * 40, 0);
 			DrawSheet(canvas, sheet, a);
@@ -1375,12 +1381,16 @@ namespace ps5shell
 				const bool focused = i == m_picker.selected;
 				if (focused)
 					canvas.Rect(row, 14, Surface2());
-				canvas.Text(Style(kBodyStyle), row.x + 20, row.CentreY() - 19, m_picker.options[i], focused ? kText : Secondary(), row.w - 180, 1);
+				// the option, and on the one in use a check and "In use" (at most 160 wide) after it
+				float labelWidth = row.w - 180;
 				if (i == m_picker.active)
 				{
 					canvas.Draw(Icon::Check, {row.Right() - 46, row.CentreY() - 13, 26, 26}, Accent());
-					canvas.Text(Style(kCaptionStyle), row.Right() - 56, row.CentreY() - 13, Tr("In use"), Secondary(), 120, 1, ui::Align::Right);
+					const ui::TextBlock inUse = canvas.Text(Style(kCaptionStyle), row.Right() - 216, row.CentreY() - 13, Tr("In use"), Secondary(), 160, 1,
+						ui::Align::Right);
+					labelWidth = std::min(labelWidth, row.w - 20 - 56 - inUse.width - 20);
 				}
+				canvas.Text(Style(kBodyStyle), row.x + 20, row.CentreY() - 19, m_picker.options[i], focused ? kText : Secondary(), labelWidth, 1);
 			}
 			canvas.PopClip();
 			canvas.PopOffset();

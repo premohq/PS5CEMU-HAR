@@ -1013,6 +1013,17 @@ namespace ps5shell
 		for (const auto& [iy, index] : items)
 		{
 			const float ry = railTop + iy - m_railScroll.value;
+			if (ry < railTop - 40 || ry > railBottom)
+				continue;
+			// an item scrolled part-way out fades at the rail's ends, rather than being cut across (at the top only
+			// once the rail has scrolled: its first heading sits at the very top)
+			const float top = std::clamp((ry - (railTop - 10) + std::max(0.0f, 30 - m_railScroll.value)) / 30, 0.0f, 1.0f);
+			canvas.PushAlpha(top * std::clamp((railBottom - ry) / 26, 0.0f, 1.0f));
+			struct PopAlpha
+			{
+				Canvas& canvas;
+				~PopAlpha() { canvas.PopAlpha(); }
+			} popAlpha{canvas};
 			if (index < 0)
 			{
 				const int s = -1 - index;
