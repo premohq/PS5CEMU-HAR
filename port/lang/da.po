@@ -1159,722 +1159,722 @@ msgid "The download did not finish"
 msgstr "Overførslen blev ikke færdig"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Det kunne ikke installeres: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "De nye pakker kunne ikke erstatte de gamle"
 
 msgid "Hold"
-msgstr ""
+msgstr "Hold"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Hold Kryds nede, til ringen er fyldt."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "{0} kunne ikke skrives (er /data fuld?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "overførslen indeholder ingen eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "Den seneste udgivelses version ({0}) kan ikke læses"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Udgivelsens kontrolsummer kunne ikke hentes"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "Udgivelsesgrenen har ingen kontrolsum for {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Overførslen kunne ikke starte"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "Overførslen blev ikke færdig: er PS5’en online?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "Overførslen er beskadiget (SHA-256 {0}, ikke {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "PS5CEMU-HAR kører fra et billede, hvis filer ikke kan erstattes: installer den nye udgivelse manuelt"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Det kunne ikke pakkes ud: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "{0} kunne ikke erstattes ({1}): kopier udgivelsens PPSA99360-mappe over manuelt"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Plads 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Plads 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Plads 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Plads 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Spilsæt / kraftdisk"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Kraftdisk 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Kraftdisk 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Spiller 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Spiller 1, evne 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Spiller 1, evne 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Spiller 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Spiller 2, evne 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Spiller 2, evne 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Venstre felt 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Midterfelt"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Højre felt 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Venstre felt 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Venstre felt 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Højre felt 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Højre felt 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "{0} kunne ikke åbnes"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} er for lille til en Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Portalen er fuld"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} er for lille til en Infinity-figur"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} er for lille til en Dimensions-figur"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "For mange cifre."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "Tegnet @ er ikke tilladt her."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "Tegnet % er ikke tilladt her."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "Tegnet \\ er ikke tilladt her."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Det ord er ikke tilladt."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "Teksten skal have præcis den ønskede længde."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "Teksten er for lang."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "Teksten må ikke kun være mellemrum."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "Teksten må ikke være tom."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "Spillet accepterede det ikke."
 
 msgid "saved"
-msgstr ""
+msgstr "gemt"
 
 msgid "another version's"
-msgstr ""
+msgstr "fra en anden version"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Ingen amiibo-læser"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Fjernet"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Ikke en amiibo-dump"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: til"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: fra"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Plads {0} indlæst"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Gemt på plads {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Lavet af en anden version"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Det virkede ikke"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Det her er ikke et 3DS-spil, som Azahar kan starte."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Spillet kunne ikke indlæses."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Spillet er krypteret: dekrypter det, eller læg 3DS’ens aes_keys.txt i /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "Spillets format understøttes ikke."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "GBA Virtual Console-spil understøttes ikke."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "Spillets systemtilstand blev ikke fundet."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "Spillet skal bruge 3DS-systemfiler, som Azahar ikke har."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Spillets patches kunne ikke anvendes."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Azahars renderer eller CPU startede ikke."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Artic Base-serveren svarede ikke: tjek 3DS’ens adresse, at Artic Base kører på den, og at 3DS’en og PS5’en er på samme netværk."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "Spillet er optaget: prøv igen"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "3DS-spillet stoppede: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "En CIA-fil installeres, den spilles ikke: installer den under Indstillinger > Installer CIA-filer, og start så spillet."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Azahar startede ikke: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Klik på touchpladen + OPTIONS: spilmenuen. Kun et klik på touchpladen: den nederste skærm"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "den er krypteret, selve CIA-filen eller spillet i den. Azahar installerer kun fuldt dekrypterede CIA-filer: dekrypter den med GodMode9 på en 3DS, eller spil i stedet spillets dekrypterede .3ds- eller .cci-fil"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "det er ikke en CIA-fil, eller den er beskadiget (tjek filens størrelse)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "filen kunne ikke læses"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Azahar stoppede halvvejs; /data/ps5cemu/azahar/log/azahar_log.txt siger hvorfor"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "det er ikke en CIA, som Azahar kan installere"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "PS5’en har ikke mere hukommelse til dette Wii U-spil, så det må stoppe. Opstartsloggen har detaljerne."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} fil til USB-drevet {1}"
+msgstr[1] "{0} filer til USB-drevet {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Intet USB-drev fundet"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} fil slettet ({1} MB)"
+msgstr[1] "{0} filer slettet ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Intet at slette"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "USB-drev {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Udvidet lager {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Spil"
 
 msgid "Update"
-msgstr ""
+msgstr "Opdatering"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Systemtitel"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Kryds"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Cirkel"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Firkant"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Trekant"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Touchplade"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Retningsknap op"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Retningsknap ned"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Retningsknap venstre"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Retningsknap højre"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Venstre pind op"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Venstre pind ned"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Venstre pind venstre"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Venstre pind højre"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Tryk på venstre pind"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Højre pind op"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Højre pind ned"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Højre pind venstre"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Højre pind højre"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Tryk på højre pind"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad op"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad ned"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad venstre"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad højre"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-pind op"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-pind ned"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-pind venstre"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-pind højre"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Nunchuk-pind op"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Nunchuk-pind ned"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Nunchuk-pind venstre"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Nunchuk-pind højre"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Pust i mikrofonen"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Vis GamePad’ens skærm"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 msgid "Setup"
-msgstr ""
+msgstr "Opsætning"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Noget kræver opmærksomhed"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Opsætningstjek"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnosticering"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Starter Cemu"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Dets indstillinger, grafikpakker og controllere indlæses, og så leder det efter dine spil."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Leder efter spil…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "I {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Velkommen"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Her kommer dine spil"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Læg dine 3DS-spil (.3ds, .cci, .cxi, .3dsx, dekrypterede) i {0}, eller vælg en vilkårlig mappe, som PS5’en kan læse, f.eks. på et USB-drev. Undermapper gennemsøges også."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Læg dine Wii U-spil (.wua, .wud, .wux eller mapper med code, content og meta) i {0}, eller vælg en vilkårlig mappe, som PS5’en kan læse, f.eks. på et USB-drev."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Vælg en mappe"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} spil"
+msgstr[1] "Alle {0} spil"
 
 msgid "In your library"
-msgstr ""
+msgstr "I dit bibliotek"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Fortsæt · sidst spillet {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Sidst spillet {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Dit bibliotek"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Leder efter nye spil…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "A til Å, efter år, efter hvordan de kører"
 
 msgid "Play"
-msgstr ""
+msgstr "Spil"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Spilside"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Åbn biblioteket"
 
 msgid "None on"
-msgstr ""
+msgstr "Ingen slået til"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} pakke til dette spil"
+msgstr[1] "{0} pakker til dette spil"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} på P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Controllere"
 
 msgid "One player"
-msgstr ""
+msgstr "Én spiller"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Hvordan det kører"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "Ifølge kompatibilitetslisten"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Opdateringer og DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Ingen opdatering"
 
 msgid "This dump"
-msgstr ""
+msgstr "Denne dump"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Opdatering v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Favorit"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Grafikpakker · {0} til"
+msgstr[1] "Grafikpakker · {0} til"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Om spillet"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "GameTDB kender et spil på id’et på æsken, som denne dump ikke har."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "GameTDB har endnu ingen beskrivelse af dette spil."
 
 msgid "Developer"
-msgstr ""
+msgstr "Udvikler"
 
 msgid "Released"
-msgstr ""
+msgstr "Udgivet"
 
 msgid "Genre"
-msgstr ""
+msgstr "Genre"
 
 msgid "Rating"
-msgstr ""
+msgstr "Aldersmærkning"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Udgiver"
 
 msgid "Players"
-msgstr ""
+msgstr "Spillere"
 
 msgid "Title ID"
-msgstr ""
+msgstr "Titel-id"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Kører godt på PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "Kompatibilitetslisten har det som »{0}«."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Spillet for nylig"
 
 msgid "A to Z"
-msgstr ""
+msgstr "A til Å"
 
 msgid "Release year"
-msgstr ""
+msgstr "Udgivelsesår"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Bibliotek"
 
 msgid "Sort"
-msgstr ""
+msgstr "Sortér"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Tilføjet for nylig"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Favoritter"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Grafikpakker slået til"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Sortering: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Søg"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Søgning: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Intet matcher »{0}«"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Intet her endnu"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Ingen spil endnu"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Cirkel rydder søgningen."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS på et spil og så Favorit lægger det her."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Alle viser hvert spil."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Indstillinger > Spil og mapper fortæller, hvor de skal ligge."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Spil fra din 3DS"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, via dit netværk"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Kryds slår en pakke til eller fra; højre går til dens forudindstillinger. At vælge en forudindstilling slår dens pakke til. Ændringer gælder fra næste start."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Ingen grafikpakker til dette spil"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Indstillinger > Online og opdateringer henter fællesskabets nyeste."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} af {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Grafikpakke"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Denne pakke har ingen beskrivelse."
 
 msgid "No presets"
-msgstr ""
+msgstr "Ingen forudindstillinger"
 
 msgid "Presets"
-msgstr ""
+msgstr "Forudindstillinger"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Forudindstillinger · at vælge én slår den til"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Færdig"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1883,373 +1883,396 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Hvad spillet ser i denne spillers hænder.\n"
+"\n"
+"De fleste spil vil have Wii U GamePad til spiller 1: dens skærm er den anden, som PS5CEMU-HAR viser, og touchpladen rører den. Andre bruger Pro Controller eller Wii-fjernbetjeninger, til spil som New Super Mario Bros. U.\n"
+"En Wii-fjernbetjening peger dertil, hvor en finger hviler på touchpladen, eller hvor du sigter med DualSense.\n"
+"Cemu understøtter højst to GamePads."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"DualSense-controllerens gyroskop og accelerometer som controllerens egne, til spil hvor man sigter eller styrer ved at vippe GamePad’en eller Wii-fjernbetjeningen.\n"
+"Pro Controller og Classic Controller har ingen."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Hvor kraftigt DualSense vibrerer, når spillet får controlleren til at vibrere.\n"
+"Venstre og højre ændrer det med 10 %."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Hvor langt venstre pind bevæger sig, før spillet opdager det. Hæv den, hvis en figur bliver ved med at gå, når du slipper pinden; sænk den for finere styring."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Hvor langt højre pind bevæger sig, før spillet opdager det. Hæv den, hvis kameraet bliver ved med at glide, når du slipper pinden; sænk den for finere styring."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Hvilken DualSense-knap der er hvilken af controllerens knapper.\n"
+"Som standard sidder A på Cirkel og B på Kryds, hvor Wii U har dem."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Standardknapperne, vibrationen, bevægelsen og dødzonerne for denne controller. Holdes nede for at bekræfte."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Knapper"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Nulstil til standard"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Spiller {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, på denne spillers DualSense"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, på en DualSense, der ikke er tilsluttet"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Hvad spillet ser i denne spillers hænder."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "DualSense-controllerens bevægelse som controllerens."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "Pro og Classic Controller har ingen."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Hvor kraftigt DualSense vibrerer."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Hvor langt venstre pind bevæger sig, før det tæller."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Hvor langt højre pind bevæger sig, før det tæller."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} knap indstillet"
+msgstr[1] "{0} knapper indstillet"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Hvilken DualSense-knap der er hvilken."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Hold Kryds nede"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Standardknapperne, vibrationen, bevægelsen og dødzonerne."
 
 msgid "Connected"
-msgstr ""
+msgstr "Tilsluttet"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Ingen DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Ryddet: ingen DualSense-knap er denne nu."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Der blev ikke trykket på nogen knap, så den forbliver som før."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Annulleret: den forbliver som før."
 
 msgid "Done."
-msgstr ""
+msgstr "Færdig."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "DualSense-knapperne til 3DS’ens"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Spiller {0}: DualSense-knapperne til {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Ikke indstillet"
 
 msgid "This button"
-msgstr ""
+msgstr "Denne knap"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Tryk på en knap"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Tryk nu på DualSense-knappen, -aftrækkeren eller -pindretningen til {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} sekund tilbage. Et klik på touchpladen annullerer."
+msgstr[1] "{0} sekunder tilbage. Et klik på touchpladen annullerer."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Kryds og så en DualSense-knap, aftrækker eller pindretning: den bliver til denne.\n"
+"Firkant rydder den."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Annullerer: det kopierede fjernes…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Annullerer: det, der var installeret før, lægges tilbage…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Denne mappe kan ikke åbnes."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Mappen kunne ikke gemmes. Prøv igen."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Gemt. PS5CEMU-HAR leder efter spil der."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Gemt. Den side leder efter spil der, når den åbnes."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Leder efter spil i {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Vælg først en CIA-fil."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Cemu startede ikke, så intet kan installeres."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Installerer: {0}, {1} af {2}.\n"
+"\n"
+"Cirkel annullerer."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Installerer: tæller filerne…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Installeret. Biblioteket viser det ved dets spil."
 
 msgid "Installed"
-msgstr ""
+msgstr "Installeret"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Annulleret. Det kopierede blev fjernet, sammen med tidligere kopier af samme titel: installer den igen for at spille. Dens gemte data bevares."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Annulleret. Det, der var installeret før, er som før."
 
 msgid "Install"
-msgstr ""
+msgstr "Installer"
 
 msgid "3DS games"
-msgstr ""
+msgstr "3DS-spil"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Wii U-spil"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Installer CIA-filer"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Installer opdateringer og DLC"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Vælg en CIA-fil: et spil, en opdatering eller et DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Vælg en mappe med en opdatering, et DLC eller et spil (code, content og meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Vælg mappen med dine 3DS-spil"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Vælg mappen med dine Wii U-spil"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Denne mappe er tom."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Overordnet mappe"
 
 msgid "Drive"
-msgstr ""
+msgstr "Drev"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 msgid "A folder"
-msgstr ""
+msgstr "En mappe"
 
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Trekant installerer den i 3DS’ens lager: en opdatering eller et DLC kommer til sit spil, og et spil kommer i biblioteket."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Vælg en CIA-fil, der skal installeres: et spil, en opdatering eller et DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Spil her"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Kan ikke læses"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} spil"
+msgstr[1] "{0} spil"
 
 msgid "Found"
-msgstr ""
+msgstr "Fundet"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Mangler (kun krypterede dumps skal bruge den)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Fundet i /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Mangler (kun .wud/.wux skal bruge den)"
 
 msgid "In use"
-msgstr ""
+msgstr "I brug"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Spil kan være .3ds eller .cci, .cxi, .cia eller .3dsx, dekrypterede, her eller i undermapper. Trekant bruger den viste mappe."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Spil kan være .wua, .wud, .wux eller mapper med code, content og meta. Trekant bruger den viste mappe."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Intet at installere"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, ikke installeret endnu"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, v{1} er installeret nu"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Trekant installerer den i Wii U’ens lager (mlc01). Opdateringer og DLC i spilmappen virker også, som de er."
 
 msgid "To install"
-msgstr ""
+msgstr "Skal installeres"
 
 msgid "This folder"
-msgstr ""
+msgstr "Denne mappe"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Forbinder til {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Spil et spil fra din 3DS via dit netværk, eller opsæt Azahar fra den"
 
 msgid "3DS address"
-msgstr ""
+msgstr "3DS-adresse"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Adressen, som Artic Base viser på 3DS’ens skærm, når den er klar.\n"
+"Kryds redigerer den: venstre og højre vælger et tal, op og ned ændrer det med 1, L1 og R1 med 10, og Kryds igen beholder den.\n"
+"3DS’en og PS5’en skal være på samme netværk."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Forbind og spil"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Start appen Artic Base (homebrew fra Azahar-holdet) på 3DS’en, og vælg et spil i den: kassetten eller et installeret. Forbind så herfra: spillet kører på PS5’en fra 3DS’en, og dets gemte data bliver på 3DS’en.\n"
+"Det er kun så jævnt som netværket: et stærkt wi-fi-signal til 3DS’en og en PS5 med kabel hjælper."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Opsæt fra en ældre 3DS"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Med appen Artic Setup Tool kørende på en ældre 3DS eller 2DS: kopierer dens systemfiler og egne data (systemindstillinger, vennekode, Mii- og eShop-data) til Azahar, så spil, der skal bruge 3DS’ens systemprogrammer eller -filer, starter, og HOME-menuen også (Indstillinger > System og HOME-menu).\n"
+"De data er din konsols: del ikke Azahars mappe bagefter."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Opsæt fra en New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Som ovenfor, fra en New 3DS eller New 2DS med appen Artic Setup Tool kørende."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisk"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgid "USA"
-msgstr ""
+msgstr "USA"
 
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australien"
 
 msgid "China"
-msgstr ""
+msgstr "Kina"
 
 msgid "Korea"
-msgstr ""
+msgstr "Korea"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Japansk"
 
 msgid "English"
-msgstr ""
+msgstr "Engelsk"
 
 msgid "French"
-msgstr ""
+msgstr "Fransk"
 
 msgid "German"
-msgstr ""
+msgstr "Tysk"
 
 msgid "Italian"
-msgstr ""
+msgstr "Italiensk"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Spansk"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Kinesisk (forenklet)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Koreansk"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Nederlandsk"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugisisk"
 
 msgid "Russian"
-msgstr ""
+msgstr "Russisk"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Kinesisk (traditionelt)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Lineær"
 
 msgid "Setup theme"
 msgstr ""
