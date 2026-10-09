@@ -6,3 +6,115 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "genre"
+msgid "Basketball"
+msgstr "Básquetbol"
+
+msgctxt "genre"
+msgid "Bowling"
+msgstr "Boliche"
+
+msgctxt "genre"
+msgid "Puzzle"
+msgstr "Rompecabezas"
+
+msgctxt "genre"
+msgid "Shoot 'em up"
+msgstr "Shoot 'em up"
+
+msgctxt "genre"
+msgid "Skateboarding"
+msgstr "Patineta"
+
+msgid "Wii U Pro Controller"
+msgstr "Control Pro de Wii U"
+
+msgid "Classic Controller"
+msgstr "Control Clásico"
+
+msgid "Wii Remote"
+msgstr "Control remoto Wii"
+
+msgid "Wii Remote + Nunchuk"
+msgstr "Control remoto Wii + Nunchuk"
+
+msgid "No controller"
+msgstr "Sin control"
+
+msgid "Each player's controller, motion, vibration, deadzones and A and B."
+msgstr "El control de cada jugador, movimiento, vibración, zonas muertas, y A y B."
+
+msgid "Whose controller the settings below are: Left and Right choose the player."
+msgstr "De quién es el control de los ajustes de abajo: Izquierda y Derecha eligen el jugador."
+
+msgid "Emulated controller"
+msgstr "Control emulado"
+
+msgid "A on Circle as on the Wii U, or on Cross, with X and Y swapped to match. Every button: the launcher's Settings > Wii U > Controllers."
+msgstr "A en Círculo como en Wii U, o en Cruz, con X e Y intercambiados para que cuadre. Todos los botones: Ajustes > Wii U > Controles, en el lanzador."
+
+msgctxt "decimal separator"
+msgid "."
+msgstr "."
+
+msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
+msgstr "Se están cargando sus ajustes, paquetes gráficos y controles, y después buscará tus juegos."
+
+msgid "Controllers"
+msgstr "Controles"
+
+msgid ""
+"What the game sees in this player's hands.\n"
+"\n"
+"Most games want the Wii U GamePad for player 1: its screen is the second one PS5CEMU-HAR shows, and the touchpad touches it. Others take Pro Controllers, or Wii Remotes for games such as New Super Mario Bros. U.\n"
+"A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
+"Cemu has two GamePads at most."
+msgstr ""
+"Lo que el juego ve en las manos de este jugador.\n"
+"\n"
+"La mayoría de los juegos quieren el Wii U GamePad para el jugador 1: su pantalla es la segunda que muestra PS5CEMU-HAR, y el panel táctil la toca. Otros usan Controles Pro, o Controles remotos Wii en juegos como New Super Mario Bros. U.\n"
+"Un Control remoto Wii apunta donde un dedo se apoya en el panel táctil, o hacia donde apuntes el DualSense.\n"
+"Cemu admite dos GamePads como máximo."
+
+msgid ""
+"The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
+"The Pro Controller and the Classic Controller have none."
+msgstr ""
+"El giroscopio y el acelerómetro del DualSense como los del control, para los juegos en los que se apunta o se conduce inclinando el GamePad o el Control remoto Wii.\n"
+"El Control Pro y el Control Clásico no tienen."
+
+msgid ""
+"How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
+"Left and Right change it by 10%."
+msgstr ""
+"Con qué fuerza vibra el DualSense cuando el juego hace vibrar el control.\n"
+"Izquierda y Derecha la cambian un 10 %."
+
+msgid ""
+"Which DualSense button is which of the controller's.\n"
+"A is on Circle and B on Cross by default, where the Wii U has them."
+msgstr ""
+"Qué botón del DualSense es cada botón del control.\n"
+"Por defecto, A está en Círculo y B en Cruz, donde los tiene la Wii U."
+
+msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
+msgstr "Los botones, la vibración, el movimiento y las zonas muertas por defecto de este control. Se mantiene para confirmar."
+
+msgid "The DualSense's motion as the controller's."
+msgstr "El movimiento del DualSense como el del control."
+
+msgid "The Pro and Classic Controllers have none."
+msgstr "El Control Pro y el Control Clásico no tienen."
+
+msgid "Each player's emulated controller, motion and buttons."
+msgstr "El control emulado, el movimiento y los botones de cada jugador."
+
+msgid "Cross: this player's controller, motion and buttons."
+msgstr "Cruz: el control, el movimiento y los botones de este jugador."
+
+msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
+msgstr "Paquetes de texturas en /data/ps5cemu/azahar/load/textures/<ID del título>, como los carga Azahar para computadora."
+
+msgid "The guide, on your phone"
+msgstr "La guía, en tu celular"

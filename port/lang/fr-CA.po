@@ -6,3 +6,167 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "PS5CEMU-HAR cannot write to {0}. Is the HEN loaded?"
+msgstr "PS5CEMU-HAR ne peut pas écrire dans {0}. Le HEN est-il chargé?"
+
+msgctxt "genre"
+msgid "Basketball"
+msgstr "Basketball"
+
+msgctxt "genre"
+msgid "Darts"
+msgstr "Dards"
+
+msgctxt "genre"
+msgid "Exercise"
+msgstr "Entraînement"
+
+msgctxt "genre"
+msgid "American football"
+msgstr "Football"
+
+msgctxt "genre"
+msgid "Party"
+msgstr "Party"
+
+msgctxt "genre"
+msgid "Football"
+msgstr "Soccer"
+
+msgctxt "genre"
+msgid "Volleyball"
+msgstr "Volleyball"
+
+msgctxt "genre"
+msgid "Wrestling"
+msgstr "Lutte"
+
+msgid "Wii U Pro Controller"
+msgstr "Manette Pro Wii U"
+
+msgid "Its own shape keeps the picture's proportions, with bars where they differ from the screen's; Stretched fills it."
+msgstr "Les proportions d’origine gardent celles de l’image, avec des bandes là où elles diffèrent de l’écran; Étirée le remplit."
+
+msgid "Cross turns it on or off; the game shows it at once."
+msgstr "Croix l’active ou le désactive; le jeu l’applique aussitôt."
+
+msgid "Left and Right choose another; the game shows it at once."
+msgstr "Gauche et Droite en choisissent un autre; le jeu l’applique aussitôt."
+
+msgid "Left and Right put the next figure on it; Empty takes it off."
+msgstr "Gauche et Droite y posent la figurine suivante; Vide la retire."
+
+msgid "Left and Right choose an amiibo dump; Cross touches it to the GamePad when the game asks for one."
+msgstr "Gauche et Droite choisissent un dump d’amiibo; Croix le pose sur le GamePad quand le jeu en demande un."
+
+msgid "Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS."
+msgstr "Sous 100 %, un jeu lent peut retrouver sa pleine vitesse; au-dessus, les jeux qui perdaient des images sur 3DS sont plus fluides."
+
+msgid "Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only."
+msgstr "Au-dessus de 100 %, les scènes lentes passent plus vite; Aucune tourne aussi vite que la PS5 le peut. Pour ce jeu seulement."
+
+msgid "Cross, Left or Right turns it on or off, at once; it is kept for next time."
+msgstr "Croix, Gauche ou Droite l’active ou le désactive aussitôt; c’est conservé pour la prochaine fois."
+
+msgid "Left and Right choose an amiibo dump; Cross holds it to the reader."
+msgstr "Gauche et Droite choisissent un dump d’amiibo; Croix le présente au lecteur."
+
+msgid "GitHub could not be found: is the PS5 online?"
+msgstr "GitHub est introuvable : la PS5 est-elle en ligne?"
+
+msgid "{0} could not be written (is /data full?)"
+msgstr "{0} n’a pas pu être écrit (/data est-il plein?)"
+
+msgid "The download did not finish: is the PS5 online?"
+msgstr "Le téléchargement n’a pas abouti : la PS5 est-elle en ligne?"
+
+msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
+msgstr "Azahar s’est arrêté en cours de route; /data/ps5cemu/azahar/log/azahar_log.txt dit pourquoi"
+
+msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
+msgstr "Croix active ou désactive un pack; Droite ouvre ses préréglages. Choisir un préréglage active son pack. Les changements s’appliquent au prochain lancement."
+
+msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
+msgstr "La distance que parcourt le joystick gauche avant que le jeu la remarque. Augmentez-la si un personnage avance tout seul quand vous lâchez le joystick; baissez-la pour un contrôle plus fin."
+
+msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
+msgstr "La distance que parcourt le joystick droit avant que le jeu la remarque. Augmentez-la si la caméra tourne toute seule quand vous lâchez le joystick; baissez-la pour un contrôle plus fin."
+
+msgid "For every 3DS game; in a game, its menu changes them at once."
+msgstr "Pour tous les jeux 3DS; en jeu, son menu les change aussitôt."
+
+msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
+msgstr "PS5CEMU-HAR parle la langue de la PS5, sauf si vous en choisissez une autre ici; la vérification de la configuration au premier lancement offre le même choix. Les noms des jeux, leurs descriptions et les packs graphiques viennent de GameTDB, des jeux et des auteurs des packs, et restent tels qu’ils les ont écrits."
+
+msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
+msgstr "Les ressorts deviennent de courts fondus; rien ne flotte, ne respire ou ne monte derrière les menus."
+
+msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
+msgstr "Bicubique est net, Bicubique Hermite un peu plus doux, Linéaire plus doux encore; Plus proche voisin garde les pixels carrés."
+
+msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
+msgstr "Chaque image reste affichée au moins deux ou trois rafraîchissements, pour qu’un jeu qui ne tient pas la fréquence de l’écran tourne à un rythme régulier : 60 ou 40 i/s avec la sortie 120 Hz, 30 ou 20 sans. 60 i/s avec la sortie 120 Hz convient à un jeu en 4K qui passe parfois sous 60; 30 i/s à 60 Hz, à un jeu en 8K. Aussi dans le menu en jeu."
+
+msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
+msgstr "Ce que le jeu voit dans les mains de ce joueur, et ses mouvements, vibrations, zones mortes et touches. Le joueur 1 est l’utilisateur connecté qui a lancé l’appli; les DualSense des autres utilisateurs connectés sont les joueurs 2 à 4."
+
+msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
+msgstr "Lisse les textures du jeu quand elles sont agrandies; Aucun les garde telles que la 3DS les dessine. Un filtre redessine chaque texture à la résolution interne : aux hautes résolutions, c’est le réglage le plus coûteux. Si un jeu saccade, essayez d’abord Aucun."
+
+msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
+msgstr "La distance que parcourt un joystick avant que le jeu la remarque, pour le pad circulaire et le stick C. Augmentez-la si quelque chose dérive quand vous lâchez le joystick; baissez-la pour un contrôle plus fin."
+
+msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
+msgstr "Quelle touche de la DualSense correspond à quel bouton de la 3DS. Par défaut, A est sur Rond et B sur Croix, comme sur la 3DS; le pad circulaire est le joystick gauche, le stick C le droit, et le pavé tactile l’écran tactile."
+
+msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
+msgstr "Artic Base joue à un jeu depuis une 3DS de votre réseau, ses sauvegardes restant sur la 3DS; Artic Setup copie les fichiers système d’une 3DS dans Azahar, pour le menu HOME et les jeux qui en ont besoin."
+
+msgid ""
+"Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
+"Azahar, the 3DS emulator, by the Azahar team and the Citra contributors before them; Mihawk-99's PS5 port of it and dynarmic.\n"
+"Box art and game information: GameTDB. The font: Lexend.\n"
+"An unofficial port, not affiliated with the Cemu or Azahar teams, Nintendo or Sony.\n"
+"\n"
+"Wii U games: /data/ps5cemu/games, storage and saves: /data/ps5cemu/mlc01, keys: /data/ps5cemu/keys.txt\n"
+"3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
+"\n"
+msgstr ""
+"Cemu, l’émulateur Wii U, par l’équipe de Cemu et ses contributeurs; RADV sur PS5 par Mihawk-99 et mpereiraesaa; les auteurs des packs graphiques communautaires.\n"
+"Azahar, l’émulateur 3DS, par l’équipe d’Azahar et, avant elle, les contributeurs de Citra; son portage PS5 par Mihawk-99, et dynarmic.\n"
+"Jaquettes et informations sur les jeux : GameTDB. La police : Lexend.\n"
+"Un portage non officiel, sans lien avec les équipes de Cemu ou d’Azahar, Nintendo ou Sony.\n"
+"\n"
+"Jeux Wii U : /data/ps5cemu/games, stockage et sauvegardes : /data/ps5cemu/mlc01, clés : /data/ps5cemu/keys.txt\n"
+"Jeux 3DS : /data/ps5cemu/azahar/games, stockage : /data/ps5cemu/azahar/sdmc\n"
+"\n"
+
+msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
+msgstr "Ajoutez PPSA99360 à la liste de jailbreak d’applis de votre HEN (etaHEN : sa liste de jailbreak d’applis; OnionHEN : à la fin de exact_title_ids dans config.ini, sans virgule après), ou faites écouter elfldr sur le port 9021. Puis relancez PS5CEMU-HAR."
+
+msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
+msgstr "Ni la mémoire JIT de votre HEN ni une mémoire exécutable n’ont pu être obtenues, les jeux Wii U se rabattent donc sur l’interpréteur de Cemu. Ajoutez PPSA99360 à la liste de jailbreak d’applis de votre HEN, puis relancez PS5CEMU-HAR; Paramètres > Diagnostic indique ce qu’il a obtenu."
+
+msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
+msgstr "PS5CEMU-HAR parle la langue de votre PS5. Croix en choisit une autre; Paramètres > Général > Langue la change à tout moment."
+
+msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
+msgstr "Vous avez {0}. Télécharger et installer la nouvelle version maintenant? Vos jeux, sauvegardes et paramètres restent tels quels."
+
+msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
+msgstr "Cette session : Azahar (3DS); la Wii U émulée de Cemu n’est pas démarrée"
+
+msgid "This session: Cemu (Wii U); Azahar's core is not started"
+msgstr "Cette session : Cemu (Wii U); le cœur d’Azahar n’est pas démarré"
+
+msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
+msgstr "Pas de mémoire JIT : les jeux Wii U tournent sur l’interpréteur, bien plus lent. PPSA99360 est-il dans la liste de jailbreak d’applis de votre HEN?"
+
+msgctxt "compatibility note"
+msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
+msgstr "Tourne à environ 60 i/s en 1440p. Jusqu’à 2.0.0 C, il se figeait puis se fermait quand Magnétisme ou d’autres modules, ou la longue-vue Sheikah (R3), mettaient des objets en surbrillance; corrigé après 2.0.0 C (un Cemu plus récent)"
+
+msgctxt "compatibility note"
+msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
+msgstr "Se joue avec son pack graphique 60 FPS désactivé; activé, il affiche des glitchs et plante dès que le jeu se charge. Jusqu’à 2.0.0 C, il y plantait dans tous les cas (Cemu manquait de descripteurs Vulkan)"
