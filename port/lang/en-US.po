@@ -6,3 +6,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "genre"
+msgid "American football"
+msgstr "Football"
+
+msgctxt "genre"
+msgid "Football"
+msgstr "Soccer"
+
+msgctxt "genre"
+msgid "Tower defence"
+msgstr "Tower defense"
+
+msgid "Nearest neighbour"
+msgstr "Nearest neighbor"
+
+msgid "A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match."
+msgstr "A on Circle and B on Cross, where the 3DS has them, or the other way around, with X and Y swapped to match."
+
+msgid "Centre pad"
+msgstr "Center pad"
+
+msgid "Favourite"
+msgstr "Favorite"
+
+msgid "Favourites"
+msgstr "Favorites"
+
+msgid "Options on a game, then Favourite, puts it here."
+msgstr "Options on a game, then Favorite, puts it here."
+
+msgid "Cancelled: it stays as it was."
+msgstr "Canceled: it stays as it was."
+
+msgid "Cancelling: what it copied is removed…"
+msgstr "Canceling: what it copied is removed…"
+
+msgid "Cancelling: what was installed before is put back…"
+msgstr "Canceling: what was installed before is put back…"
+
+msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
+msgstr "Canceled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
+
+msgid "Cancelled. What was installed before is as it was."
+msgstr "Canceled. What was installed before is as it was."
+
+msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
+msgstr "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colors only."
+
+msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
+msgstr "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbor keeps pixels square."
+
+msgid "Not a favourite"
+msgstr "Not a favorite"
+
+msgid "Added to Favourites"
+msgstr "Added to Favorites"
+
+msgid "Taken out of Favourites"
+msgstr "Taken out of Favorites"
