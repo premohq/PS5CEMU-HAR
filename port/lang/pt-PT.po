@@ -1159,722 +1159,722 @@ msgid "The download did not finish"
 msgstr "A transferência não terminou"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Não foi possível instalar: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Os pacotes novos não conseguiram substituir os antigos"
 
 msgid "Hold"
-msgstr ""
+msgstr "Manter"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Mantém a Cruz premida até o anel encher."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "Não foi possível escrever {0} (o /data está cheio?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "a transferência não tem eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "A versão da última publicação ({0}) não pode ser lida"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Não foi possível transferir as somas de verificação da publicação"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "O ramo de publicações não tem soma de verificação para {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Não foi possível iniciar a transferência"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "A transferência não terminou: a PS5 está online?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "A transferência está danificada (SHA-256 {0} em vez de {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "O PS5CEMU-HAR corre a partir de uma imagem cujos ficheiros não podem ser substituídos: instala a nova versão manualmente"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Não foi possível descompactar: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "Não foi possível substituir {0} ({1}): copia manualmente por cima a pasta PPSA99360 da publicação"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Espaço 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Espaço 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Espaço 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Espaço 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Conjunto de jogo / disco de poder"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Disco de poder 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Disco de poder 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Jogador 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Jogador 1, habilidade 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Jogador 1, habilidade 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Jogador 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Jogador 2, habilidade 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Jogador 2, habilidade 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Zona esquerda 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Zona central"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Zona direita 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Zona esquerda 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Zona esquerda 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Zona direita 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Zona direita 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "Não foi possível abrir {0}"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} é demasiado pequeno para um Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "O portal está cheio"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} é demasiado pequeno para uma figura Infinity"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} é demasiado pequeno para uma figura Dimensions"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Portal do Poder Skylanders"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Base Disney Infinity"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "Toy Pad LEGO Dimensions"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Demasiados dígitos."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "O sinal @ não é permitido aqui."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "O sinal % não é permitido aqui."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "O sinal \\ não é permitido aqui."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Essa palavra não é permitida."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "O texto tem de ter exatamente o comprimento pedido."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "O texto é demasiado longo."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "O texto não pode ter só espaços."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "O texto não pode ficar vazio."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "O jogo não aceitou."
 
 msgid "saved"
-msgstr ""
+msgstr "guardado"
 
 msgid "another version's"
-msgstr ""
+msgstr "de outra versão"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Sem leitor de amiibo"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Retirado"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Não é um dump de amiibo"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: ativado"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: desativado"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Espaço {0} carregado"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Guardado no espaço {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Criado por outra versão"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Não resultou"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Este não é um jogo 3DS que o Azahar consiga iniciar."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Não foi possível carregar o jogo."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "O jogo está encriptado: desencripta-o ou coloca o aes_keys.txt da 3DS em /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "O formato do jogo não é suportado."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "Os jogos GBA da Consola Virtual não são suportados."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "O modo de sistema do jogo não foi encontrado."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "O jogo precisa de ficheiros de sistema da 3DS que o Azahar não tem."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Não foi possível aplicar os patches do jogo."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "O renderizador ou a CPU do Azahar não arrancou."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "O servidor Artic Base não respondeu: verifica o endereço da 3DS, se o Artic Base está a correr nela e se a 3DS e a PS5 estão na mesma rede."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "O jogo está ocupado: tenta novamente"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "O jogo 3DS parou: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "Um ficheiro CIA instala-se, não se joga: instala-o em Definições > Instalar ficheiros CIA e depois inicia o jogo."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "O Azahar não arrancou: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Clique no painel tátil + OPTIONS: o menu do jogo. Só um clique no painel tátil: o ecrã inferior"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "está encriptado, o CIA ou o jogo dentro dele. O Azahar só instala ficheiros CIA totalmente desencriptados: desencripta-o com o GodMode9 numa 3DS, ou joga antes o ficheiro .3ds ou .cci desencriptado do jogo"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "não é um ficheiro CIA, ou está danificado (verifica o tamanho do ficheiro)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "não foi possível ler o ficheiro"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "O Azahar parou a meio; /data/ps5cemu/azahar/log/azahar_log.txt diz porquê"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "não é um CIA que o Azahar consiga instalar"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "A PS5 ficou sem memória para este jogo Wii U, por isso ele tem de parar. O registo de arranque tem os detalhes."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} ficheiro para a unidade USB {1}"
+msgstr[1] "{0} ficheiros para a unidade USB {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Nenhuma unidade USB encontrada"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} ficheiro eliminado ({1} MB)"
+msgstr[1] "{0} ficheiros eliminados ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Nada para eliminar"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "Unidade USB {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Armazenamento expandido {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Jogo"
 
 msgid "Update"
-msgstr ""
+msgstr "Atualização"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Título do sistema"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Cruz"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Círculo"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Quadrado"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Triângulo"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Painel tátil"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Botão direcional para cima"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Botão direcional para baixo"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Botão direcional para a esquerda"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Botão direcional para a direita"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Manípulo esquerdo para cima"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Manípulo esquerdo para baixo"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Manípulo esquerdo para a esquerda"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Manípulo esquerdo para a direita"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Premir o manípulo esquerdo"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Manípulo direito para cima"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Manípulo direito para baixo"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Manípulo direito para a esquerda"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Manípulo direito para a direita"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Premir o manípulo direito"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Botão Deslizante para cima"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Botão Deslizante para baixo"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Botão Deslizante para a esquerda"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Botão Deslizante para a direita"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "Manípulo C para cima"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "Manípulo C para baixo"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "Manípulo C para a esquerda"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "Manípulo C para a direita"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Manípulo do Nunchuk para cima"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Manípulo do Nunchuk para baixo"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Manípulo do Nunchuk para a esquerda"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Manípulo do Nunchuk para a direita"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Soprar para o microfone"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Mostrar o ecrã do GamePad"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Nenhum"
 
 msgid "Setup"
-msgstr ""
+msgstr "Configuração"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Algo precisa de atenção"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Verificação da configuração"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnóstico"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "A iniciar o Cemu"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "As definições, os pacotes gráficos e os comandos dele estão a carregar, e depois procura os teus jogos."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "A procurar jogos…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "Em {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Boas-vindas"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Os teus jogos ficam aqui"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Coloca os teus jogos 3DS (.3ds, .cci, .cxi, .3dsx, desencriptados) em {0}, ou escolhe qualquer pasta que a PS5 consiga ler, como uma numa unidade USB. As subpastas também são analisadas."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Coloca os teus jogos Wii U (.wua, .wud, .wux, ou pastas com code, content e meta) em {0}, ou escolhe qualquer pasta que a PS5 consiga ler, como uma numa unidade USB."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Escolher uma pasta"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} jogo"
+msgstr[1] "Todos os {0} jogos"
 
 msgid "In your library"
-msgstr ""
+msgstr "Na tua biblioteca"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Continuar · jogado pela última vez {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Jogado pela última vez {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "A tua biblioteca"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "A procurar jogos novos…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "De A a Z, por ano, por como correm"
 
 msgid "Play"
-msgstr ""
+msgstr "Jogar"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Página do jogo"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Abrir a biblioteca"
 
 msgid "None on"
-msgstr ""
+msgstr "Nenhum ativado"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} pacote para este jogo"
+msgstr[1] "{0} pacotes para este jogo"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} no P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Comandos"
 
 msgid "One player"
-msgstr ""
+msgstr "Um jogador"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Como corre"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "Segundo a lista de compatibilidade"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Atualizações e DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Sem atualização"
 
 msgid "This dump"
-msgstr ""
+msgstr "Este dump"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Atualização v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Favorito"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Pacotes gráficos · {0} ativado"
+msgstr[1] "Pacotes gráficos · {0} ativados"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Acerca de"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "O GameTDB reconhece um jogo pelo ID na caixa dele, que este dump não tem."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "O GameTDB ainda não tem uma descrição deste jogo."
 
 msgid "Developer"
-msgstr ""
+msgstr "Programador"
 
 msgid "Released"
-msgstr ""
+msgstr "Lançamento"
 
 msgid "Genre"
-msgstr ""
+msgstr "Género"
 
 msgid "Rating"
-msgstr ""
+msgstr "Classificação"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Editora"
 
 msgid "Players"
-msgstr ""
+msgstr "Jogadores"
 
 msgid "Title ID"
-msgstr ""
+msgstr "ID do título"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Corre bem na PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "A lista de compatibilidade classifica-o como «{0}»."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Jogados recentemente"
 
 msgid "A to Z"
-msgstr ""
+msgstr "De A a Z"
 
 msgid "Release year"
-msgstr ""
+msgstr "Ano de lançamento"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Biblioteca"
 
 msgid "Sort"
-msgstr ""
+msgstr "Ordenar"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Adicionados recentemente"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Favoritos"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Pacotes gráficos ativados"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Ordem: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Pesquisar"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Pesquisa: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Nada corresponde a «{0}»"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Ainda nada aqui"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Ainda sem jogos"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Círculo limpa a pesquisa."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS num jogo e depois Favorito coloca-o aqui."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Todos mostra todos os jogos."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Definições > Jogos e pastas diz onde ficam."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Jogar a partir da tua 3DS"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, através da tua rede"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Cruz ativa ou desativa um pacote; Direita vai para as predefinições dele. Escolher uma predefinição ativa o respetivo pacote. As alterações aplicam-se no próximo arranque."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Nenhum pacote gráfico para este jogo"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Definições > Online e atualizações vai buscar os mais recentes da comunidade."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} de {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Pacote gráfico"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Este pacote não tem descrição."
 
 msgid "No presets"
-msgstr ""
+msgstr "Sem predefinições"
 
 msgid "Presets"
-msgstr ""
+msgstr "Predefinições"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Predefinições · escolher uma ativa o pacote"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Concluído"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1883,373 +1883,396 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"O que o jogo vê nas mãos deste jogador.\n"
+"\n"
+"A maioria dos jogos quer o Wii U GamePad para o jogador 1: o ecrã dele é o segundo que o PS5CEMU-HAR mostra, e o painel tátil toca-lhe. Outros usam Comandos Pro, ou Comandos Wii em jogos como New Super Mario Bros. U.\n"
+"Um Comando Wii aponta para onde um dedo repousa no painel tátil, ou para onde apontas o DualSense.\n"
+"O Cemu aceita no máximo dois GamePads."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"O giroscópio e o acelerómetro do DualSense como os do comando, para os jogos em que se aponta ou se conduz inclinando o GamePad ou o Comando Wii.\n"
+"O Comando Pro e o Comando Clássico não têm."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"A força com que o DualSense vibra quando o jogo faz o comando vibrar.\n"
+"Esquerda e Direita alteram-na em 10%."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Quanto o manípulo esquerdo se move antes de o jogo dar por isso. Aumenta-a se uma personagem andar sozinha quando largas o manípulo; diminui-a para um controlo mais fino."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Quanto o manípulo direito se move antes de o jogo dar por isso. Aumenta-a se a câmara rodar sozinha quando largas o manípulo; diminui-a para um controlo mais fino."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Que botão do DualSense corresponde a que botão do comando.\n"
+"Por predefinição, A fica no Círculo e B na Cruz, onde a Wii U os tem."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Os botões, a vibração, o movimento e as zonas mortas predefinidos deste comando. É preciso manter premido para confirmar."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Botões"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Repor predefinições"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Jogador {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, no DualSense deste jogador"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, num DualSense que não está ligado"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "O que o jogo vê nas mãos deste jogador."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "O movimento do DualSense como o do comando."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "O Comando Pro e o Clássico não têm."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "A força com que o DualSense vibra."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Quanto o manípulo esquerdo se move antes de contar."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Quanto o manípulo direito se move antes de contar."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} botão definido"
+msgstr[1] "{0} botões definidos"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Que botão do DualSense corresponde a qual."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Mantém a Cruz premida"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Os botões, a vibração, o movimento e as zonas mortas predefinidos."
 
 msgid "Connected"
-msgstr ""
+msgstr "Ligado"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Sem DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Limpo: nenhum botão do DualSense corresponde agora a este."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Não foi premido nenhum botão, por isso fica como estava."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Cancelado: fica como estava."
 
 msgid "Done."
-msgstr ""
+msgstr "Concluído."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "Os botões do DualSense para os da 3DS"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Jogador {0}: os botões do DualSense para o {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Não definido"
 
 msgid "This button"
-msgstr ""
+msgstr "Este botão"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Prime um botão"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Prime agora o botão, o gatilho ou a direção de manípulo do DualSense para {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Falta {0} segundo. Um clique no painel tátil cancela."
+msgstr[1] "Faltam {0} segundos. Um clique no painel tátil cancela."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Cruz, depois um botão, gatilho ou direção de manípulo do DualSense: passa a ser este.\n"
+"Quadrado limpa-o."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "A cancelar: o que foi copiado está a ser removido…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "A cancelar: o que estava instalado antes está a ser reposto…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Esta pasta não pode ser aberta."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Não foi possível guardar a pasta. Tenta novamente."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Guardado. O PS5CEMU-HAR está a procurar jogos lá."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Guardado. Esse lado procura jogos lá quando for aberto."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "A procurar jogos em {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Escolhe primeiro um ficheiro CIA."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "O Cemu não arrancou, por isso nada pode ser instalado."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"A instalar: {0}, {1} de {2}.\n"
+"\n"
+"Círculo cancela."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "A instalar: a contar os ficheiros…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Instalado. A biblioteca mostra-o com o respetivo jogo."
 
 msgid "Installed"
-msgstr ""
+msgstr "Instalado"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Cancelado. O que foi copiado foi removido, juntamente com qualquer cópia anterior do mesmo título: volta a instalá-lo para jogar. Os dados guardados mantêm-se."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Cancelado. O que estava instalado antes ficou como estava."
 
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 msgid "3DS games"
-msgstr ""
+msgstr "Jogos 3DS"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Jogos Wii U"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Instalar ficheiros CIA"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Instalar atualizações e DLC"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Escolhe um ficheiro CIA: um jogo, uma atualização ou DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Escolhe uma pasta com uma atualização, DLC ou jogo (code, content e meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Escolhe a pasta onde estão os teus jogos 3DS"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Escolhe a pasta onde estão os teus jogos Wii U"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Esta pasta está vazia."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Pasta acima"
 
 msgid "Drive"
-msgstr ""
+msgstr "Unidade"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 msgid "A folder"
-msgstr ""
+msgstr "Uma pasta"
 
 msgid "Version"
-msgstr ""
+msgstr "Versão"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Triângulo instala-o no armazenamento da 3DS: uma atualização ou DLC vai com o respetivo jogo, e um jogo entra na biblioteca."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Escolhe um ficheiro CIA para instalar: um jogo, uma atualização ou DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Jogos aqui"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Ilegível"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} jogo"
+msgstr[1] "{0} jogos"
 
 msgid "Found"
-msgstr ""
+msgstr "Encontrado"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Em falta (só os dumps encriptados precisam)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Encontrado em /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Em falta (só os .wud/.wux precisam)"
 
 msgid "In use"
-msgstr ""
+msgstr "Em uso"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Os jogos podem ser .3ds ou .cci, .cxi, .cia ou .3dsx, desencriptados, aqui ou nas subpastas. Triângulo usa a pasta mostrada."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Os jogos podem ser .wua, .wud, .wux, ou pastas com code, content e meta. Triângulo usa a pasta mostrada."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Nada para instalar"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, ainda não instalada"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, com a v{1} instalada agora"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Triângulo instala-o no armazenamento da Wii U (mlc01). As atualizações e DLC na pasta de jogos também funcionam tal como estão."
 
 msgid "To install"
-msgstr ""
+msgstr "Para instalar"
 
 msgid "This folder"
-msgstr ""
+msgstr "Esta pasta"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "A ligar a {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Joga um jogo da tua 3DS através da tua rede, ou configura o Azahar a partir dela"
 
 msgid "3DS address"
-msgstr ""
+msgstr "Endereço da 3DS"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"O endereço que o Artic Base mostra no ecrã da 3DS quando está pronto.\n"
+"Cruz edita-o: Esquerda e Direita escolhem um número, Cima e Baixo alteram-no de 1 em 1, L1 e R1 de 10 em 10, e Cruz outra vez confirma-o.\n"
+"A 3DS e a PS5 têm de estar na mesma rede."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Ligar e jogar"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Na 3DS, inicia a aplicação Artic Base (homebrew da equipa do Azahar) e escolhe nela um jogo: o cartão de jogo ou um instalado. Depois liga a partir daqui: o jogo corre na PS5 a partir da 3DS, e os dados guardados ficam na 3DS.\n"
+"Só é tão fluido quanto a rede: um sinal Wi-Fi forte para a 3DS e uma PS5 ligada por cabo ajudam."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Configurar a partir de uma 3DS antiga"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Com a aplicação Artic Setup Tool a correr numa 3DS ou 2DS antiga: copia os ficheiros de sistema e os dados dela (definições da consola, código de amigo, dados de Mii e da Nintendo eShop) para o Azahar, para que arranquem os jogos que precisam dos applets ou ficheiros de sistema da 3DS, e também o Menu HOME (Definições > Sistema e Menu HOME).\n"
+"Esses dados são da tua consola: não partilhes depois a pasta do Azahar."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Configurar a partir de uma New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Como acima, a partir de uma New 3DS ou New 2DS com a aplicação Artic Setup Tool."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Automática"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japão"
 
 msgid "USA"
-msgstr ""
+msgstr "EUA"
 
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Austrália"
 
 msgid "China"
-msgstr ""
+msgstr "China"
 
 msgid "Korea"
-msgstr ""
+msgstr "Coreia"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Japonês"
 
 msgid "English"
-msgstr ""
+msgstr "Inglês"
 
 msgid "French"
-msgstr ""
+msgstr "Francês"
 
 msgid "German"
-msgstr ""
+msgstr "Alemão"
 
 msgid "Italian"
-msgstr ""
+msgstr "Italiano"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Espanhol"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Chinês (simplificado)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Coreano"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Neerlandês"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Português"
 
 msgid "Russian"
-msgstr ""
+msgstr "Russo"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Chinês (tradicional)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Linear"
 
 msgid "Setup theme"
 msgstr ""
