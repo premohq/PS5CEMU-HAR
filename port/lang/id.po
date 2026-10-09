@@ -1158,717 +1158,717 @@ msgid "The download did not finish"
 msgstr "Unduhan tidak selesai"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Tidak bisa dipasang: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Paket baru tidak bisa menggantikan yang lama"
 
 msgid "Hold"
-msgstr ""
+msgstr "Tahan"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Tahan Silang sampai cincinnya penuh."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "{0} tidak bisa ditulis (apakah /data penuh?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "unduhan tidak berisi eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "Versi rilis terbaru ({0}) tidak bisa dibaca"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Checksum rilis tidak bisa diunduh"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "Cabang rilis tidak punya checksum untuk {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Unduhan tidak bisa dimulai"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "Unduhan tidak selesai: apakah PS5 sedang online?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "Unduhan rusak (SHA-256 {0}, bukan {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "PS5CEMU-HAR berjalan dari image yang file-filenya tidak bisa diganti: pasang rilis baru secara manual"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Tidak bisa diekstrak: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "{0} tidak bisa diganti ({1}): salin folder PPSA99360 dari rilis ke atasnya secara manual"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Slot 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Slot 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Slot 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Slot 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Set permainan / cakram kekuatan"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Cakram kekuatan 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Cakram kekuatan 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Pemain 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Pemain 1, kemampuan 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Pemain 1, kemampuan 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Pemain 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Pemain 2, kemampuan 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Pemain 2, kemampuan 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Alas kiri 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Alas tengah"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Alas kanan 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Alas kiri 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Alas kiri 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Alas kanan 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Alas kanan 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "{0} tidak bisa dibuka"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} terlalu kecil untuk sebuah Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Portal penuh"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} terlalu kecil untuk figur Infinity"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} terlalu kecil untuk figur Dimensions"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Terlalu banyak digit."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "Tanda @ tidak diizinkan di sini."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "Tanda % tidak diizinkan di sini."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "Tanda \\ tidak diizinkan di sini."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Kata itu tidak diizinkan."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "Teks harus tepat sepanjang yang diminta."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "Teks terlalu panjang."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "Teks tidak boleh hanya spasi."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "Teks tidak boleh kosong."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "Game tidak menerimanya."
 
 msgid "saved"
-msgstr ""
+msgstr "tersimpan"
 
 msgid "another version's"
-msgstr ""
+msgstr "dari versi lain"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Tidak ada pembaca amiibo"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Diangkat"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Bukan dump amiibo"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: aktif"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: nonaktif"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Slot {0} dimuat"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Tersimpan di slot {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Dibuat oleh versi lain"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Tidak berhasil"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Ini bukan game 3DS yang bisa dimulai oleh Azahar."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Game tidak bisa dimuat."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Game terenkripsi: dekripsi, atau taruh aes_keys.txt milik 3DS di /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "Format game tidak didukung."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "Game GBA Virtual Console tidak didukung."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "Mode sistem game tidak ditemukan."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "Game memerlukan file sistem 3DS yang tidak dimiliki Azahar."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Patch game tidak bisa diterapkan."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Perender atau CPU Azahar tidak berjalan."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Server Artic Base tidak menjawab: periksa alamat 3DS, bahwa Artic Base berjalan di sana, dan bahwa 3DS dan PS5 ada di jaringan yang sama."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "Game sedang sibuk: coba lagi"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "Game 3DS berhenti: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "File CIA dipasang, bukan dimainkan: pasang dari Pengaturan > Pasang file CIA, lalu mulai game-nya."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Azahar tidak berjalan: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Klik panel sentuh + OPTIONS: menu dalam game. Klik panel sentuh saja: layar bawah"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "file ini terenkripsi, CIA-nya atau game di dalamnya. Azahar hanya memasang file CIA yang sepenuhnya didekripsi: dekripsi dengan GodMode9 di 3DS, atau mainkan file .3ds atau .cci game yang sudah didekripsi"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "ini bukan file CIA, atau rusak (periksa ukuran file)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "file tidak bisa dibaca"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Azahar berhenti di tengah jalan; /data/ps5cemu/azahar/log/azahar_log.txt menjelaskan alasannya"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "ini bukan CIA yang bisa dipasang Azahar"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "PS5 kehabisan memori untuk game Wii U ini, jadi game harus berhenti. Log mulai memuat detailnya."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
+msgstr[0] "{0} file ke drive USB {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Tidak ada drive USB yang ditemukan"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
+msgstr[0] "{0} file dihapus ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Tidak ada yang dihapus"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "Drive USB {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Penyimpanan tambahan {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Game"
 
 msgid "Update"
-msgstr ""
+msgstr "Pembaruan"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Judul sistem"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Judul"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Silang"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Lingkaran"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Kotak"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Segitiga"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Panel sentuh"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Tombol arah atas"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Tombol arah bawah"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Tombol arah kiri"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Tombol arah kanan"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Stik kiri atas"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Stik kiri bawah"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Stik kiri kiri"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Stik kiri kanan"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Tekan stik kiri"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Stik kanan atas"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Stik kanan bawah"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Stik kanan kiri"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Stik kanan kanan"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Tekan stik kanan"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad atas"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad bawah"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad kiri"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad kanan"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-Stick atas"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-Stick bawah"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-Stick kiri"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-Stick kanan"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Stik Nunchuk atas"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Stik Nunchuk bawah"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Stik Nunchuk kiri"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Stik Nunchuk kanan"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Tiup mikrofon"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Tampilkan layar GamePad"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Tidak ada"
 
 msgid "Setup"
-msgstr ""
+msgstr "Penyiapan"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Ada yang perlu dicek"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Pemeriksaan penyiapan"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnostik"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Memulai Cemu"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Pengaturan, paket grafis, dan kontrolernya sedang dimuat, lalu Cemu mencari game-mu."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Mencari game…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "Di {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Selamat datang"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Game-mu akan muncul di sini"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Taruh game 3DS-mu (.3ds, .cci, .cxi, .3dsx, terdekripsi) di {0}, atau pilih folder apa saja yang bisa dibaca PS5, misalnya di drive USB. Subfolder juga dicari."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Taruh game Wii U-mu (.wua, .wud, .wux, atau folder berisi code, content, dan meta) di {0}, atau pilih folder apa saja yang bisa dibaca PS5, misalnya di drive USB."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Pilih folder"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
+msgstr[0] "Semua {0} game"
 
 msgid "In your library"
-msgstr ""
+msgstr "Di pustakamu"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Lanjutkan · terakhir dimainkan {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Terakhir dimainkan {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Pustakamu"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Mencari game baru…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "A sampai Z, menurut tahun, menurut cara berjalannya"
 
 msgid "Play"
-msgstr ""
+msgstr "Main"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Halaman game"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Buka pustaka"
 
 msgid "None on"
-msgstr ""
+msgstr "Tidak ada yang aktif"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
+msgstr[0] "{0} paket untuk game ini"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} di P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Kontroler"
 
 msgid "One player"
-msgstr ""
+msgstr "Satu pemain"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Cara berjalannya"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "Menurut daftar kompatibilitas"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Pembaruan dan DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Tidak ada pembaruan"
 
 msgid "This dump"
-msgstr ""
+msgstr "Dump ini"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Pembaruan v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Favorit"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
+msgstr[0] "Paket grafis · {0} aktif"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Tentang"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "GameTDB mengenali game dari ID di kotaknya, yang tidak dimiliki dump ini."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "GameTDB belum punya deskripsi game ini."
 
 msgid "Developer"
-msgstr ""
+msgstr "Pengembang"
 
 msgid "Released"
-msgstr ""
+msgstr "Dirilis"
 
 msgid "Genre"
-msgstr ""
+msgstr "Genre"
 
 msgid "Rating"
-msgstr ""
+msgstr "Rating"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Penerbit"
 
 msgid "Players"
-msgstr ""
+msgstr "Pemain"
 
 msgid "Title ID"
-msgstr ""
+msgstr "ID judul"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Berjalan baik di PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "Daftar kompatibilitas mencatatnya sebagai “{0}”."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Baru dimainkan"
 
 msgid "A to Z"
-msgstr ""
+msgstr "A sampai Z"
 
 msgid "Release year"
-msgstr ""
+msgstr "Tahun rilis"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Pustaka"
 
 msgid "Sort"
-msgstr ""
+msgstr "Urutkan"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Semua"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Baru ditambahkan"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Favorit"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Paket grafis aktif"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Urutan: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Cari"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Cari: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Tidak ada yang cocok dengan “{0}”"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Belum ada apa pun di sini"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Belum ada game"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Lingkaran menghapus pencarian."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS di sebuah game, lalu Favorit, akan menaruhnya di sini."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Semua menampilkan setiap game."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Pengaturan > Game dan folder memberi tahu tempatnya."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Main dari 3DS-mu"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, melalui jaringanmu"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Silang mengaktifkan atau menonaktifkan paket; Kanan menuju preset-nya. Memilih preset mengaktifkan paketnya. Perubahan berlaku saat mulai berikutnya."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Tidak ada paket grafis untuk game ini"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Pengaturan > Online dan pembaruan mengambil yang terbaru dari komunitas."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} dari {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Paket grafis"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Paket ini tidak punya deskripsi."
 
 msgid "No presets"
-msgstr ""
+msgstr "Tidak ada preset"
 
 msgid "Presets"
-msgstr ""
+msgstr "Preset"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Preset · memilih salah satu mengaktifkannya"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Selesai"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1877,370 +1877,393 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Apa yang dilihat game di tangan pemain ini.\n"
+"\n"
+"Sebagian besar game menginginkan Wii U GamePad untuk pemain 1: layarnya adalah layar kedua yang ditampilkan PS5CEMU-HAR, dan panel sentuh menyentuhnya. Game lain memakai Pro Controller, atau Wii Remote untuk game seperti New Super Mario Bros. U.\n"
+"Wii Remote menunjuk ke tempat jari berada di panel sentuh, atau ke arah DualSense kamu arahkan.\n"
+"Cemu mendukung paling banyak dua GamePad."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"Giroskop dan akselerometer DualSense sebagai milik kontroler, untuk game yang membidik atau mengemudi dengan memiringkan GamePad atau Wii Remote.\n"
+"Pro Controller dan Classic Controller tidak punya."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Seberapa kuat DualSense bergetar saat game membuat kontroler bergetar.\n"
+"Kiri dan Kanan mengubahnya 10%."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Seberapa jauh stik kiri bergerak sebelum game menyadarinya. Naikkan jika karakter terus berjalan saat kamu melepas stik; turunkan untuk kontrol yang lebih halus."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Seberapa jauh stik kanan bergerak sebelum game menyadarinya. Naikkan jika kamera terus bergeser saat kamu melepas stik; turunkan untuk kontrol yang lebih halus."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Tombol DualSense mana yang menjadi tombol kontroler yang mana.\n"
+"Secara default A di Lingkaran dan B di Silang, seperti letaknya di Wii U."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Tombol, getaran, gerakan, dan zona mati default untuk kontroler ini. Ditahan untuk konfirmasi."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Tombol"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Kembalikan ke default"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Pemain {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, di DualSense pemain ini"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, di DualSense yang tidak tersambung"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Apa yang dilihat game di tangan pemain ini."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "Gerakan DualSense sebagai gerakan kontroler."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "Pro dan Classic Controller tidak punya."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Seberapa kuat DualSense bergetar."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Seberapa jauh stik kiri bergerak sebelum dihitung."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Seberapa jauh stik kanan bergerak sebelum dihitung."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
+msgstr[0] "{0} tombol diatur"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Tombol DualSense mana menjadi yang mana."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Tahan Silang"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Tombol, getaran, gerakan, dan zona mati default."
 
 msgid "Connected"
-msgstr ""
+msgstr "Tersambung"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Tanpa DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Dihapus: tidak ada tombol DualSense yang menjadi tombol ini sekarang."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Tidak ada tombol yang ditekan, jadi tetap seperti semula."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Dibatalkan: tetap seperti semula."
 
 msgid "Done."
-msgstr ""
+msgstr "Selesai."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "Tombol DualSense untuk tombol 3DS"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Pemain {0}: tombol DualSense untuk {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Belum diatur"
 
 msgid "This button"
-msgstr ""
+msgstr "Tombol ini"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Tekan sebuah tombol"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Tekan sekarang tombol, pelatuk, atau arah stik DualSense untuk {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
+msgstr[0] "{0} detik lagi. Klik panel sentuh membatalkan."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Silang, lalu tombol, pelatuk, atau arah stik DualSense: itu menjadi tombol ini.\n"
+"Kotak menghapusnya."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Membatalkan: yang sudah disalin dihapus…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Membatalkan: yang terpasang sebelumnya dikembalikan…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Folder ini tidak bisa dibuka."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Folder tidak bisa disimpan. Coba lagi."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Tersimpan. PS5CEMU-HAR mencari game di sana."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Tersimpan. Sisi itu akan mencari game di sana saat dibuka."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Mencari game di {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Pilih file CIA dulu."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Cemu tidak berjalan, jadi tidak ada yang bisa dipasang."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Memasang: {0}, {1} dari {2}.\n"
+"\n"
+"Lingkaran membatalkan."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Memasang: menghitung file…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Terpasang. Pustaka menampilkannya bersama game-nya."
 
 msgid "Installed"
-msgstr ""
+msgstr "Terpasang"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Dibatalkan. Yang sudah disalin dihapus, bersama salinan sebelumnya dari judul yang sama: pasang lagi untuk memainkannya. Data simpanannya tetap ada."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Dibatalkan. Yang terpasang sebelumnya tetap seperti semula."
 
 msgid "Install"
-msgstr ""
+msgstr "Pasang"
 
 msgid "3DS games"
-msgstr ""
+msgstr "Game 3DS"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Game Wii U"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Pasang file CIA"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Pasang pembaruan dan DLC"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Pilih file CIA: game, pembaruan, atau DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Pilih folder berisi pembaruan, DLC, atau game (code, content, dan meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Pilih folder tempat game 3DS-mu berada"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Pilih folder tempat game Wii U-mu berada"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Folder ini kosong."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Folder induk"
 
 msgid "Drive"
-msgstr ""
+msgstr "Drive"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Jenis"
 
 msgid "A folder"
-msgstr ""
+msgstr "Sebuah folder"
 
 msgid "Version"
-msgstr ""
+msgstr "Versi"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Segitiga memasangnya ke penyimpanan 3DS: pembaruan atau DLC ikut ke game-nya, dan game masuk ke pustaka."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Pilih file CIA untuk dipasang: game, pembaruan, atau DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Game di sini"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Tidak bisa dibaca"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
+msgstr[0] "{0} game"
 
 msgid "Found"
-msgstr ""
+msgstr "Ditemukan"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Tidak ada (hanya dump terenkripsi yang membutuhkannya)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Ditemukan di /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Tidak ada (hanya .wud/.wux yang membutuhkannya)"
 
 msgid "In use"
-msgstr ""
+msgstr "Dipakai"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Game bisa berupa .3ds atau .cci, .cxi, .cia, atau .3dsx, terdekripsi, di sini atau di subfoldernya. Segitiga memakai folder yang ditampilkan."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Game bisa berupa .wua, .wud, .wux, atau folder berisi code, content, dan meta. Segitiga memakai folder yang ditampilkan."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Tidak ada yang perlu dipasang"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, belum terpasang"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, v{1} terpasang sekarang"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Segitiga memasangnya ke penyimpanan Wii U (mlc01). Pembaruan dan DLC di folder game juga berfungsi apa adanya."
 
 msgid "To install"
-msgstr ""
+msgstr "Untuk dipasang"
 
 msgid "This folder"
-msgstr ""
+msgstr "Folder ini"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Menyambung ke {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Mainkan game dari 3DS-mu melalui jaringan, atau siapkan Azahar darinya"
 
 msgid "3DS address"
-msgstr ""
+msgstr "Alamat 3DS"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Alamat yang ditampilkan Artic Base di layar 3DS saat siap.\n"
+"Silang mengeditnya: Kiri dan Kanan memilih angka, Atas dan Bawah mengubahnya 1, L1 dan R1 sebanyak 10, dan Silang lagi menyimpannya.\n"
+"3DS dan PS5 harus berada di jaringan yang sama."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Sambungkan dan main"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Di 3DS, jalankan aplikasi Artic Base (homebrew dari tim Azahar) dan pilih game di dalamnya: kartrid atau yang terpasang. Lalu sambungkan dari sini: game berjalan di PS5 dari 3DS, dan data simpanannya tetap di 3DS.\n"
+"Kelancarannya tergantung jaringan: sinyal Wi-Fi yang kuat untuk 3DS dan PS5 yang memakai kabel akan membantu."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Siapkan dari Old 3DS"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Dengan aplikasi Artic Setup Tool berjalan di 3DS atau 2DS lama: menyalin file sistem dan data miliknya (pengaturan sistem, kode teman, data Mii dan eShop) ke Azahar, agar game yang membutuhkan applet atau file sistem 3DS bisa dimulai, begitu juga Menu HOME (Pengaturan > Sistem dan Menu HOME).\n"
+"Data itu milik konsolmu: jangan bagikan folder Azahar setelahnya."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Siapkan dari New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Seperti di atas, dari New 3DS atau New 2DS yang menjalankan aplikasi Artic Setup Tool."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Otomatis"
 
 msgid "Japan"
-msgstr ""
+msgstr "Jepang"
 
 msgid "USA"
-msgstr ""
+msgstr "AS"
 
 msgid "Europe"
-msgstr ""
+msgstr "Eropa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australia"
 
 msgid "China"
-msgstr ""
+msgstr "Tiongkok"
 
 msgid "Korea"
-msgstr ""
+msgstr "Korea"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Bahasa Jepang"
 
 msgid "English"
-msgstr ""
+msgstr "Bahasa Inggris"
 
 msgid "French"
-msgstr ""
+msgstr "Bahasa Prancis"
 
 msgid "German"
-msgstr ""
+msgstr "Bahasa Jerman"
 
 msgid "Italian"
-msgstr ""
+msgstr "Bahasa Italia"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Bahasa Spanyol"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Bahasa Tionghoa (sederhana)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Bahasa Korea"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Bahasa Belanda"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Bahasa Portugis"
 
 msgid "Russian"
-msgstr ""
+msgstr "Bahasa Rusia"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Bahasa Tionghoa (tradisional)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Linear"
 
 msgid "Setup theme"
 msgstr ""
