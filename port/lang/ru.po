@@ -1160,727 +1160,727 @@ msgid "The download did not finish"
 msgstr "Загрузка не завершилась"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Не удалось установить: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Новые пакеты не смогли заменить старые"
 
 msgid "Hold"
-msgstr ""
+msgstr "Удерживать"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Удерживайте Крестик, пока кольцо не заполнится."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "Не удалось записать {0} (/data заполнен?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "в загрузке нет eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "Версию последнего релиза ({0}) не удаётся прочитать"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Не удалось загрузить контрольные суммы релиза"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "В ветке релизов нет контрольной суммы для {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Не удалось начать загрузку"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "Загрузка не завершилась: PS5 подключена к сети?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "Загрузка повреждена (SHA-256 {0} вместо {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "PS5CEMU-HAR запущен из образа, файлы которого нельзя заменить: установите новый релиз вручную"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Не удалось распаковать: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "Не удалось заменить {0} ({1}): скопируйте поверх вручную папку PPSA99360 из релиза"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Ячейка 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Ячейка 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Ячейка 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Ячейка 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Игровой набор / диск силы"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Диск силы 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Диск силы 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Игрок 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Игрок 1, способность 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Игрок 1, способность 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Игрок 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Игрок 2, способность 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Игрок 2, способность 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Левая площадка 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Центральная площадка"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Правая площадка 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Левая площадка 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Левая площадка 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Правая площадка 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Правая площадка 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "Не удалось открыть {0}"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} слишком мал для Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Портал заполнен"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} слишком мал для фигурки Infinity"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} слишком мал для фигурки Dimensions"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Слишком много цифр."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "Знак @ здесь не допускается."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "Знак % здесь не допускается."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "Знак \\ здесь не допускается."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Это слово не допускается."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "Текст должен быть ровно запрошенной длины."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "Текст слишком длинный."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "Текст не может состоять только из пробелов."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "Текст не может быть пустым."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "Игра это не приняла."
 
 msgid "saved"
-msgstr ""
+msgstr "сохранено"
 
 msgid "another version's"
-msgstr ""
+msgstr "другой версии"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Нет считывателя amiibo"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Убрано"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Это не дамп amiibo"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: вкл."
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: выкл."
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Ячейка {0} загружена"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Сохранено в ячейку {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Создано другой версией"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Не получилось"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Это не игра для 3DS, которую может запустить Azahar."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Не удалось загрузить игру."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Игра зашифрована: расшифруйте её или положите aes_keys.txt с 3DS в /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "Формат игры не поддерживается."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "Игры GBA Virtual Console не поддерживаются."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "Не найден системный режим игры."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "Игре нужны системные файлы 3DS, которых у Azahar нет."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Не удалось применить патчи игры."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Рендерер или ЦП Azahar не запустился."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Сервер Artic Base не ответил: проверьте адрес 3DS, что на ней работает Artic Base и что 3DS и PS5 в одной сети."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "Игра занята: попробуйте ещё раз"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "Игра для 3DS остановилась: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "CIA-файл устанавливают, а не запускают: установите его в Настройки > Установить CIA-файлы, затем запустите игру."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Azahar не запустился: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Нажатие сенсорной панели + OPTIONS: игровое меню. Просто нажатие сенсорной панели: нижний экран"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "он зашифрован — сам CIA или игра внутри. Azahar устанавливает только полностью расшифрованные CIA-файлы: расшифруйте его с помощью GodMode9 на 3DS или запустите вместо него расшифрованный файл игры .3ds или .cci"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "это не CIA-файл, или он повреждён (проверьте размер файла)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "не удалось прочитать файл"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Azahar остановился на полпути; причина в /data/ps5cemu/azahar/log/azahar_log.txt"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "это не CIA, который может установить Azahar"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "У PS5 закончилась память для этой игры Wii U, поэтому её нужно остановить. Подробности в журнале запуска."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} ГБ"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} файл на USB-накопитель {1}"
+msgstr[1] "{0} файла на USB-накопитель {1}"
+msgstr[2] "{0} файлов на USB-накопитель {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "USB-накопитель не найден"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Удалён {0} файл ({1} МБ)"
+msgstr[1] "Удалено {0} файла ({1} МБ)"
+msgstr[2] "Удалено {0} файлов ({1} МБ)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Нечего удалять"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "USB-накопитель {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Расширенное хранилище {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Игра"
 
 msgid "Update"
-msgstr ""
+msgstr "Обновление"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Системное ПО"
 
 msgid "Demo"
-msgstr ""
+msgstr "Демоверсия"
 
 msgid "Title"
-msgstr ""
+msgstr "Программа"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Крестик"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Кружок"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Квадрат"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Треугольник"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Сенсорная панель"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Крестовина вверх"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Крестовина вниз"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Крестовина влево"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Крестовина вправо"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Левый стик вверх"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Левый стик вниз"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Левый стик влево"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Левый стик вправо"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Нажатие левого стика"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Правый стик вверх"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Правый стик вниз"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Правый стик влево"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Правый стик вправо"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Нажатие правого стика"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad вверх"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad вниз"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad влево"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad вправо"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-стик вверх"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-стик вниз"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-стик влево"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-стик вправо"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Стик Nunchuk вверх"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Стик Nunchuk вниз"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Стик Nunchuk влево"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Стик Nunchuk вправо"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Подуть в микрофон"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Показать экран GamePad"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Нет"
 
 msgid "Setup"
-msgstr ""
+msgstr "Настройка"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Что-то требует внимания"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Проверка настройки"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Диагностика"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Запуск Cemu"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Загружаются его настройки, графические пакеты и контроллеры, затем он ищет ваши игры."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Поиск игр…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "В {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Добро пожаловать"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Здесь будут ваши игры"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Положите игры для 3DS (.3ds, .cci, .cxi, .3dsx, расшифрованные) в {0} или выберите любую папку, которую видит PS5, например на USB-накопителе. Вложенные папки тоже просматриваются."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Положите игры для Wii U (.wua, .wud, .wux или папки с code, content и meta) в {0} или выберите любую папку, которую видит PS5, например на USB-накопителе."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Выбрать папку"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Все игры: {0}"
+msgstr[1] "Все игры: {0}"
+msgstr[2] "Все игры: {0}"
 
 msgid "In your library"
-msgstr ""
+msgstr "В вашей библиотеке"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Продолжить · последний запуск: {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Последний запуск: {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Ваша библиотека"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Поиск новых игр…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "От А до Я, по году, по тому, как они идут"
 
 msgid "Play"
-msgstr ""
+msgstr "Играть"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Карточка игры"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Открыть библиотеку"
 
 msgid "None on"
-msgstr ""
+msgstr "Ни одного"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} пакет для этой игры"
+msgstr[1] "{0} пакета для этой игры"
+msgstr[2] "{0} пакетов для этой игры"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} у P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Контроллеры"
 
 msgid "One player"
-msgstr ""
+msgstr "Один игрок"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Как идёт"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "По списку совместимости"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Обновления и DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Нет обновления"
 
 msgid "This dump"
-msgstr ""
+msgstr "Этот дамп"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Обновление v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Избранное"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Графические пакеты · вкл.: {0}"
+msgstr[1] "Графические пакеты · вкл.: {0}"
+msgstr[2] "Графические пакеты · вкл.: {0}"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Об игре"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "GameTDB узнаёт игру по ID на её коробке, а у этого дампа его нет."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "В GameTDB пока нет описания этой игры."
 
 msgid "Developer"
-msgstr ""
+msgstr "Разработчик"
 
 msgid "Released"
-msgstr ""
+msgstr "Выход"
 
 msgid "Genre"
-msgstr ""
+msgstr "Жанр"
 
 msgid "Rating"
-msgstr ""
+msgstr "Рейтинг"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Издатель"
 
 msgid "Players"
-msgstr ""
+msgstr "Игроки"
 
 msgid "Title ID"
-msgstr ""
+msgstr "ID игры"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Хорошо идёт на PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "В списке совместимости: «{0}»."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Недавние"
 
 msgid "A to Z"
-msgstr ""
+msgstr "От А до Я"
 
 msgid "Release year"
-msgstr ""
+msgstr "Год выхода"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Библиотека"
 
 msgid "Sort"
-msgstr ""
+msgstr "Сортировка"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Все"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Недавно добавленные"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Избранное"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "С графическими пакетами"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Сортировка: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Поиск: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Ничего не найдено по запросу «{0}»"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Здесь пока пусто"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Игр пока нет"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Кружок очищает поиск."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS на игре, затем «В избранное», и она появится здесь."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "«Все» показывает все игры."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Настройки > Игры и папки подскажут, куда их класть."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Играть с вашей 3DS"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, по вашей сети"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Крестик включает или выключает пакет; вправо — к его пресетам. Выбор пресета включает его пакет. Изменения вступают в силу при следующем запуске."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Для этой игры нет графических пакетов"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Настройки > Сеть и обновления загрузят свежие пакеты сообщества."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} из {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Графический пакет"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "У этого пакета нет описания."
 
 msgid "No presets"
-msgstr ""
+msgstr "Нет пресетов"
 
 msgid "Presets"
-msgstr ""
+msgstr "Пресеты"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Пресеты · выбор пресета включает пакет"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1889,376 +1889,399 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Что игра видит в руках этого игрока.\n"
+"\n"
+"Большинству игр нужен Wii U GamePad для игрока 1: его экран — второй, который показывает PS5CEMU-HAR, а сенсорная панель касается его. Другие используют Pro Controller или пульты Wii Remote, например New Super Mario Bros. U.\n"
+"Wii Remote указывает туда, где лежит палец на сенсорной панели, или туда, куда вы направляете DualSense.\n"
+"Cemu поддерживает не больше двух GamePad."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"Гироскоп и акселерометр DualSense вместо датчиков контроллера — для игр, где целятся или рулят наклоном GamePad или Wii Remote.\n"
+"У Pro Controller и Classic Controller их нет."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Насколько сильно вибрирует DualSense, когда игра заставляет контроллер вибрировать.\n"
+"Влево и вправо меняют её на 10 %."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Насколько сдвигается левый стик, прежде чем игра это заметит. Увеличьте, если персонаж идёт сам после того, как вы отпустили стик; уменьшите для более точного управления."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Насколько сдвигается правый стик, прежде чем игра это заметит. Увеличьте, если камера плывёт сама после того, как вы отпустили стик; уменьшите для более точного управления."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Какая кнопка DualSense соответствует какой кнопке контроллера.\n"
+"По умолчанию A на Кружке, а B на Крестике, как на Wii U."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Кнопки, вибрация, движение и мёртвые зоны по умолчанию для этого контроллера. Нужно удерживать для подтверждения."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Кнопки"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Сбросить по умолчанию"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Игрок {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, на DualSense этого игрока"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, на неподключённом DualSense"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Что игра видит в руках этого игрока."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "Движение DualSense вместо датчиков контроллера."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "У Pro и Classic Controller их нет."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Насколько сильно вибрирует DualSense."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Насколько сдвигается левый стик, прежде чем это засчитывается."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Насколько сдвигается правый стик, прежде чем это засчитывается."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Назначена {0} кнопка"
+msgstr[1] "Назначено {0} кнопки"
+msgstr[2] "Назначено {0} кнопок"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Какая кнопка DualSense чему соответствует."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Удерживать Крестик"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Кнопки, вибрация, движение и мёртвые зоны по умолчанию."
 
 msgid "Connected"
-msgstr ""
+msgstr "Подключён"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Нет DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Очищено: теперь ни одна кнопка DualSense не назначена на эту."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Ни одна кнопка не была нажата, всё осталось как было."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Отменено: всё осталось как было."
 
 msgid "Done."
-msgstr ""
+msgstr "Готово."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "Кнопки DualSense для кнопок 3DS"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Игрок {0}: кнопки DualSense для {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Не назначено"
 
 msgid "This button"
-msgstr ""
+msgstr "Эта кнопка"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Нажмите кнопку"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Нажмите сейчас кнопку, курок или направление стика DualSense для {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Осталась {0} секунда. Нажатие сенсорной панели отменяет."
+msgstr[1] "Осталось {0} секунды. Нажатие сенсорной панели отменяет."
+msgstr[2] "Осталось {0} секунд. Нажатие сенсорной панели отменяет."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Крестик, затем кнопка, курок или направление стика DualSense: оно станет этой кнопкой.\n"
+"Квадрат очищает."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Отмена: скопированное удаляется…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Отмена: прежняя установка восстанавливается…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Эту папку нельзя открыть."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Не удалось сохранить папку. Попробуйте ещё раз."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Сохранено. PS5CEMU-HAR ищет там игры."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Сохранено. Эта сторона будет искать там игры при открытии."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Поиск игр в {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Сначала выберите CIA-файл."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Cemu не запустился, поэтому установить ничего нельзя."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Установка: {0}, {1} из {2}.\n"
+"\n"
+"Кружок отменяет."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Установка: подсчёт файлов…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Установлено. Библиотека показывает это вместе с игрой."
 
 msgid "Installed"
-msgstr ""
+msgstr "Установлено"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Отменено. Скопированное удалено вместе с прежней копией той же игры: установите её снова, чтобы играть. Её сохранения остались."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Отменено. Прежняя установка осталась как была."
 
 msgid "Install"
-msgstr ""
+msgstr "Установка"
 
 msgid "3DS games"
-msgstr ""
+msgstr "Игры для 3DS"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Игры для Wii U"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Установить CIA-файлы"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Установить обновления и DLC"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Выберите CIA-файл: игру, обновление или DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Выберите папку с обновлением, DLC или игрой (code, content и meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Выберите папку с вашими играми для 3DS"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Выберите папку с вашими играми для Wii U"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Эта папка пуста."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Родительская папка"
 
 msgid "Drive"
-msgstr ""
+msgstr "Накопитель"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 msgid "A folder"
-msgstr ""
+msgstr "Папка"
 
 msgid "Version"
-msgstr ""
+msgstr "Версия"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Треугольник устанавливает это в память 3DS: обновление или DLC — к своей игре, а игра появляется в библиотеке."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Выберите CIA-файл для установки: игру, обновление или DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Игры здесь"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Не читается"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} игра"
+msgstr[1] "{0} игры"
+msgstr[2] "{0} игр"
 
 msgid "Found"
-msgstr ""
+msgstr "Найден"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Отсутствует (нужен только зашифрованным дампам)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Найден в /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Отсутствует (нужен только .wud/.wux)"
 
 msgid "In use"
-msgstr ""
+msgstr "Используется"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Игры могут быть в форматах .3ds или .cci, .cxi, .cia или .3dsx, расшифрованные, здесь или во вложенных папках. Треугольник выбирает показанную папку."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Игры могут быть .wua, .wud, .wux или папками с code, content и meta. Треугольник выбирает показанную папку."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Нечего устанавливать"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, ещё не установлено"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, сейчас установлена v{1}"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Треугольник устанавливает это в память Wii U (mlc01). Обновления и DLC в папке с играми работают и так."
 
 msgid "To install"
-msgstr ""
+msgstr "К установке"
 
 msgid "This folder"
-msgstr ""
+msgstr "Эта папка"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Подключение к {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Играйте в игру с вашей 3DS по сети или настройте Azahar с её помощью"
 
 msgid "3DS address"
-msgstr ""
+msgstr "Адрес 3DS"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Адрес, который Artic Base показывает на экране 3DS, когда готов.\n"
+"Крестик изменяет его: влево и вправо выбирают число, вверх и вниз меняют его на 1, L1 и R1 — на 10, а Крестик ещё раз сохраняет.\n"
+"3DS и PS5 должны быть в одной сети."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Подключиться и играть"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Запустите на 3DS приложение Artic Base (homebrew от команды Azahar) и выберите в нём игру: картридж или установленную. Затем подключитесь отсюда: игра идёт на PS5 с 3DS, а её сохранения остаются на 3DS.\n"
+"Плавность зависит от сети: помогут сильный сигнал Wi-Fi у 3DS и PS5 по кабелю."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Настроить со старой 3DS"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"С запущенным на старой 3DS или 2DS приложением Artic Setup Tool: копирует её системные файлы и данные (системные настройки, код друга, данные Mii и eShop) в Azahar, чтобы запускались игры, которым нужны системные апплеты или файлы 3DS, а также меню HOME (Настройки > Система и меню HOME).\n"
+"Это данные вашей консоли: не делитесь потом папкой Azahar."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Настроить с New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "То же самое, с New 3DS или New 2DS с запущенным Artic Setup Tool."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Автоматически"
 
 msgid "Japan"
-msgstr ""
+msgstr "Япония"
 
 msgid "USA"
-msgstr ""
+msgstr "США"
 
 msgid "Europe"
-msgstr ""
+msgstr "Европа"
 
 msgid "Australia"
-msgstr ""
+msgstr "Австралия"
 
 msgid "China"
-msgstr ""
+msgstr "Китай"
 
 msgid "Korea"
-msgstr ""
+msgstr "Корея"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Тайвань"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Японский"
 
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
 msgid "French"
-msgstr ""
+msgstr "Французский"
 
 msgid "German"
-msgstr ""
+msgstr "Немецкий"
 
 msgid "Italian"
-msgstr ""
+msgstr "Итальянский"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Испанский"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Китайский (упрощённый)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Корейский"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Нидерландский"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Португальский"
 
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Китайский (традиционный)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Линейный"
 
 msgid "Setup theme"
 msgstr ""

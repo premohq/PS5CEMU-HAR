@@ -3225,7 +3225,7 @@ msgid "Hold to set up"
 msgstr "Zum Einrichten halten"
 
 msgid "Not a favourite"
-msgstr "Kein Favorit"
+msgstr "Aus Favoriten entfernen"
 
 msgid "Show where it is"
 msgstr "Zeigen, wo es liegt"
