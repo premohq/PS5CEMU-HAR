@@ -2266,556 +2266,558 @@ msgid "Linear"
 msgstr "Linear"
 
 msgid "Setup theme"
-msgstr ""
+msgstr "Tema penyiapan"
 
 msgid "Language"
-msgstr ""
+msgstr "Bahasa"
 
 msgid "The language of the menus: the PS5's own, unless you choose another."
-msgstr ""
+msgstr "Bahasa menu: bahasa PS5, kecuali kamu memilih yang lain."
 
 msgid "Display"
-msgstr ""
+msgstr "Tampilan"
 
 msgid "How the launcher looks and where it opens."
-msgstr ""
+msgstr "Tampilan peluncur dan tempat ia terbuka."
 
 msgid "Sound"
-msgstr ""
+msgstr "Suara"
 
 msgid "The menus' music and sounds, and the games' volume."
-msgstr ""
+msgstr "Musik dan suara menu, serta volume game."
 
 msgid "The DualSense, for every player."
-msgstr ""
+msgstr "DualSense, untuk setiap pemain."
 
 msgid "Games and folders"
-msgstr ""
+msgstr "Game dan folder"
 
 msgid "Where each side's games are."
-msgstr ""
+msgstr "Tempat game tiap sisi berada."
 
 msgid "Online and updates"
-msgstr ""
+msgstr "Online dan pembaruan"
 
 msgid "Box art, graphic packs and PS5CEMU-HAR itself."
-msgstr ""
+msgstr "Sampul, paket grafis, dan PS5CEMU-HAR sendiri."
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Aksesibilitas"
 
 msgid "Larger text, more contrast, less motion."
-msgstr ""
+msgstr "Teks lebih besar, kontras lebih tinggi, gerakan lebih sedikit."
 
 msgid "For every Wii U game."
-msgstr ""
+msgstr "Untuk setiap game Wii U."
 
 msgid "What each player's DualSense is to the Wii U."
-msgstr ""
+msgstr "Apa arti DualSense tiap pemain bagi Wii U."
 
 msgid "Cemu's emulated portals."
-msgstr ""
+msgstr "Portal emulasi Cemu."
 
 msgid "Into the Wii U's storage."
-msgstr ""
+msgstr "Ke penyimpanan Wii U."
 
 msgid "For every 3DS game."
-msgstr ""
+msgstr "Untuk setiap game 3DS."
 
 msgid "Screens and borders"
-msgstr ""
+msgstr "Layar dan bingkai"
 
 msgid "For every 3DS game; in a game, its menu changes them at once."
-msgstr ""
+msgstr "Untuk setiap game 3DS; dalam game, menunya langsung mengubahnya."
 
 msgid "The DualSense as the 3DS."
-msgstr ""
+msgstr "DualSense sebagai 3DS."
 
 msgid "System and Home Menu"
-msgstr ""
+msgstr "Sistem dan Menu HOME"
 
 msgid "The emulated 3DS's region and language."
-msgstr ""
+msgstr "Wilayah dan bahasa 3DS emulasi."
 
 msgid "Into the 3DS's storage."
-msgstr ""
+msgstr "Ke penyimpanan 3DS."
 
 msgid "Play from your 3DS, over your network."
-msgstr ""
+msgstr "Main dari 3DS-mu, melalui jaringanmu."
 
 msgid "Why something does not work, before anything else."
-msgstr ""
+msgstr "Mengapa sesuatu tidak berfungsi, sebelum hal lain."
 
 msgid "Logs, caches and what this session is."
-msgstr ""
+msgstr "Log, cache, dan apa sesi ini."
 
 msgctxt "app"
 msgid "About"
-msgstr ""
+msgstr "Tentang"
 
 msgid "Who made what."
-msgstr ""
+msgstr "Siapa membuat apa."
 
 msgid "Checking GitHub…"
-msgstr ""
+msgstr "Memeriksa GitHub…"
 
 msgid "Downloading: {0}"
-msgstr ""
+msgstr "Mengunduh: {0}"
 
 msgid "Downloading: {0} MB"
-msgstr ""
+msgstr "Mengunduh: {0} MB"
 
 msgid "Installing…"
-msgstr ""
+msgstr "Memasang…"
 
 msgid "Up to date: {0}"
-msgstr ""
+msgstr "Terbaru: {0}"
 
 msgid "Installed: {0}"
-msgstr ""
+msgstr "Terpasang: {0}"
 
 msgid "Cross to download"
-msgstr ""
+msgstr "Silang untuk mengunduh"
 
 msgid "{0}: Cross to install"
-msgstr ""
+msgstr "{0}: Silang untuk memasang"
 
 msgid "Downloading…"
-msgstr ""
+msgstr "Mengunduh…"
 
 msgid "Checking the download…"
-msgstr ""
+msgstr "Memeriksa unduhan…"
 
 msgid "Installed: Cross to restart"
-msgstr ""
+msgstr "Terpasang: Silang untuk memulai ulang"
 
 msgid "Cross to check"
-msgstr ""
+msgstr "Silang untuk memeriksa"
 
 msgid "Cross goes to the 3DS side for it."
-msgstr ""
+msgstr "Silang pindah ke sisi 3DS untuk itu."
 
 msgid "Cross goes to the Wii U side for it."
-msgstr ""
+msgstr "Silang pindah ke sisi Wii U untuk itu."
 
 msgid "On the 3DS side"
-msgstr ""
+msgstr "Di sisi 3DS"
 
 msgid "On the Wii U side"
-msgstr ""
+msgstr "Di sisi Wii U"
 
 msgid "Cemu did not start, so this cannot be changed."
-msgstr ""
+msgstr "Cemu tidak berjalan, jadi ini tidak bisa diubah."
 
 msgid "The menus' language. Game names and descriptions stay as they are."
-msgstr ""
+msgstr "Bahasa menu. Nama dan deskripsi game tetap seperti aslinya."
 
 msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
-msgstr ""
+msgstr "PS5CEMU-HAR berbahasa sesuai PS5, kecuali kamu memilih yang lain di sini; pemeriksaan penyiapan saat pertama kali mulai juga menawarkan pilihan yang sama. Nama game, deskripsinya, dan paket grafis berasal dari GameTDB, game itu sendiri, dan pembuat paket, dan tetap seperti yang mereka tulis."
 
 msgid "Start on"
-msgstr ""
+msgstr "Mulai di"
 
 msgid "The side last used"
-msgstr ""
+msgstr "Sisi yang terakhir dipakai"
 
 msgid "Ask each time"
-msgstr ""
+msgstr "Tanya setiap kali"
 
 msgid "Where PS5CEMU-HAR opens."
-msgstr ""
+msgstr "Tempat PS5CEMU-HAR terbuka."
 
 msgid ""
 "The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
 "Ask each time: it shows the two sides first, as the start screen did."
 msgstr ""
+"Sisi yang terakhir dipakai: PS5CEMU-HAR terbuka di sisi tempat kamu terakhir berada, dan setelah bermain, di game itu.\n"
+"Tanya setiap kali: menampilkan kedua sisi lebih dulu, seperti layar awal dulu."
 
 msgid "Game pictures behind menus"
-msgstr ""
+msgstr "Gambar game di belakang menu"
 
 msgid "The focused game's cover, softened, behind the screens."
-msgstr ""
+msgstr "Sampul game yang dipilih, dilembutkan, di belakang layar."
 
 msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
-msgstr ""
+msgstr "Gambar game yang dipilih mengisi layar di belakang menu, dilembutkan dan diredupkan, sehingga memindahkan pilihan mengubah seluruh layar. Nonaktif: hanya warna game."
 
 msgid "Launcher music"
-msgstr ""
+msgstr "Musik peluncur"
 
 msgid "The music under the menus."
-msgstr ""
+msgstr "Musik di bawah menu."
 
 msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
-msgstr ""
+msgstr "Musik peluncur sendiri, bernuansa layar penyiapan konsol, atau tanpa musik."
 
 msgid "Music volume"
-msgstr ""
+msgstr "Volume musik"
 
 msgid "How loud the menus' music is."
-msgstr ""
+msgstr "Seberapa keras musik menu."
 
 msgid "How loud the launcher's music is. Left and Right change it by 10%."
-msgstr ""
+msgstr "Seberapa keras musik peluncur. Kiri dan Kanan mengubahnya 10%."
 
 msgid "Menu sounds"
-msgstr ""
+msgstr "Suara menu"
 
 msgid "The sounds of moving and choosing."
-msgstr ""
+msgstr "Suara saat bergerak dan memilih."
 
 msgid "The launcher's sounds as you move, choose and go back."
-msgstr ""
+msgstr "Suara peluncur saat kamu bergerak, memilih, dan kembali."
 
 msgid "Wii U games' volume"
-msgstr ""
+msgstr "Volume game Wii U"
 
 msgid "The Wii U games' sound."
-msgstr ""
+msgstr "Suara game Wii U."
 
 msgid "The Wii U games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Suara game Wii U. Kiri dan Kanan mengubahnya 10%."
 
 msgid "3DS games' volume"
-msgstr ""
+msgstr "Volume game 3DS"
 
 msgid "The 3DS games' sound."
-msgstr ""
+msgstr "Suara game 3DS."
 
 msgid "The 3DS games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Suara game 3DS. Kiri dan Kanan mengubahnya 10%."
 
 msgid "GamePad speaker"
-msgstr ""
+msgstr "Speaker GamePad"
 
 msgid "The Wii U GamePad's own sound, on the DualSense."
-msgstr ""
+msgstr "Suara Wii U GamePad sendiri, di DualSense."
 
 msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
-msgstr ""
+msgstr "Suara yang diputar game di speaker Wii U GamePad, dari speaker DualSense pemain 1. Banyak game juga mengirim seluruh suaranya ke sana, jadi ini nonaktif kecuali kamu menginginkannya. Berlaku untuk game berikutnya."
 
 msgid "The DualSense's rumble, in games and in the launcher."
-msgstr ""
+msgstr "Getaran DualSense, di game dan di peluncur."
 
 msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
-msgstr ""
+msgstr "Nonaktif, DualSense tidak pernah bergetar: tidak untuk getaran game, tidak juga untuk peluncur."
 
 msgid "Wii U players"
-msgstr ""
+msgstr "Pemain Wii U"
 
 msgid "Each player's emulated controller, motion and buttons."
-msgstr ""
+msgstr "Kontroler emulasi, gerakan, dan tombol tiap pemain."
 
 msgid "What the Wii U sees in each player's hands."
-msgstr ""
+msgstr "Apa yang dilihat Wii U di tangan tiap pemain."
 
 msgid "3DS controls"
-msgstr ""
+msgstr "Kontrol 3DS"
 
 msgid "Motion, deadzone and buttons."
-msgstr ""
+msgstr "Gerakan, zona mati, dan tombol."
 
 msgid "Where your Wii U games are. Cross picks another."
-msgstr ""
+msgstr "Tempat game Wii U-mu berada. Silang memilih folder lain."
 
 msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
-msgstr ""
+msgstr "Game Wii U-mu: .wua, .wud, .wux, atau folder berisi code, content, dan meta. File .wud dan .wux terenkripsi membutuhkan kuncinya di /data/ps5cemu/keys.txt."
 
 msgid "Where your 3DS games are. Cross picks another."
-msgstr ""
+msgstr "Tempat game 3DS-mu berada. Silang memilih folder lain."
 
 msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Game 3DS-mu: .3ds atau .cci, .cxi, .3dsx, dan dump terkompresi Azahar, terdekripsi, di sini atau di subfoldernya. File CIA dipasang (Pasang file CIA). Dump terenkripsi membutuhkan aes_keys.txt milik 3DS di /data/ps5cemu/azahar/sysdata."
 
 msgid "Look for games now"
-msgstr ""
+msgstr "Cari game sekarang"
 
 msgid "Looking…"
-msgstr ""
+msgstr "Mencari…"
 
 msgid "This side's folder, again."
-msgstr ""
+msgstr "Folder sisi ini, sekali lagi."
 
 msgid "Looks through this side's folder again, as it does each time the side opens."
-msgstr ""
+msgstr "Memeriksa ulang folder sisi ini, seperti setiap kali sisinya dibuka."
 
 msgid "Wii U disc keys"
-msgstr ""
+msgstr "Kunci disk Wii U"
 
 msgid "keys.txt found"
-msgstr ""
+msgstr "keys.txt ditemukan"
 
 msgid "keys.txt missing"
-msgstr ""
+msgstr "keys.txt tidak ada"
 
 msgid "Only encrypted .wud and .wux need them."
-msgstr ""
+msgstr "Hanya .wud dan .wux terenkripsi yang membutuhkannya."
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
-msgstr ""
+msgstr "Dump .wud dan .wux terenkripsi membutuhkan kunci disknya di /data/ps5cemu/keys.txt, satu per baris. Dump terdekripsi, .wua, dan folder tidak memerlukannya."
 
 msgid "Box art from GameTDB"
-msgstr ""
+msgstr "Sampul dari GameTDB"
 
 msgid "Covers for the library, downloaded once."
-msgstr ""
+msgstr "Sampul untuk pustaka, diunduh sekali."
 
 msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
-msgstr ""
+msgstr "Saat game pertama kali muncul, sampulnya diunduh dari GameTDB (art.gametdb.com) berdasarkan ID di kotaknya. Nonaktif: tidak ada lagi yang diunduh."
 
 msgid "Community graphic packs"
-msgstr ""
+msgstr "Paket grafis komunitas"
 
 msgid "Cross checks GitHub for newer ones."
-msgstr ""
+msgstr "Silang mencari yang lebih baru di GitHub."
 
 msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
-msgstr ""
+msgstr "Paket grafis komunitas Cemu, dari rilis terbaru di GitHub jika lebih baru daripada yang terpasang. Paket bawaan aplikasi tetap sebagai cadangan."
 
 msgid "PS5CEMU-HAR updates"
-msgstr ""
+msgstr "Pembaruan PS5CEMU-HAR"
 
 msgid "Cross checks GitHub for a newer version."
-msgstr ""
+msgstr "Silang mencari versi yang lebih baru di GitHub."
 
 msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "PS5CEMU-HAR menanyakan rilis terbarunya ke GitHub setiap kali dimulai. Silang bertanya lagi, atau memasang versi lebih baru yang ditemukan: file rilis diunduh, diperiksa, dan dipasang menggantikan file ini, lalu aplikasi dimulai ulang. Game, data simpanan, dan pengaturanmu tetap seperti semula."
 
 msgid "Larger text"
-msgstr ""
+msgstr "Teks lebih besar"
 
 msgid "Every size of text a step up."
-msgstr ""
+msgstr "Setiap ukuran teks naik satu tingkat."
 
 msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
-msgstr ""
+msgstr "Setiap gaya teks naik satu tingkat: keterangan dari 20 ke 23, teks bacaan dari 26 ke 30."
 
 msgid "High contrast"
-msgstr ""
+msgstr "Kontras tinggi"
 
 msgid "Opaque panels, full-strength text, a thicker ring."
-msgstr ""
+msgstr "Panel buram, teks penuh, cincin lebih tebal."
 
 msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
-msgstr ""
+msgstr "Panel buram sebagai ganti kaca, semua teks dengan kekuatan penuh, cincin fokus lebih tebal, dan tanpa bintik atau gambar di belakang menu."
 
 msgid "Reduce motion"
-msgstr ""
+msgstr "Kurangi gerakan"
 
 msgid "Fades in place of movement."
-msgstr ""
+msgstr "Peralihan memudar sebagai ganti gerakan."
 
 msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
-msgstr ""
+msgstr "Pegas menjadi peralihan pendek; tidak ada yang melayang, bernapas, atau naik di belakang menu."
 
 msgid "Hold to confirm"
-msgstr ""
+msgstr "Tahan untuk konfirmasi"
 
 msgid "How long Cross is held for what cannot be undone."
-msgstr ""
+msgstr "Berapa lama Silang ditahan untuk hal yang tidak bisa dibatalkan."
 
 msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
-msgstr ""
+msgstr "Menghapus cache, Artic Setup, dan mengatur ulang kontrol dikonfirmasi dengan menahan, tidak pernah dengan menekan dua kali. Selama ini."
 
 msgid "How the picture is scaled to the TV."
-msgstr ""
+msgstr "Cara gambar diskalakan ke TV."
 
 msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
-msgstr ""
+msgstr "Bikubik tajam, Bikubik Hermite sedikit lebih lembut, Linear lebih lembut lagi; Tetangga terdekat menjaga piksel tetap persegi."
 
 msgid "120 Hz output"
-msgstr ""
+msgstr "Keluaran 120 Hz"
 
 msgid "For displays that take 120 Hz."
-msgstr ""
+msgstr "Untuk layar yang mendukung 120 Hz."
 
 msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
-msgstr ""
+msgstr "Mode 119,88 Hz, di layar yang mendukungnya. Game tetap berjalan dengan kecepatannya sendiri, dan frame yang terlewat satu penyegaran menunggu 8 ms untuk berikutnya, bukan 17."
 
 msgid "Holds a game to an even frame rate."
-msgstr ""
+msgstr "Menjaga game pada frame rate yang rata."
 
 msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
-msgstr ""
+msgstr "Setiap frame tetap di layar minimal dua atau tiga penyegaran, sehingga game yang tidak bisa mempertahankan laju layar berjalan rata: 60 atau 40 fps dengan keluaran 120 Hz, 30 atau 20 tanpanya. 60 fps dengan keluaran 120 Hz cocok untuk game 4K yang kadang turun di bawah 60; 30 fps di 60 Hz untuk game 8K. Juga ada di menu dalam game."
 
 msgid "Frame rate, CPU and memory in a corner."
-msgstr ""
+msgstr "Frame rate, CPU, dan memori di sudut."
 
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
-msgstr ""
+msgstr "Frame per detik, penggunaan CPU dan memori di sudut kiri atas, seperti yang ditampilkan Cemu. Juga ada di menu dalam game."
 
 msgid "No stutter while new shaders build."
-msgstr ""
+msgstr "Tanpa tersendat saat shader baru dibuat."
 
 msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
-msgstr ""
+msgstr "Aktif: shader baru dibuat sementara game terus berjalan, jadi tidak tersendat, tetapi sesuatu mungkin hilang sesaat. Nonaktif: game menunggu setiap shader. Tersendat, tetapi tidak ada yang tergambar salah."
 
 msgid "Cross: this player's controller, motion and buttons."
-msgstr ""
+msgstr "Silang: kontroler, gerakan, dan tombol pemain ini."
 
 msgid "No DualSense for this player yet."
-msgstr ""
+msgstr "Belum ada DualSense untuk pemain ini."
 
 msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
-msgstr ""
+msgstr "Apa yang dilihat game di tangan pemain ini, beserta gerakan, getaran, zona mati, dan tombolnya. Pemain 1 adalah pengguna masuk yang memulai aplikasi; DualSense pengguna masuk lainnya adalah pemain 2 sampai 4."
 
 msgid "For the Skylanders games."
-msgstr ""
+msgstr "Untuk game Skylanders."
 
 msgid "For Disney Infinity 3.0."
-msgstr ""
+msgstr "Untuk Disney Infinity 3.0."
 
 msgid "For LEGO Dimensions."
-msgstr ""
+msgstr "Untuk LEGO Dimensions."
 
 msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
-msgstr ""
+msgstr "Portal emulasi Cemu, disambungkan saat game dimulai. Dalam game, kategori Perangkat USB di menu menaruh figur di atasnya: dump di {0}. Portal asli di USB PS5 tidak dipakai."
 
 msgid "Install from a folder"
-msgstr ""
+msgstr "Pasang dari folder"
 
 msgid "An update, DLC or game (code, content and meta)."
-msgstr ""
+msgstr "Pembaruan, DLC, atau game (code, content, dan meta)."
 
 msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Memasang ke penyimpanan Wii U (mlc01), seperti Install game title, update or DLC di Cemu. Pembaruan dan DLC di folder game juga berfungsi apa adanya."
 
 msgid "Higher is sharper and asks more of the GPU."
-msgstr ""
+msgstr "Lebih tinggi lebih tajam dan lebih membebani GPU."
 
 msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
-msgstr ""
+msgstr "Seberapa besar adegan 3D milik 3DS digambar sebelum diskalakan ke TV. Lebih tinggi lebih tajam dan lebih membebani GPU, dan setiap kali game membaca balik gambar, waktu tunggunya ikut bertambah."
 
 msgid "Smooths textures as they are scaled up."
-msgstr ""
+msgstr "Menghaluskan tekstur saat diperbesar."
 
 msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
-msgstr ""
+msgstr "Menghaluskan tekstur game saat diperbesar; Tidak ada membiarkannya seperti yang digambar 3DS. Filter menggambar ulang setiap tekstur pada resolusi internal: di resolusi tinggi inilah pengaturan paling berat. Jika game tersendat, coba Tidak ada dulu."
 
 msgid "Custom textures"
-msgstr ""
+msgstr "Tekstur kustom"
 
 msgid "Texture packs from azahar/load/textures."
-msgstr ""
+msgstr "Paket tekstur dari azahar/load/textures."
 
 msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
-msgstr ""
+msgstr "Paket tekstur di /data/ps5cemu/azahar/load/textures/<ID judul>, seperti yang dimuat Azahar versi desktop."
 
 msgid "Screen layout"
-msgstr ""
+msgstr "Tata letak layar"
 
 msgid "How the two screens share the TV."
-msgstr ""
+msgstr "Cara kedua layar berbagi TV."
 
 msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
-msgstr ""
+msgstr "Satu di atas yang lain, hanya layar atas, layar atas besar dengan layar bawah di sampingnya, atau keduanya berdampingan. Dalam game, klik panel sentuh + R1 beralih ke berikutnya."
 
 msgid "Artwork around the screens."
-msgstr ""
+msgstr "Gambar di sekitar layar."
 
 msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
-msgstr ""
+msgstr "Gambar di sekitar layar 3DS, tidak pernah di atasnya. Mengikuti setiap tata letak, dan menu dalam game juga mengubahnya."
 
 msgid "The DualSense's motion as the 3DS's."
-msgstr ""
+msgstr "Gerakan DualSense sebagai gerakan 3DS."
 
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
-msgstr ""
+msgstr "Giroskop dan akselerometer DualSense sebagai milik 3DS sendiri, untuk game yang membidik atau mengemudi dengan memiringkan konsol."
 
 msgid "How far a stick moves before it counts."
-msgstr ""
+msgstr "Seberapa jauh stik bergerak sebelum dihitung."
 
 msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Seberapa jauh stik bergerak sebelum game menyadarinya, untuk Circle Pad dan C-Stick. Naikkan jika sesuatu bergeser saat kamu melepas stik; turunkan untuk kontrol yang lebih halus."
 
 msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
-msgstr ""
+msgstr "Tombol DualSense mana yang menjadi tombol 3DS yang mana. Secara default A di Lingkaran dan B di Silang, seperti letaknya di 3DS; Circle Pad adalah stik kiri, C-Stick stik kanan, dan panel sentuh adalah layar sentuh."
 
 msgid "Default buttons, motion and deadzone."
-msgstr ""
+msgstr "Tombol, gerakan, dan zona mati default."
 
 msgid "The default buttons, motion and deadzone."
-msgstr ""
+msgstr "Tombol, gerakan, dan zona mati default."
 
 msgid "Region"
-msgstr ""
+msgstr "Wilayah"
 
 msgid "The emulated 3DS's region."
-msgstr ""
+msgstr "Wilayah 3DS emulasi."
 
 msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
-msgstr ""
+msgstr "Otomatis mengambil wilayah tiap game. Game untuk wilayah lain mungkin menolak dimulai atau menampilkan bahasa lain. Berlaku untuk game berikutnya."
 
 msgid "The emulated 3DS's language."
-msgstr ""
+msgstr "Bahasa 3DS emulasi."
 
 msgid "The language games that follow the console's show their text in. Applies to the next game."
-msgstr ""
+msgstr "Bahasa yang dipakai game yang mengikuti bahasa konsol untuk menampilkan teksnya. Berlaku untuk game berikutnya."
 
 msgid "Home Menu"
-msgstr ""
+msgstr "Menu HOME"
 
 msgid "Start"
-msgstr ""
+msgstr "Mulai"
 
 msgid "Run Artic Setup first"
-msgstr ""
+msgstr "Jalankan Artic Setup dulu"
 
 msgid "The 3DS Home Menu, from your console's files."
-msgstr ""
+msgstr "Menu HOME 3DS, dari file konsolmu."
 
 msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
-msgstr ""
+msgstr "Memulai Menu HOME 3DS, setelah penyiapan Artic Base menyalin file sistem konsolmu sendiri (Artic Base)."
 
 msgid "Install a CIA file"
-msgstr ""
+msgstr "Pasang file CIA"
 
 msgid "A game, an update or DLC."
-msgstr ""
+msgstr "Game, pembaruan, atau DLC."
 
 msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
-msgstr ""
+msgstr "Memasang CIA ke penyimpanan 3DS, seperti Install CIA di Azahar: pembaruan atau DLC ikut ke game-nya, dan game masuk ke pustaka. Lingkaran membatalkan saat berjalan."
 
 msgid "Play a game from your 3DS, and set up from it."
-msgstr ""
+msgstr "Mainkan game dari 3DS-mu, dan siapkan darinya."
 
 msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
-msgstr ""
+msgstr "Artic Base memainkan game dari 3DS di jaringanmu, dengan data simpanan tetap di 3DS; Artic Setup menyalin file sistem 3DS ke Azahar, untuk Menu HOME dan game yang membutuhkannya."
 
 msgid "Open the Setup check"
-msgstr ""
+msgstr "Buka pemeriksaan penyiapan"
 
 msgid "Storage, recompilers, games, keys and box art, checked."
-msgstr ""
+msgstr "Penyimpanan, rekompiler, game, kunci, dan sampul, diperiksa."
 
 msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
-msgstr ""
+msgstr "Setiap pemeriksaan punya status, artinya, dan apa yang harus dilakukan. Ini juga ditampilkan saat pertama kali mulai dan setiap kali pemeriksaan gagal saat aplikasi dimulai."
 
 msgid "Copy logs to USB"
-msgstr ""
+msgstr "Salin log ke USB"
 
 msgid "The logs a report needs, onto a USB drive."
-msgstr ""
+msgstr "Log yang dibutuhkan laporan, ke drive USB."
 
 msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
-msgstr ""
+msgstr "Menyalin log dari lima sesi terakhir dan pengaturan ke folder bertanggal di drive USB, untuk dilampirkan ke laporan."
 
 msgid "Clear Wii U shader caches"
-msgstr ""
+msgstr "Hapus cache shader Wii U"
 
 msgid "For a game that crashes on a bad cache."
-msgstr ""
+msgstr "Untuk game yang crash karena cache yang rusak."
 
 msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Menghapus cache shader Cemu. Game membuatnya lagi saat berjalan: beberapa menit pertama tersendat."
 
 msgid "Clear 3DS shader caches"
-msgstr ""
+msgstr "Hapus cache shader 3DS"
 
 msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Menghapus cache shader Azahar. Game membuatnya lagi saat berjalan: beberapa menit pertama tersendat."
 
 msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
-msgstr ""
+msgstr "Dump figur ditaruh di /data/ps5cemu/figures: skylanders, infinity, dan dimensions. Aktifkan portal di sini, mulai game, lalu taruh figur di atasnya dari menu dalam game (klik panel sentuh + OPTIONS > Perangkat USB)."
 
 msgid ""
 "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
@@ -2827,483 +2829,491 @@ msgid ""
 "3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
 "\n"
 msgstr ""
+"Cemu, emulator Wii U, oleh tim Cemu dan para kontributornya; RADV di PS5 oleh Mihawk-99 dan mpereiraesaa; para pembuat paket grafis komunitas.\n"
+"Azahar, emulator 3DS, oleh tim Azahar dan sebelumnya para kontributor Citra; port PS5-nya oleh Mihawk-99, dan dynarmic.\n"
+"Sampul dan info game: GameTDB. Font: Lexend.\n"
+"Port tidak resmi, tidak berafiliasi dengan tim Cemu atau Azahar, Nintendo, maupun Sony.\n"
+"\n"
+"Game Wii U: /data/ps5cemu/games, penyimpanan dan data simpanan: /data/ps5cemu/mlc01, kunci: /data/ps5cemu/keys.txt\n"
+"Game 3DS: /data/ps5cemu/azahar/games, penyimpanan: /data/ps5cemu/azahar/sdmc\n"
+"\n"
 
 msgid "Version {0}"
-msgstr ""
+msgstr "Versi {0}"
 
 msgid "The PS5's language: {0}"
-msgstr ""
+msgstr "Bahasa PS5: {0}"
 
 msgid "Language: {0}"
-msgstr ""
+msgstr "Bahasa: {0}"
 
 msgctxt "tab"
 msgid "Settings"
-msgstr ""
+msgstr "Pengaturan"
 
 msgid "Starting the 3DS"
-msgstr ""
+msgstr "Memulai 3DS"
 
 msgid "General"
-msgstr ""
+msgstr "Umum"
 
 msgid "Help"
-msgstr ""
+msgstr "Bantuan"
 
 msgid "Preview"
-msgstr ""
+msgstr "Pratinjau"
 
 msgid "{0}, with no border."
-msgstr ""
+msgstr "{0}, tanpa bingkai."
 
 msgid "{0}, on the {1} border."
-msgstr ""
+msgstr "{0}, dengan bingkai {1}."
 
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
-msgstr ""
+msgstr "Layar bawah adalah panel sentuh: klik untuk mengetuk, tahan klik untuk menyeret."
 
 msgid "About this setting"
-msgstr ""
+msgstr "Tentang pengaturan ini"
 
 msgid "{0} GB free"
-msgstr ""
+msgstr "{0} GB kosong"
 
 msgid "Storage"
-msgstr ""
+msgstr "Penyimpanan"
 
 msgid "the HEN setup guide"
-msgstr ""
+msgstr "panduan penyiapan HEN"
 
 msgid "/data is reachable"
-msgstr ""
+msgstr "/data bisa dijangkau"
 
 msgid "Where everything is kept"
-msgstr ""
+msgstr "Tempat semuanya disimpan"
 
 msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
-msgstr ""
+msgstr "Pengaturan, data simpanan, cache, dan log ada di {0}, yang dibuka HEN-mu untuk PS5CEMU-HAR: jailbreak aplikasinya, atau elfldr dengan helper yang disertakan dalam aplikasi."
 
 msgid "/data is out of reach: nothing can be kept"
-msgstr ""
+msgstr "/data tidak bisa dijangkau: tidak ada yang bisa disimpan"
 
 msgid "Let PS5CEMU-HAR out of its sandbox"
-msgstr ""
+msgstr "Keluarkan PS5CEMU-HAR dari sandbox-nya"
 
 msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
-msgstr ""
+msgstr "Tambahkan PPSA99360 ke daftar jailbreak aplikasi HEN-mu (etaHEN: daftar jailbreak aplikasinya; OnionHEN: di akhir exact_title_ids dalam config.ini, tanpa koma setelahnya), atau biarkan elfldr mendengarkan di port 9021. Lalu mulai PS5CEMU-HAR lagi."
 
 msgid "Recompilers"
-msgstr ""
+msgstr "Rekompiler"
 
 msgid "What runs the games' code"
-msgstr ""
+msgstr "Apa yang menjalankan kode game"
 
 msgid "JIT memory from your HEN: games run at full speed"
-msgstr ""
+msgstr "Memori JIT dari HEN-mu: game berjalan dengan kecepatan penuh"
 
 msgid "Executable memory: games run at full speed, no HEN grant needed"
-msgstr ""
+msgstr "Memori yang dapat dijalankan: game berjalan dengan kecepatan penuh, tanpa izin HEN"
 
 msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
-msgstr ""
+msgstr "Rekompiler Cemu dan Azahar mengubah kode game menjadi kode PS5 saat game berjalan. Keduanya butuh memori untuk menulis kode lalu menjalankannya: memori JIT HEN-mu, atau memori yang dapat dijalankan yang dibuat PS5CEMU-HAR sendiri."
 
 msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
-msgstr ""
+msgstr "Tanpa memori JIT atau yang dapat dijalankan: game Wii U berjalan di interpreter yang jauh lebih lambat"
 
 msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
-msgstr ""
+msgstr "Baik memori JIT HEN-mu maupun memori yang dapat dijalankan tidak bisa dibuat, jadi game Wii U beralih ke interpreter Cemu. Tambahkan PPSA99360 ke daftar jailbreak aplikasi HEN-mu, lalu mulai PS5CEMU-HAR lagi; Pengaturan > Diagnostik menunjukkan apa yang didapat."
 
 msgid "{0} game in {1}"
 msgid_plural "{0} games in {1}"
-msgstr[0] ""
+msgstr[0] "{0} game di {1}"
 
 msgid "None in {0} yet"
-msgstr ""
+msgstr "Belum ada di {0}"
 
 msgid "{0} cannot be read"
-msgstr ""
+msgstr "{0} tidak bisa dibaca"
 
 msgid "Where your 3DS games go"
-msgstr ""
+msgstr "Tempat game 3DS-mu"
 
 msgid "Where your Wii U games go"
-msgstr ""
+msgstr "Tempat game Wii U-mu"
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
-msgstr ""
+msgstr "Taruh di {0}, atau pilih folder apa saja yang bisa dibaca PS5, misalnya di drive USB. Subfolder juga dicari. File CIA dipasang, dari Pengaturan > Pasang file CIA."
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
-msgstr ""
+msgstr "Taruh di {0}, atau pilih folder apa saja yang bisa dibaca PS5, misalnya di drive USB. Pembaruan dan DLC masuk lewat Pengaturan > Pasang pembaruan dan DLC, atau sudah ada dalam .wua."
 
 msgid "code · content · meta"
-msgstr ""
+msgstr "code · content · meta"
 
 msgid "the game files page"
-msgstr ""
+msgstr "halaman file game"
 
 msgid "keys.txt is missing: only encrypted .wud and .wux need it"
-msgstr ""
+msgstr "keys.txt tidak ada: hanya .wud dan .wux terenkripsi yang membutuhkannya"
 
 msgid "How to"
-msgstr ""
+msgstr "Caranya"
 
 msgid "Keys for encrypted discs"
-msgstr ""
+msgstr "Kunci untuk disk terenkripsi"
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
-msgstr ""
+msgstr "Dump .wud dan .wux terenkripsi membutuhkan kunci disknya di {0}/keys.txt, satu per baris. Dump terdekripsi, file .wua, dan folder berisi code, content, dan meta tidak memerlukannya."
 
 msgid "3DS keys"
-msgstr ""
+msgstr "Kunci 3DS"
 
 msgid "aes_keys.txt found"
-msgstr ""
+msgstr "aes_keys.txt ditemukan"
 
 msgid "aes_keys.txt is missing: only encrypted dumps need it"
-msgstr ""
+msgstr "aes_keys.txt tidak ada: hanya dump terenkripsi yang membutuhkannya"
 
 msgid "Keys for encrypted 3DS dumps"
-msgstr ""
+msgstr "Kunci untuk dump 3DS terenkripsi"
 
 msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
-msgstr ""
+msgstr "Dump terenkripsi membutuhkan aes_keys.txt dari konsolmu sendiri di {0}/sysdata. Dump terdekripsi, homebrew, dan CIA yang terpasang tidak memerlukannya. PS5CEMU-HAR tidak menyertakan kunci apa pun."
 
 msgid "3DS system files"
-msgstr ""
+msgstr "File sistem 3DS"
 
 msgid "Artic Setup has run: the Home Menu can start"
-msgstr ""
+msgstr "Artic Setup sudah dijalankan: Menu HOME bisa dimulai"
 
 msgid "Artic Setup copies them from your 3DS, for the Home Menu"
-msgstr ""
+msgstr "Artic Setup menyalinnya dari 3DS-mu, untuk Menu HOME"
 
 msgid "Your 3DS's own files"
-msgstr ""
+msgstr "File 3DS-mu sendiri"
 
 msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
-msgstr ""
+msgstr "Menu HOME 3DS, dan sedikit game yang membutuhkan file sistem konsol, berjalan setelah Artic Setup menyalinnya dari 3DS-mu sendiri melalui jaringan: jalankan Artic Setup Tool di 3DS, lalu Artic Base di sini."
 
 msgid "the 3DS page"
-msgstr ""
+msgstr "halaman 3DS"
 
 msgid "Box art"
-msgstr ""
+msgstr "Sampul"
 
 msgid "what PS5CEMU-HAR fetches online"
-msgstr ""
+msgstr "apa yang diambil PS5CEMU-HAR secara online"
 
 msgid "Covers from GameTDB"
-msgstr ""
+msgstr "Sampul dari GameTDB"
 
 msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
-msgstr ""
+msgstr "Saat game pertama kali muncul, sampulnya diambil dari GameTDB (art.gametdb.com), berdasarkan ID di kotaknya. Tanpa koneksi, ikon game yang ditampilkan, dan saat mulai berikutnya dicoba lagi."
 
 msgid "Off: the games' icons are shown instead"
-msgstr ""
+msgstr "Nonaktif: ikon game ditampilkan sebagai gantinya"
 
 msgid "Turn on"
-msgstr ""
+msgstr "Aktifkan"
 
 msgid "GameTDB did not answer: the games' icons are shown instead"
-msgstr ""
+msgstr "GameTDB tidak menjawab: ikon game ditampilkan sebagai gantinya"
 
 msgid "GameTDB is reachable · {0} cover"
 msgid_plural "GameTDB is reachable · {0} covers"
-msgstr[0] ""
+msgstr[0] "GameTDB bisa dijangkau · {0} sampul"
 
 msgid "On · {0} cover"
 msgid_plural "On · {0} covers"
-msgstr[0] ""
+msgstr[0] "Aktif · {0} sampul"
 
 msgid "On: covers come as your games show up"
-msgstr ""
+msgstr "Aktif: sampul datang seiring game-mu muncul"
 
 msgid "Checked again"
-msgstr ""
+msgstr "Diperiksa lagi"
 
 msgid "Welcome to PS5CEMU-HAR"
-msgstr ""
+msgstr "Selamat datang di PS5CEMU-HAR"
 
 msgid "Let’s check your setup"
-msgstr ""
+msgstr "Mari periksa penyiapanmu"
 
 msgid "The {0} check is ready."
 msgid_plural "All {0} checks are ready."
-msgstr[0] ""
+msgstr[0] "Semua {0} pemeriksaan siap."
 
 msgid "The {0} check needs a look."
 msgid_plural "All {0} checks need a look."
-msgstr[0] ""
+msgstr[0] "Semua {0} pemeriksaan perlu dicek."
 
 msgid "{0} of {1} is ready."
 msgid_plural "{0} of {1} are ready."
-msgstr[0] ""
+msgstr[0] "{0} dari {1} siap."
 
 msgid "{0} needs a look."
 msgid_plural "{0} need a look."
-msgstr[0] ""
+msgstr[0] "{0} perlu dicek."
 
 msgid "{0} · as the PS5"
-msgstr ""
+msgstr "{0} · sesuai PS5"
 
 msgid "· optional"
-msgstr ""
+msgstr "· opsional"
 
 msgid "The menus' language"
-msgstr ""
+msgstr "Bahasa menu"
 
 msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
-msgstr ""
+msgstr "PS5CEMU-HAR memakai bahasa yang diatur di PS5-mu. Silang memilih yang lain; Pengaturan > Umum > Bahasa mengubahnya kapan saja."
 
 msgid "The guide, on your phone"
-msgstr ""
+msgstr "Panduan, di ponselmu"
 
 msgid "Scan it for {0}: {1}"
-msgstr ""
+msgstr "Pindai untuk {0}: {1}"
 
 msgid "Not in this build"
-msgstr ""
+msgstr "Tidak ada di build ini"
 
 msgid "Open to look for games"
-msgstr ""
+msgstr "Buka untuk mencari game"
 
 msgid "Saved your place in the library"
-msgstr ""
+msgstr "Posisimu di pustaka tersimpan"
 
 msgid "The game could not start"
-msgstr ""
+msgstr "Game tidak bisa dimulai"
 
 msgid "{0} min played"
 msgid_plural "{0} min played"
-msgstr[0] ""
+msgstr[0] "{0} mnt dimainkan"
 
 msgid "{0} h played"
 msgid_plural "{0} h played"
-msgstr[0] ""
+msgstr[0] "{0} jam dimainkan"
 
 msgid "today"
-msgstr ""
+msgstr "hari ini"
 
 msgid "yesterday"
-msgstr ""
+msgstr "kemarin"
 
 msgid "{0} day ago"
 msgid_plural "{0} days ago"
-msgstr[0] ""
+msgstr[0] "{0} hari lalu"
 
 msgid "{0} week ago"
 msgid_plural "{0} weeks ago"
-msgstr[0] ""
+msgstr[0] "{0} minggu lalu"
 
 msgid "{0} month ago"
 msgid_plural "{0} months ago"
-msgstr[0] ""
+msgstr[0] "{0} bulan lalu"
 
 msgid "Cemu is still starting"
-msgstr ""
+msgstr "Cemu masih memulai"
 
 msgid "Starting Azahar"
-msgstr ""
+msgstr "Memulai Azahar"
 
 msgctxt "tab"
 msgid "Home"
-msgstr ""
+msgstr "Beranda"
 
 msgid "Done"
-msgstr ""
+msgstr "Selesai"
 
 msgid "Close"
-msgstr ""
+msgstr "Tutup"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
 msgid "Tabs"
-msgstr ""
+msgstr "Tab"
 
 msgid "Switch"
-msgstr ""
+msgstr "Ganti"
 
 msgid "Open"
-msgstr ""
+msgstr "Buka"
 
 msgid "Change the language"
-msgstr ""
+msgstr "Ganti bahasa"
 
 msgid "Check again"
-msgstr ""
+msgstr "Periksa lagi"
 
 msgid "Continue"
-msgstr ""
+msgstr "Lanjut"
 
 msgid "Continue to Home"
-msgstr ""
+msgstr "Lanjut ke Beranda"
 
 msgid "Options"
-msgstr ""
+msgstr "Opsi"
 
 msgid "Move"
-msgstr ""
+msgstr "Gerak"
 
 msgid "Filters"
-msgstr ""
+msgstr "Filter"
 
 msgid "Jump by letter"
-msgstr ""
+msgstr "Lompat per huruf"
 
 msgid "Back to the buttons"
-msgstr ""
+msgstr "Kembali ke tombol"
 
 msgid "Scroll"
-msgstr ""
+msgstr "Gulir"
 
 msgid "Pages"
-msgstr ""
+msgstr "Halaman"
 
 msgid "More about it"
-msgstr ""
+msgstr "Selengkapnya"
 
 msgid "Back to the packs"
-msgstr ""
+msgstr "Kembali ke paket"
 
 msgid "On / off"
-msgstr ""
+msgstr "Aktif / nonaktif"
 
 msgid "Assign"
-msgstr ""
+msgstr "Tetapkan"
 
 msgid "Clear"
-msgstr ""
+msgstr "Hapus"
 
 msgid "Use this folder"
-msgstr ""
+msgstr "Pakai folder ini"
 
 msgid "Number"
-msgstr ""
+msgstr "Angka"
 
 msgid "Keep"
-msgstr ""
+msgstr "Simpan"
 
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 msgid "Connect"
-msgstr ""
+msgstr "Sambungkan"
 
 msgid "Hold to set up"
-msgstr ""
+msgstr "Tahan untuk menyiapkan"
 
 msgid "Not a favourite"
-msgstr ""
+msgstr "Hapus dari favorit"
 
 msgid "Show where it is"
-msgstr ""
+msgstr "Tunjukkan lokasinya"
 
 msgid "Added to Favourites"
-msgstr ""
+msgstr "Ditambahkan ke favorit"
 
 msgid "Taken out of Favourites"
-msgstr ""
+msgstr "Dihapus dari favorit"
 
 msgid "The PS5's storage"
-msgstr ""
+msgstr "Penyimpanan PS5"
 
 msgid "Title ID {0}"
-msgstr ""
+msgstr "ID judul {0}"
 
 msgid "PS5CEMU-HAR {0} is out"
-msgstr ""
+msgstr "PS5CEMU-HAR {0} sudah keluar"
 
 msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "Ini versi {0}. Unduh dan pasang sekarang? Game, data simpanan, dan pengaturanmu tetap seperti semula."
 
 msgid "Update now"
-msgstr ""
+msgstr "Perbarui sekarang"
 
 msgid "Later"
-msgstr ""
+msgstr "Nanti"
 
 msgid "Updating to {0}"
-msgstr ""
+msgstr "Memperbarui ke {0}"
 
 msgid "Downloading: {0} of {1} MB"
-msgstr ""
+msgstr "Mengunduh: {0} dari {1} MB"
 
 msgid "Checking the download"
-msgstr ""
+msgstr "Memeriksa unduhan"
 
 msgid "Installing"
-msgstr ""
+msgstr "Memasang"
 
 msgid "{0} is installed"
-msgstr ""
+msgstr "{0} terpasang"
 
 msgid "PS5CEMU-HAR starts again to finish the update."
-msgstr ""
+msgstr "PS5CEMU-HAR dimulai ulang untuk menyelesaikan pembaruan."
 
 msgid "Restart now"
-msgstr ""
+msgstr "Mulai ulang sekarang"
 
 msgid "The update did not finish"
-msgstr ""
+msgstr "Pembaruan tidak selesai"
 
 msgid "PS5CEMU-HAR is still {0}."
-msgstr ""
+msgstr "PS5CEMU-HAR masih versi {0}."
 
 msgid "Checking for updates"
-msgstr ""
+msgstr "Memeriksa pembaruan"
 
 msgid "PS5CEMU-HAR update"
-msgstr ""
+msgstr "Pembaruan PS5CEMU-HAR"
 
 msgid "Select"
-msgstr ""
+msgstr "Pilih"
 
 msgid "Restart"
-msgstr ""
+msgstr "Mulai ulang"
 
 msgid "Firmware {0}"
-msgstr ""
+msgstr "Firmware {0}"
 
 msgid "Logs: {0}, {1}/log.txt"
-msgstr ""
+msgstr "Log: {0}, {1}/log.txt"
 
 msgid "Boot log not written (/data is unreachable)"
-msgstr ""
+msgstr "Log mulai tidak ditulis (/data tidak bisa dijangkau)"
 
 msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
-msgstr ""
+msgstr "PS5CEMU-HAR tidak bisa menjangkau /data. Muat HEN dengan PPSA99360 di daftar jailbreak aplikasinya, atau elfldr, lalu mulai ulang PS5CEMU-HAR."
 
 msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
-msgstr ""
+msgstr "Sesi ini: Azahar (3DS); Wii U emulasi Cemu tidak dimulai"
 
 msgid "This session: Cemu (Wii U); Azahar's core is not started"
-msgstr ""
+msgstr "Sesi ini: Cemu (Wii U); inti Azahar tidak dimulai"
 
 msgid "Cemu did not start: {0}"
-msgstr ""
+msgstr "Cemu tidak berjalan: {0}"
 
 msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
-msgstr ""
+msgstr "Tanpa memori JIT: game Wii U berjalan di interpreter, jauh lebih lambat. Apakah PPSA99360 ada di daftar jailbreak aplikasi HEN-mu?"
 
 msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
-msgstr ""
+msgstr "Peluncur tidak bisa dimulai. Log mulai di /data/ps5cemu/logs menjelaskan alasannya."
 
 msgid "{0} fps"
-msgstr ""
+msgstr "{0} fps"
 
 msgctxt "compatibility note"
 msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
-msgstr ""
+msgstr "Berjalan sekitar 60 fps di 1440p. Hingga 2.0.0 C game membeku dan tertutup saat Magnesis atau rune lain, atau teropong Sheikah (R3), menyorot objek; diperbaiki setelah 2.0.0 C (Cemu yang lebih baru)"
 
 msgctxt "compatibility note"
 msgid "About half the textures are missing during races"
-msgstr ""
+msgstr "Sekitar setengah tekstur hilang selama balapan"
 
 msgctxt "compatibility note"
 msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
-msgstr ""
+msgstr "Bisa dimainkan dengan paket grafis 60 FPS-nya nonaktif; jika aktif, muncul glitch dan crash begitu permainan dimuat. Hingga 2.0.0 C game crash di sana bagaimanapun juga (Cemu kehabisan deskriptor Vulkan)"
 
 msgctxt "compatibility note"
 msgid "Save states work from the in-game menu"
-msgstr ""
+msgstr "Status tersimpan berfungsi dari menu dalam game"
