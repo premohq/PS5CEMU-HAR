@@ -2284,556 +2284,558 @@ msgid "Linear"
 msgstr "Lineární"
 
 msgid "Setup theme"
-msgstr ""
+msgstr "Melodie přípravy"
 
 msgid "Language"
-msgstr ""
+msgstr "Jazyk"
 
 msgid "The language of the menus: the PS5's own, unless you choose another."
-msgstr ""
+msgstr "Jazyk nabídek: jazyk PS5, pokud nevyberete jiný."
 
 msgid "Display"
-msgstr ""
+msgstr "Zobrazení"
 
 msgid "How the launcher looks and where it opens."
-msgstr ""
+msgstr "Jak spouštěč vypadá a kde se otevírá."
 
 msgid "Sound"
-msgstr ""
+msgstr "Zvuk"
 
 msgid "The menus' music and sounds, and the games' volume."
-msgstr ""
+msgstr "Hudba a zvuky nabídek a hlasitost her."
 
 msgid "The DualSense, for every player."
-msgstr ""
+msgstr "DualSense, pro každého hráče."
 
 msgid "Games and folders"
-msgstr ""
+msgstr "Hry a složky"
 
 msgid "Where each side's games are."
-msgstr ""
+msgstr "Kde jsou hry každé strany."
 
 msgid "Online and updates"
-msgstr ""
+msgstr "Online a aktualizace"
 
 msgid "Box art, graphic packs and PS5CEMU-HAR itself."
-msgstr ""
+msgstr "Obaly, grafické balíčky a samotný PS5CEMU-HAR."
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Přístupnost"
 
 msgid "Larger text, more contrast, less motion."
-msgstr ""
+msgstr "Větší text, vyšší kontrast, méně pohybu."
 
 msgid "For every Wii U game."
-msgstr ""
+msgstr "Pro každou hru pro Wii U."
 
 msgid "What each player's DualSense is to the Wii U."
-msgstr ""
+msgstr "Čím je DualSense každého hráče pro Wii U."
 
 msgid "Cemu's emulated portals."
-msgstr ""
+msgstr "Emulované portály Cemu."
 
 msgid "Into the Wii U's storage."
-msgstr ""
+msgstr "Do úložiště Wii U."
 
 msgid "For every 3DS game."
-msgstr ""
+msgstr "Pro každou hru pro 3DS."
 
 msgid "Screens and borders"
-msgstr ""
+msgstr "Obrazovky a rámečky"
 
 msgid "For every 3DS game; in a game, its menu changes them at once."
-msgstr ""
+msgstr "Pro každou hru pro 3DS; ve hře je její nabídka změní hned."
 
 msgid "The DualSense as the 3DS."
-msgstr ""
+msgstr "DualSense jako 3DS."
 
 msgid "System and Home Menu"
-msgstr ""
+msgstr "Systém a nabídka HOME"
 
 msgid "The emulated 3DS's region and language."
-msgstr ""
+msgstr "Region a jazyk emulované 3DS."
 
 msgid "Into the 3DS's storage."
-msgstr ""
+msgstr "Do úložiště 3DS."
 
 msgid "Play from your 3DS, over your network."
-msgstr ""
+msgstr "Hrát z vaší 3DS, přes vaši síť."
 
 msgid "Why something does not work, before anything else."
-msgstr ""
+msgstr "Proč něco nefunguje — především."
 
 msgid "Logs, caches and what this session is."
-msgstr ""
+msgstr "Protokoly, mezipaměti a co je tato relace."
 
 msgctxt "app"
 msgid "About"
-msgstr ""
+msgstr "O aplikaci"
 
 msgid "Who made what."
-msgstr ""
+msgstr "Kdo co vytvořil."
 
 msgid "Checking GitHub…"
-msgstr ""
+msgstr "Kontrola GitHubu…"
 
 msgid "Downloading: {0}"
-msgstr ""
+msgstr "Stahování: {0}"
 
 msgid "Downloading: {0} MB"
-msgstr ""
+msgstr "Stahování: {0} MB"
 
 msgid "Installing…"
-msgstr ""
+msgstr "Instalace…"
 
 msgid "Up to date: {0}"
-msgstr ""
+msgstr "Aktuální: {0}"
 
 msgid "Installed: {0}"
-msgstr ""
+msgstr "Nainstalováno: {0}"
 
 msgid "Cross to download"
-msgstr ""
+msgstr "Křížek pro stažení"
 
 msgid "{0}: Cross to install"
-msgstr ""
+msgstr "{0}: Křížek pro instalaci"
 
 msgid "Downloading…"
-msgstr ""
+msgstr "Stahování…"
 
 msgid "Checking the download…"
-msgstr ""
+msgstr "Kontrola staženého souboru…"
 
 msgid "Installed: Cross to restart"
-msgstr ""
+msgstr "Nainstalováno: Křížek pro restart"
 
 msgid "Cross to check"
-msgstr ""
+msgstr "Křížek pro kontrolu"
 
 msgid "Cross goes to the 3DS side for it."
-msgstr ""
+msgstr "Křížek kvůli tomu přejde na stranu 3DS."
 
 msgid "Cross goes to the Wii U side for it."
-msgstr ""
+msgstr "Křížek kvůli tomu přejde na stranu Wii U."
 
 msgid "On the 3DS side"
-msgstr ""
+msgstr "Na straně 3DS"
 
 msgid "On the Wii U side"
-msgstr ""
+msgstr "Na straně Wii U"
 
 msgid "Cemu did not start, so this cannot be changed."
-msgstr ""
+msgstr "Cemu se nespustil, takže to nelze změnit."
 
 msgid "The menus' language. Game names and descriptions stay as they are."
-msgstr ""
+msgstr "Jazyk nabídek. Názvy a popisy her zůstanou, jak jsou."
 
 msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
-msgstr ""
+msgstr "PS5CEMU-HAR mluví jazykem PS5, pokud tu nevyberete jiný; kontrola přípravy při prvním spuštění nabízí stejnou volbu. Názvy her, jejich popisy a grafické balíčky pocházejí z GameTDB, ze samotných her a od autorů balíčků a zůstávají tak, jak je napsali."
 
 msgid "Start on"
-msgstr ""
+msgstr "Spouštět na"
 
 msgid "The side last used"
-msgstr ""
+msgstr "Naposledy použitá strana"
 
 msgid "Ask each time"
-msgstr ""
+msgstr "Pokaždé se zeptat"
 
 msgid "Where PS5CEMU-HAR opens."
-msgstr ""
+msgstr "Kde se PS5CEMU-HAR otevírá."
 
 msgid ""
 "The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
 "Ask each time: it shows the two sides first, as the start screen did."
 msgstr ""
+"Naposledy použitá strana: PS5CEMU-HAR se otevře na naposledy použité straně a po hře na této hře.\n"
+"Pokaždé se zeptat: nejdřív ukáže obě strany, jako dřív úvodní obrazovka."
 
 msgid "Game pictures behind menus"
-msgstr ""
+msgstr "Obrázky her za nabídkami"
 
 msgid "The focused game's cover, softened, behind the screens."
-msgstr ""
+msgstr "Obal vybrané hry, rozmazaný, za obrazovkami."
 
 msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
-msgstr ""
+msgstr "Obrázek vybrané hry vyplní obrazovku za nabídkami, rozmazaný a ztlumený, takže posun výběru změní celou obrazovku. Vyp.: jen barvy hry."
 
 msgid "Launcher music"
-msgstr ""
+msgstr "Hudba spouštěče"
 
 msgid "The music under the menus."
-msgstr ""
+msgstr "Hudba pod nabídkami."
 
 msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
-msgstr ""
+msgstr "Vlastní hudba spouštěče, v duchu úvodní obrazovky konzole, nebo žádná."
 
 msgid "Music volume"
-msgstr ""
+msgstr "Hlasitost hudby"
 
 msgid "How loud the menus' music is."
-msgstr ""
+msgstr "Jak hlasitá je hudba nabídek."
 
 msgid "How loud the launcher's music is. Left and Right change it by 10%."
-msgstr ""
+msgstr "Jak hlasitá je hudba spouštěče. Doleva a doprava ji mění o 10 %."
 
 msgid "Menu sounds"
-msgstr ""
+msgstr "Zvuky nabídek"
 
 msgid "The sounds of moving and choosing."
-msgstr ""
+msgstr "Zvuky pohybu a výběru."
 
 msgid "The launcher's sounds as you move, choose and go back."
-msgstr ""
+msgstr "Zvuky spouštěče při pohybu, výběru a návratu."
 
 msgid "Wii U games' volume"
-msgstr ""
+msgstr "Hlasitost her pro Wii U"
 
 msgid "The Wii U games' sound."
-msgstr ""
+msgstr "Zvuk her pro Wii U."
 
 msgid "The Wii U games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Zvuk her pro Wii U. Doleva a doprava ho mění o 10 %."
 
 msgid "3DS games' volume"
-msgstr ""
+msgstr "Hlasitost her pro 3DS"
 
 msgid "The 3DS games' sound."
-msgstr ""
+msgstr "Zvuk her pro 3DS."
 
 msgid "The 3DS games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Zvuk her pro 3DS. Doleva a doprava ho mění o 10 %."
 
 msgid "GamePad speaker"
-msgstr ""
+msgstr "Reproduktor GamePadu"
 
 msgid "The Wii U GamePad's own sound, on the DualSense."
-msgstr ""
+msgstr "Vlastní zvuk Wii U GamePadu, na DualSense."
 
 msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
-msgstr ""
+msgstr "Zvuky, které hry přehrávají na reproduktoru Wii U GamePadu, z reproduktoru DualSense hráče 1. Mnoho her tam posílá i celý svůj zvuk, proto je to vypnuté, pokud to nechcete. Platí od další hry."
 
 msgid "The DualSense's rumble, in games and in the launcher."
-msgstr ""
+msgstr "Vibrace DualSense, ve hrách i ve spouštěči."
 
 msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
-msgstr ""
+msgstr "Vypnuto: DualSense nikdy nevibruje — ani kvůli vibracím hry, ani kvůli spouštěči."
 
 msgid "Wii U players"
-msgstr ""
+msgstr "Hráči Wii U"
 
 msgid "Each player's emulated controller, motion and buttons."
-msgstr ""
+msgstr "Emulovaný ovladač, pohyb a tlačítka každého hráče."
 
 msgid "What the Wii U sees in each player's hands."
-msgstr ""
+msgstr "Co Wii U vidí v rukou každého hráče."
 
 msgid "3DS controls"
-msgstr ""
+msgstr "Ovládání 3DS"
 
 msgid "Motion, deadzone and buttons."
-msgstr ""
+msgstr "Pohyb, mrtvá zóna a tlačítka."
 
 msgid "Where your Wii U games are. Cross picks another."
-msgstr ""
+msgstr "Kde jsou vaše hry pro Wii U. Křížek vybere jinou složku."
 
 msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
-msgstr ""
+msgstr "Vaše hry pro Wii U: .wua, .wud, .wux nebo složky s code, content a meta. Zašifrované .wud a .wux potřebují své klíče v /data/ps5cemu/keys.txt."
 
 msgid "Where your 3DS games are. Cross picks another."
-msgstr ""
+msgstr "Kde jsou vaše hry pro 3DS. Křížek vybere jinou složku."
 
 msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Vaše hry pro 3DS: .3ds nebo .cci, .cxi, .3dsx a komprimované dumpy Azaharu, dešifrované, tady nebo v podsložkách. Soubory CIA se instalují (Instalovat soubory CIA). Zašifrované dumpy potřebují aes_keys.txt z 3DS v /data/ps5cemu/azahar/sysdata."
 
 msgid "Look for games now"
-msgstr ""
+msgstr "Hledat hry teď"
 
 msgid "Looking…"
-msgstr ""
+msgstr "Hledání…"
 
 msgid "This side's folder, again."
-msgstr ""
+msgstr "Složka této strany, znovu."
 
 msgid "Looks through this side's folder again, as it does each time the side opens."
-msgstr ""
+msgstr "Znovu projde složku této strany, jako při každém jejím otevření."
 
 msgid "Wii U disc keys"
-msgstr ""
+msgstr "Klíče disků Wii U"
 
 msgid "keys.txt found"
-msgstr ""
+msgstr "keys.txt nalezen"
 
 msgid "keys.txt missing"
-msgstr ""
+msgstr "keys.txt chybí"
 
 msgid "Only encrypted .wud and .wux need them."
-msgstr ""
+msgstr "Potřebují je jen zašifrované .wud a .wux."
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
-msgstr ""
+msgstr "Zašifrované dumpy .wud a .wux potřebují klíče svých disků v /data/ps5cemu/keys.txt, jeden na řádek. Dešifrované dumpy, .wua a složky žádné nepotřebují."
 
 msgid "Box art from GameTDB"
-msgstr ""
+msgstr "Obaly z GameTDB"
 
 msgid "Covers for the library, downloaded once."
-msgstr ""
+msgstr "Obaly do knihovny, stažené jednou."
 
 msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
-msgstr ""
+msgstr "Když se hra objeví poprvé, její obal se stáhne z GameTDB (art.gametdb.com) podle ID na krabičce. Vyp.: nic dalšího se nestahuje."
 
 msgid "Community graphic packs"
-msgstr ""
+msgstr "Grafické balíčky komunity"
 
 msgid "Cross checks GitHub for newer ones."
-msgstr ""
+msgstr "Křížek hledá novější na GitHubu."
 
 msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
-msgstr ""
+msgstr "Grafické balíčky komunity pro Cemu z nejnovějšího vydání na GitHubu, pokud je novější než nainstalované. Balíčky dodané s aplikací zůstávají jako záloha."
 
 msgid "PS5CEMU-HAR updates"
-msgstr ""
+msgstr "Aktualizace PS5CEMU-HAR"
 
 msgid "Cross checks GitHub for a newer version."
-msgstr ""
+msgstr "Křížek hledá novější verzi na GitHubu."
 
 msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "PS5CEMU-HAR se při každém spuštění ptá GitHubu na nejnovější vydání. Křížek se zeptá znovu, nebo nainstaluje nalezenou novější verzi: soubory vydání se stáhnou, zkontrolují a nahradí tyto a aplikace se restartuje. Vaše hry, uložené pozice a nastavení zůstanou, jak jsou."
 
 msgid "Larger text"
-msgstr ""
+msgstr "Větší text"
 
 msgid "Every size of text a step up."
-msgstr ""
+msgstr "Každá velikost textu o stupeň větší."
 
 msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
-msgstr ""
+msgstr "Každý styl textu o stupeň větší: popisky z 20 na 23, text ke čtení z 26 na 30."
 
 msgid "High contrast"
-msgstr ""
+msgstr "Vysoký kontrast"
 
 msgid "Opaque panels, full-strength text, a thicker ring."
-msgstr ""
+msgstr "Neprůhledné panely, plný text, silnější rámeček."
 
 msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
-msgstr ""
+msgstr "Neprůhledné panely místo skla, všechen text v plné síle, silnější rámeček výběru a žádné zrno ani obrázky za nabídkami."
 
 msgid "Reduce motion"
-msgstr ""
+msgstr "Omezit pohyb"
 
 msgid "Fades in place of movement."
-msgstr ""
+msgstr "Prolínání místo pohybu."
 
 msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
-msgstr ""
+msgstr "Pružiny se mění v krátká prolínání; za nabídkami nic neplyne, „nedýchá“ ani nestoupá."
 
 msgid "Hold to confirm"
-msgstr ""
+msgstr "Podržet pro potvrzení"
 
 msgid "How long Cross is held for what cannot be undone."
-msgstr ""
+msgstr "Jak dlouho se drží Křížek u toho, co nejde vrátit."
 
 msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
-msgstr ""
+msgstr "Mazání mezipamětí, Artic Setup a obnovení ovládání se potvrzují podržením, nikdy dvojím stiskem. Takhle dlouho."
 
 msgid "How the picture is scaled to the TV."
-msgstr ""
+msgstr "Jak se obraz zvětšuje na televizor."
 
 msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
-msgstr ""
+msgstr "Bikubický je ostrý, Bikubický Hermite o něco měkčí, Lineární ještě měkčí; Nejbližší soused drží pixely čtvercové."
 
 msgid "120 Hz output"
-msgstr ""
+msgstr "Výstup 120 Hz"
 
 msgid "For displays that take 120 Hz."
-msgstr ""
+msgstr "Pro obrazovky, které zvládnou 120 Hz."
 
 msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
-msgstr ""
+msgstr "Režim 119,88 Hz na obrazovkách, které ho podporují. Hry dál běží vlastní rychlostí a snímek, který zmešká obnovení, čeká na další 8 ms místo 17."
 
 msgid "Holds a game to an even frame rate."
-msgstr ""
+msgstr "Drží hru na rovnoměrné snímkové frekvenci."
 
 msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
-msgstr ""
+msgstr "Každý snímek zůstane na obrazovce nejméně dvě nebo tři obnovení, takže hra, která neudrží frekvenci obrazovky, běží rovnoměrně: 60 nebo 40 fps s výstupem 120 Hz, 30 nebo 20 bez něj. 60 fps s výstupem 120 Hz se hodí pro hru ve 4K, která občas klesne pod 60; 30 fps při 60 Hz pro hru v 8K. Také v herní nabídce."
 
 msgid "Frame rate, CPU and memory in a corner."
-msgstr ""
+msgstr "Snímky, CPU a paměť v rohu."
 
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
-msgstr ""
+msgstr "Snímky za sekundu, využití CPU a paměti v levém horním rohu, jak je ukazuje Cemu. Také v herní nabídce."
 
 msgid "No stutter while new shaders build."
-msgstr ""
+msgstr "Bez záseků při sestavování nových shaderů."
 
 msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
-msgstr ""
+msgstr "Zapnuto: nový shader se sestavuje, zatímco hra běží dál, takže se nezasekne, ale něco může na chvíli chybět. Vypnuto: hra čeká na každý — záseky, ale nic se nevykreslí špatně."
 
 msgid "Cross: this player's controller, motion and buttons."
-msgstr ""
+msgstr "Křížek: ovladač, pohyb a tlačítka tohoto hráče."
 
 msgid "No DualSense for this player yet."
-msgstr ""
+msgstr "Tento hráč zatím nemá DualSense."
 
 msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
-msgstr ""
+msgstr "Co hra vidí v rukou tohoto hráče, a také pohyb, vibrace, mrtvé zóny a tlačítka. Hráč 1 je přihlášený uživatel, který aplikaci spustil; DualSense ostatních přihlášených uživatelů jsou hráči 2 až 4."
 
 msgid "For the Skylanders games."
-msgstr ""
+msgstr "Pro hry Skylanders."
 
 msgid "For Disney Infinity 3.0."
-msgstr ""
+msgstr "Pro Disney Infinity 3.0."
 
 msgid "For LEGO Dimensions."
-msgstr ""
+msgstr "Pro LEGO Dimensions."
 
 msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
-msgstr ""
+msgstr "Emulovaný portál Cemu, připojený při spuštění hry. Ve hře na něj kategorie Zařízení USB v nabídce staví figurky: dumpy v {0}. Skutečný portál v USB portu PS5 se nepoužívá."
 
 msgid "Install from a folder"
-msgstr ""
+msgstr "Instalovat ze složky"
 
 msgid "An update, DLC or game (code, content and meta)."
-msgstr ""
+msgstr "Aktualizace, DLC nebo hra (code, content a meta)."
 
 msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Instaluje do úložiště Wii U (mlc01), stejně jako Install game title, update or DLC v Cemu. Aktualizace a DLC ve složce s hrami fungují i tak, jak jsou."
 
 msgid "Higher is sharper and asks more of the GPU."
-msgstr ""
+msgstr "Vyšší je ostřejší a víc zatěžuje GPU."
 
 msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
-msgstr ""
+msgstr "V jaké velikosti se 3D scény z 3DS kreslí, než se zvětší na televizor. Vyšší je ostřejší a víc zatěžuje GPU, a pokaždé, když hra čte obraz zpátky, roste čekání s ním."
 
 msgid "Smooths textures as they are scaled up."
-msgstr ""
+msgstr "Vyhlazuje textury při zvětšení."
 
 msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
-msgstr ""
+msgstr "Vyhlazuje textury hry při zvětšení; Žádný je nechá tak, jak je 3DS kreslí. Filtr překreslí každou texturu ve vnitřním rozlišení: při vysokých rozlišeních je to nejnáročnější nastavení. Pokud hra seká, zkuste nejdřív Žádný."
 
 msgid "Custom textures"
-msgstr ""
+msgstr "Vlastní textury"
 
 msgid "Texture packs from azahar/load/textures."
-msgstr ""
+msgstr "Balíčky textur z azahar/load/textures."
 
 msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
-msgstr ""
+msgstr "Balíčky textur v /data/ps5cemu/azahar/load/textures/<ID titulu>, jak je načítá Azahar pro počítače."
 
 msgid "Screen layout"
-msgstr ""
+msgstr "Rozvržení obrazovek"
 
 msgid "How the two screens share the TV."
-msgstr ""
+msgstr "Jak se dvě obrazovky dělí o televizor."
 
 msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
-msgstr ""
+msgstr "Jedna nad druhou, jen horní, velká horní s dolní vedle, nebo obě vedle sebe. Ve hře přepne na další kliknutí na dotykovou plochu + R1."
 
 msgid "Artwork around the screens."
-msgstr ""
+msgstr "Grafika kolem obrazovek."
 
 msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
-msgstr ""
+msgstr "Grafika kolem obrazovek 3DS, nikdy přes ně. Přizpůsobí se každému rozvržení a mění ji i herní nabídka."
 
 msgid "The DualSense's motion as the 3DS's."
-msgstr ""
+msgstr "Pohyb DualSense jako pohyb 3DS."
 
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
-msgstr ""
+msgstr "Gyroskop a akcelerometr DualSense jako snímače samotné 3DS, pro hry, ve kterých se míří nebo řídí nakláněním konzole."
 
 msgid "How far a stick moves before it counts."
-msgstr ""
+msgstr "Jak daleko se páčka pohne, než se to počítá."
 
 msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Jak daleko se páčka pohne, než si toho hra všimne — pro Circle Pad a C-Stick. Zvyšte ji, pokud se něco pohybuje samo i po puštění páčky; snižte ji pro jemnější ovládání."
 
 msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
-msgstr ""
+msgstr "Které tlačítko DualSense odpovídá kterému tlačítku 3DS. Ve výchozím stavu je A na kolečku a B na křížku, kde je má 3DS; Circle Pad je levá páčka, C-Stick pravá a dotyková plocha dotyková obrazovka."
 
 msgid "Default buttons, motion and deadzone."
-msgstr ""
+msgstr "Výchozí tlačítka, pohyb a mrtvá zóna."
 
 msgid "The default buttons, motion and deadzone."
-msgstr ""
+msgstr "Výchozí tlačítka, pohyb a mrtvá zóna."
 
 msgid "Region"
-msgstr ""
+msgstr "Region"
 
 msgid "The emulated 3DS's region."
-msgstr ""
+msgstr "Region emulované 3DS."
 
 msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
-msgstr ""
+msgstr "Automaticky vezme region každé hry. Hra pro jiný region se nemusí spustit nebo může ukázat jiné jazyky. Platí od další hry."
 
 msgid "The emulated 3DS's language."
-msgstr ""
+msgstr "Jazyk emulované 3DS."
 
 msgid "The language games that follow the console's show their text in. Applies to the next game."
-msgstr ""
+msgstr "Jazyk, ve kterém hry řídící se konzolí zobrazují text. Platí od další hry."
 
 msgid "Home Menu"
-msgstr ""
+msgstr "Nabídka HOME"
 
 msgid "Start"
-msgstr ""
+msgstr "Spustit"
 
 msgid "Run Artic Setup first"
-msgstr ""
+msgstr "Nejdřív spusťte Artic Setup"
 
 msgid "The 3DS Home Menu, from your console's files."
-msgstr ""
+msgstr "Nabídka HOME 3DS ze souborů vaší konzole."
 
 msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
-msgstr ""
+msgstr "Spustí nabídku HOME 3DS, jakmile příprava přes Artic Base zkopíruje systémové soubory vaší vlastní konzole (Artic Base)."
 
 msgid "Install a CIA file"
-msgstr ""
+msgstr "Instalovat soubor CIA"
 
 msgid "A game, an update or DLC."
-msgstr ""
+msgstr "Hra, aktualizace nebo DLC."
 
 msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
-msgstr ""
+msgstr "Instaluje CIA do úložiště 3DS, stejně jako Install CIA v Azaharu: aktualizace nebo DLC patří ke své hře a hra přibude v knihovně. Kolečko během instalace zruší."
 
 msgid "Play a game from your 3DS, and set up from it."
-msgstr ""
+msgstr "Hrát hru z vaší 3DS a nastavit z ní."
 
 msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
-msgstr ""
+msgstr "Artic Base hraje hru z 3DS ve vaší síti a její uložené pozice zůstávají na 3DS; Artic Setup zkopíruje systémové soubory 3DS do Azaharu, pro nabídku HOME a hry, které je potřebují."
 
 msgid "Open the Setup check"
-msgstr ""
+msgstr "Otevřít kontrolu přípravy"
 
 msgid "Storage, recompilers, games, keys and box art, checked."
-msgstr ""
+msgstr "Úložiště, rekompilátory, hry, klíče a obaly, zkontrolováno."
 
 msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
-msgstr ""
+msgstr "Každá kontrola má stav, jeho význam a co dělat. Zobrazí se i při prvním spuštění a vždy, když při spuštění aplikace nějaká kontrola selže."
 
 msgid "Copy logs to USB"
-msgstr ""
+msgstr "Kopírovat protokoly na USB"
 
 msgid "The logs a report needs, onto a USB drive."
-msgstr ""
+msgstr "Protokoly potřebné k hlášení, na disk USB."
 
 msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
-msgstr ""
+msgstr "Zkopíruje protokoly posledních pěti relací a nastavení do složky s datem na disku USB, k přiložení k hlášení."
 
 msgid "Clear Wii U shader caches"
-msgstr ""
+msgstr "Vymazat mezipaměť shaderů Wii U"
 
 msgid "For a game that crashes on a bad cache."
-msgstr ""
+msgstr "Pro hru, která padá kvůli vadné mezipaměti."
 
 msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Smaže mezipaměť shaderů Cemu. Hry si ji za běhu vytvoří znovu: první minuty budou sekat."
 
 msgid "Clear 3DS shader caches"
-msgstr ""
+msgstr "Vymazat mezipaměť shaderů 3DS"
 
 msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Smaže mezipaměť shaderů Azaharu. Hry si ji za běhu vytvoří znovu: první minuty budou sekat."
 
 msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
-msgstr ""
+msgstr "Dumpy figurek patří do /data/ps5cemu/figures: skylanders, infinity a dimensions. Zapněte tady portál, spusťte hru a pak na něj stavte figurky z herní nabídky (kliknutí na dotykovou plochu + OPTIONS > Zařízení USB)."
 
 msgid ""
 "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
@@ -2845,507 +2847,515 @@ msgid ""
 "3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
 "\n"
 msgstr ""
+"Cemu, emulátor Wii U, od týmu Cemu a jeho přispěvatelů; RADV na PS5 od Mihawk-99 a mpereiraesaa; autoři grafických balíčků komunity.\n"
+"Azahar, emulátor 3DS, od týmu Azaharu a předtím přispěvatelů Citry; jeho port na PS5 od Mihawk-99 a dynarmic.\n"
+"Obaly a informace o hrách: GameTDB. Písmo: Lexend.\n"
+"Neoficiální port, nespojený s týmy Cemu ani Azaharu, Nintendem ani Sony.\n"
+"\n"
+"Hry pro Wii U: /data/ps5cemu/games, úložiště a uložené pozice: /data/ps5cemu/mlc01, klíče: /data/ps5cemu/keys.txt\n"
+"Hry pro 3DS: /data/ps5cemu/azahar/games, úložiště: /data/ps5cemu/azahar/sdmc\n"
+"\n"
 
 msgid "Version {0}"
-msgstr ""
+msgstr "Verze {0}"
 
 msgid "The PS5's language: {0}"
-msgstr ""
+msgstr "Jazyk PS5: {0}"
 
 msgid "Language: {0}"
-msgstr ""
+msgstr "Jazyk: {0}"
 
 msgctxt "tab"
 msgid "Settings"
-msgstr ""
+msgstr "Nastavení"
 
 msgid "Starting the 3DS"
-msgstr ""
+msgstr "Spouštění 3DS"
 
 msgid "General"
-msgstr ""
+msgstr "Obecné"
 
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 msgid "Preview"
-msgstr ""
+msgstr "Náhled"
 
 msgid "{0}, with no border."
-msgstr ""
+msgstr "{0}, bez rámečku."
 
 msgid "{0}, on the {1} border."
-msgstr ""
+msgstr "{0}, s rámečkem {1}."
 
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
-msgstr ""
+msgstr "Dolní obrazovka je dotyková plocha: kliknutí je klepnutí, podržení kliknutí je tažení."
 
 msgid "About this setting"
-msgstr ""
+msgstr "O tomto nastavení"
 
 msgid "{0} GB free"
-msgstr ""
+msgstr "Volno: {0} GB"
 
 msgid "Storage"
-msgstr ""
+msgstr "Úložiště"
 
 msgid "the HEN setup guide"
-msgstr ""
+msgstr "návod k nastavení HEN"
 
 msgid "/data is reachable"
-msgstr ""
+msgstr "/data je dostupný"
 
 msgid "Where everything is kept"
-msgstr ""
+msgstr "Kde je všechno uložené"
 
 msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
-msgstr ""
+msgstr "Nastavení, uložené pozice, mezipaměti a protokoly jsou v {0}, které váš HEN pro PS5CEMU-HAR otevírá: jeho app jailbreak, nebo elfldr s pomocníkem dodaným s aplikací."
 
 msgid "/data is out of reach: nothing can be kept"
-msgstr ""
+msgstr "/data není dostupný: nic nelze uložit"
 
 msgid "Let PS5CEMU-HAR out of its sandbox"
-msgstr ""
+msgstr "Pusťte PS5CEMU-HAR z jeho sandboxu"
 
 msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
-msgstr ""
+msgstr "Přidejte PPSA99360 do seznamu app jailbreak vašeho HEN (etaHEN: jeho seznam app jailbreak; OnionHEN: na konec exact_title_ids v config.ini, bez čárky za ním), nebo nechte elfldr naslouchat na portu 9021. Pak PS5CEMU-HAR spusťte znovu."
 
 msgid "Recompilers"
-msgstr ""
+msgstr "Rekompilátory"
 
 msgid "What runs the games' code"
-msgstr ""
+msgstr "Co spouští kód her"
 
 msgid "JIT memory from your HEN: games run at full speed"
-msgstr ""
+msgstr "Paměť JIT od vašeho HEN: hry běží plnou rychlostí"
 
 msgid "Executable memory: games run at full speed, no HEN grant needed"
-msgstr ""
+msgstr "Spustitelná paměť: hry běží plnou rychlostí, bez povolení od HEN"
 
 msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
-msgstr ""
+msgstr "Rekompilátory Cemu a Azaharu za běhu překládají kód her do kódu PS5. Potřebují paměť, do které mohou zapsat kód a spustit ho: paměť JIT vašeho HEN, nebo spustitelnou paměť, kterou si PS5CEMU-HAR vytvoří sám."
 
 msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
-msgstr ""
+msgstr "Žádná paměť JIT ani spustitelná: hry pro Wii U běží v mnohem pomalejším interpretu"
 
 msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
-msgstr ""
+msgstr "Nepodařilo se získat paměť JIT vašeho HEN ani spustitelnou paměť, takže hry pro Wii U přecházejí na interpret Cemu. Přidejte PPSA99360 do seznamu app jailbreak vašeho HEN a PS5CEMU-HAR spusťte znovu; Nastavení > Diagnostika ukáže, co získal."
 
 msgid "{0} game in {1}"
 msgid_plural "{0} games in {1}"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} hra v {1}"
+msgstr[1] "{0} hry v {1}"
+msgstr[2] "{0} her v {1}"
 
 msgid "None in {0} yet"
-msgstr ""
+msgstr "V {0} zatím žádné"
 
 msgid "{0} cannot be read"
-msgstr ""
+msgstr "{0} nelze číst"
 
 msgid "Where your 3DS games go"
-msgstr ""
+msgstr "Kam patří vaše hry pro 3DS"
 
 msgid "Where your Wii U games go"
-msgstr ""
+msgstr "Kam patří vaše hry pro Wii U"
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
-msgstr ""
+msgstr "Vložte je do {0}, nebo vyberte jakoukoli složku, kterou PS5 dokáže číst, třeba na disku USB. Prohledávají se i podsložky. Soubory CIA se instalují v Nastavení > Instalovat soubory CIA."
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
-msgstr ""
+msgstr "Vložte je do {0}, nebo vyberte jakoukoli složku, kterou PS5 dokáže číst, třeba na disku USB. Aktualizace a DLC se přidávají přes Nastavení > Instalovat aktualizace a DLC, nebo jsou součástí .wua."
 
 msgid "code · content · meta"
-msgstr ""
+msgstr "code · content · meta"
 
 msgid "the game files page"
-msgstr ""
+msgstr "stránka o souborech her"
 
 msgid "keys.txt is missing: only encrypted .wud and .wux need it"
-msgstr ""
+msgstr "keys.txt chybí: potřebují ho jen zašifrované .wud a .wux"
 
 msgid "How to"
-msgstr ""
+msgstr "Jak na to"
 
 msgid "Keys for encrypted discs"
-msgstr ""
+msgstr "Klíče k zašifrovaným diskům"
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
-msgstr ""
+msgstr "Zašifrované dumpy .wud a .wux potřebují klíče svých disků v {0}/keys.txt, jeden na řádek. Dešifrované dumpy, soubory .wua a složky s code, content a meta žádné nepotřebují."
 
 msgid "3DS keys"
-msgstr ""
+msgstr "Klíče 3DS"
 
 msgid "aes_keys.txt found"
-msgstr ""
+msgstr "aes_keys.txt nalezen"
 
 msgid "aes_keys.txt is missing: only encrypted dumps need it"
-msgstr ""
+msgstr "aes_keys.txt chybí: potřebují ho jen zašifrované dumpy"
 
 msgid "Keys for encrypted 3DS dumps"
-msgstr ""
+msgstr "Klíče k zašifrovaným dumpům 3DS"
 
 msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
-msgstr ""
+msgstr "Zašifrované dumpy potřebují aes_keys.txt z vaší vlastní konzole v {0}/sysdata. Dešifrované dumpy, homebrew a nainstalované CIA žádné nepotřebují. S PS5CEMU-HAR se nedodávají žádné klíče."
 
 msgid "3DS system files"
-msgstr ""
+msgstr "Systémové soubory 3DS"
 
 msgid "Artic Setup has run: the Home Menu can start"
-msgstr ""
+msgstr "Artic Setup proběhl: nabídka HOME se může spustit"
 
 msgid "Artic Setup copies them from your 3DS, for the Home Menu"
-msgstr ""
+msgstr "Artic Setup je zkopíruje z vaší 3DS, pro nabídku HOME"
 
 msgid "Your 3DS's own files"
-msgstr ""
+msgstr "Vlastní soubory vaší 3DS"
 
 msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
-msgstr ""
+msgstr "Nabídka HOME 3DS a těch pár her, které potřebují systémové soubory konzole, běží, jakmile je Artic Setup přes síť zkopíruje z vaší vlastní 3DS: spusťte na 3DS Artic Setup Tool a pak tady Artic Base."
 
 msgid "the 3DS page"
-msgstr ""
+msgstr "stránka o 3DS"
 
 msgid "Box art"
-msgstr ""
+msgstr "Obaly"
 
 msgid "what PS5CEMU-HAR fetches online"
-msgstr ""
+msgstr "co PS5CEMU-HAR stahuje z internetu"
 
 msgid "Covers from GameTDB"
-msgstr ""
+msgstr "Obaly z GameTDB"
 
 msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
-msgstr ""
+msgstr "Když se hra objeví poprvé, její obal přijde z GameTDB (art.gametdb.com) podle ID na krabičce. Bez připojení se zobrazí ikony her a další spuštění to zkusí znovu."
 
 msgid "Off: the games' icons are shown instead"
-msgstr ""
+msgstr "Vyp.: místo obalů se zobrazují ikony her"
 
 msgid "Turn on"
-msgstr ""
+msgstr "Zapnout"
 
 msgid "GameTDB did not answer: the games' icons are shown instead"
-msgstr ""
+msgstr "GameTDB neodpověděl: místo obalů se zobrazují ikony her"
 
 msgid "GameTDB is reachable · {0} cover"
 msgid_plural "GameTDB is reachable · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "GameTDB je dostupný · {0} obal"
+msgstr[1] "GameTDB je dostupný · {0} obaly"
+msgstr[2] "GameTDB je dostupný · {0} obalů"
 
 msgid "On · {0} cover"
 msgid_plural "On · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Zap. · {0} obal"
+msgstr[1] "Zap. · {0} obaly"
+msgstr[2] "Zap. · {0} obalů"
 
 msgid "On: covers come as your games show up"
-msgstr ""
+msgstr "Zap.: obaly přicházejí, jak se objevují vaše hry"
 
 msgid "Checked again"
-msgstr ""
+msgstr "Zkontrolováno znovu"
 
 msgid "Welcome to PS5CEMU-HAR"
-msgstr ""
+msgstr "Vítejte v PS5CEMU-HAR"
 
 msgid "Let’s check your setup"
-msgstr ""
+msgstr "Zkontrolujme vaši přípravu"
 
 msgid "The {0} check is ready."
 msgid_plural "All {0} checks are ready."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} kontrola je v pořádku."
+msgstr[1] "Všechny {0} kontroly jsou v pořádku."
+msgstr[2] "Všech {0} kontrol je v pořádku."
 
 msgid "The {0} check needs a look."
 msgid_plural "All {0} checks need a look."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} kontrola vyžaduje pozornost."
+msgstr[1] "Všechny {0} kontroly vyžadují pozornost."
+msgstr[2] "Všech {0} kontrol vyžaduje pozornost."
 
 msgid "{0} of {1} is ready."
 msgid_plural "{0} of {1} are ready."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "V pořádku: {0} z {1}."
+msgstr[1] "V pořádku: {0} z {1}."
+msgstr[2] "V pořádku: {0} z {1}."
 
 msgid "{0} needs a look."
 msgid_plural "{0} need a look."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pozornost vyžaduje: {0}."
+msgstr[1] "Pozornost vyžadují: {0}."
+msgstr[2] "Pozornost vyžaduje: {0}."
 
 msgid "{0} · as the PS5"
-msgstr ""
+msgstr "{0} · jako PS5"
 
 msgid "· optional"
-msgstr ""
+msgstr "· volitelné"
 
 msgid "The menus' language"
-msgstr ""
+msgstr "Jazyk nabídek"
 
 msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
-msgstr ""
+msgstr "PS5CEMU-HAR mluví jazykem, který máte nastavený na PS5. Křížek vybere jiný; Nastavení > Obecné > Jazyk ho kdykoli změní."
 
 msgid "The guide, on your phone"
-msgstr ""
+msgstr "Návod ve vašem telefonu"
 
 msgid "Scan it for {0}: {1}"
-msgstr ""
+msgstr "Naskenujte pro {0}: {1}"
 
 msgid "Not in this build"
-msgstr ""
+msgstr "Není v tomto sestavení"
 
 msgid "Open to look for games"
-msgstr ""
+msgstr "Otevřete pro hledání her"
 
 msgid "Saved your place in the library"
-msgstr ""
+msgstr "Vaše místo v knihovně je uložené"
 
 msgid "The game could not start"
-msgstr ""
+msgstr "Hru se nepodařilo spustit"
 
 msgid "{0} min played"
 msgid_plural "{0} min played"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Hráno {0} min"
+msgstr[1] "Hráno {0} min"
+msgstr[2] "Hráno {0} min"
 
 msgid "{0} h played"
 msgid_plural "{0} h played"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Hráno {0} h"
+msgstr[1] "Hráno {0} h"
+msgstr[2] "Hráno {0} h"
 
 msgid "today"
-msgstr ""
+msgstr "dnes"
 
 msgid "yesterday"
-msgstr ""
+msgstr "včera"
 
 msgid "{0} day ago"
 msgid_plural "{0} days ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před {0} dnem"
+msgstr[1] "před {0} dny"
+msgstr[2] "před {0} dny"
 
 msgid "{0} week ago"
 msgid_plural "{0} weeks ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před {0} týdnem"
+msgstr[1] "před {0} týdny"
+msgstr[2] "před {0} týdny"
 
 msgid "{0} month ago"
 msgid_plural "{0} months ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "před {0} měsícem"
+msgstr[1] "před {0} měsíci"
+msgstr[2] "před {0} měsíci"
 
 msgid "Cemu is still starting"
-msgstr ""
+msgstr "Cemu se stále spouští"
 
 msgid "Starting Azahar"
-msgstr ""
+msgstr "Spouštění Azaharu"
 
 msgctxt "tab"
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 msgid "Done"
-msgstr ""
+msgstr "Hotovo"
 
 msgid "Close"
-msgstr ""
+msgstr "Zavřít"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 msgid "Tabs"
-msgstr ""
+msgstr "Karty"
 
 msgid "Switch"
-msgstr ""
+msgstr "Přepnout"
 
 msgid "Open"
-msgstr ""
+msgstr "Otevřít"
 
 msgid "Change the language"
-msgstr ""
+msgstr "Změnit jazyk"
 
 msgid "Check again"
-msgstr ""
+msgstr "Zkontrolovat znovu"
 
 msgid "Continue"
-msgstr ""
+msgstr "Pokračovat"
 
 msgid "Continue to Home"
-msgstr ""
+msgstr "Pokračovat domů"
 
 msgid "Options"
-msgstr ""
+msgstr "Možnosti"
 
 msgid "Move"
-msgstr ""
+msgstr "Pohyb"
 
 msgid "Filters"
-msgstr ""
+msgstr "Filtry"
 
 msgid "Jump by letter"
-msgstr ""
+msgstr "Skok podle písmene"
 
 msgid "Back to the buttons"
-msgstr ""
+msgstr "Zpět na tlačítka"
 
 msgid "Scroll"
-msgstr ""
+msgstr "Posouvání"
 
 msgid "Pages"
-msgstr ""
+msgstr "Stránky"
 
 msgid "More about it"
-msgstr ""
+msgstr "Víc o tom"
 
 msgid "Back to the packs"
-msgstr ""
+msgstr "Zpět na balíčky"
 
 msgid "On / off"
-msgstr ""
+msgstr "Zap. / vyp."
 
 msgid "Assign"
-msgstr ""
+msgstr "Přiřadit"
 
 msgid "Clear"
-msgstr ""
+msgstr "Vymazat"
 
 msgid "Use this folder"
-msgstr ""
+msgstr "Použít tuto složku"
 
 msgid "Number"
-msgstr ""
+msgstr "Číslo"
 
 msgid "Keep"
-msgstr ""
+msgstr "Uložit"
 
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 msgid "Connect"
-msgstr ""
+msgstr "Připojit"
 
 msgid "Hold to set up"
-msgstr ""
+msgstr "Podržte pro nastavení"
 
 msgid "Not a favourite"
-msgstr ""
+msgstr "Odebrat z oblíbených"
 
 msgid "Show where it is"
-msgstr ""
+msgstr "Ukázat, kde je"
 
 msgid "Added to Favourites"
-msgstr ""
+msgstr "Přidáno do oblíbených"
 
 msgid "Taken out of Favourites"
-msgstr ""
+msgstr "Odebráno z oblíbených"
 
 msgid "The PS5's storage"
-msgstr ""
+msgstr "Úložiště PS5"
 
 msgid "Title ID {0}"
-msgstr ""
+msgstr "ID titulu {0}"
 
 msgid "PS5CEMU-HAR {0} is out"
-msgstr ""
+msgstr "Vyšel PS5CEMU-HAR {0}"
 
 msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "Toto je {0}. Stáhnout a nainstalovat teď? Vaše hry, uložené pozice a nastavení zůstanou, jak jsou."
 
 msgid "Update now"
-msgstr ""
+msgstr "Aktualizovat teď"
 
 msgid "Later"
-msgstr ""
+msgstr "Později"
 
 msgid "Updating to {0}"
-msgstr ""
+msgstr "Aktualizace na {0}"
 
 msgid "Downloading: {0} of {1} MB"
-msgstr ""
+msgstr "Stahování: {0} z {1} MB"
 
 msgid "Checking the download"
-msgstr ""
+msgstr "Kontrola staženého souboru"
 
 msgid "Installing"
-msgstr ""
+msgstr "Instalace"
 
 msgid "{0} is installed"
-msgstr ""
+msgstr "{0} je nainstalována"
 
 msgid "PS5CEMU-HAR starts again to finish the update."
-msgstr ""
+msgstr "PS5CEMU-HAR se restartuje, aby dokončil aktualizaci."
 
 msgid "Restart now"
-msgstr ""
+msgstr "Restartovat teď"
 
 msgid "The update did not finish"
-msgstr ""
+msgstr "Aktualizace nebyla dokončena"
 
 msgid "PS5CEMU-HAR is still {0}."
-msgstr ""
+msgstr "PS5CEMU-HAR je stále ve verzi {0}."
 
 msgid "Checking for updates"
-msgstr ""
+msgstr "Hledání aktualizací"
 
 msgid "PS5CEMU-HAR update"
-msgstr ""
+msgstr "Aktualizace PS5CEMU-HAR"
 
 msgid "Select"
-msgstr ""
+msgstr "Vybrat"
 
 msgid "Restart"
-msgstr ""
+msgstr "Restartovat"
 
 msgid "Firmware {0}"
-msgstr ""
+msgstr "Firmware {0}"
 
 msgid "Logs: {0}, {1}/log.txt"
-msgstr ""
+msgstr "Protokoly: {0}, {1}/log.txt"
 
 msgid "Boot log not written (/data is unreachable)"
-msgstr ""
+msgstr "Protokol spuštění nezapsán (/data není dostupný)"
 
 msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
-msgstr ""
+msgstr "PS5CEMU-HAR nemá přístup k /data. Načtěte HEN s PPSA99360 v jeho seznamu app jailbreak, nebo elfldr, a pak PS5CEMU-HAR spusťte znovu."
 
 msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
-msgstr ""
+msgstr "Tato relace: Azahar (3DS); emulované Wii U v Cemu není spuštěné"
 
 msgid "This session: Cemu (Wii U); Azahar's core is not started"
-msgstr ""
+msgstr "Tato relace: Cemu (Wii U); jádro Azaharu není spuštěné"
 
 msgid "Cemu did not start: {0}"
-msgstr ""
+msgstr "Cemu se nespustil: {0}"
 
 msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
-msgstr ""
+msgstr "Žádná paměť JIT: hry pro Wii U běží v interpretu, mnohem pomaleji. Je PPSA99360 v seznamu app jailbreak vašeho HEN?"
 
 msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
-msgstr ""
+msgstr "Spouštěč se nepodařilo spustit. Důvod je v protokolu spuštění v /data/ps5cemu/logs."
 
 msgid "{0} fps"
-msgstr ""
+msgstr "{0} fps"
 
 msgctxt "compatibility note"
 msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
-msgstr ""
+msgstr "Běží asi v 60 fps v 1440p. Do 2.0.0 C zamrzala a zavírala se, když Magnesis nebo jiné runy či dalekohled Sheikah (R3) zvýraznily předměty; opraveno po 2.0.0 C (v novějším Cemu)"
 
 msgctxt "compatibility note"
 msgid "About half the textures are missing during races"
-msgstr ""
+msgstr "Během závodů chybí asi polovina textur"
 
 msgctxt "compatibility note"
 msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
-msgstr ""
+msgstr "Hraje se s vypnutým grafickým balíčkem 60 FPS; se zapnutým má grafické chyby a spadne, jakmile se načte hra. Do 2.0.0 C tam padala tak či tak (Cemu docházely deskriptory Vulkanu)"
 
 msgctxt "compatibility note"
 msgid "Save states work from the in-game menu"
-msgstr ""
+msgstr "Uložené stavy fungují z herní nabídky"
