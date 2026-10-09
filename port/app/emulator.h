@@ -11,6 +11,11 @@
 #include <string>
 #include <vector>
 
+namespace ps5settings
+{
+	struct Launcher;
+}
+
 namespace ps5emu
 {
 	struct Game
@@ -24,7 +29,7 @@ namespace ps5emu
 		std::string format;			 // WUA, WUD, WUX, folder (code/content/meta) or RPX; 3DS, CIA, 3DSX...; NDS, DSI
 		std::string publisher;		 // a 3DS game's, from its SMDH; a DS game's, from its banner
 		std::string gameId;			 // the ID on its box, GameTDB's (boxart.h): ALZE01 (Wii U), AREE (3DS), AMCE (DS)
-		bool nds = false;			 // a Nintendo DS game, which the 3DS side lists and melonDS plays (port/melonds)
+		bool nds = false;			 // a Nintendo DS game, which the DS side lists and melonDS plays (port/melonds)
 	};
 
 	// What the launcher's settings change in Cemu's.
@@ -44,6 +49,11 @@ namespace ps5emu
 
 	// Writes the launcher's settings into Cemu's (settings.xml). A new games folder is scanned.
 	void ApplyOptions(const Options& options);
+
+	// The game about to start and the settings it starts with (its side's, with its own over them:
+	// ps5settings::ForGame), so that what its menu changes is saved where it belongs
+	// (ps5settings::SaveChanges).
+	void SetGameSettings(uint64_t titleId, const ps5settings::Launcher& settings);
 
 	// How many draws Cemu records in a command buffer before it submits it, from the process's start
 	// (ps5cemu.json's cemuSubmitDraws, a driver experiment: docs/DRIVER-PERFORMANCE.md); 0 keeps

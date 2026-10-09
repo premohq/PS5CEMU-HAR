@@ -4,9 +4,10 @@
 //  1. out of the sandbox: /data, and JIT memory for the recompilers (ps5/privilege.h);
 //  2. the boot log, the DualSense and Cemu's core (settings, MLC, graphic packs, the game scan);
 //  3. the launcher until a game is chosen (frontend/shell.h), on the side last used;
-//  4. the game, on Cemu's or Azahar's Vulkan renderer (or a DS game, which the 3DS side lists too, on
-//     melonDS with its screens on VideoOut), until the in-game menu (touchpad + Options) asks for the
-//     library, which starts PS5CEMU-HAR over (app/emulator.h, RestartToLibrary) on that emulator's side.
+//  4. the game, on Cemu's or Azahar's Vulkan renderer, or melonDS's screens on VideoOut, with its side's
+//     settings and the game's own over them (frontend/settings.h, ForGame), until the in-game menu
+//     (touchpad + Options) asks for the library, which starts PS5CEMU-HAR over (app/emulator.h,
+//     RestartToLibrary) on that emulator's side.
 
 #include "app/emulator.h"
 #include "app/pack_updates.h"
@@ -15,6 +16,7 @@
 #include "azahar/azahar.h"
 #include "azahar/library.h"
 #include "frontend/launcher.h"
+#include "melonds/library.h"
 #include "melonds/melonds.h"
 #include "frontend/settings.h"
 #include "frontend/shell.h"
@@ -160,7 +162,7 @@ int main(int argc, char* argv[])
 	const bool freshStart = settings.side.empty();
 	// still before any thread: the game folders and drives the HEN may have left out (#16)
 	if (privileges.filesystem)
-		ps5privilege::ReachFolders({settings.gamesFolder, settings.n3ds.gamesFolder});
+		ps5privilege::ReachFolders({settings.gamesFolder, settings.n3ds.gamesFolder, settings.nds.gamesFolder});
 	ps5threads::SetPinning(settings.pinCpuThreads);
 	ps5log::ForwardDriverMessages();
 	// before either emulator's Vulkan driver starts, which reads it once
@@ -191,7 +193,7 @@ int main(int argc, char* argv[])
 	std::string error;
 	if (!privileges.filesystem)
 	{
-		status.notice = status.notice3ds =
+		status.notice = status.notice3ds = status.noticeDs =
 			"PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR.";
 		ps5log::Line("[main] {}", status.notice);
 		ps5notify::Send(status.notice);
@@ -199,18 +201,19 @@ int main(int argc, char* argv[])
 	else if (!settings.launchError.empty())
 	{
 		// the last game failed after its renderer started, and the process was started over to show it
-		(settings.side == "3ds" ? status.notice3ds : status.notice) = "The game could not start: " + settings.launchError;
+		(settings.side == "3ds" ? status.notice3ds : settings.side == "ds" ? status.noticeDs : status.notice) =
+			"The game could not start: " + settings.launchError;
 		settings.launchError.clear();
 		ps5settings::Save(settings);
 	}
 
-	// One emulator per session: neither starts until the start screen's choice (or the side the last
-	// game was on), and leaving that side starts the app over. Cemu's core (its guest memory, system
-	// threads, crash handler, graphic packs and game scan) runs only for the Wii U; Azahar (its game
-	// scan, and its core once a game starts) only for the 3DS.
+	// One emulator per session: none starts until a side opens (the side last used, or the chooser's).
+	// Cemu's core (its guest memory, system threads, crash handler, graphic packs and game scan) runs
+	// only for the Wii U; Azahar (its game scan, and its core once a game starts) only for the 3DS;
+	// melonDS (its game scan, and its core once a game starts) only for the DS.
 	// Each time the launcher moves to a side (a game that did not start brings the launcher back).
-	// Either side gives way to the other in the same process: Azahar's core and Cemu's emulated
-	// Wii U both start only for a game, so until then only their game lists and settings are loaded.
+	// Each side gives way to another in the same process: the emulators' cores start only for a game,
+	// so until then only their game lists and settings are loaded.
 	std::optional<ps5launcher::System> started;
 	const size_t sessionLine = status.diagnostics.size();
 	auto prepare = [&](ps5launcher::System system) {
@@ -224,6 +227,14 @@ int main(int argc, char* argv[])
 			status.diagnostics.push_back("This session: Azahar (3DS); Cemu's emulated Wii U is not started");
 			ps5azahar::StartScan(settings.n3ds.gamesFolder);
 			ps5emu::LogMemory(); // the 3DS side's start, against Cemu's
+			return;
+		}
+		if (system == ps5launcher::System::Nds)
+		{
+			ps5log::Line("[main] the DS side: Cemu's emulated Wii U is not started");
+			status.diagnostics.push_back("This session: melonDS (DS); Cemu's emulated Wii U is not started");
+			ps5melonds::StartScan(settings.nds.gamesFolder);
+			ps5emu::LogMemory();
 			return;
 		}
 		ps5log::Line("[main] the Wii U side: Azahar's core is not started");
@@ -265,16 +276,20 @@ int main(int argc, char* argv[])
 				sceKernelUsleep(1000000);
 		}
 		const ps5emu::Game& game = choice->game;
+		const char* side = ps5launcher::SideName(choice->system);
+		// the side's settings, and the game's own over them (docs/UI-REDESIGN.md, 6.5)
+		const ps5settings::Launcher forGame = ps5settings::ForGame(settings, side, game.titleId);
+		if (settings.games.count(ps5settings::GameKey(side, game.titleId)))
+			ps5log::Line("[main] {} starts with settings of its own", game.name);
 
-		if (choice->system == ps5launcher::System::N3ds && game.nds)
+		if (choice->system == ps5launcher::System::Nds)
 		{
-			// a DS game on the 3DS side: melonDS, with the 3DS's settings, its screens on VideoOut at
-			// 59.94 Hz, as Azahar's below
+			// melonDS, its screens on VideoOut at 59.94 Hz, as Azahar's below
 			SetHighFrameRate(false);
-			if (ps5melonds::LaunchGame(game, settings.n3ds, error))
+			if (ps5melonds::LaunchGame(game, forGame.nds, error))
 			{
 				ps5melonds::RunGame();
-				RememberSide("3ds");
+				RememberSide("ds");
 				ps5emu::RestartToLibrary();
 				return 0;
 			}
@@ -282,12 +297,12 @@ int main(int argc, char* argv[])
 			if (ps5melonds::CoreTouched())
 			{
 				// the screens took VideoOut: show why from a fresh process
-				RememberSide("3ds", error);
+				RememberSide("ds", error);
 				ps5emu::RestartToLibrary();
 				return 1;
 			}
-			status.notice3ds = "The game could not start: " + error;
-			settings.side = "3ds";
+			status.noticeDs = "The game could not start: " + error;
+			settings.side = "ds";
 			continue;
 		}
 
@@ -296,7 +311,7 @@ int main(int argc, char* argv[])
 			// VideoOut configured again once the new launcher's surface is gone, as before Cemu's below:
 			// Azahar's surface follows on the output the launcher presented on, at 59.94 Hz
 			SetHighFrameRate(false);
-			if (ps5azahar::LaunchGame(game, settings.n3ds, error))
+			if (ps5azahar::LaunchGame(game, forGame.n3ds, error))
 			{
 				ps5azahar::RunGame();
 				RememberSide("3ds");
@@ -316,9 +331,10 @@ int main(int argc, char* argv[])
 			continue;
 		}
 
-		ps5emu::ApplyOptions(Options(settings));
-		SetHighFrameRate(settings.highFrameRate);
-		ps5display::SetFramePacing(settings.framePacing);
+		ps5emu::ApplyOptions(Options(forGame));
+		ps5emu::SetGameSettings(game.titleId, forGame);
+		SetHighFrameRate(forGame.highFrameRate);
+		ps5display::SetFramePacing(forGame.framePacing);
 		ps5window::Initialize();
 		if (ps5emu::LaunchGame(game, error))
 		{

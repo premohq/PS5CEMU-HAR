@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// PS5CEMU-HAR: the DS games in the 3DS side's game files folder, for the launcher: the 3DS library's
-// scan (port/azahar/library.cpp) lists them with the 3DS's games, and melonDS starts them.
+// PS5CEMU-HAR: the DS games in the DS side's game files folder (/data/ps5cemu/melonds/games by
+// default), for the launcher, which melonDS starts.
 //
 // A DS game's name and publisher are its banner's English title (two or three lines: the name, a
 // subtitle, the publisher), its box ID the game code in its header (AMCE: GameTDB's, for its box art),
@@ -43,9 +43,15 @@ namespace ps5melonds
 	};
 	Title Inspect(const std::string& path);
 
-	// The game for the 3DS side's library, its icon written for the launcher. False when the file is
+	// The game for the DS side's library, its icon written for the launcher. False when the file is
 	// not a DS game.
 	bool ReadGame(const std::string& path, ps5emu::Game& game);
+
+	// Looks for games in a folder and the folders in it, on a thread of its own.
+	void StartScan(const std::string& folder);
+	bool Scanning();
+	// What the last scan found, sorted by name.
+	std::vector<ps5emu::Game> ListGames();
 	// A DS game's icon as a TGA, or empty when it has none.
 	std::string CoverPath(uint64_t titleId);
 }

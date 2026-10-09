@@ -41,9 +41,11 @@ namespace ps5actions
 	// a folder's subfolders (folders) or files, sorted without regard to case; ok false when it
 	// cannot be read
 	std::vector<std::string> ListEntries(const std::string& path, bool folders, bool& ok);
-	bool Has3dsExtension(const std::string& name); // a 3DS game's, or a DS game's (the 3DS side lists both)
+	bool Has3dsExtension(const std::string& name); // a 3DS game's
+	bool HasDsExtension(const std::string& name);  // a DS game's
 	// the games right in a folder, as each side would find them; -1 when it cannot be read
 	int Count3dsGames(const std::string& folder);
+	int CountDsGames(const std::string& folder);
 	int CountGames(const std::string& folder);
 
 	// Diagnostics: what each did, as its row shows it

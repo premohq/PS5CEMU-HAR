@@ -245,9 +245,16 @@ namespace ps5actions
 	bool Has3dsExtension(const std::string& name)
 	{
 		const std::string lower = Lower(name);
-		// the 3DS's, and the DS's the 3DS side lists too (port/melonds)
-		for (const char* extension : {".3ds", ".cci", ".cxi", ".cia", ".3dsx", ".app", ".elf", ".axf", ".z3ds", ".zcci", ".zcxi", ".z3dsx",
-				 ".nds", ".srl", ".dsi"})
+		for (const char* extension : {".3ds", ".cci", ".cxi", ".cia", ".3dsx", ".app", ".elf", ".axf", ".z3ds", ".zcci", ".zcxi", ".z3dsx"})
+			if (lower.size() > std::strlen(extension) && lower.ends_with(extension))
+				return true;
+		return false;
+	}
+
+	bool HasDsExtension(const std::string& name)
+	{
+		const std::string lower = Lower(name);
+		for (const char* extension : {".nds", ".srl", ".dsi"})
 			if (lower.size() > std::strlen(extension) && lower.ends_with(extension))
 				return true;
 		return false;
@@ -259,6 +266,14 @@ namespace ps5actions
 		bool ok = false;
 		const auto files = ListEntries(folder, false, ok);
 		return ok ? (int)std::count_if(files.begin(), files.end(), Has3dsExtension) : -1;
+	}
+
+	// The DS games right in a folder (the DS side's library looks in the folders in it too). -1: unreadable.
+	int CountDsGames(const std::string& folder)
+	{
+		bool ok = false;
+		const auto files = ListEntries(folder, false, ok);
+		return ok ? (int)std::count_if(files.begin(), files.end(), HasDsExtension) : -1;
 	}
 
 	// What Cemu would find in a folder: Wii U images and executables, and folders that hold an

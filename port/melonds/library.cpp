@@ -5,10 +5,13 @@
 #include "../ps5/log.h"
 
 #include <algorithm>
+#include <atomic>
 #include <cctype>
 #include <cstring>
 #include <filesystem>
 #include <fstream>
+#include <mutex>
+#include <thread>
 
 namespace fs = std::filesystem;
 
@@ -17,6 +20,11 @@ namespace ps5melonds
 	namespace
 	{
 		constexpr int kIconSize = 32;
+		constexpr int kScanDepth = 4; // folders in folders, as the 3DS side looks
+
+		std::atomic<bool> s_scanning{false};
+		std::mutex s_mutex;
+		std::vector<ps5emu::Game> s_games; // under s_mutex
 		constexpr size_t kHeaderSize = 0x200;
 		// the banner as far as the Korean title: version 1 has the six languages, 2 adds Chinese, 3 Korean
 		constexpr size_t kBannerSize = 0xA40;
@@ -236,6 +244,62 @@ namespace ps5melonds
 		const std::string path = CoverFile(titleId);
 		std::error_code ec;
 		return fs::exists(path, ec) ? path : std::string();
+	}
+
+	namespace
+	{
+		void Scan(const fs::path& folder, int depth, std::vector<ps5emu::Game>& games)
+		{
+			std::error_code ec;
+			for (const auto& entry : fs::directory_iterator(folder, ec))
+			{
+				if (entry.is_directory(ec))
+				{
+					if (depth < kScanDepth)
+						Scan(entry.path(), depth + 1, games);
+					continue;
+				}
+				const std::string path = entry.path().string();
+				ps5emu::Game game;
+				if (entry.is_regular_file(ec) && IsDsFile(path) && ReadGame(path, game))
+					games.push_back(std::move(game));
+			}
+		}
+	}
+
+	void StartScan(const std::string& folder)
+	{
+		if (s_scanning.exchange(true))
+			return;
+		// the DS side's folders from the first start, so there is somewhere to put games and a BIOS
+		std::error_code ec;
+		for (const char* sub : {"games", "bios", "saves"})
+			fs::create_directories(fs::path(kRoot) / sub, ec);
+		std::thread([folder] {
+			std::vector<ps5emu::Game> games;
+			Scan(folder, 0, games);
+			std::sort(games.begin(), games.end(), [](const ps5emu::Game& a, const ps5emu::Game& b) { return Lower(a.name) < Lower(b.name); });
+			// the same game twice (a copy in another folder): listed once, as the 3DS's title IDs are
+			games.erase(std::unique(games.begin(), games.end(), [](const ps5emu::Game& a, const ps5emu::Game& b) { return a.titleId == b.titleId; }),
+				games.end());
+			ps5log::Line("[ds] {} DS games in {}", games.size(), folder);
+			{
+				std::lock_guard lock(s_mutex);
+				s_games = std::move(games);
+			}
+			s_scanning = false;
+		}).detach();
+	}
+
+	bool Scanning()
+	{
+		return s_scanning;
+	}
+
+	std::vector<ps5emu::Game> ListGames()
+	{
+		std::lock_guard lock(s_mutex);
+		return s_games;
 	}
 
 	bool OwnBiosFound()

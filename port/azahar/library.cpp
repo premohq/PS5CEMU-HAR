@@ -2,7 +2,6 @@
 #include "library.h"
 #include "azahar.h"
 #include "../app/paths.h"
-#include "../melonds/library.h"
 #include "../ps5/log.h"
 
 #include <algorithm>
@@ -290,14 +289,6 @@ namespace ps5azahar
 				const std::string path = entry.path().string();
 				if (!entry.is_regular_file(ec))
 					continue;
-				if (ps5melonds::IsDsFile(path))
-				{
-					// a DS game, which melonDS plays: listed with the 3DS's
-					ps5emu::Game game;
-					if (ps5melonds::ReadGame(path, game))
-						games.push_back(std::move(game));
-					continue;
-				}
 				if (!Known(Lower(entry.path().extension().string())))
 					continue;
 				Title title = Inspect(path);
@@ -418,8 +409,7 @@ namespace ps5azahar
 			Scan(folder, 0, games);
 			ScanInstalled(games);
 			std::sort(games.begin(), games.end(), [](const ps5emu::Game& a, const ps5emu::Game& b) { return Lower(a.name) < Lower(b.name); });
-			const size_t ds = std::count_if(games.begin(), games.end(), [](const ps5emu::Game& game) { return game.nds; });
-			ps5log::Line("[azahar] {} 3DS games and {} DS games in {}", games.size() - ds, ds, folder);
+			ps5log::Line("[azahar] {} 3DS games in {}", games.size(), folder);
 			{
 				std::lock_guard lock(s_mutex);
 				s_games = std::move(games);
@@ -441,8 +431,6 @@ namespace ps5azahar
 
 	std::string CoverPath(uint64_t titleId)
 	{
-		if (ps5melonds::IsDsTitle(titleId))
-			return ps5melonds::CoverPath(titleId);
 		const std::string path = CoverFile(titleId);
 		std::error_code ec;
 		return fs::exists(path, ec) ? path : std::string();

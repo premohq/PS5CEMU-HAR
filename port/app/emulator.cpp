@@ -326,20 +326,34 @@ namespace ps5emu
 			return true;
 		}
 
+		// the game playing and the settings it started with (SetGameSettings)
+		uint64_t s_gameTitle = 0;
+		std::unique_ptr<ps5settings::Launcher> s_gameSettings;
+
 		// The menu's settings: Cemu's in settings.xml, and those the launcher also has in its file,
-		// which it writes into Cemu's when the next game starts (ApplyOptions).
+		// which it writes into Cemu's when the next game starts (ApplyOptions): into the game's own
+		// settings when it has some, else the Wii U side's (ps5settings::SaveChanges).
 		void SaveInGameSettings()
 		{
 			auto& config = GetConfig();
 			GetConfigHandle().Save();
-			ps5settings::Launcher settings = ps5settings::Load();
-			settings.upscaleFilter = config.upscale_filter;
-			settings.overlay = config.overlay.position != ScreenPosition::kDisabled;
-			settings.volume = config.tv_volume;
-			settings.asyncShaders = config.async_compile;
-			settings.framePacing = ps5display::FramePacing();
-			ps5settings::Save(settings);
+			const ps5settings::Launcher before = s_gameSettings ? *s_gameSettings : ps5settings::Load();
+			ps5settings::Launcher after = before;
+			after.upscaleFilter = config.upscale_filter;
+			after.overlay = config.overlay.position != ScreenPosition::kDisabled;
+			after.volume = config.tv_volume;
+			after.asyncShaders = config.async_compile;
+			after.framePacing = ps5display::FramePacing();
+			ps5settings::SaveChanges("wiiu", s_gameTitle, before, after);
+			// what was saved is what the game now has: the next change is measured from it
+			s_gameSettings = std::make_unique<ps5settings::Launcher>(after);
 		}
+	}
+
+	void SetGameSettings(uint64_t titleId, const ps5settings::Launcher& settings)
+	{
+		s_gameTitle = titleId;
+		s_gameSettings = std::make_unique<ps5settings::Launcher>(settings);
 	}
 
 	bool InitializeCore(std::string& error)

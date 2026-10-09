@@ -4,15 +4,17 @@
 
     render-icons.py OUTPUT_DIR
 
-The two emulators each have a device and a background: Cemu a Wii U GamePad on the Wii U Homebrew
+The three emulators each have a device and a background: Cemu a Wii U GamePad on the Wii U Homebrew
 Launcher's blue with its bubbles (tools/render-background.py), Azahar a 3DS on the 3DS Homebrew
 Launcher's waves made yellow (as the launcher draws them), under the README banner's dark
-overlay (a lighter one on the yellow). Writes:
+overlay (a lighter one on the yellow), and melonDS a DS Lite on melon green with rising pixels.
+Writes:
 
   sce_sys/icon0.png          512x512, opaque: the two side by side (the console's tile is now
                              tools/render-presentation.py's, with the app's name)
   ui/icons/ps5cemu.tga       336x336, and ps5cemu-72.tga: the GamePad on the bubbles (Cemu's side)
   ui/icons/azahar.tga        336x336, and azahar-72.tga: the 3DS on the waves (Azahar's side)
+  ui/icons/melonds.tga       336x336, and melonds-72.tga: the DS on the pixels (melonDS's side)
   ui/icons/har-72.tga        72x72: the two side by side (the start screen)
   ui/icons/start-wiiu.tga    the GamePad alone, on nothing, for the start screen's left half
   ui/icons/start-3ds.tga     the 3DS alone, for its right half
@@ -33,6 +35,8 @@ DETAIL = (0x6a, 0x7e, 0x93)
 # each device's screen gradient and accent: blue for the Wii U, gold for the 3DS
 BLUE = {"top": (0x1e, 0x4f, 0x7a), "bottom": (0x0b, 0x1e, 0x33), "accent": (0x9f, 0xd6, 0xff), "detail": DETAIL}
 GOLD = {"top": (0x7c, 0x56, 0x10), "bottom": (0x33, 0x22, 0x06), "accent": (0xff, 0xd2, 0x5a), "detail": (0x8f, 0x82, 0x6c)}
+# and green for the DS, melonDS's
+GREEN = {"top": (0x24, 0x6b, 0x1c), "bottom": (0x0b, 0x2a, 0x08), "accent": (0xb4, 0xf0, 0x8c), "detail": (0x74, 0x8c, 0x6c)}
 OVERLAY = 0.35  # as the banner's
 WAVE_OVERLAY = 0.22  # lighter on the yellow, which darkens to brown
 
@@ -97,6 +101,39 @@ def waves(width, height, region):
                 a = min(1.0, body * alpha + crest * 0.35)
                 for c in range(3):
                     pixel[c] += (colour[c] - pixel[c]) * a
+            row.append(pixel)
+        rows.append(row)
+    return darken(rows, WAVE_OVERLAY)
+
+
+# melonDS's background: a melon's green, lighter at the top, with the DS's pixels rising as squares
+MELON_TOP, MELON_BOTTOM = (126, 217, 87), (58, 150, 40)
+PIXELS = [  # x, y (0 to 1 of a 1080 square), size, alpha
+    (0.12, 0.18, 0.045, 0.30), (0.30, 0.08, 0.030, 0.22), (0.72, 0.14, 0.055, 0.26), (0.88, 0.30, 0.035, 0.30),
+    (0.08, 0.52, 0.040, 0.20), (0.92, 0.62, 0.050, 0.24), (0.20, 0.86, 0.060, 0.22), (0.62, 0.90, 0.040, 0.28),
+    (0.46, 0.04, 0.025, 0.20), (0.80, 0.84, 0.030, 0.20),
+]
+
+
+def pixels(width, height, region):
+    """Rows of RGB: region (x, y, w, h) of the DS side's 1080x1080 square, its rising squares."""
+    rx, ry, rw, rh = region
+    sx, sy = rw / width, rh / height
+    rows = []
+    for y in range(height):
+        fy = ry + (y + 0.5) * sy
+        t = fy / 1080.0
+        base = [MELON_TOP[i] + (MELON_BOTTOM[i] - MELON_TOP[i]) * t for i in range(3)]
+        row = []
+        for x in range(width):
+            fx = rx + (x + 0.5) * sx
+            pixel = list(base)
+            for px, py, size, alpha in PIXELS:
+                half = size * 1080 / 2
+                d = rounded_box(fx, fy, px * 1080, py * 1080, half, half, half * 0.3)
+                a = alpha * min(max(0.5 - d / sx, 0.0), 1.0)
+                for c in range(3):
+                    pixel[c] += (255 - pixel[c]) * a
             row.append(pixel)
         rows.append(row)
     return darken(rows, WAVE_OVERLAY)
@@ -195,7 +232,42 @@ def n3ds(u, v, pixel, colour, palette=GOLD):
     return colour, silhouette
 
 
-DEVICES = {"wiiu": gamepad, "3ds": n3ds}
+def nds(u, v, pixel, colour, palette=GREEN):
+    """A Nintendo DS Lite, open, over colour at (u, v) in its unit square; returns (colour, silhouette).
+    Its two screens are the same size (4:3), the top one framed by the speakers."""
+    accent, detail = palette["accent"], palette["detail"]
+    top = rounded_box(u, v, 0.5, 0.30, 0.30, 0.17, 0.045)
+    bottom = rounded_box(u, v, 0.5, 0.69, 0.30, 0.17, 0.045)
+    hinge = rounded_box(u, v, 0.5, 0.495, 0.27, 0.03, 0.02)
+    shell = min(top, bottom)
+    colour = mix(colour, (0, 0, 0), 0.35 * coverage(min(shell, hinge) - 0.02, pixel * 6) * (1 - coverage(min(shell, hinge), pixel)))
+    silhouette = coverage(min(shell, hinge), pixel)
+    colour = mix(colour, detail, coverage(hinge, pixel))
+    colour = mix(colour, BODY, coverage(shell, pixel))
+    # the top screen (4:3), with an accent edge and a play triangle, and the speakers beside it
+    colour = mix(colour, accent, coverage(rounded_box(u, v, 0.5, 0.30, 0.155, 0.12, 0.014), pixel))
+    screen = rounded_box(u, v, 0.5, 0.30, 0.14, 0.105, 0.008)
+    colour = mix(colour, mix(palette["top"], palette["bottom"], (v - 0.195) / 0.21), coverage(screen, pixel))
+    colour = mix(colour, accent, coverage(play(u, v, 0.51, 0.30, 0.08), pixel))
+    for cx in (0.285, 0.715):
+        for cy in (0.27, 0.30, 0.33):
+            colour = mix(colour, detail, coverage(circle(u, v, cx, cy, 0.008), pixel))
+    # the touch screen, the same size
+    colour = mix(colour, detail, coverage(rounded_box(u, v, 0.5, 0.685, 0.15, 0.115, 0.012), pixel))
+    touch = rounded_box(u, v, 0.5, 0.685, 0.14, 0.105, 0.008)
+    colour = mix(colour, mix(palette["top"], palette["bottom"], (v - 0.58) / 0.21 * 0.6 + 0.4), coverage(touch, pixel))
+    # the d-pad on the left, A, B, X and Y on the right (A in the accent colour)
+    dpad = min(rounded_box(u, v, 0.27, 0.66, 0.04, 0.013, 0.004), rounded_box(u, v, 0.27, 0.66, 0.013, 0.04, 0.004))
+    colour = mix(colour, detail, coverage(dpad, pixel))
+    for (cx, cy, c) in ((0.765, 0.66, accent), (0.73, 0.695, detail), (0.73, 0.625, detail), (0.695, 0.66, detail)):
+        colour = mix(colour, c, coverage(circle(u, v, cx, cy, 0.0155), pixel))
+    # Start and Select under the buttons
+    for cy in (0.75, 0.78):
+        colour = mix(colour, detail, coverage(circle(u, v, 0.735, cy, 0.008), pixel))
+    return colour, silhouette
+
+
+DEVICES = {"wiiu": gamepad, "3ds": n3ds, "ds": nds}
 
 
 def compose(width, height, parts, rounded=False):
@@ -230,6 +302,8 @@ def divide(rows, x, colour=(255, 255, 255), alpha=0.35):
 def single(size, device, rounded=True):
     if device == "wiiu":
         background = bubbles(size, size, (280, 0, 720, 720))
+    elif device == "ds":
+        background = pixels(size, size, (0, 0, 1080, 1080))
     else:
         background = waves(size, size, (420, 0, 1080, 1080))
     return compose(size, size, [(0, size, background, device, size * 0.98, (size / 2, size / 2))], rounded)
@@ -285,6 +359,8 @@ def main():
     write_tga(os.path.join(icons, "azahar-72.tga"), single(72, "3ds"))
     write_tga(os.path.join(icons, "start-wiiu.tga"), alone(440, 440, "wiiu"))
     write_tga(os.path.join(icons, "start-3ds.tga"), alone(440, 440, "3ds"))
+    write_tga(os.path.join(icons, "melonds.tga"), single(336, "ds"))
+    write_tga(os.path.join(icons, "melonds-72.tga"), single(72, "ds"))
 
 
 if __name__ == "__main__":
