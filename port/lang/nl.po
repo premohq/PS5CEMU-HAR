@@ -1159,722 +1159,722 @@ msgid "The download did not finish"
 msgstr "De download is niet voltooid"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Het kon niet worden geïnstalleerd: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "De nieuwe pakketten konden de oude niet vervangen"
 
 msgid "Hold"
-msgstr ""
+msgstr "Vasthouden"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Houd Kruis ingedrukt tot de ring vol is."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "{0} kon niet worden geschreven (is /data vol?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "de download bevat geen eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "De versie van de nieuwste release ({0}) is niet leesbaar"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "De controlesommen van de release konden niet worden gedownload"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "De releases-branch heeft geen controlesom voor {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "De download kon niet starten"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "De download is niet voltooid: is de PS5 online?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "De download is beschadigd (SHA-256 {0} in plaats van {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "PS5CEMU-HAR draait vanaf een image waarvan de bestanden niet kunnen worden vervangen: installeer de nieuwe release met de hand"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Het kon niet worden uitgepakt: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "{0} kon niet worden vervangen ({1}): kopieer de map PPSA99360 van de release er met de hand overheen"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Plek 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Plek 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Plek 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Plek 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Speelset / power disc"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Power disc 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Power disc 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Speler 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Speler 1, vaardigheid 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Speler 1, vaardigheid 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Speler 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Speler 2, vaardigheid 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Speler 2, vaardigheid 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Linkervak 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Middenvak"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Rechtervak 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Linkervak 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Linkervak 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Rechtervak 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Rechtervak 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "{0} kon niet worden geopend"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} is te klein voor een Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Het portaal is vol"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} is te klein voor een Infinity-figuur"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} is te klein voor een Dimensions-figuur"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Te veel cijfers."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "Het @-teken is hier niet toegestaan."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "Het %-teken is hier niet toegestaan."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "Het \\-teken is hier niet toegestaan."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Dat woord is niet toegestaan."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "De tekst moet precies de gevraagde lengte hebben."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "De tekst is te lang."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "De tekst mag niet alleen uit spaties bestaan."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "De tekst mag niet leeg zijn."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "De game heeft het niet geaccepteerd."
 
 msgid "saved"
-msgstr ""
+msgstr "opgeslagen"
 
 msgid "another version's"
-msgstr ""
+msgstr "van een andere versie"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Geen amiibo-lezer"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Weggehaald"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Geen amiibo-dump"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: aan"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: uit"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Plek {0} geladen"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Opgeslagen in plek {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Gemaakt door een andere versie"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Dat werkte niet"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Dit is geen 3DS-game die Azahar kan starten."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "De game kon niet worden geladen."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "De game is versleuteld: ontsleutel hem, of zet de aes_keys.txt van de 3DS in /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "De indeling van de game wordt niet ondersteund."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "GBA Virtual Console-games worden niet ondersteund."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "De systeemmodus van de game is niet gevonden."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "De game heeft 3DS-systeembestanden nodig die Azahar niet heeft."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "De patches van de game konden niet worden toegepast."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "De renderer of CPU van Azahar is niet gestart."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "De Artic Base-server antwoordde niet: controleer het adres van de 3DS, of Artic Base erop draait, en of de 3DS en de PS5 op hetzelfde netwerk zitten."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "De game is bezig: probeer het opnieuw"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "De 3DS-game is gestopt: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "Een CIA-bestand wordt geïnstalleerd, niet gespeeld: installeer het via Instellingen > CIA-bestanden installeren en start daarna de game."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Azahar is niet gestart: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Touchpadklik + OPTIONS: het gamemenu. Alleen een touchpadklik: het onderscherm"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "het is versleuteld, de CIA of de game erin. Azahar installeert alleen volledig ontsleutelde CIA-bestanden: ontsleutel hem met GodMode9 op een 3DS, of speel in plaats daarvan het ontsleutelde .3ds- of .cci-bestand van de game"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "het is geen CIA-bestand, of het is beschadigd (controleer de bestandsgrootte)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "het bestand kon niet worden gelezen"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Azahar stopte halverwege; /data/ps5cemu/azahar/log/azahar_log.txt zegt waarom"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "het is geen CIA die Azahar kan installeren"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "De PS5 heeft geen geheugen meer voor deze Wii U-game, dus moet hij stoppen. Het opstartlogboek bevat de details."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} bestand naar USB-station {1}"
+msgstr[1] "{0} bestanden naar USB-station {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Geen USB-station gevonden"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} bestand verwijderd ({1} MB)"
+msgstr[1] "{0} bestanden verwijderd ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Niets te verwijderen"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "USB-station {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Uitgebreide opslag {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Game"
 
 msgid "Update"
-msgstr ""
+msgstr "Update"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Systeemtitel"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Kruis"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Cirkel"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Vierkant"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Driehoek"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Touchpad"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Richtingstoets omhoog"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Richtingstoets omlaag"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Richtingstoets links"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Richtingstoets rechts"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Linkerstick omhoog"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Linkerstick omlaag"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Linkerstick links"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Linkerstick rechts"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Linkerstick indrukken"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Rechterstick omhoog"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Rechterstick omlaag"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Rechterstick links"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Rechterstick rechts"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Rechterstick indrukken"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Schuifknop omhoog"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Schuifknop omlaag"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Schuifknop links"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Schuifknop rechts"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-stick omhoog"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-stick omlaag"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-stick links"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-stick rechts"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Nunchukstick omhoog"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Nunchukstick omlaag"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Nunchukstick links"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Nunchukstick rechts"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "In de microfoon blazen"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Scherm van de GamePad tonen"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Geen"
 
 msgid "Setup"
-msgstr ""
+msgstr "Instellen"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Iets vraagt aandacht"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Installatiecontrole"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnose"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Cemu wordt gestart"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "De instellingen, grafische pakketten en controllers worden geladen, daarna zoekt Cemu je games."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Games zoeken…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "In {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Welkom"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Hier komen je games"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Zet je 3DS-games (.3ds, .cci, .cxi, .3dsx, ontsleuteld) in {0}, of kies een map die de PS5 kan lezen, bijvoorbeeld op een USB-station. Submappen worden ook doorzocht."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Zet je Wii U-games (.wua, .wud, .wux, of mappen met code, content en meta) in {0}, of kies een map die de PS5 kan lezen, bijvoorbeeld op een USB-station."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Map kiezen"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} game"
+msgstr[1] "Alle {0} games"
 
 msgid "In your library"
-msgstr ""
+msgstr "In je bibliotheek"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Verder · laatst gespeeld {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Laatst gespeeld {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Je bibliotheek"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Nieuwe games zoeken…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "Van A tot Z, op jaar, op hoe ze draaien"
 
 msgid "Play"
-msgstr ""
+msgstr "Spelen"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Gamepagina"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Bibliotheek openen"
 
 msgid "None on"
-msgstr ""
+msgstr "Geen aan"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} pakket voor deze game"
+msgstr[1] "{0} pakketten voor deze game"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} op P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Controllers"
 
 msgid "One player"
-msgstr ""
+msgstr "Eén speler"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Hoe hij draait"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "Volgens de compatibiliteitslijst"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Updates en DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Geen update"
 
 msgid "This dump"
-msgstr ""
+msgstr "Deze dump"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Update v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Favoriet"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Grafische pakketten · {0} aan"
+msgstr[1] "Grafische pakketten · {0} aan"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Over de game"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "GameTDB herkent een game aan de ID op de doos, die deze dump niet heeft."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "GameTDB heeft nog geen beschrijving van deze game."
 
 msgid "Developer"
-msgstr ""
+msgstr "Ontwikkelaar"
 
 msgid "Released"
-msgstr ""
+msgstr "Verschenen"
 
 msgid "Genre"
-msgstr ""
+msgstr "Genre"
 
 msgid "Rating"
-msgstr ""
+msgstr "Leeftijdsclassificatie"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Uitgever"
 
 msgid "Players"
-msgstr ""
+msgstr "Spelers"
 
 msgid "Title ID"
-msgstr ""
+msgstr "Titel-ID"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Draait goed op PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "De compatibiliteitslijst noemt hem ‘{0}’."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Recent gespeeld"
 
 msgid "A to Z"
-msgstr ""
+msgstr "A tot Z"
 
 msgid "Release year"
-msgstr ""
+msgstr "Jaar van verschijnen"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Bibliotheek"
 
 msgid "Sort"
-msgstr ""
+msgstr "Sorteren"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Recent toegevoegd"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Favorieten"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Grafische pakketten aan"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Sortering: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Zoeken: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Niets past bij ‘{0}’"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Hier staat nog niets"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Nog geen games"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Cirkel wist de zoekopdracht."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS op een game en dan Favoriet zet hem hier."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Alle toont elke game."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Instellingen > Games en mappen zegt waar ze horen."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Spelen vanaf je 3DS"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, via je netwerk"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Kruis zet een pakket aan of uit; Rechts gaat naar de voorinstellingen. Een voorinstelling kiezen zet het pakket aan. Wijzigingen gelden vanaf de volgende start."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Geen grafische pakketten voor deze game"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Instellingen > Online en updates haalt de nieuwste van de community op."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} van {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Grafisch pakket"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Dit pakket heeft geen beschrijving."
 
 msgid "No presets"
-msgstr ""
+msgstr "Geen voorinstellingen"
 
 msgid "Presets"
-msgstr ""
+msgstr "Voorinstellingen"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Voorinstellingen · er een kiezen zet het pakket aan"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Klaar"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1883,373 +1883,396 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Wat de game in de handen van deze speler ziet.\n"
+"\n"
+"De meeste games willen de Wii U GamePad voor speler 1: het scherm daarvan is het tweede dat PS5CEMU-HAR toont, en de touchpad raakt het aan. Andere nemen Pro Controllers, of Wii-afstandsbedieningen voor games zoals New Super Mario Bros. U.\n"
+"Een Wii-afstandsbediening wijst waar een vinger op de touchpad rust, of waar je de DualSense op richt.\n"
+"Cemu kent hoogstens twee GamePads."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"De gyroscoop en versnellingsmeter van de DualSense als die van de controller, voor games waarin je richt of stuurt door de GamePad of de Wii-afstandsbediening te kantelen.\n"
+"De Pro Controller en de Classic Controller hebben ze niet."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Hoe sterk de DualSense trilt als de game de controller laat trillen.\n"
+"Links en Rechts veranderen het met 10%."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Hoe ver de linkerstick beweegt voordat de game het merkt. Verhoog hem als een personage doorloopt wanneer je de stick loslaat; verlaag hem voor fijnere besturing."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Hoe ver de rechterstick beweegt voordat de game het merkt. Verhoog hem als de camera doordraait wanneer je de stick loslaat; verlaag hem voor fijnere besturing."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Welke DualSense-knop welke knop van de controller is.\n"
+"Standaard zit A op Cirkel en B op Kruis, waar de Wii U ze heeft."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "De standaardknoppen, trillingen, beweging en dode zones voor deze controller. Ingedrukt houden om te bevestigen."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Knoppen"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Standaard herstellen"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Speler {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, op de DualSense van deze speler"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, op een DualSense die niet verbonden is"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Wat de game in de handen van deze speler ziet."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "De beweging van de DualSense als die van de controller."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "De Pro en Classic Controller hebben ze niet."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Hoe sterk de DualSense trilt."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Hoe ver de linkerstick beweegt voordat het telt."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Hoe ver de rechterstick beweegt voordat het telt."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} knop ingesteld"
+msgstr[1] "{0} knoppen ingesteld"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Welke DualSense-knop welke is."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Houd Kruis ingedrukt"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "De standaardknoppen, trillingen, beweging en dode zones."
 
 msgid "Connected"
-msgstr ""
+msgstr "Verbonden"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Geen DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Gewist: geen DualSense-knop is nu deze."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Er is geen knop ingedrukt, dus het blijft zoals het was."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Geannuleerd: het blijft zoals het was."
 
 msgid "Done."
-msgstr ""
+msgstr "Klaar."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "De DualSense-knoppen voor die van de 3DS"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Speler {0}: de DualSense-knoppen voor de {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Niet ingesteld"
 
 msgid "This button"
-msgstr ""
+msgstr "Deze knop"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Druk op een knop"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Druk nu op de DualSense-knop, -trekker of -stickrichting voor {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Nog {0} seconde. Een touchpadklik annuleert."
+msgstr[1] "Nog {0} seconden. Een touchpadklik annuleert."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Kruis, dan een DualSense-knop, -trekker of -stickrichting: die wordt deze.\n"
+"Vierkant wist hem."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Annuleren: wat is gekopieerd, wordt verwijderd…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Annuleren: wat eerder was geïnstalleerd, wordt teruggezet…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Deze map kan niet worden geopend."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "De map kon niet worden opgeslagen. Probeer het opnieuw."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Opgeslagen. PS5CEMU-HAR zoekt daar naar games."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Opgeslagen. Die kant zoekt daar naar games als hij opent."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Games zoeken in {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Kies eerst een CIA-bestand."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Cemu is niet gestart, dus er kan niets worden geïnstalleerd."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Installeren: {0}, {1} van {2}.\n"
+"\n"
+"Cirkel annuleert."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Installeren: bestanden tellen…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Geïnstalleerd. De bibliotheek toont het bij de game."
 
 msgid "Installed"
-msgstr ""
+msgstr "Geïnstalleerd"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Geannuleerd. Wat was gekopieerd, is verwijderd, samen met een eerdere kopie van dezelfde titel: installeer hem opnieuw om te spelen. De opgeslagen gegevens blijven bewaard."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Geannuleerd. Wat eerder was geïnstalleerd, is zoals het was."
 
 msgid "Install"
-msgstr ""
+msgstr "Installeren"
 
 msgid "3DS games"
-msgstr ""
+msgstr "3DS-games"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Wii U-games"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "CIA-bestanden installeren"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Updates en DLC installeren"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Kies een CIA-bestand: een game, een update of DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Kies een map met een update, DLC of game (code, content en meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Kies de map met je 3DS-games"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Kies de map met je Wii U-games"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Deze map is leeg."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Bovenliggende map"
 
 msgid "Drive"
-msgstr ""
+msgstr "Station"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 msgid "A folder"
-msgstr ""
+msgstr "Een map"
 
 msgid "Version"
-msgstr ""
+msgstr "Versie"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Driehoek installeert het in de opslag van de 3DS: een update of DLC komt bij de game, en een game komt in de bibliotheek."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Kies een CIA-bestand om te installeren: een game, een update of DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Games hier"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Niet leesbaar"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} game"
+msgstr[1] "{0} games"
 
 msgid "Found"
-msgstr ""
+msgstr "Gevonden"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Ontbreekt (alleen versleutelde dumps hebben hem nodig)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Gevonden in /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Ontbreekt (alleen .wud/.wux hebben hem nodig)"
 
 msgid "In use"
-msgstr ""
+msgstr "In gebruik"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Games kunnen .3ds of .cci, .cxi, .cia of .3dsx zijn, ontsleuteld, hier of in submappen. Driehoek gebruikt de getoonde map."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Games kunnen .wua, .wud, .wux, of mappen met code, content en meta zijn. Driehoek gebruikt de getoonde map."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Niets te installeren"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, nog niet geïnstalleerd"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, nu is v{1} geïnstalleerd"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Driehoek installeert het in de opslag van de Wii U (mlc01). Updates en DLC in de gamemap werken ook zoals ze zijn."
 
 msgid "To install"
-msgstr ""
+msgstr "Te installeren"
 
 msgid "This folder"
-msgstr ""
+msgstr "Deze map"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Verbinden met {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Speel een game vanaf je 3DS via je netwerk, of stel Azahar ermee in"
 
 msgid "3DS address"
-msgstr ""
+msgstr "3DS-adres"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Het adres dat Artic Base op het scherm van de 3DS toont als het klaar is.\n"
+"Kruis bewerkt het: Links en Rechts kiezen een getal, Omhoog en Omlaag veranderen het met 1, L1 en R1 met 10, en Kruis nog eens bewaart het.\n"
+"De 3DS en de PS5 moeten op hetzelfde netwerk zitten."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Verbinden en spelen"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Start op de 3DS de app Artic Base (homebrew van het Azahar-team) en kies daarin een game: de cartridge of een geïnstalleerde. Verbind dan vanaf hier: de game draait op de PS5 vanaf de 3DS, en de opgeslagen gegevens blijven op de 3DS.\n"
+"Het is zo vloeiend als het netwerk: een sterk wifisignaal voor de 3DS en een PS5 met een kabel helpen."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Instellen vanaf een oude 3DS"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Met de app Artic Setup Tool op een oude 3DS of 2DS: kopieert de systeembestanden en eigen gegevens ervan (systeeminstellingen, vriendcode, Mii- en Nintendo eShop-gegevens) naar Azahar, zodat games starten die de systeemprogramma’s of -bestanden van de 3DS nodig hebben, en het HOME-menu ook (Instellingen > Systeem en HOME-menu).\n"
+"Die gegevens zijn van jouw console: deel de map van Azahar daarna niet."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Instellen vanaf een New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Zoals hierboven, vanaf een New 3DS of New 2DS met de app Artic Setup Tool."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Automatisch"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japan"
 
 msgid "USA"
-msgstr ""
+msgstr "VS"
 
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australië"
 
 msgid "China"
-msgstr ""
+msgstr "China"
 
 msgid "Korea"
-msgstr ""
+msgstr "Korea"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Japans"
 
 msgid "English"
-msgstr ""
+msgstr "Engels"
 
 msgid "French"
-msgstr ""
+msgstr "Frans"
 
 msgid "German"
-msgstr ""
+msgstr "Duits"
 
 msgid "Italian"
-msgstr ""
+msgstr "Italiaans"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Spaans"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Chinees (vereenvoudigd)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Koreaans"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Nederlands"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugees"
 
 msgid "Russian"
-msgstr ""
+msgstr "Russisch"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Chinees (traditioneel)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Lineair"
 
 msgid "Setup theme"
 msgstr ""
