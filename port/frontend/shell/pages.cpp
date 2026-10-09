@@ -260,7 +260,7 @@ namespace ps5shell
 		{
 			const auto& choice = pack->choices[std::min(m_presetSelected, choices - 1)];
 			const int choiceIndex = m_presetSelected;
-			OpenPicker(choice.category.empty() ? "Preset" : choice.category, pack->name, choice.presets, choice.active,
+			OpenPicker(choice.category.empty() ? std::string(Tr("Preset")) : choice.category, pack->name, choice.presets, choice.active,
 				[choose, choiceIndex](int preset) { choose(choiceIndex, preset); });
 			break;
 		}
@@ -284,8 +284,8 @@ namespace ps5shell
 	{
 		Game& game = m_games[m_packsGame];
 		WantBackdrop(&game);
-		DrawPageHeader(canvas, "Graphic packs", game.entry.game.name,
-			"Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start.");
+		DrawPageHeader(canvas, Tr("Graphic packs"), game.entry.game.name,
+			Tr("Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."));
 		canvas.PushAlpha(Enter(1));
 		int packCount = 0, packNumber = 0;
 		for (int i = 0; i < (int)m_packItems.size(); i++)
@@ -297,13 +297,14 @@ namespace ps5shell
 			}
 		if (packCount == 0)
 		{
-			canvas.Text(Style(kHeadingStyle), kListX, kListTop, "No graphic packs for this game", kText);
-			canvas.Text(Style(kBodyStyle), kListX, kListTop + 50, "Settings > Online and updates gets the community's newest.", Secondary(), 800, 2);
+			canvas.Text(Style(kHeadingStyle), kListX, kListTop, Tr("No graphic packs for this game"), kText, 1920 - 2 * kSafeX, 1);
+			canvas.Text(Style(kBodyStyle), kListX, kListTop + 50, Tr("Settings > Online and updates gets the community's newest."), Secondary(), 800, 2);
 			canvas.PopAlpha();
 			return;
 		}
+		// tr: where the focus is in a list: the 3rd of 12
 		canvas.Text(Style({20, ui::Weight::Medium, 1.0f, 0, false, true}), kListX + kListWidth, kListTop - 40,
-			fmt::format("{} of {}", packNumber, packCount), Tertiary(), 0, 0, ui::Align::Right);
+			TrF("{0} of {1}", packNumber, packCount), Tertiary(), 0, 0, ui::Align::Right);
 		DrawList(canvas, {kListX, kListTop, kListWidth, kListBottom - kListTop}, (int)m_packItems.size(), m_packItem, m_listScroll.value, 72,
 			[&](int i, const Box& box, bool focused) {
 				const PackItem& item = m_packItems[i];
@@ -330,15 +331,17 @@ namespace ps5shell
 		Panel(canvas, {kDetailX, kListTop - 10, kDetailWidth, kListBottom - kListTop + 10}, kRadiusSheet);
 		const float x = kDetailX + 40;
 		float y = kListTop + 26;
-		canvas.Text(Style(kOverlineStyle), x, y, pack->folder.empty() ? "Graphic pack" : "Graphic pack · " + pack->folder, Secondary());
+		canvas.Text(Style(kOverlineStyle), x, y, pack->folder.empty() ? std::string(Tr("Graphic pack")) : Tr("Graphic pack") + std::string(" · ") + pack->folder,
+			Secondary(), kDetailWidth - 80, 1);
 		y += 34;
 		const ui::TextBlock name = canvas.Text(Style(kHeadingStyle), x, y, pack->name, kText, kDetailWidth - 80, 2);
 		y += name.height + 10;
 		const ui::TextBlock description = canvas.Text(Style({22, ui::Weight::Regular, 1.45f}), x, y,
-			pack->description.empty() ? "This pack has no description." : pack->description, Secondary(), kDetailWidth - 80, 6);
+			pack->description.empty() ? std::string(Tr("This pack has no description.")) : pack->description, Secondary(), kDetailWidth - 80, 6);
 		y += description.height + 30;
 		const int choices = (int)pack->choices.size();
-		canvas.Text(Style(kOverlineStyle), x, y, choices == 0 ? "No presets" : pack->enabled ? "Presets" : "Presets · choosing one turns it on", Tertiary());
+		canvas.Text(Style(kOverlineStyle), x, y, choices == 0 ? Tr("No presets") : pack->enabled ? Tr("Presets") : Tr("Presets · choosing one turns it on"),
+			Tertiary(), kDetailWidth - 80, 1);
 		y += 34;
 		m_presetSelected = std::clamp(m_presetSelected, 0, std::max(0, choices - 1));
 		DrawList(canvas, {x, y, kDetailWidth - 80, kListBottom - 20 - y}, choices, m_presetSelected, m_listScroll2.value, 84,
@@ -346,7 +349,7 @@ namespace ps5shell
 				const auto& choice = pack->choices[i];
 				Row row;
 				row.kind = Row::Kind::Choice;
-				row.label = choice.category.empty() ? "Preset" : choice.category;
+				row.label = choice.category.empty() ? std::string(Tr("Preset")) : choice.category;
 				row.value = choice.presets.empty() ? "" : choice.presets[std::clamp(choice.active, 0, (int)choice.presets.size() - 1)];
 				DrawRow(canvas, row, box, focused && m_presetsFocus);
 			});
@@ -374,7 +377,7 @@ namespace ps5shell
 			{
 				m_holdFired = true;
 				ps5emu::ResetControls(m_player);
-				m_message = "Done";
+				m_message = TrC("finished", "Done");
 				m_feedback.Play(ui::Cue::Hold);
 			}
 			if (!actions.Held(Button::Cross))
@@ -406,22 +409,23 @@ namespace ps5shell
 		case Button::Triangle:
 		{
 			static const char* kHelp[kPlayerRows] = {
-				"What the game sees in this player's hands.\n\nMost games want the Wii U GamePad for player 1: its screen is the second one "
-				"PS5CEMU-HAR shows, and the touchpad touches it. Others take Pro Controllers, or Wii Remotes for games such as New Super Mario "
-				"Bros. U.\nA Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\nCemu has two GamePads at most.",
-				"The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or "
-				"the Wii Remote.\nThe Pro Controller and the Classic Controller have none.",
-				"How strongly the DualSense rumbles when the game makes the controller vibrate.\nLeft and Right change it by 10%.",
-				"How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it "
-				"for finer control.",
-				"How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for "
-				"finer control.",
-				"Which DualSense button is which of the controller's.\nA is on Circle and B on Cross by default, where the Wii U has them.",
-				"The default buttons, vibration, motion and deadzones for this controller. Held to confirm.",
+				TrMark("What the game sees in this player's hands.\n\nMost games want the Wii U GamePad for player 1: its screen is the second one "
+					   "PS5CEMU-HAR shows, and the touchpad touches it. Others take Pro Controllers, or Wii Remotes for games such as New Super "
+					   "Mario Bros. U.\nA Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\nCemu has two "
+					   "GamePads at most."),
+				TrMark("The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the "
+					   "GamePad or the Wii Remote.\nThe Pro Controller and the Classic Controller have none."),
+				TrMark("How strongly the DualSense rumbles when the game makes the controller vibrate.\nLeft and Right change it by 10%."),
+				TrMark("How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; "
+					   "lower it for finer control."),
+				TrMark("How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; "
+					   "lower it for finer control."),
+				TrMark("Which DualSense button is which of the controller's.\nA is on Circle and B on Cross by default, where the Wii U has them."),
+				TrMark("The default buttons, vibration, motion and deadzones for this controller. Held to confirm."),
 			};
-			static const char* kNames[kPlayerRows] = {"Emulated controller", "Motion controls", "Vibration", "Left stick deadzone",
-				"Right stick deadzone", "Buttons", "Reset to defaults"};
-			OpenHelp(kNames[m_playerRow], kHelp[m_playerRow]);
+			static const char* kNames[kPlayerRows] = {TrMark("Emulated controller"), TrMark("Motion controls"), TrMark("Vibration"),
+				TrMark("Left stick deadzone"), TrMark("Right stick deadzone"), TrMark("Buttons"), TrMark("Reset to defaults")};
+			OpenHelp(Tr(kNames[m_playerRow]), Tr(kHelp[m_playerRow]));
 			return;
 		}
 		default: break;
@@ -456,7 +460,7 @@ namespace ps5shell
 				std::vector<std::string> names;
 				for (auto type : list)
 					names.push_back(TypeName(type));
-				OpenPicker("Emulated controller", fmt::format("Player {}", m_player + 1), names, active,
+				OpenPicker(Tr("Emulated controller"), TrF("Player {0}", m_player + 1), names, active,
 					[this, list](int index) { ps5emu::SetEmulatedType(m_player, list[index]); });
 				return;
 			}
@@ -522,28 +526,30 @@ namespace ps5shell
 		const auto controls = ps5emu::GetPlayerControls(m_player);
 		const auto mappings = ps5emu::ListMappings(m_player);
 		const int mapped = (int)std::count_if(mappings.begin(), mappings.end(), [](const ps5emu::ButtonMapping& m) { return !m.input.empty(); });
-		DrawPageHeader(canvas, "Wii U · Controllers", fmt::format("Player {}", m_player + 1),
-			fmt::format("{}, on {}", TypeName(controls.type), controls.connected ? "this player's DualSense" : "a DualSense that is not connected"));
+		// tr: {0} is an emulated controller (Wii U GamePad)
+		DrawPageHeader(canvas, "Wii U · " + std::string(Tr("Controllers")), TrF("Player {0}", m_player + 1),
+			controls.connected ? TrF("{0}, on this player's DualSense", TypeName(controls.type)) :
+								 TrF("{0}, on a DualSense that is not connected", TypeName(controls.type)));
 		std::vector<Row> rows(kPlayerRows);
-		rows[kRowType] = {Row::Kind::Choice, "", "Emulated controller", TypeName(controls.type), "What the game sees in this player's hands."};
-		rows[kRowMotion] = {Row::Kind::Toggle, "", "Motion controls", controls.hasMotion ? (controls.motion ? "On" : "Off") : "None on this one",
-			controls.hasMotion ? "The DualSense's motion as the controller's." : "The Pro and Classic Controllers have none."};
+		rows[kRowType] = {Row::Kind::Choice, "", Tr("Emulated controller"), TypeName(controls.type), Tr("What the game sees in this player's hands.")};
+		rows[kRowMotion] = {Row::Kind::Toggle, "", Tr("Motion controls"), controls.hasMotion ? (controls.motion ? Tr("On") : Tr("Off")) : Tr("None on this one"),
+			controls.hasMotion ? Tr("The DualSense's motion as the controller's.") : Tr("The Pro and Classic Controllers have none.")};
 		rows[kRowMotion].on = controls.motion;
 		rows[kRowMotion].dimmed = !controls.hasMotion;
 		if (!controls.hasMotion)
 			rows[kRowMotion].kind = Row::Kind::Action;
-		rows[kRowRumble] = {Row::Kind::Slider, "", "Vibration", controls.rumble ? fmt::format("{}%", controls.rumble) : "Off",
-			"How strongly the DualSense rumbles."};
+		rows[kRowRumble] = {Row::Kind::Slider, "", Tr("Vibration"), controls.rumble ? ps5lang::Percent(controls.rumble) : std::string(Tr("Off")),
+			Tr("How strongly the DualSense rumbles.")};
 		rows[kRowRumble].fraction = controls.rumble / 100.0f;
-		rows[kRowLeftDeadzone] = {Row::Kind::Slider, "", "Left stick deadzone", fmt::format("{}%", controls.leftDeadzone),
-			"How far the left stick moves before it counts."};
+		rows[kRowLeftDeadzone] = {Row::Kind::Slider, "", Tr("Left stick deadzone"), ps5lang::Percent(controls.leftDeadzone),
+			Tr("How far the left stick moves before it counts.")};
 		rows[kRowLeftDeadzone].fraction = controls.leftDeadzone / 50.0f;
-		rows[kRowRightDeadzone] = {Row::Kind::Slider, "", "Right stick deadzone", fmt::format("{}%", controls.rightDeadzone),
-			"How far the right stick moves before it counts."};
+		rows[kRowRightDeadzone] = {Row::Kind::Slider, "", Tr("Right stick deadzone"), ps5lang::Percent(controls.rightDeadzone),
+			Tr("How far the right stick moves before it counts.")};
 		rows[kRowRightDeadzone].fraction = controls.rightDeadzone / 50.0f;
-		rows[kRowButtons] = {Row::Kind::Link, "", "Buttons", Plural(mapped, "button set", "buttons set"), "Which DualSense button is which."};
-		rows[kRowReset] = {Row::Kind::Hold, "", "Reset to defaults", m_message.empty() ? "Hold Cross" : m_message,
-			"The default buttons, vibration, motion and deadzones."};
+		rows[kRowButtons] = {Row::Kind::Link, "", Tr("Buttons"), TrP(mapped, "{0} button set", "{0} buttons set"), Tr("Which DualSense button is which.")};
+		rows[kRowReset] = {Row::Kind::Hold, "", Tr("Reset to defaults"), m_message.empty() ? std::string(Tr("Hold Cross")) : m_message,
+			Tr("The default buttons, vibration, motion and deadzones.")};
 		canvas.PushAlpha(Enter(1));
 		for (int i = 0; i < kPlayerRows; i++)
 		{
@@ -557,7 +563,7 @@ namespace ps5shell
 		canvas.PushAlpha(Enter(2));
 		const Box panel{kDetailX, kListTop, kDetailWidth, 420};
 		Panel(canvas, panel, kRadiusSheet);
-		canvas.Text(Style(kOverlineStyle), panel.x + 36, panel.y + 32, "Players", Tertiary());
+		canvas.Text(Style(kOverlineStyle), panel.x + 36, panel.y + 32, Tr("Players"), Tertiary(), panel.w - 72, 1);
 		for (int player = 0; player < ps5pad::kMaxPlayers; player++)
 		{
 			const auto other = ps5emu::GetPlayerControls(player);
@@ -570,7 +576,7 @@ namespace ps5shell
 			canvas.Text(Style({18, ui::Weight::Bold, 1.0f}), pad.CentreX(), pad.y + 10, fmt::format("P{}", player + 1),
 				player == m_player ? kInk1 : Secondary(), 0, 0, ui::Align::Centre);
 			canvas.Text(Style(kBodyStyle), panel.x + 116, y + 2, TypeName(other.type), other.connected ? kText : Tertiary(), 420, 1);
-			canvas.Text(Style(kCaptionStyle), panel.x + 560, y + 8, other.connected ? "Connected" : "No DualSense", Tertiary());
+			canvas.Text(Style(kCaptionStyle), panel.x + 552, y + 8, other.connected ? Tr("Connected") : Tr("No DualSense"), Tertiary(), panel.w - 552 - 36, 1);
 		}
 		canvas.PopAlpha();
 	}
@@ -624,7 +630,7 @@ namespace ps5shell
 				}
 				else
 					ps5emu::SetMapping(m_player, m_mapSelected, ps5emu::PadInput::None);
-				m_mapMessage = "Cleared: no DualSense button is this one now.";
+				m_mapMessage = Tr("Cleared: no DualSense button is this one now.");
 				m_feedback.Play(ui::Cue::Back);
 			}
 			break;
@@ -661,14 +667,14 @@ namespace ps5shell
 		if (m_now > m_capture.until)
 		{
 			m_capture.active = false;
-			m_mapMessage = "No button was pressed, so it stays as it was.";
+			m_mapMessage = Tr("No button was pressed, so it stays as it was.");
 		}
 		else if (!m_capture.released)
 			m_capture.released = idle;
 		else if (data.buttons & ps5pad::kTouchPad)
 		{
 			m_capture.active = false;
-			m_mapMessage = "Cancelled: it stays as it was.";
+			m_mapMessage = Tr("Cancelled: it stays as it was.");
 		}
 		else if (const auto input = Pressed(data); input != ps5emu::PadInput::None)
 		{
@@ -680,7 +686,7 @@ namespace ps5shell
 			}
 			else
 				ps5emu::SetMapping(m_player, m_mapSelected, input);
-			m_mapMessage = "Done.";
+			m_mapMessage = Tr("Done.");
 			m_feedback.Play(ui::Cue::Select);
 		}
 	}
@@ -691,23 +697,24 @@ namespace ps5shell
 		const int count = (int)mappings.size();
 		m_mapSelected = std::clamp(m_mapSelected, 0, std::max(0, count - 1));
 		if (m_mapping3ds)
-			DrawPageHeader(canvas, "Nintendo 3DS · Controls", "Buttons", "The DualSense's buttons for the 3DS's");
+			DrawPageHeader(canvas, "Nintendo 3DS · " + std::string(Tr("Controls")), Tr("Buttons"), Tr("The DualSense's buttons for the 3DS's"));
 		else
 		{
 			const auto controls = ps5emu::GetPlayerControls(m_player);
-			DrawPageHeader(canvas, std::string("Wii U · ") + TypeName(controls.type), "Buttons",
-				fmt::format("Player {}: the DualSense's buttons for the {}", m_player + 1, TypeName(controls.type)));
+			// tr: {0} is the player's number, {1} an emulated controller (Wii U GamePad)
+			DrawPageHeader(canvas, std::string("Wii U · ") + TypeName(controls.type), Tr("Buttons"),
+				TrF("Player {0}: the DualSense's buttons for the {1}", m_player + 1, TypeName(controls.type)));
 		}
 		canvas.PushAlpha(Enter(1));
 		canvas.Text(Style({20, ui::Weight::Medium, 1.0f, 0, false, true}), kListX + kListWidth, kListTop - 40,
-			fmt::format("{} of {}", count ? m_mapSelected + 1 : 0, count), Tertiary(), 0, 0, ui::Align::Right);
+			TrF("{0} of {1}", count ? m_mapSelected + 1 : 0, count), Tertiary(), 0, 0, ui::Align::Right);
 		DrawList(canvas, {kListX, kListTop, kListWidth, kListBottom - kListTop}, count, m_mapSelected, m_listScroll.value, 72,
 			[&](int i, const Box& box, bool focused) {
 				canvas.Rect(box, 16, focused ? Surface2() : Surface());
-				canvas.Text(Style(kBodyStyle), box.x + 24, box.CentreY() - 19, mappings[i].button, kText, box.w * 0.55f, 1);
+				canvas.Text(Style(kBodyStyle), box.x + 24, box.CentreY() - 19, ButtonName(mappings[i].button), kText, box.w * 0.55f, 1);
 				const bool unset = mappings[i].input.empty();
-				canvas.Text(Style(kLabelStyle), box.Right() - 24, box.CentreY() - 16, unset ? "Not set" : mappings[i].input, unset ? Tertiary() : Accent(), 0,
-					0, ui::Align::Right);
+				canvas.Text(Style(kLabelStyle), box.Right() - 24, box.CentreY() - 16, unset ? std::string(Tr("Not set")) : InputName(mappings[i].input),
+					unset ? Tertiary() : Accent(), box.w * 0.4f, 1, ui::Align::Right);
 				if (focused)
 					Focus(box, 16);
 			});
@@ -718,25 +725,26 @@ namespace ps5shell
 		canvas.PushAlpha(Enter(2));
 		const Box panel{kDetailX, kListTop - 10, kDetailWidth, 520};
 		Panel(canvas, panel, kRadiusSheet);
-		canvas.Text(Style(kOverlineStyle), panel.x + 40, panel.y + 36, "This button", Tertiary());
-		canvas.Text(Style(kTitleStyle), panel.x + 40, panel.y + 66, mapping.button, kText, panel.w - 80, 1);
+		canvas.Text(Style(kOverlineStyle), panel.x + 40, panel.y + 36, Tr("This button"), Tertiary(), panel.w - 80, 1);
+		canvas.Text(Style(kTitleStyle), panel.x + 40, panel.y + 66, ButtonName(mapping.button), kText, panel.w - 80, 1);
 		const Box input{panel.x + 40, panel.y + 140, panel.w - 80, 110};
 		canvas.Rect(input, kRadiusCard, m_capture.active ? ui::SetAlpha(Accent(), 0.18f) : 0x12ffffff);
 		if (m_capture.active)
 			canvas.Ring(input, kRadiusCard, 2, Accent());
-		canvas.Text(Style({40, ui::Weight::SemiBold, 1.0f}), input.CentreX(), input.CentreY() - 20,
-			m_capture.active ? "Press a button" : mapping.input.empty() ? "Not set" : mapping.input, m_capture.active ? kText : Accent(), 0, 0,
-			ui::Align::Centre);
+		canvas.Text(Style({40, ui::Weight::SemiBold, 1.0f}), input.x + 20, input.CentreY() - 20,
+			m_capture.active ? std::string(Tr("Press a button")) : mapping.input.empty() ? std::string(Tr("Not set")) : InputName(mapping.input),
+			m_capture.active ? kText : Accent(), input.w - 40, 1, ui::Align::Centre);
 		std::string message;
 		if (m_capture.active)
 		{
 			const int seconds = (int)std::max(0.0, m_capture.until - m_now) + 1;
-			message = fmt::format("Press the DualSense button, trigger or stick direction for {} now.\n{} s left. A touchpad click cancels.",
-				mapping.button, seconds);
+			// tr: {0} is a button of the Wii U's or the 3DS's controller
+			message = TrF("Press the DualSense button, trigger or stick direction for {0} now.", ButtonName(mapping.button)) + "\n" +
+				TrP(seconds, "{0} second left. A touchpad click cancels.", "{0} seconds left. A touchpad click cancels.");
 		}
 		else
 			message = (m_mapMessage.empty() ? "" : m_mapMessage + "\n\n") +
-				"Cross, then a DualSense button, trigger or stick direction: it becomes this one.\nSquare clears it.";
+				Tr("Cross, then a DualSense button, trigger or stick direction: it becomes this one.\nSquare clears it.");
 		ui::TextStyle body = Style({24, ui::Weight::Regular, 1.45f});
 		body.tabular = true;
 		canvas.Text(body, panel.x + 40, panel.y + 280, message, Secondary(), panel.w - 80, 7);
@@ -819,12 +827,12 @@ namespace ps5shell
 				if (m_filesMode == 2)
 				{
 					ps5azahar::CancelInstall();
-					m_filesMessage = "Cancelling: what it copied is removed…";
+					m_filesMessage = Tr("Cancelling: what it copied is removed…");
 				}
 				else
 				{
 					ps5emu::CancelInstall();
-					m_filesMessage = "Cancelling: what was installed before is put back…";
+					m_filesMessage = Tr("Cancelling: what was installed before is put back…");
 				}
 				m_feedback.Play(ui::Cue::Back);
 			}
@@ -867,7 +875,7 @@ namespace ps5shell
 			const bool up = entry == "..";
 			if (!BrowseTo(up ? ParentPath(m_browseFolder) : JoinPath(m_browseFolder, entry)))
 			{
-				m_filesMessage = "This folder cannot be opened.";
+				m_filesMessage = Tr("This folder cannot be opened.");
 				m_feedback.Play(ui::Cue::Denied);
 				return;
 			}
@@ -907,17 +915,17 @@ namespace ps5shell
 			}
 			else
 				m_rescan[m_filesSide == System::N3ds ? 1 : 0] = true;
-			m_filesMessage = !saved ? "The folder could not be saved. Please try again." :
-				here			   ? "Saved. PS5CEMU-HAR is looking for games there." :
-									 "Saved. That side looks for games there when it opens.";
+			m_filesMessage = !saved ? Tr("The folder could not be saved. Please try again.") :
+				here			   ? Tr("Saved. PS5CEMU-HAR is looking for games there.") :
+									 Tr("Saved. That side looks for games there when it opens.");
 			m_feedback.Play(saved ? ui::Cue::Select : ui::Cue::Denied);
 			if (saved && here)
-				Toast("Looking for games in " + ShortPath(m_browseFolder, 40));
+				Toast(TrF("Looking for games in {0}", ShortPath(m_browseFolder, 40)));
 		}
 		else if (m_filesMode == 2)
 		{
 			if (!IsFileEntry(m_browseSelected))
-				m_filesMessage = "Choose a CIA file first.";
+				m_filesMessage = Tr("Choose a CIA file first.");
 			else if (ps5azahar::StartInstall(JoinPath(m_browseFolder, m_browseEntries[m_browseSelected]), error))
 			{
 				m_installing = true;
@@ -930,7 +938,7 @@ namespace ps5shell
 		else
 		{
 			if (!m_status.coreReady)
-				m_filesMessage = "Cemu did not start, so nothing can be installed.";
+				m_filesMessage = Tr("Cemu did not start, so nothing can be installed.");
 			else if (ps5emu::StartInstall(m_browseFolder, error))
 			{
 				m_installing = true;
@@ -949,9 +957,10 @@ namespace ps5shell
 		if (status.state == State::Running)
 		{
 			m_installFraction = status.total ? (float)status.copied / (float)status.total : -1.0f;
-			m_installProgress = status.total ? fmt::format("Installing: {}%, {} of {}.\n\nCircle cancels.", (int)(status.copied * 100 / status.total),
+			// tr: {0} is a percentage, {1} and {2} sizes (2.4 GB)
+			m_installProgress = status.total ? TrF("Installing: {0}, {1} of {2}.\n\nCircle cancels.", ps5lang::Percent((int)(status.copied * 100 / status.total)),
 												   Gigabytes(status.copied), Gigabytes(status.total)) :
-											   "Installing: counting the files…";
+											   std::string(Tr("Installing: counting the files…"));
 			return;
 		}
 		m_installing = false;
@@ -960,7 +969,7 @@ namespace ps5shell
 		m_inspected.clear();
 		if (status.state == State::Done)
 		{
-			m_filesMessage = "Installed. The library has it with its game.";
+			m_filesMessage = Tr("Installed. The library has it with its game.");
 			if (m_filesSide == m_side)
 			{
 				if (Is3ds())
@@ -969,33 +978,35 @@ namespace ps5shell
 					ps5emu::Rescan();
 				m_scanning = true;
 			}
-			Toast("Installed");
+			Toast(Tr("Installed"));
 		}
 		else if (status.state == State::Cancelled && m_filesMode == 2)
-			m_filesMessage = "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its "
-							 "saves are kept.";
+			m_filesMessage = Tr("Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. "
+								"Its saves are kept.");
 		else if (status.state == State::Cancelled)
-			m_filesMessage = "Cancelled. What was installed before is as it was.";
+			m_filesMessage = Tr("Cancelled. What was installed before is as it was.");
 		else
-			m_filesMessage = "It could not be installed: " + status.message;
+			m_filesMessage = TrF("It could not be installed: {0}", status.message);
 	}
 
 	void Shell::FilesDraw(Canvas& canvas)
 	{
 		const bool install = m_filesMode == 1, cia = m_filesMode == 2;
 		const bool n3ds = m_filesSide == System::N3ds;
-		DrawPageHeader(canvas, install || cia ? (n3ds ? "Nintendo 3DS · Install" : "Wii U · Install") : (n3ds ? "Nintendo 3DS games" : "Wii U games"),
-			cia ? "Install CIA files" : install ? "Install updates and DLC" : "Choose a folder",
-			cia ? "Choose a CIA file: a game, an update or DLC" : install ? "Choose a folder with an update, DLC or game (code, content and meta)" :
-				n3ds ? "Choose the folder that holds your 3DS games" :
-					   "Choose the folder that holds your Wii U games");
+		DrawPageHeader(canvas,
+			install || cia ? (n3ds ? "Nintendo 3DS · " : "Wii U · ") + std::string(Tr("Install")) : n3ds ? Tr("3DS games") : Tr("Wii U games"),
+			cia ? Tr("Install CIA files") : install ? Tr("Install updates and DLC") : Tr("Choose a folder"),
+			cia		? Tr("Choose a CIA file: a game, an update or DLC") :
+			install ? Tr("Choose a folder with an update, DLC or game (code, content and meta)") :
+			n3ds	? Tr("Choose the folder that holds your 3DS games") :
+					  Tr("Choose the folder that holds your Wii U games"));
 		const int count = (int)m_browseEntries.size();
 		canvas.PushAlpha(Enter(1));
 		canvas.Text(Style(kOverlineStyle), kListX, kListTop - 40, ShortPath(m_browseFolder, 56), Secondary(), kListWidth - 140, 1);
 		canvas.Text(Style({20, ui::Weight::Medium, 1.0f, 0, false, true}), kListX + kListWidth, kListTop - 40,
-			fmt::format("{} of {}", count ? m_browseSelected + 1 : 0, count), Tertiary(), 0, 0, ui::Align::Right);
+			TrF("{0} of {1}", count ? m_browseSelected + 1 : 0, count), Tertiary(), 0, 0, ui::Align::Right);
 		if (count == 0)
-			canvas.Text(Style(kBodyStyle), kListX, kListTop + 10, "This folder is empty.", Secondary());
+			canvas.Text(Style(kBodyStyle), kListX, kListTop + 10, Tr("This folder is empty."), Secondary(), kListWidth, 2);
 		DrawList(canvas, {kListX, kListTop, kListWidth, kListBottom - kListTop}, count, m_browseSelected, m_listScroll.value, 72,
 			[&](int i, const Box& box, bool focused) {
 				const std::string& entry = m_browseEntries[i];
@@ -1003,8 +1014,9 @@ namespace ps5shell
 				canvas.Rect(box, 16, focused ? Surface2() : Surface());
 				canvas.Draw(up ? Icon::Back : drive ? Icon::Drive : file ? Icon::Square : Icon::Folder, {box.x + 20, box.CentreY() - 16, 32, 32},
 					drive ? Accent() : Secondary());
-				canvas.Text(Style(kBodyStyle), box.x + 70, box.CentreY() - 19, up ? "Parent folder" : drive ? DriveName(entry) : entry, kText, box.w - 260, 1);
-				std::string meta = file ? "CIA" : drive ? "Drive" : "";
+				canvas.Text(Style(kBodyStyle), box.x + 70, box.CentreY() - 19, up ? std::string(Tr("Parent folder")) : drive ? DriveName(entry) : entry, kText,
+					box.w - 260, 1);
+				std::string meta = file ? "CIA" : drive ? Tr("Drive") : "";
 				if (install && !up && !drive)
 				{
 					const auto& candidate = Inspect(JoinPath(m_browseFolder, entry));
@@ -1012,7 +1024,7 @@ namespace ps5shell
 						meta = KindName(candidate.kind);
 				}
 				if (!meta.empty())
-					canvas.Text(Style(kCaptionStyle), box.Right() - 24, box.CentreY() - 13, meta, Tertiary(), 0, 0, ui::Align::Right);
+					canvas.Text(Style(kCaptionStyle), box.Right() - 24, box.CentreY() - 13, meta, Tertiary(), 170, 1, ui::Align::Right);
 				if (focused)
 					Focus(box, 16);
 			});
@@ -1027,13 +1039,13 @@ namespace ps5shell
 			const bool file = IsFileEntry(m_browseSelected);
 			const auto title = file ? ps5azahar::Inspect(JoinPath(m_browseFolder, m_browseEntries[m_browseSelected])) : ps5azahar::Title{};
 			current = !file ? ShortPath(m_browseFolder, 40) : title.name.empty() ? m_browseEntries[m_browseSelected] : title.name;
-			lines[0] = {"Type", !file ? "A folder" : title.titleId ? CiaKind(title.titleId) : "CIA"};
-			lines[1] = {"Title ID", file && title.titleId ? Hex(title.titleId) : "-"};
-			lines[2] = {"Version", file && title.titleId ? fmt::format("v{}", title.version) : "-"};
+			lines[0] = {Tr("Type"), !file ? Tr("A folder") : title.titleId ? CiaKind(title.titleId) : "CIA"};
+			lines[1] = {Tr("Title ID"), file && title.titleId ? Hex(title.titleId) : "-"};
+			lines[2] = {Tr("Version"), file && title.titleId ? fmt::format("v{}", title.version) : "-"};
 			ready[0] = ready[1] = ready[2] = file;
 			if (message.empty())
-				message = file ? "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library." :
-								 "Choose a CIA file to install: a game, an update or DLC.";
+				message = file ? Tr("Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library.") :
+								 Tr("Choose a CIA file to install: a game, an update or DLC.");
 		}
 		else if (!install)
 		{
@@ -1045,39 +1057,40 @@ namespace ps5shell
 				it = m_folderCounts.emplace(m_browseFolder, games < 0 ? "-1" : std::to_string(games)).first;
 			}
 			const int games = std::atoi(it->second.c_str());
-			lines[0] = {"Games here", games < 0 ? "Cannot be read" : Plural(games, "game", "games")};
+			lines[0] = {Tr("Games here"), games < 0 ? std::string(Tr("Cannot be read")) : TrP(games, "{0} game", "{0} games")};
 			if (n3ds)
 			{
 				const bool keys = IsFile(std::string(ps5azahar::kRoot) + "/sysdata/aes_keys.txt");
-				lines[1] = {"aes_keys.txt", keys ? "Found" : "Missing (only encrypted dumps need it)"};
+				lines[1] = {"aes_keys.txt", keys ? Tr("Found") : Tr("Missing (only encrypted dumps need it)")};
 				ready[1] = keys;
 			}
 			else
 			{
 				const bool keys = IsFile(std::string(ps5paths::kRoot) + "/keys.txt");
-				lines[1] = {"keys.txt", keys ? "Found in /data/ps5cemu" : "Missing (only .wud/.wux need it)"};
+				lines[1] = {"keys.txt", keys ? Tr("Found in /data/ps5cemu") : Tr("Missing (only .wud/.wux need it)")};
 				ready[1] = keys;
 			}
-			lines[2] = {"In use", ShortPath(GamesFolder(m_filesSide), 40)};
+			lines[2] = {Tr("In use"), ShortPath(GamesFolder(m_filesSide), 40)};
 			ready[0] = games > 0;
 			ready[2] = GamesFolder(m_filesSide) == m_browseFolder;
 			if (message.empty())
-				message = n3ds ? "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown." :
-								 "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown.";
+				message = n3ds ? Tr("Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown.") :
+								 Tr("Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown.");
 		}
 		else
 		{
 			const auto& candidate = Inspect(m_browseFolder);
 			const bool valid = candidate.kind != ps5emu::InstallCandidate::Kind::None;
 			current = valid && !candidate.name.empty() ? candidate.name : ShortPath(m_browseFolder, 40);
-			lines[0] = {"Type", valid ? KindName(candidate.kind) : "Nothing to install"};
-			lines[1] = {"Title ID", valid ? Hex(candidate.titleId) : "-"};
-			lines[2] = {"Version", !valid ? "-" : candidate.installedVersion < 0 ? fmt::format("v{}, not installed yet", candidate.version) :
-																				   fmt::format("v{}, v{} installed now", candidate.version, candidate.installedVersion)};
+			lines[0] = {Tr("Type"), valid ? KindName(candidate.kind) : Tr("Nothing to install")};
+			lines[1] = {Tr("Title ID"), valid ? Hex(candidate.titleId) : "-"};
+			// tr: a title's version to install ({0}), and the one installed now ({1})
+			lines[2] = {Tr("Version"), !valid ? std::string("-") : candidate.installedVersion < 0 ? TrF("v{0}, not installed yet", candidate.version) :
+																									TrF("v{0}, v{1} installed now", candidate.version, candidate.installedVersion)};
 			ready[0] = ready[1] = valid;
 			ready[2] = valid && candidate.installedVersion < (int)candidate.version;
 			if (message.empty())
-				message = valid ? "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too." :
+				message = valid ? Tr("Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too.") :
 								  candidate.note;
 		}
 		if (m_installing && !m_installProgress.empty() && m_filesMessage.empty())
@@ -1086,7 +1099,7 @@ namespace ps5shell
 		const Box panel{kDetailX, kListTop - 10, kDetailWidth, kListBottom - kListTop + 10};
 		Panel(canvas, panel, kRadiusSheet);
 		float y = panel.y + 36;
-		canvas.Text(Style(kOverlineStyle), panel.x + 40, y, install || cia ? "To install" : "This folder", Tertiary());
+		canvas.Text(Style(kOverlineStyle), panel.x + 40, y, install || cia ? Tr("To install") : Tr("This folder"), Tertiary(), panel.w - 80, 1);
 		y += 34;
 		const ui::TextBlock name = canvas.Text(Style(kHeadingStyle), panel.x + 40, y, current, kText, panel.w - 80, 2);
 		y += name.height + 26;
@@ -1095,7 +1108,7 @@ namespace ps5shell
 			if (lines[i].first.empty())
 				continue;
 			canvas.Draw(ready[i] ? Icon::Check : Icon::Dash, {panel.x + 40, y + 2, 26, 26}, ready[i] ? kGood : Tertiary());
-			canvas.Text(Style(kCaptionStyle), panel.x + 80, y, lines[i].first, Tertiary());
+			canvas.Text(Style(kCaptionStyle), panel.x + 80, y, lines[i].first, Tertiary(), panel.w - 120, 1);
 			canvas.Text(Style(kBodyStyle), panel.x + 80, y + 26, lines[i].second, kText, panel.w - 120, 1);
 			y += 82;
 		}
@@ -1141,7 +1154,8 @@ namespace ps5shell
 			game.name = fmt::format("{} ({})", what, ArticAddress());
 			game.path = std::string(scheme) + ArticAddress();
 			game.format = "ARTIC";
-			LaunchGame(game, "Connecting to " + ArticAddress(), {760, 240, 400, 400});
+			// tr: {0} is a 3DS's network address
+			LaunchGame(game, TrF("Connecting to {0}", ArticAddress()), {760, 240, 400, 400});
 		};
 		// Artic Setup writes the 3DS's own data into Azahar's: held to confirm
 		if (!m_articEditing && (m_articRow == kRowArticSetupOld || m_articRow == kRowArticSetupNew))
@@ -1235,7 +1249,7 @@ namespace ps5shell
 
 	void Shell::ArticDraw(Canvas& canvas)
 	{
-		DrawPageHeader(canvas, "Nintendo 3DS", "Artic Base", "Play a game from your 3DS over your network, or set Azahar up from it");
+		DrawPageHeader(canvas, "Nintendo 3DS", "Artic Base", Tr("Play a game from your 3DS over your network, or set Azahar up from it"));
 		std::string address = ArticAddress();
 		if (m_articEditing)
 		{
@@ -1251,18 +1265,18 @@ namespace ps5shell
 			const char* help;
 		};
 		const Item items[kArticRows] = {
-			{"3DS address", address, Row::Kind::Action,
-				"The address Artic Base shows on the 3DS's screen when it is ready.\nCross edits it: Left and Right choose a number, Up and Down "
-				"change it by 1, L1 and R1 by 10, and Cross again keeps it.\nThe 3DS and the PS5 must be on the same network."},
-			{"Connect and play", "", Row::Kind::Action,
-				"On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. "
-				"Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\nIt is only as smooth as the "
-				"network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."},
-			{"Set up from an Old 3DS", "Hold Cross", Row::Kind::Hold,
-				"With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend "
-				"code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can "
-				"(Settings > System and Home Menu).\nThat data is your console's: do not share Azahar's folder afterwards."},
-			{"Set up from a New 3DS", "Hold Cross", Row::Kind::Hold, "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."},
+			{Tr("3DS address"), address, Row::Kind::Action,
+				Tr("The address Artic Base shows on the 3DS's screen when it is ready.\nCross edits it: Left and Right choose a number, Up and "
+				   "Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\nThe 3DS and the PS5 must be on the same network.")},
+			{Tr("Connect and play"), "", Row::Kind::Action,
+				Tr("On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed "
+				   "one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\nIt is only as smooth as "
+				   "the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help.")},
+			{Tr("Set up from an Old 3DS"), Tr("Hold Cross"), Row::Kind::Hold,
+				Tr("With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, "
+				   "friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu "
+				   "can (Settings > System and Home Menu).\nThat data is your console's: do not share Azahar's folder afterwards.")},
+			{Tr("Set up from a New 3DS"), Tr("Hold Cross"), Row::Kind::Hold, Tr("As above, from a New 3DS or New 2DS running the Artic Setup Tool app.")},
 		};
 		canvas.PushAlpha(Enter(1));
 		for (int i = 0; i < kArticRows; i++)
@@ -1281,7 +1295,7 @@ namespace ps5shell
 		const ui::TextBlock help = m_fonts.Layout(Style({24, ui::Weight::Regular, 1.45f}), items[m_articRow].help, kDetailWidth - 80, 14);
 		const Box panel{kDetailX, kListTop - 10, kDetailWidth, help.height + 130};
 		Panel(canvas, panel, kRadiusSheet);
-		canvas.Text(Style(kOverlineStyle), panel.x + 40, panel.y + 36, items[m_articRow].name, Tertiary());
+		canvas.Text(Style(kOverlineStyle), panel.x + 40, panel.y + 36, items[m_articRow].name, Tertiary(), panel.w - 80, 1);
 		canvas.Text(help, panel.x + 40, panel.y + 76, Secondary());
 		canvas.PopAlpha();
 	}

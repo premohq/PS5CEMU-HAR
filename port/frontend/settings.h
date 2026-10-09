@@ -44,6 +44,7 @@ namespace ps5settings
 	{
 		std::string startOn = "last"; // "last": the side last used; "ask": the side chooser
 		std::string lastSide;		 // "wiiu" or "3ds": the side last used, restored at every start
+		std::string language;		 // the menus' language (ps5lang's code, "de"); empty: the PS5's
 		bool largerText = false;
 		bool highContrast = false;
 		bool reduceMotion = false;

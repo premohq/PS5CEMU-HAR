@@ -658,8 +658,15 @@ namespace ui
 
 	void Gfx::SetAtlas(uint32_t width, uint32_t height, const uint8_t* pixels)
 	{
-		if (!m_device || m_atlas.image)
+		if (!m_device)
 			return;
+		if (m_atlas.image)
+		{
+			// a taller atlas (text.h grows it as a language's characters fill it): the old image goes
+			// once the frames drawing with it are done
+			m_slots[(m_slot + kSlots - 1) % kSlots].garbage.push_back([this, old = m_atlas]() mutable { FreeImage(old); });
+			m_atlas = {};
+		}
 		if (!MakeImage(m_atlas, width, height, VK_FORMAT_R8_UNORM, VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT))
 		{
 			Log("[ui] gfx: the glyph atlas could not be made");

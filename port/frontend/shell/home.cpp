@@ -262,32 +262,36 @@ namespace ps5shell
 			std::vector<std::string> buttons;
 			if (notice)
 			{
-				kicker = "Setup";
-				title = "Something needs a look";
+				kicker = Tr("Setup");
+				title = Tr("Something needs a look");
 				text = Notice();
-				buttons = {"Setup check", "Diagnostics"};
+				buttons = {Tr("Setup check"), Tr("Diagnostics")};
 			}
 			else if (!CoreReady())
 			{
 				kicker = "Wii U";
-				title = "Starting Cemu";
-				text = "Its settings, graphic packs and controllers are loading, and then it looks for your games.";
+				title = Tr("Starting Cemu");
+				text = Tr("Its settings, graphic packs and controllers are loading, and then it looks for your games.");
 			}
 			else if (m_scanning)
 			{
 				kicker = Is3ds() ? "Nintendo 3DS" : "Wii U";
-				title = "Looking for games…";
-				text = "In " + ShortPath(GamesFolder(m_side), 60) + ".";
+				title = Tr("Looking for games…");
+				// tr: {0} is a folder
+				text = TrF("In {0}.", ShortPath(GamesFolder(m_side), 60));
 			}
 			else
 			{
-				kicker = "Welcome";
-				title = "Your games go here";
-				text = Is3ds() ? "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in " + GamesFolder(m_side) +
-						", or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too." :
-								 "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in " + GamesFolder(m_side) +
-						", or choose any folder the PS5 can read, such as one on a USB drive.";
-				buttons = {"Choose a folder", "Setup check"};
+				kicker = Tr("Welcome");
+				title = Tr("Your games go here");
+				// tr: {0} is the games folder
+				text = Is3ds() ? TrF("Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as "
+									 "one on a USB drive. Folders inside it are searched too.",
+									 GamesFolder(m_side)) :
+								 TrF("Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder "
+									 "the PS5 can read, such as one on a USB drive.",
+									 GamesFolder(m_side));
+				buttons = {Tr("Choose a folder"), Tr("Setup check")};
 			}
 			const Box card{kSafeX, 300, 1100, 520};
 			canvas.Text(Style(kOverlineStyle), card.x, card.y, kicker, Secondary());
@@ -355,8 +359,11 @@ namespace ps5shell
 				canvas.Rect(box, kRadiusCard, 0x0affffff);
 				canvas.Ring(box, kRadiusCard, 2, 0x26ffffff);
 				canvas.Draw(Icon::ChevronRight, {box.CentreX() - 18, box.y + box.h * 0.28f, 36, 36}, Secondary());
-				canvas.Text(Style({26, ui::Weight::Medium, 1.2f}), box.x, box.y + box.h * 0.52f, fmt::format("All {} games", m_games.size()),
-					Secondary(), box.w, 2, ui::Align::Centre);
+				// as many lines as the tile has room for under its chevron
+				const ui::TextStyle allStyle = Style({26, ui::Weight::Medium, 1.2f});
+				const int lines = std::max(1, (int)((box.h * 0.46f - 8) / (allStyle.size * allStyle.lineHeight)));
+				canvas.Text(allStyle, box.x + 10, box.y + box.h * 0.52f, TrP((long long)m_games.size(), "All {0} game", "All {0} games"), Secondary(),
+					box.w - 20, lines, ui::Align::Centre);
 				if (focused)
 					Focus(box, kRadiusCard);
 			}
@@ -375,8 +382,11 @@ namespace ps5shell
 		{
 			const float badge = Badge(canvas, kSafeX, y, m_side);
 			const std::string when = LastPlayedWords(game->entry.lastPlayed);
-			const std::string kicker = when.empty() ? "In your library" : (m_homeIndex == 0 ? "Continue · last played " : "Last played ") + when;
-			canvas.Text(Style({18, ui::Weight::SemiBold, 1.9f, 3.5f, true}), kSafeX + badge + 18, y, kicker, Secondary());
+			// tr: {0} says when: "today", "2 days ago"
+			const std::string kicker = when.empty() ? std::string(Tr("In your library")) :
+				m_homeIndex == 0				  ? TrF("Continue · last played {0}", when) :
+													TrF("Last played {0}", when);
+			canvas.Text(Style({18, ui::Weight::SemiBold, 1.9f, 3.5f, true}), kSafeX + badge + 18, y, kicker, Secondary(), previewWidth - badge - 18, 1);
 			y += 52;
 			ui::TextStyle title = display;
 			title.size = m_fonts.Fit(display, game->entry.game.name, previewWidth, 2, display.size - 16, 8);
@@ -392,16 +402,16 @@ namespace ps5shell
 			const ui::TextBlock factBlock = canvas.Text(factStyle, x, y, facts, Secondary(), previewWidth - 240, 1);
 			x += factBlock.width + 20;
 			if (game->report)
-				Chip(canvas, x, y + 2, game->report->status, ps5compat::Kind(game->report->status), 38);
+				Chip(canvas, x, y + 2, TrC("status", game->report->status), ps5compat::Kind(game->report->status), 38);
 		}
 		else
 		{
-			canvas.Text(Style(kOverlineStyle), kSafeX, y, "Your library", Secondary());
+			canvas.Text(Style(kOverlineStyle), kSafeX, y, Tr("Your library"), Secondary(), previewWidth, 1);
 			y += 52;
-			canvas.Text(display, kSafeX, y, fmt::format("All {} games", m_games.size()), kText, previewWidth, 1);
+			canvas.Text(display, kSafeX, y, TrP((long long)m_games.size(), "All {0} game", "All {0} games"), kText, previewWidth, 1);
 			y += display.size * 1.04f + 16;
-			canvas.Text(Style({30, ui::Weight::Regular, 1.2f}), kSafeX, y, m_scanning ? "Looking for new games…" : "A to Z, by year, by how they run",
-				Secondary());
+			canvas.Text(Style({30, ui::Weight::Regular, 1.2f}), kSafeX, y, m_scanning ? Tr("Looking for new games…") : Tr("A to Z, by year, by how they run"),
+				Secondary(), previewWidth, 1);
 		}
 		// the buttons
 		const float buttonsTop = 724;
@@ -410,16 +420,16 @@ namespace ps5shell
 		{
 			const int buttons = 3;
 			m_homeButton = std::clamp(m_homeButton, 0, buttons - 1);
-			Box b = PillButton(canvas, kSafeX, buttonsTop, "Play", true, buttonsFocused && m_homeButton == 0, Icon::Play, true);
+			Box b = PillButton(canvas, kSafeX, buttonsTop, Tr("Play"), true, buttonsFocused && m_homeButton == 0, Icon::Play, true, 72, 420);
 			m_homeButtons.push_back(b);
-			b = PillButton(canvas, b.Right() + 20, buttonsTop, "Game hub", false, buttonsFocused && m_homeButton == 1);
+			b = PillButton(canvas, b.Right() + 20, buttonsTop, Tr("Game hub"), false, buttonsFocused && m_homeButton == 1, Icon::Play, false, 72, 420);
 			m_homeButtons.push_back(b);
 			m_homeButtons.push_back(IconButton(canvas, b.Right() + 20, buttonsTop, Icon::More, buttonsFocused && m_homeButton == 2));
 		}
 		else
 		{
 			m_homeButton = 0;
-			m_homeButtons.push_back(PillButton(canvas, kSafeX, buttonsTop, "Open the library", true, buttonsFocused));
+			m_homeButtons.push_back(PillButton(canvas, kSafeX, buttonsTop, Tr("Open the library"), true, buttonsFocused, Icon::Play, false, 72, previewWidth));
 		}
 		canvas.PopOffset();
 		canvas.PopAlpha();
@@ -444,26 +454,30 @@ namespace ps5shell
 					}
 				if (on > 3)
 					names += fmt::format(" · +{}", on - 3);
+				// tr: a graphic packs card: how many are on, and how many the game has
 				if (!packs.empty())
-					m_cards.push_back({"Graphic packs", on ? fmt::format("{} on", on) : "None on", on ? names : fmt::format("{} for this game", packs.size()),
-						"packs"});
+					m_cards.push_back({Tr("Graphic packs"), on ? TrP(on, "{0} on", "{0} on") : std::string(Tr("None on")),
+						on ? names : TrP((long long)packs.size(), "{0} pack for this game", "{0} packs for this game"), "packs"});
 				const auto p1 = ps5emu::GetPlayerControls(0);
 				std::string others;
 				for (int player = 1; player < 4; player++)
 				{
 					const auto controls = ps5emu::GetPlayerControls(player);
 					if (controls.connected)
-						others += (others.empty() ? "" : " · ") + fmt::format("{} on P{}", TypeName(controls.type), player + 1);
+						// tr: an emulated controller ({0}) on a player (P2: player 2)
+						others += (others.empty() ? "" : " · ") + TrF("{0} on P{1}", TypeName(controls.type), player + 1);
 				}
-				m_cards.push_back({"Controllers", fmt::format("{} on P1", TypeName(p1.type)), others.empty() ? "One player" : others, "controllers"});
+				m_cards.push_back({Tr("Controllers"), TrF("{0} on P{1}", TypeName(p1.type), 1), others.empty() ? std::string(Tr("One player")) : others,
+					"controllers"});
 			}
 			if (game->report)
-				m_cards.push_back({"How it runs", game->report->status, game->report->notes.empty() ? "From the compatibility list" : game->report->notes, "hub"});
+				m_cards.push_back({Tr("How it runs"), TrC("status", game->report->status),
+					game->report->notes.empty() ? std::string(Tr("From the compatibility list")) : TrC("compatibility note", game->report->notes), "hub"});
 			if (wiiu)
-				m_cards.push_back({"Updates and DLC", Join({g.hasUpdate ? fmt::format("v{}", g.version) : "No update", g.dlcCount ? "DLC" : ""}, " · "),
+				m_cards.push_back({Tr("Updates and DLC"), Join({g.hasUpdate ? fmt::format("v{}", g.version) : std::string(Tr("No update")), g.dlcCount ? Tr("DLC") : ""}, " · "),
 					g.format, "installs"});
 			else
-				m_cards.push_back({"This dump", g.format, g.publisher.empty() ? Hex(g.titleId) : g.publisher, "hub"});
+				m_cards.push_back({Tr("This dump"), g.format, g.publisher.empty() ? Hex(g.titleId) : g.publisher, "hub"});
 		}
 		if (game && !m_cards.empty())
 		{

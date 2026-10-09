@@ -25,6 +25,8 @@ namespace ps5launcher
 		bool coreReady = false;	 // Cemu started: its library can open
 		std::string notice;		 // a problem to show on Cemu's home screen (empty: none)
 		std::string notice3ds;	 // and on Azahar's
+		std::string launchError; // why the last Wii U game did not start, said once (empty: it did)
+		std::string launchError3ds; // and the last 3DS game
 		std::vector<std::string> diagnostics; // the lines Settings > Diagnostics shows
 	};
 

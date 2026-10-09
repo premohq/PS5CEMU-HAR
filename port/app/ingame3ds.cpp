@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include "ingame3ds.h"
+#include "lang.h"
 #include "menu_canvas.h"
 #include "side_menu.h"
 #include "tga.h"
 #include "../ps5/kernel.h"
+#include "../ui/text.h"
 #include "../ps5/log.h"
 #include "../ps5/pad.h"
 
@@ -27,6 +29,12 @@ namespace ps5ingame3ds
 	namespace
 	{
 		using ps5menu::Canvas;
+		using ps5lang::Percent;
+		using ps5lang::Tr;
+		using ps5lang::TrC;
+		using ps5lang::TrF;
+		using ps5lang::TrMark;
+		using ps5lang::TrMarkC;
 		const ps5menu::Palette& kColours = ps5menu::kGold;
 
 		// What the game's loop and the menu share
@@ -105,8 +113,27 @@ namespace ps5ingame3ds
 		int s_stateSlot = 1;
 		std::string s_stateAction; // the last save or load asked for in this opening: its tile shows how it went
 
-		constexpr const char* kLayouts[] = {"Top above bottom", "Top screen only", "Large top screen", "Side by side"};
-		constexpr const char* kFilters[] = {"None", "Anime4K", "Bicubic", "ScaleForce", "xBRZ", "MMPX"};
+		// tr: the 3DS's screen layouts
+		constexpr const char* kLayouts[] = {TrMark("Top above bottom"), TrMark("Top screen only"), TrMark("Large top screen"), TrMark("Side by side")};
+		// tr: texture filters: None, then the filters' own names
+		constexpr const char* kFilters[] = {TrMarkC("texture filter", "None"), "Anime4K", TrMark("Bicubic"), "ScaleForce", "xBRZ", "MMPX"};
+
+		std::string LayoutName(int layout)
+		{
+			return Tr(kLayouts[std::clamp(layout, 0, 3)]);
+		}
+
+		std::string FilterName(int filter)
+		{
+			filter = std::clamp(filter, 0, 5);
+			return filter == 0 ? TrC("texture filter", kFilters[0]) : Tr(kFilters[filter]);
+		}
+
+		std::string BorderName(int border)
+		{
+			border = std::clamp(border, 0, kBorderCount - 1);
+			return border + 1 < kBorderCount ? TrC("border", kBorderNames[border]) : kBorderNames[border];
+		}
 		// the CPU clock's steps, percent of the 3DS's
 		constexpr int kClocks[] = {25, 50, 75, 100, 125, 150, 200, 300, 400};
 
@@ -297,7 +324,17 @@ namespace ps5ingame3ds
 				return false;
 			}
 
-			// Lexend's three weights at the menu's sizes, or the Wii U's system font if they are missing
+			// Lexend's three weights at the menu's sizes, or the Wii U's system font if they are missing, with
+			// the console's font for what Lexend lacks (a Russian menu, a Japanese title), cut to the
+			// characters the language's words and the game's name have (docs/UI-REDESIGN.md, 7.7)
+			std::string title;
+			{
+				std::lock_guard lock(s_mutex);
+				title = s_name;
+			}
+			const ImWchar* ranges = ps5menu::GlyphRanges(title);
+			int mergeFace = 0;
+			const auto& merge = ps5menu::MergeFont(mergeFace);
 			g.atlas = new ImFontAtlas();
 			auto add = [&](ps5menu::Weight weight, float size) {
 				ImFontConfig config{};
@@ -306,7 +343,17 @@ namespace ps5ingame3ds
 				if (!file.empty())
 				{
 					config.OversampleH = 2;
-					return g.atlas->AddFontFromMemoryTTF((void*)file.data(), (int)file.size(), size * scale, &config, ps5menu::kGlyphRanges);
+					ImFont* font = g.atlas->AddFontFromMemoryTTF((void*)file.data(), (int)file.size(), size * scale, &config, ranges);
+					if (!merge.empty())
+					{
+						ImFontConfig second{};
+						second.FontDataOwnedByAtlas = false;
+						second.MergeMode = true;
+						second.FontNo = mergeFace;
+						second.OversampleH = 2;
+						g.atlas->AddFontFromMemoryTTF((void*)merge.data(), (int)merge.size(), size * scale, &second, ranges);
+					}
+					return font;
 				}
 				static sint32 fallbackSize = 0;
 				static uint8* fallback = extractCafeDefaultFont(&fallbackSize);
@@ -326,7 +373,8 @@ namespace ps5ingame3ds
 			io.BackendFlags |= ImGuiBackendFlags_HasGamepad;
 
 			InitializeBackend(target);
-			ps5log::Line("[ingame3ds] the menu is ready ({} images in flight)", g.info.ImageCount);
+			ps5log::Line("[ingame3ds] the menu is ready ({} images in flight{})", g.info.ImageCount,
+				merge.empty() ? std::string() : fmt::format("; its second font {}, {} KiB", ps5lang::GetMenuFont().path, merge.size() >> 10));
 			return true;
 		}
 
@@ -384,80 +432,84 @@ namespace ps5ingame3ds
 				stateMessage = s_stateMessage;
 				s_amiiboIndex = s_amiibo.empty() ? 0 : std::clamp(s_amiiboIndex, 0, (int)s_amiibo.size() - 1);
 				noAmiibo = s_amiibo.empty();
-				amiibo = noAmiibo ? "None" : s_amiibo[s_amiiboIndex];
+				amiibo = noAmiibo ? Tr("None") : s_amiibo[s_amiiboIndex];
 				amiiboMessage = s_extrasMessage;
 				cheats = s_cheats;
 			}
 			const int resolution = std::clamp(settings.resolution, 1, 10);
 			std::vector<Row> rows;
-			rows.push_back({"screens", "Screens and border",
-				fmt::format("{} \u00b7 {}", kLayouts[std::clamp(settings.layout, 0, 3)], kBorderNames[std::clamp(settings.border, 0, kBorderCount - 1)]), false,
-				"The screens' layout, which one is the main one, and the border.", {
-				{"layout", "Layout", kLayouts[std::clamp(settings.layout, 0, 3)], true,
-					"How the two screens share the TV. In the game, touchpad click + R1 goes to the next."},
-				{"swap", "Main screen", settings.swapScreens ? "Bottom" : "Top", true,
-					"Which screen takes the top screen's place. In the game, touchpad click + L1 swaps them."},
-				{"border", "Border", kBorderNames[std::clamp(settings.border, 0, kBorderCount - 1)], true,
-					"Artwork around the screens, never over them. Also in the launcher's Settings > Borders."},
+			const std::string on = Tr("On"), off = Tr("Off");
+			rows.push_back({"screens", Tr("Screens and border"), fmt::format("{} \u00b7 {}", LayoutName(settings.layout), BorderName(settings.border)), false,
+				Tr("The screens' layout, which one is the main one, and the border."), {
+				{"layout", Tr("Layout"), LayoutName(settings.layout), true,
+					Tr("How the two screens share the TV. In the game, touchpad click + R1 goes to the next.")},
+				// tr: the 3DS's top and bottom screens
+				{"swap", Tr("Main screen"), settings.swapScreens ? Tr("Bottom") : Tr("Top"), true,
+					Tr("Which screen takes the top screen's place. In the game, touchpad click + L1 swaps them.")},
+				{"border", Tr("Border"), BorderName(settings.border), true,
+					Tr("Artwork around the screens, never over them. Also in the launcher's Settings > Screens and borders.")},
 			}});
-			rows.push_back({"graphics", "Graphics", fmt::format("{}x \u00b7 {}", resolution, kFilters[std::clamp(settings.textureFilter, 0, 5)]), false,
-				"Internal resolution, texture filter and the performance overlay.", {
-				{"resolution", "Internal resolution", fmt::format("{}x  ({}x{})", resolution, 400 * resolution, 240 * resolution), true,
-					"How large the 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU."},
-				{"filter", "Texture filter", kFilters[std::clamp(settings.textureFilter, 0, 5)], true,
-					"Smooths textures as they are scaled up. The costliest setting here: if a game stutters, try None first."},
-				{"performance", "Performance overlay", settings.performance ? "On" : "Off", true,
-					"The frame rate and the emulation's speed, in the top left corner."},
+			rows.push_back({"graphics", Tr("Graphics"), fmt::format("{}x \u00b7 {}", resolution, FilterName(settings.textureFilter)), false,
+				Tr("Internal resolution, texture filter and the performance overlay."), {
+				{"resolution", Tr("Internal resolution"), fmt::format("{}x  ({}x{})", resolution, 400 * resolution, 240 * resolution), true,
+					Tr("How large the 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU.")},
+				{"filter", Tr("Texture filter"), FilterName(settings.textureFilter), true,
+					Tr("Smooths textures as they are scaled up. The costliest setting here: if a game stutters, try None first.")},
+				{"performance", Tr("Performance overlay"), settings.performance ? on : off, true,
+					Tr("The frame rate and the emulation's speed, in the top left corner.")},
 			}});
-			rows.push_back({"pace", "Speed", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "Unlimited", false,
-				"The emulated CPU's clock, and how fast the game may run.", {
-				{"cpu", "CPU clock", fmt::format("{}%", settings.cpuClock), true,
-					"Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS."},
-				{"speed", "Speed limit", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "None", true,
-					"Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only."},
+			rows.push_back({"pace", Tr("Speed"), settings.speedLimit ? Percent(settings.speedLimit) : std::string(Tr("Unlimited")), false,
+				Tr("The emulated CPU's clock, and how fast the game may run."), {
+				{"cpu", Tr("CPU clock"), Percent(settings.cpuClock), true,
+					Tr("Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS.")},
+				// tr: no speed limit
+				{"speed", Tr("Speed limit"), settings.speedLimit ? Percent(settings.speedLimit) : std::string(TrC("speed limit", "None")), true,
+					Tr("Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only.")},
 			}});
-			Row volume{"volume", "Volume", fmt::format("{}%", settings.volume), true, "The game's sound. Left and Right change it by 10%."};
+			Row volume{"volume", Tr("Volume"), Percent(settings.volume), true, Tr("The game's sound. Left and Right change it by 10%.")};
 			volume.slider = settings.volume / 100.0f;
-			rows.push_back({"states", "Save states", fmt::format("Slot {}", s_stateSlot), false,
-				"Five slots for this game: save exactly where you are, and come back to it.", {
-				{"slot", "Slot", fmt::format("{}  {}", s_stateSlot, time.empty() ? "(empty)" : time), true,
-					"Which of this game's five slots to save to or load from."},
-				{"save", "Save to this slot", stateMessage, false,
-					"Saves the game as it is now, replacing what the slot had. Newer app versions may not load it: keep saving in the game too."},
+			rows.push_back({"states", Tr("Save states"), TrF("Slot {0}", s_stateSlot), false,
+				Tr("Five slots for this game: save exactly where you are, and come back to it."), {
+				// tr: a save state slot's number, then when it was saved (or empty)
+				{"slot", Tr("Slot"), fmt::format("{}  {}", s_stateSlot, time.empty() ? Tr("(empty)") : time), true,
+					Tr("Which of this game's five slots to save to or load from.")},
+				{"save", Tr("Save to this slot"), stateMessage, false,
+					Tr("Saves the game as it is now, replacing what the slot had. Newer app versions may not load it: keep saving in the game too.")},
 			}});
-			Row cheatRows{"cheats", "Cheats", "", false, "The game's cheats, from azahar/cheats/<title ID>.txt (Gateway format)."};
+			Row cheatRows{"cheats", Tr("Cheats"), "", false, Tr("The game's cheats, from azahar/cheats/<title ID>.txt (Gateway format).")};
 			for (size_t i = 0; i < cheats.size(); i++)
-				cheatRows.rows.push_back({fmt::format("cheat{}", i), cheats[i].first, cheats[i].second ? "On" : "Off", true,
-					"Cross, Left or Right turns it on or off, at once; it is kept for next time."});
+				cheatRows.rows.push_back({fmt::format("cheat{}", i), cheats[i].first, cheats[i].second ? on : off, true,
+					Tr("Cross, Left or Right turns it on or off, at once; it is kept for next time.")});
 			if (cheats.empty())
-				cheatRows.rows.push_back({"nocheats", "No cheats for this game", "", false,
-					"Put them in /data/ps5cemu/azahar/cheats/<title ID>.txt, then start the game again."});
+				cheatRows.rows.push_back({"nocheats", Tr("No cheats for this game"), "", false,
+					Tr("Put them in /data/ps5cemu/azahar/cheats/<title ID>.txt, then start the game again.")});
 			else
-				cheatRows.value = fmt::format("{} of {} on", std::count_if(cheats.begin(), cheats.end(), [](const auto& c) { return c.second; }), cheats.size());
+				// tr: how many of the game's cheats are on: {0} of {1}
+				cheatRows.value = TrF("{0} of {1} on", std::count_if(cheats.begin(), cheats.end(), [](const auto& c) { return c.second; }), cheats.size());
 			rows.push_back(cheatRows);
-			rows.push_back({"amiibos", "Amiibo", amiibo, false, "Hold an amiibo dump to the 3DS's reader when the game asks for one.", {
-				{"amiibo", "Amiibo", amiibo, true,
-					noAmiibo ? "Put amiibo dumps (.bin) in /data/ps5cemu/amiibo to scan them here." :
-							   "Left and Right choose an amiibo dump; Cross holds it to the reader."},
-				{"noamiibo", "Take the amiibo away", amiiboMessage, false, "Takes the amiibo off the reader, as lifting it off would."},
+			rows.push_back({"amiibos", Tr("Amiibo"), amiibo, false, Tr("Hold an amiibo dump to the 3DS's reader when the game asks for one."), {
+				{"amiibo", Tr("Amiibo"), amiibo, true,
+					noAmiibo ? Tr("Put amiibo dumps (.bin) in /data/ps5cemu/amiibo to scan them here.") :
+							   Tr("Left and Right choose an amiibo dump; Cross holds it to the reader.")},
+				{"noamiibo", Tr("Take the amiibo away"), amiiboMessage, false, Tr("Takes the amiibo off the reader, as lifting it off would.")},
 			}});
 			rows.push_back(volume);
-			rows.push_back({"controls", "Controls", settings.aOnCircle ? "A on Circle" : "A on Cross", false,
-				"Motion controls, the sticks' deadzone and where A and B are.", {
-				{"motion", "Motion controls", settings.motion ? "On" : "Off", true,
-					"The DualSense's gyroscope and accelerometer as the 3DS's, for the games that aim or steer by tilting."},
-				{"deadzone", "Stick deadzone", fmt::format("{}%", settings.deadzone), true,
-					"How far a stick moves before the game sees it. Raise it if something drifts when you let go."},
-				{"ab", "A and B", settings.aOnCircle ? "A on Circle" : "A on Cross", true,
-					"A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match."},
+			rows.push_back({"controls", Tr("Controls"), settings.aOnCircle ? Tr("A on Circle") : Tr("A on Cross"), false,
+				Tr("Motion controls, the sticks' deadzone and where A and B are."), {
+				{"motion", Tr("Motion controls"), settings.motion ? on : off, true,
+					Tr("The DualSense's gyroscope and accelerometer as the 3DS's, for the games that aim or steer by tilting.")},
+				{"deadzone", Tr("Stick deadzone"), Percent(settings.deadzone), true,
+					Tr("How far a stick moves before the game sees it. Raise it if something drifts when you let go.")},
+				{"ab", Tr("A and B"), settings.aOnCircle ? Tr("A on Circle") : Tr("A on Cross"), true,
+					Tr("A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match.")},
 			}});
-			Row library{"library", "Quit to the library", "", false,
-				"Leaves the game for the library. What you have not saved in the game is lost, so Cross is held."};
+			Row library{"library", Tr("Quit to the library"), "", false,
+				Tr("Leaves the game for the library. What you have not saved in the game is lost, so Cross is held.")};
 			library.apart = true;
 			library.hold = true;
 			// loading a state, as a row too: held, as the quick action is
-			Row load{"load", "Load this slot", time.empty() ? "Empty" : "", false,
-				"Goes back to the moment the slot was saved. What you did since is lost, so Cross is held."};
+			Row load{"load", Tr("Load this slot"), time.empty() ? Tr("Empty") : "", false,
+				Tr("Goes back to the moment the slot was saved. What you did since is lost, so Cross is held.")};
 			load.hold = !time.empty();
 			for (Row& row : rows)
 				if (row.id == "states")
@@ -477,16 +529,17 @@ namespace ps5ingame3ds
 				empty = s_stateSlot > (int)s_stateTimes.size() || s_stateTimes[s_stateSlot - 1].empty();
 				message = s_stateMessage;
 			}
-			std::vector<ps5menu::Tile> tiles{{"resume", "Resume", "resume"},
-				{"save", "Save state", "save", fmt::format("Slot {}", s_stateSlot)},
-				{"load", "Load state", "load", empty ? fmt::format("Slot {} empty", s_stateSlot) : fmt::format("Slot {}", s_stateSlot), !empty},
-				{"layout", "Screens", "screens", kLayouts[std::clamp(settings.layout, 0, 3)]}};
+			// tr: the quick actions: big tiles at the top of the in-game menu, a word or two each
+			std::vector<ps5menu::Tile> tiles{{"resume", Tr("Resume"), "resume"},
+				{"save", Tr("Save state"), "save", TrF("Slot {0}", s_stateSlot)},
+				{"load", Tr("Load state"), "load", empty ? TrF("Slot {0} empty", s_stateSlot) : TrF("Slot {0}", s_stateSlot), !empty},
+				{"layout", Tr("Screens"), "screens", LayoutName(settings.layout)}};
 			// how the last save or load went, on its tile (Made by another version, Saved slot 1...)
 			for (ps5menu::Tile& tile : tiles)
 				if (!message.empty() && tile.id == s_stateAction)
 				{
 					tile.caption = message;
-					tile.help = fmt::format("Slot {}: {}", s_stateSlot, message);
+					tile.help = TrF("Slot {0}: {1}", s_stateSlot, message);
 				}
 			return tiles;
 		}
@@ -540,7 +593,7 @@ namespace ps5ingame3ds
 				}
 				else if (id == "load" && (s_stateSlot > (int)s_stateTimes.size() || s_stateTimes[s_stateSlot - 1].empty()))
 				{
-					s_stateMessage = fmt::format("Slot {} is empty", s_stateSlot);
+					s_stateMessage = TrF("Slot {0} is empty", s_stateSlot);
 					s_stateAction = id;
 				}
 				else if (id == "save" || id == "load")
@@ -548,7 +601,7 @@ namespace ps5ingame3ds
 					// loading is held to here (side_menu.h)
 					s_stateRequest = id == "save" ? s_stateSlot : -s_stateSlot;
 					s_stateAction = id;
-					s_stateMessage = id == "save" ? "Saving..." : "Loading...";
+					s_stateMessage = id == "save" ? Tr("Saving…") : Tr("Loading…");
 				}
 				else if (id == "amiibo" && !chosen && !s_amiibo.empty())
 					s_amiiboIndex = (s_amiiboIndex + change + (int)s_amiibo.size()) % (int)s_amiibo.size();
@@ -600,14 +653,15 @@ namespace ps5ingame3ds
 			const Canvas canvas{ImGui::GetForegroundDrawList(), scale, origin, kColours};
 			ps5menu::Header header;
 			header.system = "3DS";
-			header.status = "PAUSED";
+			// tr: the in-game menu's badge: the game waits behind the menu
+			header.status = Tr("Paused");
 			header.title = name;
 			header.details = details;
 			header.cover = g.cover;
 			header.coverWidth = (float)g.coverWidth;
 			header.coverHeight = (float)g.coverHeight;
 			s_side.Draw(canvas, {g.head, g.body, g.row, g.small, g.chip}, header, MenuRows(settings), Tiles(settings),
-				{{"cross", "Choose"}, {"leftright", "Change"}, {"circle", s_side.Open().empty() ? "Back to the game" : "Back"}});
+				{{"cross", Tr("Choose")}, {"leftright", Tr("Change")}, {"circle", s_side.Open().empty() ? Tr("Back to the game") : Tr("Back")}});
 		}
 
 		// -- the keyboard ----------------------------------------------------------------------------
@@ -653,7 +707,7 @@ namespace ps5ingame3ds
 				}
 			}
 			if (request.buttons.empty())
-				request.buttons = {"OK"};
+				request.buttons = {Tr("OK")};
 			const ImVec2 origin{(io.DisplaySize.x - 1920.0f * scale) * 0.5f, (io.DisplaySize.y - 1080.0f * scale) * 0.5f};
 			ImGui::SetNextWindowPos({0, 0}, ImGuiCond_Always);
 			ImGui::SetNextWindowSize(io.DisplaySize, ImGuiCond_Always);
@@ -669,8 +723,9 @@ namespace ps5ingame3ds
 				const Canvas canvas{ImGui::GetWindowDrawList(), scale, origin, kColours};
 				canvas.draw->AddRectFilled({0, 0}, io.DisplaySize, kColours.dim);
 				canvas.Panel(260, 110, 1400, 860);
-				canvas.Text(g.small, 20, 300, 136, kColours.kicker, "THE GAME ASKS FOR");
-				canvas.Text(g.head, 32, 300, 170, kColours.title, request.hint.empty() ? "Some text" : request.hint, 1320);
+				// tr: over the 3DS's keyboard: what the game asks to have typed
+				canvas.Text(g.small, 20, 300, 136, kColours.kicker, ui::Upper(Tr("The game asks for"), ps5lang::Current() == "tr"));
+				canvas.Text(g.head, 32, 300, 170, kColours.title, request.hint.empty() ? Tr("Some text") : request.hint, 1320);
 				canvas.Row(300, 236, 1320, 72, false);
 				canvas.Text(g.row, 24, 330, 258, kColours.text, s_typed + "_");
 				if (request.maxLength > 0)
@@ -698,11 +753,12 @@ namespace ps5ingame3ds
 						if (key(325 + column * 128, 360 + row * 84, 118, character))
 							Type(character, request.maxLength);
 					}
-				if (key(325, 696, 246, s_shift ? "Shift: on" : "Shift"))
+				// tr: the 3DS keyboard's keys
+				if (key(325, 696, 246, s_shift ? Tr("Shift: on") : Tr("Shift")))
 					s_shift = !s_shift;
-				if (key(581, 696, 502, "Space"))
+				if (key(581, 696, 502, Tr("Space")))
 					Type(" ", request.maxLength);
-				if (key(1093, 696, 502, "Delete") && !s_typed.empty())
+				if (key(1093, 696, 502, Tr("Delete")) && !s_typed.empty())
 					s_typed.pop_back();
 				// the game's buttons, right-aligned on the last row
 				const float buttonWidth = 300;
@@ -716,9 +772,9 @@ namespace ps5ingame3ds
 
 				canvas.draw->AddLine(canvas.At(300, 900), canvas.At(1620, 900), kColours.line, scale);
 				float x = 300;
-				x = canvas.Hint(g.small, x, 915, "cross", "Type");
-				x = canvas.Hint(g.small, x, 915, "circle", "Delete");
-				x = canvas.Hint(g.small, x, 915, "triangle", "Shift");
+				x = canvas.Hint(g.small, x, 915, "cross", Tr("Type"));
+				x = canvas.Hint(g.small, x, 915, "circle", Tr("Delete"));
+				x = canvas.Hint(g.small, x, 915, "triangle", Tr("Shift"));
 				canvas.Hint(g.small, x, 915, "options", request.buttons.back());
 			}
 			ImGui::End();

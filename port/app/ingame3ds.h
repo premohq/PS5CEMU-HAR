@@ -11,6 +11,8 @@
 #endif
 #include <vulkan/vulkan.h>
 
+#include "lang.h"
+
 #include <cstdint>
 #include <iterator>
 #include <string>
@@ -100,7 +102,9 @@ namespace ps5ingame3ds
 	// The border: artwork drawn around the screens, never over them, with a frame round each (a soft
 	// shadow, a hairline, a ring for Shell). From the game's loop: the theme with its picture (RGBA,
 	// top row first; empty for none), and where the screens are on a width x height picture.
-	constexpr const char* kBorderNames[] = {"None", "Midnight", "Waves", "Aurora", "Shell", "PS5CEMU-HAR"};
+	// tr: the 3DS borders' names (artwork around the screens)
+	constexpr const char* kBorderNames[] = {ps5lang::TrMarkC("border", "None"), ps5lang::TrMarkC("border", "Midnight"),
+		ps5lang::TrMarkC("border", "Waves"), ps5lang::TrMarkC("border", "Aurora"), ps5lang::TrMarkC("border", "Shell"), "PS5CEMU-HAR"};
 	constexpr int kBorderCount = (int)std::size(kBorderNames);
 	struct ScreenRect
 	{

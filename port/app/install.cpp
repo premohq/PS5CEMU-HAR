@@ -8,6 +8,7 @@
 // file keeps Cemu's MPL-2.0 licence.
 
 #include "emulator.h"
+#include "lang.h"
 #include "../ps5/log.h"
 
 #include "Cafe/TitleList/TitleId.h"
@@ -98,7 +99,8 @@ namespace ps5emu
 			const fs::space_info space = fs::space(ActiveSettings::GetMlcPath(), ec);
 			if (!ec && space.available <= total)
 			{
-				SetStatus(InstallStatus::State::Failed, fmt::format("There is not enough space: it needs {}, and {} is free.",
+				// tr: {0} and {1} are sizes (2.4 GB)
+				SetStatus(InstallStatus::State::Failed, ps5lang::TrF("There is not enough space: it needs {0}, and {1} is free.",
 					Gigabytes(total), Gigabytes(space.available)));
 				return;
 			}
@@ -113,7 +115,7 @@ namespace ps5emu
 				fs::rename(target, backup, ec);
 				if (ec)
 				{
-					SetStatus(InstallStatus::State::Failed, "What is installed there now could not be moved aside: " + ec.message());
+					SetStatus(InstallStatus::State::Failed, ps5lang::TrF("What is installed there now could not be moved aside: {0}", ec.message()));
 					return;
 				}
 			}
@@ -171,14 +173,14 @@ namespace ps5emu
 		if (!fs::is_directory(path / "meta", ec) || !fs::is_directory(path / "content", ec))
 		{
 			candidate.note = fs::exists(path / "title.tmd", ec) ?
-				"This one is not unpacked (title.tmd and .app files). Cemu reads it from the game files folder as it is: no install needed." :
-				"There is no title here: a game, update or DLC to install is a folder with code, content and meta.";
+				ps5lang::Tr("This one is not unpacked (title.tmd and .app files). Cemu reads it from the game files folder as it is: no install needed.") :
+				ps5lang::Tr("There is no title here: a game, update or DLC to install is a folder with code, content and meta.");
 			return candidate;
 		}
 		TitleInfo title(path);
 		if (!title.IsValid())
 		{
-			candidate.note = "Its meta folder does not describe a Wii U title (meta.xml).";
+			candidate.note = ps5lang::Tr("Its meta folder does not describe a Wii U title (meta.xml).");
 			return candidate;
 		}
 		candidate.name = title.GetMetaTitleName();
@@ -197,7 +199,7 @@ namespace ps5emu
 		if (fs::equivalent(target, path, ec))
 		{
 			candidate.kind = InstallCandidate::Kind::None;
-			candidate.note = "This is where it is installed already.";
+			candidate.note = ps5lang::Tr("This is where it is installed already.");
 			return candidate;
 		}
 		if (fs::exists(target, ec))
@@ -213,7 +215,7 @@ namespace ps5emu
 	{
 		if (GetInstallStatus().state == InstallStatus::State::Running)
 		{
-			error = "An install is already running.";
+			error = ps5lang::Tr("An install is already running.");
 			return false;
 		}
 		const InstallCandidate candidate = InspectInstall(folder);

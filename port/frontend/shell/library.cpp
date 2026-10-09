@@ -20,7 +20,16 @@ namespace ps5shell
 
 	namespace
 	{
-		constexpr const char* kSorts[] = {"Recently played", "A to Z", "Release year", "How it runs"};
+		// tr: the Library's orders (Square)
+		constexpr const char* kSorts[] = {TrMark("Recently played"), TrMark("A to Z"), TrMark("Release year"), TrMark("How it runs")};
+
+		std::vector<std::string> SortNames()
+		{
+			std::vector<std::string> names;
+			for (const char* sort : kSorts)
+				names.push_back(Tr(sort));
+			return names;
+		}
 		constexpr float kGridTop = 236;
 
 		int StatusRank(const ps5compat::Report* report)
@@ -111,7 +120,7 @@ namespace ps5shell
 		const int offset = Is3ds() ? 1 : 0;
 		const int total = (int)m_shelf.size() + offset;
 		auto sortPicker = [this, side] {
-			OpenPicker("Library", "Sort", std::vector<std::string>(std::begin(kSorts), std::end(kSorts)), m_settings.ui.librarySort[side],
+			OpenPicker(TrC("tab", "Library"), Tr("Sort"), SortNames(), m_settings.ui.librarySort[side],
 				[this, side](int choice) {
 					m_settings.ui.librarySort[side] = choice;
 					SaveSettings();
@@ -312,12 +321,30 @@ namespace ps5shell
 			counts[2] += game.entry.favourite;
 			counts[3] += game.packsOn > 0;
 		}
-		const char* names[4] = {"All", "Recently added", "Favourites", "Graphic packs on"};
+		// tr: the Library's filters, each with its count after it
+		const char* names[4] = {TrC("filter", "All"), Tr("Recently added"), Tr("Favourites"), Tr("Graphic packs on")};
 		const int filters = Is3ds() || !m_status.coreReady ? 3 : 4;
 		const int filter = m_settings.ui.libraryFilter[side];
+		// Sort and Search at the right first: the filters have the rest of the row, their text a step
+		// smaller at a time in a language whose words do not fit it
+		const ui::TextStyle action = Style({24, ui::Weight::Medium, 1.0f});
+		const std::string sortLabel = TrF("Sort: {0}", Tr(kSorts[std::clamp(m_settings.ui.librarySort[side], 0, 3)]));
+		const float actionsWidth = m_fonts.Width(action, Tr("Search")) + 36 + 34 + m_fonts.Width(action, sortLabel) + 36;
+		const float filtersRoom = 1920 - 2 * kSafeX - actionsWidth - 40 - (m_scanning || !m_search.empty() ? 260 : 0);
+		ui::TextStyle pillStyle = Style({26, ui::Weight::Medium, 1.0f});
+		ui::TextStyle countStyle = Style({20, ui::Weight::SemiBold, 1.0f, 0, false, true});
+		auto filtersWidth = [&] {
+			float width = 0;
+			for (int i = 0; i < filters; i++)
+				width += 26 + m_fonts.Width(pillStyle, names[i]) + 12 + m_fonts.Width(countStyle, std::to_string(counts[i])) + 26 + 14;
+			return width;
+		};
+		for (int step = 0; step < 6 && filtersWidth() > filtersRoom; step++)
+		{
+			pillStyle.size -= 2;
+			countStyle.size -= 1;
+		}
 		float x = kSafeX;
-		const ui::TextStyle pillStyle = Style({26, ui::Weight::Medium, 1.0f});
-		const ui::TextStyle countStyle = Style({20, ui::Weight::SemiBold, 1.0f, 0, false, true});
 		for (int i = 0; i < filters; i++)
 		{
 			const bool on = i == filter;
@@ -337,15 +364,14 @@ namespace ps5shell
 				Focus(pill, 26);
 			x += w + 14;
 		}
+		const float room = 1920 - kSafeX - actionsWidth - 20 - (x + 12);
 		if (!m_search.empty())
-			Chip(canvas, x + 6, 143, "Search: " + m_search);
+			Chip(canvas, x + 6, 143, TrF("Search: {0}", m_search));
 		if (m_scanning)
-			canvas.Text(Style(kCaptionStyle), x + 12, 150, "Looking for new games…", Tertiary());
+			canvas.Text(Style(kCaptionStyle), x + 12, 150, Tr("Looking for new games…"), Tertiary(), std::max(120.0f, room), 1);
 		// Sort and Search
-		const ui::TextStyle action = Style({24, ui::Weight::Medium, 1.0f});
-		const std::string sortLabel = std::string("Sort: ") + kSorts[std::clamp(m_settings.ui.librarySort[side], 0, 3)];
 		float right = 1920 - kSafeX;
-		const ui::TextBlock searchText = m_fonts.Layout(action, "Search");
+		const ui::TextBlock searchText = m_fonts.Layout(action, Tr("Search"));
 		right -= searchText.width;
 		canvas.Text(searchText, right, 162 - searchText.height * 0.5f, Secondary());
 		canvas.Draw(Icon::Triangle, {right - 36, 148, 28, 28}, Secondary());
@@ -362,13 +388,16 @@ namespace ps5shell
 			WantBackdrop(nullptr);
 			canvas.PushAlpha(Enter(2));
 			canvas.Text(Style(kTitleStyle), kSafeX, 320,
-				m_scanning ? "Looking for games…" : !m_search.empty() ? "Nothing matches “" + m_search + "”" : filter ? "None here yet" : "No games yet",
-				kText);
+				m_scanning			? std::string(Tr("Looking for games…")) :
+				!m_search.empty()	? TrF("Nothing matches “{0}”", m_search) :
+				filter				? std::string(Tr("None here yet")) :
+									  std::string(Tr("No games yet")),
+				kText, 1920 - 2 * kSafeX, 1);
 			canvas.Text(Style(kBodyStyle), kSafeX, 390,
-				!m_search.empty() ? "Circle clears the search." :
-				filter == 2		  ? "Options on a game, then Favourite, puts it here." :
-				filter			  ? "All shows every game." :
-									"Settings > Games and folders says where they go.",
+				!m_search.empty() ? Tr("Circle clears the search.") :
+				filter == 2		  ? Tr("Options on a game, then Favourite, puts it here.") :
+				filter			  ? Tr("All shows every game.") :
+									Tr("Settings > Games and folders says where they go."),
 				Secondary(), 900, 3);
 			canvas.PopAlpha();
 			return;
@@ -402,9 +431,9 @@ namespace ps5shell
 				// Artic Base: a game from your 3DS
 				canvas.Rect(box, kRadiusCard, 0x0dffffff);
 				canvas.Ring(box, kRadiusCard, 2, ui::SetAlpha(kN3ds, 0.45f));
-				canvas.Text(Style({26, ui::Weight::SemiBold, 1.2f}), box.x + 16, box.y + box.h * 0.22f, "Play from your 3DS", kText, box.w - 32, 2,
+				canvas.Text(Style({26, ui::Weight::SemiBold, 1.2f}), box.x + 16, box.y + box.h * 0.22f, Tr("Play from your 3DS"), kText, box.w - 32, 2,
 					ui::Align::Centre);
-				canvas.Text(Style({19, ui::Weight::Regular, 1.3f}), box.x + 16, box.y + box.h * 0.6f, "Artic Base, over your network", Secondary(),
+				canvas.Text(Style({19, ui::Weight::Regular, 1.3f}), box.x + 16, box.y + box.h * 0.6f, Tr("Artic Base, over your network"), Secondary(),
 					box.w - 32, 2, ui::Align::Centre);
 			}
 			else
@@ -417,9 +446,9 @@ namespace ps5shell
 			{
 				const Box box = focusedBox.Scaled(1 + lift);
 				canvas.Rect(box, kRadiusCard, 0x1affffff);
-				canvas.Text(Style({26, ui::Weight::SemiBold, 1.2f}), box.x + 16, box.y + box.h * 0.22f, "Play from your 3DS", kText, box.w - 32, 2,
+				canvas.Text(Style({26, ui::Weight::SemiBold, 1.2f}), box.x + 16, box.y + box.h * 0.22f, Tr("Play from your 3DS"), kText, box.w - 32, 2,
 					ui::Align::Centre);
-				canvas.Text(Style({19, ui::Weight::Regular, 1.3f}), box.x + 16, box.y + box.h * 0.6f, "Artic Base, over your network", Secondary(),
+				canvas.Text(Style({19, ui::Weight::Regular, 1.3f}), box.x + 16, box.y + box.h * 0.6f, Tr("Artic Base, over your network"), Secondary(),
 					box.w - 32, 2, ui::Align::Centre);
 				Focus(box, kRadiusCard, kN3ds);
 			}
@@ -435,7 +464,7 @@ namespace ps5shell
 				const ui::TextBlock facts = canvas.Text(Style({22, ui::Weight::Regular, 1.2f}), fx, under + name.height + 6, Byline(g), Secondary(), 420, 1);
 				fx += facts.width + 14;
 				if (g.report)
-					fx += Chip(canvas, fx, under + name.height + 2, g.report->status, ps5compat::Kind(g.report->status), 34) + 10;
+					fx += Chip(canvas, fx, under + name.height + 2, TrC("status", g.report->status), ps5compat::Kind(g.report->status), 34) + 10;
 				if (!Played(g).empty())
 					Chip(canvas, fx, under + name.height + 2, Played(g), "", 34);
 			}

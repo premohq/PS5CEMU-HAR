@@ -216,6 +216,8 @@ namespace ui
 
 	void Canvas::Text(const TextBlock& block, float x, float y, uint32_t colour, Align align, float alignWidth)
 	{
+		// the glyphs' places in the atlas are in texels: its size now (it grows as glyphs are rendered)
+		const float pixelU = 1.0f / std::max(1u, m_fonts.AtlasWidth()), pixelV = 1.0f / std::max(1u, m_fonts.AtlasHeight());
 		for (const TextBlock::Line& line : block.lines)
 		{
 			float dx = 0;
@@ -228,10 +230,10 @@ namespace ui
 				const PlacedGlyph& glyph = block.glyphs[i];
 				const Box quad{x + dx + glyph.x, y + glyph.y, glyph.width, glyph.height};
 				Instance instance = Make(quad, quad, 0, kGlyph, colour);
-				instance.uv[0] = glyph.u0;
-				instance.uv[1] = glyph.v0;
-				instance.uv[2] = glyph.u1;
-				instance.uv[3] = glyph.v1;
+				instance.uv[0] = glyph.u0 * pixelU;
+				instance.uv[1] = glyph.v0 * pixelV;
+				instance.uv[2] = glyph.u1 * pixelU;
+				instance.uv[3] = glyph.v1 * pixelV;
 				instance.extra[2] = glyph.weight;
 				Add(instance);
 			}
@@ -369,6 +371,14 @@ namespace ui
 			line(0.2f, 0.5f, 0.8f, 0.5f);
 			line(0.2f, 0.5f, 0.42f, 0.28f);
 			line(0.2f, 0.5f, 0.42f, 0.72f);
+			break;
+		case Icon::Globe:
+			// the earth's outline, a meridian, the equator and two parallels
+			Ring({X(0.12f), Y(0.12f), s * 0.76f, s * 0.76f}, s, stroke, colour);
+			Ring({X(0.33f), Y(0.12f), s * 0.34f, s * 0.76f}, s, stroke * 0.85f, colour);
+			line(0.12f, 0.5f, 0.88f, 0.5f, 0.06f);
+			line(0.2f, 0.31f, 0.8f, 0.31f, 0.05f);
+			line(0.2f, 0.69f, 0.8f, 0.69f, 0.05f);
 			break;
 		}
 	}

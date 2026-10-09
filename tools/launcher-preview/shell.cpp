@@ -26,12 +26,14 @@
 // after earlier sessions, on the Wii U side's Home; with PREVIEW_FIRST set, as on a first start (the
 // Setup check, then the side with games); PREVIEW_ASK sets Start on: Ask each time; PREVIEW_UPDATE has
 // a newer release found; PREVIEW_NO_DATA, /data out of reach; PREVIEW_LAUNCH_ERROR, the last game not
-// started.
+// started. PREVIEW_LANGUAGE names the menus' language ("de"; "qps", tools/lang.py pseudo's, for text
+// that does not fit), PREVIEW_SYSTEM_LANGUAGE the PS5's (its number: 4 is German, 0 Japanese).
 
 #include "console.h"
 
 #include "app/compatibility.h"
 #include "app/gameinfo.h"
+#include "app/lang.h"
 #include "app/updates.h"
 #include "azahar/library.h"
 #include "frontend/shell.h"
@@ -61,7 +63,7 @@ ps5shell::Host ps5shell::DefaultHost()
 		return target;
 	};
 	host.assets = "port/ui"; // its fonts/lexend.sdf, as the app's assets/ui has it
-	host.fontFolders = {"/usr/share/fonts"};
+	host.fontFolders = {preview::output + "/fonts"}; // preview-shell.sh's stand-ins for the console's fonts
 	host.clock = [] { return preview::timeUs / 1e6; };
 	host.afterFrame = [] {
 		preview::timeUs += 16667;
@@ -101,6 +103,12 @@ int main(int argc, char* argv[])
 	}
 	if (std::getenv("PREVIEW_ASK"))
 		settings.ui.startOn = "ask";
+	// the menus' language: PREVIEW_LANGUAGE's code (qps: tools/lang.py pseudo's), else the PS5's, which
+	// PREVIEW_SYSTEM_LANGUAGE gives as the console's number (console.cpp)
+	if (const char* language = std::getenv("PREVIEW_LANGUAGE"))
+		settings.ui.language = language;
+	ps5lang::SetFolder("port/lang");
+	ps5lang::Load(settings.ui.language);
 	ps5launcher::Status status;
 	status.diagnostics = {"PS5CEMU-HAR preview: Cemu at 32e6628, Azahar at 4aef900", "Jailbroken by the HEN: /data reachable, executable memory",
 		"Boot log: /data/ps5cemu/logs/boot.log", "Cemu's log: /data/ps5cemu/log.txt"};
@@ -108,7 +116,8 @@ int main(int argc, char* argv[])
 		status.notice = status.notice3ds =
 			"PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR.";
 	else if (std::getenv("PREVIEW_LAUNCH_ERROR"))
-		status.notice = "The game could not start: its disc key is missing from /data/ps5cemu/keys.txt.";
+		status.launchError = ps5lang::Tr("This is not a Wii U game PS5CEMU-HAR can start.") + std::string(" ") +
+			ps5lang::Tr("Its disc key is missing from /data/ps5cemu/keys.txt.");
 
 	// as main_ps5.cpp's: a side opens when the launcher opens it (the preview's Cemu starts at once)
 	std::optional<ps5launcher::Choice> choice;

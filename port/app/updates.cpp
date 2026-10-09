@@ -2,6 +2,7 @@
 #include "updates.h"
 #include "boxart.h"
 #include "pack_updates.h"
+#include "lang.h"
 #include "paths.h"
 #include "../ps5/kernel.h"
 #include "../ps5/log.h"
@@ -299,7 +300,7 @@ namespace ps5update
 			zip_t* zip = zip_open(archive.c_str(), ZIP_RDONLY, &code);
 			if (!zip)
 			{
-				error = fmt::format("the download is not a ZIP ({})", code);
+				error = ps5lang::TrF("the download is not a ZIP ({0})", code);
 				return false;
 			}
 			const zip_int64_t entries = zip_get_num_entries(zip, 0);
@@ -325,7 +326,7 @@ namespace ps5update
 				std::ofstream out(path, std::ios::binary | std::ios::trunc);
 				if (!in || !out)
 				{
-					error = fmt::format("{} could not be unpacked", entry);
+					error = ps5lang::TrF("{0} could not be unpacked", entry);
 					ok = false;
 				}
 				for (zip_int64_t read; ok && (read = zip_fread(in, buffer.data(), buffer.size())) > 0;)
@@ -335,7 +336,7 @@ namespace ps5update
 				out.close();
 				if (ok && !out)
 				{
-					error = fmt::format("{} could not be written (is /data full?)", entry);
+					error = ps5lang::TrF("{0} could not be written (is /data full?)", entry);
 					ok = false;
 				}
 				// readable, writable and runnable by all, as the app's files are when copied over
@@ -345,12 +346,12 @@ namespace ps5update
 			zip_close(zip);
 			if (ok && s_stop)
 			{
-				error = "stopped for a game";
+				error = ps5lang::Tr("stopped for a game");
 				ok = false;
 			}
 			if (ok && std::find(files.begin(), files.end(), fs::path("eboot.bin")) == files.end())
 			{
-				error = "the download has no eboot.bin";
+				error = ps5lang::Tr("the download has no eboot.bin");
 				ok = false;
 			}
 			return ok;
@@ -364,14 +365,15 @@ namespace ps5update
 			if (!Fetch(resolve, kLatest, body, 10, "Accept: application/vnd.github+json") || json.Parse(body.c_str()).HasParseError() ||
 				!json.IsObject() || !json.HasMember("tag_name") || !json["tag_name"].IsString())
 			{
-				Fail("GitHub did not answer with a release");
+				// tr: why an update did not finish
+				Fail(ps5lang::Tr("GitHub did not answer with a release"));
 				return;
 			}
 			const std::string latest = json["tag_name"].GetString();
 			Version mine, theirs;
 			if (!Parse(PS5CEMU_VERSION, mine) || !Parse(latest, theirs))
 			{
-				Fail("The latest release's version (" + latest + ") is not one this can read");
+				Fail(ps5lang::TrF("The latest release's version ({0}) is not one this can read", latest));
 				return;
 			}
 			{
@@ -396,7 +398,7 @@ namespace ps5update
 			std::string sums, expected;
 			if (!Fetch(resolve, std::string(kFiles) + "SHA256SUMS", sums, 20))
 			{
-				Fail("The release's checksums could not be downloaded");
+				Fail(ps5lang::Tr("The release's checksums could not be downloaded"));
 				return;
 			}
 			for (size_t start = 0; start < sums.size();)
@@ -411,7 +413,7 @@ namespace ps5update
 			}
 			if (expected.size() != 64)
 			{
-				Fail(fmt::format("The releases branch has no checksum for {}", zipName));
+				Fail(ps5lang::TrF("The releases branch has no checksum for {0}", zipName));
 				return;
 			}
 
@@ -425,7 +427,7 @@ namespace ps5update
 			CURL* curl = Session(resolve, (std::string(kFiles) + zipName).c_str());
 			if (!curl)
 			{
-				Fail("The download could not start");
+				Fail(ps5lang::Tr("The download could not start"));
 				return;
 			}
 			curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, Write);
@@ -439,7 +441,7 @@ namespace ps5update
 			{
 				fs::remove(archive, ec);
 				ps5log::Line("[update] the download of {} failed ({}, HTTP {})", zipName, s_stop ? "stopped for a game" : curl_easy_strerror(result), http);
-				Set(Status::State::Failed, s_stop ? "Stopped for a game" : "The download did not finish: is the PS5 online?");
+				Set(Status::State::Failed, s_stop ? ps5lang::Tr("Stopped for a game") : ps5lang::Tr("The download did not finish: is the PS5 online?"));
 				return;
 			}
 
@@ -448,7 +450,7 @@ namespace ps5update
 			if (actual != expected)
 			{
 				fs::remove(archive, ec);
-				Fail(fmt::format("The download is damaged (SHA-256 {}, not {})", actual.substr(0, 12), expected.substr(0, 12)));
+				Fail(ps5lang::TrF("The download is damaged (SHA-256 {0}, not {1})", actual.substr(0, 12), expected.substr(0, 12)));
 				return;
 			}
 
@@ -458,7 +460,7 @@ namespace ps5update
 			if (app.empty())
 			{
 				fs::remove(archive, ec);
-				Fail("PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand");
+				Fail(ps5lang::Tr("PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"));
 				return;
 			}
 			ps5log::Line("[update] installing in {}", app.string());
@@ -470,7 +472,7 @@ namespace ps5update
 			{
 				fs::remove_all(staging, ec);
 				fs::remove(archive, ec);
-				Fail("It could not be unpacked: " + error);
+				Fail(ps5lang::TrF("It could not be unpacked: {0}", error));
 				return;
 			}
 			// the program last, so that until then the app is the old one whole
@@ -485,7 +487,7 @@ namespace ps5update
 				fs::rename(staging / file, app / file, ec);
 				if (ec)
 				{
-					Fail(fmt::format("{} could not be replaced ({}): copy the release's PPSA99360 folder over by hand", file.string(), ec.message()));
+					Fail(ps5lang::TrF("{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand", file.string(), ec.message()));
 					return;
 				}
 			}
@@ -503,7 +505,7 @@ namespace ps5update
 			if (!resolve)
 			{
 				ps5log::Line("[update] GitHub could not be found: no update check");
-				Set(Status::State::Failed, "GitHub could not be found: is the PS5 online?");
+				Set(Status::State::Failed, ps5lang::Tr("GitHub could not be found: is the PS5 online?"));
 				return;
 			}
 			if (install)

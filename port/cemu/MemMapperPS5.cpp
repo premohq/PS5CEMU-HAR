@@ -16,6 +16,7 @@
 // is released.
 
 #include "util/MemMapper/MemMapper.h"
+#include "../app/lang.h"
 #include "../ps5/kernel.h"
 #include "../ps5/log.h"
 #include "../ps5/notify.h"
@@ -134,7 +135,7 @@ namespace
 			// why, once, as the toast outlives the app
 			static std::atomic<bool> s_told{false};
 			if (!s_told.exchange(true))
-				ps5notify::Send("The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details.");
+				ps5notify::Send(ps5lang::Tr("The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."));
 			return false;
 		}
 		void* at = reinterpret_cast<void*>(address);

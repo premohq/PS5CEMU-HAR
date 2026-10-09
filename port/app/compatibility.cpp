@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include "compatibility.h"
+#include "lang.h"
 #include "paths.h"
 
 #include <cctype>
@@ -91,6 +92,10 @@ namespace ps5compat
 
 	const char* Kind(const std::string& status)
 	{
+		// tr: the compatibility list's statuses, as the launcher shows them
+		static constexpr const char* kStatuses[] = {ps5lang::TrMarkC("status", "Playable"), ps5lang::TrMarkC("status", "Issues"),
+			ps5lang::TrMarkC("status", "Crashes"), ps5lang::TrMarkC("status", "Won't start")};
+		(void)kStatuses;
 		if (status == "Playable")
 			return "good";
 		if (status == "Issues")

@@ -254,6 +254,13 @@ extern "C"
 	uint64_t sceKernelGetProcessTime() { return timeUs; }
 	int32_t sceKernelUsleep(uint32_t) { return 0; }
 	int32_t sceSystemServiceHideSplashScreen() { return 0; }
+	// the PS5's language (parameter 1): PREVIEW_SYSTEM_LANGUAGE's number, else English (United Kingdom)
+	int32_t sceSystemServiceParamGetInt(int32_t paramId, int32_t* value)
+	{
+		const char* language = std::getenv("PREVIEW_SYSTEM_LANGUAGE");
+		*value = paramId == 1 && language ? std::atoi(language) : 18;
+		return 0;
+	}
 }
 
 bool PS5_JitAvailable() { return true; }
@@ -589,6 +596,12 @@ namespace ps5emu
 	std::string CoverPath(uint64_t titleId)
 	{
 		const std::string path = fmt::format("{}/covers/{:016x}.tga", output, titleId);
+		return std::filesystem::exists(path) ? path : std::string();
+	}
+	// and their boot screens, the same way in build/preview/covers/boot
+	std::string BootScreenPath(uint64_t titleId)
+	{
+		const std::string path = fmt::format("{}/covers/boot/{:016x}.tga", output, titleId);
 		return std::filesystem::exists(path) ? path : std::string();
 	}
 

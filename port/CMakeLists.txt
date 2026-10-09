@@ -68,6 +68,8 @@ add_library(CemuPS5 STATIC
 	app/ingame3ds.cpp
 	app/ingame3ds.h
 	app/install.cpp
+	app/lang.cpp
+	app/lang.h
 	app/updates.cpp
 	app/updates.h
 	app/usb_devices.cpp

@@ -9,6 +9,7 @@
 //     that emulator's side.
 
 #include "app/emulator.h"
+#include "app/lang.h"
 #include "app/pack_updates.h"
 #include "app/paths.h"
 #include "app/updates.h"
@@ -80,9 +81,10 @@ namespace
 	{
 		return {
 			fmt::format("PS5CEMU-HAR {}: Cemu at {}, Azahar at {}", PS5CEMU_VERSION, PS5CEMU_CEMU_COMMIT, PS5CEMU_AZAHAR_COMMIT),
-			fmt::format("Firmware {}", Firmware()),
+			ps5lang::TrF("Firmware {0}", Firmware()),
 			privileges.summary,
-			ps5log::Path()[0] ? fmt::format("Logs: {}, {}/log.txt", ps5log::Path(), ps5paths::kRoot) : "Boot log not written (/data is unreachable)",
+			ps5log::Path()[0] ? ps5lang::TrF("Logs: {0}, {1}/log.txt", ps5log::Path(), ps5paths::kRoot) :
+								ps5lang::Tr("Boot log not written (/data is unreachable)"),
 		};
 	}
 
@@ -159,6 +161,9 @@ int main(int argc, char* argv[])
 		ps5log::Line("[main] app folder {}{}", ps5paths::AppDir(),
 			!source.empty() ? fmt::format(" (mounted from {})", source) : image ? " (mounted from an image)" : "");
 	}
+	// the menus' language, from the app's assets (so only once its folder is decided), before
+	// anything says a word: the PS5's, unless Settings names another
+	ps5lang::Load(settings.ui.language);
 	ps5threads::SetPinning(settings.pinCpuThreads);
 	ps5log::ForwardDriverMessages();
 	// before either emulator's Vulkan driver starts, which reads it once
@@ -190,14 +195,14 @@ int main(int argc, char* argv[])
 	if (!privileges.filesystem)
 	{
 		status.notice = status.notice3ds =
-			"PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR.";
+			ps5lang::Tr("PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR.");
 		ps5log::Line("[main] {}", status.notice);
 		ps5notify::Send(status.notice);
 	}
 	else if (!settings.launchError.empty())
 	{
 		// the last game failed after its renderer started, and the process was started over to show it
-		(settings.side == "3ds" ? status.notice3ds : status.notice) = "The game could not start: " + settings.launchError;
+		(settings.side == "3ds" ? status.launchError3ds : status.launchError) = settings.launchError;
 		settings.launchError.clear();
 		ps5settings::Save(settings);
 	}
@@ -219,19 +224,19 @@ int main(int argc, char* argv[])
 		if (system == ps5launcher::System::N3ds)
 		{
 			ps5log::Line("[main] the 3DS side: Cemu's emulated Wii U is not started");
-			status.diagnostics.push_back("This session: Azahar (3DS); Cemu's emulated Wii U is not started");
+			status.diagnostics.push_back(ps5lang::Tr("This session: Azahar (3DS); Cemu's emulated Wii U is not started"));
 			ps5azahar::StartScan(settings.n3ds.gamesFolder);
 			ps5emu::LogMemory(); // the 3DS side's start, against Cemu's
 			return;
 		}
 		ps5log::Line("[main] the Wii U side: Azahar's core is not started");
-		status.diagnostics.push_back("This session: Cemu (Wii U); Azahar's core is not started");
+		status.diagnostics.push_back(ps5lang::Tr("This session: Cemu (Wii U); Azahar's core is not started"));
 		if (!privileges.filesystem)
 			return;
 		std::string coreError;
 		if (!ps5emu::InitializeCore(coreError))
 		{
-			status.notice = "Cemu did not start: " + coreError;
+			status.notice = ps5lang::TrF("Cemu did not start: {0}", coreError);
 			ps5log::Line("[main] {}", status.notice);
 			ps5notify::Send(status.notice);
 			return;
@@ -239,7 +244,7 @@ int main(int argc, char* argv[])
 		status.coreReady = true;
 		ps5emu::ApplyOptions(Options(settings));
 		if (!privileges.jit)
-			ps5notify::Send("No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?");
+			ps5notify::Send(ps5lang::Tr("No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"));
 		ps5emu::LogMemory(); // Cemu's start, against the 3DS side's
 	};
 
@@ -258,7 +263,7 @@ int main(int argc, char* argv[])
 			// the launcher could not draw, and there is nothing else to show: the boot log says why. Wait
 			// for the player to close the app from the PS5's menu
 			ps5log::Line("[main] the launcher could not start or stopped drawing");
-			ps5notify::Send("The launcher could not start. The boot log in /data/ps5cemu/logs says why.");
+			ps5notify::Send(ps5lang::Tr("The launcher could not start. The boot log in /data/ps5cemu/logs says why."));
 			for (;;)
 				sceKernelUsleep(1000000);
 		}
@@ -284,7 +289,7 @@ int main(int argc, char* argv[])
 				ps5emu::RestartToLibrary();
 				return 1;
 			}
-			status.notice3ds = "The game could not start: " + error;
+			status.launchError3ds = error;
 			settings.side = "3ds"; // the launcher shows why on Azahar's side
 			continue;
 		}
@@ -303,7 +308,7 @@ int main(int argc, char* argv[])
 		ps5log::Line("[main] {} did not start: {}", game.name, error);
 		if (!ps5emu::RendererStarted())
 		{
-			status.notice = "The game could not start: " + error;
+			status.launchError = error;
 			settings.side = "wiiu";
 			continue;
 		}

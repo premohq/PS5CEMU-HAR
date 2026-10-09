@@ -107,11 +107,16 @@ namespace ps5shell
 		canvas.Ring(box, radius, 1.5f, kGlassEdge);
 	}
 
-	Box Shell::PillButton(Canvas& canvas, float x, float y, const std::string& label, bool primary, bool focused, Icon icon, bool withIcon, float height)
+	Box Shell::PillButton(Canvas& canvas, float x, float y, const std::string& label, bool primary, bool focused, Icon icon, bool withIcon, float height,
+		float maxWidth)
 	{
-		const ui::TextStyle style = Style({28, ui::Weight::SemiBold, 1.0f});
-		const float text = m_fonts.Width(style, label);
+		ui::TextStyle style = Style({28, ui::Weight::SemiBold, 1.0f});
 		const float pad = height * 0.55f;
+		const float room = maxWidth > 0 ? maxWidth - pad * 2 - (withIcon ? 28 + 14 : 0) : 0.0f;
+		// a label wider than the button may be: a size or two smaller, then cut
+		if (room > 0)
+			style.size = m_fonts.Fit(style, label, room, 1, style.size * 0.8f, 1);
+		const float text = room > 0 ? std::min(m_fonts.Width(style, label), room) : m_fonts.Width(style, label);
 		const float width = pad * 2 + text + (withIcon ? 28 + 14 : 0);
 		Box box{x, y, width, height};
 		const Box drawn = focused ? box.Scaled(1.04f) : box;
@@ -131,7 +136,7 @@ namespace ps5shell
 			canvas.Draw(icon, {at, drawn.CentreY() - 14, 28, 28}, ink);
 			at += 28 + 14;
 		}
-		const ui::TextBlock block = m_fonts.Layout(style, label);
+		const ui::TextBlock block = m_fonts.Layout(style, label, room > 0 ? room + 0.5f : 0.0f, 1);
 		canvas.Text(block, at, drawn.CentreY() - block.height * 0.5f, ink);
 		if (focused)
 			Focus(drawn, drawn.h / 2);
@@ -243,59 +248,101 @@ namespace ps5shell
 		canvas.Ring(box, kRadiusCard, 1.5f, kGlassEdge);
 		const ui::TextStyle label = Style(kBodyStyle);
 		const ui::TextStyle caption = Style(kCaptionStyle);
+		const ui::TextStyle value = Style(kLabelStyle);
 		const bool described = focused && !row.description.empty();
-		// a toggle leaves the label the row's width; the other controls, half of it
-		const float labelWidth = row.kind == Row::Kind::Toggle ? box.w - 56 - 64 - 24 : box.w * 0.5f;
+		const float inner = box.w - 56;
+		const float right = box.Right() - 28;
+
+		// the control on the right first, then the label in what it leaves (a third of the row at the
+		// least): a longer language's words make the control's text smaller, then cut it, never let it
+		// run into the label (7.2)
+		const float labelNatural = m_fonts.Width(label, row.label);
+		const float labelLeast = std::min(labelNatural, inner * 0.34f);
+		// fixed: the control's part that is not its value's text; valueMost: how wide that text may be
+		float fixed = 0, valueMost = 0, control = 0;
+		ui::TextStyle segment = Style({22, ui::Weight::SemiBold, 1.0f});
+		float segmentShare = 0; // each segment's widest, when even the smaller text does not fit
+		static constexpr float kPip = 14, kPipGap = 6, kTrack = 220, kSwatch = 46;
+		switch (row.kind)
+		{
+		case Row::Kind::Toggle: fixed = 64; break;
+		case Row::Kind::Slider: fixed = kTrack + 20, valueMost = 140; break;
+		case Row::Kind::Stepper: fixed = row.options.size() * (kPip + kPipGap) - kPipGap + 16, valueMost = inner * 0.4f; break;
+		case Row::Kind::Swatches: fixed = row.options.size() * (kSwatch + 8) + 20, valueMost = inner * 0.3f; break;
+		case Row::Kind::Segmented:
+		{
+			const float room = inner - labelLeast - 24;
+			auto total = [&] {
+				float width = 8;
+				for (const auto& option : row.options)
+					width += m_fonts.Width(segment, option) + 40;
+				return width;
+			};
+			while (total() > room && segment.size > 16)
+				segment.size -= 1;
+			if (total() > room)
+				segmentShare = (room - 8) / std::max<size_t>(1, row.options.size()) - 40;
+			fixed = std::min(total(), room);
+			break;
+		}
+		case Row::Kind::Choice: fixed = focused ? 34 + 34 : 0, valueMost = inner * 0.42f; break;
+		case Row::Kind::Action:
+		case Row::Kind::Hold:
+		case Row::Kind::Link: fixed = row.kind == Row::Kind::Link ? 40 : 0, valueMost = row.value.empty() ? 0.0f : inner * 0.45f; break;
+		}
+		control = fixed + std::min(m_fonts.Width(value, row.value), valueMost);
+		const float labelWidth = std::max(inner * 0.3f, inner - control - 24);
 		const ui::TextBlock labelBlock = m_fonts.Layout(label, row.label, labelWidth, 1);
 		const float labelY = described ? box.y + 16 : box.CentreY() - labelBlock.height * 0.5f;
 		canvas.Text(labelBlock, box.x + 28, labelY, kText);
 		if (described)
-			canvas.Text(caption, box.x + 28, labelY + labelBlock.height + 4, row.description, Secondary(), box.w - 56, 1);
+			canvas.Text(caption, box.x + 28, labelY + labelBlock.height + 4, row.description, Secondary(), inner, 1);
 		// the control, on the right
-		const float right = box.Right() - 28;
 		const float centre = described ? labelY + labelBlock.height * 0.5f : box.CentreY();
-		const ui::TextStyle value = Style(kLabelStyle);
+		// the value's text: as wide as it may be, and no wider than the label leaves it
+		const float valueRoom = std::max(60.0f, std::min(valueMost, inner - labelBlock.width - 24 - fixed));
 		switch (row.kind)
 		{
 		case Row::Kind::Toggle: DrawToggle(canvas, right - 64, centre - 18, row.on, focused); break;
 		case Row::Kind::Slider:
 		{
-			const float track = 220;
-			const float x = right - track;
-			canvas.Rect({x, centre - 3, track, 6}, 3, 0x2effffff);
-			canvas.Rect({x, centre - 3, track * row.fraction, 6}, 3, Accent());
-			canvas.Rect({x + track * row.fraction - 11, centre - 11, 22, 22}, 11, 0xffffffff);
-			const ui::TextBlock text = m_fonts.Layout(value, row.value);
+			const float x = right - kTrack;
+			canvas.Rect({x, centre - 3, kTrack, 6}, 3, 0x2effffff);
+			canvas.Rect({x, centre - 3, kTrack * row.fraction, 6}, 3, Accent());
+			canvas.Rect({x + kTrack * row.fraction - 11, centre - 11, 22, 22}, 11, 0xffffffff);
+			const ui::TextBlock text = m_fonts.Layout(value, row.value, valueRoom, 1);
 			canvas.Text(text, x - 20 - text.width, centre - text.height * 0.5f, focused ? kText : Secondary());
 			break;
 		}
 		case Row::Kind::Stepper:
 		{
 			const int count = (int)row.options.size();
-			const float pip = 14, gap = 6;
-			float x = right - count * (pip + gap) + gap;
-			for (int i = 0; i < count; i++, x += pip + gap)
-				canvas.Rect({x, centre - (i == row.index ? 9.0f : 5.0f), pip, i == row.index ? 18.0f : 10.0f}, 4,
+			float x = right - count * (kPip + kPipGap) + kPipGap;
+			for (int i = 0; i < count; i++, x += kPip + kPipGap)
+				canvas.Rect({x, centre - (i == row.index ? 9.0f : 5.0f), kPip, i == row.index ? 18.0f : 10.0f}, 4,
 					i <= row.index ? (i == row.index ? Accent() : ui::SetAlpha(Accent(), 0.45f)) : 0x2effffff);
-			const ui::TextBlock text = m_fonts.Layout(value, row.value);
-			canvas.Text(text, right - count * (pip + gap) - 16 - text.width, centre - text.height * 0.5f, focused ? kText : Secondary());
+			const ui::TextBlock text = m_fonts.Layout(value, row.value, valueRoom, 1);
+			canvas.Text(text, right - count * (kPip + kPipGap) - 16 - text.width, centre - text.height * 0.5f, focused ? kText : Secondary());
 			break;
 		}
 		case Row::Kind::Segmented:
 		{
-			const ui::TextStyle segment = Style({22, ui::Weight::SemiBold, 1.0f});
+			auto segmentWidth = [&](const std::string& option) {
+				const float natural = m_fonts.Width(segment, option);
+				return (segmentShare > 0 ? std::min(natural, segmentShare) : natural) + 40;
+			};
 			float width = 8;
 			for (const auto& option : row.options)
-				width += m_fonts.Width(segment, option) + 40;
+				width += segmentWidth(option);
 			float x = right - width;
 			canvas.Rect({x, centre - 26, width, 52}, 14, 0x12ffffff);
 			x += 4;
 			for (int i = 0; i < (int)row.options.size(); i++)
 			{
-				const float w = m_fonts.Width(segment, row.options[i]) + 40;
+				const float w = segmentWidth(row.options[i]);
 				if (i == row.index)
 					canvas.Rect({x, centre - 22, w, 44}, 11, kText);
-				const ui::TextBlock text = m_fonts.Layout(segment, row.options[i]);
+				const ui::TextBlock text = m_fonts.Layout(segment, row.options[i], w - 40 + 0.5f, 1);
 				canvas.Text(text, x + 20, centre - text.height * 0.5f, i == row.index ? kInk1 : Secondary());
 				x += w;
 			}
@@ -305,15 +352,15 @@ namespace ps5shell
 		{
 			static const uint32_t kSwatches[][2] = {{0xff1b1714, 0xff1b1714}, {0xff5c2a1b, 0xff8a4a2e}, {0xff2a9de0, 0xff47c4f4},
 				{0xffc8b44f, 0xffd06a9a}, {0xffb0d5e8, 0xff90bbd8}, {0xffffa95a, 0xff3fb6f4}};
-			const ui::TextBlock text = m_fonts.Layout(value, row.value);
+			const ui::TextBlock text = m_fonts.Layout(value, row.value, valueRoom, 1);
 			float x = right - text.width;
 			canvas.Text(text, x, centre - text.height * 0.5f, focused ? kText : Secondary());
 			x -= 20;
 			const int count = (int)row.options.size();
 			for (int i = count - 1; i >= 0; i--)
 			{
-				x -= 46;
-				const Box swatch{x, centre - 16, 46, 32};
+				x -= kSwatch;
+				const Box swatch{x, centre - 16, kSwatch, 32};
 				const uint32_t* colours = kSwatches[std::min(i, 5)];
 				canvas.LinearGradient(swatch, 8, colours[0], colours[1], swatch.x, swatch.y, swatch.Right(), swatch.y);
 				canvas.Ring(swatch, 8, i == row.index ? 3.0f : 1.5f, i == row.index ? Accent() : 0x33ffffff);
@@ -323,7 +370,7 @@ namespace ps5shell
 		}
 		case Row::Kind::Choice:
 		{
-			const ui::TextBlock text = m_fonts.Layout(value, row.value, box.w * 0.42f, 1);
+			const ui::TextBlock text = m_fonts.Layout(value, row.value, valueRoom, 1);
 			float x = right - (focused ? 34 : 0) - text.width;
 			if (focused)
 			{
@@ -345,7 +392,7 @@ namespace ps5shell
 			}
 			if (!row.value.empty())
 			{
-				const ui::TextBlock text = m_fonts.Layout(value, row.value, box.w * 0.45f, 1);
+				const ui::TextBlock text = m_fonts.Layout(value, row.value, valueRoom, 1);
 				canvas.Text(text, x - text.width, centre - text.height * 0.5f, focused ? kText : Secondary());
 			}
 			break;

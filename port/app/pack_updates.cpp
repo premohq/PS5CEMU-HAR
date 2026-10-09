@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include "pack_updates.h"
+#include "lang.h"
 #include "paths.h"
 #include "../ps5/log.h"
 
@@ -147,7 +148,7 @@ namespace ps5packs
 			zip_t* zip = zip_open(archive.c_str(), ZIP_RDONLY, &code);
 			if (!zip)
 			{
-				error = fmt::format("the download is not a zip ({})", code);
+				error = ps5lang::TrF("the download is not a ZIP ({0})", code);
 				return false;
 			}
 			const zip_int64_t entries = zip_get_num_entries(zip, 0);
@@ -175,7 +176,7 @@ namespace ps5packs
 				std::ofstream out(path, std::ios::binary | std::ios::trunc);
 				if (!in || !out)
 				{
-					error = fmt::format("{} could not be unpacked", entry);
+					error = ps5lang::TrF("{0} could not be unpacked", entry);
 					ok = false;
 				}
 				for (zip_int64_t read; ok && (read = zip_fread(in, buffer.data(), buffer.size())) > 0;)
@@ -184,7 +185,7 @@ namespace ps5packs
 					zip_fclose(in);
 				if (ok && !out)
 				{
-					error = fmt::format("{} could not be written", entry);
+					error = ps5lang::TrF("{0} could not be written", entry);
 					ok = false;
 				}
 				files++;
@@ -192,12 +193,12 @@ namespace ps5packs
 			zip_close(zip);
 			if (ok && s_stop)
 			{
-				error = "stopped for a game";
+				error = ps5lang::Tr("stopped for a game");
 				ok = false;
 			}
 			if (ok && files == 0)
 			{
-				error = "the download holds no packs";
+				error = ps5lang::Tr("the download holds no packs");
 				ok = false;
 			}
 			return ok;
@@ -210,7 +211,7 @@ namespace ps5packs
 			curl_slist* resolve = Resolve();
 			if (!resolve)
 			{
-				Set(Status::State::Failed, "GitHub could not be found: is the PS5 online?");
+				Set(Status::State::Failed, ps5lang::Tr("GitHub could not be found: is the PS5 online?"));
 				return;
 			}
 			curl_slist* headers = curl_slist_append(nullptr, "Accept: application/vnd.github+json");
@@ -243,7 +244,7 @@ namespace ps5packs
 			{
 				curl_slist_free_all(resolve);
 				ps5log::Line("[packs] no release from GitHub ({}, HTTP {})", curl_easy_strerror(result), http);
-				Set(Status::State::Failed, "GitHub did not answer with a release");
+				Set(Status::State::Failed, ps5lang::Tr("GitHub did not answer with a release"));
 				return;
 			}
 			{
@@ -281,7 +282,7 @@ namespace ps5packs
 			{
 				fs::remove(archive, ec);
 				ps5log::Line("[packs] download of {} failed ({}, HTTP {})", tag, s_stop ? "stopped for a game" : curl_easy_strerror(result), http);
-				Set(Status::State::Failed, s_stop ? "Stopped for a game" : "The download did not finish");
+				Set(Status::State::Failed, s_stop ? ps5lang::Tr("Stopped for a game") : ps5lang::Tr("The download did not finish"));
 				return;
 			}
 
@@ -296,7 +297,7 @@ namespace ps5packs
 				fs::remove_all(fresh, ec);
 				fs::remove(archive, ec);
 				ps5log::Line("[packs] {} could not be installed: {}", tag, error);
-				Set(Status::State::Failed, "It could not be installed: " + error);
+				Set(Status::State::Failed, ps5lang::TrF("It could not be installed: {0}", error));
 				return;
 			}
 			std::ofstream(fresh / "version.txt") << tag;
@@ -307,7 +308,7 @@ namespace ps5packs
 			{
 				fs::rename(old, target, ec); // put the packs back as they were
 				ps5log::Line("[packs] {} could not take the old packs' place", tag);
-				Set(Status::State::Failed, "The new packs could not take the old ones' place");
+				Set(Status::State::Failed, ps5lang::Tr("The new packs could not take the old ones' place"));
 				return;
 			}
 			fs::remove_all(old, ec);

@@ -21,6 +21,7 @@
 #include "../app/boxart.h"
 #include "../app/gameinfo.h"
 #include "../app/ingame3ds.h"
+#include "../app/lang.h"
 #include "../ps5/display.h"
 #include "../ps5/kernel.h"
 #include "../ps5/log.h"
@@ -170,16 +171,17 @@ namespace ps5azahar
 			using Error = Frontend::ValidationError;
 			switch (error)
 			{
-			case Error::MaxDigitsExceeded: return "Too many digits.";
-			case Error::AtSignNotAllowed: return "The @ sign is not allowed here.";
-			case Error::PercentNotAllowed: return "The % sign is not allowed here.";
-			case Error::BackslashNotAllowed: return "The \\ sign is not allowed here.";
-			case Error::ProfanityNotAllowed: return "That word is not allowed.";
-			case Error::FixedLengthRequired: return "The text must be exactly the length asked for.";
-			case Error::MaxLengthExceeded: return "The text is too long.";
-			case Error::BlankInputNotAllowed: return "The text cannot be only spaces.";
-			case Error::EmptyInputNotAllowed: return "The text cannot be empty.";
-			default: return "The game did not accept it.";
+			// tr: why a 3DS game did not take what was typed on its keyboard
+			case Error::MaxDigitsExceeded: return ps5lang::Tr("Too many digits.");
+			case Error::AtSignNotAllowed: return ps5lang::Tr("The @ sign is not allowed here.");
+			case Error::PercentNotAllowed: return ps5lang::Tr("The % sign is not allowed here.");
+			case Error::BackslashNotAllowed: return ps5lang::Tr("The \\ sign is not allowed here.");
+			case Error::ProfanityNotAllowed: return ps5lang::Tr("That word is not allowed.");
+			case Error::FixedLengthRequired: return ps5lang::Tr("The text must be exactly the length asked for.");
+			case Error::MaxLengthExceeded: return ps5lang::Tr("The text is too long.");
+			case Error::BlankInputNotAllowed: return ps5lang::Tr("The text cannot be only spaces.");
+			case Error::EmptyInputNotAllowed: return ps5lang::Tr("The text cannot be empty.");
+			default: return ps5lang::Tr("The game did not accept it.");
 			}
 		}
 
@@ -205,11 +207,13 @@ namespace ps5azahar
 				if (info.slot < 1 || info.slot > (u32)times.size())
 					continue;
 				const std::time_t time = (std::time_t)info.time;
-				char text[32] = "saved";
+				// tr: a save state's slot whose date is unknown
+				std::string text = ps5lang::Tr("saved");
 				if (const std::tm* local = std::localtime(&time))
-					std::strftime(text, sizeof(text), "%b %d, %H:%M", local);
+					text = ps5lang::ShortDateTime(local->tm_mon + 1, local->tm_mday, local->tm_hour, local->tm_min);
 				// an earlier build's state of the same format loads too (Azahar patch 0011)
-				times[info.slot - 1] = info.status != Core::SaveStateInfo::ValidationStatus::BuildMismatch ? text : "another version's";
+				// tr: in place of a save state's date: it was made by another version of the app
+				times[info.slot - 1] = info.status != Core::SaveStateInfo::ValidationStatus::BuildMismatch ? text : ps5lang::Tr("another version's");
 			}
 			ps5ingame3ds::SetStateSlots(times);
 		}
@@ -249,16 +253,18 @@ namespace ps5azahar
 			{
 				auto nfc = system.ServiceManager().GetService<Service::NFC::Module::Interface>("nfc:u");
 				if (!nfc)
-					message = "No amiibo reader";
+					message = ps5lang::Tr("No amiibo reader");
 				else if (request.kind == Request::RemoveAmiibo)
 				{
 					nfc->RemoveAmiibo();
-					message = "Taken away";
+					// tr: the amiibo was taken off the 3DS's reader
+					message = ps5lang::Tr("Taken away");
 				}
 				else if (request.index >= 0 && request.index < (int)s_amiiboFiles.size())
 				{
 					const std::string& name = s_amiiboFiles[request.index];
-					message = nfc->LoadAmiibo(std::string(kAmiiboFolder) + "/" + name) ? "Scanned " + name : "Not an amiibo dump";
+					message = nfc->LoadAmiibo(std::string(kAmiiboFolder) + "/" + name) ? ps5lang::TrF("Scanned {0}", name) :
+																						   std::string(ps5lang::Tr("Not an amiibo dump"));
 				}
 			}
 			else if (request.kind == Request::Cheat)
@@ -269,7 +275,8 @@ namespace ps5azahar
 					const auto& cheat = cheats[request.index];
 					cheat->SetEnabled(!cheat->IsEnabled());
 					system.CheatEngine().SaveCheatFile(s_titleId);
-					message = fmt::format("{}: {}", cheat->GetName(), cheat->IsEnabled() ? "on" : "off");
+					// tr: a cheat ({0}) turned on or off
+					message = cheat->IsEnabled() ? ps5lang::TrF("{0}: on", cheat->GetName()) : ps5lang::TrF("{0}: off", cheat->GetName());
 				}
 			}
 			ps5log::Line("[azahar] {}", message);
@@ -346,8 +353,10 @@ namespace ps5azahar
 			using Status = Core::System::ResultStatus;
 			const bool load = request < 0;
 			const int slot = std::abs(request);
-			const std::string message = result == Status::Success ? fmt::format("{} slot {}", load ? "Loaded" : "Saved", slot) :
-				result == Status::ErrorSavestateBuildMismatch ? "Made by another version" : "It did not work";
+			// tr: how a save state's save or load went
+			const std::string message = result == Status::Success ? (load ? ps5lang::TrF("Loaded slot {0}", slot) : ps5lang::TrF("Saved slot {0}", slot)) :
+				result == Status::ErrorSavestateBuildMismatch ? std::string(ps5lang::Tr("Made by another version")) :
+																std::string(ps5lang::Tr("It did not work"));
 			ps5log::Line("[azahar] {} slot {}: {}{}", load ? "load from" : "save to", slot, message,
 				result == Status::Success ? std::string() : fmt::format(" ({})", system.GetStatusDetails()));
 			ps5ingame3ds::SetStateMessage(message);
@@ -545,21 +554,22 @@ namespace ps5azahar
 			using Status = Core::System::ResultStatus;
 			switch (status)
 			{
-			case Status::ErrorGetLoader: return "This is not a 3DS game Azahar can start.";
-			case Status::ErrorLoader: return "The game could not be loaded.";
+			// tr: why a 3DS game did not start
+			case Status::ErrorGetLoader: return ps5lang::Tr("This is not a 3DS game Azahar can start.");
+			case Status::ErrorLoader: return ps5lang::Tr("The game could not be loaded.");
 			case Status::ErrorLoader_ErrorEncrypted:
-				return "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata.";
-			case Status::ErrorLoader_ErrorInvalidFormat: return "The game's format is not supported.";
-			case Status::ErrorLoader_ErrorGbaTitle: return "GBA Virtual Console games are not supported.";
-			case Status::ErrorSystemMode: return "The game's system mode could not be found.";
-			case Status::ErrorSystemFiles: return "The game needs 3DS system files Azahar does not have.";
+				return ps5lang::Tr("The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata.");
+			case Status::ErrorLoader_ErrorInvalidFormat: return ps5lang::Tr("The game's format is not supported.");
+			case Status::ErrorLoader_ErrorGbaTitle: return ps5lang::Tr("GBA Virtual Console games are not supported.");
+			case Status::ErrorSystemMode: return ps5lang::Tr("The game's system mode could not be found.");
+			case Status::ErrorSystemFiles: return ps5lang::Tr("The game needs 3DS system files Azahar does not have.");
 			case Status::ErrorLoader_ErrorPatches:
-			case Status::ErrorLoader_ErrorPatchesInvalidTitle: return "The game's patches could not be applied.";
-			case Status::ErrorNotInitialized: return "Azahar's renderer or CPU did not start.";
+			case Status::ErrorLoader_ErrorPatchesInvalidTitle: return ps5lang::Tr("The game's patches could not be applied.");
+			case Status::ErrorNotInitialized: return ps5lang::Tr("Azahar's renderer or CPU did not start.");
 			case Status::ErrorArticDisconnected:
-				return "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that "
-					"the 3DS and the PS5 are on the same network.";
-			default: return "The game could not be started.";
+				return ps5lang::Tr("The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS "
+								   "and the PS5 are on the same network.");
+			default: return ps5lang::Tr("The game could not be started.");
 			}
 		}
 
@@ -602,7 +612,7 @@ namespace ps5azahar
 				{
 					s_stateRequest = 0;
 					ps5log::Line("[azahar] save state: the game stayed busy for 5 s");
-					ps5ingame3ds::SetStateMessage("The game is busy: try again");
+					ps5ingame3ds::SetStateMessage(ps5lang::Tr("The game is busy: try again"));
 				}
 				const auto result = system.RunLoop();
 				if (stateNow)
@@ -617,7 +627,7 @@ namespace ps5azahar
 				if (result != Core::System::ResultStatus::Success)
 				{
 					ps5log::Line("[azahar] the emulation stopped: {} ({})", (int)result, system.GetStatusDetails());
-					ps5notify::Send("The 3DS game stopped: " + system.GetStatusDetails());
+					ps5notify::Send(ps5lang::TrF("The 3DS game stopped: {0}", system.GetStatusDetails()));
 					break;
 				}
 			}
@@ -666,7 +676,7 @@ namespace ps5azahar
 			path = Service::AM::GetTitleContentPath(Service::FS::MediaType::SDMC, game.titleId);
 			if (!FileUtil::Exists(path))
 			{
-				error = "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game.";
+				error = ps5lang::Tr("A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game.");
 				return false;
 			}
 			ps5log::Line("[azahar] the CIA's game is installed: {}", path);
@@ -690,7 +700,7 @@ namespace ps5azahar
 		}
 		catch (const std::exception& ex)
 		{
-			error = fmt::format("Azahar did not start: {}", ex.what());
+			error = ps5lang::TrF("Azahar did not start: {0}", ex.what());
 			return false;
 		}
 		if (status != Core::System::ResultStatus::Success)
@@ -752,7 +762,8 @@ namespace ps5azahar
 
 	void RunGame()
 	{
-		ps5notify::Send("Touchpad + Options: the PS5 AZAHAR menu. Touchpad click: the bottom screen");
+		// tr: the PS5's notification as a 3DS game starts
+		ps5notify::Send(ps5lang::Tr("Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"));
 		Core::System& system = Core::System::GetInstance();
 		uint64_t polls = 0;
 		ps5emu::LogMemory();
@@ -879,7 +890,7 @@ namespace ps5azahar
 	{
 		if (s_installing)
 		{
-			error = "An install is already running.";
+			error = ps5lang::Tr("An install is already running.");
 			return false;
 		}
 		SetUp();
@@ -917,16 +928,17 @@ namespace ps5azahar
 			case Result::ErrorEncrypted:
 				// Azahar installs only CIAs decrypted all the way through, the CIA and the game in
 				// it; the 3DS's keys do not change that
-				s_install.message = "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: "
-					"decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead";
+				// tr: why a CIA file could not be installed, after "It could not be installed:"
+				s_install.message = ps5lang::Tr("it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: "
+												"decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead");
 				break;
-			case Result::ErrorInvalid: s_install.message = "it is not a CIA file, or it is damaged (check the file's size)"; break;
+			case Result::ErrorInvalid: s_install.message = ps5lang::Tr("it is not a CIA file, or it is damaged (check the file's size)"); break;
 			case Result::ErrorFileNotFound:
-			case Result::ErrorFailedToOpenFile: s_install.message = "the file could not be read"; break;
+			case Result::ErrorFailedToOpenFile: s_install.message = ps5lang::Tr("the file could not be read"); break;
 			case Result::ErrorAborted:
-				s_install.message = "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why";
+				s_install.message = ps5lang::Tr("Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why");
 				break;
-			default: s_install.message = "it is not a CIA Azahar can install"; break;
+			default: s_install.message = ps5lang::Tr("it is not a CIA Azahar can install"); break;
 			}
 			if (result != Result::Success && result != Result::Cancelled)
 				s_install.state = ps5emu::InstallStatus::State::Failed;

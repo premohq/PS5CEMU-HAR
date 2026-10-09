@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include "../app/lang.h"
+
 #include <cstdint>
 #include <string>
 
@@ -38,7 +40,8 @@ namespace ps5display
 	inline std::string FramePacingName(int refreshes, bool highFrameRate)
 	{
 		if (refreshes <= 1 || refreshes > 3)
-			return "Off";
-		return std::to_string((highFrameRate ? 120 : 60) / refreshes) + " fps";
+			return ps5lang::Tr("Off");
+		// tr: a frame rate: frame pacing holds the game to it
+		return ps5lang::TrF("{0} fps", (highFrameRate ? 120 : 60) / refreshes);
 	}
 }

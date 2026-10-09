@@ -72,6 +72,7 @@ namespace ui
 		Search,
 		Sort,
 		Back,
+		Globe, // the language, in any language
 	};
 
 	class Canvas

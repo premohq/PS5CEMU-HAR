@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include "gameinfo.h"
+#include "lang.h"
 #include "paths.h"
 #include "../ps5/log.h"
 
@@ -17,6 +18,8 @@
 
 namespace ps5gameinfo
 {
+	using ps5lang::TrMarkC;
+
 	namespace
 	{
 		// One system's database: its text, and where each game's line starts
@@ -123,8 +126,6 @@ namespace ps5gameinfo
 
 	std::string ReleaseDate(const std::string& released)
 	{
-		static constexpr const char* kMonths[] = {"January", "February", "March", "April", "May", "June", "July", "August",
-			"September", "October", "November", "December"};
 		int year = 0, month = 0, day = 0;
 		const int parts = std::sscanf(released.c_str(), "%d-%d-%d", &year, &month, &day);
 		if (parts < 1 || year <= 0)
@@ -132,8 +133,8 @@ namespace ps5gameinfo
 		if (parts < 2 || month < 1 || month > 12)
 			return std::to_string(year);
 		if (parts < 3 || day < 1)
-			return fmt::format("{} {}", kMonths[month - 1], year);
-		return fmt::format("{} {}, {}", kMonths[month - 1], day, year);
+			return ps5lang::MonthAndYear(year, month);
+		return ps5lang::Date(year, month, day);
 	}
 
 	std::string Year(const std::string& released)
@@ -143,21 +144,68 @@ namespace ps5gameinfo
 
 	std::string Genres(const std::string& genre, int most)
 	{
+		// GameTDB's genres, as its data names them, and how the hub says them (tr: a game's genre)
+		static const std::unordered_map<std::string, const char*> kNames = {
+			{"2d platformer", TrMarkC("genre", "2D platformer")}, {"3d fighting", TrMarkC("genre", "3D fighting")},
+			{"3d platformer", TrMarkC("genre", "3D platformer")}, {"action", TrMarkC("genre", "Action")},
+			{"action rpg", TrMarkC("genre", "Action RPG")}, {"adventure", TrMarkC("genre", "Adventure")}, {"arcade", TrMarkC("genre", "Arcade")},
+			{"baseball", TrMarkC("genre", "Baseball")}, {"basketball", TrMarkC("genre", "Basketball")},
+			{"beat 'em up", TrMarkC("genre", "Beat 'em up")}, {"billiards", TrMarkC("genre", "Billiards")},
+			{"board game", TrMarkC("genre", "Board game")}, {"bowling", TrMarkC("genre", "Bowling")}, {"boxing", TrMarkC("genre", "Boxing")},
+			{"business simulation", TrMarkC("genre", "Business simulation")}, {"cards", TrMarkC("genre", "Cards")},
+			{"chess", TrMarkC("genre", "Chess")}, {"coaching", TrMarkC("genre", "Coaching")}, {"compilation", TrMarkC("genre", "Compilation")},
+			{"construction simulation", TrMarkC("genre", "Construction simulation")}, {"cooking", TrMarkC("genre", "Cooking")},
+			{"dance", TrMarkC("genre", "Dance")}, {"darts", TrMarkC("genre", "Darts")}, {"demo", TrMarkC("genre", "Demo")},
+			{"drawing", TrMarkC("genre", "Drawing")}, {"educational", TrMarkC("genre", "Educational")}, {"exercise", TrMarkC("genre", "Exercise")},
+			{"fantasy", TrMarkC("genre", "Fantasy")}, {"fighting", TrMarkC("genre", "Fighting")},
+			{"first-person shooter", TrMarkC("genre", "First-person shooter")}, {"fishing", TrMarkC("genre", "Fishing")},
+			{"fitness", TrMarkC("genre", "Fitness")}, {"flight simulation", TrMarkC("genre", "Flight simulation")},
+			{"football", TrMarkC("genre", "American football")}, {"futuristic racing", TrMarkC("genre", "Futuristic racing")},
+			{"golf", TrMarkC("genre", "Golf")}, {"health", TrMarkC("genre", "Health")}, {"hidden object", TrMarkC("genre", "Hidden object")},
+			{"historic", TrMarkC("genre", "Historic")}, {"hockey", TrMarkC("genre", "Hockey")}, {"horror", TrMarkC("genre", "Horror")},
+			{"hunting", TrMarkC("genre", "Hunting")}, {"interactive movie", TrMarkC("genre", "Interactive movie")},
+			{"karaoke", TrMarkC("genre", "Karaoke")}, {"kart racing", TrMarkC("genre", "Kart racing")},
+			{"life simulation", TrMarkC("genre", "Life simulation")}, {"management simulation", TrMarkC("genre", "Management simulation")},
+			{"motorcycle racing", TrMarkC("genre", "Motorcycle racing")}, {"multimedia", TrMarkC("genre", "Multimedia")},
+			{"music", TrMarkC("genre", "Music")}, {"off-road racing", TrMarkC("genre", "Off-road racing")}, {"party", TrMarkC("genre", "Party")},
+			{"pinball", TrMarkC("genre", "Pinball")}, {"platformer", TrMarkC("genre", "Platformer")},
+			{"point-and-click", TrMarkC("genre", "Point-and-click")}, {"poker", TrMarkC("genre", "Poker")}, {"puzzle", TrMarkC("genre", "Puzzle")},
+			{"racing", TrMarkC("genre", "Racing")}, {"rail shooter", TrMarkC("genre", "Rail shooter")},
+			{"real-time strategy", TrMarkC("genre", "Real-time strategy")}, {"rhythm", TrMarkC("genre", "Rhythm")},
+			{"roguelike", TrMarkC("genre", "Roguelike")}, {"role-playing", TrMarkC("genre", "Role-playing")},
+			{"run and gun", TrMarkC("genre", "Run and gun")}, {"sci-fi", TrMarkC("genre", "Sci-fi")},
+			{"shoot 'em up", TrMarkC("genre", "Shoot 'em up")}, {"shooter", TrMarkC("genre", "Shooter")},
+			{"simulation", TrMarkC("genre", "Simulation")}, {"skateboarding", TrMarkC("genre", "Skateboarding")},
+			{"snowboarding", TrMarkC("genre", "Snowboarding")}, {"soccer", TrMarkC("genre", "Football")},
+			{"software", TrMarkC("genre", "Software")}, {"sports", TrMarkC("genre", "Sports")},
+			{"stealth action", TrMarkC("genre", "Stealth action")}, {"strategy", TrMarkC("genre", "Strategy")},
+			{"strategy rpg", TrMarkC("genre", "Strategy RPG")}, {"survival horror", TrMarkC("genre", "Survival horror")},
+			{"table tennis", TrMarkC("genre", "Table tennis")}, {"tactical rpg", TrMarkC("genre", "Tactical RPG")},
+			{"tennis", TrMarkC("genre", "Tennis")}, {"third-person shooter", TrMarkC("genre", "Third-person shooter")},
+			{"tower defense", TrMarkC("genre", "Tower defence")}, {"train simulation", TrMarkC("genre", "Train simulation")},
+			{"trivia", TrMarkC("genre", "Trivia")}, {"truck racing", TrMarkC("genre", "Truck racing")},
+			{"turn-based strategy", TrMarkC("genre", "Turn-based strategy")}, {"virtual pet", TrMarkC("genre", "Virtual pet")},
+			{"volleyball", TrMarkC("genre", "Volleyball")}, {"wargame", TrMarkC("genre", "Wargame")},
+			{"watercraft racing", TrMarkC("genre", "Watercraft racing")}, {"wrestling", TrMarkC("genre", "Wrestling")}};
 		std::string out;
-		bool start = true;
-		int count = 1;
-		for (const char c : genre)
+		int count = 0;
+		for (size_t start = 0; start <= genre.size();)
 		{
-			if (c == ',')
-			{
-				if (most > 0 && ++count > most)
-					break;
-				out += ", ";
-				start = true;
+			size_t end = genre.find(',', start);
+			if (end == std::string::npos)
+				end = genre.size();
+			std::string name = genre.substr(start, end - start);
+			start = end + 1;
+			if (name.empty())
 				continue;
-			}
-			out += start ? (char)std::toupper((unsigned char)c) : c;
-			start = false;
+			if (most > 0 && ++count > most)
+				break;
+			const auto known = kNames.find(name);
+			if (known != kNames.end())
+				name = ps5lang::TrC("genre", known->second);
+			else
+				name[0] = (char)std::toupper((unsigned char)name[0]);
+			out += (out.empty() ? "" : ", ") + name;
 		}
 		return out;
 	}

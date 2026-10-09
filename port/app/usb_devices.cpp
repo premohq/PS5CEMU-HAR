@@ -4,6 +4,7 @@
 // MPL-2.0 licence.
 
 #include "usb_devices.h"
+#include "lang.h"
 #include "paths.h"
 #include "../ps5/log.h"
 
@@ -24,6 +25,10 @@ namespace fs = std::filesystem;
 
 namespace ps5usb
 {
+	using ps5lang::Tr;
+	using ps5lang::TrF;
+	using ps5lang::TrMark;
+
 	namespace
 	{
 		struct SlotState
@@ -52,11 +57,13 @@ namespace ps5usb
 		// Toypad, named as Cemu's window names them
 		const std::vector<std::string>& Labels(Device device)
 		{
-			static const std::vector<std::string> skylanders = {"Slot 1", "Slot 2", "Slot 3", "Slot 4"};
-			static const std::vector<std::string> infinity = {"Play set / power disc", "Power disc 2", "Power disc 3", "Player 1",
-				"Player 1 ability 1", "Player 1 ability 2", "Player 2", "Player 2 ability 1", "Player 2 ability 2"};
-			static const std::vector<std::string> dimensions = {"Left pad 1", "Centre pad", "Right pad 1", "Left pad 2", "Left pad 3",
-				"Right pad 2", "Right pad 3"};
+			// tr: the places on the toys' portals that a figure goes on
+			static const std::vector<std::string> skylanders = {TrMark("Slot 1"), TrMark("Slot 2"), TrMark("Slot 3"), TrMark("Slot 4")};
+			static const std::vector<std::string> infinity = {TrMark("Play set / power disc"), TrMark("Power disc 2"), TrMark("Power disc 3"),
+				TrMark("Player 1"), TrMark("Player 1 ability 1"), TrMark("Player 1 ability 2"), TrMark("Player 2"), TrMark("Player 2 ability 1"),
+				TrMark("Player 2 ability 2")};
+			static const std::vector<std::string> dimensions = {TrMark("Left pad 1"), TrMark("Centre pad"), TrMark("Right pad 1"),
+				TrMark("Left pad 2"), TrMark("Left pad 3"), TrMark("Right pad 2"), TrMark("Right pad 3")};
 			return device == Device::Skylanders ? skylanders : device == Device::Infinity ? infinity : dimensions;
 		}
 
@@ -111,17 +118,17 @@ namespace ps5usb
 			// opened for writing too: the game keeps the figure's progress in it, as on the toy itself
 			std::unique_ptr<FileStream> file(FileStream::openFile2(path, true));
 			if (!file)
-				return figure + " could not be opened";
+				return TrF("{0} could not be opened", figure);
 			switch (device)
 			{
 			case Device::Skylanders:
 			{
 				std::array<uint8, nsyshid::SKY_FIGURE_SIZE> data{};
 				if (!Read(*file, data))
-					return figure + " is too small for a Skylander";
+					return TrF("{0} is too small for a Skylander", figure);
 				const uint8 portalSlot = nsyshid::g_skyportal.LoadSkylander(data.data(), std::move(file));
 				if (portalSlot >= nsyshid::MAX_SKYLANDERS)
-					return "The portal is full";
+					return Tr("The portal is full");
 				state.portalSlot = portalSlot;
 				break;
 			}
@@ -129,7 +136,7 @@ namespace ps5usb
 			{
 				std::array<uint8, nsyshid::INF_FIGURE_SIZE> data{};
 				if (!Read(*file, data))
-					return figure + " is too small for an Infinity figure";
+					return TrF("{0} is too small for an Infinity figure", figure);
 				nsyshid::g_infinitybase.LoadFigure(data, std::move(file), (uint8)slot);
 				break;
 			}
@@ -137,7 +144,7 @@ namespace ps5usb
 			{
 				std::array<uint8, 0x2D * 0x04> data{};
 				if (!Read(*file, data))
-					return figure + " is too small for a Dimensions figure";
+					return TrF("{0} is too small for a Dimensions figure", figure);
 				nsyshid::g_dimensionstoypad.LoadFigure(data, std::move(file), kDimensionPads[slot], (uint8)slot);
 				break;
 			}
@@ -152,9 +159,10 @@ namespace ps5usb
 	{
 		switch (device)
 		{
-		case Device::Skylanders: return "Skylanders Portal of Power";
-		case Device::Infinity: return "Disney Infinity Base";
-		case Device::Dimensions: return "LEGO Dimensions Toypad";
+		// tr: the toys' portals, by the names their makers gave them in the language
+		case Device::Skylanders: return Tr("Skylanders Portal of Power");
+		case Device::Infinity: return Tr("Disney Infinity Base");
+		case Device::Dimensions: return Tr("LEGO Dimensions Toypad");
 		}
 		return "";
 	}
@@ -196,7 +204,7 @@ namespace ps5usb
 		const auto& labels = Labels(device);
 		const auto& states = SlotsOf(device);
 		for (size_t i = 0; i < labels.size(); i++)
-			slots.push_back({labels[i], states[i].figure});
+			slots.push_back({Tr(labels[i]), states[i].figure});
 		return slots;
 	}
 

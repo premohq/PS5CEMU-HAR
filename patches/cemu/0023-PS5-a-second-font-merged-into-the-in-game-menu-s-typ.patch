@@ -1,0 +1,76 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: ps5cemu <ps5cemu@localhost>
+Date: Fri, 9 Oct 2026 06:48:50 +0000
+Subject: [PATCH] PS5: a second font merged into the in-game menu's typeface,
+ for a language's own script
+
+---
+ src/imgui/imgui_extension.cpp | 25 +++++++++++++++++++++++++
+ src/imgui/imgui_extension.h   |  3 +++
+ 2 files changed, 28 insertions(+)
+
+diff --git a/src/imgui/imgui_extension.cpp b/src/imgui/imgui_extension.cpp
+index f37c464..ff4ba09 100644
+--- a/src/imgui/imgui_extension.cpp
++++ b/src/imgui/imgui_extension.cpp
+@@ -60,6 +60,11 @@ struct PS5FontFace
+ 	const void* data = nullptr;
+ 	int size = 0;
+ 	const ImWchar* ranges = nullptr;
++	// a second font merged into it, for what it lacks (the console's, for a language's own script)
++	const void* mergeData = nullptr;
++	int mergeSize = 0;
++	const ImWchar* mergeRanges = nullptr;
++	int mergeFontNo = 0;
+ };
+ static PS5FontFace g_ps5_faces[8];
+ static constexpr int kFaceKey = 4096;
+@@ -93,6 +98,16 @@ void ImGui_PrecacheFonts()
+ 			cfg.OversampleH = 2;
+ 			g_imgui_fonts[key] = io.Fonts->AddFontFromMemoryTTF((void*)g_ps5_faces[face].data, g_ps5_faces[face].size, (float)size, &cfg,
+ 				g_ps5_faces[face].ranges);
++			if (g_ps5_faces[face].mergeData)
++			{
++				ImFontConfig merge{};
++				merge.FontDataOwnedByAtlas = false;
++				merge.MergeMode = true;
++				merge.OversampleH = 2;
++				merge.FontNo = g_ps5_faces[face].mergeFontNo;
++				io.Fonts->AddFontFromMemoryTTF((void*)g_ps5_faces[face].mergeData, g_ps5_faces[face].mergeSize, (float)size, &merge,
++					g_ps5_faces[face].mergeRanges);
++			}
+ 			g_renderer->Flush(true);
+ 			g_renderer->DeleteFontTextures();
+ 			continue;
+@@ -156,6 +171,16 @@ void ImGui_SetFontFace(int face, const void* data, int size, const ImWchar* rang
+ 		g_ps5_faces[face] = {data, size, ranges};
+ }
+ 
++void ImGui_SetFontFaceMerge(int face, const void* data, int size, const ImWchar* ranges, int fontNo)
++{
++	if (face <= 0 || face >= 8)
++		return;
++	g_ps5_faces[face].mergeData = data;
++	g_ps5_faces[face].mergeSize = size;
++	g_ps5_faces[face].mergeRanges = ranges;
++	g_ps5_faces[face].mergeFontNo = fontNo;
++}
++
+ ImFont* ImGui_GetFontFace(int face, float size)
+ {
+ 	if (face <= 0 || face >= 8 || !g_ps5_faces[face].data)
+diff --git a/src/imgui/imgui_extension.h b/src/imgui/imgui_extension.h
+index 0100650..0282d71 100644
+--- a/src/imgui/imgui_extension.h
++++ b/src/imgui/imgui_extension.h
+@@ -18,6 +18,9 @@ ImFont* ImGui_GetFont(float size);
+ // PS5Cemu's in-game menu draws in its own typeface (port/app/menu_canvas.h): a TrueType font given
+ // as face 1 to 7 (the data kept by the caller), then asked for at a size as ImGui_GetFont is
+ void ImGui_SetFontFace(int face, const void* data, int size, const ImWchar* ranges);
++// a second font merged into face, for the characters its own lacks (the data kept by the caller;
++// fontNo: the face in a collection)
++void ImGui_SetFontFaceMerge(int face, const void* data, int size, const ImWchar* ranges, int fontNo);
+ ImFont* ImGui_GetFontFace(int face, float size);
+ #endif
+ void ImGui_UpdateWindowInformation(bool mainWindow);
+\ No newline at end of file

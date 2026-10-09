@@ -9,6 +9,7 @@
 #include "boxart.h"
 #include "ingame.h"
 #include "pack_updates.h"
+#include "lang.h"
 #include "paths.h"
 #include "usb_devices.h"
 #include "../frontend/settings.h"
@@ -319,7 +320,7 @@ namespace ps5emu
 			LatteOverlay_init();
 			if (!InitializeGlobalVulkan())
 			{
-				error = "the PS5 Vulkan driver did not start";
+				error = ps5lang::Tr("the PS5 Vulkan driver did not start");
 				return false;
 			}
 			ps5log::Line("[emu] the emulated Wii U started");
@@ -351,7 +352,7 @@ namespace ps5emu
 			ps5paths::CemuData(), failedWriteAccess);
 		if (!failedWriteAccess.empty())
 		{
-			error = fmt::format("PS5CEMU-HAR cannot write to {}. Is the HEN loaded?", _pathToUtf8(*failedWriteAccess.begin()));
+			error = ps5lang::TrF("PS5CEMU-HAR cannot write to {0}. Is the HEN loaded?", _pathToUtf8(*failedWriteAccess.begin()));
 			return false;
 		}
 		cemuLog_createLogFile(false); // log.txt in /data/ps5cemu, as on the desktop
@@ -374,7 +375,7 @@ namespace ps5emu
 		}
 		if (!CreateDefaultMlcFiles(ActiveSettings::GetMlcPath()))
 		{
-			error = fmt::format("PS5CEMU-HAR cannot create the MLC folder {}", _pathToUtf8(ActiveSettings::GetMlcPath()));
+			error = ps5lang::TrF("PS5CEMU-HAR cannot create the MLC folder {0}", _pathToUtf8(ActiveSettings::GetMlcPath()));
 			return false;
 		}
 		InstallBundledGraphicPacks();
@@ -476,18 +477,19 @@ namespace ps5emu
 			TitleId baseTitleId;
 			if (!CafeTitleList::FindBaseTitleId(launchTitle.GetAppTitleId(), baseTitleId))
 			{
-				error = "The game's base files were not found.";
+				// tr: why a Wii U game did not start
+				error = ps5lang::Tr("The game's base files were not found.");
 				return false;
 			}
 			const auto status = CafeSystem::PrepareForegroundTitle(baseTitleId);
 			if (status == CafeSystem::PREPARE_STATUS_CODE::UNABLE_TO_MOUNT)
 			{
-				error = "The game could not be mounted. Check that its files are still in the game files folder.";
+				error = ps5lang::Tr("The game could not be mounted. Check that its files are still in the game files folder.");
 				return false;
 			}
 			if (status != CafeSystem::PREPARE_STATUS_CODE::SUCCESS)
 			{
-				error = "The game could not be started.";
+				error = ps5lang::Tr("The game could not be started.");
 				return false;
 			}
 		}
@@ -496,16 +498,16 @@ namespace ps5emu
 			const CafeTitleFileType fileType = DetermineCafeSystemFileType(game.path);
 			if (fileType != CafeTitleFileType::RPX && fileType != CafeTitleFileType::ELF)
 			{
-				error = "This is not a Wii U game PS5CEMU-HAR can start.";
+				error = ps5lang::Tr("This is not a Wii U game PS5CEMU-HAR can start.");
 				if (launchTitle.GetInvalidReason() == TitleInfo::InvalidReason::NO_DISC_KEY)
-					error += " Its disc key is missing from /data/ps5cemu/keys.txt.";
+					error += std::string(" ") + ps5lang::Tr("Its disc key is missing from /data/ps5cemu/keys.txt.");
 				else if (launchTitle.GetInvalidReason() == TitleInfo::InvalidReason::NO_TITLE_TIK)
-					error += " Its title.tik is missing.";
+					error += std::string(" ") + ps5lang::Tr("Its title.tik is missing.");
 				return false;
 			}
 			if (CafeSystem::PrepareForegroundTitleFromStandaloneRPX(game.path) != CafeSystem::PREPARE_STATUS_CODE::SUCCESS)
 			{
-				error = "The executable could not be started.";
+				error = ps5lang::Tr("The executable could not be started.");
 				return false;
 			}
 		}
@@ -518,7 +520,7 @@ namespace ps5emu
 		}
 		catch (const std::exception& ex)
 		{
-			error = fmt::format("The Vulkan renderer did not start: {}", ex.what());
+			error = ps5lang::TrF("The Vulkan renderer did not start: {0}", ex.what());
 			return false;
 		}
 		CafeSystem::LaunchForegroundTitle();
@@ -571,7 +573,8 @@ namespace ps5emu
 
 	void RunGame()
 	{
-		ps5notify::Send("Touchpad + Options: the PS5 CEMU menu (screens, picture, volume, controls, library)");
+		// tr: the PS5's notification as a Wii U game starts
+		ps5notify::Send(ps5lang::Tr("Touchpad click + Options: the in-game menu (screens, picture, volume, controls, the library)"));
 		uint64_t polls = 0;
 		LogMemory();
 		uint32_t loggedFrames = LatteGPUState.frameCounter;

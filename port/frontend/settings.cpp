@@ -186,6 +186,7 @@ namespace ps5settings
 			if (out.startOn != "ask")
 				out.startOn = "last";
 			ReadString(ui, "lastSide", out.lastSide);
+			ReadString(ui, "language", out.language);
 			ReadBool(ui, "largerText", out.largerText);
 			ReadBool(ui, "highContrast", out.highContrast);
 			ReadBool(ui, "reduceMotion", out.reduceMotion);
@@ -260,6 +261,8 @@ namespace ps5settings
 		writer.String(settings.ui.startOn.c_str());
 		writer.Key("lastSide");
 		writer.String(settings.ui.lastSide.c_str());
+		writer.Key("language");
+		writer.String(settings.ui.language.c_str());
 		writer.Key("largerText");
 		writer.Bool(settings.ui.largerText);
 		writer.Key("highContrast");

@@ -50,15 +50,22 @@ namespace
 		int x = 0, y = 0;
 	};
 
-	// The code points baked: printable ASCII, Latin-1, Latin Extended-A, and the typographic marks
-	// the app's text uses
+	// The code points baked: printable ASCII, Latin-1, Latin Extended-A, what Lexend has of Latin
+	// Extended-B and Latin Extended Additional (Romanian's ș and ț, Vietnamese's letters: the languages
+	// the menus speak in Latin script, docs/UI-REDESIGN.md 7.7), the spaces and the typographic marks
+	// the app's text uses. A code point the font lacks is left out.
 	std::vector<uint32_t> CodePoints()
 	{
 		std::vector<uint32_t> points;
 		for (uint32_t c = 0x20; c <= 0x7e; c++)
 			points.push_back(c);
-		for (uint32_t c = 0xa0; c <= 0x17f; c++)
+		for (uint32_t c = 0xa0; c <= 0x24f; c++)
 			points.push_back(c);
+		for (uint32_t c = 0x1e00; c <= 0x1eff; c++)
+			points.push_back(c);
+		for (uint32_t c = 0x2000; c <= 0x200a; c++)
+			points.push_back(c);
+		points.push_back(0x202f);
 		for (uint32_t c = 0x2010; c <= 0x2027; c++)
 			points.push_back(c);
 		for (uint32_t c : {0x2030u, 0x2039u, 0x203au, 0x20acu, 0x2122u, 0x2190u, 0x2191u, 0x2192u, 0x2193u, 0x2212u, 0x2215u, 0x2248u,

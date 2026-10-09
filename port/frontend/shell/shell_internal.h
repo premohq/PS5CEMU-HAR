@@ -13,6 +13,7 @@
 #include "../../app/catalog.h"
 #include "../../app/compatibility.h"
 #include "../../app/gameinfo.h"
+#include "../../app/lang.h"
 #include "../../ui/canvas.h"
 #include "../../ui/feedback.h"
 #include "../../ui/images.h"
@@ -40,6 +41,13 @@ namespace ps5shell
 	using ui::Button;
 	using ui::Canvas;
 	using ui::Icon;
+	using ps5lang::Tr;
+	using ps5lang::TrC;
+	using ps5lang::TrF;
+	using ps5lang::TrFC;
+	using ps5lang::TrMark;
+	using ps5lang::TrMarkC;
+	using ps5lang::TrP;
 
 	enum class ScreenId
 	{
@@ -162,6 +170,11 @@ namespace ps5shell
 		std::string Played(const Game& game) const;
 		std::string LastPlayedWords(int64_t when) const;
 		void SaveSettings();
+		// the language Settings names (or the PS5's) read again, and everything that keeps words said again
+		void ApplyLanguage();
+		// the PS5's own language first, then every language in its own words; index: the one in use
+		std::vector<std::string> LanguageOptions(int& index) const;
+		void OpenLanguagePicker(const std::string& kicker);
 		void FetchBoxArt();
 		void RememberCount();
 		void Launch(int index);
@@ -177,8 +190,9 @@ namespace ps5shell
 		void Focus(const Box& box, float radius, uint32_t glow = 0);
 		void DrawFocusRing(Canvas& canvas);
 		void Panel(Canvas& canvas, const Box& box, float radius);
+		// maxWidth: the button's widest, its label smaller (then cut) in a language that needs more (0: as wide as the label)
 		Box PillButton(Canvas& canvas, float x, float y, const std::string& label, bool primary, bool focused, Icon icon = Icon::Play, bool withIcon = false,
-			float height = 72);
+			float height = 72, float maxWidth = 0);
 		Box IconButton(Canvas& canvas, float x, float y, Icon icon, bool focused, float size = 72);
 		float Chip(Canvas& canvas, float x, float y, const std::string& text, const char* kind = "", float height = 38);
 		float Badge(Canvas& canvas, float x, float y, System side);
@@ -280,6 +294,7 @@ namespace ps5shell
 
 		ui::Gfx m_gfx;
 		ui::Fonts m_fonts;
+		uint32_t m_atlasHeight = 0; // as Gfx has it
 		std::unique_ptr<ui::Images> m_images;
 		ui::Input m_input;
 		ui::Feedback m_feedback;
@@ -423,6 +438,7 @@ namespace ps5shell
 
 		// Setup check
 		bool m_setupFirst = false; // as the app starts, before a side opens
+		bool m_setupOnLanguage = false; // the focus on the language, above the checks
 		int m_setupRow = 0;
 		ScreenId m_setupFrom = ScreenId::Settings; // where Circle goes back to, when not at the start
 		struct Check

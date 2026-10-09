@@ -1,0 +1,3337 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PS5CEMU-HAR\n"
+"Language: qps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "status"
+msgid "Playable"
+msgstr "⟦Plàÿàblé~~~⟧"
+
+msgctxt "status"
+msgid "Issues"
+msgstr "⟦Îssûés~~⟧"
+
+msgctxt "status"
+msgid "Crashes"
+msgstr "⟦Çràshés~~⟧"
+
+msgctxt "status"
+msgid "Won't start"
+msgstr "⟦Wöñ't stàrt~~~~⟧"
+
+msgid "the PS5 Vulkan driver did not start"
+msgstr "⟦thé PS5 Vûlkàñ drîvér dîd ñöt stàrt~~~~~~~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR cannot write to {0}. Is the HEN loaded?"
+msgstr "⟦PS5ÇÉMÜ-HÅR çàññöt wrîté tö ~~~~~~~~~~~{0}. Îs thé HÉÑ löàdéd?~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR cannot create the MLC folder {0}"
+msgstr "⟦PS5ÇÉMÜ-HÅR çàññöt çréàté thé MLÇ földér ~~~~~~~~~~~~~~~~{0}⟧"
+
+msgid "The game's base files were not found."
+msgstr "⟦Thé gàmé's bàsé fîlés wéré ñöt föûñd.~~~~~~~~~~~~~~⟧"
+
+msgid "The game could not be mounted. Check that its files are still in the game files folder."
+msgstr "⟦Thé gàmé çöûld ñöt bé möûñtéd. Çhéçk thàt îts fîlés àré stîll îñ thé gàmé fîlés földér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game could not be started."
+msgstr "⟦Thé gàmé çöûld ñöt bé stàrtéd.~~~~~~~~~~~~⟧"
+
+msgid "This is not a Wii U game PS5CEMU-HAR can start."
+msgstr "⟦Thîs îs ñöt à Wîî Ü gàmé PS5ÇÉMÜ-HÅR çàñ stàrt.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Its disc key is missing from /data/ps5cemu/keys.txt."
+msgstr "⟦Îts dîsç kéÿ îs mîssîñg fröm /dàtà/ps5çémû/kéÿs.txt.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Its title.tik is missing."
+msgstr "⟦Îts tîtlé.tîk îs mîssîñg.~~~~~~~~~~⟧"
+
+msgid "The executable could not be started."
+msgstr "⟦Thé éxéçûtàblé çöûld ñöt bé stàrtéd.~~~~~~~~~~~~~~⟧"
+
+msgid "The Vulkan renderer did not start: {0}"
+msgstr "⟦Thé Vûlkàñ réñdérér dîd ñöt stàrt: ~~~~~~~~~~~~~~{0}⟧"
+
+msgid "Touchpad click + Options: the in-game menu (screens, picture, volume, controls, the library)"
+msgstr "⟦Töûçhpàd çlîçk + Öptîöñs: thé îñ-gàmé méñû (sçrééñs, pîçtûré, völûmé, çöñtröls, thé lîbràrÿ)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "2D platformer"
+msgstr "⟦2D plàtförmér~~~~~⟧"
+
+msgctxt "genre"
+msgid "3D fighting"
+msgstr "⟦3D fîghtîñg~~~~⟧"
+
+msgctxt "genre"
+msgid "3D platformer"
+msgstr "⟦3D plàtförmér~~~~~⟧"
+
+msgctxt "genre"
+msgid "Action"
+msgstr "⟦Åçtîöñ~~⟧"
+
+msgctxt "genre"
+msgid "Action RPG"
+msgstr "⟦Åçtîöñ RPG~~~~⟧"
+
+msgctxt "genre"
+msgid "Adventure"
+msgstr "⟦Ådvéñtûré~~~⟧"
+
+msgctxt "genre"
+msgid "Arcade"
+msgstr "⟦Årçàdé~~⟧"
+
+msgctxt "genre"
+msgid "Baseball"
+msgstr "⟦Bàsébàll~~~⟧"
+
+msgctxt "genre"
+msgid "Basketball"
+msgstr "⟦Bàskétbàll~~~~⟧"
+
+msgctxt "genre"
+msgid "Beat 'em up"
+msgstr "⟦Béàt 'ém ûp~~~~⟧"
+
+msgctxt "genre"
+msgid "Billiards"
+msgstr "⟦Bîllîàrds~~~⟧"
+
+msgctxt "genre"
+msgid "Board game"
+msgstr "⟦Böàrd gàmé~~~~⟧"
+
+msgctxt "genre"
+msgid "Bowling"
+msgstr "⟦Böwlîñg~~⟧"
+
+msgctxt "genre"
+msgid "Boxing"
+msgstr "⟦Böxîñg~~⟧"
+
+msgctxt "genre"
+msgid "Business simulation"
+msgstr "⟦Bûsîñéss sîmûlàtîöñ~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Cards"
+msgstr "⟦Çàrds~~⟧"
+
+msgctxt "genre"
+msgid "Chess"
+msgstr "⟦Çhéss~~⟧"
+
+msgctxt "genre"
+msgid "Coaching"
+msgstr "⟦Çöàçhîñg~~~⟧"
+
+msgctxt "genre"
+msgid "Compilation"
+msgstr "⟦Çömpîlàtîöñ~~~~⟧"
+
+msgctxt "genre"
+msgid "Construction simulation"
+msgstr "⟦Çöñstrûçtîöñ sîmûlàtîöñ~~~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Cooking"
+msgstr "⟦Çöökîñg~~⟧"
+
+msgctxt "genre"
+msgid "Dance"
+msgstr "⟦Dàñçé~~⟧"
+
+msgctxt "genre"
+msgid "Darts"
+msgstr "⟦Dàrts~~⟧"
+
+msgctxt "genre"
+msgid "Demo"
+msgstr "⟦Démö~⟧"
+
+msgctxt "genre"
+msgid "Drawing"
+msgstr "⟦Dràwîñg~~⟧"
+
+msgctxt "genre"
+msgid "Educational"
+msgstr "⟦Édûçàtîöñàl~~~~⟧"
+
+msgctxt "genre"
+msgid "Exercise"
+msgstr "⟦Éxérçîsé~~~⟧"
+
+msgctxt "genre"
+msgid "Fantasy"
+msgstr "⟦Fàñtàsÿ~~⟧"
+
+msgctxt "genre"
+msgid "Fighting"
+msgstr "⟦Fîghtîñg~~~⟧"
+
+msgctxt "genre"
+msgid "First-person shooter"
+msgstr "⟦Fîrst-pérsöñ shöötér~~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Fishing"
+msgstr "⟦Fîshîñg~~⟧"
+
+msgctxt "genre"
+msgid "Fitness"
+msgstr "⟦Fîtñéss~~⟧"
+
+msgctxt "genre"
+msgid "Flight simulation"
+msgstr "⟦Flîght sîmûlàtîöñ~~~~~~⟧"
+
+msgctxt "genre"
+msgid "American football"
+msgstr "⟦Åmérîçàñ föötbàll~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Futuristic racing"
+msgstr "⟦Fûtûrîstîç ràçîñg~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Golf"
+msgstr "⟦Gölf~⟧"
+
+msgctxt "genre"
+msgid "Health"
+msgstr "⟦Héàlth~~⟧"
+
+msgctxt "genre"
+msgid "Hidden object"
+msgstr "⟦Hîddéñ öbjéçt~~~~~⟧"
+
+msgctxt "genre"
+msgid "Historic"
+msgstr "⟦Hîstörîç~~~⟧"
+
+msgctxt "genre"
+msgid "Hockey"
+msgstr "⟦Höçkéÿ~~⟧"
+
+msgctxt "genre"
+msgid "Horror"
+msgstr "⟦Hörrör~~⟧"
+
+msgctxt "genre"
+msgid "Hunting"
+msgstr "⟦Hûñtîñg~~⟧"
+
+msgctxt "genre"
+msgid "Interactive movie"
+msgstr "⟦Îñtéràçtîvé mövîé~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Karaoke"
+msgstr "⟦Kàràöké~~⟧"
+
+msgctxt "genre"
+msgid "Kart racing"
+msgstr "⟦Kàrt ràçîñg~~~~⟧"
+
+msgctxt "genre"
+msgid "Life simulation"
+msgstr "⟦Lîfé sîmûlàtîöñ~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Management simulation"
+msgstr "⟦Màñàgéméñt sîmûlàtîöñ~~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Motorcycle racing"
+msgstr "⟦Mötörçÿçlé ràçîñg~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Multimedia"
+msgstr "⟦Mûltîmédîà~~~~⟧"
+
+msgctxt "genre"
+msgid "Music"
+msgstr "⟦Mûsîç~~⟧"
+
+msgctxt "genre"
+msgid "Off-road racing"
+msgstr "⟦Öff-röàd ràçîñg~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Party"
+msgstr "⟦Pàrtÿ~~⟧"
+
+msgctxt "genre"
+msgid "Pinball"
+msgstr "⟦Pîñbàll~~⟧"
+
+msgctxt "genre"
+msgid "Platformer"
+msgstr "⟦Plàtförmér~~~~⟧"
+
+msgctxt "genre"
+msgid "Point-and-click"
+msgstr "⟦Pöîñt-àñd-çlîçk~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Poker"
+msgstr "⟦Pökér~~⟧"
+
+msgctxt "genre"
+msgid "Puzzle"
+msgstr "⟦Pûzzlé~~⟧"
+
+msgctxt "genre"
+msgid "Racing"
+msgstr "⟦Ràçîñg~~⟧"
+
+msgctxt "genre"
+msgid "Rail shooter"
+msgstr "⟦Ràîl shöötér~~~~⟧"
+
+msgctxt "genre"
+msgid "Real-time strategy"
+msgstr "⟦Réàl-tîmé stràtégÿ~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Rhythm"
+msgstr "⟦Rhÿthm~~⟧"
+
+msgctxt "genre"
+msgid "Roguelike"
+msgstr "⟦Rögûélîké~~~⟧"
+
+msgctxt "genre"
+msgid "Role-playing"
+msgstr "⟦Rölé-plàÿîñg~~~~⟧"
+
+msgctxt "genre"
+msgid "Run and gun"
+msgstr "⟦Rûñ àñd gûñ~~~~⟧"
+
+msgctxt "genre"
+msgid "Sci-fi"
+msgstr "⟦Sçî-fî~~⟧"
+
+msgctxt "genre"
+msgid "Shoot 'em up"
+msgstr "⟦Shööt 'ém ûp~~~~⟧"
+
+msgctxt "genre"
+msgid "Shooter"
+msgstr "⟦Shöötér~~⟧"
+
+msgctxt "genre"
+msgid "Simulation"
+msgstr "⟦Sîmûlàtîöñ~~~~⟧"
+
+msgctxt "genre"
+msgid "Skateboarding"
+msgstr "⟦Skàtéböàrdîñg~~~~~⟧"
+
+msgctxt "genre"
+msgid "Snowboarding"
+msgstr "⟦Sñöwböàrdîñg~~~~⟧"
+
+msgctxt "genre"
+msgid "Football"
+msgstr "⟦Föötbàll~~~⟧"
+
+msgctxt "genre"
+msgid "Software"
+msgstr "⟦Söftwàré~~~⟧"
+
+msgctxt "genre"
+msgid "Sports"
+msgstr "⟦Spörts~~⟧"
+
+msgctxt "genre"
+msgid "Stealth action"
+msgstr "⟦Stéàlth àçtîöñ~~~~~⟧"
+
+msgctxt "genre"
+msgid "Strategy"
+msgstr "⟦Stràtégÿ~~~⟧"
+
+msgctxt "genre"
+msgid "Strategy RPG"
+msgstr "⟦Stràtégÿ RPG~~~~⟧"
+
+msgctxt "genre"
+msgid "Survival horror"
+msgstr "⟦Sûrvîvàl hörrör~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Table tennis"
+msgstr "⟦Tàblé téññîs~~~~⟧"
+
+msgctxt "genre"
+msgid "Tactical RPG"
+msgstr "⟦Tàçtîçàl RPG~~~~⟧"
+
+msgctxt "genre"
+msgid "Tennis"
+msgstr "⟦Téññîs~~⟧"
+
+msgctxt "genre"
+msgid "Third-person shooter"
+msgstr "⟦Thîrd-pérsöñ shöötér~~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Tower defence"
+msgstr "⟦Töwér déféñçé~~~~~⟧"
+
+msgctxt "genre"
+msgid "Train simulation"
+msgstr "⟦Tràîñ sîmûlàtîöñ~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Trivia"
+msgstr "⟦Trîvîà~~⟧"
+
+msgctxt "genre"
+msgid "Truck racing"
+msgstr "⟦Trûçk ràçîñg~~~~⟧"
+
+msgctxt "genre"
+msgid "Turn-based strategy"
+msgstr "⟦Tûrñ-bàséd stràtégÿ~~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Virtual pet"
+msgstr "⟦Vîrtûàl pét~~~~⟧"
+
+msgctxt "genre"
+msgid "Volleyball"
+msgstr "⟦Völléÿbàll~~~~⟧"
+
+msgctxt "genre"
+msgid "Wargame"
+msgstr "⟦Wàrgàmé~~⟧"
+
+msgctxt "genre"
+msgid "Watercraft racing"
+msgstr "⟦Wàtérçràft ràçîñg~~~~~~⟧"
+
+msgctxt "genre"
+msgid "Wrestling"
+msgstr "⟦Wréstlîñg~~~⟧"
+
+msgid "Wii U GamePad"
+msgstr "⟦Wîî Ü GàméPàd~~~~~⟧"
+
+msgid "Wii U Pro Controller"
+msgstr "⟦Wîî Ü Prö Çöñtröllér~~~~~~~~⟧"
+
+msgid "Classic Controller"
+msgstr "⟦Çlàssîç Çöñtröllér~~~~~~~⟧"
+
+msgid "Wii Remote"
+msgstr "⟦Wîî Rémöté~~~~⟧"
+
+msgid "Wii Remote + Nunchuk"
+msgstr "⟦Wîî Rémöté + Ñûñçhûk~~~~~~~~⟧"
+
+msgid "No controller"
+msgstr "⟦Ñö çöñtröllér~~~~~⟧"
+
+msgid "Bilinear"
+msgstr "⟦Bîlîñéàr~~~⟧"
+
+msgid "Bicubic"
+msgstr "⟦Bîçûbîç~~⟧"
+
+msgid "Bicubic Hermite"
+msgstr "⟦Bîçûbîç Hérmîté~~~~~~⟧"
+
+msgid "Nearest neighbour"
+msgstr "⟦Ñéàrést ñéîghböûr~~~~~~⟧"
+
+msgid "On"
+msgstr "⟦Öñ⟧"
+
+msgid "Off"
+msgstr "⟦Öff~⟧"
+
+msgid "TV"
+msgstr "⟦TV⟧"
+
+msgid "GamePad"
+msgstr "⟦GàméPàd~~⟧"
+
+msgid "Screens"
+msgstr "⟦Sçrééñs~~⟧"
+
+msgid "Stretched"
+msgstr "⟦Strétçhéd~~~⟧"
+
+msgid "Its shape"
+msgstr "⟦Îts shàpé~~~⟧"
+
+msgid "The TV's and the GamePad's pictures, and how they fill the screen."
+msgstr "⟦Thé TV's àñd thé GàméPàd's pîçtûrés, àñd höw théÿ fîll thé sçrééñ.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Main screen"
+msgstr "⟦Màîñ sçrééñ~~~~⟧"
+
+msgid "Which picture fills the TV: the TV's or the GamePad's. In the game, touchpad click + L1 swaps them."
+msgstr "⟦Whîçh pîçtûré fîlls thé TV: thé TV's ör thé GàméPàd's. Îñ thé gàmé, töûçhpàd çlîçk + L1 swàps thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "TV in a corner"
+msgstr "⟦TV îñ à çörñér~~~~~⟧"
+
+msgid "GamePad in a corner"
+msgstr "⟦GàméPàd îñ à çörñér~~~~~~~⟧"
+
+msgid "The other screen, small in the bottom right corner. In the game, touchpad click + R1."
+msgstr "⟦Thé öthér sçrééñ, smàll îñ thé böttöm rîght çörñér. Îñ thé gàmé, töûçhpàd çlîçk + R1.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Picture"
+msgstr "⟦Pîçtûré~~⟧"
+
+msgid "Its own shape"
+msgstr "⟦Îts öwñ shàpé~~~~~⟧"
+
+msgid "Its own shape keeps the picture's proportions, with bars where they differ from the screen's; Stretched fills it."
+msgstr "⟦Îts öwñ shàpé kééps thé pîçtûré's pröpörtîöñs, wîth bàrs whéré théÿ dîffér fröm thé sçrééñ's; Strétçhéd fîlls ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Graphics"
+msgstr "⟦Gràphîçs~~~⟧"
+
+msgid "Upscaling, Cemu's accuracy settings and the performance overlay. Kept for the next games."
+msgstr "⟦Üpsçàlîñg, Çémû's àççûràçÿ séttîñgs àñd thé pérförmàñçé övérlàÿ. Képt för thé ñéxt gàmés.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Upscaling to 4K"
+msgstr "⟦Üpsçàlîñg tö 4K~~~~~~⟧"
+
+msgid "How the picture is scaled to the screen: Bicubic is sharp, Hermite softer, Bilinear softer still."
+msgstr "⟦Höw thé pîçtûré îs sçàléd tö thé sçrééñ: Bîçûbîç îs shàrp, Hérmîté söftér, Bîlîñéàr söftér stîll.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Accurate barriers"
+msgstr "⟦Åççûràté bàrrîérs~~~~~~⟧"
+
+msgid "Off can raise the frame rate, but some games then flicker or show wrong shadows. It changes at once."
+msgstr "⟦Öff çàñ ràîsé thé fràmé ràté, bût sömé gàmés théñ flîçkér ör shöw wröñg shàdöws. Ît çhàñgés àt öñçé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Async shader compile"
+msgstr "⟦Åsÿñç shàdér çömpîlé~~~~~~~~⟧"
+
+msgid "On, new shaders build while the game carries on: no stutter, but things may be missing for a moment."
+msgstr "⟦Öñ, ñéw shàdérs bûîld whîlé thé gàmé çàrrîés öñ: ñö stûttér, bût thîñgs màÿ bé mîssîñg för à möméñt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Frame pacing"
+msgstr "⟦Fràmé pàçîñg~~~~⟧"
+
+msgid "Holds the game to an even rate: 60 fps for 4K at 120 Hz, 30 for 8K at 60 Hz. Off shows each frame when it is done."
+msgstr "⟦Hölds thé gàmé tö àñ évéñ ràté: 60 fps för 4K àt 120 Hz, 30 för 8K àt 60 Hz. Öff shöws éàçh fràmé whéñ ît îs döñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Performance overlay"
+msgstr "⟦Pérförmàñçé övérlàÿ~~~~~~~⟧"
+
+msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them."
+msgstr "⟦Fràmés pér séçöñd, ÇPÜ àñd mémörÿ ûsé îñ thé töp léft çörñér, às Çémû shöws thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "{0} (next start)"
+msgstr "⟦{0} (ñéxt stàrt)~~~~~⟧"
+
+msgid "This pack replaces textures: the game shows the change when it starts again."
+msgstr "⟦Thîs pàçk réplàçés téxtûrés: thé gàmé shöws thé çhàñgé whéñ ît stàrts àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cross turns it on or off; the game shows it at once."
+msgstr "⟦Çröss tûrñs ît öñ ör öff; thé gàmé shöws ît àt öñçé.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Preset"
+msgstr "⟦Prését~~⟧"
+
+msgid "Left and Right choose another; the game shows it at once."
+msgstr "⟦Léft àñd Rîght çhöösé àñöthér; thé gàmé shöws ît àt öñçé.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "None for this game"
+msgstr "⟦Ñöñé för thîs gàmé~~~~~~~⟧"
+
+msgid "Reading the packs…"
+msgstr "⟦Réàdîñg thé pàçks…~~~~~~~⟧"
+
+msgid "The community graphic packs have none for this game."
+msgstr "⟦Thé çömmûñîtÿ gràphîç pàçks hàvé ñöñé för thîs gàmé.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Graphic packs"
+msgstr "⟦Gràphîç pàçks~~~~~⟧"
+
+msgid "None"
+msgstr "⟦Ñöñé~⟧"
+
+msgid "{0} on"
+msgid_plural "{0} on"
+msgstr[0] "⟦{0} öñ~⟧"
+msgstr[1] "⟦{0} öñ~⟧"
+
+msgid "The game's community graphic packs: resolution, frame rate and mods, as Cemu's Graphic Packs window has them."
+msgstr "⟦Thé gàmé's çömmûñîtÿ gràphîç pàçks: résölûtîöñ, fràmé ràté àñd möds, às Çémû's Gràphîç Pàçks wîñdöw hàs thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game sees the change when it starts again: the portal is plugged in as a game starts."
+msgstr "⟦Thé gàmé séés thé çhàñgé whéñ ît stàrts àgàîñ: thé pörtàl îs plûggéd îñ às à gàmé stàrts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Plugged in as a game starts, as in Cemu. Its figures are below while it is on."
+msgstr "⟦Plûggéd îñ às à gàmé stàrts, às îñ Çémû. Îts fîgûrés àré bélöw whîlé ît îs öñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Empty"
+msgstr "⟦Émptÿ~~⟧"
+
+msgid "Put figure dumps in {0} to put them on here."
+msgstr "⟦Pût fîgûré dûmps îñ ~~~~~~~~{0} tö pût thém öñ héré.~~~~~~~~⟧"
+
+msgid "Left and Right put the next figure on it; Empty takes it off."
+msgstr "⟦Léft àñd Rîght pût thé ñéxt fîgûré öñ ît; Émptÿ tàkés ît öff.~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The last figure could not be put on."
+msgstr "⟦Thé làst fîgûré çöûld ñöt bé pût öñ.~~~~~~~~~~~~~~⟧"
+
+msgid "USB devices"
+msgstr "⟦ÜSB dévîçés~~~~⟧"
+
+msgid "Skylanders, Disney Infinity and LEGO Dimensions figures on Cemu's emulated portals, as amiibo are scanned."
+msgstr "⟦Skÿlàñdérs, Dîsñéÿ Îñfîñîtÿ àñd LÉGÖ Dîméñsîöñs fîgûrés öñ Çémû's émûlàtéd pörtàls, às àmîîbö àré sçàññéd.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Volume"
+msgstr "⟦Völûmé~~⟧"
+
+msgid "The game's sound. Left and Right change it by 10%."
+msgstr "⟦Thé gàmé's söûñd. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Amiibo"
+msgstr "⟦Åmîîbö~~⟧"
+
+msgid "Put amiibo dumps (.bin) in /data/ps5cemu/amiibo to scan them here."
+msgstr "⟦Pût àmîîbö dûmps (.bîñ) îñ /dàtà/ps5çémû/àmîîbö tö sçàñ thém héré.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Left and Right choose an amiibo dump; Cross touches it to the GamePad when the game asks for one."
+msgstr "⟦Léft àñd Rîght çhöösé àñ àmîîbö dûmp; Çröss töûçhés ît tö thé GàméPàd whéñ thé gàmé àsks för öñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Controls"
+msgstr "⟦Çöñtröls~~~⟧"
+
+msgid "Each player's controller, motion, vibration, deadzones and A and B."
+msgstr "⟦Éàçh plàÿér's çöñtröllér, mötîöñ, vîbràtîöñ, déàdzöñés àñd Å àñd B.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Player"
+msgstr "⟦Plàÿér~~⟧"
+
+msgid "{0} (no DualSense)"
+msgstr "⟦{0} (ñö DûàlSéñsé)~~~~~~⟧"
+
+msgid "Whose controller the settings below are: Left and Right choose the player."
+msgstr "⟦Whösé çöñtröllér thé séttîñgs bélöw àré: Léft àñd Rîght çhöösé thé plàÿér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Emulated controller"
+msgstr "⟦Émûlàtéd çöñtröllér~~~~~~~⟧"
+
+msgid "What the game sees in this player's hands. Most games want the GamePad for player 1."
+msgstr "⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds. Möst gàmés wàñt thé GàméPàd för plàÿér 1.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Motion controls"
+msgstr "⟦Mötîöñ çöñtröls~~~~~~⟧"
+
+msgid "None on this one"
+msgstr "⟦Ñöñé öñ thîs öñé~~~~~~⟧"
+
+msgid "The DualSense's gyroscope and accelerometer, for the games that aim or steer by tilting."
+msgstr "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér, för thé gàmés thàt àîm ör stéér bÿ tîltîñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Vibration"
+msgstr "⟦Vîbràtîöñ~~~⟧"
+
+msgid "How strongly the DualSense rumbles. Left and Right change it by 10%."
+msgstr "⟦Höw ströñglÿ thé DûàlSéñsé rûmblés. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Left stick deadzone"
+msgstr "⟦Léft stîçk déàdzöñé~~~~~~~⟧"
+
+msgid "How far the left stick moves before the game sees it. Raise it if a character drifts."
+msgstr "⟦Höw fàr thé léft stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf à çhàràçtér drîfts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Right stick deadzone"
+msgstr "⟦Rîght stîçk déàdzöñé~~~~~~~~⟧"
+
+msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts."
+msgstr "⟦Höw fàr thé rîght stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf thé çàmérà drîfts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "A and B"
+msgstr "⟦Å àñd B~~⟧"
+
+msgid "A on Circle"
+msgstr "⟦Å öñ Çîrçlé~~~~⟧"
+
+msgid "A on Cross"
+msgstr "⟦Å öñ Çröss~~~~⟧"
+
+msgid "A on Circle as on the Wii U, or on Cross, with X and Y swapped to match. Every button: launcher's Settings > Controls."
+msgstr "⟦Å öñ Çîrçlé às öñ thé Wîî Ü, ör öñ Çröss, wîth X àñd Y swàppéd tö màtçh. Évérÿ bûttöñ: làûñçhér's Séttîñgs > Çöñtröls.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Quit to the library"
+msgstr "⟦Qûît tö thé lîbràrÿ~~~~~~~⟧"
+
+msgid "Leaves the game for the library. What you have not saved in the game is lost, so Cross is held."
+msgstr "⟦Léàvés thé gàmé för thé lîbràrÿ. Whàt ÿöû hàvé ñöt sàvéd îñ thé gàmé îs löst, sö Çröss îs héld.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Resume"
+msgstr "⟦Résûmé~~⟧"
+
+msgid "GamePad main"
+msgstr "⟦GàméPàd màîñ~~~~⟧"
+
+msgid "TV main"
+msgstr "⟦TV màîñ~~⟧"
+
+msgid "Scan"
+msgstr "⟦Sçàñ~⟧"
+
+msgid "Scanned {0}"
+msgstr "⟦Sçàññéd ~~~{0}⟧"
+
+msgid "Not scanned (error {0})"
+msgstr "⟦Ñöt sçàññéd (érrör ~~~~~~~{0})⟧"
+
+msgid "Running"
+msgstr "⟦Rûññîñg~~⟧"
+
+msgid "Choose"
+msgstr "⟦Çhöösé~~⟧"
+
+msgid "Change"
+msgstr "⟦Çhàñgé~~⟧"
+
+msgid "Back to the game"
+msgstr "⟦Bàçk tö thé gàmé~~~~~~⟧"
+
+msgid "Back"
+msgstr "⟦Bàçk~⟧"
+
+msgid "Top above bottom"
+msgstr "⟦Töp àbövé böttöm~~~~~~⟧"
+
+msgid "Top screen only"
+msgstr "⟦Töp sçrééñ öñlÿ~~~~~~⟧"
+
+msgid "Large top screen"
+msgstr "⟦Làrgé töp sçrééñ~~~~~~⟧"
+
+msgid "Side by side"
+msgstr "⟦Sîdé bÿ sîdé~~~~⟧"
+
+msgctxt "texture filter"
+msgid "None"
+msgstr "⟦Ñöñé~⟧"
+
+msgid "Screens and border"
+msgstr "⟦Sçrééñs àñd bördér~~~~~~~⟧"
+
+msgid "The screens' layout, which one is the main one, and the border."
+msgstr "⟦Thé sçrééñs' làÿöût, whîçh öñé îs thé màîñ öñé, àñd thé bördér.~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Layout"
+msgstr "⟦Làÿöût~~⟧"
+
+msgid "How the two screens share the TV. In the game, touchpad click + R1 goes to the next."
+msgstr "⟦Höw thé twö sçrééñs shàré thé TV. Îñ thé gàmé, töûçhpàd çlîçk + R1 göés tö thé ñéxt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Bottom"
+msgstr "⟦Böttöm~~⟧"
+
+msgid "Top"
+msgstr "⟦Töp~⟧"
+
+msgid "Which screen takes the top screen's place. In the game, touchpad click + L1 swaps them."
+msgstr "⟦Whîçh sçrééñ tàkés thé töp sçrééñ's plàçé. Îñ thé gàmé, töûçhpàd çlîçk + L1 swàps thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Border"
+msgstr "⟦Bördér~~⟧"
+
+msgid "Artwork around the screens, never over them. Also in the launcher's Settings > Screens and borders."
+msgstr "⟦Årtwörk àröûñd thé sçrééñs, ñévér övér thém. Ålsö îñ thé làûñçhér's Séttîñgs > Sçrééñs àñd bördérs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Internal resolution, texture filter and the performance overlay."
+msgstr "⟦Îñtérñàl résölûtîöñ, téxtûré fîltér àñd thé pérförmàñçé övérlàÿ.~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Internal resolution"
+msgstr "⟦Îñtérñàl résölûtîöñ~~~~~~~⟧"
+
+msgid "How large the 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU."
+msgstr "⟦Höw làrgé thé 3D sçéñés àré dràwñ béföré théÿ àré sçàléd tö thé TV. Hîghér îs shàrpér àñd àsks möré öf thé GPÜ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Texture filter"
+msgstr "⟦Téxtûré fîltér~~~~~⟧"
+
+msgid "Smooths textures as they are scaled up. The costliest setting here: if a game stutters, try None first."
+msgstr "⟦Smööths téxtûrés às théÿ àré sçàléd ûp. Thé çöstlîést séttîñg héré: îf à gàmé stûttérs, trÿ Ñöñé fîrst.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The frame rate and the emulation's speed, in the top left corner."
+msgstr "⟦Thé fràmé ràté àñd thé émûlàtîöñ's spééd, îñ thé töp léft çörñér.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Speed"
+msgstr "⟦Spééd~~⟧"
+
+msgid "Unlimited"
+msgstr "⟦Üñlîmîtéd~~~⟧"
+
+msgid "The emulated CPU's clock, and how fast the game may run."
+msgstr "⟦Thé émûlàtéd ÇPÜ's çlöçk, àñd höw fàst thé gàmé màÿ rûñ.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "CPU clock"
+msgstr "⟦ÇPÜ çlöçk~~~⟧"
+
+msgid "Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS."
+msgstr "⟦Bélöw 100% çàñ brîñg à slöw gàmé tö fûll spééd; àbövé ît smööths gàmés thàt dröppéd fràmés öñ thé 3DS.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Speed limit"
+msgstr "⟦Spééd lîmît~~~~⟧"
+
+msgctxt "speed limit"
+msgid "None"
+msgstr "⟦Ñöñé~⟧"
+
+msgid "Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only."
+msgstr "⟦Åbövé 100% hûrrîés thröûgh slöw sçéñés; Ñöñé rûñs às fàst às thé PS5 çàñ. För thîs gàmé öñlÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Save states"
+msgstr "⟦Sàvé stàtés~~~~⟧"
+
+msgid "Slot {0}"
+msgstr "⟦Slöt ~~{0}⟧"
+
+msgid "Five slots for this game: save exactly where you are, and come back to it."
+msgstr "⟦Fîvé slöts för thîs gàmé: sàvé éxàçtlÿ whéré ÿöû àré, àñd çömé bàçk tö ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Slot"
+msgstr "⟦Slöt~⟧"
+
+msgid "(empty)"
+msgstr "⟦(émptÿ)~~⟧"
+
+msgid "Which of this game's five slots to save to or load from."
+msgstr "⟦Whîçh öf thîs gàmé's fîvé slöts tö sàvé tö ör löàd fröm.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Save to this slot"
+msgstr "⟦Sàvé tö thîs slöt~~~~~~⟧"
+
+msgid "Saves the game as it is now, replacing what the slot had. Newer app versions may not load it: keep saving in the game too."
+msgstr "⟦Sàvés thé gàmé às ît îs ñöw, réplàçîñg whàt thé slöt hàd. Ñéwér àpp vérsîöñs màÿ ñöt löàd ît: kéép sàvîñg îñ thé gàmé töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cheats"
+msgstr "⟦Çhéàts~~⟧"
+
+msgid "The game's cheats, from azahar/cheats/<title ID>.txt (Gateway format)."
+msgstr "⟦Thé gàmé's çhéàts, fröm àzàhàr/çhéàts/<tîtlé ÎD>.txt (Gàtéwàÿ förmàt).~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cross, Left or Right turns it on or off, at once; it is kept for next time."
+msgstr "⟦Çröss, Léft ör Rîght tûrñs ît öñ ör öff, àt öñçé; ît îs képt för ñéxt tîmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "No cheats for this game"
+msgstr "⟦Ñö çhéàts för thîs gàmé~~~~~~~~~⟧"
+
+msgid "Put them in /data/ps5cemu/azahar/cheats/<title ID>.txt, then start the game again."
+msgstr "⟦Pût thém îñ /dàtà/ps5çémû/àzàhàr/çhéàts/<tîtlé ÎD>.txt, théñ stàrt thé gàmé àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "{0} of {1} on"
+msgstr "⟦{0} öf ~{1} öñ~⟧"
+
+msgid "Hold an amiibo dump to the 3DS's reader when the game asks for one."
+msgstr "⟦Höld àñ àmîîbö dûmp tö thé 3DS's réàdér whéñ thé gàmé àsks för öñé.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Left and Right choose an amiibo dump; Cross holds it to the reader."
+msgstr "⟦Léft àñd Rîght çhöösé àñ àmîîbö dûmp; Çröss hölds ît tö thé réàdér.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Take the amiibo away"
+msgstr "⟦Tàké thé àmîîbö àwàÿ~~~~~~~~⟧"
+
+msgid "Takes the amiibo off the reader, as lifting it off would."
+msgstr "⟦Tàkés thé àmîîbö öff thé réàdér, às lîftîñg ît öff wöûld.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Motion controls, the sticks' deadzone and where A and B are."
+msgstr "⟦Mötîöñ çöñtröls, thé stîçks' déàdzöñé àñd whéré Å àñd B àré.~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense's gyroscope and accelerometer as the 3DS's, for the games that aim or steer by tilting."
+msgstr "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér às thé 3DS's, för thé gàmés thàt àîm ör stéér bÿ tîltîñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Stick deadzone"
+msgstr "⟦Stîçk déàdzöñé~~~~~⟧"
+
+msgid "How far a stick moves before the game sees it. Raise it if something drifts when you let go."
+msgstr "⟦Höw fàr à stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf söméthîñg drîfts whéñ ÿöû lét gö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match."
+msgstr "⟦Å öñ Çîrçlé àñd B öñ Çröss, whéré thé 3DS hàs thém, ör thé öthér wàÿ röûñd, wîth X àñd Y swàppéd tö màtçh.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Load this slot"
+msgstr "⟦Löàd thîs slöt~~~~~⟧"
+
+msgid "Goes back to the moment the slot was saved. What you did since is lost, so Cross is held."
+msgstr "⟦Göés bàçk tö thé möméñt thé slöt wàs sàvéd. Whàt ÿöû dîd sîñçé îs löst, sö Çröss îs héld.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Save state"
+msgstr "⟦Sàvé stàté~~~~⟧"
+
+msgid "Load state"
+msgstr "⟦Löàd stàté~~~~⟧"
+
+msgid "Slot {0} empty"
+msgstr "⟦Slöt ~~{0} émptÿ~~⟧"
+
+msgid "Slot {0}: {1}"
+msgstr "⟦Slöt ~~{0}: {1}⟧"
+
+msgid "Slot {0} is empty"
+msgstr "⟦Slöt ~~{0} îs émptÿ~~~⟧"
+
+msgid "Saving…"
+msgstr "⟦Sàvîñg…~~⟧"
+
+msgid "Loading…"
+msgstr "⟦Löàdîñg…~~~⟧"
+
+msgid "Paused"
+msgstr "⟦Pàûséd~~⟧"
+
+msgid "OK"
+msgstr "⟦ÖK⟧"
+
+msgid "The game asks for"
+msgstr "⟦Thé gàmé àsks för~~~~~~⟧"
+
+msgid "Some text"
+msgstr "⟦Sömé téxt~~~⟧"
+
+msgid "Shift: on"
+msgstr "⟦Shîft: öñ~~~⟧"
+
+msgid "Shift"
+msgstr "⟦Shîft~~⟧"
+
+msgid "Space"
+msgstr "⟦Spàçé~~⟧"
+
+msgid "Delete"
+msgstr "⟦Délété~~⟧"
+
+msgid "Type"
+msgstr "⟦Tÿpé~⟧"
+
+msgctxt "border"
+msgid "None"
+msgstr "⟦Ñöñé~⟧"
+
+msgctxt "border"
+msgid "Midnight"
+msgstr "⟦Mîdñîght~~~⟧"
+
+msgctxt "border"
+msgid "Waves"
+msgstr "⟦Wàvés~~⟧"
+
+msgctxt "border"
+msgid "Aurora"
+msgstr "⟦Åûrörà~~⟧"
+
+msgctxt "border"
+msgid "Shell"
+msgstr "⟦Shéll~~⟧"
+
+msgid "There is not enough space: it needs {0}, and {1} is free."
+msgstr "⟦Théré îs ñöt éñöûgh spàçé: ît ñééds ~~~~~~~~~~~~~~{0}, àñd ~~{1} îs fréé.~~~⟧"
+
+msgid "What is installed there now could not be moved aside: {0}"
+msgstr "⟦Whàt îs îñstàlléd théré ñöw çöûld ñöt bé mövéd àsîdé: ~~~~~~~~~~~~~~~~~~~~~{0}⟧"
+
+msgid "This one is not unpacked (title.tmd and .app files). Cemu reads it from the game files folder as it is: no install needed."
+msgstr "⟦Thîs öñé îs ñöt ûñpàçkéd (tîtlé.tmd àñd .àpp fîlés). Çémû réàds ît fröm thé gàmé fîlés földér às ît îs: ñö îñstàll ñéédéd.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "There is no title here: a game, update or DLC to install is a folder with code, content and meta."
+msgstr "⟦Théré îs ñö tîtlé héré: à gàmé, ûpdàté ör DLÇ tö îñstàll îs à földér wîth çödé, çöñtéñt àñd métà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Its meta folder does not describe a Wii U title (meta.xml)."
+msgstr "⟦Îts métà földér döés ñöt désçrîbé à Wîî Ü tîtlé (métà.xml).~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "This is where it is installed already."
+msgstr "⟦Thîs îs whéré ît îs îñstàlléd àlréàdÿ.~~~~~~~~~~~~~~~⟧"
+
+msgid "An install is already running."
+msgstr "⟦Åñ îñstàll îs àlréàdÿ rûññîñg.~~~~~~~~~~~~⟧"
+
+msgctxt "percent"
+msgid "{0}%"
+msgstr "⟦{0}%⟧"
+
+msgctxt "decimal separator"
+msgid "."
+msgstr "⟦.⟧"
+
+msgctxt "seconds"
+msgid "{0} s"
+msgstr "⟦{0} s⟧"
+
+msgctxt "month in a date"
+msgid "January"
+msgstr "⟦Jàñûàrÿ~~⟧"
+
+msgctxt "month in a date"
+msgid "February"
+msgstr "⟦Fébrûàrÿ~~~⟧"
+
+msgctxt "month in a date"
+msgid "March"
+msgstr "⟦Màrçh~~⟧"
+
+msgctxt "month in a date"
+msgid "April"
+msgstr "⟦Åprîl~~⟧"
+
+msgctxt "month in a date"
+msgid "May"
+msgstr "⟦Màÿ~⟧"
+
+msgctxt "month in a date"
+msgid "June"
+msgstr "⟦Jûñé~⟧"
+
+msgctxt "month in a date"
+msgid "July"
+msgstr "⟦Jûlÿ~⟧"
+
+msgctxt "month in a date"
+msgid "August"
+msgstr "⟦Åûgûst~~⟧"
+
+msgctxt "month in a date"
+msgid "September"
+msgstr "⟦Séptémbér~~~⟧"
+
+msgctxt "month in a date"
+msgid "October"
+msgstr "⟦Öçtöbér~~⟧"
+
+msgctxt "month in a date"
+msgid "November"
+msgstr "⟦Ñövémbér~~~⟧"
+
+msgctxt "month in a date"
+msgid "December"
+msgstr "⟦Déçémbér~~~⟧"
+
+msgctxt "month alone"
+msgid "January"
+msgstr "⟦Jàñûàrÿ~~⟧"
+
+msgctxt "month alone"
+msgid "February"
+msgstr "⟦Fébrûàrÿ~~~⟧"
+
+msgctxt "month alone"
+msgid "March"
+msgstr "⟦Màrçh~~⟧"
+
+msgctxt "month alone"
+msgid "April"
+msgstr "⟦Åprîl~~⟧"
+
+msgctxt "month alone"
+msgid "May"
+msgstr "⟦Màÿ~⟧"
+
+msgctxt "month alone"
+msgid "June"
+msgstr "⟦Jûñé~⟧"
+
+msgctxt "month alone"
+msgid "July"
+msgstr "⟦Jûlÿ~⟧"
+
+msgctxt "month alone"
+msgid "August"
+msgstr "⟦Åûgûst~~⟧"
+
+msgctxt "month alone"
+msgid "September"
+msgstr "⟦Séptémbér~~~⟧"
+
+msgctxt "month alone"
+msgid "October"
+msgstr "⟦Öçtöbér~~⟧"
+
+msgctxt "month alone"
+msgid "November"
+msgstr "⟦Ñövémbér~~~⟧"
+
+msgctxt "month alone"
+msgid "December"
+msgstr "⟦Déçémbér~~~⟧"
+
+msgctxt "short month"
+msgid "Jan"
+msgstr "⟦Jàñ~⟧"
+
+msgctxt "short month"
+msgid "Feb"
+msgstr "⟦Féb~⟧"
+
+msgctxt "short month"
+msgid "Mar"
+msgstr "⟦Màr~⟧"
+
+msgctxt "short month"
+msgid "Apr"
+msgstr "⟦Åpr~⟧"
+
+msgctxt "short month"
+msgid "May"
+msgstr "⟦Màÿ~⟧"
+
+msgctxt "short month"
+msgid "Jun"
+msgstr "⟦Jûñ~⟧"
+
+msgctxt "short month"
+msgid "Jul"
+msgstr "⟦Jûl~⟧"
+
+msgctxt "short month"
+msgid "Aug"
+msgstr "⟦Åûg~⟧"
+
+msgctxt "short month"
+msgid "Sep"
+msgstr "⟦Sép~⟧"
+
+msgctxt "short month"
+msgid "Oct"
+msgstr "⟦Öçt~⟧"
+
+msgctxt "short month"
+msgid "Nov"
+msgstr "⟦Ñöv~⟧"
+
+msgctxt "short month"
+msgid "Dec"
+msgstr "⟦Déç~⟧"
+
+msgctxt "date"
+msgid "{0} {1}, {2}"
+msgstr "⟦{0} {1}, {2}⟧"
+
+msgctxt "month and year"
+msgid "{0} {1}"
+msgstr "⟦{0} {1}⟧"
+
+msgctxt "short date and time"
+msgid "{0} {1}, {2}"
+msgstr "⟦{0} {1}, {2}⟧"
+
+msgid "the download is not a ZIP ({0})"
+msgstr "⟦thé döwñlöàd îs ñöt à ZÎP (~~~~~~~~~~{0})⟧"
+
+msgid "{0} could not be unpacked"
+msgstr "⟦{0} çöûld ñöt bé ûñpàçkéd~~~~~~~~⟧"
+
+msgid "{0} could not be written"
+msgstr "⟦{0} çöûld ñöt bé wrîttéñ~~~~~~~~⟧"
+
+msgid "stopped for a game"
+msgstr "⟦stöppéd för à gàmé~~~~~~~⟧"
+
+msgid "the download holds no packs"
+msgstr "⟦thé döwñlöàd hölds ñö pàçks~~~~~~~~~~⟧"
+
+msgid "GitHub could not be found: is the PS5 online?"
+msgstr "⟦GîtHûb çöûld ñöt bé föûñd: îs thé PS5 öñlîñé?~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "GitHub did not answer with a release"
+msgstr "⟦GîtHûb dîd ñöt àñswér wîth à réléàsé~~~~~~~~~~~~~~⟧"
+
+msgid "Stopped for a game"
+msgstr "⟦Stöppéd för à gàmé~~~~~~~⟧"
+
+msgid "The download did not finish"
+msgstr "⟦Thé döwñlöàd dîd ñöt fîñîsh~~~~~~~~~~⟧"
+
+msgid "It could not be installed: {0}"
+msgstr "⟦Ît çöûld ñöt bé îñstàlléd: ~~~~~~~~~~{0}⟧"
+
+msgid "The new packs could not take the old ones' place"
+msgstr "⟦Thé ñéw pàçks çöûld ñöt tàké thé öld öñés' plàçé~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Hold"
+msgstr "⟦Höld~⟧"
+
+msgid "Hold Cross until the ring fills."
+msgstr "⟦Höld Çröss ûñtîl thé rîñg fîlls.~~~~~~~~~~~~⟧"
+
+msgid "{0} could not be written (is /data full?)"
+msgstr "⟦{0} çöûld ñöt bé wrîttéñ (îs /dàtà fûll?)~~~~~~~~~~~~~~~⟧"
+
+msgid "the download has no eboot.bin"
+msgstr "⟦thé döwñlöàd hàs ñö ébööt.bîñ~~~~~~~~~~~⟧"
+
+msgid "The latest release's version ({0}) is not one this can read"
+msgstr "⟦Thé làtést réléàsé's vérsîöñ (~~~~~~~~~~~~{0}) îs ñöt öñé thîs çàñ réàd~~~~~~~~~~⟧"
+
+msgid "The release's checksums could not be downloaded"
+msgstr "⟦Thé réléàsé's çhéçksûms çöûld ñöt bé döwñlöàdéd~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The releases branch has no checksum for {0}"
+msgstr "⟦Thé réléàsés bràñçh hàs ñö çhéçksûm för ~~~~~~~~~~~~~~~~{0}⟧"
+
+msgid "The download could not start"
+msgstr "⟦Thé döwñlöàd çöûld ñöt stàrt~~~~~~~~~~~⟧"
+
+msgid "The download did not finish: is the PS5 online?"
+msgstr "⟦Thé döwñlöàd dîd ñöt fîñîsh: îs thé PS5 öñlîñé?~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The download is damaged (SHA-256 {0}, not {1})"
+msgstr "⟦Thé döwñlöàd îs dàmàgéd (SHÅ-256 ~~~~~~~~~~~~~{0}, ñöt ~~{1})⟧"
+
+msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
+msgstr "⟦PS5ÇÉMÜ-HÅR rûñs fröm àñ îmàgé, whösé fîlés çàñ't bé réplàçéd: îñstàll thé ñéw réléàsé bÿ hàñd~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "It could not be unpacked: {0}"
+msgstr "⟦Ît çöûld ñöt bé ûñpàçkéd: ~~~~~~~~~~{0}⟧"
+
+msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
+msgstr "⟦{0} çöûld ñöt bé réplàçéd (~~~~~~~~~{1}): çöpÿ thé réléàsé's PPSÅ99360 földér övér bÿ hàñd~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Slot 1"
+msgstr "⟦Slöt 1~~⟧"
+
+msgid "Slot 2"
+msgstr "⟦Slöt 2~~⟧"
+
+msgid "Slot 3"
+msgstr "⟦Slöt 3~~⟧"
+
+msgid "Slot 4"
+msgstr "⟦Slöt 4~~⟧"
+
+msgid "Play set / power disc"
+msgstr "⟦Plàÿ sét / pöwér dîsç~~~~~~~~⟧"
+
+msgid "Power disc 2"
+msgstr "⟦Pöwér dîsç 2~~~~⟧"
+
+msgid "Power disc 3"
+msgstr "⟦Pöwér dîsç 3~~~~⟧"
+
+msgid "Player 1"
+msgstr "⟦Plàÿér 1~~~⟧"
+
+msgid "Player 1 ability 1"
+msgstr "⟦Plàÿér 1 àbîlîtÿ 1~~~~~~~⟧"
+
+msgid "Player 1 ability 2"
+msgstr "⟦Plàÿér 1 àbîlîtÿ 2~~~~~~~⟧"
+
+msgid "Player 2"
+msgstr "⟦Plàÿér 2~~~⟧"
+
+msgid "Player 2 ability 1"
+msgstr "⟦Plàÿér 2 àbîlîtÿ 1~~~~~~~⟧"
+
+msgid "Player 2 ability 2"
+msgstr "⟦Plàÿér 2 àbîlîtÿ 2~~~~~~~⟧"
+
+msgid "Left pad 1"
+msgstr "⟦Léft pàd 1~~~~⟧"
+
+msgid "Centre pad"
+msgstr "⟦Çéñtré pàd~~~~⟧"
+
+msgid "Right pad 1"
+msgstr "⟦Rîght pàd 1~~~~⟧"
+
+msgid "Left pad 2"
+msgstr "⟦Léft pàd 2~~~~⟧"
+
+msgid "Left pad 3"
+msgstr "⟦Léft pàd 3~~~~⟧"
+
+msgid "Right pad 2"
+msgstr "⟦Rîght pàd 2~~~~⟧"
+
+msgid "Right pad 3"
+msgstr "⟦Rîght pàd 3~~~~⟧"
+
+msgid "{0} could not be opened"
+msgstr "⟦{0} çöûld ñöt bé öpéñéd~~~~~~~~⟧"
+
+msgid "{0} is too small for a Skylander"
+msgstr "⟦{0} îs töö smàll för à Skÿlàñdér~~~~~~~~~~~⟧"
+
+msgid "The portal is full"
+msgstr "⟦Thé pörtàl îs fûll~~~~~~~⟧"
+
+msgid "{0} is too small for an Infinity figure"
+msgstr "⟦{0} îs töö smàll för àñ Îñfîñîtÿ fîgûré~~~~~~~~~~~~~~⟧"
+
+msgid "{0} is too small for a Dimensions figure"
+msgstr "⟦{0} îs töö smàll för à Dîméñsîöñs fîgûré~~~~~~~~~~~~~~⟧"
+
+msgid "Skylanders Portal of Power"
+msgstr "⟦Skÿlàñdérs Pörtàl öf Pöwér~~~~~~~~~~⟧"
+
+msgid "Disney Infinity Base"
+msgstr "⟦Dîsñéÿ Îñfîñîtÿ Bàsé~~~~~~~~⟧"
+
+msgid "LEGO Dimensions Toypad"
+msgstr "⟦LÉGÖ Dîméñsîöñs Töÿpàd~~~~~~~~⟧"
+
+msgid "Too many digits."
+msgstr "⟦Töö màñÿ dîgîts.~~~~~~⟧"
+
+msgid "The @ sign is not allowed here."
+msgstr "⟦Thé @ sîgñ îs ñöt àllöwéd héré.~~~~~~~~~~~~⟧"
+
+msgid "The % sign is not allowed here."
+msgstr "⟦Thé % sîgñ îs ñöt àllöwéd héré.~~~~~~~~~~~~⟧"
+
+msgid "The \\ sign is not allowed here."
+msgstr "⟦Thé \\ sîgñ îs ñöt àllöwéd héré.~~~~~~~~~~~~⟧"
+
+msgid "That word is not allowed."
+msgstr "⟦Thàt wörd îs ñöt àllöwéd.~~~~~~~~~~⟧"
+
+msgid "The text must be exactly the length asked for."
+msgstr "⟦Thé téxt mûst bé éxàçtlÿ thé léñgth àskéd för.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The text is too long."
+msgstr "⟦Thé téxt îs töö löñg.~~~~~~~~⟧"
+
+msgid "The text cannot be only spaces."
+msgstr "⟦Thé téxt çàññöt bé öñlÿ spàçés.~~~~~~~~~~~~⟧"
+
+msgid "The text cannot be empty."
+msgstr "⟦Thé téxt çàññöt bé émptÿ.~~~~~~~~~~⟧"
+
+msgid "The game did not accept it."
+msgstr "⟦Thé gàmé dîd ñöt àççépt ît.~~~~~~~~~~⟧"
+
+msgid "saved"
+msgstr "⟦sàvéd~~⟧"
+
+msgid "another version's"
+msgstr "⟦àñöthér vérsîöñ's~~~~~~⟧"
+
+msgid "No amiibo reader"
+msgstr "⟦Ñö àmîîbö réàdér~~~~~~⟧"
+
+msgid "Taken away"
+msgstr "⟦Tàkéñ àwàÿ~~~~⟧"
+
+msgid "Not an amiibo dump"
+msgstr "⟦Ñöt àñ àmîîbö dûmp~~~~~~~⟧"
+
+msgid "{0}: on"
+msgstr "⟦{0}: öñ~⟧"
+
+msgid "{0}: off"
+msgstr "⟦{0}: öff~~⟧"
+
+msgid "Loaded slot {0}"
+msgstr "⟦Löàdéd slöt ~~~~{0}⟧"
+
+msgid "Saved slot {0}"
+msgstr "⟦Sàvéd slöt ~~~~{0}⟧"
+
+msgid "Made by another version"
+msgstr "⟦Màdé bÿ àñöthér vérsîöñ~~~~~~~~~⟧"
+
+msgid "It did not work"
+msgstr "⟦Ît dîd ñöt wörk~~~~~~⟧"
+
+msgid "This is not a 3DS game Azahar can start."
+msgstr "⟦Thîs îs ñöt à 3DS gàmé Åzàhàr çàñ stàrt.~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game could not be loaded."
+msgstr "⟦Thé gàmé çöûld ñöt bé löàdéd.~~~~~~~~~~~⟧"
+
+msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
+msgstr "⟦Thé gàmé îs éñçrÿptéd: déçrÿpt ît, ör pût thé 3DS's àés_kéÿs.txt îñ /dàtà/ps5çémû/àzàhàr/sÿsdàtà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game's format is not supported."
+msgstr "⟦Thé gàmé's förmàt îs ñöt sûppörtéd.~~~~~~~~~~~~~~⟧"
+
+msgid "GBA Virtual Console games are not supported."
+msgstr "⟦GBÅ Vîrtûàl Çöñsölé gàmés àré ñöt sûppörtéd.~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game's system mode could not be found."
+msgstr "⟦Thé gàmé's sÿstém mödé çöûld ñöt bé föûñd.~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game needs 3DS system files Azahar does not have."
+msgstr "⟦Thé gàmé ñééds 3DS sÿstém fîlés Åzàhàr döés ñöt hàvé.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game's patches could not be applied."
+msgstr "⟦Thé gàmé's pàtçhés çöûld ñöt bé àpplîéd.~~~~~~~~~~~~~~~~⟧"
+
+msgid "Azahar's renderer or CPU did not start."
+msgstr "⟦Åzàhàr's réñdérér ör ÇPÜ dîd ñöt stàrt.~~~~~~~~~~~~~~~⟧"
+
+msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
+msgstr "⟦Thé Årtîç Bàsé sérvér dîd ñöt àñswér: çhéçk thé 3DS's àddréss, thàt Årtîç Bàsé rûñs öñ ît, àñd thàt thé 3DS àñd thé PS5 àré öñ thé sàmé ñétwörk.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The game is busy: try again"
+msgstr "⟦Thé gàmé îs bûsÿ: trÿ àgàîñ~~~~~~~~~~⟧"
+
+msgid "The 3DS game stopped: {0}"
+msgstr "⟦Thé 3DS gàmé stöppéd: ~~~~~~~~{0}⟧"
+
+msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
+msgstr "⟦Å ÇÎÅ fîlé îs îñstàlléd, ñöt plàÿéd: îñstàll ît fröm Séttîñgs > Îñstàll ÇÎÅ fîlés, théñ stàrt thé gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Azahar did not start: {0}"
+msgstr "⟦Åzàhàr dîd ñöt stàrt: ~~~~~~~~{0}⟧"
+
+msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
+msgstr "⟦Töûçhpàd çlîçk + Öptîöñs: thé îñ-gàmé méñû. Å töûçhpàd çlîçk àlöñé: thé böttöm sçrééñ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
+msgstr "⟦ît îs éñçrÿptéd, thé ÇÎÅ ör thé gàmé îñsîdé ît. Åzàhàr îñstàlls öñlÿ fûllÿ déçrÿptéd ÇÎÅ fîlés: déçrÿpt ît wîth GödMödé9 öñ à 3DS, ör plàÿ thé gàmé's déçrÿptéd .3ds ör .ççî fîlé îñstéàd~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "it is not a CIA file, or it is damaged (check the file's size)"
+msgstr "⟦ît îs ñöt à ÇÎÅ fîlé, ör ît îs dàmàgéd (çhéçk thé fîlé's sîzé)~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "the file could not be read"
+msgstr "⟦thé fîlé çöûld ñöt bé réàd~~~~~~~~~~⟧"
+
+msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
+msgstr "⟦Åzàhàr stöppéd pàrt-wàÿ thröûgh; /dàtà/ps5çémû/àzàhàr/lög/àzàhàr_lög.txt sàÿs whÿ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "it is not a CIA Azahar can install"
+msgstr "⟦ît îs ñöt à ÇÎÅ Åzàhàr çàñ îñstàll~~~~~~~~~~~~~⟧"
+
+msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
+msgstr "⟦Thé PS5 hàs ñö mémörÿ léft för thîs Wîî Ü gàmé, sö ît hàs tö stöp. Thé bööt lög hàs thé détàîls.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgctxt "size"
+msgid "{0} GB"
+msgstr "⟦{0} GB~⟧"
+
+msgid "{0} file to USB drive {1}"
+msgid_plural "{0} files to USB drive {1}"
+msgstr[0] "⟦{0} fîlé tö ÜSB drîvé ~~~~~~~{1}⟧"
+msgstr[1] "⟦{0} fîlés tö ÜSB drîvé ~~~~~~~~{1}⟧"
+
+msgid "No USB drive found"
+msgstr "⟦Ñö ÜSB drîvé föûñd~~~~~~~⟧"
+
+msgid "{0} file deleted ({1} MB)"
+msgid_plural "{0} files deleted ({1} MB)"
+msgstr[0] "⟦{0} fîlé délétéd (~~~~~~{1} MB)~⟧"
+msgstr[1] "⟦{0} fîlés délétéd (~~~~~~{1} MB)~⟧"
+
+msgid "None to delete"
+msgstr "⟦Ñöñé tö délété~~~~~⟧"
+
+msgid "USB drive {0}"
+msgstr "⟦ÜSB drîvé ~~~~{0}⟧"
+
+msgid "Extended storage {0}"
+msgstr "⟦Éxtéñdéd störàgé ~~~~~~{0}⟧"
+
+msgid "Game"
+msgstr "⟦Gàmé~⟧"
+
+msgid "Update"
+msgstr "⟦Üpdàté~~⟧"
+
+msgid "DLC"
+msgstr "⟦DLÇ~⟧"
+
+msgid "System title"
+msgstr "⟦Sÿstém tîtlé~~~~⟧"
+
+msgid "Demo"
+msgstr "⟦Démö~⟧"
+
+msgid "Title"
+msgstr "⟦Tîtlé~~⟧"
+
+msgctxt "button"
+msgid "Cross"
+msgstr "⟦Çröss~~⟧"
+
+msgctxt "button"
+msgid "Circle"
+msgstr "⟦Çîrçlé~~⟧"
+
+msgctxt "button"
+msgid "Square"
+msgstr "⟦Sqûàré~~⟧"
+
+msgctxt "button"
+msgid "Triangle"
+msgstr "⟦Trîàñglé~~~⟧"
+
+msgctxt "button"
+msgid "Create"
+msgstr "⟦Çréàté~~⟧"
+
+msgctxt "button"
+msgid "Options"
+msgstr "⟦Öptîöñs~~⟧"
+
+msgctxt "button"
+msgid "Touchpad"
+msgstr "⟦Töûçhpàd~~~⟧"
+
+msgctxt "button"
+msgid "D-pad up"
+msgstr "⟦D-pàd ûp~~~⟧"
+
+msgctxt "button"
+msgid "D-pad down"
+msgstr "⟦D-pàd döwñ~~~~⟧"
+
+msgctxt "button"
+msgid "D-pad left"
+msgstr "⟦D-pàd léft~~~~⟧"
+
+msgctxt "button"
+msgid "D-pad right"
+msgstr "⟦D-pàd rîght~~~~⟧"
+
+msgctxt "button"
+msgid "Left stick up"
+msgstr "⟦Léft stîçk ûp~~~~~⟧"
+
+msgctxt "button"
+msgid "Left stick down"
+msgstr "⟦Léft stîçk döwñ~~~~~~⟧"
+
+msgctxt "button"
+msgid "Left stick left"
+msgstr "⟦Léft stîçk léft~~~~~~⟧"
+
+msgctxt "button"
+msgid "Left stick right"
+msgstr "⟦Léft stîçk rîght~~~~~~⟧"
+
+msgctxt "button"
+msgid "Left stick click"
+msgstr "⟦Léft stîçk çlîçk~~~~~~⟧"
+
+msgctxt "button"
+msgid "Right stick up"
+msgstr "⟦Rîght stîçk ûp~~~~~⟧"
+
+msgctxt "button"
+msgid "Right stick down"
+msgstr "⟦Rîght stîçk döwñ~~~~~~⟧"
+
+msgctxt "button"
+msgid "Right stick left"
+msgstr "⟦Rîght stîçk léft~~~~~~⟧"
+
+msgctxt "button"
+msgid "Right stick right"
+msgstr "⟦Rîght stîçk rîght~~~~~~⟧"
+
+msgctxt "button"
+msgid "Right stick click"
+msgstr "⟦Rîght stîçk çlîçk~~~~~~⟧"
+
+msgctxt "button"
+msgid "Circle pad up"
+msgstr "⟦Çîrçlé pàd ûp~~~~~⟧"
+
+msgctxt "button"
+msgid "Circle pad down"
+msgstr "⟦Çîrçlé pàd döwñ~~~~~~⟧"
+
+msgctxt "button"
+msgid "Circle pad left"
+msgstr "⟦Çîrçlé pàd léft~~~~~~⟧"
+
+msgctxt "button"
+msgid "Circle pad right"
+msgstr "⟦Çîrçlé pàd rîght~~~~~~⟧"
+
+msgctxt "button"
+msgid "C-stick up"
+msgstr "⟦Ç-stîçk ûp~~~~⟧"
+
+msgctxt "button"
+msgid "C-stick down"
+msgstr "⟦Ç-stîçk döwñ~~~~⟧"
+
+msgctxt "button"
+msgid "C-stick left"
+msgstr "⟦Ç-stîçk léft~~~~⟧"
+
+msgctxt "button"
+msgid "C-stick right"
+msgstr "⟦Ç-stîçk rîght~~~~~⟧"
+
+msgctxt "button"
+msgid "Nunchuk stick up"
+msgstr "⟦Ñûñçhûk stîçk ûp~~~~~~⟧"
+
+msgctxt "button"
+msgid "Nunchuk stick down"
+msgstr "⟦Ñûñçhûk stîçk döwñ~~~~~~~⟧"
+
+msgctxt "button"
+msgid "Nunchuk stick left"
+msgstr "⟦Ñûñçhûk stîçk léft~~~~~~~⟧"
+
+msgctxt "button"
+msgid "Nunchuk stick right"
+msgstr "⟦Ñûñçhûk stîçk rîght~~~~~~~⟧"
+
+msgctxt "button"
+msgid "Nunchuk C"
+msgstr "⟦Ñûñçhûk Ç~~~⟧"
+
+msgctxt "button"
+msgid "Nunchuk Z"
+msgstr "⟦Ñûñçhûk Z~~~⟧"
+
+msgctxt "button"
+msgid "Home"
+msgstr "⟦Hömé~⟧"
+
+msgctxt "button"
+msgid "Start"
+msgstr "⟦Stàrt~~⟧"
+
+msgctxt "button"
+msgid "Select"
+msgstr "⟦Séléçt~~⟧"
+
+msgctxt "button"
+msgid "+ (Start)"
+msgstr "⟦+ (Stàrt)~~~⟧"
+
+msgctxt "button"
+msgid "- (Select)"
+msgstr "⟦- (Séléçt)~~~~⟧"
+
+msgctxt "button"
+msgid "Blow into the mic"
+msgstr "⟦Blöw îñtö thé mîç~~~~~~⟧"
+
+msgctxt "button"
+msgid "Show the GamePad's screen"
+msgstr "⟦Shöw thé GàméPàd's sçrééñ~~~~~~~~~~⟧"
+
+msgctxt "button"
+msgid "None"
+msgstr "⟦Ñöñé~⟧"
+
+msgid "Setup"
+msgstr "⟦Sétûp~~⟧"
+
+msgid "Something needs a look"
+msgstr "⟦Söméthîñg ñééds à löök~~~~~~~~⟧"
+
+msgid "Setup check"
+msgstr "⟦Sétûp çhéçk~~~~⟧"
+
+msgid "Diagnostics"
+msgstr "⟦Dîàgñöstîçs~~~~⟧"
+
+msgid "Starting Cemu"
+msgstr "⟦Stàrtîñg Çémû~~~~~⟧"
+
+msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
+msgstr "⟦Îts séttîñgs, gràphîç pàçks àñd çöñtröllérs àré löàdîñg, àñd théñ ît lööks för ÿöûr gàmés.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Looking for games…"
+msgstr "⟦Löökîñg för gàmés…~~~~~~~⟧"
+
+msgid "In {0}."
+msgstr "⟦Îñ ~{0}.⟧"
+
+msgid "Welcome"
+msgstr "⟦Wélçömé~~⟧"
+
+msgid "Your games go here"
+msgstr "⟦Yöûr gàmés gö héré~~~~~~~⟧"
+
+msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
+msgstr "⟦Pût ÿöûr 3DS gàmés (.3ds, .ççî, .çxî, .3dsx, déçrÿptéd) îñ ~~~~~~~~~~~~~~~~~~~~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé. Földérs îñsîdé ît àré séàrçhéd töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
+msgstr "⟦Pût ÿöûr Wîî Ü gàmés (.wûà, .wûd, .wûx, ör földérs wîth çödé, çöñtéñt àñd métà) îñ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Choose a folder"
+msgstr "⟦Çhöösé à földér~~~~~~⟧"
+
+msgid "All {0} game"
+msgid_plural "All {0} games"
+msgstr[0] "⟦Åll ~{0} gàmé~~⟧"
+msgstr[1] "⟦Åll ~{0} gàmés~~⟧"
+
+msgid "In your library"
+msgstr "⟦Îñ ÿöûr lîbràrÿ~~~~~~⟧"
+
+msgid "Continue · last played {0}"
+msgstr "⟦Çöñtîñûé · làst plàÿéd ~~~~~~~~~{0}⟧"
+
+msgid "Last played {0}"
+msgstr "⟦Làst plàÿéd ~~~~{0}⟧"
+
+msgid "Your library"
+msgstr "⟦Yöûr lîbràrÿ~~~~⟧"
+
+msgid "Looking for new games…"
+msgstr "⟦Löökîñg för ñéw gàmés…~~~~~~~~⟧"
+
+msgid "A to Z, by year, by how they run"
+msgstr "⟦Å tö Z, bÿ ÿéàr, bÿ höw théÿ rûñ~~~~~~~~~~~~⟧"
+
+msgid "Play"
+msgstr "⟦Plàÿ~⟧"
+
+msgid "Game hub"
+msgstr "⟦Gàmé hûb~~~⟧"
+
+msgid "Open the library"
+msgstr "⟦Öpéñ thé lîbràrÿ~~~~~~⟧"
+
+msgid "None on"
+msgstr "⟦Ñöñé öñ~~⟧"
+
+msgid "{0} pack for this game"
+msgid_plural "{0} packs for this game"
+msgstr[0] "⟦{0} pàçk för thîs gàmé~~~~~~~⟧"
+msgstr[1] "⟦{0} pàçks för thîs gàmé~~~~~~~~⟧"
+
+msgid "{0} on P{1}"
+msgstr "⟦{0} öñ P~~{1}⟧"
+
+msgid "Controllers"
+msgstr "⟦Çöñtröllérs~~~~⟧"
+
+msgid "One player"
+msgstr "⟦Öñé plàÿér~~~~⟧"
+
+msgid "How it runs"
+msgstr "⟦Höw ît rûñs~~~~⟧"
+
+msgid "From the compatibility list"
+msgstr "⟦Fröm thé çömpàtîbîlîtÿ lîst~~~~~~~~~~⟧"
+
+msgid "Updates and DLC"
+msgstr "⟦Üpdàtés àñd DLÇ~~~~~~⟧"
+
+msgid "No update"
+msgstr "⟦Ñö ûpdàté~~~⟧"
+
+msgid "This dump"
+msgstr "⟦Thîs dûmp~~~⟧"
+
+msgid "Update v{0}"
+msgstr "⟦Üpdàté v~~~{0}⟧"
+
+msgid "Favourite"
+msgstr "⟦Fàvöûrîté~~~⟧"
+
+msgid "Graphic packs · {0} on"
+msgid_plural "Graphic packs · {0} on"
+msgstr[0] "⟦Gràphîç pàçks · ~~~~~~{0} öñ~⟧"
+msgstr[1] "⟦Gràphîç pàçks · ~~~~~~{0} öñ~⟧"
+
+msgctxt "game"
+msgid "About"
+msgstr "⟦Åböût~~⟧"
+
+msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
+msgstr "⟦GàméTDB kñöws à gàmé bÿ thé ÎD öñ îts böx, whîçh thîs dûmp döés ñöt hàvé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "GameTDB has no description of this game yet."
+msgstr "⟦GàméTDB hàs ñö désçrîptîöñ öf thîs gàmé ÿét.~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Developer"
+msgstr "⟦Dévélöpér~~~⟧"
+
+msgid "Released"
+msgstr "⟦Réléàséd~~~⟧"
+
+msgid "Genre"
+msgstr "⟦Géñré~~⟧"
+
+msgid "Rating"
+msgstr "⟦Ràtîñg~~⟧"
+
+msgid "Publisher"
+msgstr "⟦Pûblîshér~~~⟧"
+
+msgid "Players"
+msgstr "⟦Plàÿérs~~⟧"
+
+msgid "Title ID"
+msgstr "⟦Tîtlé ÎD~~~⟧"
+
+msgid "Runs well on PS5"
+msgstr "⟦Rûñs wéll öñ PS5~~~~~~⟧"
+
+msgid "The compatibility list has it as “{0}”."
+msgstr "⟦Thé çömpàtîbîlîtÿ lîst hàs ît às “~~~~~~~~~~~~~{0}”.⟧"
+
+msgid "Recently played"
+msgstr "⟦Réçéñtlÿ plàÿéd~~~~~~⟧"
+
+msgid "A to Z"
+msgstr "⟦Å tö Z~~⟧"
+
+msgid "Release year"
+msgstr "⟦Réléàsé ÿéàr~~~~⟧"
+
+msgctxt "tab"
+msgid "Library"
+msgstr "⟦Lîbràrÿ~~⟧"
+
+msgid "Sort"
+msgstr "⟦Sört~⟧"
+
+msgctxt "filter"
+msgid "All"
+msgstr "⟦Åll~⟧"
+
+msgid "Recently added"
+msgstr "⟦Réçéñtlÿ àddéd~~~~~⟧"
+
+msgid "Favourites"
+msgstr "⟦Fàvöûrîtés~~~~⟧"
+
+msgid "Graphic packs on"
+msgstr "⟦Gràphîç pàçks öñ~~~~~~⟧"
+
+msgid "Sort: {0}"
+msgstr "⟦Sört: ~~{0}⟧"
+
+msgid "Search"
+msgstr "⟦Séàrçh~~⟧"
+
+msgid "Search: {0}"
+msgstr "⟦Séàrçh: ~~~{0}⟧"
+
+msgid "Nothing matches “{0}”"
+msgstr "⟦Ñöthîñg màtçhés “~~~~~~{0}”⟧"
+
+msgid "None here yet"
+msgstr "⟦Ñöñé héré ÿét~~~~~⟧"
+
+msgid "No games yet"
+msgstr "⟦Ñö gàmés ÿét~~~~⟧"
+
+msgid "Circle clears the search."
+msgstr "⟦Çîrçlé çléàrs thé séàrçh.~~~~~~~~~~⟧"
+
+msgid "Options on a game, then Favourite, puts it here."
+msgstr "⟦Öptîöñs öñ à gàmé, théñ Fàvöûrîté, pûts ît héré.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "All shows every game."
+msgstr "⟦Åll shöws évérÿ gàmé.~~~~~~~~⟧"
+
+msgid "Settings > Games and folders says where they go."
+msgstr "⟦Séttîñgs > Gàmés àñd földérs sàÿs whéré théÿ gö.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Play from your 3DS"
+msgstr "⟦Plàÿ fröm ÿöûr 3DS~~~~~~~⟧"
+
+msgid "Artic Base, over your network"
+msgstr "⟦Årtîç Bàsé, övér ÿöûr ñétwörk~~~~~~~~~~~⟧"
+
+msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
+msgstr "⟦Çröss tûrñs à pàçk öñ ör öff; Rîght göés tö îts préséts. Çhöösîñg à prését tûrñs îts pàçk öñ. Çhàñgés àpplÿ àt thé ñéxt stàrt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "No graphic packs for this game"
+msgstr "⟦Ñö gràphîç pàçks för thîs gàmé~~~~~~~~~~~~⟧"
+
+msgid "Settings > Online and updates gets the community's newest."
+msgstr "⟦Séttîñgs > Öñlîñé àñd ûpdàtés géts thé çömmûñîtÿ's ñéwést.~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "{0} of {1}"
+msgstr "⟦{0} öf ~{1}⟧"
+
+msgid "Graphic pack"
+msgstr "⟦Gràphîç pàçk~~~~⟧"
+
+msgid "This pack has no description."
+msgstr "⟦Thîs pàçk hàs ñö désçrîptîöñ.~~~~~~~~~~~⟧"
+
+msgid "No presets"
+msgstr "⟦Ñö préséts~~~~⟧"
+
+msgid "Presets"
+msgstr "⟦Préséts~~⟧"
+
+msgid "Presets · choosing one turns it on"
+msgstr "⟦Préséts · çhöösîñg öñé tûrñs ît öñ~~~~~~~~~~~~~⟧"
+
+msgctxt "finished"
+msgid "Done"
+msgstr "⟦Döñé~⟧"
+
+msgid ""
+"What the game sees in this player's hands.\n"
+"\n"
+"Most games want the Wii U GamePad for player 1: its screen is the second one PS5CEMU-HAR shows, and the touchpad touches it. Others take Pro Controllers, or Wii Remotes for games such as New Super Mario Bros. U.\n"
+"A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
+"Cemu has two GamePads at most."
+msgstr ""
+"⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds.~~~~~~~~~~~~~~~~\n"
+"\n"
+"Möst gàmés wàñt thé Wîî Ü GàméPàd för plàÿér 1: îts sçrééñ îs thé séçöñd öñé PS5ÇÉMÜ-HÅR shöws, àñd thé töûçhpàd töûçhés ît. Öthérs tàké Prö Çöñtröllérs, ör Wîî Rémötés för gàmés sûçh às Ñéw Sûpér Màrîö Brös. Ü.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Å Wîî Rémöté pöîñts whéré à fîñgér résts öñ thé töûçhpàd, ör whéré ÿöû àîm thé DûàlSéñsé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Çémû hàs twö GàméPàds àt möst.~~~~~~~~~~~~⟧"
+
+msgid ""
+"The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
+"The Pro Controller and the Classic Controller have none."
+msgstr ""
+"⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér às thé çöñtröllér's öwñ, för thé gàmés thàt àîm ör stéér bÿ tîltîñg thé GàméPàd ör thé Wîî Rémöté.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Thé Prö Çöñtröllér àñd thé Çlàssîç Çöñtröllér hàvé ñöñé.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid ""
+"How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
+"Left and Right change it by 10%."
+msgstr ""
+"⟦Höw ströñglÿ thé DûàlSéñsé rûmblés whéñ thé gàmé màkés thé çöñtröllér vîbràté.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~⟧"
+
+msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
+msgstr "⟦Höw fàr thé léft stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf à çhàràçtér drîfts whéñ ÿöû lét gö öf thé stîçk; löwér ît för fîñér çöñtröl.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
+msgstr "⟦Höw fàr thé rîght stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf thé çàmérà drîfts whéñ ÿöû lét gö öf thé stîçk; löwér ît för fîñér çöñtröl.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid ""
+"Which DualSense button is which of the controller's.\n"
+"A is on Circle and B on Cross by default, where the Wii U has them."
+msgstr ""
+"⟦Whîçh DûàlSéñsé bûttöñ îs whîçh öf thé çöñtröllér's.~~~~~~~~~~~~~~~~~~~~\n"
+"Å îs öñ Çîrçlé àñd B öñ Çröss bÿ défàûlt, whéré thé Wîî Ü hàs thém.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
+msgstr "⟦Thé défàûlt bûttöñs, vîbràtîöñ, mötîöñ àñd déàdzöñés för thîs çöñtröllér. Héld tö çöñfîrm.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Buttons"
+msgstr "⟦Bûttöñs~~⟧"
+
+msgid "Reset to defaults"
+msgstr "⟦Rését tö défàûlts~~~~~~⟧"
+
+msgid "Player {0}"
+msgstr "⟦Plàÿér ~~{0}⟧"
+
+msgid "{0}, on this player's DualSense"
+msgstr "⟦{0}, öñ thîs plàÿér's DûàlSéñsé~~~~~~~~~~~⟧"
+
+msgid "{0}, on a DualSense that is not connected"
+msgstr "⟦{0}, öñ à DûàlSéñsé thàt îs ñöt çöññéçtéd~~~~~~~~~~~~~~~⟧"
+
+msgid "What the game sees in this player's hands."
+msgstr "⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds.~~~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense's motion as the controller's."
+msgstr "⟦Thé DûàlSéñsé's mötîöñ às thé çöñtröllér's.~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The Pro and Classic Controllers have none."
+msgstr "⟦Thé Prö àñd Çlàssîç Çöñtröllérs hàvé ñöñé.~~~~~~~~~~~~~~~~⟧"
+
+msgid "How strongly the DualSense rumbles."
+msgstr "⟦Höw ströñglÿ thé DûàlSéñsé rûmblés.~~~~~~~~~~~~~~⟧"
+
+msgid "How far the left stick moves before it counts."
+msgstr "⟦Höw fàr thé léft stîçk mövés béföré ît çöûñts.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "How far the right stick moves before it counts."
+msgstr "⟦Höw fàr thé rîght stîçk mövés béföré ît çöûñts.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "{0} button set"
+msgid_plural "{0} buttons set"
+msgstr[0] "⟦{0} bûttöñ sét~~~~⟧"
+msgstr[1] "⟦{0} bûttöñs sét~~~~⟧"
+
+msgid "Which DualSense button is which."
+msgstr "⟦Whîçh DûàlSéñsé bûttöñ îs whîçh.~~~~~~~~~~~~⟧"
+
+msgid "Hold Cross"
+msgstr "⟦Höld Çröss~~~~⟧"
+
+msgid "The default buttons, vibration, motion and deadzones."
+msgstr "⟦Thé défàûlt bûttöñs, vîbràtîöñ, mötîöñ àñd déàdzöñés.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Connected"
+msgstr "⟦Çöññéçtéd~~~⟧"
+
+msgid "No DualSense"
+msgstr "⟦Ñö DûàlSéñsé~~~~⟧"
+
+msgid "Cleared: no DualSense button is this one now."
+msgstr "⟦Çléàréd: ñö DûàlSéñsé bûttöñ îs thîs öñé ñöw.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "No button was pressed, so it stays as it was."
+msgstr "⟦Ñö bûttöñ wàs présséd, sö ît stàÿs às ît wàs.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cancelled: it stays as it was."
+msgstr "⟦Çàñçélléd: ît stàÿs às ît wàs.~~~~~~~~~~~~⟧"
+
+msgid "Done."
+msgstr "⟦Döñé.~~⟧"
+
+msgid "The DualSense's buttons for the 3DS's"
+msgstr "⟦Thé DûàlSéñsé's bûttöñs för thé 3DS's~~~~~~~~~~~~~~⟧"
+
+msgid "Player {0}: the DualSense's buttons for the {1}"
+msgstr "⟦Plàÿér ~~{0}: thé DûàlSéñsé's bûttöñs för thé ~~~~~~~~~~~~~{1}⟧"
+
+msgid "Not set"
+msgstr "⟦Ñöt sét~~⟧"
+
+msgid "This button"
+msgstr "⟦Thîs bûttöñ~~~~⟧"
+
+msgid "Press a button"
+msgstr "⟦Préss à bûttöñ~~~~~⟧"
+
+msgid "Press the DualSense button, trigger or stick direction for {0} now."
+msgstr "⟦Préss thé DûàlSéñsé bûttöñ, trîggér ör stîçk dîréçtîöñ för ~~~~~~~~~~~~~~~~~~~~~~~{0} ñöw.~~⟧"
+
+msgid "{0} second left. A touchpad click cancels."
+msgid_plural "{0} seconds left. A touchpad click cancels."
+msgstr[0] "⟦{0} séçöñd léft. Å töûçhpàd çlîçk çàñçéls.~~~~~~~~~~~~~~~⟧"
+msgstr[1] "⟦{0} séçöñds léft. Å töûçhpàd çlîçk çàñçéls.~~~~~~~~~~~~~~~~⟧"
+
+msgid ""
+"Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
+"Square clears it."
+msgstr ""
+"⟦Çröss, théñ à DûàlSéñsé bûttöñ, trîggér ör stîçk dîréçtîöñ: ît béçömés thîs öñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Sqûàré çléàrs ît.~~~~~~⟧"
+
+msgid "Cancelling: what it copied is removed…"
+msgstr "⟦Çàñçéllîñg: whàt ît çöpîéd îs rémövéd…~~~~~~~~~~~~~~~⟧"
+
+msgid "Cancelling: what was installed before is put back…"
+msgstr "⟦Çàñçéllîñg: whàt wàs îñstàlléd béföré îs pût bàçk…~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "This folder cannot be opened."
+msgstr "⟦Thîs földér çàññöt bé öpéñéd.~~~~~~~~~~~⟧"
+
+msgid "The folder could not be saved. Please try again."
+msgstr "⟦Thé földér çöûld ñöt bé sàvéd. Pléàsé trÿ àgàîñ.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Saved. PS5CEMU-HAR is looking for games there."
+msgstr "⟦Sàvéd. PS5ÇÉMÜ-HÅR îs löökîñg för gàmés théré.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Saved. That side looks for games there when it opens."
+msgstr "⟦Sàvéd. Thàt sîdé lööks för gàmés théré whéñ ît öpéñs.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Looking for games in {0}"
+msgstr "⟦Löökîñg för gàmés îñ ~~~~~~~~{0}⟧"
+
+msgid "Choose a CIA file first."
+msgstr "⟦Çhöösé à ÇÎÅ fîlé fîrst.~~~~~~~~~⟧"
+
+msgid "Cemu did not start, so nothing can be installed."
+msgstr "⟦Çémû dîd ñöt stàrt, sö ñöthîñg çàñ bé îñstàlléd.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid ""
+"Installing: {0}, {1} of {2}.\n"
+"\n"
+"Circle cancels."
+msgstr ""
+"⟦Îñstàllîñg: ~~~~{0}, {1} öf ~{2}.\n"
+"\n"
+"Çîrçlé çàñçéls.~~~~~~⟧"
+
+msgid "Installing: counting the files…"
+msgstr "⟦Îñstàllîñg: çöûñtîñg thé fîlés…~~~~~~~~~~~~⟧"
+
+msgid "Installed. The library has it with its game."
+msgstr "⟦Îñstàlléd. Thé lîbràrÿ hàs ît wîth îts gàmé.~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Installed"
+msgstr "⟦Îñstàlléd~~~⟧"
+
+msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
+msgstr "⟦Çàñçélléd. Whàt ît çöpîéd wàs rémövéd, wîth àñÿ éàrlîér çöpÿ öf thé sàmé tîtlé: îñstàll ît àgàîñ tö plàÿ ît. Îts sàvés àré képt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cancelled. What was installed before is as it was."
+msgstr "⟦Çàñçélléd. Whàt wàs îñstàlléd béföré îs às ît wàs.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Install"
+msgstr "⟦Îñstàll~~⟧"
+
+msgid "3DS games"
+msgstr "⟦3DS gàmés~~~⟧"
+
+msgid "Wii U games"
+msgstr "⟦Wîî Ü gàmés~~~~⟧"
+
+msgid "Install CIA files"
+msgstr "⟦Îñstàll ÇÎÅ fîlés~~~~~~⟧"
+
+msgid "Install updates and DLC"
+msgstr "⟦Îñstàll ûpdàtés àñd DLÇ~~~~~~~~~⟧"
+
+msgid "Choose a CIA file: a game, an update or DLC"
+msgstr "⟦Çhöösé à ÇÎÅ fîlé: à gàmé, àñ ûpdàté ör DLÇ~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Choose a folder with an update, DLC or game (code, content and meta)"
+msgstr "⟦Çhöösé à földér wîth àñ ûpdàté, DLÇ ör gàmé (çödé, çöñtéñt àñd métà)~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Choose the folder that holds your 3DS games"
+msgstr "⟦Çhöösé thé földér thàt hölds ÿöûr 3DS gàmés~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Choose the folder that holds your Wii U games"
+msgstr "⟦Çhöösé thé földér thàt hölds ÿöûr Wîî Ü gàmés~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "This folder is empty."
+msgstr "⟦Thîs földér îs émptÿ.~~~~~~~~⟧"
+
+msgid "Parent folder"
+msgstr "⟦Pàréñt földér~~~~~⟧"
+
+msgid "Drive"
+msgstr "⟦Drîvé~~⟧"
+
+msgid "A folder"
+msgstr "⟦Å földér~~~⟧"
+
+msgid "Version"
+msgstr "⟦Vérsîöñ~~⟧"
+
+msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
+msgstr "⟦Trîàñglé îñstàlls ît îñtö thé 3DS's störàgé: àñ ûpdàté ör DLÇ göés wîth îts gàmé, àñd à gàmé jöîñs thé lîbràrÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Choose a CIA file to install: a game, an update or DLC."
+msgstr "⟦Çhöösé à ÇÎÅ fîlé tö îñstàll: à gàmé, àñ ûpdàté ör DLÇ.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Games here"
+msgstr "⟦Gàmés héré~~~~⟧"
+
+msgid "Cannot be read"
+msgstr "⟦Çàññöt bé réàd~~~~~⟧"
+
+msgid "{0} game"
+msgid_plural "{0} games"
+msgstr[0] "⟦{0} gàmé~~⟧"
+msgstr[1] "⟦{0} gàmés~~⟧"
+
+msgid "Found"
+msgstr "⟦Föûñd~~⟧"
+
+msgid "Missing (only encrypted dumps need it)"
+msgstr "⟦Mîssîñg (öñlÿ éñçrÿptéd dûmps ñééd ît)~~~~~~~~~~~~~~~⟧"
+
+msgid "Found in /data/ps5cemu"
+msgstr "⟦Föûñd îñ /dàtà/ps5çémû~~~~~~~~⟧"
+
+msgid "Missing (only .wud/.wux need it)"
+msgstr "⟦Mîssîñg (öñlÿ .wûd/.wûx ñééd ît)~~~~~~~~~~~~⟧"
+
+msgid "In use"
+msgstr "⟦Îñ ûsé~~⟧"
+
+msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
+msgstr "⟦Gàmés çàñ bé .3ds ör .ççî, .çxî, .çîà ör .3dsx, déçrÿptéd, héré ör îñ thé földérs îñ ît. Trîàñglé ûsés thé földér shöwñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
+msgstr "⟦Gàmés çàñ bé .wûà, .wûd, .wûx, ör földérs wîth çödé, çöñtéñt àñd métà. Trîàñglé ûsés thé földér shöwñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Nothing to install"
+msgstr "⟦Ñöthîñg tö îñstàll~~~~~~~⟧"
+
+msgid "v{0}, not installed yet"
+msgstr "⟦v{0}, ñöt îñstàlléd ÿét~~~~~~~⟧"
+
+msgid "v{0}, v{1} installed now"
+msgstr "⟦v{0}, v~{1} îñstàlléd ñöw~~~~~⟧"
+
+msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
+msgstr "⟦Trîàñglé îñstàlls ît îñtö thé Wîî Ü's störàgé (mlç01). Üpdàtés àñd DLÇ îñ thé gàmé fîlés földér wörk às théÿ àré, töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "To install"
+msgstr "⟦Tö îñstàll~~~~⟧"
+
+msgid "This folder"
+msgstr "⟦Thîs földér~~~~⟧"
+
+msgid "Connecting to {0}"
+msgstr "⟦Çöññéçtîñg tö ~~~~~{0}⟧"
+
+msgid "Play a game from your 3DS over your network, or set Azahar up from it"
+msgstr "⟦Plàÿ à gàmé fröm ÿöûr 3DS övér ÿöûr ñétwörk, ör sét Åzàhàr ûp fröm ît~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "3DS address"
+msgstr "⟦3DS àddréss~~~~⟧"
+
+msgid ""
+"The address Artic Base shows on the 3DS's screen when it is ready.\n"
+"Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
+"The 3DS and the PS5 must be on the same network."
+msgstr ""
+"⟦Thé àddréss Årtîç Bàsé shöws öñ thé 3DS's sçrééñ whéñ ît îs réàdÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Çröss édîts ît: Léft àñd Rîght çhöösé à ñûmbér, Üp àñd Döwñ çhàñgé ît bÿ 1, L1 àñd R1 bÿ 10, àñd Çröss àgàîñ kééps ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Thé 3DS àñd thé PS5 mûst bé öñ thé sàmé ñétwörk.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Connect and play"
+msgstr "⟦Çöññéçt àñd plàÿ~~~~~~⟧"
+
+msgid ""
+"On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
+"It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
+msgstr ""
+"⟦Öñ thé 3DS, stàrt thé Årtîç Bàsé àpp (hömébréw, fröm Åzàhàr's téàm) àñd çhöösé à gàmé îñ ît: thé çàrtrîdgé ör àñ îñstàlléd öñé. Théñ çöññéçt fröm héré: thé gàmé plàÿs öñ thé PS5 fröm thé 3DS, àñd îts sàvés stàÿ öñ thé 3DS.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Ît îs öñlÿ às smööth às thé ñétwörk: à ströñg Wî-Fî sîgñàl för thé 3DS àñd à wîréd PS5 hélp.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Set up from an Old 3DS"
+msgstr "⟦Sét ûp fröm àñ Öld 3DS~~~~~~~~⟧"
+
+msgid ""
+"With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
+"That data is your console's: do not share Azahar's folder afterwards."
+msgstr ""
+"⟦Wîth thé Årtîç Sétûp Tööl àpp rûññîñg öñ àñ Öld 3DS ör 2DS: çöpîés îts sÿstém fîlés àñd îts öwñ dàtà (sÿstém séttîñgs, frîéñd çödé, Mîî àñd éShöp dàtà) îñtö Åzàhàr, sö gàmés thàt ñééd thé 3DS's sÿstém àppléts ör fîlés stàrt, àñd thé Hömé Méñû çàñ (Séttîñgs > Sÿstém àñd Hömé Méñû).~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Thàt dàtà îs ÿöûr çöñsölé's: dö ñöt shàré Åzàhàr's földér àftérwàrds.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Set up from a New 3DS"
+msgstr "⟦Sét ûp fröm à Ñéw 3DS~~~~~~~~⟧"
+
+msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
+msgstr "⟦Ås àbövé, fröm à Ñéw 3DS ör Ñéw 2DS rûññîñg thé Årtîç Sétûp Tööl àpp.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Automatic"
+msgstr "⟦Åûtömàtîç~~~⟧"
+
+msgid "Japan"
+msgstr "⟦Jàpàñ~~⟧"
+
+msgid "USA"
+msgstr "⟦ÜSÅ~⟧"
+
+msgid "Europe"
+msgstr "⟦Éûröpé~~⟧"
+
+msgid "Australia"
+msgstr "⟦Åûstràlîà~~~⟧"
+
+msgid "China"
+msgstr "⟦Çhîñà~~⟧"
+
+msgid "Korea"
+msgstr "⟦Köréà~~⟧"
+
+msgid "Taiwan"
+msgstr "⟦Tàîwàñ~~⟧"
+
+msgid "Japanese"
+msgstr "⟦Jàpàñésé~~~⟧"
+
+msgid "English"
+msgstr "⟦Éñglîsh~~⟧"
+
+msgid "French"
+msgstr "⟦Fréñçh~~⟧"
+
+msgid "German"
+msgstr "⟦Gérmàñ~~⟧"
+
+msgid "Italian"
+msgstr "⟦Îtàlîàñ~~⟧"
+
+msgid "Spanish"
+msgstr "⟦Spàñîsh~~⟧"
+
+msgid "Chinese (simplified)"
+msgstr "⟦Çhîñésé (sîmplîfîéd)~~~~~~~~⟧"
+
+msgid "Korean"
+msgstr "⟦Köréàñ~~⟧"
+
+msgid "Dutch"
+msgstr "⟦Dûtçh~~⟧"
+
+msgid "Portuguese"
+msgstr "⟦Pörtûgûésé~~~~⟧"
+
+msgid "Russian"
+msgstr "⟦Rûssîàñ~~⟧"
+
+msgid "Chinese (traditional)"
+msgstr "⟦Çhîñésé (tràdîtîöñàl)~~~~~~~~⟧"
+
+msgid "Linear"
+msgstr "⟦Lîñéàr~~⟧"
+
+msgid "Setup theme"
+msgstr "⟦Sétûp thémé~~~~⟧"
+
+msgid "Language"
+msgstr "⟦Làñgûàgé~~~⟧"
+
+msgid "The language of the menus: the PS5's own, unless you choose another."
+msgstr "⟦Thé làñgûàgé öf thé méñûs: thé PS5's öwñ, ûñléss ÿöû çhöösé àñöthér.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Display"
+msgstr "⟦Dîsplàÿ~~⟧"
+
+msgid "How the launcher looks and where it opens."
+msgstr "⟦Höw thé làûñçhér lööks àñd whéré ît öpéñs.~~~~~~~~~~~~~~~~⟧"
+
+msgid "Sound"
+msgstr "⟦Söûñd~~⟧"
+
+msgid "The menus' music and sounds, and the games' volume."
+msgstr "⟦Thé méñûs' mûsîç àñd söûñds, àñd thé gàmés' völûmé.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense, for every player."
+msgstr "⟦Thé DûàlSéñsé, för évérÿ plàÿér.~~~~~~~~~~~~⟧"
+
+msgid "Games and folders"
+msgstr "⟦Gàmés àñd földérs~~~~~~⟧"
+
+msgid "Where each side's games are."
+msgstr "⟦Whéré éàçh sîdé's gàmés àré.~~~~~~~~~~~⟧"
+
+msgid "Online and updates"
+msgstr "⟦Öñlîñé àñd ûpdàtés~~~~~~~⟧"
+
+msgid "Box art, graphic packs and PS5CEMU-HAR itself."
+msgstr "⟦Böx àrt, gràphîç pàçks àñd PS5ÇÉMÜ-HÅR îtsélf.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Accessibility"
+msgstr "⟦Åççéssîbîlîtÿ~~~~~⟧"
+
+msgid "Larger text, more contrast, less motion."
+msgstr "⟦Làrgér téxt, möré çöñtràst, léss mötîöñ.~~~~~~~~~~~~~~~~⟧"
+
+msgid "For every Wii U game."
+msgstr "⟦För évérÿ Wîî Ü gàmé.~~~~~~~~⟧"
+
+msgid "What each player's DualSense is to the Wii U."
+msgstr "⟦Whàt éàçh plàÿér's DûàlSéñsé îs tö thé Wîî Ü.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cemu's emulated portals."
+msgstr "⟦Çémû's émûlàtéd pörtàls.~~~~~~~~~⟧"
+
+msgid "Into the Wii U's storage."
+msgstr "⟦Îñtö thé Wîî Ü's störàgé.~~~~~~~~~~⟧"
+
+msgid "For every 3DS game."
+msgstr "⟦För évérÿ 3DS gàmé.~~~~~~~⟧"
+
+msgid "Screens and borders"
+msgstr "⟦Sçrééñs àñd bördérs~~~~~~~⟧"
+
+msgid "For every 3DS game; in a game, its menu changes them at once."
+msgstr "⟦För évérÿ 3DS gàmé; îñ à gàmé, îts méñû çhàñgés thém àt öñçé.~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense as the 3DS."
+msgstr "⟦Thé DûàlSéñsé às thé 3DS.~~~~~~~~~~⟧"
+
+msgid "System and Home Menu"
+msgstr "⟦Sÿstém àñd Hömé Méñû~~~~~~~~⟧"
+
+msgid "The emulated 3DS's region and language."
+msgstr "⟦Thé émûlàtéd 3DS's régîöñ àñd làñgûàgé.~~~~~~~~~~~~~~~⟧"
+
+msgid "Into the 3DS's storage."
+msgstr "⟦Îñtö thé 3DS's störàgé.~~~~~~~~~⟧"
+
+msgid "Play from your 3DS, over your network."
+msgstr "⟦Plàÿ fröm ÿöûr 3DS, övér ÿöûr ñétwörk.~~~~~~~~~~~~~~~⟧"
+
+msgid "Why something does not work, before anything else."
+msgstr "⟦Whÿ söméthîñg döés ñöt wörk, béföré àñÿthîñg élsé.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Logs, caches and what this session is."
+msgstr "⟦Lögs, çàçhés àñd whàt thîs séssîöñ îs.~~~~~~~~~~~~~~~⟧"
+
+msgctxt "app"
+msgid "About"
+msgstr "⟦Åböût~~⟧"
+
+msgid "Who made what."
+msgstr "⟦Whö màdé whàt.~~~~~⟧"
+
+msgid "Checking GitHub…"
+msgstr "⟦Çhéçkîñg GîtHûb…~~~~~~⟧"
+
+msgid "Downloading: {0}"
+msgstr "⟦Döwñlöàdîñg: ~~~~~{0}⟧"
+
+msgid "Downloading: {0} MB"
+msgstr "⟦Döwñlöàdîñg: ~~~~~{0} MB~⟧"
+
+msgid "Installing…"
+msgstr "⟦Îñstàllîñg…~~~~⟧"
+
+msgid "Up to date: {0}"
+msgstr "⟦Üp tö dàté: ~~~~{0}⟧"
+
+msgid "Installed: {0}"
+msgstr "⟦Îñstàlléd: ~~~~{0}⟧"
+
+msgid "Cross to download"
+msgstr "⟦Çröss tö döwñlöàd~~~~~~⟧"
+
+msgid "{0}: Cross to install"
+msgstr "⟦{0}: Çröss tö îñstàll~~~~~~~⟧"
+
+msgid "Downloading…"
+msgstr "⟦Döwñlöàdîñg…~~~~⟧"
+
+msgid "Checking the download…"
+msgstr "⟦Çhéçkîñg thé döwñlöàd…~~~~~~~~⟧"
+
+msgid "Installed: Cross to restart"
+msgstr "⟦Îñstàlléd: Çröss tö réstàrt~~~~~~~~~~⟧"
+
+msgid "Cross to check"
+msgstr "⟦Çröss tö çhéçk~~~~~⟧"
+
+msgid "Cross goes to the 3DS side for it."
+msgstr "⟦Çröss göés tö thé 3DS sîdé för ît.~~~~~~~~~~~~~⟧"
+
+msgid "Cross goes to the Wii U side for it."
+msgstr "⟦Çröss göés tö thé Wîî Ü sîdé för ît.~~~~~~~~~~~~~~⟧"
+
+msgid "On the 3DS side"
+msgstr "⟦Öñ thé 3DS sîdé~~~~~~⟧"
+
+msgid "On the Wii U side"
+msgstr "⟦Öñ thé Wîî Ü sîdé~~~~~~⟧"
+
+msgid "Cemu did not start, so this cannot be changed."
+msgstr "⟦Çémû dîd ñöt stàrt, sö thîs çàññöt bé çhàñgéd.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The menus' language. Game names and descriptions stay as they are."
+msgstr "⟦Thé méñûs' làñgûàgé. Gàmé ñàmés àñd désçrîptîöñs stàÿ às théÿ àré.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
+msgstr "⟦PS5ÇÉMÜ-HÅR spéàks thé PS5's öwñ làñgûàgé ûñléss ÿöû çhöösé àñöthér héré; thé fîrst stàrt's Sétûp çhéçk hàs thé sàmé çhöîçé. Gàmé ñàmés, théîr désçrîptîöñs àñd gràphîç pàçks çömé fröm GàméTDB, thé gàmés àñd thé pàçks' àûthörs, àñd stàÿ às théÿ wröté thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Start on"
+msgstr "⟦Stàrt öñ~~~⟧"
+
+msgid "The side last used"
+msgstr "⟦Thé sîdé làst ûséd~~~~~~~⟧"
+
+msgid "Ask each time"
+msgstr "⟦Åsk éàçh tîmé~~~~~⟧"
+
+msgid "Where PS5CEMU-HAR opens."
+msgstr "⟦Whéré PS5ÇÉMÜ-HÅR öpéñs.~~~~~~~~~⟧"
+
+msgid ""
+"The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
+"Ask each time: it shows the two sides first, as the start screen did."
+msgstr ""
+"⟦Thé sîdé làst ûséd: PS5ÇÉMÜ-HÅR öpéñs öñ thé sîdé ÿöû wéré öñ, àñd àftér à gàmé öñ thàt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Åsk éàçh tîmé: ît shöws thé twö sîdés fîrst, às thé stàrt sçrééñ dîd.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Game pictures behind menus"
+msgstr "⟦Gàmé pîçtûrés béhîñd méñûs~~~~~~~~~~⟧"
+
+msgid "The focused game's cover, softened, behind the screens."
+msgstr "⟦Thé föçûséd gàmé's çövér, söftéñéd, béhîñd thé sçrééñs.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
+msgstr "⟦Thé föçûséd gàmé's pîçtûré fîlls thé sçrééñ béhîñd thé méñûs, söftéñéd àñd dîmméd, sö mövîñg thé föçûs çhàñgés thé whölé sçrééñ. Öff: thé gàmé's çölöûrs öñlÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Launcher music"
+msgstr "⟦Làûñçhér mûsîç~~~~~⟧"
+
+msgid "The music under the menus."
+msgstr "⟦Thé mûsîç ûñdér thé méñûs.~~~~~~~~~~⟧"
+
+msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
+msgstr "⟦Thé làûñçhér's öwñ mûsîç, îñ thé spîrît öf à çöñsölé's sétûp sçrééñ, ör ñöñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Music volume"
+msgstr "⟦Mûsîç völûmé~~~~⟧"
+
+msgid "How loud the menus' music is."
+msgstr "⟦Höw löûd thé méñûs' mûsîç îs.~~~~~~~~~~~⟧"
+
+msgid "How loud the launcher's music is. Left and Right change it by 10%."
+msgstr "⟦Höw löûd thé làûñçhér's mûsîç îs. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Menu sounds"
+msgstr "⟦Méñû söûñds~~~~⟧"
+
+msgid "The sounds of moving and choosing."
+msgstr "⟦Thé söûñds öf mövîñg àñd çhöösîñg.~~~~~~~~~~~~~⟧"
+
+msgid "The launcher's sounds as you move, choose and go back."
+msgstr "⟦Thé làûñçhér's söûñds às ÿöû mövé, çhöösé àñd gö bàçk.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Wii U games' volume"
+msgstr "⟦Wîî Ü gàmés' völûmé~~~~~~~⟧"
+
+msgid "The Wii U games' sound."
+msgstr "⟦Thé Wîî Ü gàmés' söûñd.~~~~~~~~~⟧"
+
+msgid "The Wii U games' sound. Left and Right change it by 10%."
+msgstr "⟦Thé Wîî Ü gàmés' söûñd. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "3DS games' volume"
+msgstr "⟦3DS gàmés' völûmé~~~~~~⟧"
+
+msgid "The 3DS games' sound."
+msgstr "⟦Thé 3DS gàmés' söûñd.~~~~~~~~⟧"
+
+msgid "The 3DS games' sound. Left and Right change it by 10%."
+msgstr "⟦Thé 3DS gàmés' söûñd. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "GamePad speaker"
+msgstr "⟦GàméPàd spéàkér~~~~~~⟧"
+
+msgid "The Wii U GamePad's own sound, on the DualSense."
+msgstr "⟦Thé Wîî Ü GàméPàd's öwñ söûñd, öñ thé DûàlSéñsé.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
+msgstr "⟦Thé söûñds gàmés plàÿ öñ thé Wîî Ü GàméPàd's spéàkér, fröm plàÿér 1's DûàlSéñsé spéàkér. Màñÿ gàmés séñd théîr whölé söûñd théré töö, sö ît îs öff ûñléss ÿöû wàñt ît. Åpplîés tö thé ñéxt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense's rumble, in games and in the launcher."
+msgstr "⟦Thé DûàlSéñsé's rûmblé, îñ gàmés àñd îñ thé làûñçhér.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
+msgstr "⟦Öff, thé DûàlSéñsé ñévér rûmblés: ñöt för à gàmé's vîbràtîöñ, ñör för thé làûñçhér's.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Wii U players"
+msgstr "⟦Wîî Ü plàÿérs~~~~~⟧"
+
+msgid "Each player's emulated controller, motion and buttons."
+msgstr "⟦Éàçh plàÿér's émûlàtéd çöñtröllér, mötîöñ àñd bûttöñs.~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "What the Wii U sees in each player's hands."
+msgstr "⟦Whàt thé Wîî Ü séés îñ éàçh plàÿér's hàñds.~~~~~~~~~~~~~~~~~⟧"
+
+msgid "3DS controls"
+msgstr "⟦3DS çöñtröls~~~~⟧"
+
+msgid "Motion, deadzone and buttons."
+msgstr "⟦Mötîöñ, déàdzöñé àñd bûttöñs.~~~~~~~~~~~⟧"
+
+msgid "Where your Wii U games are. Cross picks another."
+msgstr "⟦Whéré ÿöûr Wîî Ü gàmés àré. Çröss pîçks àñöthér.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
+msgstr "⟦Yöûr Wîî Ü gàmés: .wûà, .wûd, .wûx, ör földérs wîth çödé, çöñtéñt àñd métà. Éñçrÿptéd .wûd àñd .wûx ñééd théîr kéÿs îñ /dàtà/ps5çémû/kéÿs.txt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Where your 3DS games are. Cross picks another."
+msgstr "⟦Whéré ÿöûr 3DS gàmés àré. Çröss pîçks àñöthér.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
+msgstr "⟦Yöûr 3DS gàmés: .3ds ör .ççî, .çxî, .3dsx àñd Åzàhàr's çömprésséd dûmps, déçrÿptéd, héré ör îñ thé földérs îñ ît. ÇÎÅ fîlés àré îñstàlléd (Îñstàll ÇÎÅ fîlés). Éñçrÿptéd dûmps ñééd thé 3DS's àés_kéÿs.txt îñ /dàtà/ps5çémû/àzàhàr/sÿsdàtà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Look for games now"
+msgstr "⟦Löök för gàmés ñöw~~~~~~~⟧"
+
+msgid "Looking…"
+msgstr "⟦Löökîñg…~~~⟧"
+
+msgid "This side's folder, again."
+msgstr "⟦Thîs sîdé's földér, àgàîñ.~~~~~~~~~~⟧"
+
+msgid "Looks through this side's folder again, as it does each time the side opens."
+msgstr "⟦Lööks thröûgh thîs sîdé's földér àgàîñ, às ît döés éàçh tîmé thé sîdé öpéñs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Wii U disc keys"
+msgstr "⟦Wîî Ü dîsç kéÿs~~~~~~⟧"
+
+msgid "keys.txt found"
+msgstr "⟦kéÿs.txt föûñd~~~~~⟧"
+
+msgid "keys.txt missing"
+msgstr "⟦kéÿs.txt mîssîñg~~~~~~⟧"
+
+msgid "Only encrypted .wud and .wux need them."
+msgstr "⟦Öñlÿ éñçrÿptéd .wûd àñd .wûx ñééd thém.~~~~~~~~~~~~~~~⟧"
+
+msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
+msgstr "⟦Éñçrÿptéd .wûd àñd .wûx dûmps ñééd théîr dîsç kéÿs îñ /dàtà/ps5çémû/kéÿs.txt, öñé à lîñé. Déçrÿptéd dûmps, .wûà àñd földérs ñééd ñöñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Box art from GameTDB"
+msgstr "⟦Böx àrt fröm GàméTDB~~~~~~~~⟧"
+
+msgid "Covers for the library, downloaded once."
+msgstr "⟦Çövérs för thé lîbràrÿ, döwñlöàdéd öñçé.~~~~~~~~~~~~~~~~⟧"
+
+msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
+msgstr "⟦Thé fîrst tîmé à gàmé shöws ûp, îts çövér îs döwñlöàdéd fröm GàméTDB (àrt.gàmétdb.çöm) bÿ thé ÎD öñ îts böx. Öff: ñöthîñg möré îs döwñlöàdéd.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Community graphic packs"
+msgstr "⟦Çömmûñîtÿ gràphîç pàçks~~~~~~~~~⟧"
+
+msgid "Cross checks GitHub for newer ones."
+msgstr "⟦Çröss çhéçks GîtHûb för ñéwér öñés.~~~~~~~~~~~~~~⟧"
+
+msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
+msgstr "⟦Çémû's çömmûñîtÿ gràphîç pàçks, fröm GîtHûb's làtést réléàsé whéñ ît îs ñéwér thàñ thé öñés îñstàlléd. Thé pàçks bûñdléd wîth thé àpp stàÿ às thé fàllbàçk.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR updates"
+msgstr "⟦PS5ÇÉMÜ-HÅR ûpdàtés~~~~~~~⟧"
+
+msgid "Cross checks GitHub for a newer version."
+msgstr "⟦Çröss çhéçks GîtHûb för à ñéwér vérsîöñ.~~~~~~~~~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
+msgstr "⟦PS5ÇÉMÜ-HÅR àsks GîtHûb för îts làtést réléàsé éàçh tîmé ît stàrts. Çröss àsks àgàîñ, ör îñstàlls thé ñéwér vérsîöñ ît föûñd: thé réléàsé's fîlés àré döwñlöàdéd, çhéçkéd àñd pût îñ plàçé öf thésé, àñd thé àpp stàrts àgàîñ. Yöûr gàmés, sàvés àñd séttîñgs stàÿ às théÿ àré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Larger text"
+msgstr "⟦Làrgér téxt~~~~⟧"
+
+msgid "Every size of text a step up."
+msgstr "⟦Évérÿ sîzé öf téxt à stép ûp.~~~~~~~~~~~⟧"
+
+msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
+msgstr "⟦Évérÿ stÿlé öf téxt à stép làrgér: çàptîöñs fröm 20 tö 23, réàdîñg téxt fröm 26 tö 30.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "High contrast"
+msgstr "⟦Hîgh çöñtràst~~~~~⟧"
+
+msgid "Opaque panels, full-strength text, a thicker ring."
+msgstr "⟦Öpàqûé pàñéls, fûll-stréñgth téxt, à thîçkér rîñg.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
+msgstr "⟦Öpàqûé pàñéls îñstéàd öf glàss, àll téxt àt fûll stréñgth, à thîçkér föçûs rîñg àñd ñö gràîñ ör pîçtûrés béhîñd thé méñûs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Reduce motion"
+msgstr "⟦Rédûçé mötîöñ~~~~~⟧"
+
+msgid "Fades in place of movement."
+msgstr "⟦Fàdés îñ plàçé öf mövéméñt.~~~~~~~~~~⟧"
+
+msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
+msgstr "⟦Sprîñgs béçömé shört fàdés; ñöthîñg drîfts, bréàthés ör rîsés béhîñd thé méñûs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Hold to confirm"
+msgstr "⟦Höld tö çöñfîrm~~~~~~⟧"
+
+msgid "How long Cross is held for what cannot be undone."
+msgstr "⟦Höw löñg Çröss îs héld för whàt çàññöt bé ûñdöñé.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
+msgstr "⟦Çléàrîñg çàçhés, Årtîç Sétûp àñd réséttîñg çöñtröls àré héld tö çöñfîrm, ñévér présséd twîçé. Thîs îs höw löñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "How the picture is scaled to the TV."
+msgstr "⟦Höw thé pîçtûré îs sçàléd tö thé TV.~~~~~~~~~~~~~~⟧"
+
+msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
+msgstr "⟦Bîçûbîç îs shàrp, Bîçûbîç Hérmîté à lîttlé söftér, Lîñéàr söftér stîll; Ñéàrést ñéîghböûr kééps pîxéls sqûàré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "120 Hz output"
+msgstr "⟦120 Hz öûtpût~~~~~⟧"
+
+msgid "For displays that take 120 Hz."
+msgstr "⟦För dîsplàÿs thàt tàké 120 Hz.~~~~~~~~~~~~⟧"
+
+msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
+msgstr "⟦Thé 119.88 Hz mödé, öñ dîsplàÿs thàt sûppört ît. Gàmés stîll rûñ àt théîr öwñ spééd, àñd à fràmé thàt mîssés à réfrésh wàîts 8 ms för thé ñéxt îñstéàd öf 17.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Holds a game to an even frame rate."
+msgstr "⟦Hölds à gàmé tö àñ évéñ fràmé ràté.~~~~~~~~~~~~~~⟧"
+
+msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
+msgstr "⟦Éàçh fràmé stàÿs öñ sçrééñ för àt léàst twö ör thréé réfréshés, sö à gàmé thàt çàññöt höld thé dîsplàÿ's ràté rûñs àt àñ évéñ öñé: 60 ör 40 fps wîth 120 Hz öûtpût, 30 ör 20 wîthöût. 60 fps wîth 120 Hz öûtpût sûîts à gàmé àt 4K thàt sömétîmés dröps ûñdér 60; 30 fps àt 60 Hz sûîts öñé àt 8K. Ålsö îñ thé îñ-gàmé méñû.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Frame rate, CPU and memory in a corner."
+msgstr "⟦Fràmé ràté, ÇPÜ àñd mémörÿ îñ à çörñér.~~~~~~~~~~~~~~~⟧"
+
+msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
+msgstr "⟦Fràmés pér séçöñd, ÇPÜ àñd mémörÿ ûsé îñ thé töp léft çörñér, às Çémû shöws thém. Ålsö îñ thé îñ-gàmé méñû.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "No stutter while new shaders build."
+msgstr "⟦Ñö stûttér whîlé ñéw shàdérs bûîld.~~~~~~~~~~~~~~⟧"
+
+msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
+msgstr "⟦Öñ, à ñéw shàdér îs bûîlt whîlé thé gàmé çàrrîés öñ, sö ît döés ñöt stûttér, bût sömé thîñgs màÿ bé mîssîñg för à möméñt. Öff, thé gàmé wàîts för éàçh öñé: stûttér, bût ñöthîñg dràwñ wröñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cross: this player's controller, motion and buttons."
+msgstr "⟦Çröss: thîs plàÿér's çöñtröllér, mötîöñ àñd bûttöñs.~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "No DualSense for this player yet."
+msgstr "⟦Ñö DûàlSéñsé för thîs plàÿér ÿét.~~~~~~~~~~~~~⟧"
+
+msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
+msgstr "⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds, àñd îts mötîöñ, vîbràtîöñ, déàdzöñés àñd bûttöñs. Plàÿér 1 îs thé sîgñéd-îñ ûsér whö stàrtéd thé àpp; thé öthér sîgñéd-îñ ûsérs' DûàlSéñsés àré plàÿérs 2 tö 4.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "For the Skylanders games."
+msgstr "⟦För thé Skÿlàñdérs gàmés.~~~~~~~~~~⟧"
+
+msgid "For Disney Infinity 3.0."
+msgstr "⟦För Dîsñéÿ Îñfîñîtÿ 3.0.~~~~~~~~~⟧"
+
+msgid "For LEGO Dimensions."
+msgstr "⟦För LÉGÖ Dîméñsîöñs.~~~~~~~~⟧"
+
+msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
+msgstr "⟦Çémû's émûlàtéd pörtàl, plûggéd îñ às à gàmé stàrts. Îñ thé gàmé, thé méñû's ÜSB dévîçés çàtégörÿ pûts fîgûrés öñ ît: dûmps îñ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{0}. Å réàl pörtàl öñ thé PS5's ÜSB îs ñöt réàçhéd.~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Install from a folder"
+msgstr "⟦Îñstàll fröm à földér~~~~~~~~⟧"
+
+msgid "An update, DLC or game (code, content and meta)."
+msgstr "⟦Åñ ûpdàté, DLÇ ör gàmé (çödé, çöñtéñt àñd métà).~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
+msgstr "⟦Îñstàlls îñtö thé Wîî Ü's störàgé (mlç01), às Çémû's Îñstàll gàmé tîtlé, ûpdàté ör DLÇ döés. Üpdàtés àñd DLÇ îñ thé gàmé fîlés földér wörk às théÿ àré, töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Higher is sharper and asks more of the GPU."
+msgstr "⟦Hîghér îs shàrpér àñd àsks möré öf thé GPÜ.~~~~~~~~~~~~~~~~~⟧"
+
+msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
+msgstr "⟦Höw làrgé thé 3DS's 3D sçéñés àré dràwñ béföré théÿ àré sçàléd tö thé TV. Hîghér îs shàrpér àñd àsks möré öf thé GPÜ, àñd éàçh tîmé à gàmé réàds à pîçtûré bàçk thé wàît gröws wîth ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Smooths textures as they are scaled up."
+msgstr "⟦Smööths téxtûrés às théÿ àré sçàléd ûp.~~~~~~~~~~~~~~~⟧"
+
+msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
+msgstr "⟦Smööths thé gàmé's téxtûrés às théÿ àré sçàléd ûp; Ñöñé kééps thém às thé 3DS dràws thém. Å fîltér rédràws évérÿ téxtûré àt thé îñtérñàl résölûtîöñ: àt hîgh résölûtîöñs ît îs thé çöstlîést séttîñg. Îf à gàmé stûttérs, trÿ Ñöñé fîrst.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Custom textures"
+msgstr "⟦Çûstöm téxtûrés~~~~~~⟧"
+
+msgid "Texture packs from azahar/load/textures."
+msgstr "⟦Téxtûré pàçks fröm àzàhàr/löàd/téxtûrés.~~~~~~~~~~~~~~~~⟧"
+
+msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
+msgstr "⟦Téxtûré pàçks îñ /dàtà/ps5çémû/àzàhàr/löàd/téxtûrés/<tîtlé ÎD>, às thé désktöp Åzàhàr löàds thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Screen layout"
+msgstr "⟦Sçrééñ làÿöût~~~~~⟧"
+
+msgid "How the two screens share the TV."
+msgstr "⟦Höw thé twö sçrééñs shàré thé TV.~~~~~~~~~~~~~⟧"
+
+msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
+msgstr "⟦Öñé àbövé thé öthér, thé töp öñé àlöñé, thé töp öñé làrgé wîth thé böttöm öñé bésîdé ît, ör thé twö sîdé bÿ sîdé. Îñ à gàmé, töûçhpàd çlîçk + R1 göés tö thé ñéxt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Artwork around the screens."
+msgstr "⟦Årtwörk àröûñd thé sçrééñs.~~~~~~~~~~⟧"
+
+msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
+msgstr "⟦Årtwörk àröûñd thé 3DS sçrééñs, ñévér övér thém. Ît föllöws évérÿ làÿöût, àñd thé îñ-gàmé méñû çhàñgés ît töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense's motion as the 3DS's."
+msgstr "⟦Thé DûàlSéñsé's mötîöñ às thé 3DS's.~~~~~~~~~~~~~~⟧"
+
+msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
+msgstr "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér às thé 3DS's öwñ, för thé gàmés thàt àîm ör stéér bÿ tîltîñg ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "How far a stick moves before it counts."
+msgstr "⟦Höw fàr à stîçk mövés béföré ît çöûñts.~~~~~~~~~~~~~~~⟧"
+
+msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
+msgstr "⟦Höw fàr à stîçk mövés béföré thé gàmé séés ît, för thé çîrçlé pàd àñd thé Ç-stîçk. Ràîsé ît îf söméthîñg drîfts whéñ ÿöû lét gö öf thé stîçk; löwér ît för fîñér çöñtröl.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
+msgstr "⟦Whîçh DûàlSéñsé bûttöñ îs whîçh öf thé 3DS's. Å îs öñ Çîrçlé àñd B öñ Çröss bÿ défàûlt, whéré thé 3DS hàs thém; thé çîrçlé pàd îs thé léft stîçk, thé Ç-stîçk thé rîght öñé, àñd thé töûçhpàd thé töûçh sçrééñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Default buttons, motion and deadzone."
+msgstr "⟦Défàûlt bûttöñs, mötîöñ àñd déàdzöñé.~~~~~~~~~~~~~~⟧"
+
+msgid "The default buttons, motion and deadzone."
+msgstr "⟦Thé défàûlt bûttöñs, mötîöñ àñd déàdzöñé.~~~~~~~~~~~~~~~~⟧"
+
+msgid "Region"
+msgstr "⟦Régîöñ~~⟧"
+
+msgid "The emulated 3DS's region."
+msgstr "⟦Thé émûlàtéd 3DS's régîöñ.~~~~~~~~~~⟧"
+
+msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
+msgstr "⟦Åûtömàtîç tàkés éàçh gàmé's öwñ régîöñ. Å gàmé màdé för àñöthér régîöñ màÿ réfûsé tö stàrt ör shöw öthér làñgûàgés. Åpplîés tö thé ñéxt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The emulated 3DS's language."
+msgstr "⟦Thé émûlàtéd 3DS's làñgûàgé.~~~~~~~~~~~⟧"
+
+msgid "The language games that follow the console's show their text in. Applies to the next game."
+msgstr "⟦Thé làñgûàgé gàmés thàt föllöw thé çöñsölé's shöw théîr téxt îñ. Åpplîés tö thé ñéxt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Home Menu"
+msgstr "⟦Hömé Méñû~~~⟧"
+
+msgid "Start"
+msgstr "⟦Stàrt~~⟧"
+
+msgid "Run Artic Setup first"
+msgstr "⟦Rûñ Årtîç Sétûp fîrst~~~~~~~~⟧"
+
+msgid "The 3DS Home Menu, from your console's files."
+msgstr "⟦Thé 3DS Hömé Méñû, fröm ÿöûr çöñsölé's fîlés.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
+msgstr "⟦Stàrts thé 3DS Hömé Méñû, öñçé Årtîç Bàsé's sétûp hàs çöpîéd ÿöûr öwñ çöñsölé's sÿstém fîlés (Årtîç Bàsé).~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Install a CIA file"
+msgstr "⟦Îñstàll à ÇÎÅ fîlé~~~~~~~⟧"
+
+msgid "A game, an update or DLC."
+msgstr "⟦Å gàmé, àñ ûpdàté ör DLÇ.~~~~~~~~~~⟧"
+
+msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
+msgstr "⟦Îñstàlls à ÇÎÅ îñtö thé 3DS's störàgé, às Åzàhàr's Îñstàll ÇÎÅ döés: àñ ûpdàté ör DLÇ göés wîth îts gàmé, àñd à gàmé jöîñs thé lîbràrÿ. Çîrçlé çàñçéls whîlé ît rûñs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Play a game from your 3DS, and set up from it."
+msgstr "⟦Plàÿ à gàmé fröm ÿöûr 3DS, àñd sét ûp fröm ît.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
+msgstr "⟦Årtîç Bàsé plàÿs à gàmé fröm à 3DS öñ ÿöûr ñétwörk, îts sàvés stàÿîñg öñ thé 3DS; Årtîç Sétûp çöpîés à 3DS's sÿstém fîlés îñtö Åzàhàr, för thé Hömé Méñû àñd thé gàmés thàt ñééd thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Open the Setup check"
+msgstr "⟦Öpéñ thé Sétûp çhéçk~~~~~~~~⟧"
+
+msgid "Storage, recompilers, games, keys and box art, checked."
+msgstr "⟦Störàgé, réçömpîlérs, gàmés, kéÿs àñd böx àrt, çhéçkéd.~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
+msgstr "⟦Éàçh çhéçk hàs à stàtûs, whàt ît méàñs àñd whàt tö dö. Ît îs àlsö shöwñ öñ thé fîrst stàrt àñd whéñévér à çhéçk fàîls às thé àpp stàrts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Copy logs to USB"
+msgstr "⟦Çöpÿ lögs tö ÜSB~~~~~~⟧"
+
+msgid "The logs a report needs, onto a USB drive."
+msgstr "⟦Thé lögs à répört ñééds, öñtö à ÜSB drîvé.~~~~~~~~~~~~~~~~⟧"
+
+msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
+msgstr "⟦Çöpîés thé làst fîvé séssîöñs' lögs àñd thé séttîñgs îñtö à dàtéd földér öñ à ÜSB drîvé, tö àttàçh tö à répört.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Clear Wii U shader caches"
+msgstr "⟦Çléàr Wîî Ü shàdér çàçhés~~~~~~~~~~⟧"
+
+msgid "For a game that crashes on a bad cache."
+msgstr "⟦För à gàmé thàt çràshés öñ à bàd çàçhé.~~~~~~~~~~~~~~~⟧"
+
+msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
+msgstr "⟦Délétés Çémû's shàdér çàçhés. Gàmés bûîld thém àgàîñ às théÿ rûñ: thé fîrst mîñûtés stûttér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Clear 3DS shader caches"
+msgstr "⟦Çléàr 3DS shàdér çàçhés~~~~~~~~~⟧"
+
+msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
+msgstr "⟦Délétés Åzàhàr's shàdér çàçhés. Gàmés bûîld thém àgàîñ às théÿ rûñ: thé fîrst mîñûtés stûttér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
+msgstr "⟦Fîgûré dûmps gö îñ /dàtà/ps5çémû/fîgûrés: skÿlàñdérs, îñfîñîtÿ àñd dîméñsîöñs. Swîtçh à pörtàl öñ héré, stàrt thé gàmé, théñ pût fîgûrés öñ ît fröm thé îñ-gàmé méñû (töûçhpàd çlîçk + Öptîöñs > ÜSB dévîçés).~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid ""
+"Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
+"Azahar, the 3DS emulator, by the Azahar team and the Citra contributors before them; Mihawk-99's PS5 port of it and dynarmic.\n"
+"Box art and game information: GameTDB. The font: Lexend.\n"
+"An unofficial port, not affiliated with the Cemu or Azahar teams, Nintendo or Sony.\n"
+"\n"
+"Wii U games: /data/ps5cemu/games, storage and saves: /data/ps5cemu/mlc01, keys: /data/ps5cemu/keys.txt\n"
+"3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
+"\n"
+msgstr ""
+"⟦Çémû, thé Wîî Ü émûlàtör, bÿ thé Çémû téàm àñd îts çöñtrîbûtörs; RÅDV öñ thé PS5 bÿ Mîhàwk-99 àñd mpéréîràésàà; thé çömmûñîtÿ gràphîç pàçks' àûthörs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Åzàhàr, thé 3DS émûlàtör, bÿ thé Åzàhàr téàm àñd thé Çîtrà çöñtrîbûtörs béföré thém; Mîhàwk-99's PS5 pört öf ît àñd dÿñàrmîç.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"Böx àrt àñd gàmé îñförmàtîöñ: GàméTDB. Thé föñt: Léxéñd.~~~~~~~~~~~~~~~~~~~~~~\n"
+"Åñ ûñöffîçîàl pört, ñöt àffîlîàtéd wîth thé Çémû ör Åzàhàr téàms, Ñîñtéñdö ör Söñÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"\n"
+"Wîî Ü gàmés: /dàtà/ps5çémû/gàmés, störàgé àñd sàvés: /dàtà/ps5çémû/mlç01, kéÿs: /dàtà/ps5çémû/kéÿs.txt~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"3DS gàmés: /dàtà/ps5çémû/àzàhàr/gàmés, störàgé: /dàtà/ps5çémû/àzàhàr/sdmç~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+"\n"
+"⟧"
+
+msgid "Version {0}"
+msgstr "⟦Vérsîöñ ~~~{0}⟧"
+
+msgid "The PS5's language: {0}"
+msgstr "⟦Thé PS5's làñgûàgé: ~~~~~~~~{0}⟧"
+
+msgid "Language: {0}"
+msgstr "⟦Làñgûàgé: ~~~~{0}⟧"
+
+msgctxt "tab"
+msgid "Settings"
+msgstr "⟦Séttîñgs~~~⟧"
+
+msgid "Starting the 3DS"
+msgstr "⟦Stàrtîñg thé 3DS~~~~~~⟧"
+
+msgid "General"
+msgstr "⟦Géñéràl~~⟧"
+
+msgid "Help"
+msgstr "⟦Hélp~⟧"
+
+msgid "Preview"
+msgstr "⟦Prévîéw~~⟧"
+
+msgid "{0}, with no border."
+msgstr "⟦{0}, wîth ñö bördér.~~~~~~⟧"
+
+msgid "{0}, on the {1} border."
+msgstr "⟦{0}, öñ thé ~~~{1} bördér.~~~⟧"
+
+msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
+msgstr "⟦Thé böttöm sçrééñ îs thé töûçhpàd: çlîçk tö tàp, höld thé çlîçk tö dràg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "About this setting"
+msgstr "⟦Åböût thîs séttîñg~~~~~~~⟧"
+
+msgid "{0} GB free"
+msgstr "⟦{0} GB fréé~~~⟧"
+
+msgid "Storage"
+msgstr "⟦Störàgé~~⟧"
+
+msgid "the HEN setup guide"
+msgstr "⟦thé HÉÑ sétûp gûîdé~~~~~~~⟧"
+
+msgid "/data is reachable"
+msgstr "⟦/dàtà îs réàçhàblé~~~~~~~⟧"
+
+msgid "Where everything is kept"
+msgstr "⟦Whéré évérÿthîñg îs képt~~~~~~~~~⟧"
+
+msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
+msgstr "⟦Séttîñgs, sàvés, çàçhés àñd lögs lîvé îñ ~~~~~~~~~~~~~~~~{0}, whîçh ÿöûr HÉÑ öpéñs tö PS5ÇÉMÜ-HÅR: îts àpp jàîlbréàk, ör élfldr wîth thé hélpér thàt çömés wîth thé àpp.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "/data is out of reach: nothing can be kept"
+msgstr "⟦/dàtà îs öût öf réàçh: ñöthîñg çàñ bé képt~~~~~~~~~~~~~~~~⟧"
+
+msgid "Let PS5CEMU-HAR out of its sandbox"
+msgstr "⟦Lét PS5ÇÉMÜ-HÅR öût öf îts sàñdböx~~~~~~~~~~~~~⟧"
+
+msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
+msgstr "⟦Ådd PPSÅ99360 tö ÿöûr HÉÑ's àpp jàîlbréàk lîst (étàHÉÑ: îts àpp jàîlbréàk lîst; ÖñîöñHÉÑ: thé éñd öf éxàçt_tîtlé_îds îñ çöñfîg.îñî, wîth ñö çömmà àftér ît), ör hàvé élfldr lîstéñîñg öñ pört 9021. Théñ stàrt PS5ÇÉMÜ-HÅR àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Recompilers"
+msgstr "⟦Réçömpîlérs~~~~⟧"
+
+msgid "What runs the games' code"
+msgstr "⟦Whàt rûñs thé gàmés' çödé~~~~~~~~~~⟧"
+
+msgid "JIT memory from your HEN: games run at full speed"
+msgstr "⟦JÎT mémörÿ fröm ÿöûr HÉÑ: gàmés rûñ àt fûll spééd~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Executable memory: games run at full speed, no HEN grant needed"
+msgstr "⟦Éxéçûtàblé mémörÿ: gàmés rûñ àt fûll spééd, ñö HÉÑ gràñt ñéédéd~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
+msgstr "⟦Çémû's àñd Åzàhàr's réçömpîlérs tûrñ thé gàmés' çödé îñtö thé PS5's às théÿ rûñ. Théÿ ñééd mémörÿ théÿ çàñ wrîté çödé îñtö àñd rûñ ît fröm: ÿöûr HÉÑ's JÎT mémörÿ, ör éxéçûtàblé mémörÿ PS5ÇÉMÜ-HÅR màkés îtsélf.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
+msgstr "⟦Ñö JÎT ör éxéçûtàblé mémörÿ: Wîî Ü gàmés rûñ öñ thé mûçh slöwér îñtérprétér~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
+msgstr "⟦Ñéîthér ÿöûr HÉÑ's JÎT mémörÿ ñör éxéçûtàblé mémörÿ çöûld bé màdé, sö Wîî Ü gàmés fàll bàçk tö Çémû's îñtérprétér. Ådd PPSÅ99360 tö ÿöûr HÉÑ's àpp jàîlbréàk lîst, théñ stàrt PS5ÇÉMÜ-HÅR àgàîñ; Séttîñgs > Dîàgñöstîçs sàÿs whàt ît göt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "{0} game in {1}"
+msgid_plural "{0} games in {1}"
+msgstr[0] "⟦{0} gàmé îñ ~~~{1}⟧"
+msgstr[1] "⟦{0} gàmés îñ ~~~~{1}⟧"
+
+msgid "None in {0} yet"
+msgstr "⟦Ñöñé îñ ~~~{0} ÿét~⟧"
+
+msgid "{0} cannot be read"
+msgstr "⟦{0} çàññöt bé réàd~~~~~~⟧"
+
+msgid "Where your 3DS games go"
+msgstr "⟦Whéré ÿöûr 3DS gàmés gö~~~~~~~~~⟧"
+
+msgid "Where your Wii U games go"
+msgstr "⟦Whéré ÿöûr Wîî Ü gàmés gö~~~~~~~~~~⟧"
+
+msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
+msgstr "⟦Pût thém îñ ~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé. Földérs îñsîdé ît àré séàrçhéd töö. ÇÎÅ fîlés àré îñstàlléd, fröm Séttîñgs > Îñstàll ÇÎÅ fîlés.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
+msgstr "⟦Pût thém îñ ~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé. Üpdàtés àñd DLÇ gö îñ fröm Séttîñgs > Îñstàll ûpdàtés àñd DLÇ, ör çömé wîth à .wûà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "code · content · meta"
+msgstr "⟦çödé · çöñtéñt · métà~~~~~~~~⟧"
+
+msgid "the game files page"
+msgstr "⟦thé gàmé fîlés pàgé~~~~~~~⟧"
+
+msgid "keys.txt is missing: only encrypted .wud and .wux need it"
+msgstr "⟦kéÿs.txt îs mîssîñg: öñlÿ éñçrÿptéd .wûd àñd .wûx ñééd ît~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "How to"
+msgstr "⟦Höw tö~~⟧"
+
+msgid "Keys for encrypted discs"
+msgstr "⟦Kéÿs för éñçrÿptéd dîsçs~~~~~~~~~⟧"
+
+msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
+msgstr "⟦Éñçrÿptéd .wûd àñd .wûx dûmps ñééd théîr dîsç kéÿs îñ ~~~~~~~~~~~~~~~~~~~~~{0}/kéÿs.txt, öñé à lîñé. Déçrÿptéd dûmps, .wûà fîlés àñd földérs wîth çödé, çöñtéñt àñd métà ñééd ñöñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "3DS keys"
+msgstr "⟦3DS kéÿs~~~⟧"
+
+msgid "aes_keys.txt found"
+msgstr "⟦àés_kéÿs.txt föûñd~~~~~~~⟧"
+
+msgid "aes_keys.txt is missing: only encrypted dumps need it"
+msgstr "⟦àés_kéÿs.txt îs mîssîñg: öñlÿ éñçrÿptéd dûmps ñééd ît~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Keys for encrypted 3DS dumps"
+msgstr "⟦Kéÿs för éñçrÿptéd 3DS dûmps~~~~~~~~~~~⟧"
+
+msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
+msgstr "⟦Éñçrÿptéd dûmps ñééd àés_kéÿs.txt fröm ÿöûr öwñ çöñsölé îñ ~~~~~~~~~~~~~~~~~~~~~~~{0}/sÿsdàtà. Déçrÿptéd dûmps, hömébréw àñd îñstàlléd ÇÎÅs ñééd ñöñé. Ñö kéÿs çömé wîth PS5ÇÉMÜ-HÅR.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "3DS system files"
+msgstr "⟦3DS sÿstém fîlés~~~~~~⟧"
+
+msgid "Artic Setup has run: the Home Menu can start"
+msgstr "⟦Årtîç Sétûp hàs rûñ: thé Hömé Méñû çàñ stàrt~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Artic Setup copies them from your 3DS, for the Home Menu"
+msgstr "⟦Årtîç Sétûp çöpîés thém fröm ÿöûr 3DS, för thé Hömé Méñû~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Your 3DS's own files"
+msgstr "⟦Yöûr 3DS's öwñ fîlés~~~~~~~~⟧"
+
+msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
+msgstr "⟦Thé 3DS Hömé Méñû, àñd thé féw gàmés thàt ñééd thé çöñsölé's sÿstém fîlés, rûñ öñçé Årtîç Sétûp hàs çöpîéd thém fröm ÿöûr öwñ 3DS övér thé ñétwörk: stàrt thé Årtîç Sétûp Tööl öñ thé 3DS, théñ Årtîç Bàsé héré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "the 3DS page"
+msgstr "⟦thé 3DS pàgé~~~~⟧"
+
+msgid "Box art"
+msgstr "⟦Böx àrt~~⟧"
+
+msgid "what PS5CEMU-HAR fetches online"
+msgstr "⟦whàt PS5ÇÉMÜ-HÅR fétçhés öñlîñé~~~~~~~~~~~~⟧"
+
+msgid "Covers from GameTDB"
+msgstr "⟦Çövérs fröm GàméTDB~~~~~~~⟧"
+
+msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
+msgstr "⟦Thé fîrst tîmé à gàmé shöws ûp, îts çövér çömés fröm GàméTDB (àrt.gàmétdb.çöm), bÿ thé ÎD öñ îts böx. Wîthöût à çöññéçtîöñ thé gàmés' öwñ îçöñs àré shöwñ, àñd thé ñéxt stàrt trîés àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Off: the games' icons are shown instead"
+msgstr "⟦Öff: thé gàmés' îçöñs àré shöwñ îñstéàd~~~~~~~~~~~~~~~⟧"
+
+msgid "Turn on"
+msgstr "⟦Tûrñ öñ~~⟧"
+
+msgid "GameTDB did not answer: the games' icons are shown instead"
+msgstr "⟦GàméTDB dîd ñöt àñswér: thé gàmés' îçöñs àré shöwñ îñstéàd~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "GameTDB is reachable · {0} cover"
+msgid_plural "GameTDB is reachable · {0} covers"
+msgstr[0] "⟦GàméTDB îs réàçhàblé · ~~~~~~~~~{0} çövér~~⟧"
+msgstr[1] "⟦GàméTDB îs réàçhàblé · ~~~~~~~~~{0} çövérs~~⟧"
+
+msgid "On · {0} cover"
+msgid_plural "On · {0} covers"
+msgstr[0] "⟦Öñ · ~~{0} çövér~~⟧"
+msgstr[1] "⟦Öñ · ~~{0} çövérs~~⟧"
+
+msgid "On: covers come as your games show up"
+msgstr "⟦Öñ: çövérs çömé às ÿöûr gàmés shöw ûp~~~~~~~~~~~~~~⟧"
+
+msgid "Checked again"
+msgstr "⟦Çhéçkéd àgàîñ~~~~~⟧"
+
+msgid "Welcome to PS5CEMU-HAR"
+msgstr "⟦Wélçömé tö PS5ÇÉMÜ-HÅR~~~~~~~~⟧"
+
+msgid "Let’s check your setup"
+msgstr "⟦Lét’s çhéçk ÿöûr sétûp~~~~~~~~⟧"
+
+msgid "The {0} check is ready."
+msgid_plural "All {0} checks are ready."
+msgstr[0] "⟦Thé ~{0} çhéçk îs réàdÿ.~~~~~~⟧"
+msgstr[1] "⟦Åll ~{0} çhéçks àré réàdÿ.~~~~~~~⟧"
+
+msgid "The {0} check needs a look."
+msgid_plural "All {0} checks need a look."
+msgstr[0] "⟦Thé ~{0} çhéçk ñééds à löök.~~~~~~~~⟧"
+msgstr[1] "⟦Åll ~{0} çhéçks ñééd à löök.~~~~~~~~⟧"
+
+msgid "{0} of {1} is ready."
+msgid_plural "{0} of {1} are ready."
+msgstr[0] "⟦{0} öf ~{1} îs réàdÿ.~~~~⟧"
+msgstr[1] "⟦{0} öf ~{1} àré réàdÿ.~~~~⟧"
+
+msgid "{0} needs a look."
+msgid_plural "{0} need a look."
+msgstr[0] "⟦{0} ñééds à löök.~~~~~⟧"
+msgstr[1] "⟦{0} ñééd à löök.~~~~~⟧"
+
+msgid "{0} · as the PS5"
+msgstr "⟦{0} · às thé PS5~~~~~⟧"
+
+msgid "· optional"
+msgstr "⟦· öptîöñàl~~~~⟧"
+
+msgid "The menus' language"
+msgstr "⟦Thé méñûs' làñgûàgé~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
+msgstr "⟦PS5ÇÉMÜ-HÅR spéàks thé làñgûàgé ÿöûr PS5 îs sét tö. Çröss çhöösés àñöthér; Séttîñgs > Géñéràl > Làñgûàgé çhàñgés ît àt àñÿ tîmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The guide, on your phone"
+msgstr "⟦Thé gûîdé, öñ ÿöûr phöñé~~~~~~~~~⟧"
+
+msgid "Scan it for {0}: {1}"
+msgstr "⟦Sçàñ ît för ~~~~{0}: {1}⟧"
+
+msgid "Not in this build"
+msgstr "⟦Ñöt îñ thîs bûîld~~~~~~⟧"
+
+msgid "Open to look for games"
+msgstr "⟦Öpéñ tö löök för gàmés~~~~~~~~⟧"
+
+msgid "Saved your place in the library"
+msgstr "⟦Sàvéd ÿöûr plàçé îñ thé lîbràrÿ~~~~~~~~~~~~⟧"
+
+msgid "The game could not start"
+msgstr "⟦Thé gàmé çöûld ñöt stàrt~~~~~~~~~⟧"
+
+msgid "{0} min played"
+msgid_plural "{0} min played"
+msgstr[0] "⟦{0} mîñ plàÿéd~~~~⟧"
+msgstr[1] "⟦{0} mîñ plàÿéd~~~~⟧"
+
+msgid "{0} h played"
+msgid_plural "{0} h played"
+msgstr[0] "⟦{0} h plàÿéd~~~⟧"
+msgstr[1] "⟦{0} h plàÿéd~~~⟧"
+
+msgid "today"
+msgstr "⟦tödàÿ~~⟧"
+
+msgid "yesterday"
+msgstr "⟦ÿéstérdàÿ~~~⟧"
+
+msgid "{0} day ago"
+msgid_plural "{0} days ago"
+msgstr[0] "⟦{0} dàÿ àgö~~~⟧"
+msgstr[1] "⟦{0} dàÿs àgö~~~⟧"
+
+msgid "{0} week ago"
+msgid_plural "{0} weeks ago"
+msgstr[0] "⟦{0} wéék àgö~~~⟧"
+msgstr[1] "⟦{0} wééks àgö~~~~⟧"
+
+msgid "{0} month ago"
+msgid_plural "{0} months ago"
+msgstr[0] "⟦{0} möñth àgö~~~~⟧"
+msgstr[1] "⟦{0} möñths àgö~~~~⟧"
+
+msgid "Cemu is still starting"
+msgstr "⟦Çémû îs stîll stàrtîñg~~~~~~~~⟧"
+
+msgid "Starting Azahar"
+msgstr "⟦Stàrtîñg Åzàhàr~~~~~~⟧"
+
+msgctxt "tab"
+msgid "Home"
+msgstr "⟦Hömé~⟧"
+
+msgid "Done"
+msgstr "⟦Döñé~⟧"
+
+msgid "Close"
+msgstr "⟦Çlösé~~⟧"
+
+msgid "Cancel"
+msgstr "⟦Çàñçél~~⟧"
+
+msgid "Tabs"
+msgstr "⟦Tàbs~⟧"
+
+msgid "Switch"
+msgstr "⟦Swîtçh~~⟧"
+
+msgid "Open"
+msgstr "⟦Öpéñ~⟧"
+
+msgid "Change the language"
+msgstr "⟦Çhàñgé thé làñgûàgé~~~~~~~⟧"
+
+msgid "Check again"
+msgstr "⟦Çhéçk àgàîñ~~~~⟧"
+
+msgid "Continue"
+msgstr "⟦Çöñtîñûé~~~⟧"
+
+msgid "Continue to Home"
+msgstr "⟦Çöñtîñûé tö Hömé~~~~~~⟧"
+
+msgid "Options"
+msgstr "⟦Öptîöñs~~⟧"
+
+msgid "Move"
+msgstr "⟦Mövé~⟧"
+
+msgid "Filters"
+msgstr "⟦Fîltérs~~⟧"
+
+msgid "Jump by letter"
+msgstr "⟦Jûmp bÿ léttér~~~~~⟧"
+
+msgid "Back to the buttons"
+msgstr "⟦Bàçk tö thé bûttöñs~~~~~~~⟧"
+
+msgid "Scroll"
+msgstr "⟦Sçröll~~⟧"
+
+msgid "Pages"
+msgstr "⟦Pàgés~~⟧"
+
+msgid "More about it"
+msgstr "⟦Möré àböût ît~~~~~⟧"
+
+msgid "Back to the packs"
+msgstr "⟦Bàçk tö thé pàçks~~~~~~⟧"
+
+msgid "On / off"
+msgstr "⟦Öñ / öff~~~⟧"
+
+msgid "Assign"
+msgstr "⟦Åssîgñ~~⟧"
+
+msgid "Clear"
+msgstr "⟦Çléàr~~⟧"
+
+msgid "Use this folder"
+msgstr "⟦Üsé thîs földér~~~~~~⟧"
+
+msgid "Number"
+msgstr "⟦Ñûmbér~~⟧"
+
+msgid "Keep"
+msgstr "⟦Kéép~⟧"
+
+msgid "Edit"
+msgstr "⟦Édît~⟧"
+
+msgid "Connect"
+msgstr "⟦Çöññéçt~~⟧"
+
+msgid "Hold to set up"
+msgstr "⟦Höld tö sét ûp~~~~~⟧"
+
+msgid "Not a favourite"
+msgstr "⟦Ñöt à fàvöûrîté~~~~~~⟧"
+
+msgid "Show where it is"
+msgstr "⟦Shöw whéré ît îs~~~~~~⟧"
+
+msgid "Added to Favourites"
+msgstr "⟦Åddéd tö Fàvöûrîtés~~~~~~~⟧"
+
+msgid "Taken out of Favourites"
+msgstr "⟦Tàkéñ öût öf Fàvöûrîtés~~~~~~~~~⟧"
+
+msgid "The PS5's storage"
+msgstr "⟦Thé PS5's störàgé~~~~~~⟧"
+
+msgid "Title ID {0}"
+msgstr "⟦Tîtlé ÎD ~~~{0}⟧"
+
+msgid "PS5CEMU-HAR {0} is out"
+msgstr "⟦PS5ÇÉMÜ-HÅR ~~~~{0} îs öût~~⟧"
+
+msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
+msgstr "⟦Thîs îs ~~~{0}. Döwñlöàd àñd îñstàll ît ñöw? Yöûr gàmés, sàvés àñd séttîñgs stàÿ às théÿ àré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Update now"
+msgstr "⟦Üpdàté ñöw~~~~⟧"
+
+msgid "Later"
+msgstr "⟦Làtér~~⟧"
+
+msgid "Updating to {0}"
+msgstr "⟦Üpdàtîñg tö ~~~~{0}⟧"
+
+msgid "Downloading: {0} of {1} MB"
+msgstr "⟦Döwñlöàdîñg: ~~~~~{0} öf ~{1} MB~⟧"
+
+msgid "Checking the download"
+msgstr "⟦Çhéçkîñg thé döwñlöàd~~~~~~~~⟧"
+
+msgid "Installing"
+msgstr "⟦Îñstàllîñg~~~~⟧"
+
+msgid "{0} is installed"
+msgstr "⟦{0} îs îñstàlléd~~~~~⟧"
+
+msgid "PS5CEMU-HAR starts again to finish the update."
+msgstr "⟦PS5ÇÉMÜ-HÅR stàrts àgàîñ tö fîñîsh thé ûpdàté.~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Restart now"
+msgstr "⟦Réstàrt ñöw~~~~⟧"
+
+msgid "The update did not finish"
+msgstr "⟦Thé ûpdàté dîd ñöt fîñîsh~~~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR is still {0}."
+msgstr "⟦PS5ÇÉMÜ-HÅR îs stîll ~~~~~~~~{0}.⟧"
+
+msgid "Checking for updates"
+msgstr "⟦Çhéçkîñg för ûpdàtés~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR update"
+msgstr "⟦PS5ÇÉMÜ-HÅR ûpdàté~~~~~~~⟧"
+
+msgid "Select"
+msgstr "⟦Séléçt~~⟧"
+
+msgid "Restart"
+msgstr "⟦Réstàrt~~⟧"
+
+msgid "Firmware {0}"
+msgstr "⟦Fîrmwàré ~~~{0}⟧"
+
+msgid "Logs: {0}, {1}/log.txt"
+msgstr "⟦Lögs: ~~{0}, {1}/lög.txt~~~⟧"
+
+msgid "Boot log not written (/data is unreachable)"
+msgstr "⟦Bööt lög ñöt wrîttéñ (/dàtà îs ûñréàçhàblé)~~~~~~~~~~~~~~~~~⟧"
+
+msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
+msgstr "⟦PS5ÇÉMÜ-HÅR çàññöt réàçh /dàtà. Löàd à HÉÑ wîth PPSÅ99360 îñ îts àpp jàîlbréàk lîst, ör élfldr, théñ réstàrt PS5ÇÉMÜ-HÅR.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
+msgstr "⟦Thîs séssîöñ: Åzàhàr (3DS); Çémû's émûlàtéd Wîî Ü îs ñöt stàrtéd~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "This session: Cemu (Wii U); Azahar's core is not started"
+msgstr "⟦Thîs séssîöñ: Çémû (Wîî Ü); Åzàhàr's çöré îs ñöt stàrtéd~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "Cemu did not start: {0}"
+msgstr "⟦Çémû dîd ñöt stàrt: ~~~~~~~~{0}⟧"
+
+msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
+msgstr "⟦Ñö JÎT mémörÿ: Wîî Ü gàmés rûñ öñ thé îñtérprétér, mûçh slöwér. Îs PPSÅ99360 îñ ÿöûr HÉÑ's àpp jàîlbréàk lîst?~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
+msgstr "⟦Thé làûñçhér çöûld ñöt stàrt. Thé bööt lög îñ /dàtà/ps5çémû/lögs sàÿs whÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgid "{0} fps"
+msgstr "⟦{0} fps~⟧"
+
+msgctxt "compatibility note"
+msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
+msgstr "⟦Rûñs àt àböût 60 fps àt 1440p. Üp tö 2.0.0 Ç ît frözé àñd çlöséd whéñ Màgñésîs ör öthér rûñés, ör thé Shéîkàh sçöpé (R3), hîghlîghtéd öbjéçts; fîxéd àftér 2.0.0 Ç (à ñéwér Çémû)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgctxt "compatibility note"
+msgid "About half the textures are missing during races"
+msgstr "⟦Åböût hàlf thé téxtûrés àré mîssîñg dûrîñg ràçés~~~~~~~~~~~~~~~~~~~⟧"
+
+msgctxt "compatibility note"
+msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
+msgstr "⟦Plàÿs wîth îts 60 FPS gràphîç pàçk tûrñéd öff; wîth ît öñ, ît glîtçhés àñd çràshés öñçé gàméplàÿ löàds. Üp tö 2.0.0 Ç ît çràshéd théré éîthér wàÿ (Çémû ràñ öût öf Vûlkàñ désçrîptörs)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+
+msgctxt "compatibility note"
+msgid "Save states work from the in-game menu"
+msgstr "⟦Sàvé stàtés wörk fröm thé îñ-gàmé méñû~~~~~~~~~~~~~~~⟧"

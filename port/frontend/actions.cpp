@@ -2,6 +2,7 @@
 // PS5CEMU-HAR: what the launchers do besides drawing (actions.h), moved unchanged from launcher.cpp.
 
 #include "actions.h"
+#include "../app/lang.h"
 #include "../app/paths.h"
 #include "../ps5/kernel.h"
 #include "../ps5/log.h"
@@ -25,6 +26,13 @@
 
 namespace ps5actions
 {
+	using ps5lang::Tr;
+	using ps5lang::TrC;
+	using ps5lang::TrF;
+	using ps5lang::TrFC;
+	using ps5lang::TrMarkC;
+	using ps5lang::TrP;
+
 	std::string Hex(uint64_t value)
 	{
 		return fmt::format("{:016X}", value);
@@ -34,11 +42,6 @@ namespace ps5actions
 	std::string ShortPath(const std::string& path, size_t limit)
 	{
 		return path.size() <= limit ? path : "..." + path.substr(path.size() - (limit - 3));
-	}
-
-	std::string Plural(int count, const char* one, const char* many)
-	{
-		return fmt::format("{} {}", count, count == 1 ? one : many);
 	}
 
 	std::string Lower(std::string text)
@@ -57,7 +60,8 @@ namespace ps5actions
 
 	std::string Gigabytes(uint64_t bytes)
 	{
-		return fmt::format("{:.1f} GB", bytes / 1e9);
+		// tr: a size in gigabytes, as in 2.4 GB
+		return TrFC("size", "{0} GB", ps5lang::Decimal(bytes / 1e9, 1));
 	}
 
 	// "a  /  b  /  c" from the parts that are not empty
@@ -132,10 +136,11 @@ namespace ps5actions
 				if (IsFile(file) && CopyFile(file, folder + file.substr(file.find_last_of('/'))))
 					copied++;
 			ps5log::Line("[launcher] {} log files copied to {}", copied, folder);
-			return fmt::format("{} files to USB drive {}", copied, drive + 1);
+			// tr: {1} is the USB drive's number
+			return TrP(copied, "{0} file to USB drive {1}", "{0} files to USB drive {1}", drive + 1);
 		}
 		ps5log::Line("[launcher] no USB drive took the logs");
-		return "No USB drive found";
+		return Tr("No USB drive found");
 	}
 
 	// Diagnostics > Clear shader caches, for the side it is on: Cemu's (its transferable,
@@ -162,16 +167,16 @@ namespace ps5actions
 			}
 		}
 		ps5log::Line("[launcher] shader caches cleared in {}: {} files, {} MiB", folder, files, bytes >> 20);
-		return files ? fmt::format("{} files deleted ({} MB)", files, bytes / 1000000) : "None to delete";
+		return files ? TrP(files, "{0} file deleted ({1} MB)", "{0} files deleted ({1} MB)", bytes / 1000000) : std::string(Tr("None to delete"));
 	}
 
 	// How the browser names a drive: "USB drive 1", "Extended storage 1"
 	std::string DriveName(const std::string& path)
 	{
 		if (path.starts_with("/mnt/usb"))
-			return fmt::format("USB drive {}", std::atoi(path.c_str() + 8) + 1);
+			return TrF("USB drive {0}", std::atoi(path.c_str() + 8) + 1);
 		if (path.starts_with("/mnt/ext"))
-			return fmt::format("Extended storage {}", std::atoi(path.c_str() + 8) + 1);
+			return TrF("Extended storage {0}", std::atoi(path.c_str() + 8) + 1);
 		return path;
 	}
 
@@ -290,24 +295,26 @@ namespace ps5actions
 	{
 		switch (type)
 		{
-		case ps5emu::EmulatedType::GamePad: return "Wii U GamePad";
-		case ps5emu::EmulatedType::Pro: return "Wii U Pro Controller";
-		case ps5emu::EmulatedType::Classic: return "Classic Controller";
-		case ps5emu::EmulatedType::Wiimote: return "Wii Remote";
-		case ps5emu::EmulatedType::Nunchuk: return "Wii Remote + Nunchuk";
+		// tr: the Wii U's controllers, by the names Nintendo gave them in the language
+		case ps5emu::EmulatedType::GamePad: return Tr("Wii U GamePad");
+		case ps5emu::EmulatedType::Pro: return Tr("Wii U Pro Controller");
+		case ps5emu::EmulatedType::Classic: return Tr("Classic Controller");
+		case ps5emu::EmulatedType::Wiimote: return Tr("Wii Remote");
+		case ps5emu::EmulatedType::Nunchuk: return Tr("Wii Remote + Nunchuk");
 		case ps5emu::EmulatedType::None: break;
 		}
-		return "No controller";
+		return Tr("No controller");
 	}
 
 	const char* KindName(ps5emu::InstallCandidate::Kind kind)
 	{
 		switch (kind)
 		{
-		case ps5emu::InstallCandidate::Kind::Game: return "Game";
-		case ps5emu::InstallCandidate::Kind::Update: return "Update";
-		case ps5emu::InstallCandidate::Kind::Dlc: return "DLC";
-		case ps5emu::InstallCandidate::Kind::System: return "System title";
+		// tr: what an install is
+		case ps5emu::InstallCandidate::Kind::Game: return Tr("Game");
+		case ps5emu::InstallCandidate::Kind::Update: return Tr("Update");
+		case ps5emu::InstallCandidate::Kind::Dlc: return Tr("DLC");
+		case ps5emu::InstallCandidate::Kind::System: return Tr("System title");
 		case ps5emu::InstallCandidate::Kind::None: break;
 		}
 		return "";
@@ -383,11 +390,32 @@ namespace ps5actions
 	{
 		switch (titleId >> 32)
 		{
-		case 0x00040000: return "Game";
-		case 0x0004000E: return "Update";
-		case 0x0004008C: return "DLC";
-		case 0x00040002: return "Demo";
-		default: return (titleId >> 32 & 0x10) ? "System title" : "Title";
+		case 0x00040000: return Tr("Game");
+		case 0x0004000E: return Tr("Update");
+		case 0x0004008C: return Tr("DLC");
+		case 0x00040002: return Tr("Demo");
+		default: return (titleId >> 32 & 0x10) ? Tr("System title") : Tr("Title");
 		}
+	}
+
+	std::string ButtonName(const std::string& english)
+	{
+		// tr: buttons and sticks: the DualSense's, the Wii U's controllers' and the 3DS's (single letters
+		// such as A, ZL or L1 are not looked up)
+		static constexpr const char* kNames[] = {TrMarkC("button", "Cross"), TrMarkC("button", "Circle"), TrMarkC("button", "Square"),
+			TrMarkC("button", "Triangle"), TrMarkC("button", "Create"), TrMarkC("button", "Options"), TrMarkC("button", "Touchpad"),
+			TrMarkC("button", "D-pad up"), TrMarkC("button", "D-pad down"), TrMarkC("button", "D-pad left"), TrMarkC("button", "D-pad right"),
+			TrMarkC("button", "Left stick up"), TrMarkC("button", "Left stick down"), TrMarkC("button", "Left stick left"),
+			TrMarkC("button", "Left stick right"), TrMarkC("button", "Left stick click"), TrMarkC("button", "Right stick up"),
+			TrMarkC("button", "Right stick down"), TrMarkC("button", "Right stick left"), TrMarkC("button", "Right stick right"),
+			TrMarkC("button", "Right stick click"), TrMarkC("button", "Circle pad up"), TrMarkC("button", "Circle pad down"),
+			TrMarkC("button", "Circle pad left"), TrMarkC("button", "Circle pad right"), TrMarkC("button", "C-stick up"),
+			TrMarkC("button", "C-stick down"), TrMarkC("button", "C-stick left"), TrMarkC("button", "C-stick right"),
+			TrMarkC("button", "Nunchuk stick up"), TrMarkC("button", "Nunchuk stick down"), TrMarkC("button", "Nunchuk stick left"),
+			TrMarkC("button", "Nunchuk stick right"), TrMarkC("button", "Nunchuk C"), TrMarkC("button", "Nunchuk Z"), TrMarkC("button", "Home"),
+			TrMarkC("button", "Start"), TrMarkC("button", "Select"), TrMarkC("button", "+ (Start)"), TrMarkC("button", "- (Select)"),
+			TrMarkC("button", "Blow into the mic"), TrMarkC("button", "Show the GamePad's screen"), TrMarkC("button", "None")};
+		(void)kNames;
+		return english.size() <= 3 ? english : TrC("button", english);
 	}
 }

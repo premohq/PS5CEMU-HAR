@@ -7,8 +7,10 @@
 The launcher draws Lexend from its signed-distance atlas (tools/render-sdf-font.sh); the menus over
 a game draw with ImGui, whose TrueType reader sees only a variable font's default instance. So the
 variable font (tools/fonts, SIL Open Font License 1.1) is cut at Regular (400), Medium (500) and
-SemiBold (600), to the characters the menus ask ImGui for (Latin-1 and the typographic marks), and
-without hinting. The files are in the repository, so a build needs no font tools; run this again
+SemiBold (600), to the characters the launcher's atlas has (tools/render-sdf-font.cpp: Latin-1, Latin
+Extended-A, what Lexend has of Latin Extended-B and Additional, the spaces and the typographic marks),
+and without hinting. ImGui is asked only for those a menu's language and its game's name use
+(port/app/menu_canvas.h, GlyphRanges), so the larger files cost a menu in English nothing. The files are in the repository, so a build needs no font tools; run this again
 only to change them. It needs fontTools (pip install fonttools).
 """
 
@@ -22,8 +24,10 @@ from fontTools.varLib import instancer
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "tools/fonts/Lexend[wght].ttf"
 WEIGHTS = {"Regular": 400, "Medium": 500, "SemiBold": 600}
-# what the menus' glyph ranges ask for (port/app/menu_canvas.h, kGlyphRanges)
-UNICODES = list(range(0x20, 0x100)) + list(range(0x2010, 0x2028)) + [0x2039, 0x203A]
+# what the launcher's atlas has (tools/render-sdf-font.cpp, CodePoints)
+UNICODES = (list(range(0x20, 0x7F)) + list(range(0xA0, 0x250)) + list(range(0x1E00, 0x1F00)) + list(range(0x2000, 0x200B)) + [0x202F] +
+            list(range(0x2010, 0x2028)) + [0x2030, 0x2039, 0x203A, 0x20AC, 0x2122, 0x2190, 0x2191, 0x2192, 0x2193, 0x2212, 0x2215, 0x2248,
+                                           0x2260, 0x2264, 0x2265, 0x25CF, 0x2713, 0x2715])
 
 
 def main():

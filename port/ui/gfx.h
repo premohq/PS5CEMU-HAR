@@ -106,7 +106,8 @@ namespace ui
 		// frame draws. Destroyed once the frames using it are done.
 		TextureId CreateTexture(uint32_t width, uint32_t height, const uint8_t* rgba);
 		void DestroyTexture(TextureId texture);
-		// The glyph atlas (one byte a texel: text.h), and the rows of it that changed.
+		// The glyph atlas (one byte a texel: text.h), again whenever it grows, and the rows of it that
+		// changed.
 		void SetAtlas(uint32_t width, uint32_t height, const uint8_t* pixels);
 		void AtlasChanged(uint32_t firstRow, uint32_t rows);
 

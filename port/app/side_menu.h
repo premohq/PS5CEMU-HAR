@@ -261,13 +261,13 @@ namespace ps5menu
 				draw->AddRect(canvas.At(kCoverX, kCoverY), canvas.At(kCoverX + coverWidth, kCoverY + coverHeight), c.rowEdge, 14 * s, 0, s);
 			}
 			const float textX = kCoverX + coverWidth + 24, textWidth = kX + kWidth - 36 - textX;
-			canvas.Text(fonts.heading, kHeading, textX, kCoverY + 2, c.title, canvas.Fit(fonts.heading, kHeading, header.title, textWidth));
+			canvas.TextFit(fonts.heading, kHeading, textX, kCoverY + 2, c.title, header.title, textWidth);
 			float chipX = textX;
 			if (!header.system.empty())
 				chipX = canvas.Chip(fonts.chip, chipX, kCoverY + 50, header.system, c.accent, Fade(c.accent, 0.16f), true);
 			if (!header.status.empty())
 				chipX = canvas.Chip(fonts.chip, chipX, kCoverY + 50, header.status, c.copy, c.focus);
-			canvas.Text(fonts.caption, kCaption, textX, kCoverY + 96 - 6, c.faint, canvas.Fit(fonts.caption, kCaption, header.details, textWidth));
+			canvas.TextFit(fonts.caption, kCaption, textX, kCoverY + 96 - 6, c.faint, header.details, textWidth);
 
 			// the ring's place this frame: where the focus is, reached on a spring
 			float ringX = 0, ringY = 0, ringWidth = 0, ringHeight = 0;
@@ -287,11 +287,9 @@ namespace ps5menu
 						draw->AddRect(canvas.At(x, y), canvas.At(x + width, y + kTileHeight), c.rowEdge, 20 * s, 0, std::max(1.0f, s));
 					const ImU32 ink = focused ? c.title : c.copy;
 					canvas.Icon(tile.icon, x + width / 2, y + (tile.caption.empty() ? 42 : 36), ink);
-					const std::string label = canvas.Fit(fonts.label, kLabel - 2, tile.label, width - 16);
-					canvas.TextCentred(fonts.label, kLabel - 2, x + width / 2, y + (tile.caption.empty() ? 72 : 62), ink, label);
+					canvas.TextFit(fonts.label, kLabel - 2, x + width / 2, y + (tile.caption.empty() ? 72 : 62), ink, tile.label, width - 16, Canvas::Align::Centre);
 					if (!tile.caption.empty())
-						canvas.TextCentred(fonts.caption, kCaption - 2, x + width / 2, y + 90, c.faint,
-							canvas.Fit(fonts.caption, kCaption - 2, tile.caption, width - 16));
+						canvas.TextFit(fonts.caption, kCaption - 2, x + width / 2, y + 90, c.faint, tile.caption, width - 16, Canvas::Align::Centre);
 					if (focused)
 					{
 						ringX = x, ringY = y, ringWidth = width, ringHeight = kTileHeight;
@@ -346,8 +344,9 @@ namespace ps5menu
 					right -= ringRadius * 2 + 12;
 					canvas.Button(right - 9, y + kRowHeight / 2, "cross", c.copy);
 					right -= 28;
-					canvas.TextRight(fonts.label, kLabel, right, y + 14, c.copy, "Hold");
-					valueLeft = right - canvas.Width(fonts.label, kLabel, "Hold");
+					// tr: beside a row held to confirm: hold Cross
+					const char* hold = ps5lang::Tr("Hold");
+					valueLeft = right - canvas.TextFit(fonts.label, kLabel, right, y + 14, c.copy, hold, 140, Canvas::Align::Right);
 				}
 				else if (!row.value.empty())
 				{
@@ -359,9 +358,10 @@ namespace ps5menu
 					}
 					const float labelRoom = canvas.Width(labelFont, labelSize, row.label) + 36;
 					const float sliderWidth = row.slider >= 0 ? 150 : 0;
-					const std::string value = canvas.Fit(fonts.label, kLabel, row.value, std::max(60.0f, right - x - 20 - labelRoom - sliderWidth));
-					canvas.TextRight(fonts.label, kLabel, right, y + 14, row.slider >= 0 ? c.text : c.copy, value);
-					valueLeft = right - canvas.Width(fonts.label, kLabel, value);
+					// the value has what the label leaves it, and at least a third of the row
+					const float valueRoom = std::max(width * 0.34f, right - x - 20 - labelRoom - sliderWidth);
+					valueLeft = right - canvas.TextFit(fonts.label, kLabel, right, y + 14, row.slider >= 0 ? c.text : c.copy, row.value, valueRoom,
+											Canvas::Align::Right);
 					if (row.slider >= 0)
 					{
 						// the slider: its track, filled in the side's colour to the knob
@@ -378,8 +378,7 @@ namespace ps5menu
 						valueLeft -= 26;
 					}
 				}
-				const std::string label = canvas.Fit(labelFont, labelSize, row.label, std::max(80.0f, valueLeft - x - 40));
-				canvas.Text(labelFont, labelSize, x + 20, y + (child ? 14.0f : 12.0f), labelColour, label);
+				canvas.TextFit(labelFont, labelSize, x + 20, y + (child ? 14.0f : 12.0f), labelColour, row.label, std::max(80.0f, valueLeft - x - 40));
 			}
 			draw->PopClipRect();
 			// a scroll bar, when the list is longer than its place
@@ -420,18 +419,18 @@ namespace ps5menu
 							help = child.help;
 				}
 				if (help.empty() && tile.hold)
-					help = "Hold Cross until the ring fills.";
+					help = ps5lang::Tr("Hold Cross until the ring fills.");
 			}
 			if (!help.empty())
 			{
 				const std::string first = help.substr(0, help.find('\n'));
-				draw->PushClipRect(canvas.At(kInsetX, kListBottom + 18), canvas.At(kInsetX + kInnerWidth, kListBottom + 18 + 2 * 28), true);
-				canvas.Text(fonts.caption, kCaption, kInsetX + 4, kListBottom + 18, c.faint, first, kInnerWidth - 8);
-				draw->PopClipRect();
+				// two lines under the list: a little smaller, then cut, never clipped mid-line
+				canvas.TextLines(fonts.caption, kCaption, kInsetX + 4, kListBottom + 18, c.faint, first, kInnerWidth - 8, 2);
 			}
 			float x = kInsetX + 4;
+			const float hintSize = canvas.HintsSize(fonts.label, hints, kInnerWidth - 8);
 			for (const auto& [button, label] : hints)
-				x = canvas.Hint(fonts.label, x, kY + kHeight - 62, button, label);
+				x = canvas.Hint(fonts.label, x, kY + kHeight - 62, button, label, hintSize);
 		}
 
 	private:

@@ -20,7 +20,6 @@ namespace ps5actions
 	// words
 	std::string Hex(uint64_t value);						// 16 hex digits
 	std::string ShortPath(const std::string& path, size_t limit); // its end, when it is too long
-	std::string Plural(int count, const char* one, const char* many);
 	std::string Lower(std::string text);
 	std::string Upper(std::string text);
 	std::string Gigabytes(uint64_t bytes);
@@ -29,6 +28,10 @@ namespace ps5actions
 	const char* TypeName(ps5emu::EmulatedType type);		 // "Wii U GamePad"
 	const char* KindName(ps5emu::InstallCandidate::Kind kind); // "Update"
 	const char* CiaKind(uint64_t titleId);					 // "Game", "DLC"...
+	// a controller's button or a DualSense input, as the mapping screens name it ("Left stick up"): the
+	// controllers' tables keep the English, which the settings store too
+	std::string ButtonName(const std::string& english);
+	inline std::string InputName(const std::string& english) { return ButtonName(english); }
 
 	// files and folders
 	std::string JoinPath(const std::string& folder, const std::string& name);
