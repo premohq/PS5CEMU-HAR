@@ -54,20 +54,50 @@ namespace ps5paths
 	// sees the console's root, which has no /app0: there the app is read where the PS5 mounts it,
 	// which follows ShadowMountPlus wherever it found the app (an install on a USB drive with an older
 	// copy left in /data/homebrew included), else where it is usually installed, or where the sandbox
-	// mounts it from (as ProsperoEden's storage_paths.h finds its own). Decided on first use, which
-	// comes after ps5privilege::Acquire.
+	// mounts it from (as ProsperoEden's storage_paths.h finds its own).
+	inline std::string FindAppDir()
+	{
+		for (const char* candidate : {"/app0", kSystemMount, kInstallDir, "/mnt/sandbox/PPSA99360_000/app0"})
+		{
+			struct stat info{};
+			if (stat((std::string(candidate) + "/eboot.bin").c_str(), &info) == 0 && S_ISREG(info.st_mode))
+				return std::string(candidate);
+		}
+		return std::string(kInstallDir);
+	}
+
+	namespace detail
+	{
+		inline std::string& AppDirSlot()
+		{
+			static std::string directory;
+			return directory;
+		}
+	}
+
+	// FindAppDir's answer, decided on first use (after ps5privilege::Acquire) and again by RefindAppDir
 	inline const std::string& AppDir()
 	{
-		static const std::string directory = [] {
-			for (const char* candidate : {"/app0", kSystemMount, kInstallDir, "/mnt/sandbox/PPSA99360_000/app0"})
-			{
-				struct stat info{};
-				if (stat((std::string(candidate) + "/eboot.bin").c_str(), &info) == 0 && S_ISREG(info.st_mode))
-					return std::string(candidate);
-			}
-			return std::string(kInstallDir);
-		}();
+		std::string& directory = detail::AppDirSlot();
+		if (directory.empty())
+			directory = FindAppDir();
 		return directory;
+	}
+
+	// The app's folder looked for again, by the elevation helper's callers, before any thread starts:
+	// the helper takes the process out of the sandbox, to the console's root, where the /app0 found
+	// before is gone (3.5.0 then read its launcher's font from there, and on a console whose drives
+	// the HEN leaves out the launcher never started, #34). Whether it moved.
+	inline bool RefindAppDir()
+	{
+		std::string& directory = detail::AppDirSlot();
+		if (directory.empty())
+			return false;
+		std::string found = FindAppDir();
+		if (found == directory)
+			return false;
+		directory = std::move(found);
+		return true;
 	}
 
 	// The folder ShadowMountPlus mounted the running app from, by its record (kMountRecord), when it

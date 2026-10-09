@@ -176,6 +176,7 @@ namespace ps5privilege
 			const auto status = elevation::request(elevation::Capability::filesystem);
 			r.filesystem = status == elevation::Status::ok && CanReachData();
 			elevationDetail = fmt::format(", elevation helper: {}", (int)status);
+			ps5paths::RefindAppDir(); // as ReachFolders: nothing has asked for it yet, should anything have
 		}
 		r.summary = fmt::format("HEN: {} ({}); JIT {}{}; /data {}{}", r.jailbroken ? "ok" : "no", henDetail,
 			henJit ? "available (the HEN's)" : directExec ? "available (executable direct memory, no HEN needed)" : "unavailable (interpreter only)",
@@ -232,6 +233,10 @@ namespace ps5privilege
 		const bool reached = !Refused(refused);
 		ps5log::Line("[privilege] {} could not be read; elevation helper ({}): {}, {}", refused, helper, (int)status,
 			reached ? "it can now" : "it still cannot");
+		// out of the sandbox, the /app0 the helper was found in is gone: the app's files are read
+		// where the console's root has them
+		if (ps5paths::RefindAppDir())
+			ps5log::Line("[privilege] app folder now {}", ps5paths::AppDir());
 		s_result.summary += reached ? fmt::format("; {} opened by the elevation helper", refused) :
 									  fmt::format("; {} unreadable (elevation helper: {})", refused, (int)status);
 	}
