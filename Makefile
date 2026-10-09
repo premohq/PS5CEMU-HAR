@@ -40,7 +40,7 @@ radv: deps ## Build RADV, the Vulkan driver, with PS5_Vulkan's recipe and patche
 azahar: deps ## Build Azahar's core (the 3DS side) and its PS5 frontend: build/azahar
 	bash tools/build-azahar.sh
 
-melonds: deps ## Build melonDS's core (the 3DS side's DS games) and its PS5 frontend: build/melonds
+melonds: deps ## Build melonDS's core (the DS side's) and its PS5 frontend: build/melonds
 	bash tools/build-melonds.sh
 
 build: deps azahar melonds $(if $(RADV_ARCHIVE),,radv) ## Build PS5CEMU-HAR (Cemu, Azahar and melonDS) and link it with RADV: build/cemu/ps5cemu.elf

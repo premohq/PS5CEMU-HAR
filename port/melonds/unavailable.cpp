@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// PS5CEMU-HAR: melonds.h for a build without melonDS's core. The 3DS side still lists DS games, and
+// PS5CEMU-HAR: melonds.h for a build without melonDS's core. The DS side still lists DS games, and
 // one says why it cannot start.
 
 #include "melonds.h"

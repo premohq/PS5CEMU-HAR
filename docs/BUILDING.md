@@ -23,6 +23,7 @@ sudo apt install rsync flex glslang-tools llvm-18-dev libclang-18-dev libclc-18-
 ```bash
 make radv      # RADV, the Vulkan driver, with the driver patches RADV_PATCHES names (0006 by default)
 make azahar    # Azahar's core and its PS5 frontend (build/azahar)
+make melonds   # melonDS's core and its PS5 frontend (build/melonds)
 make release   # the app (build/app/PPSA99360), dist/PS5CEMU-HAR-vVERSION.zip with its SHA256SUMS,
                # and dist/ps5cemu-vVERSION.elf, the eboot's ELF with its symbols
 make check     # the same build with a stand-in for RADV: checks everything else, not an app
@@ -45,6 +46,7 @@ python3 tools/symbolize-crash.py dist/ps5cemu-v3.0.0.elf boot.log
 `tools/deps.json`, then builds the libraries the emulators need for the PS5 into `build/sysroot`:
 
 - Cemu, and Mihawk's PS5 build of Azahar (with its dynarmic and the submodules it builds with)
+- melonDS, at its 1.1 release's commit
 - the PS5 Native App Boilerplate (payload SDK, runtime, packaging tool)
 - pacbrew's prebuilt PS5 libraries
 - Boost, pugixml, libzip, glslang and RapidJSON
@@ -78,6 +80,17 @@ shares Cemu's copies of fmt, glslang, zstd and OpenSSL, so the app has one of ea
 list of archives the app links to `build/azahar/azahar_ps5_libraries.txt`. Without that build, the
 app still builds, and 3DS games say why they cannot start.
 
+**melonDS.** `make melonds` (`tools/build-melonds.sh`) builds melonDS's core (its JIT, its software
+renderer, teakra, FreeBIOS) with the same toolchain, with `patches/melonds` on a `ps5` branch of
+`.deps/melonDS` (`tools/melonds-patches.sh`): the build takes an outside frontend, and the JIT's code
+goes in executable direct memory (`ps5platform/exec.h`) with no fast memory. Its PS5 frontend
+(`port/melonds`: the DS's platform, the DualSense, AudioOut) is built in melonDS's tree, and
+`build/melonds/melonds_ps5_libraries.txt` lists the archives the app links. teakra and xxHash are
+renamed (`Teakra`, `XXH_NAMESPACE`) so they cannot meet Azahar's. The screens' shaders
+(`port/melonds/shaders/`) are compiled into `port/melonds/shaders.h` by `tools/render-shaders.sh`,
+as the UI kit's are. Without that build, the app still builds, and DS games say why they cannot
+start.
+
 **Link check.** `make check` links with a driver stand-in instead of RADV. That proves everything
 else compiles, links and packages, but its output (`build/app-check`) is not an app.
 
@@ -89,18 +102,20 @@ else compiles, links and packages, but its output (`build/app-check`) is not an 
 | `port/cemu/` | Cemu's platform classes for the PS5: the memory mapper, fibers, AudioOut, the DualSense controller, and a Microsoft-ABI bridge for the recompiler, since the PS5 target has no `ms_abi` |
 | `port/app/` | Cemu's start-up without wxWidgets, the game list, game icons and box art, graphic packs, controller settings, installs, and what the app shows over a game: both in-game menus, the GamePad's screen and the touchpad's cursor |
 | `port/azahar/` | Azahar's side: the 3DS library (read by the launcher itself), its controls, and its PS5 frontend (built in Azahar's tree): the window on VideoOut, the DualSense as the 3DS, AudioOut, CIA installs |
-| `port/frontend/` | The launcher (`shell/`, [docs/UI-REDESIGN.md](UI-REDESIGN.md)): the Wii U and 3DS sides of one shell, opening on the side last used, drawn with the UI kit |
+| `port/melonds/` | The DS side: its library (read by the launcher itself), and melonDS's PS5 frontend (built in melonDS's tree): the DS's platform, its two screens on VideoOut, the DualSense as the DS, AudioOut |
+| `port/frontend/` | The launcher (`shell/`, [docs/UI-REDESIGN.md](UI-REDESIGN.md)): the Wii U, 3DS and DS sides of one shell, opening on the side last used, drawn with the UI kit; the settings (`settings.h`), games' own settings included |
 | `port/ui/` | The UI kit the new launcher draws with: Vulkan on the RADV the app links, presenting to VideoOut; signed-distance shapes and text (Lexend baked by `tools/render-sdf-font.sh`), pictures, springs, the DualSense as actions, and the design's tokens |
 | `port/main_ps5.cpp` | The entry point: the sandbox escape, logs, Cemu's core, the launcher, the game |
-| `patches/cemu/`, `patches/azahar/` | The port's changes to Cemu's and Azahar's own files |
+| `patches/cemu/`, `patches/azahar/`, `patches/melonds/` | The port's changes to Cemu's, Azahar's and melonDS's own files |
 | `tools/` | The dependencies, the builds, the PS5 link (`link.sh`), the packaging (`package.sh`), the artwork and the launcher's preview |
 | `sce_sys/` | The title's `param.json` and its home screen background, `pic0.dds` |
 
-### Changing Cemu or Azahar
+### Changing Cemu, Azahar or melonDS
 
-The port's changes to each emulator are the patches in `patches/cemu/` and `patches/azahar/`, which
-the build puts on a branch named `ps5` in `.deps/Cemu` and `.deps/PS5_Azahar`
-(`tools/cemu-patches.sh apply`, `tools/azahar-patches.sh apply`). To change one, edit its checkout
+The port's changes to each emulator are the patches in `patches/cemu/`, `patches/azahar/` and
+`patches/melonds/`, which the build puts on a branch named `ps5` in `.deps/Cemu`, `.deps/PS5_Azahar`
+and `.deps/melonDS` (`tools/cemu-patches.sh apply`, `tools/azahar-patches.sh apply`,
+`tools/melonds-patches.sh apply`). To change one, edit its checkout
 on that branch, commit there, then run its script with `export` to write the patches again.
 
 ## Artwork
@@ -114,7 +129,8 @@ and drawn again:
 | `tools/render-menu-fonts.py` | Lexend's Regular, Medium and SemiBold for the in-game menus, which ImGui draws (`port/ui/fonts/Lexend-*.ttf`, committed). Needs fontTools |
 | `tools/render-gametdb.py` | GameTDB's game information, as the game pages and in-game menus read it (`port/app/gametdb`, committed) |
 | `tools/render-background.py` | The Wii U Homebrew Launcher's background as a still picture, which the icons, the home screen background and the banner draw on. The launcher draws it moving (`port/frontend/shell/shell.cpp`) |
-| `tools/render-icons.py` | The launcher's icons: the GamePad on the bubbles, the 3DS on the waves, and the two side by side. Run by `package.sh` |
+| `tools/render-icons.py` | The launcher's icons: the GamePad on the bubbles, the 3DS on the waves, the DS on melon green with its pixels, and the Wii U and 3DS side by side. Run by `package.sh` |
+| `tools/render-shaders.sh` | The UI kit's and the DS screens' SPIR-V (`port/ui/shaders.h`, `port/melonds/shaders.h`, committed), with a glslangValidator |
 | `tools/render-presentation.py` | The PS5 home screen's art: the background (`sce_sys/pic0.dds`, installed as `pic0.dds` and `pic1.dds`, a 3840x2160 BC7 DDS it encodes itself) and the tile (`sce_sys/icon0.png`), both the README banner's design. Needs Pillow, numpy and the banner's fonts; its output is committed, so the build does not |
 | `tools/render-banner.py` | This repository's banner, `docs/banner.svg` |
 

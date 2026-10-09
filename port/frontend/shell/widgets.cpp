@@ -168,10 +168,10 @@ namespace ps5shell
 		return width;
 	}
 
-	float Shell::Badge(Canvas& canvas, float x, float y, System side, bool ds)
+	float Shell::Badge(Canvas& canvas, float x, float y, System side)
 	{
 		const ui::TextStyle style = Style({17, ui::Weight::Bold, 1.0f, 1.5f, true});
-		const char* text = ds ? "DS" : side == System::N3ds ? "3DS" : "Wii U";
+		const char* text = SideTitle(side);
 		const float width = 10 + 18 + 8 + m_fonts.Width(style, text) + 14;
 		const uint32_t colour = AccentOf(side);
 		const Box box{x, y, width, 34};
@@ -208,10 +208,12 @@ namespace ps5shell
 			canvas.LinearGradient(drawn, kRadiusCover, top | 0xff000000, bottom | 0xff000000, drawn.x, drawn.y, drawn.x, drawn.Bottom());
 			canvas.PushClip(drawn, kRadiusCover);
 			const float band = drawn.h * 0.09f;
-			canvas.Rect({drawn.x, drawn.y, drawn.w, band}, 0, Is3ds() ? 0xfff4f4f4 : 0xffe08923);
+			// the case's band: the Wii U's blue, the 3DS's white with red letters, the DS's grey
+			canvas.Rect({drawn.x, drawn.y, drawn.w, band}, 0, Is3ds() ? 0xfff4f4f4 : IsDs() ? 0xffe9e7e6 : 0xffe08923);
 			const ui::TextStyle bandStyle{std::max(9.0f, band * 0.5f), ui::Weight::Bold, 1.0f, 1.0f, true};
-			const ui::TextBlock bandText = m_fonts.Layout(bandStyle, game.entry.game.nds ? "Nintendo DS" : Is3ds() ? "Nintendo 3DS" : "Wii U");
-			canvas.Text(bandText, drawn.x + drawn.w * 0.08f, drawn.y + (band - bandText.height) * 0.5f, Is3ds() ? 0xff2222cc : 0xe6ffffff);
+			const ui::TextBlock bandText = m_fonts.Layout(bandStyle, SystemName(m_side));
+			canvas.Text(bandText, drawn.x + drawn.w * 0.08f, drawn.y + (band - bandText.height) * 0.5f,
+				Is3ds() ? 0xff2222cc : IsDs() ? 0xff2b2b2b : 0xe6ffffff);
 			const ui::Picture& icon = m_images->Get(IconOf(game));
 			if (icon.texture)
 			{
@@ -249,6 +251,10 @@ namespace ps5shell
 		const ui::TextBlock labelBlock = m_fonts.Layout(label, row.label, labelWidth, 1);
 		const float labelY = described ? box.y + 16 : box.CentreY() - labelBlock.height * 0.5f;
 		canvas.Text(labelBlock, box.x + 28, labelY, kText);
+		// game settings: whether the value is the side's (Default) or the game's own
+		if (InGameSettings() && !row.setting.empty())
+			Chip(canvas, box.x + 28 + labelBlock.width + 14, labelY + labelBlock.height * 0.5f - 15, row.fromSide ? "Default" : "This game",
+				row.fromSide ? "" : "good", 30);
 		if (described)
 			canvas.Text(caption, box.x + 28, labelY + labelBlock.height + 4, row.description, Secondary(), box.w - 56, 1);
 		// the control, on the right

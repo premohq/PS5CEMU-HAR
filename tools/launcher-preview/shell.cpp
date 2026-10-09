@@ -23,8 +23,8 @@
 // touchpad, and the sticks: ls-up ls-down ls-left ls-right rs-up rs-down rs-left rs-right.
 //
 // The launcher starts as it would
-// after earlier sessions, on the Wii U side's Home; with PREVIEW_FIRST set, as on a first start (the
-// Setup check, then the side with games); PREVIEW_ASK sets Start on: Ask each time; PREVIEW_UPDATE has
+// after earlier sessions, on the Wii U side's Library; with PREVIEW_FIRST set, as on a first start (the
+// Setup check, then the first side with games); PREVIEW_ASK sets Start on: Ask each time; PREVIEW_UPDATE has
 // a newer release found; PREVIEW_NO_DATA, /data out of reach; PREVIEW_LAUNCH_ERROR, the last game not
 // started.
 
@@ -34,6 +34,7 @@
 #include "app/gameinfo.h"
 #include "app/updates.h"
 #include "azahar/library.h"
+#include "melonds/library.h"
 #include "frontend/shell.h"
 
 #include <algorithm>
@@ -72,9 +73,9 @@ ps5shell::Host ps5shell::DefaultHost()
 
 int main(int argc, char* argv[])
 {
-	if (argc != 5)
+	if (argc != 6)
 	{
-		std::fprintf(stderr, "shell-preview OUTPUT_FOLDER SCRIPT GAMES_FOLDER 3DS_GAMES_FOLDER\n");
+		std::fprintf(stderr, "shell-preview OUTPUT_FOLDER SCRIPT GAMES_FOLDER 3DS_GAMES_FOLDER DS_GAMES_FOLDER\n");
 		return 2;
 	}
 	preview::output = argv[1];
@@ -87,6 +88,7 @@ int main(int argc, char* argv[])
 	ps5settings::Launcher settings;
 	settings.gamesFolder = argv[3];
 	settings.n3ds.gamesFolder = argv[4];
+	settings.nds.gamesFolder = argv[5];
 	if (!std::getenv("PREVIEW_FIRST"))
 	{
 		// earlier sessions: the side last used, the games last played, the counts their scans saved
@@ -98,6 +100,7 @@ int main(int argc, char* argv[])
 		settings.n3ds.recent = {0x0004000000053F00, 0x0004000000030600, 0x000400000017C100};
 		settings.gameCount = 11;
 		settings.n3ds.gameCount = 6;
+		settings.nds.gameCount = 4;
 	}
 	if (std::getenv("PREVIEW_ASK"))
 		settings.ui.startOn = "ask";
@@ -105,7 +108,7 @@ int main(int argc, char* argv[])
 	status.diagnostics = {"PS5CEMU-HAR preview: Cemu at 32e6628, Azahar at 4aef900", "Jailbroken by the HEN: /data reachable, executable memory",
 		"Boot log: /data/ps5cemu/logs/boot.log", "Cemu's log: /data/ps5cemu/log.txt"};
 	if (std::getenv("PREVIEW_NO_DATA"))
-		status.notice = status.notice3ds =
+		status.notice = status.notice3ds = status.noticeDs =
 			"PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR.";
 	else if (std::getenv("PREVIEW_LAUNCH_ERROR"))
 		status.notice = "The game could not start: its disc key is missing from /data/ps5cemu/keys.txt.";
@@ -115,6 +118,8 @@ int main(int argc, char* argv[])
 	const ps5shell::Outcome outcome = ps5shell::Run(settings, status, [&](ps5launcher::System system) {
 		if (system == ps5launcher::System::N3ds)
 			ps5azahar::StartScan(settings.n3ds.gamesFolder);
+		else if (system == ps5launcher::System::Nds)
+			ps5melonds::StartScan(settings.nds.gamesFolder);
 		else
 			status.coreReady = true;
 	}, choice);

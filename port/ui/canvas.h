@@ -72,6 +72,18 @@ namespace ui
 		Search,
 		Sort,
 		Back,
+		// Settings' pages
+		Monitor,
+		Screens,
+		Speaker,
+		Pad,
+		Usb,
+		Globe,
+		Sparkle,
+		Pulse,
+		Info,
+		Chip,
+		Artic,
 	};
 
 	class Canvas

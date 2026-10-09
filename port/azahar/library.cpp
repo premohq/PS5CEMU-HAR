@@ -294,7 +294,7 @@ namespace ps5azahar
 				Title title = Inspect(path);
 				if (!title.readable && title.format.empty())
 					continue;
-				// an update's or DLC's CIA is installed with its game (Settings > Install CIA files), not played
+				// an update's or DLC's CIA is installed with its game (Settings > Game files > Install a CIA file), not played
 				const uint32_t kind = (uint32_t)(title.titleId >> 32);
 				if (title.format == "CIA" && (kind == 0x0004000E || kind == 0x0004008C))
 					continue;

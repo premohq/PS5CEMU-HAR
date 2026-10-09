@@ -12,6 +12,7 @@
 #include "../../app/updates.h"
 #include "../../azahar/azahar.h"
 #include "../../azahar/library.h"
+#include "../../melonds/library.h"
 #include "../../ps5/kernel.h"
 #include "../../ps5/log.h"
 #include "../../ps5/notify.h"
@@ -39,11 +40,6 @@ namespace ps5shell
 				s_hostSet = true;
 			}
 			return s_host;
-		}
-
-		const char* SideName(System side)
-		{
-			return side == System::N3ds ? "3ds" : "wiiu";
 		}
 
 		// the keyboard's keys (Search)
@@ -127,8 +123,9 @@ namespace ps5shell
 				0.04f + random() * 0.12f});
 		}
 
-		// the side: the one a game came back from, else the one last used, else (a first start) the one
-		// with games, else the Wii U's. Nothing asks which side (5.3), unless Start on: Ask each time is on.
+		// the side: the one a game came back from, else the one last used, else (a first start) the first
+		// with games (Wii U, 3DS, DS), else the Wii U's. Nothing asks which side (5.3), unless Start on:
+		// Ask each time is on.
 		const bool returning = !m_settings.side.empty();
 		std::string side = returning ? m_settings.side : m_settings.ui.lastSide;
 		if (returning)
@@ -140,12 +137,13 @@ namespace ps5shell
 		{
 			const int wiiuGames = std::max<int>(m_settings.gameCount, (int)ps5catalog::Games(ps5catalog::System::WiiU).size());
 			const int n3dsGames = std::max<int>(m_settings.n3ds.gameCount, (int)ps5catalog::Games(ps5catalog::System::N3ds).size());
-			side = n3dsGames > 0 && wiiuGames <= 0 ? "3ds" : "wiiu";
+			const int ndsGames = std::max<int>(m_settings.nds.gameCount, (int)ps5catalog::Games(ps5catalog::System::Nds).size());
+			side = wiiuGames > 0 ? "wiiu" : n3dsGames > 0 ? "3ds" : ndsGames > 0 ? "ds" : "wiiu";
 		}
 		// why the last game did not start (main_ps5.cpp puts it in the side's notice, as the classic launcher
 		// shows it): said once here, not a state that keeps every game from starting
 		std::string launchError;
-		for (std::string* notice : {&m_status.notice, &m_status.notice3ds})
+		for (std::string* notice : {&m_status.notice, &m_status.notice3ds, &m_status.noticeDs})
 			if (notice->starts_with("The game could not start"))
 			{
 				const size_t reason = notice->find_first_not_of(' ', notice->find(':') + 1);
@@ -155,29 +153,18 @@ namespace ps5shell
 				notice->clear();
 			}
 		m_askSide = !returning && m_settings.ui.startOn == "ask";
-		m_side = side == "3ds" ? System::N3ds : System::WiiU;
-		m_chooserSide = m_side == System::N3ds ? 1 : 0;
+		m_side = ps5launcher::SideNamed(side);
+		m_chooserSide = SideIndex();
 		if (!m_settings.ui.setupDone || SetupNeeded())
 			SetupOpen(true); // then the side (FinishStart)
 		else if (m_askSide)
 			Show(ScreenId::Chooser);
 		else
 		{
+			// the side's Library, on the game played last: after a game, that game (6.8)
 			OpenSide(m_side, true);
 			if (returning)
-			{
-				// back on the game just played, its hub, as the library was left (6.8)
-				const uint64_t played = Is3ds() ? m_settings.n3ds.lastGame : m_settings.lastGame;
-				const int game = played ? FindGame(played) : -1;
-				if (game >= 0)
-				{
-					for (int i = 0; i < (int)m_homeGames.size(); i++)
-						if (m_homeGames[i] == game)
-							m_homeIndex = i;
-					HubOpen(game, ScreenId::Home);
-				}
 				Toast("Saved your place in the library");
-			}
 		}
 		if (!launchError.empty())
 			OpenHelp("The game could not start", launchError);
@@ -298,14 +285,13 @@ namespace ps5shell
 				break;
 			if (OverlayUpdate(press))
 				continue;
-			const bool tabbed = m_screen == ScreenId::Home || m_screen == ScreenId::Library || m_screen == ScreenId::Settings;
+			const bool tabbed = m_screen == ScreenId::Library || m_screen == ScreenId::Settings;
 			if (tabbed && BarUpdate(press))
 				continue;
 			switch (m_screen)
 			{
 			case ScreenId::Chooser: ChooserUpdate(press); break;
 			case ScreenId::Setup: SetupUpdate(press); break;
-			case ScreenId::Home: HomeUpdate(press); break;
 			case ScreenId::Library: LibraryUpdate(press); break;
 			case ScreenId::Hub: HubUpdate(press); break;
 			case ScreenId::Settings: SettingsUpdate(press, actions); break;
@@ -338,7 +324,6 @@ namespace ps5shell
 		{
 		case ScreenId::Chooser: ChooserDraw(canvas); break;
 		case ScreenId::Setup: SetupDraw(canvas); break;
-		case ScreenId::Home: HomeDraw(canvas); break;
 		case ScreenId::Library: LibraryDraw(canvas); break;
 		case ScreenId::Hub: HubDraw(canvas); break;
 		case ScreenId::Settings: SettingsDraw(canvas); break;
@@ -363,7 +348,31 @@ namespace ps5shell
 
 	bool Shell::SystemScanning() const
 	{
-		return Is3ds() ? ps5azahar::Scanning() : m_status.coreReady && ps5emu::Scanning();
+		return Is3ds() ? ps5azahar::Scanning() : IsDs() ? ps5melonds::Scanning() : m_status.coreReady && ps5emu::Scanning();
+	}
+
+	void Shell::WantBackdrop(Game* game)
+	{
+		// the game's own picture: a Wii U game's boot screen once read, else its box art
+		const std::string path = game ? BackdropOf(*game) : std::string();
+		if (path == m_backdropWanted && (!game || game->entry.ambient[0] == m_wantedAmbient[0]))
+			return;
+		if (path != m_backdropWanted)
+			m_wantedAt = m_now;
+		m_backdropWanted = path;
+		m_wantedAmbient[0] = game ? game->entry.ambient[0] : 0;
+		m_wantedAmbient[1] = game ? game->entry.ambient[1] : 0;
+		if (game && path == m_backdrop)
+		{
+			// the picture's colours arrived after it: they glide in now
+			for (int i = 0; i < 2; i++)
+			{
+				m_ambientFrom[i] = m_ambient[i];
+				m_ambientTo[i] = m_wantedAmbient[i];
+			}
+			m_ambientMix.Snap(0);
+			m_ambientMix.Go(1, m_now, kAmbientSeconds, ui::ease::InOut);
+		}
 	}
 
 	void Shell::OpenSide(System side, bool first)
@@ -384,7 +393,7 @@ namespace ps5shell
 			if (!first || m_frames > 0)
 			{
 				// what is happening shows while the side starts (Cemu takes a few seconds)
-				Show(ScreenId::Home);
+				Show(ScreenId::Library);
 				Frame();
 			}
 			m_prepare(side);
@@ -398,46 +407,44 @@ namespace ps5shell
 		m_feedback.SetLight(Accent());
 		if (changed)
 			m_sideMix.Go(1, m_now, m_settings.ui.reduceMotion ? kReducedSeconds : kAmbientSeconds), m_sideMix.from = 0;
-		m_homeZone = 0;
-		m_homeIndex = 0;
-		m_libraryIndex = 0;
-		m_rowX.clear();
-		m_rowH.clear();
+		// the Library, on the game this side had in focus, else the one played last (6.1)
+		m_libraryZone = 1;
+		m_libraryIndex = -1; // no game in focus, so the refresh finds the one asked for
+		m_libraryFocusTitle = m_sideFocus[SideIndex()] ? m_sideFocus[SideIndex()] : LastGame(side);
+		m_search.clear();
+		m_stateButton = 0;
 		LibraryRefresh();
-		m_tab = ScreenId::Home;
-		Show(ScreenId::Home);
+		m_tab = ScreenId::Library;
+		Show(ScreenId::Library);
 	}
 
-	void Shell::SwitchSide()
+	void Shell::SwitchSide(System side)
 	{
+		if (side == m_side)
+			return;
 		m_feedback.Play(ui::Cue::Select);
 		// where the side being left was, for coming back to it
-		SideFocus& leaving = m_sideFocus[Is3ds() ? 1 : 0];
-		leaving.homeTitle = HomeGame() >= 0 ? m_games[HomeGame()].entry.game.titleId : 0;
-		leaving.libraryTitle = LibraryGame() >= 0 ? m_games[LibraryGame()].entry.game.titleId : 0;
-		const System other = Is3ds() ? System::WiiU : System::N3ds;
-		const ScreenId tab = m_screen == ScreenId::Library ? ScreenId::Library : ScreenId::Home;
-		OpenSide(other, false);
-		// the other side as it was left: the same games in focus
-		const SideFocus& back = m_sideFocus[Is3ds() ? 1 : 0];
-		for (int i = 0; i < (int)m_homeGames.size(); i++)
-			if (back.homeTitle && m_games[m_homeGames[i]].entry.game.titleId == back.homeTitle)
-				m_homeIndex = i;
-		m_libraryIndex = -1; // no game in focus, so the refresh finds the remembered one
-		m_libraryFocusTitle = back.libraryTitle;
-		LibraryRefresh();
+		m_sideFocus[SideIndex()] = LibraryGame() >= 0 ? m_games[LibraryGame()].entry.game.titleId : 0;
+		const ScreenId tab = m_screen == ScreenId::Settings ? ScreenId::Settings : ScreenId::Library;
+		OpenSide(side, false);
 		ShowTab(tab);
-		// the focus on the side's games: left on the bar's switch, nothing on the screen had it, and
-		// Cross there switched straight back
+		if (tab == ScreenId::Settings)
+		{
+			// the same page where the side has it
+			const auto pages = SettingsPages();
+			if (std::none_of(pages.begin(), pages.end(), [this](const SettingsPage& page) { return page.id == m_page; }))
+				m_page = pages.front().id;
+		}
+		// the focus on the side's games (or pages)
 		m_onBar = false;
-		m_barFocus = tab == ScreenId::Library ? 2 : 1;
+		m_barFocus = SideIndex();
 	}
 
 	void Shell::MakeGame(Game& game, const ps5catalog::Entry& entry)
 	{
 		game.entry = entry;
 		game.boxArt = ps5boxart::Path(BoxOf(entry.game), entry.game.gameId);
-		game.report = ps5compat::Find(Is3ds(), entry.game.name);
+		game.report = IsDs() ? nullptr : ps5compat::Find(Is3ds(), entry.game.name); // the list has no DS games yet
 		game.known = ps5gameinfo::Find(BoxOf(entry.game), entry.game.gameId, game.info);
 		game.year = game.known && game.info.released.size() >= 4 ? std::atoi(game.info.released.substr(0, 4).c_str()) : 0;
 		std::string name = Lower(entry.game.name);
@@ -451,15 +458,18 @@ namespace ps5shell
 		m_scanning = CoreReady() && SystemScanning();
 		if (CoreReady() && !m_scanning)
 		{
-			ps5catalog::Replace(CatalogSide(), Is3ds() ? ps5azahar::ListGames() : ps5emu::ListGames());
-			ps5catalog::Migrate(CatalogSide(), Is3ds() ? m_settings.n3ds.recent : m_settings.recent);
+			ps5catalog::Replace(CatalogSide(), Is3ds() ? ps5azahar::ListGames() : IsDs() ? ps5melonds::ListGames() : ps5emu::ListGames());
+			ps5catalog::Migrate(CatalogSide(), Is3ds() ? m_settings.n3ds.recent : IsDs() ? m_settings.nds.recent : m_settings.recent);
 			ps5catalog::Save();
 		}
 		// what is on screen keeps its place
-		const uint64_t focused = HomeGame() >= 0 ? m_games[HomeGame()].entry.game.titleId : 0;
+		if (LibraryGame() >= 0)
+			m_libraryFocusTitle = m_games[LibraryGame()].entry.game.titleId;
 		m_games.clear();
 		for (const ps5catalog::Entry& entry : ps5catalog::Games(CatalogSide()))
 		{
+			if (entry.game.nds != IsDs())
+				continue; // a DS game the 3DS side listed before the DS had a side, until its scan replaces it
 			m_games.emplace_back();
 			MakeGame(m_games.back(), entry);
 		}
@@ -470,11 +480,7 @@ namespace ps5shell
 			FetchBoxArt();
 			RememberCount();
 		}
-		m_homeGames = RecentGames();
-		if (focused)
-			for (int i = 0; i < (int)m_homeGames.size(); i++)
-				if (m_games[m_homeGames[i]].entry.game.titleId == focused)
-					m_homeIndex = i;
+		m_libraryIndex = -1;
 		LibraryRefresh();
 	}
 
@@ -498,8 +504,10 @@ namespace ps5shell
 			// reading a Wii U game's icon mounts the game: one a frame
 			game.iconLooked = true;
 			m_iconLookedThisFrame = true;
-			game.icon = Is3ds() ? ps5azahar::CoverPath(game.entry.game.titleId) :
-				m_status.coreReady ? ps5emu::CoverPath(game.entry.game.titleId) : std::string();
+			game.icon = Is3ds()				? ps5azahar::CoverPath(game.entry.game.titleId) :
+				IsDs()						? ps5melonds::CoverPath(game.entry.game.titleId) :
+				m_status.coreReady			? ps5emu::CoverPath(game.entry.game.titleId) :
+											  std::string();
 		}
 		return game.icon;
 	}
@@ -511,7 +519,7 @@ namespace ps5shell
 
 	std::string Shell::BackdropOf(Game& game)
 	{
-		if (!Is3ds() && !game.bootScreenLooked && !m_iconLookedThisFrame && m_status.coreReady)
+		if (IsWiiU() && !game.bootScreenLooked && !m_iconLookedThisFrame && m_status.coreReady)
 		{
 			game.bootScreenLooked = true;
 			m_iconLookedThisFrame = true;
@@ -532,22 +540,6 @@ namespace ps5shell
 		return picture;
 	}
 
-	std::vector<int> Shell::RecentGames() const
-	{
-		std::vector<int> order;
-		for (int i = 0; i < (int)m_games.size(); i++)
-			if (m_games[i].entry.lastPlayed > 0)
-				order.push_back(i);
-		std::sort(order.begin(), order.end(), [this](int a, int b) { return m_games[a].entry.lastPlayed > m_games[b].entry.lastPlayed; });
-		// none played yet: the library's first games
-		for (int i = 0; i < (int)m_games.size() && order.size() < 12; i++)
-			if (std::find(order.begin(), order.end(), i) == order.end() && order.size() < 4)
-				order.push_back(i);
-		if (order.size() > 12)
-			order.resize(12);
-		return order;
-	}
-
 	int Shell::FindGame(uint64_t titleId) const
 	{
 		for (int i = 0; i < (int)m_games.size(); i++)
@@ -561,7 +553,7 @@ namespace ps5shell
 		const auto& g = game.entry.game;
 		if (game.known && (!game.info.publisher.empty() || !game.info.released.empty()))
 			return Join({game.info.publisher, ps5gameinfo::Year(game.info.released)}, "  ·  ");
-		if (Is3ds())
+		if (!IsWiiU())
 			return Join({g.publisher, g.format}, "  ·  ");
 		return Join({fmt::format("v{}", g.version), g.dlcCount ? "DLC" : "", g.format}, "  ·  ");
 	}
@@ -605,19 +597,17 @@ namespace ps5shell
 
 	void Shell::FetchBoxArt()
 	{
-		// the side's covers, and on the 3DS side its DS games' from GameTDB's DS covers
-		std::vector<std::string> ids, dsIds;
+		// the side's covers, from GameTDB's covers of its system
+		std::vector<std::string> ids;
 		for (const Game& game : m_games)
 			if (!game.entry.game.gameId.empty())
-				(game.entry.game.nds ? dsIds : ids).push_back(game.entry.game.gameId);
+				ids.push_back(game.entry.game.gameId);
 		ps5boxart::Fetch(BoxSide(m_side), ids);
-		if (!dsIds.empty())
-			ps5boxart::Fetch(ps5boxart::System::Nds, dsIds);
 	}
 
 	void Shell::RememberCount()
 	{
-		int& count = Is3ds() ? m_settings.n3ds.gameCount : m_settings.gameCount;
+		int& count = IsWiiU() ? m_settings.gameCount : Handheld(m_side).gameCount;
 		if (count == (int)m_games.size())
 			return;
 		count = (int)m_games.size();
@@ -635,8 +625,7 @@ namespace ps5shell
 			return;
 		}
 		Game& game = m_games[index];
-		ps5settings::AddRecent(Is3ds() ? m_settings.n3ds.lastGame : m_settings.lastGame, Is3ds() ? m_settings.n3ds.recent : m_settings.recent,
-			game.entry.game.titleId);
+		ps5settings::AddRecent(LastGame(m_side), IsWiiU() ? m_settings.recent : Handheld(m_side).recent, game.entry.game.titleId);
 		SaveSettings();
 		ps5catalog::Played(CatalogSide(), game.entry.game.titleId, std::time(nullptr));
 		game.entry.lastPlayed = std::time(nullptr);
@@ -644,7 +633,7 @@ namespace ps5shell
 		Box from = m_launch.from;
 		if (from.w <= 0)
 			from = {760, 240, 400, 560};
-		LaunchGame(game.entry.game, game.entry.game.nds ? "Starting melonDS" : Is3ds() ? "Starting Azahar" : "Starting Cemu", from);
+		LaunchGame(game.entry.game, std::string("Starting ") + EmulatorName(m_side), from);
 		m_launch.game = index;
 	}
 
@@ -659,7 +648,7 @@ namespace ps5shell
 		m_launch.game = -1;
 		m_choice = ps5launcher::Choice{m_side, game};
 		m_feedback.Play(ui::Cue::Launch);
-		ps5log::Line("[launcher] {} chosen on the {} side{}", game.name, Is3ds() ? "3DS" : "Wii U", game.nds ? " (a DS game)" : "");
+		ps5log::Line("[launcher] {} chosen on the {} side", game.name, SideTitle(m_side));
 	}
 
 	void Shell::Toast(const std::string& text)
@@ -694,34 +683,33 @@ namespace ps5shell
 
 	void Shell::NextTab(int direction)
 	{
-		static constexpr ScreenId kTabs[] = {ScreenId::Home, ScreenId::Library, ScreenId::Settings};
-		int at = 0;
-		for (int i = 0; i < 3; i++)
-			if (kTabs[i] == m_tab)
-				at = i;
-		at = (at + direction + 3) % 3;
-		ShowTab(kTabs[at]);
-		m_barFocus = at + 1;
+		// two tabs, Library and Settings: either way goes to the other
+		(void)direction;
+		ShowTab(m_tab == ScreenId::Library ? ScreenId::Settings : ScreenId::Library);
+		m_barFocus = m_tab == ScreenId::Library ? 3 : 4;
 		m_feedback.Play(ui::Cue::Focus);
 	}
 
 	void Shell::FocusBar()
 	{
 		m_onBar = true;
-		m_barFocus = m_tab == ScreenId::Home ? 1 : m_tab == ScreenId::Library ? 2 : 3;
+		m_barFocus = m_tab == ScreenId::Library ? 3 : 4;
 		m_feedback.Play(ui::Cue::Focus);
 	}
 
+	// The bar: the three sides (m_barFocus 0 to 2), then the Library and Settings tabs (3 and 4)
 	bool Shell::BarUpdate(const ui::Press& press)
 	{
+		if (InGameSettings())
+			return false; // a game's settings have no tabs, nor sides
 		if (press.button == Button::L1 || press.button == Button::R1)
 		{
 			NextTab(press.button == Button::R1 ? 1 : -1);
 			return true;
 		}
-		if (press.button == Button::Touchpad && (m_screen == ScreenId::Home || m_screen == ScreenId::Library))
+		if (press.button == Button::Touchpad)
 		{
-			SwitchSide();
+			SwitchSide(NextSide(m_side));
 			return true;
 		}
 		if (!m_onBar)
@@ -729,30 +717,26 @@ namespace ps5shell
 		switch (press.button)
 		{
 		case Button::Left:
-			if (m_barFocus == 0)
-				SwitchSide();
-			else if (m_barFocus == 1)
-			{
-				m_barFocus = 0;
-				m_feedback.Play(ui::Cue::Focus);
-			}
-			else
-				NextTab(-1);
-			break;
 		case Button::Right:
-			if (m_barFocus == 0)
+		{
+			const int next = m_barFocus + (press.button == Button::Right ? 1 : -1);
+			if (next < 0 || next > 4)
 			{
-				m_barFocus = 1;
-				m_feedback.Play(ui::Cue::Focus);
-			}
-			else if (m_barFocus < 3)
-				NextTab(1);
-			else
 				m_feedback.Play(ui::Cue::Edge, press.repeat);
+				break;
+			}
+			m_barFocus = next;
+			// onto a tab opens it, as the PS5's bar does
+			if (next == 3 && m_tab != ScreenId::Library)
+				ShowTab(ScreenId::Library);
+			else if (next == 4 && m_tab != ScreenId::Settings)
+				ShowTab(ScreenId::Settings);
+			m_feedback.Play(ui::Cue::Focus);
 			break;
+		}
 		case Button::Cross:
-			if (m_barFocus == 0)
-				SwitchSide();
+			if (m_barFocus < 3 && m_barFocus != SideIndex())
+				SwitchSide((System)m_barFocus);
 			else
 			{
 				m_onBar = false;
@@ -764,10 +748,10 @@ namespace ps5shell
 			m_feedback.Play(ui::Cue::Focus);
 			break;
 		case Button::Circle:
-			if (m_tab != ScreenId::Home)
+			if (m_tab != ScreenId::Library)
 			{
-				ShowTab(ScreenId::Home);
-				m_barFocus = 1;
+				ShowTab(ScreenId::Library);
+				m_barFocus = 3;
 				m_feedback.Play(ui::Cue::Back);
 			}
 			break;
@@ -782,42 +766,47 @@ namespace ps5shell
 		const float y = kBarTop, h = kBarHeight;
 		const float appear = Enter(0);
 		canvas.PushAlpha(appear);
-		// each side's square with its console's glyph in it: the GamePad on blue, the 3DS on gold (the
-		// app's own tiles, tools/render-icons.py), plain colour until the picture has loaded
-		static const std::string kTiles[2] = {ps5paths::Assets() + "/ui/icons/ps5cemu-72.tga", ps5paths::Assets() + "/ui/icons/azahar-72.tga"};
+		// each side's square with its console's glyph in it: the GamePad on blue, the 3DS on gold, the DS
+		// on green (the app's own tiles, tools/render-icons.py), plain colour until the picture has loaded
+		static const std::string kTiles[3] = {ps5paths::Assets() + "/ui/icons/ps5cemu-72.tga", ps5paths::Assets() + "/ui/icons/azahar-72.tga",
+			ps5paths::Assets() + "/ui/icons/melonds-72.tga"};
 		auto tile = [&](int side, const Box& box, float radius, uint32_t tint) {
 			const ui::Picture& picture = m_images->Get(kTiles[side]);
 			if (picture.texture)
 				canvas.Image(picture.texture, box, radius, tint);
 			else
-				canvas.Rect(box, radius, ui::SetAlpha(side ? kN3ds : kWiiu, ((tint >> 24) & 0xff) / 255.0f));
+				canvas.Rect(box, radius, ui::SetAlpha(AccentOf((System)side), ((tint >> 24) & 0xff) / 255.0f));
 		};
-		// the mark: the two sides' squares
-		tile(0, {92, y + 4, 32, 32}, 8, 0xffffffff);
-		tile(1, {108, y + 20, 32, 32}, 8, 0xebffffff);
-		// the side switch
+		// the mark: the three sides' squares
+		tile(0, {90, y + 2, 28, 28}, 7, 0xffffffff);
+		tile(1, {110, y + 9, 28, 28}, 7, 0xebffffff);
+		tile(2, {99, y + 26, 28, 28}, 7, 0xebffffff);
+		// the side switch: Wii U | 3DS | DS, the DS to the right of the 3DS
 		float x = 160;
 		const ui::TextStyle sideStyle = Style({22, ui::Weight::SemiBold, 1.0f});
-		const char* names[2] = {"Wii U", "3DS"};
 		constexpr float kTile = 34;
-		float widths[2];
-		for (int i = 0; i < 2; i++)
-			widths[i] = 12 + kTile + 10 + m_fonts.Width(sideStyle, names[i]) + 20;
-		const Box pill{x, y, 8 + widths[0] + 4 + widths[1], h};
+		float widths[3];
+		float pillWidth = 8;
+		for (int i = 0; i < 3; i++)
+		{
+			widths[i] = 12 + kTile + 10 + m_fonts.Width(sideStyle, SideTitle((System)i)) + 20;
+			pillWidth += widths[i] + (i ? 4 : 0);
+		}
+		const Box pill{x, y, pillWidth, h};
 		canvas.Rect(pill, h / 2, 0x0fffffff);
 		canvas.Ring(pill, h / 2, 1.5f, kGlassEdge);
 		float sx = x + 4;
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			const bool on = (i == 1) == Is3ds();
-			const uint32_t colour = i == 1 ? kN3ds : kWiiu;
+			const bool on = i == SideIndex();
+			const uint32_t colour = AccentOf((System)i);
 			const Box segment{sx, y + 5, widths[i], h - 10};
 			if (on)
 				canvas.Rect(segment, segment.h / 2, ui::SetAlpha(colour, 0.24f));
 			tile(i, {sx + 12, segment.CentreY() - kTile / 2, kTile, kTile}, 9, on ? 0xffffffff : 0x73ffffff);
-			const ui::TextBlock text = m_fonts.Layout(sideStyle, names[i]);
+			const ui::TextBlock text = m_fonts.Layout(sideStyle, SideTitle((System)i));
 			canvas.Text(text, sx + 12 + kTile + 10, segment.CentreY() - text.height * 0.5f, on ? kText : Tertiary());
-			if (m_onBar && m_barFocus == 0 && on)
+			if (m_onBar && m_barFocus == i)
 				Focus(segment, segment.h / 2);
 			sx += widths[i] + 4;
 		}
@@ -826,10 +815,10 @@ namespace ps5shell
 		{
 			canvas.Draw(Icon::L1, {x, y + 12, 36, 32}, Tertiary());
 			x += 36 + 14;
-			const char* labels[3] = {"Home", "Library", "Settings"};
-			for (int i = 0; i < 3; i++)
+			const char* labels[2] = {"Library", "Settings"};
+			for (int i = 0; i < 2; i++)
 			{
-				const bool selected = (i == 0 && m_tab == ScreenId::Home) || (i == 1 && m_tab == ScreenId::Library) || (i == 2 && m_tab == ScreenId::Settings);
+				const bool selected = (i == 0 && m_tab == ScreenId::Library) || (i == 1 && m_tab == ScreenId::Settings);
 				const ui::TextStyle style = Style({26, selected ? ui::Weight::SemiBold : ui::Weight::Medium, 1.0f});
 				const float w = m_fonts.Width(style, labels[i]) + 52;
 				const Box tab{x, y, w, h};
@@ -837,7 +826,7 @@ namespace ps5shell
 					canvas.Rect(tab, h / 2, 0xf0ffffff);
 				const ui::TextBlock text = m_fonts.Layout(style, labels[i]);
 				canvas.Text(text, x + 26, tab.CentreY() - text.height * 0.5f, selected ? kInk1 : Secondary());
-				if (m_onBar && m_barFocus == i + 1)
+				if (m_onBar && m_barFocus == i + 3)
 					Focus(tab, h / 2);
 				x += w + 6;
 			}
@@ -873,7 +862,7 @@ namespace ps5shell
 
 	std::vector<Hint> Shell::Hints() const
 	{
-		const std::string other = Is3ds() ? "Wii U" : "Nintendo 3DS";
+		const std::string other = SystemName(NextSide(m_side)); // the touchpad's next side
 		if (m_update.open)
 			return {};
 		if (m_keyboard.open)
@@ -884,8 +873,8 @@ namespace ps5shell
 			return {{Icon::Circle, "Close"}};
 		if (m_menu.open)
 			return {{Icon::Cross, "Choose"}, {Icon::Circle, "Close"}};
-		if (m_onBar && (m_screen == ScreenId::Home || m_screen == ScreenId::Library || m_screen == ScreenId::Settings))
-			return {{Icon::LeftRight, "Tabs"}, {Icon::Cross, m_barFocus == 0 ? "Switch" : "Open"}, {Icon::Touchpad, other}};
+		if (m_onBar && (m_screen == ScreenId::Library || m_screen == ScreenId::Settings) && !InGameSettings())
+			return {{Icon::LeftRight, "Move"}, {Icon::Cross, m_barFocus < 3 && m_barFocus != SideIndex() ? "Switch" : "Open"}, {Icon::Touchpad, other}};
 		switch (m_screen)
 		{
 		case ScreenId::Chooser: return {{Icon::LeftRight, "Choose"}, {Icon::Cross, "Start"}};
@@ -895,23 +884,32 @@ namespace ps5shell
 			if (m_setupRow < (int)m_checks.size() && !m_checks[m_setupRow].action.empty())
 				hints.push_back({Icon::Cross, m_checks[m_setupRow].action});
 			hints.push_back({Icon::Triangle, "Check again"});
-			hints.push_back({Icon::Circle, !m_setupFirst ? "Back" : m_askSide ? "Continue" : "Continue to Home"});
+			hints.push_back({Icon::Circle, !m_setupFirst ? "Back" : m_askSide ? "Continue" : "Continue to the Library"});
 			return hints;
 		}
-		case ScreenId::Home:
-			if (m_homeGames.empty())
-				return {{Icon::Cross, "Choose"}, {Icon::Touchpad, other}};
-			return {{Icon::Cross, m_homeZone == 0 ? (m_homeIndex < (int)m_homeGames.size() ? "Play" : "Open") : "Choose"}, {Icon::Options, "Options"},
-				{Icon::UpDown, m_homeZone == 0 ? "Game hub" : "Move"}, {Icon::Touchpad, other}};
 		case ScreenId::Library:
+		{
+			std::string kicker, title, text;
+			std::vector<std::string> buttons;
+			if (LibraryState(kicker, title, text, buttons))
+				return buttons.empty() ? std::vector<Hint>{{Icon::Touchpad, other}} : std::vector<Hint>{{Icon::Cross, "Choose"}, {Icon::Touchpad, other}};
 			if (m_libraryZone == 0)
 				return {{Icon::LeftRight, "Filters"}, {Icon::Square, "Sort"}, {Icon::Triangle, "Search"}, {Icon::Touchpad, other}};
+			if (m_libraryIndex < ArticTiles())
+				return {{Icon::Cross, "Open"}, {Icon::Touchpad, other}};
 			return {{Icon::Cross, "Play"}, {Icon::Options, "Options"}, {Icon::R2, "Jump by letter"}, {Icon::Touchpad, other}};
+		}
 		case ScreenId::Hub: return {{Icon::Cross, m_hubAbout ? "Back to the buttons" : "Choose"}, {Icon::Options, "Options"}, {Icon::UpDown, "Scroll"},
 			{Icon::Circle, "Back"}};
 		case ScreenId::Settings:
+			if (InGameSettings())
+			{
+				if (!m_onRows)
+					return {{Icon::UpDown, "Pages"}, {Icon::Cross, "Open"}, {Icon::Circle, "Done"}};
+				return {{Icon::LeftRight, "Change"}, {Icon::Square, "Default"}, {Icon::Triangle, "More about it"}, {Icon::Circle, "Back"}};
+			}
 			if (!m_onRows)
-				return {{Icon::UpDown, "Pages"}, {Icon::Cross, "Open"}, {Icon::Circle, "Home"}};
+				return {{Icon::UpDown, "Pages"}, {Icon::Cross, "Open"}, {Icon::Circle, "Library"}, {Icon::Touchpad, other}};
 			return {{Icon::LeftRight, "Change"}, {Icon::Triangle, "More about it"}, {Icon::Circle, "Back"}};
 		case ScreenId::Packs:
 			return m_presetsFocus ? std::vector<Hint>{{Icon::Cross, "Choose"}, {Icon::LeftRight, "Change"}, {Icon::Circle, "Back to the packs"}} :
@@ -1007,11 +1005,14 @@ namespace ps5shell
 			picture(m_backdropOld, 1 - pictureMix);
 			picture(m_backdrop, pictureMix);
 		}
-		// the motif: bubbles rising on the Wii U side, waves rolling on the 3DS side
-		if (!Is3ds())
+		// the motif: bubbles rising on the Wii U side, waves rolling on the 3DS side, pixels rising on the
+		// DS side
+		if (IsWiiU())
 			DrawBubbles(canvas, 1);
-		else
+		else if (Is3ds())
 			DrawWaves(canvas, 1);
+		else
+			DrawPixels(canvas, 1);
 		// scrims, grain and a vignette
 		canvas.LinearGradient(screen, 0, 0xb305070d, 0x0005070d, 0, 0, 1300, 0);
 		canvas.LinearGradient(screen, 0, 0x0005070d, 0xcc05070d, 0, 640, 0, 1080);
@@ -1035,6 +1036,26 @@ namespace ps5shell
 			}
 			const Box disc{bubble.x - bubble.radius, bubble.y - bubble.radius, bubble.radius * 2, bubble.radius * 2};
 			canvas.Rect(disc, bubble.radius, ui::SetAlpha(0xfff4e9de, bubble.alpha * 0.5f * alpha));
+		}
+	}
+
+	void Shell::DrawPixels(Canvas& canvas, float alpha)
+	{
+		// the bubbles' places and speeds, as squares with rounded corners in melonDS's green, rising
+		// straight, a third of them (fewer and larger than bubbles: a DS's pixels)
+		const bool still = m_settings.ui.reduceMotion;
+		for (size_t i = 0; i < m_bubbles.size(); i += 3)
+		{
+			Bubble& pixel = m_bubbles[i];
+			if (!still)
+			{
+				pixel.y -= pixel.speed * 0.7f * m_dt;
+				if (pixel.y < -pixel.radius * 2)
+					pixel.y = 1080 + pixel.radius * 2;
+			}
+			const float size = 8 + pixel.radius * 0.9f;
+			const Box square{pixel.x - size / 2, pixel.y - size / 2, size, size};
+			canvas.Rect(square, size * 0.22f, ui::SetAlpha(kNds, std::min(1.0f, pixel.alpha * 1.6f) * 0.5f * alpha));
 		}
 	}
 
@@ -1088,7 +1109,10 @@ namespace ps5shell
 		m_menu.items = {{"play", "Play"}};
 		if (m_screen != ScreenId::Hub)
 			m_menu.items.push_back({"hub", "Game hub"});
-		if (!Is3ds() && m_status.coreReady)
+		// a game with settings of its own says so
+		const bool own = m_settings.games.count(ps5settings::GameKey(ps5launcher::SideName(m_side), g.entry.game.titleId)) > 0;
+		m_menu.items.push_back({"settings", own ? "Game settings: its own" : "Game settings"});
+		if (IsWiiU() && m_status.coreReady)
 			m_menu.items.push_back({"packs", "Graphic packs"});
 		m_menu.items.push_back({"favourite", g.entry.favourite ? "Not a favourite" : "Favourite"});
 		m_menu.items.push_back({"where", "Show where it is"});
@@ -1280,6 +1304,11 @@ namespace ps5shell
 					m_feedback.Play(ui::Cue::Select);
 					PacksOpen(game, m_screen);
 				}
+				else if (id == "settings")
+				{
+					m_feedback.Play(ui::Cue::Select);
+					GameSettingsOpen(game);
+				}
 				else if (id == "favourite")
 				{
 					g.entry.favourite = !g.entry.favourite;
@@ -1392,10 +1421,10 @@ namespace ps5shell
 			canvas.PushOffset((1 - a) * 40, 0);
 			DrawSheet(canvas, sheet, a);
 			Game& game = m_games[m_menu.game];
-			Badge(canvas, sheet.x + 36, sheet.y + 32, m_side, game.entry.game.nds);
+			Badge(canvas, sheet.x + 36, sheet.y + 32, m_side);
 			canvas.Text(Style(kHeadingStyle), sheet.x + 36, sheet.y + 78, game.entry.game.name, kText, sheet.w - 72, 1);
-			static const std::map<std::string, Icon> kIcons = {{"play", Icon::Play}, {"hub", Icon::ChevronRight}, {"packs", Icon::Gear},
-				{"favourite", Icon::Star}, {"where", Icon::Folder}};
+			static const std::map<std::string, Icon> kIcons = {{"play", Icon::Play}, {"hub", Icon::ChevronRight}, {"settings", Icon::Sparkle},
+				{"packs", Icon::Gear}, {"favourite", Icon::Star}, {"where", Icon::Folder}};
 			for (int i = 0; i < count; i++)
 			{
 				const Box row{sheet.x + 20, sheet.y + 136 + i * rowH, sheet.w - 40, rowH - 6};

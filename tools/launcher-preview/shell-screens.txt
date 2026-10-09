@@ -1,23 +1,16 @@
 # The new launcher's screens (tools/preview-shell.sh): one PNG each in build/shell-preview. It starts
-# as after earlier sessions, on the Wii U side's Home (shell-first.txt has the first start).
+# as after earlier sessions, on the Wii U side's Library, the game played last in focus
+# (shell-first.txt has the first start).
 wait 90
-shot home                     # Home: the row, the focused game's preview, the glance cards
-press down                    # Play, Game hub, the Game menu
-wait 20
-shot home-buttons
-press down                    # the glance cards
-wait 20
-shot home-cards
-press up up
-press right                   # the next game in the row
-wait 45
-shot home-next
-press left
+shot library                  # the Library: where every side opens
+press right                   # the next game
+wait 25
+shot library-next
+press left                    # back on the game played last
 press options                 # the Game menu
 wait 30
 shot game-menu
-press circle
-press down right cross        # the Game hub
+press down cross              # the Game hub
 wait 45
 shot hub
 press right cross             # its graphic packs
@@ -30,10 +23,19 @@ press cross                   # a preset's dropdown
 wait 30
 shot packs-dropdown
 press circle circle circle    # the dropdown, the presets, the packs: back on the hub
-press circle                  # Home
-press r1                      # the Library
+press right cross             # Game settings, the hub's next button
 wait 45
-shot library
+shot game-settings            # the pages a game can have its own of
+press right                   # its rows: each Default until changed
+wait 25
+shot game-settings-rows
+press right                   # upscaling, this game's own now
+wait 25
+shot game-settings-own
+press square                  # back to Default
+press circle circle           # the rows, then the pages: back on the hub
+wait 20
+press circle                  # the Library
 press down                    # the second row
 wait 25
 shot library-row2
@@ -45,72 +47,65 @@ press triangle                # search: the keyboard
 wait 30
 shot library-search
 press circle
-press r1                      # Settings
+press r1                      # Settings: the Wii U side's pages, and only those
 wait 45
 shot settings
-press right                   # Display's rows
+press right                   # Graphics' rows
 wait 25
-shot settings-display
+shot settings-graphics
 press triangle                # a row's help
 wait 30
 shot settings-help
 press circle circle
-press r2                      # the Wii U's section: Graphics
+press down down               # Controls
 press right
 wait 25
-shot settings-wiiu-graphics
+shot settings-controls
 press circle
-press down                    # Wii U > Controllers
-press right
-wait 25
-shot settings-wiiu-controllers
-press circle
-press r2                      # the 3DS's section
-press down                    # Screens and borders
-press right
-wait 25
-shot settings-3ds-screens
-press circle
-press r2                      # Help: the Setup check
-press cross
+press down down down down down # Diagnostics
+press right cross             # the Setup check
 wait 45
 shot setup
 press down down
 wait 20
 shot setup-focus
-press circle                  # back to Settings
-press l1 l1                   # Home
-press touchpad                # the 3DS side
+press circle                  # back to Diagnostics
+wait 20
+press circle                  # its page in the list
+press touchpad                # the 3DS side's Settings: its own pages
 wait 60
-shot home-3ds
-press r1                      # its Library, Artic Base first
+shot settings-3ds
+press l2 down                 # Screens
+press right
+wait 25
+shot settings-3ds-screens
+press circle
+press l1                      # the 3DS side's Library
 wait 45
 shot library-3ds
-press cross                   # Artic Base
+press left left left left left left # Artic Base, the shelf's first tile
+press cross
 wait 45
 shot artic
 press circle
-press up right right right    # the filters: DS games
-wait 30
+press touchpad                # the DS side: its own Library, in melonDS's green
+wait 60
 shot library-ds
-press down right              # its first DS game (Artic Base stays first)
-press options                 # the Game menu, a DS game's
+press options                 # a DS game's Game menu
 wait 30
 shot game-menu-ds
 press down cross              # its Game hub
 wait 45
 shot hub-ds
-press circle                  # back to the Library
-press up left left left       # All again
-press r1                      # Settings
-wait 45
-press r2                      # the 3DS's section
-press down down down          # DS games
-press right
-wait 25
-shot settings-ds
 press circle
-press l1 l1                   # Home
+press r1                      # the DS side's Settings
+wait 45
+shot settings-ds
+press right                   # its Graphics
+wait 25
+shot settings-ds-graphics
+press circle
+press l1                      # back to the Library
 wait 20
 press cross                   # play the focused game
 wait 25

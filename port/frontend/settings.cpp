@@ -229,15 +229,18 @@ namespace ps5settings
 			// Z by default, is not taken: the Library opens on the games played last now that it is
 			// where a side opens)
 			ReadInt(ui, "libraryFilterWiiU", out.libraryFilter[0], 0, 3);
-			ReadInt(ui, "libraryFilter3ds", out.libraryFilter[1], 0, 2);
-			auto readSides = [&](const char* key, int (&out)[3], int most) {
+			ReadInt(ui, "libraryFilter3ds", out.libraryFilter[1], 0, 3);
+			if (out.libraryFilter[1] == 3)
+				out.libraryFilter[1] = 0; // the 3.5.1 beta's DS games, which have a side of their own now
+			// filters: the Wii U's four (Graphic packs on), the handhelds' three; sorts: four on every side
+			auto readSides = [&](const char* key, int (&values)[3], int wiiuMost, int handheldMost) {
 				if (ui.HasMember(key) && ui[key].IsArray())
 					for (rapidjson::SizeType i = 0; i < ui[key].Size() && i < 3; i++)
 						if (ui[key][i].IsInt())
-							out[i] = std::clamp(ui[key][i].GetInt(), 0, i == 0 ? most : std::min(most, 2));
+							values[i] = std::clamp(ui[key][i].GetInt(), 0, i == 0 ? wiiuMost : handheldMost);
 			};
-			readSides("libraryFilter", out.libraryFilter, 3);
-			readSides("librarySort", out.librarySort, 3);
+			readSides("libraryFilter", out.libraryFilter, 3, 2);
+			readSides("librarySort", out.librarySort, 3, 3);
 		}
 		return settings;
 	}

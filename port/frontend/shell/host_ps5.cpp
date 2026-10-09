@@ -10,6 +10,7 @@
 #include "../../app/paths.h"
 #include "../../ps5/display.h"
 #include "../../ps5/kernel.h"
+#include "../../ps5/log.h"
 #include "../../ps5/vulkan_display.h"
 
 #include <cstdlib>
@@ -37,6 +38,16 @@ namespace ps5shell
 			return target;
 		};
 		host.assets = ps5paths::Assets() + "/ui";
+		// the font is the launcher's first file: not where the app's folder was found (the folder moved
+		// under the process, as the sandbox helper moves it, #34), it is looked for where the app is now
+		// (here only: other threads may be reading the folder found before)
+		std::error_code missing;
+		if (!std::filesystem::exists(host.assets + "/fonts/lexend.sdf", missing))
+		{
+			const std::string found = ps5paths::FindAppDir() + "/assets/ui";
+			ps5log::Line("[ui] {} has no launcher font: {} instead", host.assets, found);
+			host.assets = found;
+		}
 		// the console's system fonts (CJK, Thai, Arabic...), where its firmwares keep them; the ones
 		// missing are skipped, and the boot log says how many were found on first use
 		host.fontFolders = {"/system/common/font", "/system_ex/common/font", "/preinst/common/font", "/system/common/font2"};

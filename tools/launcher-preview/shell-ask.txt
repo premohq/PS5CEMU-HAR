@@ -2,9 +2,9 @@
 # (PREVIEW_ASK=1 tools/preview-shell.sh tools/launcher-preview/shell-ask.txt).
 wait 90
 shot ask-chooser
-press right
+press right right
 wait 30
-shot ask-chooser-3ds
+shot ask-chooser-ds
 press cross
 wait 60
-shot ask-home-3ds
+shot ask-library-ds

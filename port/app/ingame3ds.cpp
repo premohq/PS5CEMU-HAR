@@ -403,7 +403,7 @@ namespace ps5ingame3ds
 				{"swap", "Main screen", settings.swapScreens ? "Bottom" : "Top", true,
 					"Which screen takes the top screen's place. In the game, touchpad click + L1 swaps them."},
 				{"border", "Border", kBorderNames[std::clamp(settings.border, 0, kBorderCount - 1)], true,
-					"Artwork around the screens, never over them. Also in the launcher's Settings > Borders."},
+					"Artwork around the screens, never over them. Also in the launcher's Settings > Screens."},
 			}});
 			if (ds)
 				rows.push_back({"graphics", "Graphics", filter, false, "The screen filter and the performance overlay.", {

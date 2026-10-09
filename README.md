@@ -1,28 +1,31 @@
 <p align="center">
-  <img src="docs/banner.svg" alt="PS5CEMU-HAR: Cemu and Azahar, the Wii U and Nintendo 3DS emulators, on PlayStation 5 homebrew" width="100%">
+  <img src="docs/banner.svg" alt="PS5CEMU-HAR: Cemu, Azahar and melonDS, the Wii U, Nintendo 3DS and Nintendo DS emulators, on PlayStation 5 homebrew" width="100%">
 </p>
 
 <p align="center">
-  <strong>Wii U and Nintendo 3DS emulation in one PlayStation 5 homebrew app</strong><br>
+  <strong>Wii U, Nintendo 3DS and Nintendo DS emulation in one PlayStation 5 homebrew app</strong><br>
   <a href="https://github.com/premohq/PS5CEMU-HAR/raw/releases/PS5CEMU-HAR-v3.5.0.zip"><strong>Download PS5CEMU-HAR 3.5.0</strong></a> (ZIP, 47.0 MB) ·
   <a href="https://github.com/premohq/PS5CEMU-HAR/releases/tag/v3.5.0">Release notes</a> ·
   <a href="#whats-new-in-350">What's new</a><br>
   <a href="#install">Install</a> · <a href="#wii-u-cemu">Wii U</a> · <a href="#nintendo-3ds-azahar">3DS</a> ·
+  <a href="#nintendo-ds-melonds">DS</a> ·
   <a href="#controls">Controls</a> · <a href="docs/COMPATIBILITY.md">Compatibility</a> ·
   <a href="docs/BUILDING.md">Building</a> · <a href="#credits">Credits</a>
 </p>
 
-**PS5CEMU-HAR** is a homebrew app for jailbroken PS5 consoles. It bundles two emulators, both
-rendering with Vulkan through Mihawk's PS5 port of the RADV driver and played with the DualSense:
+**PS5CEMU-HAR** is a homebrew app for jailbroken PS5 consoles. It bundles three emulators, played
+with the DualSense, the first two rendering with Vulkan through Mihawk's PS5 port of the RADV driver:
 
 - [Cemu](https://github.com/cemu-project/Cemu) for Wii U games
 - [Azahar](https://github.com/azahar-emu/azahar) for Nintendo 3DS games
+- [melonDS](https://github.com/melonDS-emu/melonDS) for Nintendo DS games (in the 3.5.1 beta)
 
-One launcher holds both: it opens on the Home of the side you used last, Wii U (Cemu) or Nintendo 3DS
-(Azahar), and a touchpad click switches sides. Each side has its own game library and in-game menu.
+One launcher holds them all: it opens on the Library of the side you used last, Wii U (Cemu), 3DS
+(Azahar) or DS (melonDS), and a touchpad click goes to the next side. Each side has its own game
+library, settings and in-game menu, and each game can have settings of its own.
 
-This is an unofficial project, not affiliated with or endorsed by the Cemu or Azahar teams, Nintendo
-or Sony. All credit for the emulators goes to their developers.
+This is an unofficial project, not affiliated with or endorsed by the Cemu, Azahar or melonDS teams,
+Nintendo or Sony. All credit for the emulators goes to their developers.
 
 > [!NOTE]
 > **Status:** most Wii U games tried so far are playable, with working video, controls, sound and
@@ -58,7 +61,7 @@ or Sony. All credit for the emulators goes to their developers.
    to do about anything that isn't.
 
 **Updating:** when a newer release is out, the app asks whether to install it, and does it itself
-(**Settings > Online and updates** checks again). By hand: copy the new `PPSA99360` folder over the
+(**Settings > Online** checks again). By hand: copy the new `PPSA99360` folder over the
 old one. Either way, everything in `/data/ps5cemu` is kept. The PS5 keeps the app's name, icon and
 background from when it was first registered; register it again in your loader to see new ones.
 
@@ -66,29 +69,32 @@ background from when it was first registered; register it again in your loader t
 
 | Button | Action |
 |---|---|
-| L1 / R1 | Home, Library and Settings |
-| Touchpad click | Switch between Wii U and Nintendo 3DS (on Home and Library) |
+| L1 / R1 | Library and Settings |
+| Touchpad click | The next side: Wii U, 3DS, DS (in the Library and Settings) |
 | Cross | Play the game, or open what's focused |
-| Options | A game's options |
-| Square / Triangle | Sort and search (Library); a setting's help (Settings) |
+| Options | A game's options: its hub, its game settings, favourite |
+| Square / Triangle | Sort and search (Library); a setting's help (Settings), and Square back to Default (game settings) |
 | R2 | Jump by letter (Library) |
 | Circle | Back |
 
-The app opens on the side a game came back from, or else the side you used last. **Settings >
-Display > Start on: Ask each time** brings back a chooser at start. You can switch sides without the
-app restarting. Each emulator's core only starts with one of its games, so Cemu and Azahar never run
-at the same time, and the launcher's background work stops before a game starts.
+The app opens on the Library of the side a game came back from, or else the side you used last,
+with the game you played last in focus. **Settings > Launcher > Start on: Ask each time** brings back
+a chooser at start. You can switch sides without the app restarting. Each emulator's core only starts
+with one of its games, so the emulators never run at the same time, and the launcher's background
+work stops before a game starts.
 
-- **Home:** your last game with its box art, and your recent games
 - **Library:** every game's box art from [GameTDB](https://www.gametdb.com/) in a grid (its icon
-  until the cover arrives), with filters, sorting and search
+  until the cover arrives), sorted by when you last played it, with filters, sorting and search
 - **Game pages:** a game's description, developer, publisher, release date, genre, players and
   rating from GameTDB, and how it runs from the [compatibility list](docs/COMPATIBILITY.md); a Wii U
   game's graphic packs
-- **Settings:** one list for both sides, the current side's pages first, a line under each setting
-  saying what it does, and Triangle for more. **Setup check**, **Diagnostics** and **About** are at
-  the end.
-- **Music and menu sounds:** an original setup theme; **Settings > Sound** sets its volume or turns
+- **Settings:** the side you're on and nothing else, one short list of pages with icons (Graphics,
+  Screens, Audio, Controls, System, Game files, Online, Launcher, Diagnostics, About), a line under
+  each setting saying what it does, and Triangle for more.
+- **Game settings:** Options on a game, then **Game settings**: the same pages for that game alone.
+  Each value shows **Default** (its side's) until you change it, Square puts it back, and the in-game
+  menu saves its changes to the game's settings when it has some.
+- **Music and menu sounds:** an original setup theme; **Settings > Audio** sets its volume or turns
   it off
 
 ## Wii U (Cemu)
@@ -104,7 +110,7 @@ at the same time, and the launcher's background work stops before a game starts.
   without a Nunchuk, with motion controls, rumble, stick deadzones and button mapping.
 - The TV or the GamePad screen as the main picture, with the other one in a corner if you want; the
   touchpad works as the GamePad's touch screen.
-- Updates and DLC: installed from **Settings > Install updates and DLC**, or picked up automatically
+- Updates and DLC: installed from **Settings > Game files > Install updates and DLC**, or picked up automatically
   from your game folder or a WUA.
 - Amiibo, from the in-game menu (see [Amiibo, save states, cheats and mods](#amiibo-save-states-cheats-and-mods)).
 - Text entry with Cemu's on-screen keyboard.
@@ -117,22 +123,39 @@ at the same time, and the launcher's background work stops before a game starts.
 - Screen layouts: a large top screen with the bottom one beside it, the top screen only, side by
   side, or stacked; either screen can take the main spot.
 - **Borders:** Midnight, Waves, Aurora, Shell or PS5CEMU-HAR artwork around the screens in every layout, from
-  **Settings > Screens and borders** or the in-game menu.
+  **Settings > Screens** or the in-game menu.
 - DualSense: A on Circle and B on Cross like a real 3DS (or swapped), circle pad and C-stick on the
   sticks, ZL/ZR on L2/R2, motion from the gyro and accelerometer, and every button remappable in
   **Settings > Controls**. The touchpad is the bottom screen.
 - Save states, cheats and amiibo in the in-game menu, plus custom textures and mods.
-- System region and language in **Settings > System and Home Menu**.
-- Install CIA files (games, updates and DLC) from **Settings > Install CIA files**.
+- System region, language and CPU clock in **Settings > System**, with the 3DS Home Menu.
+- Install CIA files (games, updates and DLC) from **Settings > Game files > Install a CIA file**.
 - **Artic Base:** play a game straight from your own 3DS over the network. Start Artic Base on the
   3DS, open **Settings > Artic Base** and enter the address the 3DS shows. The same page runs the Artic Setup Tool, which copies your 3DS's system files.
 - An on-screen keyboard for games that ask for text.
+
+## Nintendo DS (melonDS)
+
+New in the 3.5.1 beta: a side of its own, in melonDS's green, to the right of the 3DS.
+
+- melonDS 1.1's core, with its ARM recompiler in the executable memory the PS5 gives (its
+  interpreter otherwise) and its software renderer on a thread of its own.
+- The two screens at 4K, with a **Sharp**, **Smooth** or **Square pixels** filter, in the same layouts
+  and borders as the 3DS side's, set apart from them (**Settings > Screens**).
+- DualSense: A on Circle and B on Cross like a real DS, the left stick as a second D-pad, every
+  button remappable (**Settings > Controls**), the touchpad as the touch screen, and R3 held to blow
+  into the microphone.
+- Save states (five slots), melonDS's `.mch` cheats and the same in-game menu as the 3DS side's.
+- No BIOS needed: melonDS's own replacements run most games. Your own DS's `bios7.bin`, `bios9.bin`
+  and `firmware.bin` in `/data/ps5cemu/melonds/bios` are used when they are there
+  (**Settings > System**).
+- Not there: DSi games, the DS's wireless and its GBA slot.
 
 ## Game files
 
 ### Wii U
 
-Put games in `/data/ps5cemu/games`, or pick another folder in **Settings > Games and folders**.
+Put games in `/data/ps5cemu/games`, or pick another folder in **Settings > Game files** on the Wii U side.
 
 ```text
 <game folder>/
@@ -148,13 +171,19 @@ Encrypted WUD and WUX dumps also need their disc keys in `/data/ps5cemu/keys.txt
 
 ### Nintendo 3DS
 
-Put games in `/data/ps5cemu/azahar/games`, or pick another folder in **Settings > Games and folders**.
+Put games in `/data/ps5cemu/azahar/games`, or pick another folder in **Settings > Game files** on the 3DS side.
 
 - `.3ds`, `.cci`, `.cxi` and `.app` dumps, `.3dsx` and `.elf` homebrew, and Azahar's compressed
   formats (`.z3ds`, `.zcci`, `.zcxi`, `.z3dsx`) play directly.
-- `.cia` files are installed first from **Settings > Install CIA files**; updates and DLC too. Azahar
+- `.cia` files are installed first from **Settings > Game files > Install a CIA file**; updates and DLC too. Azahar
   only installs fully decrypted CIAs, the game inside included.
 - Encrypted dumps need `aes_keys.txt` from your own console in `/data/ps5cemu/azahar/sysdata`.
+
+### Nintendo DS
+
+Put games (`.nds`) in `/data/ps5cemu/melonds/games`, or pick another folder in **Settings > Game
+files** on the DS side. A save (`.sav`) beside a game is taken the first time it starts; from then on
+saves are in `/data/ps5cemu/melonds/saves`.
 
 No games, keys, firmware or other copyrighted console data are included. Dump them from hardware and
 software you own, and don't download or share them.
@@ -219,12 +248,12 @@ next games. A 3DS game pauses while its menu is open.
 - **Box art:** the first time a game shows up, the app downloads its cover from GameTDB
   (`art.gametdb.com`) by the ID on the game's box, in the background, into
   `/data/ps5cemu/covers/boxart`. A cover GameTDB doesn't have leaves a `.none` file there; delete it
-  to try again. **Settings > Online and updates** turns the downloads off.
+  to try again. **Settings > Online** turns the downloads off.
 - **Updates:** when the app starts fresh, it asks GitHub for the latest release. When a newer
   PS5CEMU-HAR is out, it asks whether to install it: **Update now** downloads the release, checks it
   against the release's SHA-256, puts its files in place of the old ones and starts the app again.
-  Your games, saves and settings in `/data/ps5cemu` stay as they are. **Settings > Online and
-  updates > PS5CEMU-HAR updates** checks again.
+  Your games, saves and settings in `/data/ps5cemu` stay as they are. **Settings > Online >
+  PS5CEMU-HAR updates** checks again.
 
 Without an internet connection, the libraries just show the game icons.
 
@@ -253,6 +282,12 @@ Everything the app writes goes to `/data/ps5cemu`, except your game files:
 │   ├── load/                       3DS custom textures (textures/) and mods (mods/)
 │   ├── shaders/                    Azahar shader cache
 │   └── log/azahar_log.txt          Azahar log
+├── melonds/
+│   ├── games/                      default DS game folder
+│   ├── saves/                      DS saves, <game file>.sav
+│   ├── states/                     DS save states
+│   ├── cheats/                     DS cheats, <game file>.mch
+│   └── bios/                       your DS's bios7.bin, bios9.bin and firmware.bin, if you add them
 ├── covers/                         game icons and box art (boxart/)
 ├── log.txt                         Cemu log
 └── logs/                           app logs: boot.log, and boot.prev.log to boot.4.log for the
@@ -279,11 +314,25 @@ It asks for your firmware, HEN, app version and logs, which almost every problem
 - **Copy logs to USB:** puts the logs and settings in a dated `PS5CEMU-HAR-logs-...` folder on a USB
   drive. The app keeps the last five sessions' logs, so copy them soon after a problem and attach
   them to your report.
-- **Clear shader caches** (press Cross twice): for a game that crashes on a bad or shared cache.
+- **Clear shader caches** (hold Cross): for a game that crashes on a bad or shared cache.
   Games build them again as they run.
 
 The boot log also gets a `[memory]` line once a minute, a `[perf]` (Wii U) or `[perf3ds]` (3DS) line
 every 10 seconds with the frame rate, and `[crash]` lines if an emulator crashes.
+
+## What's new in the 3.5.1 beta
+
+- **3.5.0 starts again on older firmwares and kstuff setups** (#34). Where the HEN leaves a drive out
+  (kstuff and ShadowMount+ on 5.50 and 8.60 among them), the app's sandbox helper opens it, and 3.5.0
+  then still looked for its own files where the sandbox had kept them: the launcher found no font and
+  never drew. It now looks for them again after the helper runs.
+- **Nintendo DS games, on melonDS**, as a third side to the right of the 3DS, in green (see
+  [Nintendo DS](#nintendo-ds-melonds)).
+- **No Home screen:** every side opens on its Library, the game you played last in focus.
+- **Settings, simple again:** only the side you're on, one short list of pages with icons, as 3.0.0
+  had it.
+- **Game settings:** any game can have its own graphics, screens, sound and system settings
+  (Options on the game, then Game settings).
 
 ## What's new in 3.5.0
 
@@ -404,6 +453,8 @@ a ZIP to `dist/`. See [docs/BUILDING.md](docs/BUILDING.md), or run `make help` f
 - [Cemu](https://github.com/cemu-project/Cemu) by the Cemu team and contributors (MPL-2.0)
 - [Azahar](https://github.com/azahar-emu/azahar) by the Azahar team and the Citra contributors
   before them (GPL-2.0-or-later), with dynarmic by MerryMage and contributors
+- [melonDS](https://github.com/melonDS-emu/melonDS) by Arisotura and the melonDS team (GPL-3.0),
+  with its FreeBIOS replacements
 - **Mihawk** for RADV on PS5 ([PS5_Mesa](https://github.com/mihawk-99/PS5_Mesa),
   [PS5_Vulkan](https://github.com/mihawk-99/PS5_Vulkan), the payload SDK fork and its platform layer)
   and the PS5 ports of Azahar and dynarmic ([PS5_Azahar](https://github.com/mihawk-99/PS5_Azahar)),
@@ -427,16 +478,16 @@ a ZIP to `dist/`. See [docs/BUILDING.md](docs/BUILDING.md), or run `make help` f
 ## License
 
 The app's own code is licensed under GPL-3.0-or-later (see [LICENSE](LICENSE)). Files derived from
-Cemu keep Cemu's MPL-2.0 license, as noted in their headers. Azahar is GPL-2.0-or-later, and the app
-that includes it is distributed under GPL-3.0-or-later. Other third-party components keep their own
+Cemu keep Cemu's MPL-2.0 license, as noted in their headers. Azahar is GPL-2.0-or-later and melonDS
+GPL-3.0, and the app that includes them is distributed under GPL-3.0-or-later. Other third-party components keep their own
 licenses.
 
 ## Disclaimer
 
 - **No affiliation.** This is an independent homebrew project. It is not affiliated with, endorsed
-  by, or sponsored by Sony Interactive Entertainment, Nintendo, the Cemu project or the Azahar
-  project. "PlayStation" and "PS5" are trademarks of Sony Interactive Entertainment Inc.; "Wii U" and
-  "Nintendo 3DS" are trademarks of Nintendo.
+  by, or sponsored by Sony Interactive Entertainment, Nintendo, the Cemu project, the Azahar project
+  or the melonDS project. "PlayStation" and "PS5" are trademarks of Sony Interactive Entertainment
+  Inc.; "Wii U", "Nintendo 3DS" and "Nintendo DS" are trademarks of Nintendo.
 - **No proprietary material.** No Sony or Nintendo SDK, firmware, encryption keys, games or
   decrypted system modules are included.
 - **No warranty.** This project is provided "as is", without warranty of any kind, to the extent

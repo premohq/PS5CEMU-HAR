@@ -370,6 +370,79 @@ namespace ui
 			line(0.2f, 0.5f, 0.42f, 0.28f);
 			line(0.2f, 0.5f, 0.42f, 0.72f);
 			break;
+		case Icon::Monitor:
+			Ring({X(0.12f), Y(0.18f), s * 0.76f, s * 0.5f}, s * 0.08f, stroke * 0.85f, colour);
+			line(0.5f, 0.68f, 0.5f, 0.82f);
+			line(0.36f, 0.84f, 0.64f, 0.84f);
+			break;
+		case Icon::Screens: // a handheld's two screens
+			Ring({X(0.24f), Y(0.12f), s * 0.52f, s * 0.34f}, s * 0.06f, stroke * 0.85f, colour);
+			Ring({X(0.3f), Y(0.56f), s * 0.4f, s * 0.3f}, s * 0.06f, stroke * 0.85f, colour);
+			break;
+		case Icon::Speaker:
+			Triangle(X(0.14f), Y(0.5f), X(0.5f), Y(0.16f), X(0.5f), Y(0.84f), colour, 0, s * 0.02f);
+			Rect({X(0.14f), Y(0.36f), s * 0.2f, s * 0.28f}, s * 0.03f, colour);
+			// the sound: two arcs, the right halves of rings
+			PushClip({X(0.56f), Y(0.0f), s * 0.44f, s});
+			Ring({X(0.4f), Y(0.32f), s * 0.36f, s * 0.36f}, s, stroke * 0.75f, colour);
+			Ring({X(0.26f), Y(0.16f), s * 0.64f, s * 0.68f}, s, stroke * 0.75f, colour);
+			PopClip();
+			break;
+		case Icon::Pad:
+			Ring({X(0.08f), Y(0.28f), s * 0.84f, s * 0.44f}, s * 0.2f, stroke * 0.85f, colour);
+			line(0.3f, 0.4f, 0.3f, 0.6f, 0.07f);
+			line(0.2f, 0.5f, 0.4f, 0.5f, 0.07f);
+			dot(0.66f, 0.44f, 0.05f);
+			dot(0.76f, 0.56f, 0.05f);
+			break;
+		case Icon::Usb:
+			line(0.5f, 0.1f, 0.5f, 0.72f);
+			line(0.5f, 0.44f, 0.28f, 0.32f);
+			line(0.5f, 0.54f, 0.72f, 0.42f);
+			dot(0.28f, 0.3f, 0.06f);
+			Rect({X(0.66f), Y(0.32f), s * 0.12f, s * 0.12f}, 0, colour);
+			dot(0.5f, 0.8f, 0.09f);
+			break;
+		case Icon::Globe:
+			Ring({X(0.14f), Y(0.14f), s * 0.72f, s * 0.72f}, s, stroke * 0.85f, colour);
+			Ring({X(0.34f), Y(0.14f), s * 0.32f, s * 0.72f}, s, stroke * 0.75f, colour);
+			line(0.14f, 0.5f, 0.86f, 0.5f, 0.07f);
+			break;
+		case Icon::Sparkle:
+			Triangle(X(0.5f), Y(0.08f), X(0.62f), Y(0.5f), X(0.38f), Y(0.5f), colour, 0, s * 0.01f);
+			Triangle(X(0.5f), Y(0.92f), X(0.38f), Y(0.5f), X(0.62f), Y(0.5f), colour, 0, s * 0.01f);
+			Triangle(X(0.08f), Y(0.5f), X(0.5f), Y(0.38f), X(0.5f), Y(0.62f), colour, 0, s * 0.01f);
+			Triangle(X(0.92f), Y(0.5f), X(0.5f), Y(0.62f), X(0.5f), Y(0.38f), colour, 0, s * 0.01f);
+			break;
+		case Icon::Pulse:
+			line(0.08f, 0.54f, 0.28f, 0.54f);
+			line(0.28f, 0.54f, 0.38f, 0.26f);
+			line(0.38f, 0.26f, 0.54f, 0.76f);
+			line(0.54f, 0.76f, 0.64f, 0.44f);
+			line(0.64f, 0.44f, 0.7f, 0.54f);
+			line(0.7f, 0.54f, 0.92f, 0.54f);
+			break;
+		case Icon::Info:
+			Ring({X(0.14f), Y(0.14f), s * 0.72f, s * 0.72f}, s, stroke * 0.85f, colour);
+			line(0.5f, 0.46f, 0.5f, 0.68f, 0.085f);
+			dot(0.5f, 0.32f, 0.055f);
+			break;
+		case Icon::Chip:
+			Ring({X(0.26f), Y(0.26f), s * 0.48f, s * 0.48f}, s * 0.08f, stroke * 0.85f, colour);
+			for (float f : {0.38f, 0.5f, 0.62f})
+			{
+				line(f, 0.1f, f, 0.24f, 0.06f);
+				line(f, 0.76f, f, 0.9f, 0.06f);
+				line(0.1f, f, 0.24f, f, 0.06f);
+				line(0.76f, f, 0.9f, f, 0.06f);
+			}
+			break;
+		case Icon::Artic: // a 3DS, open, its signal at both sides
+			Ring({X(0.3f), Y(0.12f), s * 0.4f, s * 0.32f}, s * 0.05f, stroke * 0.8f, colour);
+			Ring({X(0.3f), Y(0.52f), s * 0.4f, s * 0.36f}, s * 0.05f, stroke * 0.8f, colour);
+			line(0.14f, 0.38f, 0.14f, 0.62f, 0.07f);
+			line(0.86f, 0.38f, 0.86f, 0.62f, 0.07f);
+			break;
 		}
 	}
 

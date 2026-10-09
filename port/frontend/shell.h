@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // PS5CEMU-HAR: the new launcher (docs/UI-REDESIGN.md), drawn on the GPU with the UI kit (port/ui):
-// the Wii U and 3DS sides of one shell, switched in one press, each with Home, the Library and
-// Settings, a game's hub and Game menu, and the pages for graphic packs, a player's controls and
-// buttons, the folder browser and installs, Artic Base and Diagnostics, the Setup check, the update
-// sheet and the launch.
+// the Wii U, 3DS and DS sides of one shell, switched in one press, each with its Library and its own
+// Settings, a game's hub, Game menu and game settings, and the pages for graphic packs, a player's
+// controls and buttons, the folder browser and installs, Artic Base and Diagnostics, the Setup check,
+// the update sheet and the launch.
 //
 // It returns the game chosen, with everything of its own gone first (its device, its threads,
 // VideoOut handed back to the driver for the emulator's renderer: 4.2, rule 1).

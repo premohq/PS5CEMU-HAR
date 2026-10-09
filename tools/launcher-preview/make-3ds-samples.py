@@ -2,13 +2,13 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Write sample 3DS and DS files for the launcher's preview, with nothing but the standard library.
 
-    make-3ds-samples.py FOLDER
+    make-3ds-samples.py 3DS_FOLDER DS_FOLDER
 
 Each is only what Azahar's side's library reads (port/azahar/library.cpp): an SMDH (names,
 publisher, a 48x48 icon) where each kind of file keeps it, in an NCSD's NCCH ExeFS (.3ds, .cci),
 an NCCH's (.cxi), a CIA's meta section, a 3DSX's extended header, and one encrypted dump, which
-the library lists by its file name; and for the DS games beside them (port/melonds/library.cpp), a
-DS header and its banner (titles, a 32x32 icon in 16 colours). They hold no game.
+the library lists by its file name; and for the DS side's games (port/melonds/library.cpp), a DS
+header and its banner (titles, a 32x32 icon in 16 colours). They hold no game.
 """
 
 import os
@@ -128,7 +128,7 @@ SAMPLES = [
     ("More/Kid Icarus Uprising.3ds", lambda i: ncsd(0x0004000000030200, i), "Kid Icarus: Uprising", "Nintendo", (230, 210, 90)),
 ]
 
-# DS games, beside the 3DS's: file, game code, banner title (name, subtitle, publisher), colour
+# the DS side's games: file, game code, banner title (name, subtitle, publisher), colour
 DS_SAMPLES = [
     ("New Super Mario Bros.nds", "A2DE", "New SUPER MARIO BROS.\nNintendo", (200, 40, 30)),
     ("Zelda Phantom Hourglass.nds", "AZEE", "The Legend of Zelda\nPhantom Hourglass\nNintendo", (40, 150, 70)),
@@ -138,7 +138,7 @@ DS_SAMPLES = [
 
 
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 3:
         sys.exit(__doc__)
     for name, make, title, publisher, colour in SAMPLES:
         path = os.path.join(sys.argv[1], name)
@@ -146,7 +146,7 @@ def main():
         with open(path, "wb") as file:
             file.write(make(smdh(title, publisher, colour)))
     for name, code, title, colour, *unit in DS_SAMPLES:
-        path = os.path.join(sys.argv[1], name)
+        path = os.path.join(sys.argv[2], name)
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "wb") as file:
             file.write(nds(code, title, colour, *unit))

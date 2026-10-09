@@ -27,6 +27,11 @@ namespace ps5azahar
 	};
 
 	std::vector<ps5emu::ButtonMapping> ListMappings(const ps5settings::N3ds& settings);
+	// The buttons a DS has, as the DS side maps them (port/melonds/input.cpp): the 3DS's of the same
+	// name, the circle pad's directions as a second D-pad
+	const std::vector<Button>& DsButtons();
+	// One button's mapping, as ListMappings has it (a DS's circle pad named as the D-pad it is)
+	ps5emu::ButtonMapping Mapping(const ps5settings::N3ds& settings, Button button, bool ds = false);
 	ps5emu::PadInput MappedInput(const ps5settings::N3ds& settings, Button button);
 	void SetMapping(ps5settings::N3ds& settings, size_t index, ps5emu::PadInput input);
 	void ClearMapping(ps5settings::N3ds& settings, size_t index);

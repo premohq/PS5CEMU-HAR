@@ -96,7 +96,6 @@ add_library(CemuPS5 STATIC
 	frontend/settings.cpp
 	frontend/settings.h
 	frontend/shell.h
-	frontend/shell/home.cpp
 	frontend/shell/host_ps5.cpp
 	frontend/shell/hub.cpp
 	frontend/shell/library.cpp
@@ -165,7 +164,6 @@ set_source_files_properties(
 	melonds/unavailable.cpp
 	frontend/actions.cpp
 	frontend/settings.cpp
-	frontend/shell/home.cpp
 	frontend/shell/host_ps5.cpp
 	frontend/shell/hub.cpp
 	frontend/shell/library.cpp

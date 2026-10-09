@@ -27,7 +27,7 @@ namespace ps5shell
 			return;
 		m_hubGame = game;
 		if (from != ScreenId::Hub)
-			m_hubFrom = from == ScreenId::Library ? ScreenId::Library : ScreenId::Home;
+			m_hubFrom = ScreenId::Library;
 		m_hubAction = 0;
 		m_hubAbout = false;
 		m_hubScroll.Snap(0);
@@ -44,8 +44,9 @@ namespace ps5shell
 			return;
 		}
 		const Button b = press.button;
-		const bool packs = !Is3ds() && m_status.coreReady;
-		const int actions = packs ? 3 : 2;
+		// Play, Graphic packs (the Wii U's), Game settings, the Game menu
+		const bool packs = IsWiiU() && m_status.coreReady;
+		const int actions = packs ? 4 : 3;
 		switch (b)
 		{
 		case Button::Circle:
@@ -134,6 +135,11 @@ namespace ps5shell
 				m_feedback.Play(ui::Cue::Select);
 				PacksOpen(m_hubGame, ScreenId::Hub);
 			}
+			else if (m_hubAction == actions - 2)
+			{
+				m_feedback.Play(ui::Cue::Select);
+				GameSettingsOpen(m_hubGame);
+			}
 			else
 				OpenGameMenu(m_hubGame);
 			break;
@@ -172,7 +178,7 @@ namespace ps5shell
 		}
 
 		// the cover
-		const bool wiiu = !Is3ds();
+		const bool wiiu = IsWiiU();
 		const Box cover{kSafeX, 150, 420, wiiu ? 588.0f : 382.0f};
 		canvas.PushAlpha(Enter(1));
 		canvas.PushOffset((1 - Enter(1)) * -30, 0);
@@ -184,9 +190,9 @@ namespace ps5shell
 		const float x = 596;
 		canvas.PushAlpha(Enter(2));
 		canvas.PushOffset(0, (1 - Enter(2)) * 24);
-		float kx = x + Badge(canvas, x, 150, m_side, g.nds) + 18;
+		float kx = x + Badge(canvas, x, 150, m_side) + 18;
 		// a DS game has no title ID of its own (the one it is given stays out of sight)
-		const std::string kicker = Join({g.gameId, game.known ? game.info.region : "", g.nds ? "" : Hex(g.titleId)}, " · ");
+		const std::string kicker = Join({g.gameId, game.known ? game.info.region : "", IsDs() ? "" : Hex(g.titleId)}, " · ");
 		canvas.Text(Style({18, ui::Weight::SemiBold, 1.9f, 3.5f, true}), kx, 150, kicker, Secondary(), 1920 - kSafeX - kx, 1);
 		ui::TextStyle display = Style(kDisplayStyle);
 		display.size = m_fonts.Fit(display, g.name, 1228, 2, display.size - 16, 8);
@@ -212,7 +218,7 @@ namespace ps5shell
 
 		// the actions
 		const bool packs = wiiu && m_status.coreReady;
-		const int actions = packs ? 3 : 2;
+		const int actions = packs ? 4 : 3;
 		m_hubAction = std::clamp(m_hubAction, 0, actions - 1);
 		const float ay = cy + 72;
 		Box b = PillButton(canvas, x, ay, "Play", true, !m_hubAbout && m_hubAction == 0, Icon::Play, true);
@@ -225,6 +231,9 @@ namespace ps5shell
 				!m_hubAbout && m_hubAction == 1);
 			bx = b.Right() + 20;
 		}
+		const bool own = m_settings.games.count(ps5settings::GameKey(ps5launcher::SideName(m_side), g.titleId)) > 0;
+		b = PillButton(canvas, bx, ay, own ? "Game settings · its own" : "Game settings", false, !m_hubAbout && m_hubAction == actions - 2);
+		bx = b.Right() + 20;
 		IconButton(canvas, bx, ay, Icon::More, !m_hubAbout && m_hubAction == actions - 1);
 		canvas.PopOffset();
 		canvas.PopAlpha();
@@ -261,7 +270,7 @@ namespace ps5shell
 				{"Players", game.info.players > 0 ? std::to_string(game.info.players) : ""}};
 			std::erase_if(facts, [](const auto& fact) { return fact.second.empty(); });
 		}
-		if (facts.empty())
+		if (facts.empty() && !IsDs())
 			facts.push_back({"Title ID", Hex(g.titleId)});
 		for (int i = 0; i < (int)facts.size() && i < 4; i++)
 		{

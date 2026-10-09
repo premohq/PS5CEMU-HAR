@@ -1,5 +1,5 @@
 # The new launcher's first start (PREVIEW_FIRST=1 tools/preview-shell.sh tools/launcher-preview/shell-first.txt):
-# the Setup check, then Home on the side with games, nothing asking which.
+# the Setup check, then the Library of the first side with games, nothing asking which.
 wait 90
 shot first-setup              # the Setup check, the first check needing a look focused
 press down
@@ -10,6 +10,6 @@ wait 40
 shot first-setup-action
 press circle
 wait 20
-press circle                  # continue: Home, on the Wii U side
+press circle                  # continue: the Library, on the Wii U side
 wait 90
-shot first-home
+shot first-library

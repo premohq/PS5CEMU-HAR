@@ -12,6 +12,8 @@
 #include "../../azahar/azahar.h"
 #include "../../azahar/controls.h"
 #include "../../azahar/library.h"
+#include "../../melonds/library.h"
+#include "../../melonds/melonds.h"
 #include "../../ps5/kernel.h"
 #include "../../ps5/pad.h"
 
@@ -119,7 +121,6 @@ namespace ps5shell
 		const uint64_t title = m_games[m_packsGame].entry.game.titleId;
 		m_packs = ps5emu::ListGraphicPacks(title);
 		m_games[m_packsGame].packsOn = ps5emu::EnabledGraphicPackCount(title);
-		m_cardsFor = ~0ull;
 		const int selectedPack = m_packItem < (int)m_packItems.size() ? m_packItems[m_packItem].pack : -1;
 		m_packItems.clear();
 		std::vector<std::string> folders;
@@ -166,7 +167,7 @@ namespace ps5shell
 
 	void Shell::PacksOpen(int game, ScreenId from)
 	{
-		if (game < 0 || game >= (int)m_games.size() || Is3ds() || !m_status.coreReady)
+		if (game < 0 || game >= (int)m_games.size() || !IsWiiU() || !m_status.coreReady)
 			return;
 		m_packsGame = game;
 		m_packsFrom = from;
@@ -298,7 +299,7 @@ namespace ps5shell
 		if (packCount == 0)
 		{
 			canvas.Text(Style(kHeadingStyle), kListX, kListTop, "No graphic packs for this game", kText);
-			canvas.Text(Style(kBodyStyle), kListX, kListTop + 50, "Settings > Online and updates gets the community's newest.", Secondary(), 800, 2);
+			canvas.Text(Style(kBodyStyle), kListX, kListTop + 50, "Settings > Online gets the community's newest.", Secondary(), 800, 2);
 			canvas.PopAlpha();
 			return;
 		}
@@ -579,7 +580,8 @@ namespace ps5shell
 
 	void Shell::MappingOpen()
 	{
-		m_mapping3ds = m_screen == ScreenId::Settings;
+		// from Settings: a handheld side's buttons; from a player's page: that Wii U player's
+		m_mappingSide = m_screen == ScreenId::Settings ? m_side : System::WiiU;
 		m_mapSelected = 0;
 		m_capture = {};
 		m_mapMessage.clear();
@@ -589,7 +591,25 @@ namespace ps5shell
 
 	std::vector<ps5emu::ButtonMapping> Shell::Mappings() const
 	{
-		return m_mapping3ds ? ps5azahar::ListMappings(m_settings.n3ds) : ps5emu::ListMappings(m_player);
+		if (m_mappingSide == System::WiiU)
+			return ps5emu::ListMappings(m_player);
+		if (m_mappingSide == System::N3ds)
+			return ps5azahar::ListMappings(m_settings.n3ds);
+		std::vector<ps5emu::ButtonMapping> mappings;
+		for (ps5azahar::Button button : ps5azahar::DsButtons())
+			mappings.push_back(ps5azahar::Mapping(m_settings.nds, button, true));
+		return mappings;
+	}
+
+	// a handheld's mapping changed: the row in the list is a 3DS button, or one of the DS's
+	void Shell::SetHandheldMapping(int index, ps5emu::PadInput input)
+	{
+		const bool ds = m_mappingSide == System::Nds;
+		if (ds && (index < 0 || index >= (int)ps5azahar::DsButtons().size()))
+			return;
+		const size_t button = ds ? (size_t)ps5azahar::DsButtons()[index] : (size_t)index;
+		ps5azahar::SetMapping(Handheld(m_mappingSide), button, input);
+		SaveSettings();
 	}
 
 	void Shell::MappingUpdate(const ui::Press& press)
@@ -598,7 +618,7 @@ namespace ps5shell
 		switch (press.button)
 		{
 		case Button::Circle:
-			if (m_mapping3ds)
+			if (m_mappingSide != System::WiiU)
 				ClosePage(ScreenId::Settings);
 			else
 			{
@@ -617,11 +637,8 @@ namespace ps5shell
 		case Button::Square:
 			if (count)
 			{
-				if (m_mapping3ds)
-				{
-					ps5azahar::SetMapping(m_settings.n3ds, m_mapSelected, ps5emu::PadInput::None);
-					SaveSettings();
-				}
+				if (m_mappingSide != System::WiiU)
+					SetHandheldMapping(m_mapSelected, ps5emu::PadInput::None);
 				else
 					ps5emu::SetMapping(m_player, m_mapSelected, ps5emu::PadInput::None);
 				m_mapMessage = "Cleared: no DualSense button is this one now.";
@@ -654,7 +671,7 @@ namespace ps5shell
 	void Shell::PollCapture()
 	{
 		ps5pad::Data data{};
-		const int player = m_mapping3ds ? 0 : m_player;
+		const int player = m_mappingSide != System::WiiU ? 0 : m_player;
 		if (!ps5pad::Read(player, data) && !ps5pad::Read(0, data))
 			return;
 		const bool idle = Pressed(data) == ps5emu::PadInput::None && !(data.buttons & ps5pad::kTouchPad) && data.l2 < 60 && data.r2 < 60;
@@ -673,11 +690,8 @@ namespace ps5shell
 		else if (const auto input = Pressed(data); input != ps5emu::PadInput::None)
 		{
 			m_capture.active = false;
-			if (m_mapping3ds)
-			{
-				ps5azahar::SetMapping(m_settings.n3ds, m_mapSelected, input);
-				SaveSettings();
-			}
+			if (m_mappingSide != System::WiiU)
+				SetHandheldMapping(m_mapSelected, input);
 			else
 				ps5emu::SetMapping(m_player, m_mapSelected, input);
 			m_mapMessage = "Done.";
@@ -690,8 +704,9 @@ namespace ps5shell
 		const auto mappings = Mappings();
 		const int count = (int)mappings.size();
 		m_mapSelected = std::clamp(m_mapSelected, 0, std::max(0, count - 1));
-		if (m_mapping3ds)
-			DrawPageHeader(canvas, "Nintendo 3DS · Controls", "Buttons", "The DualSense's buttons for the 3DS's");
+		if (m_mappingSide != System::WiiU)
+			DrawPageHeader(canvas, std::string(SystemName(m_mappingSide)) + " · Controls", "Buttons",
+				fmt::format("The DualSense's buttons for the {}'s", SideTitle(m_mappingSide)));
 		else
 		{
 			const auto controls = ps5emu::GetPlayerControls(m_player);
@@ -753,7 +768,7 @@ namespace ps5shell
 		else if (mode == 2)
 			m_filesSide = System::N3ds;
 		if (m_screen != ScreenId::Files && m_screen != ScreenId::Settings && m_screen != ScreenId::Setup)
-			m_pageFrom = m_screen == ScreenId::Library ? ScreenId::Library : ScreenId::Home;
+			m_pageFrom = ScreenId::Library;
 		else if (m_screen == ScreenId::Setup)
 			m_pageFrom = ScreenId::Setup;
 		const std::string& games = GamesFolder(m_filesSide);
@@ -835,7 +850,7 @@ namespace ps5shell
 		case Button::Circle:
 			ClosePage(m_pageFrom);
 			if (m_pageFrom == ScreenId::Settings)
-				SettingsOpen(m_filesMode == 0 ? "folders" : m_filesMode == 1 ? "wiiu-installs" : "3ds-installs", true);
+				SettingsOpen("files", true);
 			return;
 		case Button::Up:
 		case Button::Down:
@@ -900,13 +915,18 @@ namespace ps5shell
 				ps5azahar::StartScan(m_browseFolder);
 				m_scanning = true;
 			}
+			else if (here && m_filesSide == System::Nds)
+			{
+				ps5melonds::StartScan(m_browseFolder);
+				m_scanning = true;
+			}
 			else if (here && m_status.coreReady)
 			{
 				ApplyCemuOptions();
 				m_scanning = true;
 			}
 			else
-				m_rescan[m_filesSide == System::N3ds ? 1 : 0] = true;
+				m_rescan[SideIndex(m_filesSide)] = true;
 			m_filesMessage = !saved ? "The folder could not be saved. Please try again." :
 				here			   ? "Saved. PS5CEMU-HAR is looking for games there." :
 									 "Saved. That side looks for games there when it opens.";
@@ -965,6 +985,8 @@ namespace ps5shell
 			{
 				if (Is3ds())
 					ps5azahar::StartScan(m_settings.n3ds.gamesFolder);
+				else if (IsDs())
+					ps5melonds::StartScan(m_settings.nds.gamesFolder);
 				else
 					ps5emu::Rescan();
 				m_scanning = true;
@@ -983,12 +1005,11 @@ namespace ps5shell
 	void Shell::FilesDraw(Canvas& canvas)
 	{
 		const bool install = m_filesMode == 1, cia = m_filesMode == 2;
-		const bool n3ds = m_filesSide == System::N3ds;
-		DrawPageHeader(canvas, install || cia ? (n3ds ? "Nintendo 3DS · Install" : "Wii U · Install") : (n3ds ? "Nintendo 3DS games" : "Wii U games"),
+		const bool n3ds = m_filesSide == System::N3ds, nds = m_filesSide == System::Nds;
+		DrawPageHeader(canvas, install || cia ? std::string(SystemName(m_filesSide)) + " · Install" : std::string(SystemName(m_filesSide)) + " games",
 			cia ? "Install CIA files" : install ? "Install updates and DLC" : "Choose a folder",
 			cia ? "Choose a CIA file: a game, an update or DLC" : install ? "Choose a folder with an update, DLC or game (code, content and meta)" :
-				n3ds ? "Choose the folder that holds your 3DS games" :
-					   "Choose the folder that holds your Wii U games");
+				fmt::format("Choose the folder that holds your {} games", SideTitle(m_filesSide)));
 		const int count = (int)m_browseEntries.size();
 		canvas.PushAlpha(Enter(1));
 		canvas.Text(Style(kOverlineStyle), kListX, kListTop - 40, ShortPath(m_browseFolder, 56), Secondary(), kListWidth - 140, 1);
@@ -1041,7 +1062,7 @@ namespace ps5shell
 			auto it = m_folderCounts.find(m_browseFolder);
 			if (it == m_folderCounts.end())
 			{
-				const int games = n3ds ? Count3dsGames(m_browseFolder) : CountGames(m_browseFolder);
+				const int games = n3ds ? Count3dsGames(m_browseFolder) : nds ? CountDsGames(m_browseFolder) : CountGames(m_browseFolder);
 				it = m_folderCounts.emplace(m_browseFolder, games < 0 ? "-1" : std::to_string(games)).first;
 			}
 			const int games = std::atoi(it->second.c_str());
@@ -1051,6 +1072,12 @@ namespace ps5shell
 				const bool keys = IsFile(std::string(ps5azahar::kRoot) + "/sysdata/aes_keys.txt");
 				lines[1] = {"aes_keys.txt", keys ? "Found" : "Missing (only encrypted dumps need it)"};
 				ready[1] = keys;
+			}
+			else if (nds)
+			{
+				const bool bios = ps5melonds::OwnBiosFound();
+				lines[1] = {"Your DS's BIOS", bios ? "Found in melonds/bios" : "Not there (melonDS's own run most games)"};
+				ready[1] = bios;
 			}
 			else
 			{
@@ -1063,6 +1090,7 @@ namespace ps5shell
 			ready[2] = GamesFolder(m_filesSide) == m_browseFolder;
 			if (message.empty())
 				message = n3ds ? "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown." :
+					nds		   ? "Games are .nds files, here or in the folders in it. Triangle uses the folder shown." :
 								 "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown.";
 		}
 		else
@@ -1123,7 +1151,7 @@ namespace ps5shell
 		if (!ParseAddress(m_settings.n3ds.articAddress, m_articOctets))
 			m_articOctets = OwnAddress();
 		if (m_screen != ScreenId::Settings)
-			m_pageFrom = m_screen == ScreenId::Library ? ScreenId::Library : ScreenId::Home;
+			m_pageFrom = ScreenId::Library;
 		Show(ScreenId::Artic);
 	}
 
@@ -1195,7 +1223,7 @@ namespace ps5shell
 		case Button::Circle:
 			ClosePage(m_pageFrom);
 			if (m_pageFrom == ScreenId::Settings)
-				SettingsOpen("3ds-artic", true);
+				SettingsOpen("artic", true);
 			return;
 		case Button::Up:
 		case Button::Down:
@@ -1222,7 +1250,7 @@ namespace ps5shell
 				if (!Is3ds())
 				{
 					OpenSide(System::N3ds, false);
-					m_pageFrom = ScreenId::Home;
+					m_pageFrom = ScreenId::Library;
 				}
 				launch(ps5azahar::kArticBase, "Artic Base");
 			}
@@ -1261,7 +1289,7 @@ namespace ps5shell
 			{"Set up from an Old 3DS", "Hold Cross", Row::Kind::Hold,
 				"With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend "
 				"code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can "
-				"(Settings > System and Home Menu).\nThat data is your console's: do not share Azahar's folder afterwards."},
+				"(Settings > System).\nThat data is your console's: do not share Azahar's folder afterwards."},
 			{"Set up from a New 3DS", "Hold Cross", Row::Kind::Hold, "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."},
 		};
 		canvas.PushAlpha(Enter(1));

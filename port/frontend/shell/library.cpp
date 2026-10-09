@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// PS5CEMU-HAR: the Library (docs/UI-REDESIGN.md, 6.2): every game on the side, found fast. Filters
-// across the top with their counts, Sort (Square) and Search (Triangle); the covers on a shelf of
-// equal rows, the focused one lifted with its name and facts under it; L2 and R2 jump to the previous
-// or next letter (or year, or status); an index of the letters at the right. On the 3DS side the
-// shelf's first tile is Artic Base.
+// PS5CEMU-HAR: the Library (docs/UI-REDESIGN.md, 6.2): where every side opens, every game on it,
+// found fast, the one played last in focus. Filters across the top with their counts, Sort (Square)
+// and Search (Triangle); the covers on a shelf of equal rows, the focused one lifted with its name and
+// facts under it; L2 and R2 jump to the previous or next letter (or year, or status); an index of the
+// letters at the right. On the 3DS side the shelf's first tile is Artic Base. Before there is a game
+// to show (a notice, Cemu starting, the first scan, no games yet) a card says why, with what to do
+// (6.1: what Home showed).
 
 #include "shell_internal.h"
 #include "../actions.h"
@@ -34,25 +36,133 @@ namespace ps5shell
 
 	int Shell::LibraryColumns() const
 	{
-		return Is3ds() ? 6 : 8;
+		return IsWiiU() ? 8 : 6;
 	}
 
 	int Shell::LibraryFilters() const
 	{
-		if (Is3ds())
-			return std::any_of(m_games.begin(), m_games.end(), [](const Game& game) { return game.entry.game.nds; }) ? 4 : 3;
-		return m_status.coreReady ? 4 : 3;
+		return IsWiiU() && m_status.coreReady ? 4 : 3;
 	}
 
 	int Shell::LibraryGame() const
 	{
-		const int at = m_libraryIndex - (Is3ds() ? 1 : 0);
-		return at >= 0 && at < (int)m_shelf.size() ? m_shelf[at] : -1;
+		const int at = m_libraryIndex - ArticTiles();
+		const int game = at >= 0 && at < (int)m_shelf.size() ? m_shelf[at] : -1;
+		return game < (int)m_games.size() ? game : -1; // a shelf of a side being left has none
+	}
+
+	bool Shell::LibraryState(std::string& kicker, std::string& title, std::string& text, std::vector<std::string>& buttons) const
+	{
+		buttons.clear();
+		if (!Notice().empty())
+		{
+			kicker = "Setup";
+			title = "Something needs a look";
+			text = Notice();
+			buttons = {"Setup check", "Diagnostics"};
+			return true;
+		}
+		if (!CoreReady())
+		{
+			kicker = "Wii U";
+			title = "Starting Cemu";
+			text = "Its settings, graphic packs and controllers are loading, and then it looks for your games.";
+			return true;
+		}
+		if (!m_games.empty())
+			return false;
+		if (m_scanning)
+		{
+			kicker = SystemName(m_side);
+			title = "Looking for games…";
+			text = "In " + ShortPath(GamesFolder(m_side), 60) + ".";
+			return true;
+		}
+		const std::string& folder = GamesFolder(m_side);
+		kicker = "Welcome";
+		title = "Your games go here";
+		text = Is3ds() ? "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in " + folder +
+				", or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too." :
+			IsDs() ? "Put your DS games (.nds) in " + folder +
+				", or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too." :
+					 "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in " + folder +
+				", or choose any folder the PS5 can read, such as one on a USB drive.";
+		buttons = {"Choose a folder", "Setup check"};
+		if (Is3ds())
+			buttons.insert(buttons.begin() + 1, "Play from your 3DS"); // Artic Base needs no games here
+		return true;
+	}
+
+	void Shell::LibraryStateUpdate(const ui::Press& press)
+	{
+		std::string kicker, title, text;
+		std::vector<std::string> buttons;
+		LibraryState(kicker, title, text, buttons);
+		const Button b = press.button;
+		const int count = (int)buttons.size();
+		if (b == Button::Up || b == Button::Circle)
+			FocusBar();
+		else if ((b == Button::Left || b == Button::Right) && count > 0)
+		{
+			m_stateButton = (m_stateButton + (b == Button::Right ? 1 : count - 1)) % count;
+			m_feedback.Play(ui::Cue::Focus);
+		}
+		else if (b == Button::Cross)
+		{
+			if (count == 0)
+			{
+				m_feedback.Play(ui::Cue::Denied);
+				return;
+			}
+			m_feedback.Play(ui::Cue::Select);
+			const std::string& chosen = buttons[std::clamp(m_stateButton, 0, count - 1)];
+			if (chosen == "Setup check")
+				SetupOpen(false);
+			else if (chosen == "Play from your 3DS")
+			{
+				m_pageFrom = ScreenId::Library;
+				ArticOpen();
+			}
+			else if (chosen == "Diagnostics")
+			{
+				ShowTab(ScreenId::Settings);
+				SettingsOpen("diagnostics");
+			}
+			else
+			{
+				m_pageFrom = ScreenId::Library;
+				m_filesSide = m_side;
+				FilesOpen(0);
+			}
+		}
+	}
+
+	void Shell::LibraryStateDraw(Canvas& canvas)
+	{
+		std::string kicker, title, text;
+		std::vector<std::string> buttons;
+		LibraryState(kicker, title, text, buttons);
+		WantBackdrop(nullptr);
+		m_stateButtons.clear();
+		canvas.PushAlpha(Enter(1));
+		const Box card{kSafeX, 300, 1100, 520};
+		canvas.Text(Style(kOverlineStyle), card.x, card.y, kicker, Secondary());
+		const ui::TextBlock titleBlock = canvas.Text(Style(kDisplayStyle), card.x, card.y + 36, title, kText, card.w, 2);
+		const ui::TextBlock textBlock = canvas.Text(Style(kBodyStyle), card.x, card.y + 56 + titleBlock.height, text, Secondary(), 960, 5);
+		float x = card.x;
+		m_stateButton = std::clamp(m_stateButton, 0, std::max(0, (int)buttons.size() - 1));
+		for (int i = 0; i < (int)buttons.size(); i++)
+		{
+			const Box b = PillButton(canvas, x, card.y + 96 + titleBlock.height + textBlock.height, buttons[i], i == 0, !m_onBar && m_stateButton == i);
+			m_stateButtons.push_back(b);
+			x += b.w + 20;
+		}
+		canvas.PopAlpha();
 	}
 
 	void Shell::LibraryRefresh()
 	{
-		const int side = Is3ds() ? 1 : 0;
+		const int side = SideIndex();
 		int& filter = m_settings.ui.libraryFilter[side];
 		if (filter >= LibraryFilters())
 			filter = 0;
@@ -70,9 +180,7 @@ namespace ps5shell
 				continue;
 			if (filter == 2 && !game.entry.favourite)
 				continue;
-			if (filter == 3 && Is3ds() && !game.entry.game.nds)
-				continue;
-			if (filter == 3 && !Is3ds())
+			if (filter == 3 && IsWiiU())
 			{
 				if (game.packsOn < 0)
 					game.packsOn = ps5emu::EnabledGraphicPackCount(game.entry.game.titleId);
@@ -104,8 +212,10 @@ namespace ps5shell
 			}
 			return x.sortName < y.sortName;
 		});
-		// the focus stays on the game it was on
-		const int offset = Is3ds() ? 1 : 0;
+		// the focus stays on the game it was on (or goes to the one asked for: the one played last)
+		const int offset = ArticTiles();
+		if (m_libraryIndex < 0 && !m_shelf.empty())
+			m_libraryIndex = offset; // the first game, unless the one asked for is found below
 		m_libraryIndex = std::clamp(m_libraryIndex, 0, std::max(0, (int)m_shelf.size() + offset - 1));
 		for (int i = 0; i < (int)m_shelf.size(); i++)
 			if (m_games[m_shelf[i]].entry.game.titleId == m_libraryFocusTitle)
@@ -115,9 +225,18 @@ namespace ps5shell
 	void Shell::LibraryUpdate(const ui::Press& press)
 	{
 		const Button b = press.button;
-		const int side = Is3ds() ? 1 : 0;
+		{
+			std::string kicker, title, text;
+			std::vector<std::string> buttons;
+			if (LibraryState(kicker, title, text, buttons))
+			{
+				LibraryStateUpdate(press);
+				return;
+			}
+		}
+		const int side = SideIndex();
 		const int columns = LibraryColumns();
-		const int offset = Is3ds() ? 1 : 0;
+		const int offset = ArticTiles();
 		const int total = (int)m_shelf.size() + offset;
 		auto sortPicker = [this, side] {
 			OpenPicker("Library", "Sort", std::vector<std::string>(std::begin(kSorts), std::end(kSorts)), m_settings.ui.librarySort[side],
@@ -139,15 +258,20 @@ namespace ps5shell
 		}
 		if (b == Button::Circle)
 		{
+			// the search let go, then up to the filters, then the bar: the Library is where a side opens
 			if (!m_search.empty())
 			{
 				m_search.clear();
 				LibraryRefresh();
 				m_feedback.Play(ui::Cue::Back);
-				return;
 			}
-			ShowTab(ScreenId::Home);
-			m_feedback.Play(ui::Cue::Back);
+			else if (m_libraryZone == 1)
+			{
+				m_libraryZone = 0;
+				m_feedback.Play(ui::Cue::Back);
+			}
+			else
+				FocusBar();
 			return;
 		}
 		if (m_libraryZone == 0)
@@ -278,7 +402,7 @@ namespace ps5shell
 		}
 		case Button::Cross:
 		{
-			if (Is3ds() && at == 0)
+			if (at < ArticTiles())
 			{
 				m_feedback.Play(ui::Cue::Select);
 				m_pageFrom = ScreenId::Library;
@@ -303,9 +427,18 @@ namespace ps5shell
 	void Shell::LibraryDraw(Canvas& canvas)
 	{
 		DrawBar(canvas, true);
-		const int side = Is3ds() ? 1 : 0;
-		const bool wiiu = !Is3ds();
-		const int offset = Is3ds() ? 1 : 0;
+		{
+			std::string kicker, title, text;
+			std::vector<std::string> buttons;
+			if (LibraryState(kicker, title, text, buttons))
+			{
+				LibraryStateDraw(canvas);
+				return;
+			}
+		}
+		const int side = SideIndex();
+		const bool wiiu = IsWiiU();
+		const int offset = ArticTiles();
 		const int columns = LibraryColumns();
 		const float tileW = wiiu ? 186.0f : 216.0f, tileH = wiiu ? 260.0f : 200.0f, gap = wiiu ? 24.0f : 28.0f;
 		const float pitch = tileH + 112;
@@ -319,9 +452,9 @@ namespace ps5shell
 		{
 			counts[1] += game.entry.added >= recent;
 			counts[2] += game.entry.favourite;
-			counts[3] += Is3ds() ? game.entry.game.nds : game.packsOn > 0;
+			counts[3] += game.packsOn > 0;
 		}
-		const char* names[4] = {"All", "Recently added", "Favourites", Is3ds() ? "DS games" : "Graphic packs on"};
+		const char* names[4] = {"All", "Recently added", "Favourites", "Graphic packs on"};
 		const int filters = LibraryFilters();
 		const int filter = m_settings.ui.libraryFilter[side];
 		float x = kSafeX;
@@ -377,7 +510,7 @@ namespace ps5shell
 				!m_search.empty() ? "Circle clears the search." :
 				filter == 2		  ? "Options on a game, then Favourite, puts it here." :
 				filter			  ? "All shows every game." :
-									"Settings > Games and folders says where they go.",
+									"Settings > Game files says where they go.",
 				Secondary(), 900, 3);
 			canvas.PopAlpha();
 			return;

@@ -29,7 +29,7 @@ namespace ps5melonds
 
 	namespace input
 	{
-		// The launcher's 3DS controls, as the DS's: its buttons on the DS's, the circle pad's on the D-pad
+		// The DS side's controls: its buttons on the DS's, the circle pad's on the D-pad
 		void Configure(const ps5settings::N3ds& settings);
 		// Takes the controller's latest sample, a few hundred times a second (the game's loop). While
 		// blocked (the in-game menu is up) the game sees the controller let go.

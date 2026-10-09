@@ -73,6 +73,7 @@ namespace ps5melonds
 		std::atomic<int> s_stopReason{-1}; // melonDS stopped the console itself (Stopped)
 		bool s_coreTouched = false;			// LaunchGame took VideoOut
 		ps5settings::N3ds s_settings;		// the game's loop's: as the menu leaves them
+		ps5settings::N3ds s_launched;	// what the game started with, or what the menu last saved
 		std::string s_name;
 		std::string s_stem;		  // the game's file's name without its extension: its save's, states' and cheats'
 		std::string s_folder;	  // the folder the game's file is in
@@ -354,8 +355,8 @@ namespace ps5melonds
 			s_bottomShown = bottom.Shown();
 		}
 
-		// What the menu changed, while the game runs; kept in the launcher's 3DS settings for the next
-		// games, the DS's and the 3DS's alike
+		// What the menu changed, while the game runs; kept for the next games in the DS side's settings,
+		// or the game's own when it has some
 		void ApplyMenu(const ps5ingame3ds::Settings& menu)
 		{
 			using ps5azahar::Button;
@@ -395,10 +396,12 @@ namespace ps5melonds
 			if (controls)
 				input::Configure(s_settings);
 
-			ps5settings::Launcher all = ps5settings::Load();
-			all.n3ds = s_settings;
-			all.side = "3ds";
-			ps5settings::Save(all);
+			// into the game's own settings when it has some, else the side's (docs/UI-REDESIGN.md, 6.5)
+			ps5settings::Launcher before, after;
+			before.nds = s_launched;
+			after.nds = s_settings;
+			ps5settings::SaveChanges("ds", s_titleId, before, after);
+			s_launched = s_settings;
 		}
 
 		// -- the emulation ---------------------------------------------------------------------------
@@ -664,7 +667,7 @@ namespace ps5melonds
 			return false;
 		}
 
-		s_settings = settings;
+		s_settings = s_launched = settings;
 		s_name = game.name;
 		s_titleId = game.titleId;
 		{
@@ -810,7 +813,7 @@ namespace ps5melonds
 			ps5log::Line("[ds] shutting down takes over 5 s: starting over without waiting");
 			FlushSave(true);
 			ps5settings::Launcher all = ps5settings::Load();
-			all.side = "3ds";
+			all.side = "ds";
 			ps5settings::Save(all);
 			ps5emu::RestartToLibrary();
 		}).detach();

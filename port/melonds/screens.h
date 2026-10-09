@@ -6,7 +6,7 @@
 //
 // Each frame copies the two screens to the GPU, draws them where the layout puts them (the 3DS's
 // layouts, laid out as Azahar lays out its screens) with the screen filter, the touch cursor over the
-// bottom one (Azahar's crosshair), then lets the 3DS side's in-game menu draw in the same frame
+// bottom one (Azahar's crosshair), then lets the handhelds' in-game menu draw in the same frame
 // (ps5ingame3ds::Record): the menu, the border around the screens, the performance overlay. Built with
 // the app, so it names no melonDS type; everything is made, used and destroyed on the thread that
 // calls Start, Present and Stop (the emulation's).

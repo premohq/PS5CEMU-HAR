@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // PS5CEMU-HAR: the new launcher's insides (shell.h). One Shell holds the state of every screen; each
-// screen's file (home.cpp, library.cpp, hub.cpp, settings.cpp, pages.cpp, setup.cpp) has its
+// screen's file (library.cpp, hub.cpp, settings.cpp, pages.cpp, setup.cpp) has its
 // Update, which takes the frame's buttons, and its Draw, which records the frame; shell.cpp has the
 // loop, the bar, the hints, the backdrop and the overlays (the dropdown, a setting's help, the Game
 // menu, the keyboard, the update sheet, toasts and the launch). widgets.cpp draws the parts they
@@ -45,7 +45,6 @@ namespace ps5shell
 	{
 		Chooser,
 		Setup,
-		Home,
 		Library,
 		Hub,
 		Settings,
@@ -97,21 +96,21 @@ namespace ps5shell
 		std::string id;
 		std::string label, value;
 		std::string description; // one line, under it while focused
-		std::string help;		 // Triangle's, and the panel's
+		std::string help;		 // Triangle's
 		bool on = false;		 // Toggle
 		int index = 0;			 // Choice, Stepper, Segmented, Swatches: the one in use
 		std::vector<std::string> options;
 		float fraction = 0;		 // Slider
 		bool dimmed = false;
-		System side = System::WiiU; // a Link to a page of a side
-		bool sided = false;		 // the row belongs to one side's runtime (needs that side open)
+		bool needsCore = false;	 // a Wii U row Cemu's core must be up for
+		std::string setting;	 // a game can have its own of it: its name in ps5cemu.json (game settings)
+		bool fromSide = false;	 // game settings: the side's value, the game has none of its own
 	};
 
 	struct SettingsPage
 	{
 		std::string id, title, subtitle;
-		int section; // 0 General, 1 the side's, 2 the other side's, 3 Help
-		System side; // sections 1 and 2
+		Icon icon;
 	};
 
 	class Shell
@@ -128,6 +127,7 @@ namespace ps5shell
 		void DrawBackdrop(Canvas& canvas);
 		void DrawBubbles(Canvas& canvas, float alpha); // the Wii U side's motif, rising
 		void DrawWaves(Canvas& canvas, float alpha);   // the 3DS side's, rolling
+		void DrawPixels(Canvas& canvas, float alpha);  // the DS side's, rounded pixels rising
 		void DrawBar(Canvas& canvas, bool tabs);
 		void DrawHints(Canvas& canvas, const std::vector<Hint>& hints);
 		void DrawOverlays(Canvas& canvas);
@@ -136,19 +136,39 @@ namespace ps5shell
 		float Dt() const { return m_dt; }
 
 		// -- sides and games ----------------------------------------------------------------------
+		bool IsWiiU() const { return m_side == System::WiiU; }
 		bool Is3ds() const { return m_side == System::N3ds; }
-		ps5catalog::System CatalogSide() const { return Is3ds() ? ps5catalog::System::N3ds : ps5catalog::System::WiiU; }
-		ps5boxart::System BoxSide(System side) const { return side == System::N3ds ? ps5boxart::System::N3ds : ps5boxart::System::WiiU; }
-		// where a game's box art and GameTDB entry are: a DS game's (on the 3DS side) are the DS's
-		ps5boxart::System BoxOf(const ps5emu::Game& game) const { return game.nds ? ps5boxart::System::Nds : BoxSide(m_side); }
-		bool CoreReady() const { return Is3ds() || m_status.coreReady; }
-		const std::string& Notice() const { return Is3ds() ? m_status.notice3ds : m_status.notice; }
+		bool IsDs() const { return m_side == System::Nds; }
+		static int SideIndex(System side) { return (int)side; } // 0 Wii U, 1 3DS, 2 DS: the bar's order
+		int SideIndex() const { return SideIndex(m_side); }
+		static System NextSide(System side) { return (System)((SideIndex(side) + 1) % 3); }
+		static const char* SideTitle(System side) { return ps5launcher::SideTitle(side); }
+		static const char* SystemName(System side) { return side == System::N3ds ? "Nintendo 3DS" : side == System::Nds ? "Nintendo DS" : "Wii U"; }
+		static const char* EmulatorName(System side) { return side == System::N3ds ? "Azahar" : side == System::Nds ? "melonDS" : "Cemu"; }
+		ps5catalog::System CatalogSide() const { return (ps5catalog::System)SideIndex(); }
+		static ps5boxart::System BoxSide(System side)
+		{
+			return side == System::N3ds ? ps5boxart::System::N3ds : side == System::Nds ? ps5boxart::System::Nds : ps5boxart::System::WiiU;
+		}
+		ps5boxart::System BoxOf(const ps5emu::Game&) const { return BoxSide(m_side); }
+		bool CoreReady() const { return !IsWiiU() || m_status.coreReady; }
+		const std::string& Notice() const { return Is3ds() ? m_status.notice3ds : IsDs() ? m_status.noticeDs : m_status.notice; }
 		bool SystemScanning() const;
-		uint32_t Accent() const { return Is3ds() ? ui::tokens::kN3ds : ui::tokens::kWiiu; }
-		uint32_t AccentOf(System side) const { return side == System::N3ds ? ui::tokens::kN3ds : ui::tokens::kWiiu; }
-		std::string& GamesFolder(System side) { return side == System::N3ds ? m_settings.n3ds.gamesFolder : m_settings.gamesFolder; }
+		uint32_t Accent() const { return AccentOf(m_side); }
+		static uint32_t AccentOf(System side) { return side == System::N3ds ? ui::tokens::kN3ds : side == System::Nds ? ui::tokens::kNds : ui::tokens::kWiiu; }
+		std::string& GamesFolder(System side)
+		{
+			return side == System::N3ds ? m_settings.n3ds.gamesFolder : side == System::Nds ? m_settings.nds.gamesFolder : m_settings.gamesFolder;
+		}
+		const std::string& GamesFolder(System side) const
+		{
+			return side == System::N3ds ? m_settings.n3ds.gamesFolder : side == System::Nds ? m_settings.nds.gamesFolder : m_settings.gamesFolder;
+		}
+		// a handheld side's settings (the 3DS's or the DS's: the same shape)
+		ps5settings::N3ds& Handheld(System side) { return side == System::Nds ? m_settings.nds : m_settings.n3ds; }
+		uint64_t& LastGame(System side) { return side == System::N3ds ? m_settings.n3ds.lastGame : side == System::Nds ? m_settings.nds.lastGame : m_settings.lastGame; }
 		void OpenSide(System side, bool first);
-		void SwitchSide();
+		void SwitchSide(System side);
 		void LoadGames();
 		void PollGames();
 		void MakeGame(Game& game, const ps5catalog::Entry& entry);
@@ -158,7 +178,6 @@ namespace ps5shell
 		// sharing the icons' budget: each mounts the game), else the box art
 		std::string BackdropOf(Game& game);
 		const ui::Picture& Cover(Game& game, bool blurred = false);
-		std::vector<int> RecentGames() const; // indices, newest first, at most 12
 		int FindGame(uint64_t titleId) const;
 		std::string Byline(const Game& game) const;
 		std::string Played(const Game& game) const;
@@ -183,7 +202,7 @@ namespace ps5shell
 			float height = 72);
 		Box IconButton(Canvas& canvas, float x, float y, Icon icon, bool focused, float size = 72);
 		float Chip(Canvas& canvas, float x, float y, const std::string& text, const char* kind = "", float height = 38);
-		float Badge(Canvas& canvas, float x, float y, System side, bool ds = false); // ds: a DS game's, on the 3DS side
+		float Badge(Canvas& canvas, float x, float y, System side);
 		void DrawCover(Canvas& canvas, Game& game, const Box& box, bool focused, float lift);
 		void DrawGameName(Canvas& canvas, Game& game, const Box& box);
 		void DrawRow(Canvas& canvas, const Row& row, const Box& box, bool focused);
@@ -210,16 +229,18 @@ namespace ps5shell
 		void FinishStart();		  // the first Setup check done: the side, or the chooser when asked for
 		void DrawBrandBackdrop(Canvas& canvas, float seam); // both sides' colours meeting at the seam
 
-		void HomeUpdate(const ui::Press& press);
-		void HomeDraw(Canvas& canvas);
-		int HomeGame() const; // the game Home's row has the focus on, or -1
-
 		void LibraryUpdate(const ui::Press& press);
 		void LibraryDraw(Canvas& canvas);
 		void LibraryRefresh(); // the filter and the sort again
 		int LibraryGame() const;
 		int LibraryColumns() const;
-		int LibraryFilters() const; // All, Recently added, Favourites, and Graphic packs on (Wii U) or DS games (3DS, when it has some)
+		int LibraryFilters() const; // All, Recently added, Favourites, and Graphic packs on (Wii U)
+		int ArticTiles() const { return Is3ds() ? 1 : 0; } // the 3DS side's shelf starts with Artic Base
+		// what the Library shows in place of its shelf: a notice, Cemu starting, the scan, no games
+		// (6.1, 6.2), its buttons in m_stateButtons; false when the shelf shows
+		bool LibraryState(std::string& kicker, std::string& title, std::string& text, std::vector<std::string>& buttons) const;
+		void LibraryStateUpdate(const ui::Press& press);
+		void LibraryStateDraw(Canvas& canvas);
 
 		void HubOpen(int game, ScreenId from);
 		void HubUpdate(const ui::Press& press);
@@ -228,10 +249,22 @@ namespace ps5shell
 		void SettingsOpen(const std::string& page, bool onRows = false, int row = 0);
 		void SettingsUpdate(const ui::Press& press, const ui::Actions& actions);
 		void SettingsDraw(Canvas& canvas);
-		std::vector<SettingsPage> SettingsPages() const;
+		std::vector<SettingsPage> SettingsPages() const; // the side's (or the game's, in game settings)
 		std::vector<Row> SettingRows(const std::string& page);
+		std::vector<Row> SideRows(const std::string& page, const ps5settings::Launcher& settings);
 		std::string PanelText(const std::string& page) const;
 		void ChangeSetting(const Row& row, int step, bool cross);
+		// a row's value changed: in the settings given (the side's, or a game's view of them)
+		bool ApplyRow(ps5settings::Launcher& settings, const Row& row, int step, bool cross);
+		void SetRowIndex(ps5settings::Launcher& settings, const std::string& id, int index);
+		void ChooseIndex(const Row& row, int index); // a dropdown's choice
+		void SettingsChanged(const std::string& id); // the side's settings changed: saved, and what they change at once
+		void KeepGameSetting(const std::string& setting, const ps5settings::Launcher& view);
+		// game settings (6.5): the same pages, scoped to one game
+		void GameSettingsOpen(int game);
+		void GameSettingsClose();
+		bool InGameSettings() const { return m_gameTitle != 0; }
+		void ResetGameSetting(const Row& row);
 		void HoldDone(const std::string& id);
 		std::string PacksStatus() const;
 		static std::string AppUpdateStatus();
@@ -251,6 +284,7 @@ namespace ps5shell
 		void MappingDraw(Canvas& canvas);
 		void PollCapture();
 		std::vector<ps5emu::ButtonMapping> Mappings() const;
+		void SetHandheldMapping(int index, ps5emu::PadInput input);
 		void FilesOpen(int mode);
 		bool BrowseTo(const std::string& folder);
 		void FilesUpdate(const ui::Press& press);
@@ -298,10 +332,10 @@ namespace ps5shell
 		uint32_t m_boxArrivals = 0;
 		bool m_iconLookedThisFrame = false;
 
-		ScreenId m_screen = ScreenId::Home;
-		ScreenId m_tab = ScreenId::Home;
+		ScreenId m_screen = ScreenId::Library;
+		ScreenId m_tab = ScreenId::Library;
 		bool m_onBar = false;
-		int m_barFocus = 1; // 0 the side switch, 1 to 3 the tabs
+		int m_barFocus = 1; // 0 the side switch, 1 Library, 2 Settings
 		double m_screenAt = -10;  // when the screen was entered (its parts arrive)
 		bool m_done = false;	  // a game is chosen and the launch shown
 		std::optional<ps5launcher::Choice> m_choice;
@@ -334,19 +368,9 @@ namespace ps5shell
 		// what the backdrop is asked to show (the focused game's picture and colours)
 		void WantBackdrop(Game* game);
 
-		// Home
-		struct Card
-		{
-			std::string title, value, detail, action;
-		};
-		std::vector<Card> m_cards;
-		uint64_t m_cardsFor = ~0ull;
-		std::vector<Box> m_rowBoxes;
-		std::vector<Box> m_homeButtons;
-		int m_homeZone = 0; // 0 the row, 1 the buttons, 2 the cards
-		int m_homeIndex = 0, m_homeButton = 0, m_homeCard = 0;
-		std::vector<int> m_homeGames;
-		std::vector<ui::Spring> m_rowX, m_rowH;
+		// the Library's state card (no games, a notice): its buttons, and the one in focus
+		std::vector<Box> m_stateButtons;
+		int m_stateButton = 0;
 
 		// Library
 		std::vector<int> m_shelf; // indices in m_games, filtered and sorted
@@ -356,22 +380,19 @@ namespace ps5shell
 		std::string m_search;
 		uint64_t m_libraryFocusTitle = 0;
 
-		// each side keeps its focus across a switch (5.3): its Home and Library games, by title
-		struct SideFocus
-		{
-			uint64_t homeTitle = 0, libraryTitle = 0;
-		} m_sideFocus[2];
+		// each side keeps its focus across a switch (5.3): its Library game, by title
+		uint64_t m_sideFocus[3] = {};
 
 		// the hub
 		int m_hubGame = -1;
-		ScreenId m_hubFrom = ScreenId::Home;
+		ScreenId m_hubFrom = ScreenId::Library;
 		int m_hubAction = 0;
 		bool m_hubAbout = false;
 		ui::Spring m_hubScroll;
 		float m_hubAboutHeight = 0;
 
 		// Settings
-		std::string m_page = "display";
+		std::string m_page = "graphics";
 		bool m_onRows = false;
 		int m_settingRow = 0;
 		ui::Spring m_railScroll;
@@ -381,14 +402,19 @@ namespace ps5shell
 		bool m_holdFired = false;
 		std::string m_message; // a row's outcome
 		float m_holdProgress = 0; // a Hold row's, 0 to 1
-		bool m_rescan[2] = {};	   // a side's folder changed while the other side was open
-		void SetChoice(const std::string& id, int index);
-		void DrawScreensPreview(Canvas& canvas, const Box& box);
+		bool m_rescan[3] = {};	   // a side's folder changed while another side was open
+		// game settings: the game's title ID (0: the side's settings), its name, what the side's
+		// settings look like with its own over them, and where Circle goes back to
+		uint64_t m_gameTitle = 0;
+		std::string m_gameName;
+		ps5settings::Launcher m_gameView;
+		ScreenId m_gameFrom = ScreenId::Library;
+		std::string m_sidePage = "graphics"; // the side's page, kept while game settings are open
 
 		// pages
 		ScreenId m_pageFrom = ScreenId::Settings; // where Files and Artic Base go back to
-		ScreenId m_packsFrom = ScreenId::Home;
-		bool m_mapping3ds = false;
+		ScreenId m_packsFrom = ScreenId::Library;
+		System m_mappingSide = System::N3ds; // a handheld side's buttons
 		void ClosePage(ScreenId to);
 		void ApplyCemuOptions();
 		int m_packsGame = 0;

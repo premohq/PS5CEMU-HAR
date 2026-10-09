@@ -76,6 +76,21 @@ namespace ps5azahar
 		return mappings;
 	}
 
+	const std::vector<Button>& DsButtons()
+	{
+		static const std::vector<Button> buttons = {Button::A, Button::B, Button::X, Button::Y, Button::L, Button::R, Button::Start, Button::Select,
+			Button::Up, Button::Down, Button::Left, Button::Right, Button::CircleUp, Button::CircleDown, Button::CircleLeft, Button::CircleRight};
+		return buttons;
+	}
+
+	ps5emu::ButtonMapping Mapping(const ps5settings::N3ds& settings, Button button, bool ds)
+	{
+		static const char* kDsCircle[] = {"D-pad up, by stick", "D-pad down, by stick", "D-pad left, by stick", "D-pad right, by stick"};
+		const bool circle = button >= Button::CircleUp && button <= Button::CircleRight;
+		const char* label = ds && circle ? kDsCircle[(int)button - (int)Button::CircleUp] : kButtons[(size_t)button].label;
+		return {label, InputName(MappedInput(settings, button))};
+	}
+
 	void SetMapping(ps5settings::N3ds& settings, size_t index, PadInput input)
 	{
 		if (index >= kButtons.size())

@@ -189,6 +189,7 @@ namespace ps5azahar
 		std::atomic_bool s_stop = false;
 		std::atomic_bool s_running = false;
 		ps5settings::N3ds s_settings; // the game's loop's: as the menu leaves them
+		ps5settings::N3ds s_launched;	// what the game started with, or what the menu last saved
 		std::string s_name;
 		uint64_t s_titleId = 0;
 		bool s_coreTouched = false; // LaunchGame got as far as starting Azahar's core
@@ -492,10 +493,12 @@ namespace ps5azahar
 				ps5log::Line("[azahar] speed limit {}", menu.speedLimit ? fmt::format("{}%", menu.speedLimit) : "none");
 			}
 
-			ps5settings::Launcher all = ps5settings::Load();
-			all.n3ds = s_settings;
-			all.side = "3ds";
-			ps5settings::Save(all);
+			// into the game's own settings when it has some, else the side's (docs/UI-REDESIGN.md, 6.5)
+			ps5settings::Launcher before, after;
+			before.n3ds = s_launched;
+			after.n3ds = s_settings;
+			ps5settings::SaveChanges("3ds", s_titleId, before, after);
+			s_launched = s_settings;
 		}
 
 		const char* LoadError(Core::System::ResultStatus status)
@@ -624,12 +627,12 @@ namespace ps5azahar
 			path = Service::AM::GetTitleContentPath(Service::FS::MediaType::SDMC, game.titleId);
 			if (!FileUtil::Exists(path))
 			{
-				error = "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game.";
+				error = "A CIA file is installed, not played: install it from Settings > Game files, then start the game.";
 				return false;
 			}
 			ps5log::Line("[azahar] the CIA's game is installed: {}", path);
 		}
-		s_settings = settings;
+		s_settings = s_launched = settings;
 		ApplySettings(settings);
 
 		Core::System& system = Core::System::GetInstance();

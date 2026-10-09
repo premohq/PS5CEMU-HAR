@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // PS5CEMU-HAR: the Setup check (docs/UI-REDESIGN.md, 6.7) and the side chooser (5.3). The Setup check
 // answers "why doesn't it work?" in one place: storage, the recompilers, each side's games and keys,
-// the 3DS's system files and box art, each with its status, what it means and what to do, and a QR
-// code to the guide's page about it. It shows on the first start and whenever storage or the
-// recompilers fail at start, then the app opens on a side's Home; Settings > Help opens it at any
-// time. The chooser, the classic start screen's two cards restyled, shows only with Start on: Ask
-// each time, which is off by default: nothing else ever asks which side.
+// the 3DS's system files, the DS's BIOS and box art, each with its status, what it means and what to
+// do, and a QR code to the guide's page about it. It shows on the first start and whenever storage or
+// the recompilers fail at start, then the app opens on a side's Library; Settings > Diagnostics opens
+// it at any time. The chooser, a card for each of the three sides, shows only with Start on: Ask each
+// time, which is off by default: nothing else ever asks which side.
 
 #include "shell_internal.h"
 #include "../actions.h"
@@ -68,7 +68,7 @@ namespace ps5shell
 		int Covers()
 		{
 			int covers = 0;
-			for (const char* side : {"wiiu", "3ds"})
+			for (const char* side : {"wiiu", "3ds", "ds"})
 			{
 				bool ok = false;
 				for (const std::string& name : ListEntries(std::string(ps5paths::kCovers) + "/boxart/" + side, false, ok))
@@ -77,7 +77,8 @@ namespace ps5shell
 			return covers;
 		}
 
-		// The two consoles, drawn as shapes in their side's colour (the classic start screen's icons)
+		// The three consoles, drawn as shapes in their side's colour (the classic start screen's icons, and
+		// the DS Lite beside them)
 		void DrawGamePad(Canvas& canvas, float cx, float cy, uint32_t accent)
 		{
 			const uint32_t shell = 0xfffbf7f4, grey = 0xff8b7464;
@@ -126,6 +127,37 @@ namespace ps5shell
 		}
 	}
 
+	namespace
+	{
+		void DrawNds(Canvas& canvas, float cx, float cy, uint32_t accent)
+		{
+			// a DS Lite, open: two screens of the same size, the top one between its speakers
+			const uint32_t shell = 0xfff4f2f0, hinge = 0xff6c7a87, grey = 0xff7c7066;
+			const Box top{cx - 124, cy - 150, 248, 140}, bottom{cx - 124, cy + 10, 248, 140};
+			canvas.Shadow({top.x, top.y, top.w, bottom.Bottom() - top.y}, 22, 18, 34, 0x73000000);
+			canvas.Rect({top.x + 14, top.Bottom() - 4, 220, 18}, 6, hinge);
+			canvas.Rect(top, 20, shell);
+			canvas.Rect(bottom, 20, shell);
+			const Box upper{top.x + 64, top.y + 22, 120, 92};
+			canvas.Rect(upper.Inset(-5), 8, accent);
+			canvas.LinearGradient(upper, 4, ui::Mix(accent, kInk1, 0.6f) | 0xff000000, kInk1, upper.x, upper.y, upper.x, upper.Bottom());
+			canvas.Draw(Icon::Play, {upper.CentreX() - 22, upper.CentreY() - 22, 44, 44}, accent);
+			for (float x : {top.x + 34, top.Right() - 34})
+				for (int i = 0; i < 3; i++)
+					canvas.Rect({x - 3, top.y + 52 + i * 14, 6, 6}, 3, grey);
+			const Box lower{bottom.x + 64, bottom.y + 22, 120, 92};
+			canvas.Rect(lower.Inset(-4), 7, grey);
+			canvas.LinearGradient(lower, 4, ui::Mix(accent, kInk1, 0.75f) | 0xff000000, kInk1, lower.x, lower.y, lower.x, lower.Bottom());
+			// the D-pad, and A, B, X and Y (A in the side's colour)
+			canvas.Rect({bottom.x + 16, bottom.y + 62, 34, 11}, 3, grey);
+			canvas.Rect({bottom.x + 27, bottom.y + 51, 11, 34}, 3, grey);
+			const float bx = bottom.Right() - 33, by = bottom.y + 66;
+			canvas.Rect({bx + 9, by - 5, 11, 11}, 5.5f, accent);
+			for (const auto& [dx, dy] : {std::pair{-20.0f, 0.0f}, {-4.0f, -14.0f}, {-4.0f, 14.0f}})
+				canvas.Rect({bx + dx - 1, by + dy - 5, 11, 11}, 5.5f, grey);
+		}
+	}
+
 	// -- the Setup check ------------------------------------------------------------------------------
 
 	bool Shell::SetupNeeded() const
@@ -138,7 +170,7 @@ namespace ps5shell
 	{
 		m_setupFirst = first;
 		if (!first)
-			m_setupFrom = m_screen == ScreenId::Home ? ScreenId::Home : ScreenId::Settings;
+			m_setupFrom = m_screen == ScreenId::Settings ? ScreenId::Settings : ScreenId::Library;
 		else if (!m_settings.ui.setupDone)
 		{
 			// shown once (and again whenever storage or the recompilers fail at start)
@@ -222,36 +254,40 @@ namespace ps5shell
 		m_checks.push_back(recompilers);
 
 		// each side's games: as its last scan found them, else as its folder holds them
-		for (System side : {System::WiiU, System::N3ds})
+		for (System side : {System::WiiU, System::N3ds, System::Nds})
 		{
-			const bool n3ds = side == System::N3ds;
+			const bool n3ds = side == System::N3ds, nds = side == System::Nds;
 			const std::string& folder = GamesFolder(side);
-			const int catalogued = (int)ps5catalog::Games(n3ds ? ps5catalog::System::N3ds : ps5catalog::System::WiiU).size();
-			int count = std::max(catalogued, n3ds ? m_settings.n3ds.gameCount : m_settings.gameCount);
+			const int catalogued = (int)ps5catalog::Games((ps5catalog::System)SideIndex(side)).size();
+			int count = std::max(catalogued, side == System::WiiU ? m_settings.gameCount : Handheld(side).gameCount);
 			bool readable = true;
 			if (count <= 0)
 			{
-				count = n3ds ? Count3dsGames(folder) : CountGames(folder);
+				count = n3ds ? Count3dsGames(folder) : nds ? CountDsGames(folder) : CountGames(folder);
 				readable = count >= 0;
 			}
-			Check games{n3ds ? "3ds-games" : "wiiu-games", n3ds ? "3DS and DS games" : "Wii U games"};
+			Check games{std::string(ps5launcher::SideName(side)) + "-games", fmt::format("{} games", SideTitle(side))};
 			games.action = "Choose a folder";
 			games.state = count > 0 ? 0 : 1;
 			const std::string where = ShortPath(Place(folder), 44);
 			games.detail = count > 0 ? fmt::format("{} in {}", Plural(count, "game", "games"), where) :
 				readable		   ? fmt::format("None in {} yet", where) :
 									 fmt::format("{} cannot be read", where);
-			games.aboutTitle = n3ds ? "Where your 3DS and DS games go" : "Where your Wii U games go";
+			games.aboutTitle = fmt::format("Where your {} games go", SideTitle(side));
 			games.about = n3ds ? fmt::format("Put them in {}, or choose any folder the PS5 can read, such as one on a USB drive. Folders "
-											 "inside it are searched too. CIA files are installed, from Settings > Install CIA files. DS "
-											 "games (.nds) go in the same folder and show in the 3DS library.",
+											 "inside it are searched too. CIA files are installed, from Settings > Game files on the 3DS "
+											 "side.",
+									 folder) :
+				nds			   ? fmt::format("Put them in {}, or choose any folder the PS5 can read, such as one on a USB drive. Folders "
+											 "inside it are searched too.",
 									 folder) :
 								 fmt::format("Put them in {}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and "
-											 "DLC go in from Settings > Install updates and DLC, or come with a .wua.",
+											 "DLC go in from Settings > Game files, or come with a .wua.",
 									 folder);
-			games.chips = n3ds ? std::vector<std::string>{".3ds", ".cci", ".cxi", ".3dsx", ".z3ds", ".cia", ".nds"} :
+			games.chips = n3ds ? std::vector<std::string>{".3ds", ".cci", ".cxi", ".3dsx", ".z3ds", ".cia"} :
+				nds			   ? std::vector<std::string>{".nds", ".srl"} :
 								 std::vector<std::string>{".wua", ".wud", ".wux", "code · content · meta", ".rpx"};
-			games.guide = std::string(kRepository) + (n3ds ? "#nintendo-3ds" : "#wii-u");
+			games.guide = std::string(kRepository) + (n3ds ? "#nintendo-3ds" : nds ? "#nintendo-ds-melonds" : "#wii-u");
 			games.guideTitle = "the game files page";
 			m_checks.push_back(games);
 		}
@@ -371,9 +407,9 @@ namespace ps5shell
 			}
 			const Check& check = m_checks[m_setupRow];
 			m_feedback.Play(ui::Cue::Select);
-			if (check.id == "wiiu-games" || check.id == "3ds-games")
+			if (check.id == "wiiu-games" || check.id == "3ds-games" || check.id == "ds-games")
 			{
-				m_filesSide = check.id == "3ds-games" ? System::N3ds : System::WiiU;
+				m_filesSide = ps5launcher::SideNamed(check.id.substr(0, check.id.find('-')));
 				FilesOpen(0); // back here when it is done
 			}
 			else if (check.id == "3ds-system")
@@ -398,10 +434,10 @@ namespace ps5shell
 			m_feedback.Play(ui::Cue::Back);
 			if (m_setupFirst)
 				FinishStart();
-			else if (m_setupFrom == ScreenId::Home)
-				ShowTab(ScreenId::Home);
+			else if (m_setupFrom == ScreenId::Library)
+				ShowTab(ScreenId::Library);
 			else
-				SettingsOpen("setup");
+				SettingsOpen("diagnostics", true);
 			break;
 		default: break;
 		}
@@ -429,13 +465,18 @@ namespace ps5shell
 		canvas.Text(Style({20, ui::Weight::Medium, 1.0f}), x + 8, 236, progress, Secondary());
 		canvas.PopAlpha();
 
-		// the checks
+		// the checks: those past the screen's foot scroll with the focus
 		canvas.PushAlpha(Enter(1));
 		canvas.PushOffset(0, (1 - Enter(1)) * 24);
+		constexpr float kListBottom = 1080 - 96;
+		const float listHeight = count * (kRowHeight + kRowGap) - kRowGap;
+		const float listScroll = std::clamp(m_setupRow * (kRowHeight + kRowGap) - (kListBottom - kListTop) * 0.5f, 0.0f,
+			std::max(0.0f, listHeight - (kListBottom - kListTop)));
+		canvas.PushClip({0, kListTop - 12, kSafeX + kListWidth + 24, kListBottom - kListTop + 24});
 		for (int i = 0; i < count; i++)
 		{
 			const Check& check = m_checks[i];
-			const Box row{kSafeX, kListTop + i * (kRowHeight + kRowGap), kListWidth, kRowHeight};
+			const Box row{kSafeX, kListTop + i * (kRowHeight + kRowGap) - listScroll, kListWidth, kRowHeight};
 			const bool focused = i == m_setupRow;
 			canvas.Rect(row, kRadiusCard, focused ? Surface2() : Surface());
 			if (focused)
@@ -468,6 +509,7 @@ namespace ps5shell
 			if (focused)
 				Focus(row, kRadiusCard);
 		}
+		canvas.PopClip();
 		canvas.PopOffset();
 		canvas.PopAlpha();
 		if (count == 0)
@@ -550,9 +592,11 @@ namespace ps5shell
 	{
 		const Box screen{0, 0, 1920, 1080};
 		canvas.LinearGradient(screen, 0, 0xff160c08, kInk0, 0, 0, 0, 1080);
-		// the Wii U's blue far behind the left, the 3DS's gold behind the right, as the banner has them
+		// the Wii U's blue far behind the left, the 3DS's gold behind the right, as the banner has them, and
+		// the DS's green rising from below the middle
 		canvas.RadialGradient(screen, 0, ui::SetAlpha(0xffdf9f3b, 0.30f), ui::SetAlpha(0xffdf9f3b, 0), 0.18f * 1920, 0.40f * 1080, 605, 529);
 		canvas.RadialGradient(screen, 0, ui::SetAlpha(kN3ds, 0.20f), ui::SetAlpha(kN3ds, 0), 0.88f * 1920, 0.60f * 1080, 605, 529);
+		canvas.RadialGradient(screen, 0, ui::SetAlpha(kNds, 0.14f), ui::SetAlpha(kNds, 0), 0.5f * 1920, 1.05f * 1080, 700, 420);
 		// bubbles on the one side of the seam, waves on the other
 		canvas.PushClip({0, 0, seam, 1080});
 		DrawBubbles(canvas, 0.6f);
@@ -575,12 +619,20 @@ namespace ps5shell
 		{
 		case Button::Left:
 		case Button::Right:
-			m_chooserSide = 1 - m_chooserSide;
-			m_feedback.Play(ui::Cue::Focus);
+		{
+			const int next = m_chooserSide + (press.button == Button::Right ? 1 : -1);
+			if (next < 0 || next > 2)
+				m_feedback.Play(ui::Cue::Edge, press.repeat);
+			else
+			{
+				m_chooserSide = next;
+				m_feedback.Play(ui::Cue::Focus);
+			}
 			break;
+		}
 		case Button::Cross:
 			m_feedback.Play(ui::Cue::Select);
-			OpenSide(m_chooserSide == 1 ? System::N3ds : System::WiiU, true);
+			OpenSide((System)std::clamp(m_chooserSide, 0, 2), true);
 			break;
 		default: break;
 		}
@@ -591,12 +643,12 @@ namespace ps5shell
 		canvas.PushAlpha(Enter(0));
 		canvas.Text(Style({40, ui::Weight::Bold, 1.0f, 10, true}), 960, 92, "PS5CEMU-HAR", kText, 0, 0, ui::Align::Centre);
 		canvas.PopAlpha();
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 3; i++)
 		{
-			const System side = i == 1 ? System::N3ds : System::WiiU;
+			const System side = (System)i;
 			const bool focused = i == m_chooserSide;
 			const uint32_t accent = AccentOf(side);
-			const Box card = Box{i == 0 ? 150.0f : 1110.0f, 190, 660, 720}.Scaled(focused ? 1.02f : 1.0f);
+			const Box card = Box{120.0f + i * 570.0f, 190, 540, 720}.Scaled(focused ? 1.02f : 1.0f);
 			canvas.PushAlpha(Enter(1 + i) * (focused ? 1.0f : 0.55f));
 			canvas.PushOffset(0, (1 - Enter(1 + i)) * 30);
 			if (focused)
@@ -605,14 +657,15 @@ namespace ps5shell
 			canvas.Ring(card, kRadiusSheet, 1.5f, kGlassEdge);
 			if (side == System::WiiU)
 				DrawGamePad(canvas, card.CentreX(), card.y + 280, accent);
-			else
+			else if (side == System::N3ds)
 				DrawN3ds(canvas, card.CentreX(), card.y + 280, accent);
-			canvas.Text(Style({64, ui::Weight::Bold, 1.1f}), card.CentreX(), card.y + 470, side == System::N3ds ? "Nintendo 3DS" : "Wii U", kText, 0, 0,
-				ui::Align::Centre);
-			const bool n3ds = side == System::N3ds;
-			const int games = std::max<int>((int)ps5catalog::Games(n3ds ? ps5catalog::System::N3ds : ps5catalog::System::WiiU).size(),
-				n3ds ? m_settings.n3ds.gameCount : m_settings.gameCount);
-			const std::string count = n3ds && !ps5azahar::Available() ? "Not in this build" :
+			else
+				DrawNds(canvas, card.CentreX(), card.y + 280, accent);
+			canvas.Text(Style({56, ui::Weight::Bold, 1.1f}), card.CentreX(), card.y + 470, SystemName(side), kText, 0, 0, ui::Align::Centre);
+			const int games = std::max<int>((int)ps5catalog::Games((ps5catalog::System)i).size(),
+				side == System::WiiU ? m_settings.gameCount : Handheld(side).gameCount);
+			const bool missing = (side == System::N3ds && !ps5azahar::Available()) || (side == System::Nds && !ps5melonds::Available());
+			const std::string count = missing ? "Not in this build" :
 				games < 0											  ? "Open to look for games" :
 				games == 0											  ? "No games yet" :
 																		Plural(games, "game", "games");
