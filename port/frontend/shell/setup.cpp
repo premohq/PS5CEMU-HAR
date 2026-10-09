@@ -12,6 +12,7 @@
 #include "../../app/paths.h"
 #include "../../app/updates.h"
 #include "../../azahar/azahar.h"
+#include "../../melonds/melonds.h"
 #include "../../ps5/privilege.h"
 
 #include <algorithm>
@@ -233,21 +234,22 @@ namespace ps5shell
 				count = n3ds ? Count3dsGames(folder) : CountGames(folder);
 				readable = count >= 0;
 			}
-			Check games{n3ds ? "3ds-games" : "wiiu-games", n3ds ? "3DS games" : "Wii U games"};
+			Check games{n3ds ? "3ds-games" : "wiiu-games", n3ds ? "3DS and DS games" : "Wii U games"};
 			games.action = "Choose a folder";
 			games.state = count > 0 ? 0 : 1;
 			const std::string where = ShortPath(Place(folder), 44);
 			games.detail = count > 0 ? fmt::format("{} in {}", Plural(count, "game", "games"), where) :
 				readable		   ? fmt::format("None in {} yet", where) :
 									 fmt::format("{} cannot be read", where);
-			games.aboutTitle = n3ds ? "Where your 3DS games go" : "Where your Wii U games go";
+			games.aboutTitle = n3ds ? "Where your 3DS and DS games go" : "Where your Wii U games go";
 			games.about = n3ds ? fmt::format("Put them in {}, or choose any folder the PS5 can read, such as one on a USB drive. Folders "
-											 "inside it are searched too. CIA files are installed, from Settings > Install CIA files.",
+											 "inside it are searched too. CIA files are installed, from Settings > Install CIA files. DS "
+											 "games (.nds) go in the same folder and show in the 3DS library.",
 									 folder) :
 								 fmt::format("Put them in {}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and "
 											 "DLC go in from Settings > Install updates and DLC, or come with a .wua.",
 									 folder);
-			games.chips = n3ds ? std::vector<std::string>{".3ds", ".cci", ".cxi", ".3dsx", ".z3ds", ".cia"} :
+			games.chips = n3ds ? std::vector<std::string>{".3ds", ".cci", ".cxi", ".3dsx", ".z3ds", ".cia", ".nds"} :
 								 std::vector<std::string>{".wua", ".wud", ".wux", "code · content · meta", ".rpx"};
 			games.guide = std::string(kRepository) + (n3ds ? "#nintendo-3ds" : "#wii-u");
 			games.guideTitle = "the game files page";
@@ -297,6 +299,21 @@ namespace ps5shell
 		system.guide = std::string(kRepository) + "#nintendo-3ds-azahar";
 		system.guideTitle = "the 3DS page";
 		m_checks.push_back(system);
+
+		// a DS's own BIOS, which DS games run without (melonDS's FreeBIOS) but a few run better with
+		const bool dsBios = ps5melonds::OwnBiosFound();
+		Check nds{"ds-bios", "DS BIOS"};
+		nds.state = dsBios ? 0 : 2;
+		nds.detail = dsBios ? "Your DS's BIOS found: DS games run on it" : "melonDS's own run DS games; your DS's are optional";
+		nds.action = dsBios ? "" : "How to";
+		nds.aboutTitle = "Your DS's own BIOS and firmware";
+		nds.about = fmt::format("melonDS runs DS games on its own BIOS (FreeBIOS) and firmware, which most games are happy with. The few that "
+								"are not run on your own DS's: bios7.bin, bios9.bin and firmware.bin, dumped from it, in {}/bios. No BIOS "
+								"comes with PS5CEMU-HAR.",
+			ps5melonds::kRoot);
+		nds.guide = std::string(kRepository) + "#nintendo-ds-melonds";
+		nds.guideTitle = "the DS page";
+		m_checks.push_back(nds);
 
 		// covers
 		Check boxArt{"boxart", "Box art"};

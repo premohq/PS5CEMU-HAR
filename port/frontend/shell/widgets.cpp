@@ -168,10 +168,10 @@ namespace ps5shell
 		return width;
 	}
 
-	float Shell::Badge(Canvas& canvas, float x, float y, System side)
+	float Shell::Badge(Canvas& canvas, float x, float y, System side, bool ds)
 	{
 		const ui::TextStyle style = Style({17, ui::Weight::Bold, 1.0f, 1.5f, true});
-		const char* text = side == System::N3ds ? "3DS" : "Wii U";
+		const char* text = ds ? "DS" : side == System::N3ds ? "3DS" : "Wii U";
 		const float width = 10 + 18 + 8 + m_fonts.Width(style, text) + 14;
 		const uint32_t colour = AccentOf(side);
 		const Box box{x, y, width, 34};
@@ -210,7 +210,7 @@ namespace ps5shell
 			const float band = drawn.h * 0.09f;
 			canvas.Rect({drawn.x, drawn.y, drawn.w, band}, 0, Is3ds() ? 0xfff4f4f4 : 0xffe08923);
 			const ui::TextStyle bandStyle{std::max(9.0f, band * 0.5f), ui::Weight::Bold, 1.0f, 1.0f, true};
-			const ui::TextBlock bandText = m_fonts.Layout(bandStyle, Is3ds() ? "Nintendo 3DS" : "Wii U");
+			const ui::TextBlock bandText = m_fonts.Layout(bandStyle, game.entry.game.nds ? "Nintendo DS" : Is3ds() ? "Nintendo 3DS" : "Wii U");
 			canvas.Text(bandText, drawn.x + drawn.w * 0.08f, drawn.y + (band - bandText.height) * 0.5f, Is3ds() ? 0xff2222cc : 0xe6ffffff);
 			const ui::Picture& icon = m_images->Get(IconOf(game));
 			if (icon.texture)

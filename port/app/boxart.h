@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // PS5CEMU-HAR: box art for the launcher's game details, from GameTDB (art.gametdb.com), which has
-// the Wii U's and the 3DS's covers by the ID printed on each game's box (ALZE01 for a Wii U game,
-// AREE for a 3DS one). They are fetched in the background over HTTP, as the Wii's homebrew loaders
-// fetch theirs, decoded, scaled to the launcher's cover and kept as TGAs it shows:
-// covers/boxart/<wiiu|3ds>/<ID>.tga. An ID GameTDB has no cover for is remembered (<ID>.none) and
-// not asked for again.
+// the Wii U's, the 3DS's and the DS's covers by the ID printed on each game's box (ALZE01 for a Wii U
+// game, AREE for a 3DS one, AMCE for a DS one). They are fetched in the background over HTTP, as the
+// Wii's homebrew loaders fetch theirs, decoded, scaled to the launcher's cover and kept as TGAs it
+// shows: covers/boxart/<wiiu|3ds|ds>/<ID>.tga. An ID GameTDB has no cover for is remembered
+// (<ID>.none) and not asked for again.
 
 #pragma once
 
@@ -18,6 +18,7 @@ namespace ps5boxart
 	{
 		WiiU,
 		N3ds,
+		Nds, // a DS game, on the 3DS side
 	};
 
 	// The largest a cover is kept: the launcher's cover area at 4K

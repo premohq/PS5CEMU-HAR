@@ -2,14 +2,14 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """GameTDB's game information for the launcher and the in-game menus: each game's description,
 developer, publisher, release date, genre, players and rating, by the ID on its box (ALZE01 for a
-Wii U game, AREE for a 3DS one, as for the box art).
+Wii U game, AREE for a 3DS one, AMCE for a DS one, as for the box art).
 
-    render-gametdb.py [OUTPUT_FOLDER] [--from FOLDER]
+    render-gametdb.py [OUTPUT_FOLDER] [--from FOLDER] [--only wiiu|3ds|ds]
 
-Downloads GameTDB's English Wii U and 3DS databases (www.gametdb.com/wiiutdb.zip and 3dstdb.zip),
-or reads them from FOLDER, and writes wiiu.tsv.gz and 3ds.tsv.gz (default: port/app/gametdb): one
-game a line, sorted by ID, its fields separated by tabs, with tabs, line breaks and backslashes in
-them written as \\t, \\n and \\\\:
+Downloads GameTDB's English Wii U, 3DS and DS databases (www.gametdb.com/wiiutdb.zip, 3dstdb.zip and
+dstdb.zip), or reads them from FOLDER, and writes wiiu.tsv.gz, 3ds.tsv.gz and ds.tsv.gz (default:
+port/app/gametdb), or only the one --only names: one game a line, sorted by ID, its fields separated
+by tabs, with tabs, line breaks and backslashes in them written as \\t, \\n and \\\\:
 
     id  title  region  synopsis  developer  publisher  released  genre  players  rating
 
@@ -28,7 +28,7 @@ import urllib.request
 import xml.etree.ElementTree as ElementTree
 import zipfile
 
-SOURCES = {"wiiu": "wiiutdb", "3ds": "3dstdb"}
+SOURCES = {"wiiu": "wiiutdb", "3ds": "3dstdb", "ds": "dstdb"}
 URL = "https://www.gametdb.com/{}.zip?LANG=EN"
 
 
@@ -94,9 +94,17 @@ def main():
     if "--from" in sys.argv:
         source = sys.argv[sys.argv.index("--from") + 1]
         args = [a for a in args if a != source]
+    only = None
+    if "--only" in sys.argv:
+        only = sys.argv[sys.argv.index("--only") + 1]
+        args = [a for a in args if a != only]
+        if only not in SOURCES:
+            sys.exit(f"--only takes one of {', '.join(SOURCES)}")
     out = args[0] if args else os.path.join(os.path.dirname(__file__), "..", "port", "app", "gametdb")
     os.makedirs(out, exist_ok=True)
     for system, name in SOURCES.items():
+        if only and system != only:
+            continue
         if source:
             with open(os.path.join(source, f"{name}.zip"), "rb") as file:
                 data = file.read()

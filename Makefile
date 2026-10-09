@@ -14,7 +14,7 @@ APP := build/app/PPSA99360
 JOBS ?= $(shell nproc)
 export JOBS
 
-.PHONY: help deps deps-status radv azahar build check package release clean distclean
+.PHONY: help deps deps-status radv azahar melonds build check package release clean distclean
 
 help: ## List the targets
 	@echo 'PS5CEMU-HAR build - make [target] [VARIABLE=value]'
@@ -40,10 +40,13 @@ radv: deps ## Build RADV, the Vulkan driver, with PS5_Vulkan's recipe and patche
 azahar: deps ## Build Azahar's core (the 3DS side) and its PS5 frontend: build/azahar
 	bash tools/build-azahar.sh
 
-build: deps azahar $(if $(RADV_ARCHIVE),,radv) ## Build PS5CEMU-HAR (Cemu and Azahar) and link it with RADV: build/cemu/ps5cemu.elf
+melonds: deps ## Build melonDS's core (the 3DS side's DS games) and its PS5 frontend: build/melonds
+	bash tools/build-melonds.sh
+
+build: deps azahar melonds $(if $(RADV_ARCHIVE),,radv) ## Build PS5CEMU-HAR (Cemu, Azahar and melonDS) and link it with RADV: build/cemu/ps5cemu.elf
 	bash tools/build-cemu.sh
 
-check: deps azahar ## Build and package everything with a stand-in for RADV, to check the build (not an app)
+check: deps azahar melonds ## Build and package everything with a stand-in for RADV, to check the build (not an app)
 	PS5CEMU_LINK_CHECK=1 bash tools/build-cemu.sh
 	bash tools/package.sh --check
 

@@ -118,6 +118,15 @@
       "creates": ".deps/PS5_Azahar/src/core/core.cpp"
     },
     {
+      "name": "melonds",
+      "about": "melonDS 1.1 (Nintendo DS emulator, GPL-3.0-or-later), the core of the 3DS side's DS games. patches/melonds holds the port's changes (tools/melonds-patches.sh): its JIT's code in the console's executable direct memory, no fast memory; tools/build-melonds.sh builds its core with the port's frontend (port/melonds)",
+      "kind": "git",
+      "url": "https://github.com/melonDS-emu/melonDS.git",
+      "commit": "b86390e4428bf38ce4c1ce0e9ca446d6d25955e8",
+      "path": ".deps/melonDS",
+      "creates": ".deps/melonDS/src/NDS.cpp"
+    },
+    {
       "name": "compiler-rt",
       "about": "LLVM 18.1.8 builtins Clang's PS5 code calls and the host has no compiler-rt for: the emulated-TLS runtime (emutls.c, for -femulated-tls) and __cpu_model (x86.c, for __builtin_cpu_supports in RADV)",
       "kind": "files",

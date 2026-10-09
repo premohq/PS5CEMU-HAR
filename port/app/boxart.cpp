@@ -58,7 +58,7 @@ namespace ps5boxart
 
 		const char* Folder(System system)
 		{
-			return system == System::WiiU ? "wiiu" : "3ds";
+			return system == System::WiiU ? "wiiu" : system == System::Nds ? "ds" : "3ds";
 		}
 
 		std::string Base(System system, const std::string& id)

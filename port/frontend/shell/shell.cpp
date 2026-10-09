@@ -436,9 +436,9 @@ namespace ps5shell
 	void Shell::MakeGame(Game& game, const ps5catalog::Entry& entry)
 	{
 		game.entry = entry;
-		game.boxArt = ps5boxart::Path(BoxSide(m_side), entry.game.gameId);
+		game.boxArt = ps5boxart::Path(BoxOf(entry.game), entry.game.gameId);
 		game.report = ps5compat::Find(Is3ds(), entry.game.name);
-		game.known = ps5gameinfo::Find(BoxSide(m_side), entry.game.gameId, game.info);
+		game.known = ps5gameinfo::Find(BoxOf(entry.game), entry.game.gameId, game.info);
 		game.year = game.known && game.info.released.size() >= 4 ? std::atoi(game.info.released.substr(0, 4).c_str()) : 0;
 		std::string name = Lower(entry.game.name);
 		if (name.rfind("the ", 0) == 0)
@@ -487,7 +487,7 @@ namespace ps5shell
 			m_boxArrivals = ps5boxart::Arrivals();
 			for (Game& game : m_games)
 				if (game.boxArt.empty())
-					game.boxArt = ps5boxart::Path(BoxSide(m_side), game.entry.game.gameId);
+					game.boxArt = ps5boxart::Path(BoxOf(game.entry.game), game.entry.game.gameId);
 		}
 	}
 
@@ -605,11 +605,14 @@ namespace ps5shell
 
 	void Shell::FetchBoxArt()
 	{
-		std::vector<std::string> ids;
+		// the side's covers, and on the 3DS side its DS games' from GameTDB's DS covers
+		std::vector<std::string> ids, dsIds;
 		for (const Game& game : m_games)
 			if (!game.entry.game.gameId.empty())
-				ids.push_back(game.entry.game.gameId);
+				(game.entry.game.nds ? dsIds : ids).push_back(game.entry.game.gameId);
 		ps5boxart::Fetch(BoxSide(m_side), ids);
+		if (!dsIds.empty())
+			ps5boxart::Fetch(ps5boxart::System::Nds, dsIds);
 	}
 
 	void Shell::RememberCount()
@@ -641,7 +644,7 @@ namespace ps5shell
 		Box from = m_launch.from;
 		if (from.w <= 0)
 			from = {760, 240, 400, 560};
-		LaunchGame(game.entry.game, Is3ds() ? "Starting Azahar" : "Starting Cemu", from);
+		LaunchGame(game.entry.game, game.entry.game.nds ? "Starting melonDS" : Is3ds() ? "Starting Azahar" : "Starting Cemu", from);
 		m_launch.game = index;
 	}
 
@@ -656,7 +659,7 @@ namespace ps5shell
 		m_launch.game = -1;
 		m_choice = ps5launcher::Choice{m_side, game};
 		m_feedback.Play(ui::Cue::Launch);
-		ps5log::Line("[launcher] {} chosen on the {} side", game.name, Is3ds() ? "3DS" : "Wii U");
+		ps5log::Line("[launcher] {} chosen on the {} side{}", game.name, Is3ds() ? "3DS" : "Wii U", game.nds ? " (a DS game)" : "");
 	}
 
 	void Shell::Toast(const std::string& text)
@@ -1389,7 +1392,7 @@ namespace ps5shell
 			canvas.PushOffset((1 - a) * 40, 0);
 			DrawSheet(canvas, sheet, a);
 			Game& game = m_games[m_menu.game];
-			Badge(canvas, sheet.x + 36, sheet.y + 32, m_side);
+			Badge(canvas, sheet.x + 36, sheet.y + 32, m_side, game.entry.game.nds);
 			canvas.Text(Style(kHeadingStyle), sheet.x + 36, sheet.y + 78, game.entry.game.name, kText, sheet.w - 72, 1);
 			static const std::map<std::string, Icon> kIcons = {{"play", Icon::Play}, {"hub", Icon::ChevronRight}, {"packs", Icon::Gear},
 				{"favourite", Icon::Star}, {"where", Icon::Folder}};

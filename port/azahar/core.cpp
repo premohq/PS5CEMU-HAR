@@ -280,48 +280,6 @@ namespace ps5azahar
 
 		void ReloadControls();
 
-		// The border's picture, from the app's assets/borders (tools/render-borders.py: uncompressed
-		// 24- or 32-bit TGA), for the menu's renderer to draw round the screens
-		void LoadBorder(int theme)
-		{
-			theme = std::clamp(theme, 0, ps5ingame3ds::kBorderCount - 1);
-			std::vector<uint8_t> rgba;
-			int width = 0, height = 0;
-			if (theme > 0)
-			{
-				std::string name = ps5ingame3ds::kBorderNames[theme];
-				std::transform(name.begin(), name.end(), name.begin(), ::tolower);
-				const std::string path = ps5paths::Assets() + "/borders/" + name + ".tga";
-				std::ifstream file(path, std::ios::binary);
-				std::vector<uint8_t> data((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-				const int bytes = data.size() >= 18 ? data[16] / 8 : 0;
-				if (data.size() >= 18 && data[2] == 2 && (bytes == 3 || bytes == 4))
-				{
-					width = data[12] | data[13] << 8;
-					height = data[14] | data[15] << 8;
-					const bool topFirst = data[17] & 0x20;
-					const size_t start = 18 + data[0];
-					if (data.size() >= start + (size_t)width * height * bytes)
-					{
-						rgba.resize((size_t)width * height * 4);
-						for (int y = 0; y < height; y++)
-							for (int x = 0; x < width; x++)
-							{
-								const uint8_t* in = &data[start + ((size_t)(topFirst ? y : height - 1 - y) * width + x) * bytes];
-								uint8_t* out = &rgba[((size_t)y * width + x) * 4];
-								out[0] = in[2];
-								out[1] = in[1];
-								out[2] = in[0];
-								out[3] = 255;
-							}
-					}
-				}
-				if (rgba.empty())
-					ps5log::Line("[azahar] border {}: {} could not be read", ps5ingame3ds::kBorderNames[theme], path);
-			}
-			ps5ingame3ds::SetBorder(theme, std::move(rgba), width, height);
-		}
-
 		// Where the screens are, for the border
 		void PublishScreens()
 		{
@@ -496,7 +454,7 @@ namespace ps5azahar
 			if (menu.border != s_settings.border)
 			{
 				s_settings.border = menu.border;
-				LoadBorder(menu.border);
+				ps5ingame3ds::LoadBorder(menu.border);
 			}
 			if (menu.aOnCircle != (MappedInput(s_settings, Button::A) == ps5emu::PadInput::Circle))
 			{
@@ -741,7 +699,7 @@ namespace ps5azahar
 		ShowInMenu();
 		ShowStateSlots();
 		ShowExtras();
-		LoadBorder(settings.border);
+		ps5ingame3ds::LoadBorder(settings.border);
 		PublishScreens();
 		s_stop = false;
 		s_running = true;

@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 # PS5CEMU-HAR: the port's host code, added to Cemu's tree by its CEMU_PS5 option (src/CMakeLists.txt):
-# the console layer (ps5/), Cemu's start-up and graphic packs (app/), Azahar's side (azahar/), and
-# the launcher (frontend/shell/), drawn on the GPU with the UI kit (ui/, docs/UI-REDESIGN.md). Cemu's
-# own platform classes (cemu/) are added to Cemu's targets by the patch.
+# the console layer (ps5/), Cemu's start-up and graphic packs (app/), Azahar's side (azahar/) with its
+# DS games (melonds/), and the launcher (frontend/shell/), drawn on the GPU with the UI kit (ui/,
+# docs/UI-REDESIGN.md). Cemu's own platform classes (cemu/) are added to Cemu's targets by the patch.
 
 # the release's version, from the Makefile's VERSION (the one place it is set: tools/package.sh
 # writes it into sce_sys/param.json too), read again when the Makefile changes
@@ -19,7 +19,7 @@ string(JSON PS5CEMU_DEPS_COUNT LENGTH "${PS5CEMU_DEPS_JSON}" items)
 math(EXPR PS5CEMU_DEPS_LAST "${PS5CEMU_DEPS_COUNT} - 1")
 foreach(index RANGE ${PS5CEMU_DEPS_LAST})
 	string(JSON name GET "${PS5CEMU_DEPS_JSON}" items ${index} name)
-	if(name STREQUAL "cemu" OR name STREQUAL "azahar")
+	if(name STREQUAL "cemu" OR name STREQUAL "azahar" OR name STREQUAL "melonds")
 		string(JSON commit GET "${PS5CEMU_DEPS_JSON}" items ${index} commit)
 		string(SUBSTRING "${commit}" 0 7 commit)
 		string(TOUPPER "${name}" name)
@@ -84,6 +84,12 @@ add_library(CemuPS5 STATIC
 	azahar/controls.h
 	azahar/library.cpp
 	azahar/library.h
+	melonds/library.cpp
+	melonds/library.h
+	melonds/melonds.h
+	melonds/screens.cpp
+	melonds/screens.h
+	melonds/shaders.h
 	frontend/actions.cpp
 	frontend/actions.h
 	frontend/launcher.h
@@ -154,6 +160,9 @@ set_source_files_properties(
 	azahar/controls.cpp
 	azahar/library.cpp
 	azahar/unavailable.cpp
+	melonds/library.cpp
+	melonds/screens.cpp
+	melonds/unavailable.cpp
 	frontend/actions.cpp
 	frontend/settings.cpp
 	frontend/shell/home.cpp
@@ -198,7 +207,8 @@ target_include_directories(CemuPS5 PRIVATE
 )
 # the version the launcher and the boot log show (the app's param.json has it as 02.000.004)
 target_compile_definitions(CemuPS5 PUBLIC PS5CEMU_VERSION="${PS5CEMU_VERSION}"
-	PS5CEMU_CEMU_COMMIT="${PS5CEMU_CEMU_COMMIT}" PS5CEMU_AZAHAR_COMMIT="${PS5CEMU_AZAHAR_COMMIT}")
+	PS5CEMU_CEMU_COMMIT="${PS5CEMU_CEMU_COMMIT}" PS5CEMU_AZAHAR_COMMIT="${PS5CEMU_AZAHAR_COMMIT}"
+	PS5CEMU_MELONDS_COMMIT="${PS5CEMU_MELONDS_COMMIT}")
 
 target_link_libraries(CemuPS5 PUBLIC
 	CemuAudio
@@ -232,4 +242,18 @@ if(PS5CEMU_AZAHAR_LIBRARIES AND EXISTS "${PS5CEMU_AZAHAR_LIBRARIES}")
 else()
 	target_sources(CemuPS5 PRIVATE azahar/unavailable.cpp)
 	message(STATUS "PS5CEMU-HAR: no Azahar build; 3DS games will not start")
+endif()
+
+# melonDS's core and its PS5 frontend, for the 3DS side's DS games (tools/build-melonds.sh builds them
+# in melonDS's tree): the archives its build lists. Without that build, DS games are listed and say why
+# they do not start (melonds/unavailable.cpp).
+set(PS5CEMU_MELONDS_LIBRARIES "" CACHE FILEPATH "The list of melonDS's archives (build/melonds/melonds_ps5_libraries.txt)")
+if(PS5CEMU_MELONDS_LIBRARIES AND EXISTS "${PS5CEMU_MELONDS_LIBRARIES}")
+	file(STRINGS "${PS5CEMU_MELONDS_LIBRARIES}" MELONDS_ARCHIVES)
+	target_link_libraries(CemuPS5 PUBLIC ${MELONDS_ARCHIVES})
+	set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS "${PS5CEMU_MELONDS_LIBRARIES}")
+	message(STATUS "PS5CEMU-HAR: melonDS's core from ${PS5CEMU_MELONDS_LIBRARIES}")
+else()
+	target_sources(CemuPS5 PRIVATE melonds/unavailable.cpp)
+	message(STATUS "PS5CEMU-HAR: no melonDS build; DS games will not start")
 endif()

@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // PS5CEMU-HAR: the launcher's settings, /data/ps5cemu/ps5cemu.json. Cemu's own settings stay in its
 // settings.xml; the launcher writes the few it manages (game folder, volume, overlay, upscaling
-// filter) into both. Azahar's are here (n3ds), and given to it when a 3DS game starts.
+// filter) into both. Azahar's are here (n3ds), and given to it when a 3DS game starts; a DS game,
+// which the 3DS side lists too, starts on melonDS with the same ones (its screens, border, sound and
+// controls) and the few of its own (ds...).
 
 #pragma once
 
@@ -32,6 +34,10 @@ namespace ps5settings
 		// Azahar does on Apple GPUs, for Pokemon X's moving black stipples (#23). Off, as on a PC,
 		// until a console has shown it fixes them, and what it costs
 		bool invariantPosition = false;
+		// the DS's games (melonDS: port/melonds)
+		int dsFilter = 0;			  // how the DS's screens are scaled to the TV: sharp, smooth, square pixels (ps5melonds::screens::Filter)
+		bool dsJit = true;			  // melonDS's recompiler where the console gives executable memory; off: its interpreter, slower
+		bool dsOwnBios = true;		  // the DS's own BIOS and firmware when they are in melonds/bios; off (or missing): melonDS's FreeBIOS
 		std::string articAddress;	  // the last Artic Base server's IPv4 address, a 3DS on the network
 		int gameCount = -1;			  // the library's games when last looked for (the start screen's); -1: never
 		std::map<std::string, std::string> buttons; // 3DS button: DualSense input, where not the default
@@ -50,7 +56,7 @@ namespace ps5settings
 		int holdMs = 800;			 // hold to confirm, 400 to 1500
 		bool gamePictures = true;	 // the focused game's picture behind the menus
 		bool setupDone = false;		 // the Setup check was shown once
-		int libraryFilter[2] = {0, 0}; // per side (Wii U, 3DS): All, Recently added, Favourites, Graphic packs on
+		int libraryFilter[2] = {0, 0}; // per side (Wii U, 3DS): All, Recently added, Favourites, Graphic packs on (Wii U) or DS games (3DS)
 		int librarySort[2] = {1, 1};   // Recently played, A to Z (the default), Release year, How it runs
 	};
 

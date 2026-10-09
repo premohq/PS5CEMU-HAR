@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// PS5CEMU-HAR: the 3DS games in Azahar's game files folder, for the launcher.
+// PS5CEMU-HAR: the 3DS games in Azahar's game files folder, for the launcher, and the DS games beside
+// them (port/melonds/library.h), which the 3DS side lists too and melonDS plays.
 //
 // Each game's name, publisher, title ID and icon come from its SMDH, which is read where each kind
 // of file keeps it: an NCCH's ExeFS ("icon"), as a .3ds/.cci (an NCSD's first partition), .cxi or
@@ -21,9 +22,9 @@ namespace ps5azahar
 	void StartScan(const std::string& folder);
 	bool Scanning();
 	// What the last scan found, sorted by name. A game without a title ID (a .3dsx, an encrypted
-	// dump) has one made from its path.
+	// dump) has one made from its path; a DS game one made from its header (ps5melonds::IsDsTitle).
 	std::vector<ps5emu::Game> ListGames();
-	// A game's icon as a TGA, or empty when it has none.
+	// A game's icon as a TGA (a DS game's too), or empty when it has none.
 	std::string CoverPath(uint64_t titleId);
 
 	// What a file is, read from it: for the scan, and for anything else that needs to know.

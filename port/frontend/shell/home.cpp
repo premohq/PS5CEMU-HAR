@@ -283,7 +283,7 @@ namespace ps5shell
 			{
 				kicker = "Welcome";
 				title = "Your games go here";
-				text = Is3ds() ? "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in " + GamesFolder(m_side) +
+				text = Is3ds() ? "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) and DS games (.nds) in " + GamesFolder(m_side) +
 						", or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too." :
 								 "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in " + GamesFolder(m_side) +
 						", or choose any folder the PS5 can read, such as one on a USB drive.";
@@ -373,7 +373,7 @@ namespace ps5shell
 		float y = kPreviewTop;
 		if (game)
 		{
-			const float badge = Badge(canvas, kSafeX, y, m_side);
+			const float badge = Badge(canvas, kSafeX, y, m_side, game->entry.game.nds);
 			const std::string when = LastPlayedWords(game->entry.lastPlayed);
 			const std::string kicker = when.empty() ? "In your library" : (m_homeIndex == 0 ? "Continue · last played " : "Last played ") + when;
 			canvas.Text(Style({18, ui::Weight::SemiBold, 1.9f, 3.5f, true}), kSafeX + badge + 18, y, kicker, Secondary());

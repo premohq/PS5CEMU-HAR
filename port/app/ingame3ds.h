@@ -3,6 +3,11 @@
 // side_menu.h) in Azahar's gold (menu_canvas.h), with the game's box art at its top. It is drawn with Cemu's ImGui and its Vulkan backend into Azahar's frames,
 // through the hook patches/azahar adds to Azahar's renderer; the game's loop (port/azahar/core.cpp)
 // applies what it changes. Both sides include this header, so it names no Cemu or Azahar type.
+//
+// A DS game on the 3DS side (melonDS: port/melonds) has the same menu, drawn into the frames of its
+// screens (port/melonds/screens.cpp), with the DS's rows where the 3DS's would not apply: a screen
+// filter for the internal resolution and texture filter, the lid for motion controls, no CPU clock
+// and no amiibo.
 
 #pragma once
 
@@ -33,7 +38,19 @@ namespace ps5ingame3ds
 		int deadzone = 15;		  // percent
 		bool aOnCircle = true;	  // A on Circle and B on Cross, where the 3DS has them
 		int border = 0;			  // kBorderNames
+		// the DS's (Console::Nds)
+		int screenFilter = 0;	  // how its screens are scaled to the TV: kScreenFilters
+		bool lidClosed = false;	  // the DS closed, for the games that ask (for this game only)
 	};
+
+	// Which console the game is, whose rows the menu shows
+	enum class Console
+	{
+		N3ds, // Azahar's
+		Nds,  // melonDS's
+	};
+	constexpr const char* kScreenFilters[] = {"Sharp", "Smooth", "Square pixels"};
+	constexpr int kScreenFilterCount = (int)std::size(kScreenFilters);
 
 	// Azahar's frame being recorded (its renderer's FrontendOverlayTarget): before its render pass
 	// begins, then in it
@@ -54,8 +71,8 @@ namespace ps5ingame3ds
 		uint64_t generation;
 	};
 
-	// When the game starts: its name and title ID, and the settings it starts with.
-	void Start(const std::string& name, uint64_t titleId, const Settings& settings);
+	// When the game starts: its name and title ID, the settings it starts with, and its console.
+	void Start(const std::string& name, uint64_t titleId, const Settings& settings, Console console = Console::N3ds);
 	// The menu's top, once: GameTDB's facts on a line ("Nintendo  /  2015"), and the TGA of the
 	// game's box art or icon (empty: none).
 	void SetGame(const std::string& details, const std::string& coverPath);
@@ -107,6 +124,8 @@ namespace ps5ingame3ds
 		float left, top, right, bottom;
 	};
 	void SetBorder(int theme, std::vector<uint8_t> rgba, int width, int height);
+	// The theme's picture from the app's assets/borders (tools/render-borders.py), as SetBorder takes it
+	void LoadBorder(int theme);
 	void SetScreens(const std::vector<ScreenRect>& screens, float width, float height);
 
 	// For Azahar's renderer, twice a frame, where it records its commands.

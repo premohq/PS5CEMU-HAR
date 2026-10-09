@@ -245,7 +245,9 @@ namespace ps5actions
 	bool Has3dsExtension(const std::string& name)
 	{
 		const std::string lower = Lower(name);
-		for (const char* extension : {".3ds", ".cci", ".cxi", ".cia", ".3dsx", ".app", ".elf", ".axf", ".z3ds", ".zcci", ".zcxi", ".z3dsx"})
+		// the 3DS's, and the DS's the 3DS side lists too (port/melonds)
+		for (const char* extension : {".3ds", ".cci", ".cxi", ".cia", ".3dsx", ".app", ".elf", ".axf", ".z3ds", ".zcci", ".zcxi", ".z3dsx",
+				 ".nds", ".srl", ".dsi"})
 			if (lower.size() > std::strlen(extension) && lower.ends_with(extension))
 				return true;
 		return false;

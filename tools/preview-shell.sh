@@ -24,8 +24,8 @@ script=${1:-tools/launcher-preview/shell-screens.txt}
 mkdir -p "$out/include" "$out/obj"
 ln -sfn "$PS5CEMU_PACBREW/include/fmt" "$out/include/fmt"
 
-# folders for the folder browsers to show, and 3DS games for Azahar's side to read, as the console
-# preview has them
+# folders for the folder browsers to show, and 3DS and DS games for the 3DS side to read, as the
+# console preview has them
 games=$out/games
 rm -rf "$games" "$out/data"
 mkdir -p "$games/Mario Kart 8" "$games/Splatoon" "$games/Super Mario 3D World [00050000101C9400]" "$out/data"
@@ -45,7 +45,8 @@ sources=(tools/launcher-preview/shell.cpp tools/launcher-preview/console.cpp
     port/frontend/shell/settings.cpp port/frontend/shell/setup.cpp port/frontend/shell/shell.cpp port/frontend/shell/widgets.cpp
     port/ui/canvas.cpp port/ui/feedback.cpp port/ui/gfx.cpp port/ui/images.cpp port/ui/input.cpp port/ui/qr.cpp port/ui/text.cpp
     port/ui/vkfn.cpp port/app/catalog.cpp port/app/gameinfo.cpp port/app/compatibility.cpp port/frontend/actions.cpp
-    port/frontend/settings.cpp port/azahar/library.cpp port/azahar/controls.cpp port/azahar/unavailable.cpp)
+    port/frontend/settings.cpp port/azahar/library.cpp port/azahar/controls.cpp port/azahar/unavailable.cpp
+    port/melonds/library.cpp port/melonds/unavailable.cpp)
 
 # each source compiled again when it, or a header of the port's, is newer than its object
 newest_header=$(find port tools/launcher-preview -name '*.h' -printf '%T@\n' | sort -n | tail -1)

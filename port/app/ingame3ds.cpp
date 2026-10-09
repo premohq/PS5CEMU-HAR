@@ -17,6 +17,8 @@
 #include <atomic>
 #include <cctype>
 #include <cstdlib>
+#include <fstream>
+#include <iterator>
 #include <mutex>
 
 // Cemu's overlay font, compressed into Cemu (resource/CafeDefaultFont.cpp)
@@ -37,6 +39,7 @@ namespace ps5ingame3ds
 		std::string s_details;	 // GameTDB's publisher and year (SetGame)
 		std::string s_coverPath; // the game's box art, or its icon
 		uint64_t s_titleId = 0;
+		Console s_console = Console::N3ds;
 		double s_fps = 0, s_speed = 0;
 		std::string s_breakdown;
 		std::atomic<bool> s_open{false};
@@ -389,6 +392,8 @@ namespace ps5ingame3ds
 				cheats = s_cheats;
 			}
 			const int resolution = std::clamp(settings.resolution, 1, 10);
+			const bool ds = s_console == Console::Nds;
+			const char* filter = kScreenFilters[std::clamp(settings.screenFilter, 0, kScreenFilterCount - 1)];
 			std::vector<Row> rows;
 			rows.push_back({"screens", "Screens and border",
 				fmt::format("{} \u00b7 {}", kLayouts[std::clamp(settings.layout, 0, 3)], kBorderNames[std::clamp(settings.border, 0, kBorderCount - 1)]), false,
@@ -400,22 +405,40 @@ namespace ps5ingame3ds
 				{"border", "Border", kBorderNames[std::clamp(settings.border, 0, kBorderCount - 1)], true,
 					"Artwork around the screens, never over them. Also in the launcher's Settings > Borders."},
 			}});
-			rows.push_back({"graphics", "Graphics", fmt::format("{}x \u00b7 {}", resolution, kFilters[std::clamp(settings.textureFilter, 0, 5)]), false,
-				"Internal resolution, texture filter and the performance overlay.", {
-				{"resolution", "Internal resolution", fmt::format("{}x  ({}x{})", resolution, 400 * resolution, 240 * resolution), true,
-					"How large the 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU."},
-				{"filter", "Texture filter", kFilters[std::clamp(settings.textureFilter, 0, 5)], true,
-					"Smooths textures as they are scaled up. The costliest setting here: if a game stutters, try None first."},
-				{"performance", "Performance overlay", settings.performance ? "On" : "Off", true,
-					"The frame rate and the emulation's speed, in the top left corner."},
-			}});
-			rows.push_back({"pace", "Speed", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "Unlimited", false,
-				"The emulated CPU's clock, and how fast the game may run.", {
-				{"cpu", "CPU clock", fmt::format("{}%", settings.cpuClock), true,
-					"Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS."},
-				{"speed", "Speed limit", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "None", true,
-					"Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only."},
-			}});
+			if (ds)
+				rows.push_back({"graphics", "Graphics", filter, false, "The screen filter and the performance overlay.", {
+					{"dsfilter", "Screen filter", filter, true,
+						"How the DS's 256 x 192 screens are scaled to the TV. Sharp keeps every pixel square and even; Smooth blurs them "
+						"together; Square pixels takes the nearest, uneven at most sizes."},
+					{"performance", "Performance overlay", settings.performance ? "On" : "Off", true,
+						"The frame rate and the emulation's speed, in the top left corner."},
+				}});
+			else
+			{
+				rows.push_back({"graphics", "Graphics", fmt::format("{}x \u00b7 {}", resolution, kFilters[std::clamp(settings.textureFilter, 0, 5)]), false,
+					"Internal resolution, texture filter and the performance overlay.", {
+					{"resolution", "Internal resolution", fmt::format("{}x  ({}x{})", resolution, 400 * resolution, 240 * resolution), true,
+						"How large the 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU."},
+					{"filter", "Texture filter", kFilters[std::clamp(settings.textureFilter, 0, 5)], true,
+						"Smooths textures as they are scaled up. The costliest setting here: if a game stutters, try None first."},
+					{"performance", "Performance overlay", settings.performance ? "On" : "Off", true,
+						"The frame rate and the emulation's speed, in the top left corner."},
+				}});
+			}
+			Row speedLimit{"speed", "Speed limit", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "None", true,
+				"Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only."};
+			if (ds)
+				rows.push_back({"pace", "Speed", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "Unlimited", false,
+					"How fast the game may run.", {speedLimit}});
+			else
+			{
+				rows.push_back({"pace", "Speed", settings.speedLimit ? fmt::format("{}%", settings.speedLimit) : "Unlimited", false,
+					"The emulated CPU's clock, and how fast the game may run.", {
+					{"cpu", "CPU clock", fmt::format("{}%", settings.cpuClock), true,
+						"Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS."},
+					speedLimit,
+				}});
+			}
 			Row volume{"volume", "Volume", fmt::format("{}%", settings.volume), true, "The game's sound. Left and Right change it by 10%."};
 			volume.slider = settings.volume / 100.0f;
 			rows.push_back({"states", "Save states", fmt::format("Slot {}", s_stateSlot), false,
@@ -425,32 +448,52 @@ namespace ps5ingame3ds
 				{"save", "Save to this slot", stateMessage, false,
 					"Saves the game as it is now, replacing what the slot had. Newer app versions may not load it: keep saving in the game too."},
 			}});
-			Row cheatRows{"cheats", "Cheats", "", false, "The game's cheats, from azahar/cheats/<title ID>.txt (Gateway format)."};
+			Row cheatRows{"cheats", "Cheats", "", false,
+				ds ? "The game's cheats, from melonds/cheats/<game file>.mch (melonDS's format)." :
+					 "The game's cheats, from azahar/cheats/<title ID>.txt (Gateway format)."};
 			for (size_t i = 0; i < cheats.size(); i++)
 				cheatRows.rows.push_back({fmt::format("cheat{}", i), cheats[i].first, cheats[i].second ? "On" : "Off", true,
 					"Cross, Left or Right turns it on or off, at once; it is kept for next time."});
 			if (cheats.empty())
 				cheatRows.rows.push_back({"nocheats", "No cheats for this game", "", false,
-					"Put them in /data/ps5cemu/azahar/cheats/<title ID>.txt, then start the game again."});
+					ds ? "Put them in /data/ps5cemu/melonds/cheats/<game file>.mch (the game's file name, .mch for .nds), then start "
+						 "the game again." :
+						 "Put them in /data/ps5cemu/azahar/cheats/<title ID>.txt, then start the game again."});
 			else
 				cheatRows.value = fmt::format("{} of {} on", std::count_if(cheats.begin(), cheats.end(), [](const auto& c) { return c.second; }), cheats.size());
 			rows.push_back(cheatRows);
-			rows.push_back({"amiibos", "Amiibo", amiibo, false, "Hold an amiibo dump to the 3DS's reader when the game asks for one.", {
-				{"amiibo", "Amiibo", amiibo, true,
-					noAmiibo ? "Put amiibo dumps (.bin) in /data/ps5cemu/amiibo to scan them here." :
-							   "Left and Right choose an amiibo dump; Cross holds it to the reader."},
-				{"noamiibo", "Take the amiibo away", amiiboMessage, false, "Takes the amiibo off the reader, as lifting it off would."},
-			}});
+			if (!ds)
+			{
+				rows.push_back({"amiibos", "Amiibo", amiibo, false, "Hold an amiibo dump to the 3DS's reader when the game asks for one.", {
+					{"amiibo", "Amiibo", amiibo, true,
+						noAmiibo ? "Put amiibo dumps (.bin) in /data/ps5cemu/amiibo to scan them here." :
+								   "Left and Right choose an amiibo dump; Cross holds it to the reader."},
+					{"noamiibo", "Take the amiibo away", amiiboMessage, false, "Takes the amiibo off the reader, as lifting it off would."},
+				}});
+			}
 			rows.push_back(volume);
-			rows.push_back({"controls", "Controls", settings.aOnCircle ? "A on Circle" : "A on Cross", false,
-				"Motion controls, the sticks' deadzone and where A and B are.", {
-				{"motion", "Motion controls", settings.motion ? "On" : "Off", true,
-					"The DualSense's gyroscope and accelerometer as the 3DS's, for the games that aim or steer by tilting."},
-				{"deadzone", "Stick deadzone", fmt::format("{}%", settings.deadzone), true,
-					"How far a stick moves before the game sees it. Raise it if something drifts when you let go."},
-				{"ab", "A and B", settings.aOnCircle ? "A on Circle" : "A on Cross", true,
-					"A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match."},
-			}});
+			if (ds)
+				rows.push_back({"controls", "Controls", settings.lidClosed ? "Lid closed" : settings.aOnCircle ? "A on Circle" : "A on Cross", false,
+					"The lid, the left stick's deadzone and where A and B are. R3 held blows into the microphone.", {
+					{"lid", "Lid", settings.lidClosed ? "Closed" : "Open", true,
+						"Closes the DS, for the games that ask you to (it sleeps until it opens again). Choose it again to open it."},
+					{"deadzone", "Stick deadzone", fmt::format("{}%", settings.deadzone), true,
+						"How far the left stick moves before the D-pad does. Raise it if something drifts when you let go."},
+					{"ab", "A and B", settings.aOnCircle ? "A on Circle" : "A on Cross", true,
+						"A on Circle and B on Cross, where the DS has them, or the other way round, with X and Y swapped to match."},
+				}});
+			else
+			{
+				rows.push_back({"controls", "Controls", settings.aOnCircle ? "A on Circle" : "A on Cross", false,
+					"Motion controls, the sticks' deadzone and where A and B are.", {
+					{"motion", "Motion controls", settings.motion ? "On" : "Off", true,
+						"The DualSense's gyroscope and accelerometer as the 3DS's, for the games that aim or steer by tilting."},
+					{"deadzone", "Stick deadzone", fmt::format("{}%", settings.deadzone), true,
+						"How far a stick moves before the game sees it. Raise it if something drifts when you let go."},
+					{"ab", "A and B", settings.aOnCircle ? "A on Circle" : "A on Cross", true,
+						"A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match."},
+				}});
+			}
 			Row library{"library", "Quit to the library", "", false,
 				"Leaves the game for the library. What you have not saved in the game is lost, so Cross is held."};
 			library.apart = true;
@@ -515,6 +558,10 @@ namespace ps5ingame3ds
 				next.resolution = chosen && resolution >= 10 ? 1 : std::clamp(resolution + change, 1, 10);
 			else if (id == "filter")
 				next.textureFilter = (settings.textureFilter + change + 6) % 6;
+			else if (id == "dsfilter")
+				next.screenFilter = (std::clamp(settings.screenFilter, 0, kScreenFilterCount - 1) + change + kScreenFilterCount) % kScreenFilterCount;
+			else if (id == "lid")
+				next.lidClosed = !settings.lidClosed;
 			else if (id == "cpu")
 				next.cpuClock = NextClock(settings.cpuClock, change);
 			else if (id == "speed")
@@ -599,7 +646,7 @@ namespace ps5ingame3ds
 			const ImVec2 origin{(io.DisplaySize.x - 1920.0f * scale) * 0.5f, (io.DisplaySize.y - 1080.0f * scale) * 0.5f};
 			const Canvas canvas{ImGui::GetForegroundDrawList(), scale, origin, kColours};
 			ps5menu::Header header;
-			header.system = "3DS";
+			header.system = s_console == Console::Nds ? "DS" : "3DS";
 			header.status = "PAUSED";
 			header.title = name;
 			header.details = details;
@@ -760,11 +807,12 @@ namespace ps5ingame3ds
 		}
 	}
 
-	void Start(const std::string& name, uint64_t titleId, const Settings& settings)
+	void Start(const std::string& name, uint64_t titleId, const Settings& settings, Console console)
 	{
 		std::lock_guard lock(s_mutex);
 		s_name = name;
 		s_titleId = titleId;
+		s_console = console;
 		s_settings = settings;
 		s_changed = false;
 	}
@@ -816,6 +864,48 @@ namespace ps5ingame3ds
 		s_borderWidth = width;
 		s_borderHeight = height;
 		s_borderFresh = true;
+	}
+
+	// The border's picture, from the app's assets/borders (tools/render-borders.py: uncompressed 24- or
+	// 32-bit TGA), for the menu's renderer to draw round the screens
+	void LoadBorder(int theme)
+	{
+		theme = std::clamp(theme, 0, kBorderCount - 1);
+		std::vector<uint8_t> rgba;
+		int width = 0, height = 0;
+		if (theme > 0)
+		{
+			std::string name = kBorderNames[theme];
+			std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+			const std::string path = ps5paths::Assets() + "/borders/" + name + ".tga";
+			std::ifstream file(path, std::ios::binary);
+			std::vector<uint8_t> data((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+			const int bytes = data.size() >= 18 ? data[16] / 8 : 0;
+			if (data.size() >= 18 && data[2] == 2 && (bytes == 3 || bytes == 4))
+			{
+				width = data[12] | data[13] << 8;
+				height = data[14] | data[15] << 8;
+				const bool topFirst = data[17] & 0x20;
+				const size_t start = 18 + data[0];
+				if (data.size() >= start + (size_t)width * height * bytes)
+				{
+					rgba.resize((size_t)width * height * 4);
+					for (int y = 0; y < height; y++)
+						for (int x = 0; x < width; x++)
+						{
+							const uint8_t* in = &data[start + ((size_t)(topFirst ? y : height - 1 - y) * width + x) * bytes];
+							uint8_t* out = &rgba[((size_t)y * width + x) * 4];
+							out[0] = in[2];
+							out[1] = in[1];
+							out[2] = in[0];
+							out[3] = 255;
+						}
+				}
+			}
+			if (rgba.empty())
+				ps5log::Line("[ingame3ds] border {}: {} could not be read", kBorderNames[theme], path);
+		}
+		SetBorder(theme, std::move(rgba), width, height);
 	}
 
 	void SetScreens(const std::vector<ScreenRect>& screens, float width, float height)

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // PS5CEMU-HAR: what GameTDB (https://www.gametdb.com) knows of a game, for its details page and the
 // in-game menus: its description, developer, publisher, release date, genre, players and rating, by
-// the ID on its box, as the box art is found (boxart.h). The app carries GameTDB's English Wii U
-// and 3DS databases, cut down to those fields (tools/render-gametdb.py: assets/gametdb), so it needs
-// no network for them; each is read the first time a game of its system is looked up.
+// the ID on its box, as the box art is found (boxart.h). The app carries GameTDB's English Wii U,
+// 3DS and DS databases, cut down to those fields (tools/render-gametdb.py: assets/gametdb), so it
+// needs no network for them; each is read the first time a game of its system is looked up.
 
 #pragma once
 

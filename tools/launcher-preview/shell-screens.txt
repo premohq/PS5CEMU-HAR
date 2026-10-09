@@ -90,7 +90,27 @@ press cross                   # Artic Base
 wait 45
 shot artic
 press circle
-press l1                      # Home
+press up right right right    # the filters: DS games
+wait 30
+shot library-ds
+press down right              # its first DS game (Artic Base stays first)
+press options                 # the Game menu, a DS game's
+wait 30
+shot game-menu-ds
+press down cross              # its Game hub
+wait 45
+shot hub-ds
+press circle                  # back to the Library
+press up left left left       # All again
+press r1                      # Settings
+wait 45
+press r2                      # the 3DS's section
+press down down down          # DS games
+press right
+wait 25
+shot settings-ds
+press circle
+press l1 l1                   # Home
 wait 20
 press cross                   # play the focused game
 wait 25

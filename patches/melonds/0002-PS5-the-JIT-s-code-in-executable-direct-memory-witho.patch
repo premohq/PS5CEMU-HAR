@@ -1,0 +1,182 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: ps5cemu <ps5cemu@localhost>
+Date: Fri, 9 Oct 2026 05:38:19 +0000
+Subject: [PATCH] PS5: the JIT's code in executable direct memory, without fast
+ memory
+
+The console makes no memory of a title's executable, and no anonymous
+mapping, executable: the JIT's code slices come from the platform layer's
+executable direct memory instead (ps5platform/exec.h, from the payload
+SDK fork RADV is linked with), read, write and execute, near the core's
+code, as Azahar's dynarmic takes its code cache. Without it (the slice
+is then heap memory, which the compiler's stubs are written to but never
+run from), the frontend keeps the JIT off.
+
+There is no fast memory on the PS5: a title installs no fault handler,
+and the emulated memory is plain memory, as on Windows without
+placeholders, so every access takes the slow path.
+---
+ src/ARMJIT_Global.cpp | 52 ++++++++++++++++++++++++++++++++++++++-----
+ src/ARMJIT_Memory.cpp | 20 ++++++++++++++---
+ 2 files changed, 64 insertions(+), 8 deletions(-)
+
+diff --git a/src/ARMJIT_Global.cpp b/src/ARMJIT_Global.cpp
+index e4aa42f9..0ace0c50 100644
+--- a/src/ARMJIT_Global.cpp
++++ b/src/ARMJIT_Global.cpp
+@@ -1,5 +1,6 @@
+ #include "ARMJIT_Global.h"
+ #include "ARMJIT_Memory.h"
++#include "Platform.h"
+ 
+ #ifdef _WIN32
+ #include <windows.h>
+@@ -7,6 +8,10 @@
+ #include <sys/mman.h>
+ #include <unistd.h>
+ #endif
++#ifdef __PROSPERO__
++// the PS5: the platform layer's executable direct memory (the payload SDK fork RADV is linked with)
++#include "ps5platform/exec.h"
++#endif
+ 
+ #include <stdio.h>
+ #include <stdint.h>
+@@ -25,7 +30,10 @@ std::mutex globalMutex;
+ #define APPLE_AARCH64
+ #endif
+ 
+-#if !defined(APPLE_AARCH64) && !defined(__NetBSD__) && !defined(__OpenBSD__)
++// The PS5 refuses to make the executable's own memory executable, so its code comes from the
++// platform layer, slice by slice (AllocateCodeMem)
++#if !defined(APPLE_AARCH64) && !defined(__NetBSD__) && !defined(__OpenBSD__) && !defined(__PROSPERO__)
++#define STATIC_CODE_MEMORY
+ static constexpr size_t NumCodeMemSlices = 4;
+ static constexpr size_t CodeMemoryAlignedSize = NumCodeMemSlices * CodeMemorySliceSize;
+ 
+@@ -42,11 +50,33 @@ u8* GetAlignedCodeMemoryStart()
+ 
+ int RefCounter = 0;
+ 
++#ifdef __PROSPERO__
++// The slices that are heap memory: no executable memory was given, so the JIT must stay off (the
++// compiler still writes its stubs at start)
++static void* HeapCodeMem[8];
++#endif
++
+ void* AllocateCodeMem()
+ {
+     std::lock_guard guard(globalMutex);
+ 
+-#if !defined(APPLE_AARCH64) && !defined(__NetBSD__) && !defined(__OpenBSD__)
++#ifdef __PROSPERO__
++    // read, write and execute, within 2 GiB of the core's code: calls between the two take 32-bit
++    // displacements
++    if (void* code = ps5_exec_allocate(CodeMemorySliceSize, reinterpret_cast<uintptr_t>(&AllocateCodeMem)))
++        return code;
++    Platform::Log(Platform::LogLevel::Warn, "JIT: no executable memory, the interpreter must run\n");
++    void* heap = aligned_alloc(16*1024, CodeMemorySliceSize);
++    for (void*& slot : HeapCodeMem)
++        if (!slot)
++        {
++            slot = heap;
++            break;
++        }
++    return heap;
++#endif
++
++#ifdef STATIC_CODE_MEMORY
+     if (AvailableCodeMemSlices)
+     {
+         int slice = __builtin_ctz(AvailableCodeMemSlices);
+@@ -73,7 +103,19 @@ void FreeCodeMem(void* codeMem)
+ {
+     std::lock_guard guard(globalMutex);
+ 
+-#if !defined(APPLE_AARCH64) && !defined(__NetBSD__) && !defined(__OpenBSD__)
++#ifdef __PROSPERO__
++    for (void*& slot : HeapCodeMem)
++        if (slot == codeMem)
++        {
++            slot = nullptr;
++            free(codeMem);
++            return;
++        }
++    ps5_exec_release(codeMem);
++    return;
++#endif
++
++#ifdef STATIC_CODE_MEMORY
+     for (int i = 0; i < NumCodeMemSlices; i++)
+     {
+         if (codeMem == &GetAlignedCodeMemoryStart()[CodeMemorySliceSize * i])
+@@ -102,8 +144,8 @@ void Init()
+         #ifdef _WIN32
+             DWORD dummy;
+             VirtualProtect(GetAlignedCodeMemoryStart(), CodeMemoryAlignedSize, PAGE_EXECUTE_READWRITE, &dummy);
+-        #elif defined(APPLE_AARCH64) || defined(__NetBSD__) || defined(__OpenBSD__)
+-            // Apple aarch64 always uses dynamic allocation
++        #elif defined(APPLE_AARCH64) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__PROSPERO__)
++            // Apple aarch64 always uses dynamic allocation (and so does the PS5)
+         #else
+             mprotect(GetAlignedCodeMemoryStart(), CodeMemoryAlignedSize, PROT_EXEC | PROT_READ | PROT_WRITE);
+         #endif
+diff --git a/src/ARMJIT_Memory.cpp b/src/ARMJIT_Memory.cpp
+index 09bad072..fddb10aa 100644
+--- a/src/ARMJIT_Memory.cpp
++++ b/src/ARMJIT_Memory.cpp
+@@ -743,7 +743,9 @@ u32 ARMJIT_Memory::PageShift = 0;
+ 
+ bool ARMJIT_Memory::IsFastMemSupported()
+ {
+-#if defined(__APPLE__) || defined(__OpenBSD__)
++    // the PS5: no fault handler for a title, and memory mapped where it is asked for only by the
++    // platform layer, so every access takes the slow path
++#if defined(__APPLE__) || defined(__OpenBSD__) || defined(__PROSPERO__)
+     return false;
+ #else
+     static bool initialised = false;
+@@ -769,7 +771,9 @@ bool ARMJIT_Memory::IsFastMemSupported()
+ 
+ void ARMJIT_Memory::RegisterFaultHandler()
+ {
+-#ifdef _WIN32
++#if defined(__PROSPERO__)
++    // no fast memory, so no faults to handle
++#elif defined(_WIN32)
+     ExceptionHandlerHandle = AddVectoredExceptionHandler(1, ExceptionHandler);
+ 
+     KernelBaseDll = LoadLibrary("KernelBase.dll");
+@@ -798,7 +802,8 @@ void ARMJIT_Memory::RegisterFaultHandler()
+ 
+ void ARMJIT_Memory::UnregisterFaultHandler()
+ {
+-#ifdef _WIN32
++#if defined(__PROSPERO__)
++#elif defined(_WIN32)
+     if (ExceptionHandlerHandle)
+     {
+         RemoveVectoredExceptionHandler(ExceptionHandlerHandle);
+@@ -887,6 +892,10 @@ ARMJIT_Memory::ARMJIT_Memory(melonDS::NDS& nds) : NDS(nds)
+         // old Windows version
+         MemoryBase = new u8[MemoryTotalSize];
+     }
++#elif defined(__PROSPERO__)
++    // the emulated memory as plain memory, as on Windows without placeholders: no fast memory
++    MemoryBase = static_cast<u8*>(aligned_alloc(16*1024, MemoryTotalSize));
++    memset(MemoryBase, 0, MemoryTotalSize);
+ #else
+     MemoryBase = (u8*)mmap(nullptr, VirtmemAreaSize, PROT_NONE, MAP_ANON | MAP_PRIVATE, -1, 0);
+ 
+@@ -971,6 +980,11 @@ ARMJIT_Memory::~ARMJIT_Memory() noexcept
+     {
+         delete[] MemoryBase;
+     }
++#elif defined(__PROSPERO__)
++    free(MemoryBase);
++    MemoryBase = nullptr;
++    FastMem9Start = nullptr;
++    FastMem7Start = nullptr;
+ #else
+     if (MemoryBase)
+     {

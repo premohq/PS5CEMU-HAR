@@ -592,6 +592,12 @@ namespace ps5emu
 		return std::filesystem::exists(path) ? path : std::string();
 	}
 
+	// the sample games have no boot screens: the backdrop is their box art
+	std::string BootScreenPath(uint64_t)
+	{
+		return {};
+	}
+
 	std::vector<Game> ListGames()
 	{
 		std::vector<Game> games;

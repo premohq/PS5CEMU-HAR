@@ -139,6 +139,8 @@ namespace ps5shell
 		bool Is3ds() const { return m_side == System::N3ds; }
 		ps5catalog::System CatalogSide() const { return Is3ds() ? ps5catalog::System::N3ds : ps5catalog::System::WiiU; }
 		ps5boxart::System BoxSide(System side) const { return side == System::N3ds ? ps5boxart::System::N3ds : ps5boxart::System::WiiU; }
+		// where a game's box art and GameTDB entry are: a DS game's (on the 3DS side) are the DS's
+		ps5boxart::System BoxOf(const ps5emu::Game& game) const { return game.nds ? ps5boxart::System::Nds : BoxSide(m_side); }
 		bool CoreReady() const { return Is3ds() || m_status.coreReady; }
 		const std::string& Notice() const { return Is3ds() ? m_status.notice3ds : m_status.notice; }
 		bool SystemScanning() const;
@@ -181,7 +183,7 @@ namespace ps5shell
 			float height = 72);
 		Box IconButton(Canvas& canvas, float x, float y, Icon icon, bool focused, float size = 72);
 		float Chip(Canvas& canvas, float x, float y, const std::string& text, const char* kind = "", float height = 38);
-		float Badge(Canvas& canvas, float x, float y, System side);
+		float Badge(Canvas& canvas, float x, float y, System side, bool ds = false); // ds: a DS game's, on the 3DS side
 		void DrawCover(Canvas& canvas, Game& game, const Box& box, bool focused, float lift);
 		void DrawGameName(Canvas& canvas, Game& game, const Box& box);
 		void DrawRow(Canvas& canvas, const Row& row, const Box& box, bool focused);
@@ -217,6 +219,7 @@ namespace ps5shell
 		void LibraryRefresh(); // the filter and the sort again
 		int LibraryGame() const;
 		int LibraryColumns() const;
+		int LibraryFilters() const; // All, Recently added, Favourites, and Graphic packs on (Wii U) or DS games (3DS, when it has some)
 
 		void HubOpen(int game, ScreenId from);
 		void HubUpdate(const ui::Press& press);

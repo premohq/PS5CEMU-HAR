@@ -81,6 +81,7 @@ namespace ps5catalog
 				entry.game.format = String(item, "format");
 				entry.game.publisher = String(item, "publisher");
 				entry.game.gameId = String(item, "gameId");
+				entry.game.nds = item.HasMember("nds") && item["nds"].IsBool() && item["nds"].GetBool();
 				entry.ambient[0] = (uint32_t)std::strtoul(String(item, "ambient0").c_str(), nullptr, 16);
 				entry.ambient[1] = (uint32_t)std::strtoul(String(item, "ambient1").c_str(), nullptr, 16);
 				entry.added = Int(item, "added");
@@ -127,6 +128,11 @@ namespace ps5catalog
 				writer.String(entry.game.publisher.c_str());
 				writer.Key("gameId");
 				writer.String(entry.game.gameId.c_str());
+				if (entry.game.nds)
+				{
+					writer.Key("nds");
+					writer.Bool(true);
+				}
 				char colour[9];
 				std::snprintf(colour, sizeof(colour), "%08x", entry.ambient[0]);
 				writer.Key("ambient0");

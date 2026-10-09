@@ -37,6 +37,13 @@ namespace ps5shell
 		return Is3ds() ? 6 : 8;
 	}
 
+	int Shell::LibraryFilters() const
+	{
+		if (Is3ds())
+			return std::any_of(m_games.begin(), m_games.end(), [](const Game& game) { return game.entry.game.nds; }) ? 4 : 3;
+		return m_status.coreReady ? 4 : 3;
+	}
+
 	int Shell::LibraryGame() const
 	{
 		const int at = m_libraryIndex - (Is3ds() ? 1 : 0);
@@ -47,7 +54,7 @@ namespace ps5shell
 	{
 		const int side = Is3ds() ? 1 : 0;
 		int& filter = m_settings.ui.libraryFilter[side];
-		if (filter == 3 && (Is3ds() || !m_status.coreReady))
+		if (filter >= LibraryFilters())
 			filter = 0;
 		const int sort = std::clamp(m_settings.ui.librarySort[side], 0, 3);
 		const int focused = LibraryGame();
@@ -63,7 +70,9 @@ namespace ps5shell
 				continue;
 			if (filter == 2 && !game.entry.favourite)
 				continue;
-			if (filter == 3)
+			if (filter == 3 && Is3ds() && !game.entry.game.nds)
+				continue;
+			if (filter == 3 && !Is3ds())
 			{
 				if (game.packsOn < 0)
 					game.packsOn = ps5emu::EnabledGraphicPackCount(game.entry.game.titleId);
@@ -143,7 +152,7 @@ namespace ps5shell
 		}
 		if (m_libraryZone == 0)
 		{
-			const int filters = Is3ds() || !m_status.coreReady ? 3 : 4;
+			const int filters = LibraryFilters();
 			int& filter = m_settings.ui.libraryFilter[side];
 			switch (b)
 			{
@@ -310,10 +319,10 @@ namespace ps5shell
 		{
 			counts[1] += game.entry.added >= recent;
 			counts[2] += game.entry.favourite;
-			counts[3] += game.packsOn > 0;
+			counts[3] += Is3ds() ? game.entry.game.nds : game.packsOn > 0;
 		}
-		const char* names[4] = {"All", "Recently added", "Favourites", "Graphic packs on"};
-		const int filters = Is3ds() || !m_status.coreReady ? 3 : 4;
+		const char* names[4] = {"All", "Recently added", "Favourites", Is3ds() ? "DS games" : "Graphic packs on"};
+		const int filters = LibraryFilters();
 		const int filter = m_settings.ui.libraryFilter[side];
 		float x = kSafeX;
 		const ui::TextStyle pillStyle = Style({26, ui::Weight::Medium, 1.0f});

@@ -79,6 +79,9 @@ namespace ps5settings
 			ReadInt(json, "language", n3ds.language, -1, 11);
 			ReadBool(json, "customTextures", n3ds.customTextures);
 			ReadInt(json, "border", n3ds.border, 0, 5);
+			ReadInt(json, "dsFilter", n3ds.dsFilter, 0, 2);
+			ReadBool(json, "dsJit", n3ds.dsJit);
+			ReadBool(json, "dsOwnBios", n3ds.dsOwnBios);
 			ReadString(json, "articAddress", n3ds.articAddress);
 			ReadInt(json, "gameCount", n3ds.gameCount, -1, 1000000);
 			if (json.HasMember("buttons") && json["buttons"].IsObject())
@@ -119,6 +122,12 @@ namespace ps5settings
 			writer.Bool(n3ds.customTextures);
 			writer.Key("border");
 			writer.Int(n3ds.border);
+			writer.Key("dsFilter");
+			writer.Int(n3ds.dsFilter);
+			writer.Key("dsJit");
+			writer.Bool(n3ds.dsJit);
+			writer.Key("dsOwnBios");
+			writer.Bool(n3ds.dsOwnBios);
 			writer.Key("articAddress");
 			writer.String(n3ds.articAddress.c_str());
 			writer.Key("gameCount");
@@ -193,7 +202,7 @@ namespace ps5settings
 			ReadBool(ui, "gamePictures", out.gamePictures);
 			ReadBool(ui, "setupDone", out.setupDone);
 			ReadInt(ui, "libraryFilterWiiU", out.libraryFilter[0], 0, 3);
-			ReadInt(ui, "libraryFilter3ds", out.libraryFilter[1], 0, 2);
+			ReadInt(ui, "libraryFilter3ds", out.libraryFilter[1], 0, 3);
 			ReadInt(ui, "librarySortWiiU", out.librarySort[0], 0, 3);
 			ReadInt(ui, "librarySort3ds", out.librarySort[1], 0, 3);
 		}

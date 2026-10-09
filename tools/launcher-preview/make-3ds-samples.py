@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Write sample 3DS files for the launcher's preview, with nothing but the standard library.
+"""Write sample 3DS and DS files for the launcher's preview, with nothing but the standard library.
 
     make-3ds-samples.py FOLDER
 
 Each is only what Azahar's side's library reads (port/azahar/library.cpp): an SMDH (names,
 publisher, a 48x48 icon) where each kind of file keeps it, in an NCSD's NCCH ExeFS (.3ds, .cci),
 an NCCH's (.cxi), a CIA's meta section, a 3DSX's extended header, and one encrypted dump, which
-the library lists by its file name. They hold no game.
+the library lists by its file name; and for the DS games beside them (port/melonds/library.cpp), a
+DS header and its banner (titles, a 32x32 icon in 16 colours). They hold no game.
 """
 
 import os
@@ -83,6 +84,37 @@ def threedsx(icon):
     return header + icon
 
 
+def nds(code, title, colour, unit=0):
+    """A DS ROM's header and banner: the game code (its box's ID), the banner's titles (name, then
+    publisher, on lines of their own) and its icon, 4 bits a pixel in 8x8 tiles with 16 BGR555
+    colours, the first transparent: the colour, a white disc on it."""
+    banner = bytearray(0xA40)
+    struct.pack_into("<H", banner, 0, 1)
+    shades = [(int(c * (1.0 - i / 20.0)) for c in colour) for i in range(14)]
+    palette = [0, 0x7FFF] + [(b >> 3) << 10 | (g >> 3) << 5 | (r >> 3) for r, g, b in shades]
+    for i, value in enumerate(palette):
+        struct.pack_into("<H", banner, 0x220 + i * 2, value)
+    for y in range(32):
+        for x in range(32):
+            inside = 2 <= x < 30 and 2 <= y < 30
+            index = 0 if not inside else 1 if (x - 16) ** 2 + (y - 16) ** 2 < 7 ** 2 else 2 + y * 14 // 32
+            tile = (y // 8) * 4 + x // 8
+            at = 0x20 + tile * 32 + (y % 8) * 4 + (x % 8) // 2
+            banner[at] |= index << 4 if x & 1 else index
+    for language in range(6):
+        encoded = title.encode("utf-16-le")[:0xFE]
+        banner[0x240 + language * 0x100:0x240 + language * 0x100 + len(encoded)] = encoded
+    header = bytearray(0x4000)
+    header[0:12] = title.split("\n")[0].upper().encode("ascii", "replace")[:12].ljust(12, b"\0")
+    header[0x0C:0x10] = code.encode()
+    header[0x10:0x12] = b"01"
+    header[0x12] = unit
+    struct.pack_into("<IIII", header, 0x20, 0x4000, 0x02000000, 0x02000000, 0x100)
+    struct.pack_into("<I", header, 0x68, len(header))
+    struct.pack_into("<H", header, 0x15E, sum(header[:0x15E]) & 0xFFFF)
+    return bytes(header) + bytes(banner) + bytes(0x100)
+
+
 SAMPLES = [
     ("Super Mario 3D Land.3ds", lambda i: ncsd(0x0004000000053F00, i, product="CTR-P-AREE"), "Super Mario 3D Land", "Nintendo", (220, 40, 40)),
     ("Mario Kart 7.cci", lambda i: ncsd(0x0004000000030600, i, product="CTR-P-AMKE"), "Mario Kart 7", "Nintendo", (240, 160, 20)),
@@ -96,6 +128,14 @@ SAMPLES = [
     ("More/Kid Icarus Uprising.3ds", lambda i: ncsd(0x0004000000030200, i), "Kid Icarus: Uprising", "Nintendo", (230, 210, 90)),
 ]
 
+# DS games, beside the 3DS's: file, game code, banner title (name, subtitle, publisher), colour
+DS_SAMPLES = [
+    ("New Super Mario Bros.nds", "A2DE", "New SUPER MARIO BROS.\nNintendo", (200, 40, 30)),
+    ("Zelda Phantom Hourglass.nds", "AZEE", "The Legend of Zelda\nPhantom Hourglass\nNintendo", (40, 150, 70)),
+    ("DS/Mario Kart DS.nds", "AMCE", "MARIO KART DS\nNintendo", (220, 60, 40)),
+    ("DS/Pokemon HeartGold.nds", "IPKE", "POKEMON HG\nNintendo", (210, 170, 40), 2),
+]
+
 
 def main():
     if len(sys.argv) != 2:
@@ -105,6 +145,11 @@ def main():
         os.makedirs(os.path.dirname(path), exist_ok=True)
         with open(path, "wb") as file:
             file.write(make(smdh(title, publisher, colour)))
+    for name, code, title, colour, *unit in DS_SAMPLES:
+        path = os.path.join(sys.argv[1], name)
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, "wb") as file:
+            file.write(nds(code, title, colour, *unit))
 
 
 if __name__ == "__main__":

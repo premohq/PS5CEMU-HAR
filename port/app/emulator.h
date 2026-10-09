@@ -21,9 +21,10 @@ namespace ps5emu
 		uint16_t version = 0;		 // the base's, or the update's when installed
 		bool hasUpdate = false;
 		uint32_t dlcCount = 0;
-		std::string format;			 // WUA, WUD, WUX, folder (code/content/meta) or RPX; 3DS, CIA, 3DSX...
-		std::string publisher;		 // a 3DS game's, from its SMDH
-		std::string gameId;			 // the ID on its box, GameTDB's (boxart.h): ALZE01 (Wii U), AREE (3DS)
+		std::string format;			 // WUA, WUD, WUX, folder (code/content/meta) or RPX; 3DS, CIA, 3DSX...; NDS, DSI
+		std::string publisher;		 // a 3DS game's, from its SMDH; a DS game's, from its banner
+		std::string gameId;			 // the ID on its box, GameTDB's (boxart.h): ALZE01 (Wii U), AREE (3DS), AMCE (DS)
+		bool nds = false;			 // a Nintendo DS game, which the 3DS side lists and melonDS plays (port/melonds)
 	};
 
 	// What the launcher's settings change in Cemu's.

@@ -16,6 +16,8 @@
 #include "../../azahar/azahar.h"
 #include "../../azahar/controls.h"
 #include "../../azahar/library.h"
+#include "../../melonds/melonds.h"
+#include "../../ps5/privilege.h"
 #include "../../ps5/display.h"
 #include "../../ps5/log.h"
 #include "../../ps5/pad.h"
@@ -78,9 +80,10 @@ namespace ps5shell
 		};
 		auto n3ds = [&](int section) {
 			pages.push_back({"3ds-graphics", "Graphics", "For every 3DS game.", section, System::N3ds});
-			pages.push_back({"3ds-screens", "Screens and borders", "For every 3DS game; in a game, its menu changes them at once.", section,
+			pages.push_back({"3ds-screens", "Screens and borders", "For every 3DS and DS game; in a game, its menu changes them at once.", section,
 				System::N3ds});
-			pages.push_back({"3ds-controls", "Controls", "The DualSense as the 3DS.", section, System::N3ds});
+			pages.push_back({"3ds-controls", "Controls", "The DualSense as the 3DS, and as the DS.", section, System::N3ds});
+			pages.push_back({"3ds-ds", "DS games", "The DS games in the 3DS library, on melonDS.", section, System::N3ds});
 			pages.push_back({"3ds-system", "System and Home Menu", "The emulated 3DS's region and language.", section, System::N3ds});
 			pages.push_back({"3ds-installs", "Install CIA files", "Into the 3DS's storage.", section, System::N3ds});
 			pages.push_back({"3ds-artic", "Artic Base", "Play from your 3DS, over your network.", section, System::N3ds});
@@ -256,7 +259,8 @@ namespace ps5shell
 				"The launcher's sounds as you move, choose and go back.");
 			slider("volume-wiiu", "Wii U games' volume", m_settings.volume, 100, "The Wii U games' sound.",
 				"The Wii U games' sound. Left and Right change it by 10%.");
-			slider("volume-3ds", "3DS games' volume", n3ds.volume, 100, "The 3DS games' sound.", "The 3DS games' sound. Left and Right change it by 10%.");
+			slider("volume-3ds", "3DS and DS games' volume", n3ds.volume, 100, "The 3DS and DS games' sound.",
+				"The 3DS games' sound, and the DS games' in the 3DS library. Left and Right change it by 10%.");
 			toggle("gamepadspeaker", "GamePad speaker", m_settings.gamePadSpeaker, "The Wii U GamePad's own sound, on the DualSense.",
 				"The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound "
 				"there too, so it is off unless you want it. Applies to the next game.");
@@ -386,10 +390,11 @@ namespace ps5shell
 		else if (page == "3ds-screens")
 		{
 			choice("layout", "Screen layout", Options(kLayouts), n3ds.layout, "How the two screens share the TV.",
-				"One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, "
-				"touchpad click + R1 goes to the next.");
+				"One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side, for 3DS "
+				"and DS games alike. In a game, touchpad click + R1 goes to the next.");
 			choice("border", "Border", Options(kBorderThemes), n3ds.border, "Artwork around the screens.",
-				"Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too.", Kind::Swatches);
+				"Artwork around the 3DS's and the DS's screens, never over them. It follows every layout, and the in-game menu changes it too.",
+				Kind::Swatches);
 		}
 		else if (page == "3ds-controls")
 		{
@@ -403,7 +408,8 @@ namespace ps5shell
 			const int mapped = (int)std::count_if(mappings.begin(), mappings.end(), [](const ps5emu::ButtonMapping& m) { return !m.input.empty(); });
 			action(Kind::Link, "buttons3ds", "Buttons", Plural(mapped, "button set", "buttons set"), "Which DualSense button is which.",
 				"Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad "
-				"is the left stick, the C-stick the right one, and the touchpad the touch screen.");
+				"is the left stick, the C-stick the right one, and the touchpad the touch screen. DS games take the same buttons, the circle "
+				"pad's directions as their D-pad's too, and R3 held as their microphone.");
 			action(Kind::Hold, "reset3ds", "Reset to defaults", m_message.empty() ? "Hold Cross" : m_message, "Default buttons, motion and deadzone.",
 				"The default buttons, motion and deadzone.");
 		}
@@ -417,12 +423,30 @@ namespace ps5shell
 				"Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies "
 				"to the next game.");
 			choice("language", "Language", Options(kLanguages), n3ds.language + 1, "The emulated 3DS's language.",
-				"The language games that follow the console's show their text in. Applies to the next game.");
+				"The language games that follow the console's show their text in, the DS games' too (up to Chinese: the DS has no others). "
+				"Applies to the next game.");
 			Row* row = action(Kind::Action, "homemenu", "Home Menu", homeMenu ? "Start" : "Run Artic Setup first",
 				"The 3DS Home Menu, from your console's files.",
 				"Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base).");
 			row->dimmed = m_prepared == System::N3ds && !homeMenu;
 			sided(row, System::N3ds, false);
+		}
+		else if (page == "3ds-ds")
+		{
+			choice("dsfilter", "Screen filter", Options({"Sharp", "Smooth", "Square pixels"}), n3ds.dsFilter, "How the DS's screens are scaled.",
+				"How the DS's 256 x 192 screens are scaled to the TV. Sharp keeps every pixel square and even at any size; Smooth blurs them "
+				"together; Square pixels takes the nearest, uneven where the size is not a whole number. The in-game menu changes it too.",
+				Kind::Segmented);
+			const bool executable = ps5privilege::Current().executable;
+			toggle("dsjit", "Recompiler", n3ds.dsJit, executable ? "melonDS's JIT: much faster than its interpreter." : "No executable memory: the interpreter runs.",
+				"Runs the DS's two CPUs on melonDS's recompiler, in the executable memory the PS5 gives (Diagnostics says whether it does), "
+				"much faster than its interpreter. Off: the interpreter, slower, for a game the recompiler gets wrong. Applies to the next "
+				"DS game.");
+			const bool found = ps5melonds::OwnBiosFound();
+			toggle("dsownbios", "Your DS's BIOS", n3ds.dsOwnBios, found ? "Found in melonds/bios." : "Not found: melonDS's own run the games.",
+				"bios7.bin, bios9.bin and firmware.bin, dumped from your own DS, in /data/ps5cemu/melonds/bios: melonDS runs on them when "
+				"they are there and this is on. Without them, its own replacements (FreeBIOS) run most games as well. Applies to the next "
+				"DS game.");
 		}
 		else if (page == "3ds-installs")
 		{
@@ -465,16 +489,22 @@ namespace ps5shell
 				text += line + "\n";
 			return text;
 		}
+		if (page == "3ds-ds")
+			return "DS games (.nds) go in the 3DS games' folder, beside the 3DS's, and show in the 3DS library: DS on their badge, and a DS "
+				   "games filter. melonDS plays them, with the 3DS's screens, border, sound and controls, and the same in-game menu.\n\nSaves: "
+				   "/data/ps5cemu/melonds/saves (a .sav beside the game is taken the first time). Save states: melonds/states. Cheats: "
+				   "melonds/cheats/<game file>.mch, melonDS's format.\n\nDSi games, the DS's wireless and its GBA slot are not there.";
 		if (page == "wiiu-usb")
 			return "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then "
 				   "put figures on it from the in-game menu (touchpad click + Options > USB devices).";
 		if (page == "about")
 			return "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the "
 				   "community graphic packs' authors.\nAzahar, the 3DS emulator, by the Azahar team and the Citra contributors before them; "
-				   "Mihawk-99's PS5 port of it and dynarmic.\nBox art and game information: GameTDB. The font: Lexend.\nAn unofficial port, "
-				   "not affiliated with the Cemu or Azahar teams, Nintendo or Sony.\n\nWii U games: /data/ps5cemu/games, storage and saves: "
-				   "/data/ps5cemu/mlc01, keys: /data/ps5cemu/keys.txt\n3DS games: /data/ps5cemu/azahar/games, storage: "
-				   "/data/ps5cemu/azahar/sdmc\n\nVersion " +
+				   "Mihawk-99's PS5 port of it and dynarmic.\nmelonDS, the DS emulator, by Arisotura and the melonDS team.\nBox art and game "
+				   "information: GameTDB. The font: Lexend.\nAn unofficial port, not affiliated with the Cemu, Azahar or melonDS teams, Nintendo "
+				   "or Sony.\n\nWii U games: /data/ps5cemu/games, storage and saves: /data/ps5cemu/mlc01, keys: /data/ps5cemu/keys.txt\n3DS "
+				   "and DS games: /data/ps5cemu/azahar/games, 3DS storage: /data/ps5cemu/azahar/sdmc, DS saves: /data/ps5cemu/melonds/saves"
+				   "\n\nVersion " +
 				ps5update::Readable(PS5CEMU_VERSION);
 		return {};
 	}
@@ -504,6 +534,8 @@ namespace ps5shell
 			n3ds.region = std::clamp(index - 1, -1, 6);
 		else if (id == "language")
 			n3ds.language = std::clamp(index - 1, -1, 11);
+		else if (id == "dsfilter")
+			n3ds.dsFilter = std::clamp(index, 0, 2);
 		SaveSettings();
 		ps5sound::SetMusic(m_settings.music, m_settings.musicVolume);
 	}
@@ -571,6 +603,10 @@ namespace ps5shell
 				n3ds.customTextures = on;
 			else if (id == "motion")
 				n3ds.motion = on;
+			else if (id == "dsjit")
+				n3ds.dsJit = on;
+			else if (id == "dsownbios")
+				n3ds.dsOwnBios = on;
 			else if (id == "usb")
 			{
 				// Cemu's settings.xml keeps it, as its Emulated USB Devices window does

@@ -4,9 +4,9 @@
 //  1. out of the sandbox: /data, and JIT memory for the recompilers (ps5/privilege.h);
 //  2. the boot log, the DualSense and Cemu's core (settings, MLC, graphic packs, the game scan);
 //  3. the launcher until a game is chosen (frontend/shell.h), on the side last used;
-//  4. the game, on Cemu's or Azahar's Vulkan renderer, until the in-game menu (touchpad + Options)
-//     asks for the library, which starts PS5CEMU-HAR over (app/emulator.h, RestartToLibrary) on
-//     that emulator's side.
+//  4. the game, on Cemu's or Azahar's Vulkan renderer (or a DS game, which the 3DS side lists too, on
+//     melonDS with its screens on VideoOut), until the in-game menu (touchpad + Options) asks for the
+//     library, which starts PS5CEMU-HAR over (app/emulator.h, RestartToLibrary) on that emulator's side.
 
 #include "app/emulator.h"
 #include "app/pack_updates.h"
@@ -15,6 +15,7 @@
 #include "azahar/azahar.h"
 #include "azahar/library.h"
 #include "frontend/launcher.h"
+#include "melonds/melonds.h"
 #include "frontend/settings.h"
 #include "frontend/shell.h"
 #include "ps5/crash.h"
@@ -79,7 +80,8 @@ namespace
 	std::vector<std::string> Diagnostics(const ps5privilege::Result& privileges)
 	{
 		return {
-			fmt::format("PS5CEMU-HAR {}: Cemu at {}, Azahar at {}", PS5CEMU_VERSION, PS5CEMU_CEMU_COMMIT, PS5CEMU_AZAHAR_COMMIT),
+			fmt::format("PS5CEMU-HAR {}: Cemu at {}, Azahar at {}, melonDS at {}", PS5CEMU_VERSION, PS5CEMU_CEMU_COMMIT, PS5CEMU_AZAHAR_COMMIT,
+				PS5CEMU_MELONDS_COMMIT),
 			fmt::format("Firmware {}", Firmware()),
 			privileges.summary,
 			ps5log::Path()[0] ? fmt::format("Logs: {}, {}/log.txt", ps5log::Path(), ps5paths::kRoot) : "Boot log not written (/data is unreachable)",
@@ -125,7 +127,8 @@ void requireConsole() {}
 
 int main(int argc, char* argv[])
 {
-	ps5log::Line("[main] PS5CEMU-HAR {} starting (Cemu at {}, Azahar at {})", PS5CEMU_VERSION, PS5CEMU_CEMU_COMMIT, PS5CEMU_AZAHAR_COMMIT);
+	ps5log::Line("[main] PS5CEMU-HAR {} starting (Cemu at {}, Azahar at {}, melonDS at {})", PS5CEMU_VERSION, PS5CEMU_CEMU_COMMIT,
+		PS5CEMU_AZAHAR_COMMIT, PS5CEMU_MELONDS_COMMIT);
 	// before any thread starts: the HEN jailbreaks the process as it is
 	const ps5privilege::Result privileges = ps5privilege::Acquire();
 	if (privileges.filesystem)
@@ -262,6 +265,31 @@ int main(int argc, char* argv[])
 				sceKernelUsleep(1000000);
 		}
 		const ps5emu::Game& game = choice->game;
+
+		if (choice->system == ps5launcher::System::N3ds && game.nds)
+		{
+			// a DS game on the 3DS side: melonDS, with the 3DS's settings, its screens on VideoOut at
+			// 59.94 Hz, as Azahar's below
+			SetHighFrameRate(false);
+			if (ps5melonds::LaunchGame(game, settings.n3ds, error))
+			{
+				ps5melonds::RunGame();
+				RememberSide("3ds");
+				ps5emu::RestartToLibrary();
+				return 0;
+			}
+			ps5log::Line("[main] {} did not start: {}", game.name, error);
+			if (ps5melonds::CoreTouched())
+			{
+				// the screens took VideoOut: show why from a fresh process
+				RememberSide("3ds", error);
+				ps5emu::RestartToLibrary();
+				return 1;
+			}
+			status.notice3ds = "The game could not start: " + error;
+			settings.side = "3ds";
+			continue;
+		}
 
 		if (choice->system == ps5launcher::System::N3ds)
 		{

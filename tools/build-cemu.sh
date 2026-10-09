@@ -40,6 +40,8 @@ options=(
     -DCMAKE_INTERPROCEDURAL_OPTIMIZATION_RELEASE=OFF
     # Azahar's core, when tools/build-azahar.sh has built it (port/CMakeLists.txt)
     -DPS5CEMU_AZAHAR_LIBRARIES="$PS5CEMU_BUILD/azahar/azahar_ps5_libraries.txt"
+    # melonDS's core, when tools/build-melonds.sh has built it (port/CMakeLists.txt)
+    -DPS5CEMU_MELONDS_LIBRARIES="$PS5CEMU_BUILD/melonds/melonds_ps5_libraries.txt"
 )
 # configured again when the options change (this script's), as CMake would not know
 if [[ ! -f $build/build.ninja || $(cat "$build/ps5-options" 2>/dev/null) != "${options[*]}" ]]; then

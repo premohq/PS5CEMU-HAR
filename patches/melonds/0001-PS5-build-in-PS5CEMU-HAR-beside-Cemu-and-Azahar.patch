@@ -1,0 +1,26 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: ps5cemu <ps5cemu@localhost>
+Date: Fri, 9 Oct 2026 05:37:47 +0000
+Subject: [PATCH] PS5: build in PS5CEMU-HAR, beside Cemu and Azahar
+
+A frontend kept outside the tree can be added to the build
+(MELONDS_EXTERNAL_FRONTEND): PS5CEMU-HAR's port/melonds, built with the
+core and the toolchain PS5CEMU-HAR builds Cemu and Azahar with.
+---
+ CMakeLists.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c74f6b93..868b36ec 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -110,3 +110,9 @@ add_subdirectory(src)
+ if (BUILD_QT_SDL)
+     add_subdirectory(src/frontend/qt_sdl)
+ endif()
++
++# A frontend kept outside the tree, built against the core (PS5CEMU-HAR's port/melonds)
++set(MELONDS_EXTERNAL_FRONTEND "" CACHE PATH "A frontend kept outside the tree, added to the build")
++if (MELONDS_EXTERNAL_FRONTEND)
++    add_subdirectory("${MELONDS_EXTERNAL_FRONTEND}" external_frontend)
++endif()
