@@ -569,9 +569,9 @@ msgstr "Niciunul"
 
 msgid "{0} on"
 msgid_plural "{0} on"
-msgstr[0] "{0} activat"
-msgstr[1] "{0} activate"
-msgstr[2] "{0} de activate"
+msgstr[0] "{0} activ"
+msgstr[1] "{0} active"
+msgstr[2] "{0} active"
 
 msgid "The game's community graphic packs: resolution, frame rate and mods, as Cemu's Graphic Packs window has them."
 msgstr "Pachetele grafice ale comunității pentru joc: rezoluție, număr de cadre și moduri, ca în fereastra Graphic Packs din Cemu."
@@ -1160,727 +1160,727 @@ msgid "The download did not finish"
 msgstr "Descărcarea nu s-a terminat"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Nu a putut fi instalat: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Pachetele noi nu au putut lua locul celor vechi"
 
 msgid "Hold"
-msgstr ""
+msgstr "Ține"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Ține Crucea până se umple inelul."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "{0} nu a putut fi scris (e plin /data?)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "descărcarea nu are eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "Versiunea celei mai noi lansări ({0}) nu poate fi citită"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Sumele de control ale lansării nu au putut fi descărcate"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "Ramura de lansări nu are sumă de control pentru {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Descărcarea nu a putut porni"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "Descărcarea nu s-a terminat: e PS5 online?"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "Descărcarea e deteriorată (SHA-256 {0} în loc de {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "PS5CEMU-HAR rulează dintr-o imagine ale cărei fișiere nu pot fi înlocuite: instalează noua lansare manual"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Nu a putut fi despachetat: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "{0} nu a putut fi înlocuit ({1}): copiază manual peste el folderul PPSA99360 al lansării"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Slotul 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Slotul 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Slotul 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Slotul 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Set de joc / disc de putere"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Disc de putere 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Disc de putere 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Jucătorul 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Jucătorul 1, abilitatea 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Jucătorul 1, abilitatea 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Jucătorul 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Jucătorul 2, abilitatea 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Jucătorul 2, abilitatea 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Zona stângă 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Zona centrală"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Zona dreaptă 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Zona stângă 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Zona stângă 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Zona dreaptă 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Zona dreaptă 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "{0} nu a putut fi deschis"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "{0} e prea mic pentru un Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Portalul e plin"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "{0} e prea mic pentru o figurină Infinity"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "{0} e prea mic pentru o figurină Dimensions"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Prea multe cifre."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "Semnul @ nu e permis aici."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "Semnul % nu e permis aici."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "Semnul \\ nu e permis aici."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Cuvântul acesta nu e permis."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "Textul trebuie să aibă exact lungimea cerută."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "Textul e prea lung."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "Textul nu poate fi doar spații."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "Textul nu poate fi gol."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "Jocul nu l-a acceptat."
 
 msgid "saved"
-msgstr ""
+msgstr "salvat"
 
 msgid "another version's"
-msgstr ""
+msgstr "din altă versiune"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Fără cititor amiibo"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Luat"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Nu e un dump amiibo"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: activat"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: dezactivat"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Slotul {0} încărcat"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Salvat în slotul {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Creat de altă versiune"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Nu a mers"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Acesta nu e un joc 3DS pe care Azahar îl poate porni."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Jocul nu a putut fi încărcat."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Jocul e criptat: decriptează-l sau pune aes_keys.txt al 3DS-ului în /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "Formatul jocului nu e acceptat."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "Jocurile GBA Virtual Console nu sunt acceptate."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "Modul de sistem al jocului nu a fost găsit."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "Jocul are nevoie de fișiere de sistem 3DS pe care Azahar nu le are."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Patch-urile jocului nu au putut fi aplicate."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Randatorul sau CPU-ul Azahar nu a pornit."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Serverul Artic Base nu a răspuns: verifică adresa 3DS-ului, că Artic Base rulează pe el și că 3DS-ul și PS5 sunt în aceeași rețea."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "Jocul e ocupat: încearcă din nou"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "Jocul 3DS s-a oprit: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "Un fișier CIA se instalează, nu se joacă: instalează-l din Setări > Instalează fișiere CIA, apoi pornește jocul."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Azahar nu a pornit: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Clic pe touchpad + OPTIONS: meniul din joc. Doar un clic pe touchpad: ecranul de jos"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "e criptat, CIA-ul sau jocul din el. Azahar instalează doar fișiere CIA complet decriptate: decriptează-l cu GodMode9 pe un 3DS sau joacă în schimb fișierul .3ds ori .cci decriptat al jocului"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "nu e un fișier CIA sau e deteriorat (verifică dimensiunea fișierului)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "fișierul nu a putut fi citit"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Azahar s-a oprit la jumătate; /data/ps5cemu/azahar/log/azahar_log.txt spune de ce"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "nu e un CIA pe care Azahar îl poate instala"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "PS5 a rămas fără memorie pentru acest joc Wii U, așa că trebuie să se oprească. Jurnalul de pornire are detaliile."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} fișier pe unitatea USB {1}"
+msgstr[1] "{0} fișiere pe unitatea USB {1}"
+msgstr[2] "{0} de fișiere pe unitatea USB {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Nicio unitate USB găsită"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} fișier șters ({1} MB)"
+msgstr[1] "{0} fișiere șterse ({1} MB)"
+msgstr[2] "{0} de fișiere șterse ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Nimic de șters"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "Unitatea USB {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Stocare extinsă {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Joc"
 
 msgid "Update"
-msgstr ""
+msgstr "Actualizare"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Titlu de sistem"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Cruce"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Cerc"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Pătrat"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Triunghi"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Touchpad"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Butoane direcționale sus"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Butoane direcționale jos"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Butoane direcționale stânga"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Butoane direcționale dreapta"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Stick stâng sus"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Stick stâng jos"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Stick stâng stânga"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Stick stâng dreapta"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Apăsare stick stâng"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Stick drept sus"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Stick drept jos"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Stick drept stânga"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Stick drept dreapta"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Apăsare stick drept"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad sus"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad jos"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad stânga"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad dreapta"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-Stick sus"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-Stick jos"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-Stick stânga"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-Stick dreapta"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Stick Nunchuk sus"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Stick Nunchuk jos"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Stick Nunchuk stânga"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Stick Nunchuk dreapta"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Suflă în microfon"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Arată ecranul GamePad-ului"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Niciunul"
 
 msgid "Setup"
-msgstr ""
+msgstr "Configurare"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Ceva are nevoie de atenție"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Verificarea configurării"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnosticare"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Pornește Cemu"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Se încarcă setările, pachetele grafice și controllerele lui, apoi îți caută jocurile."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Se caută jocuri…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "În {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Bun venit"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Aici vor apărea jocurile tale"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Pune jocurile tale 3DS (.3ds, .cci, .cxi, .3dsx, decriptate) în {0} sau alege orice folder pe care PS5 îl poate citi, de exemplu pe o unitate USB. Se caută și în subfoldere."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Pune jocurile tale Wii U (.wua, .wud, .wux sau foldere cu code, content și meta) în {0} sau alege orice folder pe care PS5 îl poate citi, de exemplu pe o unitate USB."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Alege un folder"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} joc"
+msgstr[1] "Toate cele {0} jocuri"
+msgstr[2] "Toate cele {0} de jocuri"
 
 msgid "In your library"
-msgstr ""
+msgstr "În biblioteca ta"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Continuă · jucat ultima dată {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Jucat ultima dată {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Biblioteca ta"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Se caută jocuri noi…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "De la A la Z, după an, după cum rulează"
 
 msgid "Play"
-msgstr ""
+msgstr "Joacă"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Fișa jocului"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Deschide biblioteca"
 
 msgid "None on"
-msgstr ""
+msgstr "Niciunul activat"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} pachet pentru acest joc"
+msgstr[1] "{0} pachete pentru acest joc"
+msgstr[2] "{0} de pachete pentru acest joc"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} la P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Controllere"
 
 msgid "One player"
-msgstr ""
+msgstr "Un jucător"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Cum rulează"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "După lista de compatibilitate"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Actualizări și DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Nicio actualizare"
 
 msgid "This dump"
-msgstr ""
+msgstr "Acest dump"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Actualizarea v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Favorit"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Pachete grafice · {0} activ"
+msgstr[1] "Pachete grafice · {0} active"
+msgstr[2] "Pachete grafice · {0} active"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Despre joc"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "GameTDB recunoaște un joc după ID-ul de pe cutie, pe care acest dump nu îl are."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "GameTDB nu are încă o descriere a acestui joc."
 
 msgid "Developer"
-msgstr ""
+msgstr "Dezvoltator"
 
 msgid "Released"
-msgstr ""
+msgstr "Lansat"
 
 msgid "Genre"
-msgstr ""
+msgstr "Gen"
 
 msgid "Rating"
-msgstr ""
+msgstr "Clasificare"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Editor"
 
 msgid "Players"
-msgstr ""
+msgstr "Jucători"
 
 msgid "Title ID"
-msgstr ""
+msgstr "ID titlu"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Rulează bine pe PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "Lista de compatibilitate îl are ca „{0}”."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Jucate recent"
 
 msgid "A to Z"
-msgstr ""
+msgstr "De la A la Z"
 
 msgid "Release year"
-msgstr ""
+msgstr "Anul lansării"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Bibliotecă"
 
 msgid "Sort"
-msgstr ""
+msgstr "Sortează"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Toate"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Adăugate recent"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Favorite"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Cu pachete grafice"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Sortare: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Caută"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Căutare: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Nimic nu se potrivește cu „{0}”"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Încă nimic aici"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Încă niciun joc"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Cercul golește căutarea."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS pe un joc, apoi Favorit, îl pune aici."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Toate arată fiecare joc."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Setări > Jocuri și foldere spune unde trebuie puse."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Joacă de pe 3DS-ul tău"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, prin rețeaua ta"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Crucea activează sau dezactivează un pachet; dreapta merge la presetările lui. Alegerea unei presetări îi activează pachetul. Schimbările se aplică la următoarea pornire."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Niciun pachet grafic pentru acest joc"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Setări > Online și actualizări aduce cele mai noi ale comunității."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} din {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Pachet grafic"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Acest pachet nu are descriere."
 
 msgid "No presets"
-msgstr ""
+msgstr "Nicio presetare"
 
 msgid "Presets"
-msgstr ""
+msgstr "Presetări"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Presetări · alegerea uneia îl activează"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Gata"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1889,376 +1889,399 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Ce vede jocul în mâinile acestui jucător.\n"
+"\n"
+"Majoritatea jocurilor vor Wii U GamePad pentru jucătorul 1: ecranul lui e al doilea pe care îl arată PS5CEMU-HAR, iar touchpadul îl atinge. Altele iau Pro Controller sau Wii Remote, pentru jocuri ca New Super Mario Bros. U.\n"
+"Un Wii Remote arată unde stă un deget pe touchpad sau unde îndrepți DualSense.\n"
+"Cemu acceptă cel mult două GamePad-uri."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"Giroscopul și accelerometrul DualSense în locul celor ale controllerului, pentru jocurile în care țintești sau conduci înclinând GamePad-ul sau Wii Remote-ul.\n"
+"Pro Controller și Classic Controller nu au."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Cât de tare vibrează DualSense când jocul face controllerul să vibreze.\n"
+"Stânga și dreapta schimbă cu 10%."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Cât se mișcă stickul stâng până când jocul observă. Mărește-o dacă un personaj merge singur după ce lași stickul; micșoreaz-o pentru control mai fin."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Cât se mișcă stickul drept până când jocul observă. Mărește-o dacă camera se mișcă singură după ce lași stickul; micșoreaz-o pentru control mai fin."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Ce buton DualSense corespunde cărui buton al controllerului.\n"
+"Implicit, A e pe Cerc și B pe Cruce, unde le are Wii U."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Butoanele, vibrațiile, mișcarea și zonele moarte implicite ale acestui controller. Se confirmă ținând apăsat."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Butoane"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Revino la implicite"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Jucătorul {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, pe DualSense-ul acestui jucător"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, pe un DualSense neconectat"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Ce vede jocul în mâinile acestui jucător."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "Mișcarea DualSense ca a controllerului."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "Pro și Classic Controller nu au."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Cât de tare vibrează DualSense."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Cât se mișcă stickul stâng până să conteze."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Cât se mișcă stickul drept până să conteze."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} buton setat"
+msgstr[1] "{0} butoane setate"
+msgstr[2] "{0} de butoane setate"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Ce buton DualSense e care."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Ține Crucea"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Butoanele, vibrațiile, mișcarea și zonele moarte implicite."
 
 msgid "Connected"
-msgstr ""
+msgstr "Conectat"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Fără DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Golit: niciun buton DualSense nu mai e acesta."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Nu a fost apăsat niciun buton, așa că rămâne cum era."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Anulat: rămâne cum era."
 
 msgid "Done."
-msgstr ""
+msgstr "Gata."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "Butoanele DualSense pentru cele ale 3DS-ului"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Jucătorul {0}: butoanele DualSense pentru {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Nesetat"
 
 msgid "This button"
-msgstr ""
+msgstr "Acest buton"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Apasă un buton"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Apasă acum butonul, trăgaciul sau direcția de stick DualSense pentru {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Mai e {0} secundă. Un clic pe touchpad anulează."
+msgstr[1] "Mai sunt {0} secunde. Un clic pe touchpad anulează."
+msgstr[2] "Mai sunt {0} de secunde. Un clic pe touchpad anulează."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Cruce, apoi un buton, un trăgaci sau o direcție de stick DualSense: devine acesta.\n"
+"Pătratul îl golește."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Se anulează: ce s-a copiat e șters…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Se anulează: ce era instalat înainte e pus la loc…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Acest folder nu poate fi deschis."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Folderul nu a putut fi salvat. Încearcă din nou."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Salvat. PS5CEMU-HAR caută jocuri acolo."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Salvat. Partea aceea caută jocuri acolo când se deschide."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Se caută jocuri în {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Alege mai întâi un fișier CIA."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Cemu nu a pornit, așa că nu se poate instala nimic."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Se instalează: {0}, {1} din {2}.\n"
+"\n"
+"Cercul anulează."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Se instalează: se numără fișierele…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Instalat. Biblioteca îl arată cu jocul lui."
 
 msgid "Installed"
-msgstr ""
+msgstr "Instalat"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Anulat. Ce s-a copiat a fost șters, împreună cu orice copie anterioară a aceluiași titlu: instalează-l din nou ca să-l joci. Salvările lui sunt păstrate."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Anulat. Ce era instalat înainte e cum era."
 
 msgid "Install"
-msgstr ""
+msgstr "Instalare"
 
 msgid "3DS games"
-msgstr ""
+msgstr "Jocuri 3DS"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Jocuri Wii U"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Instalează fișiere CIA"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Instalează actualizări și DLC"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Alege un fișier CIA: un joc, o actualizare sau un DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Alege un folder cu o actualizare, un DLC sau un joc (code, content și meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Alege folderul cu jocurile tale 3DS"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Alege folderul cu jocurile tale Wii U"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Acest folder e gol."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Folderul părinte"
 
 msgid "Drive"
-msgstr ""
+msgstr "Unitate"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 msgid "A folder"
-msgstr ""
+msgstr "Un folder"
 
 msgid "Version"
-msgstr ""
+msgstr "Versiune"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Triunghiul îl instalează în stocarea 3DS-ului: o actualizare sau un DLC merge cu jocul lui, iar un joc intră în bibliotecă."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Alege un fișier CIA de instalat: un joc, o actualizare sau un DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Jocuri aici"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Nu poate fi citit"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} joc"
+msgstr[1] "{0} jocuri"
+msgstr[2] "{0} de jocuri"
 
 msgid "Found"
-msgstr ""
+msgstr "Găsit"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Lipsește (doar dump-urile criptate au nevoie de el)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Găsit în /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Lipsește (doar .wud/.wux au nevoie de el)"
 
 msgid "In use"
-msgstr ""
+msgstr "În uz"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Jocurile pot fi .3ds sau .cci, .cxi, .cia sau .3dsx, decriptate, aici sau în subfoldere. Triunghiul folosește folderul afișat."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Jocurile pot fi .wua, .wud, .wux sau foldere cu code, content și meta. Triunghiul folosește folderul afișat."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Nimic de instalat"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, încă neinstalată"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, acum e instalată v{1}"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Triunghiul îl instalează în stocarea Wii U (mlc01). Actualizările și DLC-urile din folderul de jocuri merg și așa cum sunt."
 
 msgid "To install"
-msgstr ""
+msgstr "De instalat"
 
 msgid "This folder"
-msgstr ""
+msgstr "Acest folder"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Conectare la {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Joacă un joc de pe 3DS-ul tău prin rețea sau configurează Azahar cu ajutorul lui"
 
 msgid "3DS address"
-msgstr ""
+msgstr "Adresa 3DS"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Adresa pe care Artic Base o arată pe ecranul 3DS-ului când e gata.\n"
+"Crucea o editează: stânga și dreapta aleg un număr, sus și jos îl schimbă cu 1, L1 și R1 cu 10, iar Crucea încă o dată o păstrează.\n"
+"3DS-ul și PS5 trebuie să fie în aceeași rețea."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Conectează și joacă"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Pe 3DS, pornește aplicația Artic Base (homebrew de la echipa Azahar) și alege în ea un joc: cartușul sau unul instalat. Apoi conectează-te de aici: jocul rulează pe PS5 de pe 3DS, iar salvările lui rămân pe 3DS.\n"
+"E doar atât de fluid cât e rețeaua: ajută un semnal Wi-Fi puternic pentru 3DS și un PS5 pe cablu."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Configurează de pe un 3DS vechi"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Cu aplicația Artic Setup Tool pornită pe un 3DS sau 2DS vechi: copiază fișierele lui de sistem și propriile date (setări de sistem, cod de prieten, date Mii și eShop) în Azahar, ca să pornească jocurile care au nevoie de applet-urile sau fișierele de sistem ale 3DS-ului, și meniul HOME (Setări > Sistem și meniul HOME).\n"
+"Datele acelea sunt ale consolei tale: nu împărtăși apoi folderul Azahar."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Configurează de pe un New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Ca mai sus, de pe un New 3DS sau New 2DS cu aplicația Artic Setup Tool pornită."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Automat"
 
 msgid "Japan"
-msgstr ""
+msgstr "Japonia"
 
 msgid "USA"
-msgstr ""
+msgstr "SUA"
 
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 msgid "Australia"
-msgstr ""
+msgstr "Australia"
 
 msgid "China"
-msgstr ""
+msgstr "China"
 
 msgid "Korea"
-msgstr ""
+msgstr "Coreea"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Taiwan"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Japoneză"
 
 msgid "English"
-msgstr ""
+msgstr "Engleză"
 
 msgid "French"
-msgstr ""
+msgstr "Franceză"
 
 msgid "German"
-msgstr ""
+msgstr "Germană"
 
 msgid "Italian"
-msgstr ""
+msgstr "Italiană"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Spaniolă"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Chineză (simplificată)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Coreeană"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Neerlandeză"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Portugheză"
 
 msgid "Russian"
-msgstr ""
+msgstr "Rusă"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Chineză (tradițională)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Liniar"
 
 msgid "Setup theme"
 msgstr ""
