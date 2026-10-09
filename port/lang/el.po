@@ -1159,722 +1159,722 @@ msgid "The download did not finish"
 msgstr "Η λήψη δεν ολοκληρώθηκε"
 
 msgid "It could not be installed: {0}"
-msgstr ""
+msgstr "Δεν ήταν δυνατό να εγκατασταθεί: {0}"
 
 msgid "The new packs could not take the old ones' place"
-msgstr ""
+msgstr "Τα νέα πακέτα δεν μπόρεσαν να πάρουν τη θέση των παλιών"
 
 msgid "Hold"
-msgstr ""
+msgstr "Κράτημα"
 
 msgid "Hold Cross until the ring fills."
-msgstr ""
+msgstr "Κρατήστε τον Σταυρό μέχρι να γεμίσει ο δακτύλιος."
 
 msgid "{0} could not be written (is /data full?)"
-msgstr ""
+msgstr "Το {0} δεν ήταν δυνατό να γραφτεί (είναι γεμάτο το /data;)"
 
 msgid "the download has no eboot.bin"
-msgstr ""
+msgstr "η λήψη δεν περιέχει eboot.bin"
 
 msgid "The latest release's version ({0}) is not one this can read"
-msgstr ""
+msgstr "Η έκδοση της τελευταίας κυκλοφορίας ({0}) δεν μπορεί να διαβαστεί"
 
 msgid "The release's checksums could not be downloaded"
-msgstr ""
+msgstr "Τα αθροίσματα ελέγχου της κυκλοφορίας δεν ήταν δυνατό να ληφθούν"
 
 msgid "The releases branch has no checksum for {0}"
-msgstr ""
+msgstr "Ο κλάδος κυκλοφοριών δεν έχει άθροισμα ελέγχου για το {0}"
 
 msgid "The download could not start"
-msgstr ""
+msgstr "Η λήψη δεν μπόρεσε να ξεκινήσει"
 
 msgid "The download did not finish: is the PS5 online?"
-msgstr ""
+msgstr "Η λήψη δεν ολοκληρώθηκε: είναι το PS5 συνδεδεμένο;"
 
 msgid "The download is damaged (SHA-256 {0}, not {1})"
-msgstr ""
+msgstr "Η λήψη είναι κατεστραμμένη (SHA-256 {0} αντί για {1})"
 
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
-msgstr ""
+msgstr "Το PS5CEMU-HAR τρέχει από εικόνα της οποίας τα αρχεία δεν αντικαθίστανται: εγκαταστήστε τη νέα κυκλοφορία χειροκίνητα"
 
 msgid "It could not be unpacked: {0}"
-msgstr ""
+msgstr "Δεν ήταν δυνατή η αποσυμπίεση: {0}"
 
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
-msgstr ""
+msgstr "Το {0} δεν ήταν δυνατό να αντικατασταθεί ({1}): αντιγράψτε από πάνω χειροκίνητα τον φάκελο PPSA99360 της κυκλοφορίας"
 
 msgid "Slot 1"
-msgstr ""
+msgstr "Θέση 1"
 
 msgid "Slot 2"
-msgstr ""
+msgstr "Θέση 2"
 
 msgid "Slot 3"
-msgstr ""
+msgstr "Θέση 3"
 
 msgid "Slot 4"
-msgstr ""
+msgstr "Θέση 4"
 
 msgid "Play set / power disc"
-msgstr ""
+msgstr "Σετ παιχνιδιού / δίσκος δύναμης"
 
 msgid "Power disc 2"
-msgstr ""
+msgstr "Δίσκος δύναμης 2"
 
 msgid "Power disc 3"
-msgstr ""
+msgstr "Δίσκος δύναμης 3"
 
 msgid "Player 1"
-msgstr ""
+msgstr "Παίκτης 1"
 
 msgid "Player 1 ability 1"
-msgstr ""
+msgstr "Παίκτης 1, ικανότητα 1"
 
 msgid "Player 1 ability 2"
-msgstr ""
+msgstr "Παίκτης 1, ικανότητα 2"
 
 msgid "Player 2"
-msgstr ""
+msgstr "Παίκτης 2"
 
 msgid "Player 2 ability 1"
-msgstr ""
+msgstr "Παίκτης 2, ικανότητα 1"
 
 msgid "Player 2 ability 2"
-msgstr ""
+msgstr "Παίκτης 2, ικανότητα 2"
 
 msgid "Left pad 1"
-msgstr ""
+msgstr "Αριστερή βάση 1"
 
 msgid "Centre pad"
-msgstr ""
+msgstr "Κεντρική βάση"
 
 msgid "Right pad 1"
-msgstr ""
+msgstr "Δεξιά βάση 1"
 
 msgid "Left pad 2"
-msgstr ""
+msgstr "Αριστερή βάση 2"
 
 msgid "Left pad 3"
-msgstr ""
+msgstr "Αριστερή βάση 3"
 
 msgid "Right pad 2"
-msgstr ""
+msgstr "Δεξιά βάση 2"
 
 msgid "Right pad 3"
-msgstr ""
+msgstr "Δεξιά βάση 3"
 
 msgid "{0} could not be opened"
-msgstr ""
+msgstr "Το {0} δεν ήταν δυνατό να ανοίξει"
 
 msgid "{0} is too small for a Skylander"
-msgstr ""
+msgstr "Το {0} είναι πολύ μικρό για Skylander"
 
 msgid "The portal is full"
-msgstr ""
+msgstr "Η πύλη είναι γεμάτη"
 
 msgid "{0} is too small for an Infinity figure"
-msgstr ""
+msgstr "Το {0} είναι πολύ μικρό για φιγούρα Infinity"
 
 msgid "{0} is too small for a Dimensions figure"
-msgstr ""
+msgstr "Το {0} είναι πολύ μικρό για φιγούρα Dimensions"
 
 msgid "Skylanders Portal of Power"
-msgstr ""
+msgstr "Skylanders Portal of Power"
 
 msgid "Disney Infinity Base"
-msgstr ""
+msgstr "Disney Infinity Base"
 
 msgid "LEGO Dimensions Toypad"
-msgstr ""
+msgstr "LEGO Dimensions Toy Pad"
 
 msgid "Too many digits."
-msgstr ""
+msgstr "Πάρα πολλά ψηφία."
 
 msgid "The @ sign is not allowed here."
-msgstr ""
+msgstr "Το σύμβολο @ δεν επιτρέπεται εδώ."
 
 msgid "The % sign is not allowed here."
-msgstr ""
+msgstr "Το σύμβολο % δεν επιτρέπεται εδώ."
 
 msgid "The \\ sign is not allowed here."
-msgstr ""
+msgstr "Το σύμβολο \\ δεν επιτρέπεται εδώ."
 
 msgid "That word is not allowed."
-msgstr ""
+msgstr "Αυτή η λέξη δεν επιτρέπεται."
 
 msgid "The text must be exactly the length asked for."
-msgstr ""
+msgstr "Το κείμενο πρέπει να έχει ακριβώς το ζητούμενο μήκος."
 
 msgid "The text is too long."
-msgstr ""
+msgstr "Το κείμενο είναι πολύ μεγάλο."
 
 msgid "The text cannot be only spaces."
-msgstr ""
+msgstr "Το κείμενο δεν μπορεί να είναι μόνο κενά."
 
 msgid "The text cannot be empty."
-msgstr ""
+msgstr "Το κείμενο δεν μπορεί να είναι άδειο."
 
 msgid "The game did not accept it."
-msgstr ""
+msgstr "Το παιχνίδι δεν το δέχτηκε."
 
 msgid "saved"
-msgstr ""
+msgstr "αποθηκεύτηκε"
 
 msgid "another version's"
-msgstr ""
+msgstr "άλλης έκδοσης"
 
 msgid "No amiibo reader"
-msgstr ""
+msgstr "Χωρίς αναγνώστη amiibo"
 
 msgid "Taken away"
-msgstr ""
+msgstr "Απομακρύνθηκε"
 
 msgid "Not an amiibo dump"
-msgstr ""
+msgstr "Δεν είναι dump amiibo"
 
 msgid "{0}: on"
-msgstr ""
+msgstr "{0}: ενεργό"
 
 msgid "{0}: off"
-msgstr ""
+msgstr "{0}: ανενεργό"
 
 msgid "Loaded slot {0}"
-msgstr ""
+msgstr "Η θέση {0} φορτώθηκε"
 
 msgid "Saved slot {0}"
-msgstr ""
+msgstr "Αποθηκεύτηκε στη θέση {0}"
 
 msgid "Made by another version"
-msgstr ""
+msgstr "Φτιάχτηκε από άλλη έκδοση"
 
 msgid "It did not work"
-msgstr ""
+msgstr "Δεν πέτυχε"
 
 msgid "This is not a 3DS game Azahar can start."
-msgstr ""
+msgstr "Αυτό δεν είναι παιχνίδι 3DS που μπορεί να ξεκινήσει το Azahar."
 
 msgid "The game could not be loaded."
-msgstr ""
+msgstr "Το παιχνίδι δεν ήταν δυνατό να φορτωθεί."
 
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Το παιχνίδι είναι κρυπτογραφημένο: αποκρυπτογραφήστε το ή βάλτε το aes_keys.txt του 3DS στο /data/ps5cemu/azahar/sysdata."
 
 msgid "The game's format is not supported."
-msgstr ""
+msgstr "Η μορφή του παιχνιδιού δεν υποστηρίζεται."
 
 msgid "GBA Virtual Console games are not supported."
-msgstr ""
+msgstr "Τα παιχνίδια GBA Virtual Console δεν υποστηρίζονται."
 
 msgid "The game's system mode could not be found."
-msgstr ""
+msgstr "Η λειτουργία συστήματος του παιχνιδιού δεν βρέθηκε."
 
 msgid "The game needs 3DS system files Azahar does not have."
-msgstr ""
+msgstr "Το παιχνίδι χρειάζεται αρχεία συστήματος 3DS που δεν έχει το Azahar."
 
 msgid "The game's patches could not be applied."
-msgstr ""
+msgstr "Οι διορθώσεις του παιχνιδιού δεν ήταν δυνατό να εφαρμοστούν."
 
 msgid "Azahar's renderer or CPU did not start."
-msgstr ""
+msgstr "Η απόδοση ή η CPU του Azahar δεν ξεκίνησε."
 
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
-msgstr ""
+msgstr "Ο διακομιστής Artic Base δεν απάντησε: ελέγξτε τη διεύθυνση του 3DS, ότι τρέχει το Artic Base σε αυτό και ότι το 3DS και το PS5 είναι στο ίδιο δίκτυο."
 
 msgid "The game is busy: try again"
-msgstr ""
+msgstr "Το παιχνίδι είναι απασχολημένο: δοκιμάστε ξανά"
 
 msgid "The 3DS game stopped: {0}"
-msgstr ""
+msgstr "Το παιχνίδι 3DS σταμάτησε: {0}"
 
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
-msgstr ""
+msgstr "Ένα αρχείο CIA εγκαθίσταται, δεν παίζεται: εγκαταστήστε το από τις Ρυθμίσεις > Εγκατάσταση αρχείων CIA και μετά ξεκινήστε το παιχνίδι."
 
 msgid "Azahar did not start: {0}"
-msgstr ""
+msgstr "Το Azahar δεν ξεκίνησε: {0}"
 
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
-msgstr ""
+msgstr "Κλικ στην επιφάνεια αφής + OPTIONS: το μενού του παιχνιδιού. Μόνο κλικ στην επιφάνεια αφής: η κάτω οθόνη"
 
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
-msgstr ""
+msgstr "είναι κρυπτογραφημένο, το CIA ή το παιχνίδι μέσα του. Το Azahar εγκαθιστά μόνο πλήρως αποκρυπτογραφημένα αρχεία CIA: αποκρυπτογραφήστε το με το GodMode9 σε ένα 3DS ή παίξτε αντί γι’ αυτό το αποκρυπτογραφημένο αρχείο .3ds ή .cci του παιχνιδιού"
 
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
-msgstr ""
+msgstr "δεν είναι αρχείο CIA ή είναι κατεστραμμένο (ελέγξτε το μέγεθος του αρχείου)"
 
 msgid "the file could not be read"
-msgstr ""
+msgstr "το αρχείο δεν ήταν δυνατό να διαβαστεί"
 
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
-msgstr ""
+msgstr "Το Azahar σταμάτησε στη μέση· το /data/ps5cemu/azahar/log/azahar_log.txt λέει γιατί"
 
 msgid "it is not a CIA Azahar can install"
-msgstr ""
+msgstr "δεν είναι CIA που μπορεί να εγκαταστήσει το Azahar"
 
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
-msgstr ""
+msgstr "Το PS5 δεν έχει άλλη μνήμη για αυτό το παιχνίδι Wii U, οπότε πρέπει να σταματήσει. Το αρχείο καταγραφής εκκίνησης έχει τις λεπτομέρειες."
 
 msgctxt "size"
 msgid "{0} GB"
-msgstr ""
+msgstr "{0} GB"
 
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} αρχείο στη μονάδα USB {1}"
+msgstr[1] "{0} αρχεία στη μονάδα USB {1}"
 
 msgid "No USB drive found"
-msgstr ""
+msgstr "Δεν βρέθηκε μονάδα USB"
 
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} αρχείο διαγράφηκε ({1} MB)"
+msgstr[1] "{0} αρχεία διαγράφηκαν ({1} MB)"
 
 msgid "None to delete"
-msgstr ""
+msgstr "Τίποτα για διαγραφή"
 
 msgid "USB drive {0}"
-msgstr ""
+msgstr "Μονάδα USB {0}"
 
 msgid "Extended storage {0}"
-msgstr ""
+msgstr "Εκτεταμένος χώρος αποθήκευσης {0}"
 
 msgid "Game"
-msgstr ""
+msgstr "Παιχνίδι"
 
 msgid "Update"
-msgstr ""
+msgstr "Ενημέρωση"
 
 msgid "DLC"
-msgstr ""
+msgstr "DLC"
 
 msgid "System title"
-msgstr ""
+msgstr "Τίτλος συστήματος"
 
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 msgid "Title"
-msgstr ""
+msgstr "Τίτλος"
 
 msgctxt "button"
 msgid "Cross"
-msgstr ""
+msgstr "Σταυρός"
 
 msgctxt "button"
 msgid "Circle"
-msgstr ""
+msgstr "Κύκλος"
 
 msgctxt "button"
 msgid "Square"
-msgstr ""
+msgstr "Τετράγωνο"
 
 msgctxt "button"
 msgid "Triangle"
-msgstr ""
+msgstr "Τρίγωνο"
 
 msgctxt "button"
 msgid "Create"
-msgstr ""
+msgstr "Create"
 
 msgctxt "button"
 msgid "Options"
-msgstr ""
+msgstr "OPTIONS"
 
 msgctxt "button"
 msgid "Touchpad"
-msgstr ""
+msgstr "Επιφάνεια αφής"
 
 msgctxt "button"
 msgid "D-pad up"
-msgstr ""
+msgstr "Κατευθυντικά πάνω"
 
 msgctxt "button"
 msgid "D-pad down"
-msgstr ""
+msgstr "Κατευθυντικά κάτω"
 
 msgctxt "button"
 msgid "D-pad left"
-msgstr ""
+msgstr "Κατευθυντικά αριστερά"
 
 msgctxt "button"
 msgid "D-pad right"
-msgstr ""
+msgstr "Κατευθυντικά δεξιά"
 
 msgctxt "button"
 msgid "Left stick up"
-msgstr ""
+msgstr "Αριστερός μοχλός πάνω"
 
 msgctxt "button"
 msgid "Left stick down"
-msgstr ""
+msgstr "Αριστερός μοχλός κάτω"
 
 msgctxt "button"
 msgid "Left stick left"
-msgstr ""
+msgstr "Αριστερός μοχλός αριστερά"
 
 msgctxt "button"
 msgid "Left stick right"
-msgstr ""
+msgstr "Αριστερός μοχλός δεξιά"
 
 msgctxt "button"
 msgid "Left stick click"
-msgstr ""
+msgstr "Πάτημα αριστερού μοχλού"
 
 msgctxt "button"
 msgid "Right stick up"
-msgstr ""
+msgstr "Δεξιός μοχλός πάνω"
 
 msgctxt "button"
 msgid "Right stick down"
-msgstr ""
+msgstr "Δεξιός μοχλός κάτω"
 
 msgctxt "button"
 msgid "Right stick left"
-msgstr ""
+msgstr "Δεξιός μοχλός αριστερά"
 
 msgctxt "button"
 msgid "Right stick right"
-msgstr ""
+msgstr "Δεξιός μοχλός δεξιά"
 
 msgctxt "button"
 msgid "Right stick click"
-msgstr ""
+msgstr "Πάτημα δεξιού μοχλού"
 
 msgctxt "button"
 msgid "Circle pad up"
-msgstr ""
+msgstr "Circle Pad πάνω"
 
 msgctxt "button"
 msgid "Circle pad down"
-msgstr ""
+msgstr "Circle Pad κάτω"
 
 msgctxt "button"
 msgid "Circle pad left"
-msgstr ""
+msgstr "Circle Pad αριστερά"
 
 msgctxt "button"
 msgid "Circle pad right"
-msgstr ""
+msgstr "Circle Pad δεξιά"
 
 msgctxt "button"
 msgid "C-stick up"
-msgstr ""
+msgstr "C-Stick πάνω"
 
 msgctxt "button"
 msgid "C-stick down"
-msgstr ""
+msgstr "C-Stick κάτω"
 
 msgctxt "button"
 msgid "C-stick left"
-msgstr ""
+msgstr "C-Stick αριστερά"
 
 msgctxt "button"
 msgid "C-stick right"
-msgstr ""
+msgstr "C-Stick δεξιά"
 
 msgctxt "button"
 msgid "Nunchuk stick up"
-msgstr ""
+msgstr "Μοχλός Nunchuk πάνω"
 
 msgctxt "button"
 msgid "Nunchuk stick down"
-msgstr ""
+msgstr "Μοχλός Nunchuk κάτω"
 
 msgctxt "button"
 msgid "Nunchuk stick left"
-msgstr ""
+msgstr "Μοχλός Nunchuk αριστερά"
 
 msgctxt "button"
 msgid "Nunchuk stick right"
-msgstr ""
+msgstr "Μοχλός Nunchuk δεξιά"
 
 msgctxt "button"
 msgid "Nunchuk C"
-msgstr ""
+msgstr "Nunchuk C"
 
 msgctxt "button"
 msgid "Nunchuk Z"
-msgstr ""
+msgstr "Nunchuk Z"
 
 msgctxt "button"
 msgid "Home"
-msgstr ""
+msgstr "HOME"
 
 msgctxt "button"
 msgid "Start"
-msgstr ""
+msgstr "START"
 
 msgctxt "button"
 msgid "Select"
-msgstr ""
+msgstr "SELECT"
 
 msgctxt "button"
 msgid "+ (Start)"
-msgstr ""
+msgstr "+ (START)"
 
 msgctxt "button"
 msgid "- (Select)"
-msgstr ""
+msgstr "- (SELECT)"
 
 msgctxt "button"
 msgid "Blow into the mic"
-msgstr ""
+msgstr "Φύσημα στο μικρόφωνο"
 
 msgctxt "button"
 msgid "Show the GamePad's screen"
-msgstr ""
+msgstr "Εμφάνιση της οθόνης του GamePad"
 
 msgctxt "button"
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 msgid "Setup"
-msgstr ""
+msgstr "Προετοιμασία"
 
 msgid "Something needs a look"
-msgstr ""
+msgstr "Κάτι χρειάζεται προσοχή"
 
 msgid "Setup check"
-msgstr ""
+msgstr "Έλεγχος προετοιμασίας"
 
 msgid "Diagnostics"
-msgstr ""
+msgstr "Διαγνωστικά"
 
 msgid "Starting Cemu"
-msgstr ""
+msgstr "Εκκίνηση του Cemu"
 
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
-msgstr ""
+msgstr "Φορτώνονται οι ρυθμίσεις, τα πακέτα γραφικών και τα χειριστήριά του, και μετά ψάχνει τα παιχνίδια σας."
 
 msgid "Looking for games…"
-msgstr ""
+msgstr "Αναζήτηση παιχνιδιών…"
 
 msgid "In {0}."
-msgstr ""
+msgstr "Στο {0}."
 
 msgid "Welcome"
-msgstr ""
+msgstr "Καλώς ήρθατε"
 
 msgid "Your games go here"
-msgstr ""
+msgstr "Εδώ θα μπουν τα παιχνίδια σας"
 
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
-msgstr ""
+msgstr "Βάλτε τα παιχνίδια 3DS σας (.3ds, .cci, .cxi, .3dsx, αποκρυπτογραφημένα) στο {0} ή επιλέξτε οποιονδήποτε φάκελο μπορεί να διαβάσει το PS5, π.χ. σε μονάδα USB. Αναζητούνται και οι υποφάκελοι."
 
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
-msgstr ""
+msgstr "Βάλτε τα παιχνίδια Wii U σας (.wua, .wud, .wux ή φακέλους με code, content και meta) στο {0} ή επιλέξτε οποιονδήποτε φάκελο μπορεί να διαβάσει το PS5, π.χ. σε μονάδα USB."
 
 msgid "Choose a folder"
-msgstr ""
+msgstr "Επιλογή φακέλου"
 
 msgid "All {0} game"
 msgid_plural "All {0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} παιχνίδι"
+msgstr[1] "Όλα τα {0} παιχνίδια"
 
 msgid "In your library"
-msgstr ""
+msgstr "Στη βιβλιοθήκη σας"
 
 msgid "Continue · last played {0}"
-msgstr ""
+msgstr "Συνέχεια · τελευταία φορά {0}"
 
 msgid "Last played {0}"
-msgstr ""
+msgstr "Τελευταία φορά {0}"
 
 msgid "Your library"
-msgstr ""
+msgstr "Η βιβλιοθήκη σας"
 
 msgid "Looking for new games…"
-msgstr ""
+msgstr "Αναζήτηση νέων παιχνιδιών…"
 
 msgid "A to Z, by year, by how they run"
-msgstr ""
+msgstr "Α έως Ω, ανά έτος, ανά λειτουργία"
 
 msgid "Play"
-msgstr ""
+msgstr "Παίξτε"
 
 msgid "Game hub"
-msgstr ""
+msgstr "Σελίδα παιχνιδιού"
 
 msgid "Open the library"
-msgstr ""
+msgstr "Άνοιγμα βιβλιοθήκης"
 
 msgid "None on"
-msgstr ""
+msgstr "Κανένα ενεργό"
 
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} πακέτο για αυτό το παιχνίδι"
+msgstr[1] "{0} πακέτα για αυτό το παιχνίδι"
 
 msgid "{0} on P{1}"
-msgstr ""
+msgstr "{0} στον P{1}"
 
 msgid "Controllers"
-msgstr ""
+msgstr "Χειριστήρια"
 
 msgid "One player"
-msgstr ""
+msgstr "Ένας παίκτης"
 
 msgid "How it runs"
-msgstr ""
+msgstr "Πώς τρέχει"
 
 msgid "From the compatibility list"
-msgstr ""
+msgstr "Από τη λίστα συμβατότητας"
 
 msgid "Updates and DLC"
-msgstr ""
+msgstr "Ενημερώσεις και DLC"
 
 msgid "No update"
-msgstr ""
+msgstr "Χωρίς ενημέρωση"
 
 msgid "This dump"
-msgstr ""
+msgstr "Αυτό το dump"
 
 msgid "Update v{0}"
-msgstr ""
+msgstr "Ενημέρωση v{0}"
 
 msgid "Favourite"
-msgstr ""
+msgstr "Αγαπημένο"
 
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Πακέτα γραφικών · {0} ενεργό"
+msgstr[1] "Πακέτα γραφικών · {0} ενεργά"
 
 msgctxt "game"
 msgid "About"
-msgstr ""
+msgstr "Σχετικά"
 
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
-msgstr ""
+msgstr "Το GameTDB αναγνωρίζει ένα παιχνίδι από το ID στο κουτί του, που αυτό το dump δεν έχει."
 
 msgid "GameTDB has no description of this game yet."
-msgstr ""
+msgstr "Το GameTDB δεν έχει ακόμα περιγραφή αυτού του παιχνιδιού."
 
 msgid "Developer"
-msgstr ""
+msgstr "Δημιουργός"
 
 msgid "Released"
-msgstr ""
+msgstr "Κυκλοφορία"
 
 msgid "Genre"
-msgstr ""
+msgstr "Είδος"
 
 msgid "Rating"
-msgstr ""
+msgstr "Αξιολόγηση"
 
 msgid "Publisher"
-msgstr ""
+msgstr "Εκδότης"
 
 msgid "Players"
-msgstr ""
+msgstr "Παίκτες"
 
 msgid "Title ID"
-msgstr ""
+msgstr "ID τίτλου"
 
 msgid "Runs well on PS5"
-msgstr ""
+msgstr "Τρέχει καλά στο PS5"
 
 msgid "The compatibility list has it as “{0}”."
-msgstr ""
+msgstr "Η λίστα συμβατότητας το έχει ως «{0}»."
 
 msgid "Recently played"
-msgstr ""
+msgstr "Παίχτηκαν πρόσφατα"
 
 msgid "A to Z"
-msgstr ""
+msgstr "Α έως Ω"
 
 msgid "Release year"
-msgstr ""
+msgstr "Έτος κυκλοφορίας"
 
 msgctxt "tab"
 msgid "Library"
-msgstr ""
+msgstr "Βιβλιοθήκη"
 
 msgid "Sort"
-msgstr ""
+msgstr "Ταξινόμηση"
 
 msgctxt "filter"
 msgid "All"
-msgstr ""
+msgstr "Όλα"
 
 msgid "Recently added"
-msgstr ""
+msgstr "Προστέθηκαν πρόσφατα"
 
 msgid "Favourites"
-msgstr ""
+msgstr "Αγαπημένα"
 
 msgid "Graphic packs on"
-msgstr ""
+msgstr "Με πακέτα γραφικών"
 
 msgid "Sort: {0}"
-msgstr ""
+msgstr "Ταξινόμηση: {0}"
 
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 msgid "Search: {0}"
-msgstr ""
+msgstr "Αναζήτηση: {0}"
 
 msgid "Nothing matches “{0}”"
-msgstr ""
+msgstr "Τίποτα δεν ταιριάζει με «{0}»"
 
 msgid "None here yet"
-msgstr ""
+msgstr "Τίποτα εδώ ακόμα"
 
 msgid "No games yet"
-msgstr ""
+msgstr "Κανένα παιχνίδι ακόμα"
 
 msgid "Circle clears the search."
-msgstr ""
+msgstr "Ο Κύκλος καθαρίζει την αναζήτηση."
 
 msgid "Options on a game, then Favourite, puts it here."
-msgstr ""
+msgstr "OPTIONS σε ένα παιχνίδι και μετά Αγαπημένο το φέρνει εδώ."
 
 msgid "All shows every game."
-msgstr ""
+msgstr "Το Όλα δείχνει κάθε παιχνίδι."
 
 msgid "Settings > Games and folders says where they go."
-msgstr ""
+msgstr "Οι Ρυθμίσεις > Παιχνίδια και φάκελοι λένε πού μπαίνουν."
 
 msgid "Play from your 3DS"
-msgstr ""
+msgstr "Παίξτε από το 3DS σας"
 
 msgid "Artic Base, over your network"
-msgstr ""
+msgstr "Artic Base, μέσω του δικτύου σας"
 
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
-msgstr ""
+msgstr "Ο Σταυρός ενεργοποιεί ή απενεργοποιεί ένα πακέτο· το δεξιά πηγαίνει στις προεπιλογές του. Η επιλογή μιας προεπιλογής ενεργοποιεί το πακέτο της. Οι αλλαγές ισχύουν από την επόμενη εκκίνηση."
 
 msgid "No graphic packs for this game"
-msgstr ""
+msgstr "Κανένα πακέτο γραφικών για αυτό το παιχνίδι"
 
 msgid "Settings > Online and updates gets the community's newest."
-msgstr ""
+msgstr "Οι Ρυθμίσεις > Συνδεδεμένα και ενημερώσεις φέρνουν τα νεότερα της κοινότητας."
 
 msgid "{0} of {1}"
-msgstr ""
+msgstr "{0} από {1}"
 
 msgid "Graphic pack"
-msgstr ""
+msgstr "Πακέτο γραφικών"
 
 msgid "This pack has no description."
-msgstr ""
+msgstr "Αυτό το πακέτο δεν έχει περιγραφή."
 
 msgid "No presets"
-msgstr ""
+msgstr "Χωρίς προεπιλογές"
 
 msgid "Presets"
-msgstr ""
+msgstr "Προεπιλογές"
 
 msgid "Presets · choosing one turns it on"
-msgstr ""
+msgstr "Προεπιλογές · η επιλογή μίας το ενεργοποιεί"
 
 msgctxt "finished"
 msgid "Done"
-msgstr ""
+msgstr "Τέλος"
 
 msgid ""
 "What the game sees in this player's hands.\n"
@@ -1883,373 +1883,396 @@ msgid ""
 "A Wii Remote points where a finger rests on the touchpad, or where you aim the DualSense.\n"
 "Cemu has two GamePads at most."
 msgstr ""
+"Τι βλέπει το παιχνίδι στα χέρια αυτού του παίκτη.\n"
+"\n"
+"Τα περισσότερα παιχνίδια θέλουν το Wii U GamePad για τον παίκτη 1: η οθόνη του είναι η δεύτερη που δείχνει το PS5CEMU-HAR, και η επιφάνεια αφής την αγγίζει. Άλλα παίρνουν Pro Controller ή Wii Remote, για παιχνίδια όπως το New Super Mario Bros. U.\n"
+"Ένα Wii Remote δείχνει εκεί όπου ακουμπά ένα δάχτυλο στην επιφάνεια αφής ή εκεί όπου στρέφετε το DualSense.\n"
+"Το Cemu υποστηρίζει έως δύο GamePad."
 
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
 msgstr ""
+"Το γυροσκόπιο και το επιταχυνσιόμετρο του DualSense ως του χειριστηρίου, για παιχνίδια όπου σημαδεύετε ή οδηγείτε γέρνοντας το GamePad ή το Wii Remote.\n"
+"Το Pro Controller και το Classic Controller δεν έχουν."
 
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
 msgstr ""
+"Πόσο δυνατά δονείται το DualSense όταν το παιχνίδι κάνει το χειριστήριο να δονείται.\n"
+"Αριστερά και δεξιά την αλλάζουν κατά 10%."
 
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Πόσο κινείται ο αριστερός μοχλός πριν το καταλάβει το παιχνίδι. Αυξήστε την αν ένας χαρακτήρας κινείται μόνος του όταν αφήνετε τον μοχλό· μειώστε την για πιο λεπτό χειρισμό."
 
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Πόσο κινείται ο δεξιός μοχλός πριν το καταλάβει το παιχνίδι. Αυξήστε την αν η κάμερα κινείται μόνη της όταν αφήνετε τον μοχλό· μειώστε την για πιο λεπτό χειρισμό."
 
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
 msgstr ""
+"Ποιο κουμπί του DualSense είναι ποιο κουμπί του χειριστηρίου.\n"
+"Από προεπιλογή, το A είναι στον Κύκλο και το B στον Σταυρό, όπου τα έχει το Wii U."
 
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
-msgstr ""
+msgstr "Τα προεπιλεγμένα κουμπιά, δόνηση, κίνηση και νεκρές ζώνες αυτού του χειριστηρίου. Επιβεβαιώνεται με κράτημα."
 
 msgid "Buttons"
-msgstr ""
+msgstr "Κουμπιά"
 
 msgid "Reset to defaults"
-msgstr ""
+msgstr "Επαναφορά προεπιλογών"
 
 msgid "Player {0}"
-msgstr ""
+msgstr "Παίκτης {0}"
 
 msgid "{0}, on this player's DualSense"
-msgstr ""
+msgstr "{0}, στο DualSense αυτού του παίκτη"
 
 msgid "{0}, on a DualSense that is not connected"
-msgstr ""
+msgstr "{0}, σε DualSense που δεν είναι συνδεδεμένο"
 
 msgid "What the game sees in this player's hands."
-msgstr ""
+msgstr "Τι βλέπει το παιχνίδι στα χέρια αυτού του παίκτη."
 
 msgid "The DualSense's motion as the controller's."
-msgstr ""
+msgstr "Η κίνηση του DualSense ως του χειριστηρίου."
 
 msgid "The Pro and Classic Controllers have none."
-msgstr ""
+msgstr "Τα Pro και Classic Controller δεν έχουν."
 
 msgid "How strongly the DualSense rumbles."
-msgstr ""
+msgstr "Πόσο δυνατά δονείται το DualSense."
 
 msgid "How far the left stick moves before it counts."
-msgstr ""
+msgstr "Πόσο κινείται ο αριστερός μοχλός πριν μετρήσει."
 
 msgid "How far the right stick moves before it counts."
-msgstr ""
+msgstr "Πόσο κινείται ο δεξιός μοχλός πριν μετρήσει."
 
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} κουμπί ορίστηκε"
+msgstr[1] "{0} κουμπιά ορίστηκαν"
 
 msgid "Which DualSense button is which."
-msgstr ""
+msgstr "Ποιο κουμπί του DualSense είναι ποιο."
 
 msgid "Hold Cross"
-msgstr ""
+msgstr "Κρατήστε τον Σταυρό"
 
 msgid "The default buttons, vibration, motion and deadzones."
-msgstr ""
+msgstr "Τα προεπιλεγμένα κουμπιά, δόνηση, κίνηση και νεκρές ζώνες."
 
 msgid "Connected"
-msgstr ""
+msgstr "Συνδεδεμένο"
 
 msgid "No DualSense"
-msgstr ""
+msgstr "Χωρίς DualSense"
 
 msgid "Cleared: no DualSense button is this one now."
-msgstr ""
+msgstr "Καθαρίστηκε: κανένα κουμπί του DualSense δεν είναι πλέον αυτό."
 
 msgid "No button was pressed, so it stays as it was."
-msgstr ""
+msgstr "Δεν πατήθηκε κανένα κουμπί, οπότε μένει όπως ήταν."
 
 msgid "Cancelled: it stays as it was."
-msgstr ""
+msgstr "Ακυρώθηκε: μένει όπως ήταν."
 
 msgid "Done."
-msgstr ""
+msgstr "Τέλος."
 
 msgid "The DualSense's buttons for the 3DS's"
-msgstr ""
+msgstr "Τα κουμπιά του DualSense για του 3DS"
 
 msgid "Player {0}: the DualSense's buttons for the {1}"
-msgstr ""
+msgstr "Παίκτης {0}: τα κουμπιά του DualSense για το {1}"
 
 msgid "Not set"
-msgstr ""
+msgstr "Δεν ορίστηκε"
 
 msgid "This button"
-msgstr ""
+msgstr "Αυτό το κουμπί"
 
 msgid "Press a button"
-msgstr ""
+msgstr "Πατήστε ένα κουμπί"
 
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
-msgstr ""
+msgstr "Πατήστε τώρα το κουμπί, τη σκανδάλη ή την κατεύθυνση μοχλού του DualSense για το {0}."
 
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Απομένει {0} δευτερόλεπτο. Ένα κλικ στην επιφάνεια αφής ακυρώνει."
+msgstr[1] "Απομένουν {0} δευτερόλεπτα. Ένα κλικ στην επιφάνεια αφής ακυρώνει."
 
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
 msgstr ""
+"Σταυρός, μετά ένα κουμπί, σκανδάλη ή κατεύθυνση μοχλού του DualSense: γίνεται αυτό.\n"
+"Το Τετράγωνο το καθαρίζει."
 
 msgid "Cancelling: what it copied is removed…"
-msgstr ""
+msgstr "Ακύρωση: ό,τι αντιγράφηκε αφαιρείται…"
 
 msgid "Cancelling: what was installed before is put back…"
-msgstr ""
+msgstr "Ακύρωση: ό,τι ήταν εγκατεστημένο πριν επαναφέρεται…"
 
 msgid "This folder cannot be opened."
-msgstr ""
+msgstr "Αυτός ο φάκελος δεν ανοίγει."
 
 msgid "The folder could not be saved. Please try again."
-msgstr ""
+msgstr "Ο φάκελος δεν ήταν δυνατό να αποθηκευτεί. Δοκιμάστε ξανά."
 
 msgid "Saved. PS5CEMU-HAR is looking for games there."
-msgstr ""
+msgstr "Αποθηκεύτηκε. Το PS5CEMU-HAR ψάχνει παιχνίδια εκεί."
 
 msgid "Saved. That side looks for games there when it opens."
-msgstr ""
+msgstr "Αποθηκεύτηκε. Εκείνη η πλευρά θα ψάξει παιχνίδια εκεί όταν ανοίξει."
 
 msgid "Looking for games in {0}"
-msgstr ""
+msgstr "Αναζήτηση παιχνιδιών στο {0}"
 
 msgid "Choose a CIA file first."
-msgstr ""
+msgstr "Επιλέξτε πρώτα ένα αρχείο CIA."
 
 msgid "Cemu did not start, so nothing can be installed."
-msgstr ""
+msgstr "Το Cemu δεν ξεκίνησε, οπότε δεν μπορεί να εγκατασταθεί τίποτα."
 
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
 "Circle cancels."
 msgstr ""
+"Εγκατάσταση: {0}, {1} από {2}.\n"
+"\n"
+"Ο Κύκλος ακυρώνει."
 
 msgid "Installing: counting the files…"
-msgstr ""
+msgstr "Εγκατάσταση: καταμέτρηση αρχείων…"
 
 msgid "Installed. The library has it with its game."
-msgstr ""
+msgstr "Εγκαταστάθηκε. Η βιβλιοθήκη το δείχνει μαζί με το παιχνίδι του."
 
 msgid "Installed"
-msgstr ""
+msgstr "Εγκαταστάθηκε"
 
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
-msgstr ""
+msgstr "Ακυρώθηκε. Ό,τι αντιγράφηκε αφαιρέθηκε, μαζί με κάθε παλαιότερο αντίγραφο του ίδιου τίτλου: εγκαταστήστε το ξανά για να το παίξετε. Οι αποθηκεύσεις του διατηρήθηκαν."
 
 msgid "Cancelled. What was installed before is as it was."
-msgstr ""
+msgstr "Ακυρώθηκε. Ό,τι ήταν εγκατεστημένο πριν είναι όπως ήταν."
 
 msgid "Install"
-msgstr ""
+msgstr "Εγκατάσταση"
 
 msgid "3DS games"
-msgstr ""
+msgstr "Παιχνίδια 3DS"
 
 msgid "Wii U games"
-msgstr ""
+msgstr "Παιχνίδια Wii U"
 
 msgid "Install CIA files"
-msgstr ""
+msgstr "Εγκατάσταση αρχείων CIA"
 
 msgid "Install updates and DLC"
-msgstr ""
+msgstr "Εγκατάσταση ενημερώσεων και DLC"
 
 msgid "Choose a CIA file: a game, an update or DLC"
-msgstr ""
+msgstr "Επιλέξτε αρχείο CIA: παιχνίδι, ενημέρωση ή DLC"
 
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
-msgstr ""
+msgstr "Επιλέξτε φάκελο με ενημέρωση, DLC ή παιχνίδι (code, content και meta)"
 
 msgid "Choose the folder that holds your 3DS games"
-msgstr ""
+msgstr "Επιλέξτε τον φάκελο με τα παιχνίδια 3DS σας"
 
 msgid "Choose the folder that holds your Wii U games"
-msgstr ""
+msgstr "Επιλέξτε τον φάκελο με τα παιχνίδια Wii U σας"
 
 msgid "This folder is empty."
-msgstr ""
+msgstr "Αυτός ο φάκελος είναι άδειος."
 
 msgid "Parent folder"
-msgstr ""
+msgstr "Γονικός φάκελος"
 
 msgid "Drive"
-msgstr ""
+msgstr "Μονάδα"
 
 msgctxt "kind"
 msgid "Type"
-msgstr ""
+msgstr "Τύπος"
 
 msgid "A folder"
-msgstr ""
+msgstr "Ένας φάκελος"
 
 msgid "Version"
-msgstr ""
+msgstr "Έκδοση"
 
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
-msgstr ""
+msgstr "Το Τρίγωνο το εγκαθιστά στον χώρο αποθήκευσης του 3DS: μια ενημέρωση ή ένα DLC πηγαίνει με το παιχνίδι του, και ένα παιχνίδι μπαίνει στη βιβλιοθήκη."
 
 msgid "Choose a CIA file to install: a game, an update or DLC."
-msgstr ""
+msgstr "Επιλέξτε αρχείο CIA για εγκατάσταση: παιχνίδι, ενημέρωση ή DLC."
 
 msgid "Games here"
-msgstr ""
+msgstr "Παιχνίδια εδώ"
 
 msgid "Cannot be read"
-msgstr ""
+msgstr "Δεν διαβάζεται"
 
 msgid "{0} game"
 msgid_plural "{0} games"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} παιχνίδι"
+msgstr[1] "{0} παιχνίδια"
 
 msgid "Found"
-msgstr ""
+msgstr "Βρέθηκε"
 
 msgid "Missing (only encrypted dumps need it)"
-msgstr ""
+msgstr "Λείπει (το χρειάζονται μόνο κρυπτογραφημένα dump)"
 
 msgid "Found in /data/ps5cemu"
-msgstr ""
+msgstr "Βρέθηκε στο /data/ps5cemu"
 
 msgid "Missing (only .wud/.wux need it)"
-msgstr ""
+msgstr "Λείπει (το χρειάζονται μόνο .wud/.wux)"
 
 msgid "In use"
-msgstr ""
+msgstr "Σε χρήση"
 
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
-msgstr ""
+msgstr "Τα παιχνίδια μπορεί να είναι .3ds ή .cci, .cxi, .cia ή .3dsx, αποκρυπτογραφημένα, εδώ ή σε υποφακέλους. Το Τρίγωνο χρησιμοποιεί τον φάκελο που φαίνεται."
 
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
-msgstr ""
+msgstr "Τα παιχνίδια μπορεί να είναι .wua, .wud, .wux ή φάκελοι με code, content και meta. Το Τρίγωνο χρησιμοποιεί τον φάκελο που φαίνεται."
 
 msgid "Nothing to install"
-msgstr ""
+msgstr "Τίποτα για εγκατάσταση"
 
 msgid "v{0}, not installed yet"
-msgstr ""
+msgstr "v{0}, δεν έχει εγκατασταθεί ακόμα"
 
 msgid "v{0}, v{1} installed now"
-msgstr ""
+msgstr "v{0}, τώρα είναι εγκατεστημένη η v{1}"
 
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Το Τρίγωνο το εγκαθιστά στον χώρο αποθήκευσης του Wii U (mlc01). Οι ενημερώσεις και τα DLC στον φάκελο παιχνιδιών λειτουργούν κι έτσι όπως είναι."
 
 msgid "To install"
-msgstr ""
+msgstr "Προς εγκατάσταση"
 
 msgid "This folder"
-msgstr ""
+msgstr "Αυτός ο φάκελος"
 
 msgid "Connecting to {0}"
-msgstr ""
+msgstr "Σύνδεση με {0}"
 
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
-msgstr ""
+msgstr "Παίξτε ένα παιχνίδι από το 3DS σας μέσω δικτύου ή ρυθμίστε το Azahar με τη βοήθειά του"
 
 msgid "3DS address"
-msgstr ""
+msgstr "Διεύθυνση 3DS"
 
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
 "The 3DS and the PS5 must be on the same network."
 msgstr ""
+"Η διεύθυνση που δείχνει το Artic Base στην οθόνη του 3DS όταν είναι έτοιμο.\n"
+"Ο Σταυρός την επεξεργάζεται: αριστερά και δεξιά επιλέγουν έναν αριθμό, πάνω και κάτω τον αλλάζουν κατά 1, τα L1 και R1 κατά 10, και ο Σταυρός ξανά την κρατά.\n"
+"Το 3DS και το PS5 πρέπει να είναι στο ίδιο δίκτυο."
 
 msgid "Connect and play"
-msgstr ""
+msgstr "Σύνδεση και παιχνίδι"
 
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
 msgstr ""
+"Στο 3DS, ξεκινήστε την εφαρμογή Artic Base (homebrew από την ομάδα του Azahar) και επιλέξτε ένα παιχνίδι σε αυτήν: την κασέτα ή ένα εγκατεστημένο. Μετά συνδεθείτε από εδώ: το παιχνίδι τρέχει στο PS5 από το 3DS, και οι αποθηκεύσεις του μένουν στο 3DS.\n"
+"Είναι μόνο τόσο ομαλό όσο το δίκτυο: βοηθούν ένα δυνατό σήμα Wi-Fi για το 3DS και ένα PS5 με καλώδιο."
 
 msgid "Set up from an Old 3DS"
-msgstr ""
+msgstr "Ρύθμιση από παλιό 3DS"
 
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
 msgstr ""
+"Με την εφαρμογή Artic Setup Tool να τρέχει σε παλιό 3DS ή 2DS: αντιγράφει τα αρχεία συστήματος και τα δικά του δεδομένα (ρυθμίσεις συστήματος, κωδικό φίλου, δεδομένα Mii και eShop) στο Azahar, ώστε να ξεκινούν τα παιχνίδια που χρειάζονται τα applet ή τα αρχεία συστήματος του 3DS, όπως και το μενού HOME (Ρυθμίσεις > Σύστημα και μενού HOME).\n"
+"Αυτά τα δεδομένα είναι της κονσόλας σας: μην μοιραστείτε μετά τον φάκελο του Azahar."
 
 msgid "Set up from a New 3DS"
-msgstr ""
+msgstr "Ρύθμιση από New 3DS"
 
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
-msgstr ""
+msgstr "Όπως παραπάνω, από New 3DS ή New 2DS που τρέχει την εφαρμογή Artic Setup Tool."
 
 msgid "Automatic"
-msgstr ""
+msgstr "Αυτόματα"
 
 msgid "Japan"
-msgstr ""
+msgstr "Ιαπωνία"
 
 msgid "USA"
-msgstr ""
+msgstr "ΗΠΑ"
 
 msgid "Europe"
-msgstr ""
+msgstr "Ευρώπη"
 
 msgid "Australia"
-msgstr ""
+msgstr "Αυστραλία"
 
 msgid "China"
-msgstr ""
+msgstr "Κίνα"
 
 msgid "Korea"
-msgstr ""
+msgstr "Κορέα"
 
 msgid "Taiwan"
-msgstr ""
+msgstr "Ταϊβάν"
 
 msgid "Japanese"
-msgstr ""
+msgstr "Ιαπωνικά"
 
 msgid "English"
-msgstr ""
+msgstr "Αγγλικά"
 
 msgid "French"
-msgstr ""
+msgstr "Γαλλικά"
 
 msgid "German"
-msgstr ""
+msgstr "Γερμανικά"
 
 msgid "Italian"
-msgstr ""
+msgstr "Ιταλικά"
 
 msgid "Spanish"
-msgstr ""
+msgstr "Ισπανικά"
 
 msgid "Chinese (simplified)"
-msgstr ""
+msgstr "Κινεζικά (απλοποιημένα)"
 
 msgid "Korean"
-msgstr ""
+msgstr "Κορεατικά"
 
 msgid "Dutch"
-msgstr ""
+msgstr "Ολλανδικά"
 
 msgid "Portuguese"
-msgstr ""
+msgstr "Πορτογαλικά"
 
 msgid "Russian"
-msgstr ""
+msgstr "Ρωσικά"
 
 msgid "Chinese (traditional)"
-msgstr ""
+msgstr "Κινεζικά (παραδοσιακά)"
 
 msgid "Linear"
-msgstr ""
+msgstr "Γραμμικό"
 
 msgid "Setup theme"
 msgstr ""
