@@ -27,6 +27,9 @@ namespace ui::tokens
 	inline constexpr uint32_t kN3ds = 0xff3fb6f4; // #f4b63f
 	inline constexpr uint32_t kN3dsStrong = 0xff1b96d9; // #d9961b
 	inline constexpr uint32_t kN3dsInk = 0xff021a2a; // #2a1a02
+	inline constexpr uint32_t kNds = 0xff57d97e; // #7ed957
+	inline constexpr uint32_t kNdsStrong = 0xff38af4c; // #4caf38
+	inline constexpr uint32_t kNdsInk = 0xff06260c; // #0c2606
 	inline constexpr uint32_t kGood = 0xffa3d63d; // #3dd6a3
 	inline constexpr uint32_t kWarn = 0xff47b5ff; // #ffb547
 	inline constexpr uint32_t kBad = 0xff7272ff; // #ff7272

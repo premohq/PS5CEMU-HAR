@@ -2,96 +2,66 @@
 <html lang="en"><head><meta charset="utf-8"><title>Settings</title>
 <link rel="stylesheet" href="tokens.css"><script src="kit.js"></script>
 <style>
+	/* 3.5.1: the side you are on and nothing else, one short list with icons, as 3.0.0 had it */
 	.ambient { background: radial-gradient(60% 60% at 80% 20%, rgba(244, 182, 63, 0.10), transparent 70%), radial-gradient(60% 70% at 10% 90%, rgba(30, 45, 80, 0.5), transparent 70%), linear-gradient(180deg, #0a0d16, #05070d); }
-	.brand { display: flex; align-items: center; margin-right: 22px; }
-	.mark { position: relative; width: 40px; height: 40px; }
-	.mark i { position: absolute; width: 26px; height: 26px; border-radius: 8px; }
-	.mark i:first-child { left: 0; top: 0; background: var(--wiiu); }
-	.mark i:last-child { right: 0; bottom: 0; background: var(--n3ds); mix-blend-mode: screen; }
 
-	.rail { position: absolute; left: var(--safe-x); top: 136px; width: 400px; height: 880px; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent); }
-	.group { font: 600 16px Lexend; letter-spacing: 3px; text-transform: uppercase; color: var(--text-3); margin: 18px 0 8px 18px; display: flex; align-items: center; gap: 10px; }
-	.group i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
-	.item { height: 50px; display: flex; align-items: center; padding: 0 18px; border-radius: 14px; font: 500 24px Lexend; color: var(--text-2); }
+	.rail { position: absolute; left: var(--safe-x); top: 140px; width: 420px; }
+	.item { height: 64px; display: flex; align-items: center; gap: 20px; padding: 0 22px; border-radius: 16px; font: 500 26px Lexend; color: var(--text-2); margin-bottom: 4px; }
+	.item svg { flex: none; opacity: 0.8; }
 	.item.on { background: rgba(255, 255, 255, 0.1); color: var(--text); font-weight: 600; }
-	.item.on::before { content: ""; width: 4px; height: 24px; border-radius: 2px; background: var(--n3ds); margin-right: 14px; margin-left: -6px; }
+	.item.on svg { opacity: 1; color: var(--n3ds); }
 
-	.page { position: absolute; left: 580px; top: 136px; width: 1244px; }
-	.page h2 { font: 650 40px Lexend; display: flex; align-items: center; gap: 16px; }
-	.page .sub { font: 400 21px Lexend; color: var(--text-3); margin-top: 8px; }
-	.rows { width: 700px; margin-top: 30px; display: flex; flex-direction: column; gap: 12px; }
-	.srow { border-radius: var(--r-card); background: var(--glass); border: 1.5px solid var(--glass-edge); padding: 20px 26px; }
-	.srow.focus { background: rgba(255, 255, 255, 0.1); box-shadow: 0 0 0 4px var(--ink-0), 0 0 0 7px var(--focus), 0 20px 50px rgba(0, 0, 0, 0.45); }
+	.page { position: absolute; left: 600px; top: 140px; right: var(--safe-x); }
+	.page h2 { font: 650 44px Lexend; }
+	.page .sub { font: 400 22px Lexend; color: var(--text-3); margin-top: 10px; }
+	.rows { margin-top: 34px; display: flex; flex-direction: column; gap: 14px; }
+	.srow { border-radius: var(--r-card); background: var(--glass); border: 1.5px solid var(--glass-edge); padding: 0 32px; min-height: 88px; display: flex; flex-direction: column; justify-content: center; }
+	.srow.focus { background: rgba(255, 255, 255, 0.1); box-shadow: 0 0 0 4px var(--ink-0), 0 0 0 7px var(--focus), 0 20px 50px rgba(0, 0, 0, 0.45); padding: 20px 32px; }
 	.srow .top { display: flex; align-items: center; }
-	.srow .lbl { font: 500 26px Lexend; }
-	.srow .val { margin-left: auto; font: 500 24px Lexend; color: var(--text-2); display: flex; align-items: center; gap: 14px; }
-	.srow .help { font: 400 20px/1.45 Lexend; color: var(--text-2); margin-top: 14px; }
+	.srow .lbl { font: 500 28px Lexend; }
+	.srow .val { margin-left: auto; font: 500 26px Lexend; color: var(--text-2); display: flex; align-items: center; gap: 14px; }
+	.srow.focus .val { color: var(--text); }
+	.srow .help { font: 400 21px/1.4 Lexend; color: var(--text-2); margin-top: 8px; }
 	.arrow { color: var(--n3ds); display: inline-flex; }
 	.arrow.l { transform: scaleX(-1); }
-
-	.layouts { display: flex; gap: 14px; margin-top: 18px; }
-	.lay { width: 146px; height: 96px; border-radius: 14px; background: rgba(255, 255, 255, 0.05); border: 2px solid rgba(255, 255, 255, 0.12); position: relative; }
-	.lay.sel { border-color: var(--n3ds); background: rgba(244, 182, 63, 0.12); }
-	.lay b { position: absolute; background: rgba(255, 255, 255, 0.55); border-radius: 3px; }
-	.lay.sel b { background: #ffe2a3; }
-	.lay span { position: absolute; left: 0; right: 0; bottom: -32px; text-align: center; font: 500 17px Lexend; color: var(--text-3); white-space: nowrap; }
-	.lay.sel span { color: var(--text); }
-
-	.seg { display: inline-flex; padding: 4px; border-radius: 14px; background: rgba(255, 255, 255, 0.07); }
-	.seg span { padding: 8px 20px; border-radius: 10px; font: 500 22px Lexend; color: var(--text-2); }
-	.seg span.on { background: rgba(255, 255, 255, 0.9); color: #0a0f1b; font-weight: 600; }
 	.swatches { display: flex; gap: 10px; }
 	.sw { width: 44px; height: 30px; border-radius: 8px; border: 2px solid transparent; }
 	.sw.on { border-color: var(--text); box-shadow: 0 0 0 3px var(--ink-0) inset; }
-
-	.preview { position: absolute; left: 1320px; top: 250px; width: 504px; }
-	.tv { width: 504px; height: 284px; border-radius: 16px; overflow: hidden; position: relative; border: 2px solid rgba(255, 255, 255, 0.14);
-		background: repeating-radial-gradient(140% 70% at 50% 130%, rgba(255, 220, 140, 0.18) 0 4%, transparent 4% 9%), linear-gradient(180deg, #e9a62a, #b3700c); }
-	.scr { position: absolute; border-radius: 3px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); }
-	.scr.top { left: 30px; top: 46px; width: 320px; height: 192px; background: linear-gradient(160deg, #1d3d8f, #0a1840 60%, #e8323a); }
-	.scr.bot { left: 362px; top: 120px; width: 112px; height: 84px; background: linear-gradient(160deg, #0a1840, #24305c); }
-	.cap { margin-top: 16px; font: 400 20px/1.45 Lexend; color: var(--text-2); }
-	.cap b { color: var(--text); font-weight: 600; }
-	.scope { margin-top: 22px; padding: 16px 20px; border-radius: 16px; background: rgba(255, 255, 255, 0.05); border: 1.5px dashed rgba(255, 255, 255, 0.16); font: 400 19px/1.45 Lexend; color: var(--text-2); }
 </style></head>
 <body><div class="canvas">
 	<div class="ambient"></div><div class="grain"></div><div class="vignette"></div>
 
 	<div class="topbar">
-		<div class="brand"><div class="mark"><i></i><i></i></div></div>
-		<div class="sides"><span class=" wiiu"><i></i>Wii U</span><span class="on n3ds"><i></i>3DS</span></div>
+		<div class="brand"><div class="mark"><i></i><i></i><i></i></div></div>
+		<div class="sides"><span class=" wiiu"><i></i>Wii U</span><span class="on n3ds"><i></i>3DS</span><span class=" nds"><i></i>DS</span></div>
 		<span class="shoulder">L1</span>
-		<div class="tabs"><span class="tab">Home</span><span class="tab">Library</span><span class="tab on">Settings</span></div>
+		<div class="tabs"><span class="tab">Library</span><span class="tab on">Settings</span></div>
 		<span class="shoulder">R1</span>
 		<div class="status"><span data-glyph="wifi" data-size="26"></span><div class="pads"><span class="pad p1">P1</span><span class="pad">P2</span></div><span>21:50</span></div>
 	</div>
 
 	<div class="rail">
-		<div class="group">General</div>
-		<div class="item">Display</div><div class="item">Sound</div><div class="item">Controllers</div><div class="item">Games and folders</div><div class="item">Online and updates</div><div class="item">Accessibility</div>
-		<div class="group"><i style="background:var(--n3ds)"></i>Nintendo 3DS</div>
-		<div class="item">Graphics</div><div class="item on">Screens and borders</div><div class="item">Controls</div><div class="item">System and Home Menu</div><div class="item">Install CIA files</div><div class="item">Artic Base</div>
-		<div class="group"><i style="background:var(--wiiu)"></i>Wii U</div>
-		<div class="item">Graphics</div><div class="item">Controllers</div><div class="item">USB devices</div><div class="item">Install updates and DLC</div>
-		<div class="group">Help</div>
-		<div class="item">Setup check</div><div class="item">Diagnostics</div><div class="item">About</div>
+		<div class="item"><span data-glyph="monitor" data-size="30"></span>Graphics</div>
+		<div class="item on"><span data-glyph="screens" data-size="30"></span>Screens</div>
+		<div class="item"><span data-glyph="speaker" data-size="30"></span>Audio</div>
+		<div class="item"><span data-glyph="pad" data-size="30"></span>Controls</div>
+		<div class="item"><span data-glyph="chip" data-size="30"></span>System</div>
+		<div class="item"><span data-glyph="folder" data-size="30"></span>Game files</div>
+		<div class="item"><span data-glyph="artic" data-size="30"></span>Artic Base</div>
+		<div class="item"><span data-glyph="globe" data-size="30"></span>Online</div>
+		<div class="item"><span data-glyph="sparkle" data-size="30"></span>Launcher</div>
+		<div class="item"><span data-glyph="pulse" data-size="30"></span>Diagnostics</div>
+		<div class="item"><span data-glyph="info" data-size="30"></span>About</div>
 	</div>
 
 	<div class="page">
-		<h2><span class="sys n3ds"><i></i>3DS</span>Screens and borders</h2>
-		<div class="sub">For every 3DS game. A game's own settings can differ (Options on the game, then Game settings).</div>
+		<h2>Screens</h2>
+		<div class="sub">For every 3DS game. A game can have its own: Options on the game, then Game settings.</div>
 		<div class="rows">
 			<div class="srow focus">
-				<div class="top"><span class="lbl">Layout</span><span class="val"><span class="arrow l" data-glyph="chevron" data-size="24"></span>Large top screen<span class="arrow" data-glyph="chevron" data-size="24"></span></span></div>
-				<div class="layouts">
-					<div class="lay"><b style="left:49px;top:10px;width:48px;height:34px"></b><b style="left:55px;top:50px;width:36px;height:30px"></b><span>Top above bottom</span></div>
-					<div class="lay"><b style="left:20px;top:12px;width:106px;height:66px"></b><span>Top only</span></div>
-					<div class="lay sel"><b style="left:12px;top:14px;width:90px;height:60px"></b><b style="left:108px;top:42px;width:28px;height:22px"></b><span>Large top</span></div>
-					<div class="lay"><b style="left:12px;top:30px;width:60px;height:36px"></b><b style="left:78px;top:32px;width:56px;height:34px"></b><span>Side by side</span></div>
-				</div>
-				<div class="help" style="margin-top:46px">The top screen large, the bottom one beside it. In a game, touchpad click + R1 goes to the next layout.</div>
+				<div class="top"><span class="lbl">Screen layout</span><span class="val"><span class="arrow l" data-glyph="chevron" data-size="26"></span>Large top screen<span class="arrow" data-glyph="chevron" data-size="26"></span></span></div>
+				<div class="help">The top screen large, the bottom one beside it. In a game, touchpad click + R1 goes to the next.</div>
 			</div>
-			<div class="srow"><div class="top"><span class="lbl">Main screen</span><span class="val"><span class="seg"><span class="on">Top</span><span>Bottom</span></span></span></div></div>
 			<div class="srow"><div class="top"><span class="lbl">Border</span><span class="val"><span class="swatches">
 				<span class="sw" style="background:#1b1b1f;border-color:rgba(255,255,255,.25)"></span>
 				<span class="sw" style="background:linear-gradient(135deg,#0b1430,#2a3f7a)"></span>
@@ -103,16 +73,10 @@
 		</div>
 	</div>
 
-	<div class="preview">
-		<div class="overline" style="margin-bottom:14px">Preview</div>
-		<div class="tv"><div class="scr top"></div><div class="scr bot"></div></div>
-		<div class="cap"><b>Large top screen</b> on the <b>Waves</b> border. The bottom screen is the touchpad: click to tap, hold the click to drag.</div>
-		<div class="scope">Changes here apply from the next 3DS game. In a game, the menu (touchpad click + Options) changes them at once.</div>
-	</div>
-
 	<div class="hints">
 		<span class="hint"><span data-glyph="leftright"></span>Change</span>
 		<span class="hint"><span data-glyph="triangle"></span>More about it</span>
 		<span class="hint"><span data-glyph="circle"></span>Back</span>
+		<span class="hint"><span data-glyph="touchpad"></span>DS</span>
 	</div>
 </div></body></html>

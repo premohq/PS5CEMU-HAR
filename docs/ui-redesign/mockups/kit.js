@@ -30,6 +30,18 @@ const GLYPHS = {
 	search: '<circle cx="14" cy="14" r="8" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="M20 20 L27 27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
 	wifi: '<path d="M4 13 a17 17 0 0 1 24 0 M8.5 17.5 a11 11 0 0 1 15 0 M13 22 a4.5 4.5 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><circle cx="16" cy="25.5" r="1.8" fill="currentColor"/>',
 	sort: '<path d="M6 9 H26 M9 16 H23 M13 23 H19" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
+	// Settings' pages
+	monitor: '<rect x="4" y="6" width="24" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12 27 H20 M16 22 V27" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>',
+	speaker: '<path d="M5 12 H10 L17 6 V26 L10 20 H5 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M21 11 a7 7 0 0 1 0 10 M24.5 7.5 a12 12 0 0 1 0 17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>',
+	pad: '<path d="M9 9 H23 a6 6 0 0 1 6 6 V18 a5 5 0 0 1 -9 3 L18.5 19 H13.5 L12 21 a5 5 0 0 1 -9 -3 V15 a6 6 0 0 1 6 -6 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M10 13 V18 M7.5 15.5 H12.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="21.5" cy="14" r="1.6" fill="currentColor"/><circle cx="24" cy="17" r="1.6" fill="currentColor"/>',
+	usb: '<path d="M16 4 V24 M16 24 a3 3 0 1 0 0.01 0 M16 11 L10 15 V18 M16 15 L22 12 V9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="20" y="6" width="4" height="4" fill="currentColor"/><circle cx="10" cy="19" r="2" fill="currentColor"/>',
+	folder: '<path d="M4 9 a2 2 0 0 1 2 -2 H13 L16 10 H26 a2 2 0 0 1 2 2 V24 a2 2 0 0 1 -2 2 H6 a2 2 0 0 1 -2 -2 Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>',
+	globe: '<circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M5 16 H27 M16 5 C10 10 10 22 16 27 C22 22 22 10 16 5" fill="none" stroke="currentColor" stroke-width="2.4"/>',
+	sparkle: '<path d="M16 4 L18.5 13.5 L28 16 L18.5 18.5 L16 28 L13.5 18.5 L4 16 L13.5 13.5 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>',
+	pulse: '<path d="M3 17 H9 L12 9 L17 24 L20 14 L22 17 H29" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>',
+	info: '<circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M16 14.5 V22" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/><circle cx="16" cy="10" r="1.8" fill="currentColor"/>',
+	chip: '<rect x="8" y="8" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12 4 V8 M16 4 V8 M20 4 V8 M12 24 V28 M16 24 V28 M20 24 V28 M4 12 H8 M4 16 H8 M4 20 H8 M24 12 H28 M24 16 H28 M24 20 H28" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
+	artic: '<rect x="9" y="4" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><rect x="9" y="17" width="14" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M4 20 a6 6 0 0 1 0 -8 M28 12 a6 6 0 0 1 0 8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
 };
 
 function glyph(name, size) {
@@ -65,6 +77,23 @@ const GAMES = {
 	smash: { name: 'Super Smash Bros. for Nintendo 3DS', a: '#101820', b: '#ffcc33', motif: 'rays', sys: 'n3ds' },
 	oot3d: { name: 'The Legend of Zelda: Ocarina of Time 3D', a: '#0e3b2e', b: '#ffd36b', motif: 'hills', sys: 'n3ds' },
 	xc3d: { name: 'Xenoblade Chronicles 3D', a: '#0a2140', b: '#7fd0ff', motif: 'planet', sys: 'n3ds' },
+	nsmb: { name: 'New Super Mario Bros.', a: '#1d63d8', b: '#ffd23a', motif: 'hills', sys: 'nds' },
+	mkds: { name: 'Mario Kart DS', a: '#c8102e', b: '#ffe14d', motif: 'rays', sys: 'nds' },
+	hgss: { name: 'Pokémon HeartGold', a: '#2a1406', b: '#ffcc33', motif: 'planet', sys: 'nds' },
+	twewy: { name: 'The World Ends with You', a: '#101820', b: '#ff4fa0', motif: 'blobs', sys: 'nds' },
+	layton: { name: 'Professor Layton and the Curious Village', a: '#3a2410', b: '#f2d38a', motif: 'hills', sys: 'nds' },
+	pw: { name: 'Phoenix Wright: Ace Attorney', a: '#0b2a6b', b: '#ff5a3c', motif: 'rays', sys: 'nds' },
+	ph: { name: 'The Legend of Zelda: Phantom Hourglass', a: '#0b4ea0', b: '#ffe9a8', motif: 'waves', sys: 'nds' },
+	dos: { name: 'Castlevania: Dawn of Sorrow', a: '#1d0b2b', b: '#c94cff', motif: 'planet', sys: 'nds' },
+	ct: { name: 'Chrono Trigger', a: '#0c2e4a', b: '#7fd0ff', motif: 'stars', sys: 'nds' },
+	dq9: { name: 'Dragon Quest IX: Sentinels of the Starry Skies', a: '#0b1d4a', b: '#ffd36b', motif: 'stars', sys: 'nds' },
+	acww: { name: 'Animal Crossing: Wild World', a: '#2f8f3a', b: '#ffe1a8', motif: 'blobs', sys: 'nds' },
+	mlbis: { name: "Mario & Luigi: Bowser's Inside Story", a: '#7a0b0b', b: '#ffcb47', motif: 'rays', sys: 'nds' },
+	ksu: { name: 'Kirby Super Star Ultra', a: '#e85a9a', b: '#ffe1f0', motif: 'stars', sys: 'nds' },
+	mph: { name: 'Metroid Prime Hunters', a: '#04172e', b: '#ff7a1a', motif: 'planet', sys: 'nds' },
+	plat: { name: 'Pokémon Platinum', a: '#1b1b2a', b: '#cfd6e6', motif: 'planet', sys: 'nds' },
+	ebas: { name: 'Elite Beat Agents', a: '#101820', b: '#ffcc33', motif: 'rays', sys: 'nds' },
+	tetris: { name: 'Tetris DS', a: '#0b2a2a', b: '#62ffb0', motif: 'stars', sys: 'nds' },
 };
 
 function motif(kind, a, b) {
@@ -86,9 +115,9 @@ function paintCovers() {
 		el.classList.add('cover', g.sys);
 		const h = el.offsetHeight;
 		const size = Math.max(14, Math.round(h * (g.sys === 'wiiu' ? 0.072 : 0.085)));
-		el.innerHTML = `<div class="band">${g.sys === 'wiiu' ? 'Wii U' : 'NINTENDO 3DS'}</div><div class="art" style="background:${motif(g.motif, g.a, g.b)}"></div><div class="name" style="font-size:${size}px">${g.name}</div>`;
-		const band = el.querySelector('.band');
-		band.style.fontSize = Math.max(8, Math.round(h * 0.04)) + 'px';
+		const band = { wiiu: 'Wii U', n3ds: 'NINTENDO 3DS', nds: 'NINTENDO DS' }[g.sys];
+		el.innerHTML = `<div class="band">${band}</div><div class="art" style="background:${motif(g.motif, g.a, g.b)}"></div><div class="name" style="font-size:${size}px">${g.name}</div>`;
+		el.querySelector('.band').style.fontSize = Math.max(8, Math.round(h * 0.04)) + 'px';
 		el.style.setProperty('--glow', g.b + '77');
 	});
 	document.querySelectorAll('[data-glyph]').forEach((el) => {
@@ -98,8 +127,9 @@ function paintCovers() {
 
 document.addEventListener('DOMContentLoaded', paintCovers);
 
-// Stand-ins for the backdrops: a Wii U game's boot screen (meta/bootTvTex.tga, 1280 x 720) and a 3DS
-// game's top-screen screenshot (400 x 240 native). The app shows the real ones; these are drawn.
+// Stand-ins for the backdrops: a Wii U game's boot screen (meta/bootTvTex.tga, 1280 x 720), a 3DS
+// game's top-screen screenshot (400 x 240 native) and a DS game's (256 x 192). The app shows the real
+// ones; these are drawn.
 function hills(ctx, w, h, y, amp, colour, seed) {
 	ctx.fillStyle = colour;
 	ctx.beginPath();
@@ -150,13 +180,27 @@ const BACKDROPS = {
 	},
 };
 
+// a DS game's top screen, 256 x 192: a stand-in for New Super Mario Bros.'s first level
+BACKDROPS['ds:nsmb'] = (ctx, w, h) => {
+	const sky = ctx.createLinearGradient(0, 0, 0, h);
+	sky.addColorStop(0, '#5aa2ff'); sky.addColorStop(1, '#bfe3ff');
+	ctx.fillStyle = sky; ctx.fillRect(0, 0, w, h);
+	ctx.fillStyle = '#ffffff'; for (const [x, y] of [[30, 30], [150, 18], [210, 46]]) { ctx.beginPath(); ctx.arc(x, y, 10, 0, 7); ctx.arc(x + 12, y - 4, 12, 0, 7); ctx.arc(x + 26, y, 10, 0, 7); ctx.fill(); }
+	hills(ctx, w, h, h * 0.72, 22, '#4fbf4a', 0.7);
+	ctx.fillStyle = '#c8742e'; ctx.fillRect(0, h * 0.84, w, h * 0.16);
+	ctx.fillStyle = '#8a4a1a'; for (let x = 0; x < w; x += 16) ctx.fillRect(x, h * 0.84, 1, h * 0.16);
+	ctx.fillStyle = '#1ea84a'; ctx.fillRect(196, h * 0.62, 30, h * 0.22); ctx.fillRect(192, h * 0.6, 38, 10);
+	ctx.fillStyle = '#ffcf3a'; ctx.fillRect(96, 72, 16, 16); ctx.fillStyle = '#8a4a1a'; ctx.font = '700 13px Lexend'; ctx.fillText('?', 100, 85);
+	ctx.fillStyle = '#c8102e'; ctx.fillRect(60, h * 0.84 - 22, 10, 8); ctx.fillStyle = '#1b3fa0'; ctx.fillRect(60, h * 0.84 - 14, 10, 14);
+};
+
 function paintBackdrops() {
 	document.querySelectorAll('canvas[data-backdrop]').forEach((canvas) => {
 		const draw = BACKDROPS[canvas.dataset.backdrop];
 		if (!draw) return;
-		const shot = canvas.dataset.backdrop.startsWith('shot:');
-		canvas.width = shot ? 400 : 1280;
-		canvas.height = shot ? 240 : 720;
+		const kind = canvas.dataset.backdrop.split(':')[0];
+		canvas.width = { shot: 400, ds: 256 }[kind] || 1280;
+		canvas.height = { shot: 240, ds: 192 }[kind] || 720;
 		draw(canvas.getContext('2d'), canvas.width, canvas.height);
 	});
 }

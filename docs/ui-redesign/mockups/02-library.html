@@ -10,11 +10,6 @@
 		linear-gradient(180deg, rgba(5, 7, 13, 0.78) 0%, rgba(5, 7, 13, 0.62) 30%, rgba(5, 7, 13, 0.70) 70%, rgba(5, 7, 13, 0.94) 100%); }
 	.waves { position: absolute; left: 0; right: 0; bottom: 0; height: 420px; opacity: 0.10;
 		background: repeating-radial-gradient(140% 70% at 50% 130%, rgba(255, 220, 140, 0.9) 0 1.2%, transparent 1.2% 6%); }
-	.brand { display: flex; align-items: center; margin-right: 22px; }
-	.mark { position: relative; width: 40px; height: 40px; }
-	.mark i { position: absolute; width: 26px; height: 26px; border-radius: 8px; }
-	.mark i:first-child { left: 0; top: 0; background: var(--wiiu); }
-	.mark i:last-child { right: 0; bottom: 0; background: var(--n3ds); mix-blend-mode: screen; }
 
 	.filters { position: absolute; left: var(--safe-x); right: var(--safe-x); top: 136px; height: 52px; display: flex; align-items: center; gap: 12px; }
 	.filter { height: 52px; padding: 0 24px; border-radius: var(--r-pill); display: flex; align-items: center; gap: 12px; font: 500 24px Lexend; color: var(--text-2); background: var(--glass); border: 1.5px solid var(--glass-edge); }
@@ -47,10 +42,10 @@
 	<div class="grain"></div><div class="vignette"></div>
 
 	<div class="topbar">
-		<div class="brand"><div class="mark"><i></i><i></i></div></div>
-		<div class="sides"><span class=" wiiu"><i></i>Wii U</span><span class="on n3ds"><i></i>3DS</span></div>
+		<div class="brand"><div class="mark"><i></i><i></i><i></i></div></div>
+		<div class="sides"><span class=" wiiu"><i></i>Wii U</span><span class="on n3ds"><i></i>3DS</span><span class=" nds"><i></i>DS</span></div>
 		<span class="shoulder">L1</span>
-		<div class="tabs"><span class="tab">Home</span><span class="tab on">Library</span><span class="tab">Settings</span></div>
+		<div class="tabs"><span class="tab on">Library</span><span class="tab">Settings</span></div>
 		<span class="shoulder">R1</span>
 		<div class="status"><span data-glyph="wifi" data-size="26"></span><div class="pads"><span class="pad p1">P1</span><span class="pad">P2</span></div><span>21:48</span></div>
 	</div>
@@ -100,6 +95,6 @@
 		<span class="hint"><span data-glyph="cross"></span>Play</span>
 		<span class="hint"><span data-glyph="options"></span>Options</span>
 		<span class="hint"><span data-glyph="l2" data-size="30"></span><span data-glyph="r2" data-size="30"></span>Jump by letter</span>
-		<span class="hint"><span data-glyph="touchpad"></span>Wii U</span>
+		<span class="hint"><span data-glyph="touchpad"></span>DS</span>
 	</div>
 </div></body></html>

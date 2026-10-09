@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>DS library</title>
+<link rel="stylesheet" href="tokens.css"><script src="kit.js"></script>
+<style>
+	/* the DS side, where the app opens (no Home): New Super Mario Bros.'s stand-in has the focus, the
+	   game played last, its top screen behind everything */
+	.ambient { background: radial-gradient(60% 60% at 20% 10%, rgba(40, 110, 40, 0.45), transparent 70%), linear-gradient(180deg, #08160a 0%, #05070d 100%); }
+	/* a 256 x 192 screenshot: scaled to fill, softened, then dimmed so the covers lead */
+	.shot { position: absolute; left: -40px; top: -40px; width: 2000px; height: 1500px; filter: blur(8px) saturate(1.05); }
+	.scrim { position: absolute; inset: 0; background:
+		linear-gradient(180deg, rgba(5, 9, 6, 0.80) 0%, rgba(5, 9, 6, 0.64) 30%, rgba(5, 9, 6, 0.72) 70%, rgba(5, 9, 6, 0.95) 100%); }
+	/* the DS side's motif: rounded pixels rising slowly */
+	.pixels { position: absolute; inset: 0; opacity: 0.16; pointer-events: none; }
+	.pixels i { position: absolute; border-radius: 22%; background: var(--nds); }
+
+	.filters { position: absolute; left: var(--safe-x); right: var(--safe-x); top: 136px; height: 52px; display: flex; align-items: center; gap: 12px; }
+	.filter { height: 52px; padding: 0 24px; border-radius: var(--r-pill); display: flex; align-items: center; gap: 12px; font: 500 24px Lexend; color: var(--text-2); background: var(--glass); border: 1.5px solid var(--glass-edge); }
+	.filter .n { font: 600 18px Lexend; color: var(--text-3); }
+	.filter.on { background: rgba(126, 217, 87, 0.20); color: var(--text); border-color: rgba(126, 217, 87, 0.45); }
+	.filter.on .n { color: #bff0a4; }
+	.tools { margin-left: auto; display: flex; gap: 28px; font: 500 22px Lexend; color: var(--text-2); }
+	.tools span { display: flex; align-items: center; gap: 10px; }
+
+	.shelf { position: absolute; left: var(--safe-x); top: 232px; width: 1660px; }
+	.line { display: flex; align-items: flex-end; gap: 28px; height: 200px; margin-bottom: 112px; }
+	.line .t { width: 216px; height: 200px; }
+	.focus-wrap { position: relative; z-index: 3; }
+	.focus-wrap .cover { transform: scale(1.07); transform-origin: 50% 100%; }
+	.caption { position: absolute; left: 0; top: 216px; width: 640px; white-space: nowrap; }
+	.caption .t2 { font: 650 26px Lexend; }
+	.caption .m { display: flex; align-items: center; gap: 12px; margin-top: 8px; font: 400 20px Lexend; color: var(--text-2); }
+	.fade { position: absolute; left: 0; right: 0; bottom: 0; height: 230px; background: linear-gradient(180deg, transparent, var(--ink-0) 82%); }
+
+	.az { position: absolute; right: 52px; top: 232px; display: flex; flex-direction: column; align-items: center; gap: 5px; font: 600 15px/20px Lexend; color: var(--text-3); }
+	.az b { width: 30px; height: 30px; border-radius: 50%; background: var(--nds); color: var(--nds-ink); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+</style></head>
+<body><div class="canvas">
+	<div class="ambient"></div>
+	<canvas class="shot" data-backdrop="ds:nsmb"></canvas>
+	<div class="scrim"></div><div class="pixels" id="pixels"></div>
+	<div class="grain"></div><div class="vignette"></div>
+
+	<div class="topbar">
+		<div class="brand"><div class="mark"><i></i><i></i><i></i></div></div>
+		<div class="sides"><span class=" wiiu"><i></i>Wii U</span><span class=" n3ds"><i></i>3DS</span><span class="on nds"><i></i>DS</span></div>
+		<span class="shoulder">L1</span>
+		<div class="tabs"><span class="tab on">Library</span><span class="tab">Settings</span></div>
+		<span class="shoulder">R1</span>
+		<div class="status"><span data-glyph="wifi" data-size="26"></span><div class="pads"><span class="pad p1">P1</span><span class="pad">P2</span></div><span>21:52</span></div>
+	</div>
+
+	<div class="filters">
+		<span class="filter on">All <span class="n">64</span></span>
+		<span class="filter">Recently added <span class="n">3</span></span>
+		<span class="filter">Favourites <span class="n">5</span></span>
+		<div class="tools">
+			<span><span data-glyph="square" data-size="26"></span>Sort: Recently played</span>
+			<span><span data-glyph="triangle" data-size="26"></span>Search</span>
+		</div>
+	</div>
+
+	<div class="shelf">
+		<div class="line">
+			<div class="focus-wrap"><div data-game="nsmb" class="t focus"></div>
+				<div class="caption"><div class="t2">New Super Mario Bros.</div><div class="m">Nintendo · 2006<span class="chip good"><span class="dot" style="background:var(--good)"></span>Playable</span><span class="chip">Continue · 9 h played</span></div></div>
+			</div>
+			<div data-game="mkds" class="t"></div>
+			<div data-game="hgss" class="t"></div>
+			<div data-game="twewy" class="t"></div>
+			<div data-game="layton" class="t"></div>
+			<div data-game="pw" class="t"></div>
+		</div>
+		<div class="line">
+			<div data-game="ph" class="t"></div>
+			<div data-game="dos" class="t"></div>
+			<div data-game="ct" class="t"></div>
+			<div data-game="dq9" class="t"></div>
+			<div data-game="acww" class="t"></div>
+			<div data-game="mlbis" class="t"></div>
+		</div>
+		<div class="line">
+			<div data-game="ksu" class="t"></div>
+			<div data-game="mph" class="t"></div>
+			<div data-game="plat" class="t"></div>
+			<div data-game="ebas" class="t"></div>
+			<div data-game="tetris" class="t"></div>
+		</div>
+	</div>
+	<div class="fade"></div>
+
+
+	<div class="hints">
+		<span class="hint"><span data-glyph="cross"></span>Play</span>
+		<span class="hint"><span data-glyph="options"></span>Options</span>
+		<span class="hint"><span data-glyph="touchpad"></span>Wii U</span>
+	</div>
+</div>
+<script>
+	// the motif's rising pixels: seeded, so every render is the same
+	const box = document.getElementById('pixels'); let seed = 11;
+	const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+	for (let i = 0; i < 46; i++) {
+		const p = document.createElement('i'); const size = 8 + Math.round(rnd() * 26);
+		p.style.width = p.style.height = size + 'px';
+		p.style.left = Math.round(rnd() * 1900) + 'px';
+		p.style.top = Math.round(300 + rnd() * 780) + 'px';
+		p.style.opacity = (0.25 + rnd() * 0.75).toFixed(2);
+		box.appendChild(p);
+	}
+</script>
+</body></html>

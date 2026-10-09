@@ -9,7 +9,22 @@ controller conventions taken from the console itself. Every feature the app has 
 document covers what was studied, what the design is, and what the code change involves, file by file
 and phase by phase.
 
-![The Home screen, on the Wii U side](ui-redesign/01-home.jpg)
+![The Library, on the DS side](ui-redesign/07-ds-library.jpg)
+
+> **Revised 2026-10-09, for 3.5.1.** Three changes from what players said about 3.5.0, adopted here
+> before the code:
+>
+> 1. **A third side, the DS** (melonDS): *Wii U | 3DS | DS* in the bar, the DS to the right of the
+>    3DS, in melon green against the Wii U's sky and the 3DS's sand, with its own library, folder,
+>    settings, cover band, light bar and backdrop motif (5.2). DS games are no longer listed on the
+>    3DS side.
+> 2. **No Home screen.** Every side opens on its Library; the tabs are *Library* and *Settings* (6.1
+>    says where Home's parts went).
+> 3. **Settings, simple again.** Settings shows the side you are on and nothing else: one short list of
+>    pages with icons, as 3.0.0 had, no section headings and no other side's pages; each page's rows
+>    fill the width, and a setting's longer help is behind Triangle, not in a panel beside it (6.5).
+>    The same pages, scoped to one game, are its game settings: every value *Default (x)* until
+>    changed (6.5).
 
 <sub>All mockups are 1920 × 1080, the layout canvas the app scales to 4K. The covers are stand-ins drawn
 by the mockup kit: the app shows GameTDB's box art, as it does today. Mockup text such as play times and
@@ -21,7 +36,7 @@ frame rates is illustrative.</sub>
 2. [The UI today](#2-the-ui-today)
 3. [Research: what makes an emulator UI good, on a PS5 and elsewhere](#3-research-what-makes-an-emulator-ui-good-on-a-ps5-and-elsewhere)
 4. [Principles and the performance contract](#4-principles-and-the-performance-contract)
-5. [Cemu and Azahar: two sides of one app](#5-cemu-and-azahar-two-sides-of-one-app)
+5. [Cemu, Azahar and melonDS: three sides of one app](#5-cemu-azahar-and-melonds-three-sides-of-one-app)
 6. [Screens](#6-screens)
 7. [Visual system](#7-visual-system)
 8. [Motion, sound and touch](#8-motion-sound-and-touch)
@@ -39,20 +54,20 @@ frame rates is illustrative.</sub>
 
 Six decisions do most of the work:
 
-1. **Two sides, one app.** With the Wii U side picked, Home and the Library show only Wii U games; with
-   the 3DS side picked, only 3DS games. The sides become two states of one shell: one design, one
-   codebase, one Settings. A switch at the top left (or one click of the touchpad) moves between
-   them, and the app remembers the side: it starts on a side's Home, never on a screen asking which
-   (the start screen stays only as an opt-in setting). Behind the focused game
-   is its own picture: a Wii U game's boot screen, a 3DS game's screenshot
-   ([section 5](#5-cemu-and-azahar-two-sides-of-one-app), [7.4](#74-covers-boot-screens-screenshots-and-the-backdrop)).
+1. **Three sides, one app.** With the Wii U side picked, the Library shows only Wii U games; with the
+   3DS side, only 3DS games; with the DS side, only DS games. The sides are three states of one
+   shell: one design, one codebase. A switch at the top left (or one click of the touchpad) moves
+   between them, and the app remembers the side: it starts on a side's Library, never on a screen
+   asking which (the start screen stays only as an opt-in setting). Behind the focused game
+   is its own picture: a Wii U game's boot screen, a 3DS or DS game's screenshot
+   ([section 5](#5-cemu-azahar-and-melonds-three-sides-of-one-app), [7.4](#74-covers-boot-screens-screenshots-and-the-backdrop)).
 2. **The launcher moves to the GPU.** Today it is drawn by SDL's software renderer at 1080p, which
    rules out the motion, depth and 4K text that make a console UI feel finished. The design is a
    small Vulkan renderer on the RADV driver the app already links, drawing signed-distance shapes and
    text at 3840 × 2160, 60 fps. The same kit draws the in-game menus, so the launcher and the menus
    finally share one look and one codebase ([section 9](#9-architecture-and-code-plan)).
 3. **The PS5's grammar.** Cross plays, Circle goes back, Options opens a game's menu, L1 and R1 change
-   tabs, the Home row is covers with the focused game's hub under it, and the in-game menu works like
+   tabs, the Library is covers with the focused game's facts under it, and the in-game menu works like
    the PS5's Control Center: the game stays in view. Rumble is punctuation, not noise; the light bar
    takes the system's colour.
 4. **The friction people actually hit.** A setup check on first start (most issues filed so far are
@@ -409,14 +424,16 @@ the same branch (rule 5).
 
 ---
 
-## 5. Cemu and Azahar: two sides of one app
+## 5. Cemu, Azahar and melonDS: three sides of one app
 
 ### 5.1 The decision
 
-The app keeps its two sides. With the Wii U side picked, Home and the Library show only Wii U games;
-with the 3DS side picked, only 3DS games. What changes is everything around them: the two sides
-become two states of one shell (one design, one codebase, one Settings, one set of overlays), and
-moving between them takes one press instead of a trip back through the start screen.
+The app keeps a side per emulator: the Wii U (Cemu), the 3DS (Azahar) and, from 3.5.1, the DS
+(melonDS). With a side picked, the Library shows only its games. What changes is everything around
+them: the sides become states of one shell (one design, one codebase, one set of overlays), and
+moving between them takes one press instead of a trip back through the start screen. (The table
+below compared two sides, when there were two; a third changes none of it. DS games were first
+listed on the 3DS side, with a filter: players asked for them on a side of their own.)
 
 | Option | What it is | For | Against |
 |---|---|---|---|
@@ -429,32 +446,42 @@ switched at its top left.
 
 ### 5.2 How each side looks like itself
 
-1. **The accent:** sky blue on the Wii U side, sand gold on the 3DS side, today's colours, for the
-   focus glow, the switch, kickers and the side's settings.
-2. **The backdrop:** the focused game's own picture (a Wii U game's boot screen, a 3DS game's
-   screenshot: 7.4) over the side's motif, bubbles on the Wii U side and waves on the 3DS side.
-3. **The covers:** the Wii U's tall 5:7 cases, the 3DS's shorter and wider ones.
-4. **The light bar:** blue on the Wii U side, gold on the 3DS side.
+1. **The accent:** sky blue on the Wii U side, sand gold on the 3DS side, today's colours, and melon
+   green (`nds`, `#7ed957`) on the DS side, for the focus glow, the switch, kickers and the side's
+   settings. The green is melonDS's, kept clear of the status colour `good` (`#3dd6a3`, a teal) so a
+   DS kicker never reads as "works".
+2. **The backdrop:** the focused game's own picture (a Wii U game's boot screen, a 3DS or DS game's
+   screenshot: 7.4) over the side's motif: bubbles on the Wii U side, waves on the 3DS side, and on
+   the DS side rounded pixels rising slowly, the DS's 256 × 192 screens in the motif's grain.
+3. **The covers:** the Wii U's tall 5:7 cases, the 3DS's shorter and wider ones, and the DS's, the
+   same shape as the 3DS's, with GameTDB's grey *NINTENDO DS* band.
+4. **The light bar:** blue on the Wii U side, gold on the 3DS side, green on the DS side.
+5. **The tile:** each side's icon in the bar's switch and the chooser: the Wii U's GamePad, the 3DS's
+   clamshell, and the DS Lite's two screens on green.
 
-Switching sides cross-fades all four over 600 ms (Reduce motion: a 150 ms fade). The start screen's
-"seam", bubbles meeting waves, stays as the brand's mark, on the Setup check and the side chooser.
+Switching sides cross-fades all of these over 600 ms (Reduce motion: a 150 ms fade). The start
+screen's "seam", bubbles meeting waves, stays as the brand's mark, on the Setup check and the side
+chooser, where the DS's card joins the other two.
 
 ### 5.3 Picking and switching sides
 
-- **The switch** sits at the left of the bar: *Wii U | 3DS*, the side you are on lit in its colour.
-  Up to the bar, Left onto the switch, then Left, Right or Cross.
-- **One press:** a click of the touchpad on Home or the Library switches sides. In a game the
-  touchpad is already the app's own key (click + Options opens the menu), so it is the app's key in
-  the launcher too. The hint row says so: *[touchpad] Nintendo 3DS*.
-- **Remembered:** the app opens on the side last used; after a game, on that game's hub.
-- **First start:** after the Setup check, the app opens on the Home of the only side with games, and
-  on the Wii U side's when both or neither have some. Nothing asks which side: the other one is a
-  touchpad click away, and the hint row says so.
-- **Ask each time:** Settings > General > Start on offers *The side last used* (the default) or *Ask
-  each time*, which brings back today's start screen, its two cards restyled. It is the only way the
-  app ever asks which side, and only for someone who turned it on.
-- **Settings is shared:** General first, then the side you are on, then the other side, so either
-  side's settings are reachable without switching.
+- **The switch** sits at the left of the bar: *Wii U | 3DS | DS*, the DS to the right of the 3DS, the
+  side you are on lit in its colour. Up to the bar, Left onto the switch, then Left, Right or Cross.
+- **One press:** a click of the touchpad in the Library or Settings goes to the next side, in the
+  switch's order and round again (Wii U, 3DS, DS, Wii U). In a game the touchpad is already the
+  app's own key (click + Options opens the menu), so it is the app's key in the launcher too. The
+  hint row names the side it goes to: *[touchpad] Nintendo DS*.
+- **Remembered:** the app opens on the side last used, on its Library; after a game, on that game in
+  the Library.
+- **First start:** after the Setup check, the app opens on the Library of the first side with games
+  (Wii U, then 3DS, then DS), and on the Wii U side's when none have some. Nothing asks which side:
+  the others are a touchpad click away, and the hint row says so.
+- **Ask each time:** Settings > Launcher > Start on offers *The side last used* (the default) or *Ask
+  each time*, which brings back the start screen, with a card for each of the three sides. It is the
+  only way the app ever asks which side, and only for someone who turned it on.
+- **Settings is the side's own:** each side's Settings shows that side's pages, and the few shared
+  ones (folders, online, the launcher, help) on every side, so there is never a page of a side you are
+  not on (6.5).
 
 ### 5.4 Navigation map
 
@@ -464,24 +491,22 @@ flowchart TD
     First -- yes --> Setup[Setup check]
     First -- no --> Side{"Start on"}
     Setup --> Side
-    Side -- "the side last used (the default;<br/>first start: the side with games)" --> Home
-    Side -- "ask each time (opt-in)" --> Chooser[Side chooser] --> Home
-    Home -- "touchpad or the switch" --> Other[The other side's Home]
+    Side -- "the side last used (the default;<br/>first start: the first side with games)" --> Library
+    Side -- "ask each time (opt-in)" --> Chooser[Side chooser] --> Library
+    Library -- "touchpad or the switch" --> Other[The next side's Library]
     subgraph Tabs["L1 / R1"]
-        Home --> Library --> Settings
+        Library <--> Settings
     end
-    Home -- "Cross on a cover" --> Launch([Launch])
-    Home -- "Down / Game hub" --> Hub[Game hub]
-    Library -- Cross --> Launch
+    Library -- Cross --> Launch([Launch])
     Library -- "Options" --> Menu[Game menu]
     Hub -- Cross --> Launch
     Hub --> Packs[Graphic packs]
     Hub --> GameSettings[Game settings]
     Menu --> Hub & Packs & GameSettings
-    Settings --> Pages["Controllers · Button mapping<br/>Folders · Installs · Artic Base<br/>Diagnostics · About"]
+    Settings --> Pages["This side's pages only:<br/>Graphics · Screens · Audio · Controls<br/>Game files · Online · Launcher<br/>Diagnostics · About"]
     Launch --> Game([Game])
     Game -- "touchpad click + Options" --> Quick[Quick Menu]
-    Quick -- "Quit to the library (hold)" --> Restart(["App starts over<br/>on that game's hub"])
+    Quick -- "Quit to the library (hold)" --> Restart(["App starts over<br/>on that game in the Library"])
 ```
 
 Overlays sit above any screen: the dropdown picker, a setting's help (Triangle), the update sheet,
@@ -514,11 +539,9 @@ toasts, and the on-screen keyboard.
 
 | Where | Cross | Circle | Square | Triangle | Options | L1 / R1 | L2 / R2 | Touchpad |
 |---|---|---|---|---|---|---|---|---|
-| Home row | Play | — | — | — | Game menu | Tabs | — | Switch side |
-| Home, below the row | The focused button | Up to the row | — | — | Game menu | Tabs | — | Switch side |
-| Library | Play | Home tab | Sort | Search | Game menu | Tabs | Previous / next letter | Switch side |
+| Library | Play | Up to the filters, then the bar | Sort | Search | Game menu | Tabs | Previous / next letter | Next side |
 | Game hub | The focused button | Back | — | — | Game menu | Previous / next game | — | — |
-| Settings | Choose / open | Back | Back to *Default* (game settings) | More about it | — | Tabs | Previous / next section | — |
+| Settings | Choose / open | Back | Back to *Default* (game settings) | More about it | — | Tabs | — | Next side |
 | Dropdown, help, sheets | Choose | Cancel | — | — | — | — | Page up / down | — |
 | Quick Menu (in a game) | Choose | Back, then close | — | — | Close | Previous / next slot | — | — |
 
@@ -529,40 +552,43 @@ the touchpad stays the shortcut key, as now (click + Options, L1, R1).
 
 ## 6. Screens
 
-### 6.1 Home
+### 6.1 Home (removed in 3.5.1)
 
-![Home](ui-redesign/01-home.jpg)
+3.5.0 opened each side on a Home: a row of recent games, the focused one's hub preview and glance
+cards. Players went past it to the Library nearly every time, so 3.5.1 removes it: every side opens
+on its Library, and the tabs are *Library* and *Settings*. What Home did, and where it went:
 
-**Purpose:** back into a game in one press.
+| Home's | Now |
+|---|---|
+| Back into the last game in one press | The Library opens with the focus on the game played last (and after a game, on that game); its default sort is *Recently played* |
+| The row's recent games | *Recently played*, the Library's first sort, and its filters |
+| The hub preview (name, publisher, year, status, play time) | The caption under the focused cover (6.2), and the Game hub |
+| Glance cards (packs, controllers, how it runs, updates) | The Game hub and the Game menu |
+| Notices (no `/data`, Cemu did not start, a launch error) | A card at the top of the Library, above the filters, with its action |
+| "Your games go here" with *Choose a folder* | The Library's empty state, the same card |
+| Setup check and Diagnostics buttons | Settings > Diagnostics, and the empty state's card |
 
-- **The row:** the side's recent games, newest first, the focused cover larger (PS5 home style), then
-  *All games* to the Library. The current app keeps four recent games per side; the catalogue keeps
-  twelve per side.
-- **The hub preview** under the row: the system badge and "Continue · last played …", the name at
-  display size (two lines at most, never cut mid-word: it wraps or shrinks one step), publisher, year,
-  play time, the compatibility status, then **Play**, **Game hub** and **…** (the Game menu).
-- **Glance cards** along the bottom: shortcuts into the game's state, never tasks. Graphic packs
-  (count and names), Controllers (who is which controller), How it runs (status, average frame rate
-  of the last session from the `[perf]` lines the app already logs), Updates and DLC. Each opens its
-  page; a card with nothing to say is left out. The cards read the catalogue's saved summary (5.5), so
-  they show at once, before the side's scan finishes.
-- **The backdrop** is the focused game's own picture (7.4): on the Wii U side its boot screen, as the
-  hero art right of the title; on the 3DS side its screenshot. It cross-fades over 600 ms as the
-  focus moves.
-- **States:** first start opens the Setup check instead; no games shows a single card, "Your games go
-  here", with *Choose a folder* focused; a launch error from the last session shows as a card above
-  the row with the reason and *Try without graphic packs* or *Try without cheats* where those were on.
+The mockup `01-home.html` and its JPEG are removed with the screen.
 
 ### 6.2 Library
 
 ![Library](ui-redesign/02-library.jpg)
 
-**Purpose:** every game on this side, found fast.
+**Purpose:** every game on this side, found fast, and the last one played in one press. It is where
+every side opens (6.1).
 
+- **Opening:** on the game played last on this side (after a game, on that game), so Cross plays it
+  again; on the first shelf's first game when none has been played.
+- **Notices** (no `/data`, Cemu did not start, the last game did not start) are a card above the
+  filters with the reason and its action (*Setup check*, *Try without graphic packs*, *Try without
+  cheats*); Up from the filters reaches it. With no games, the card is the shelf: "Your games go
+  here", the side's folder and the formats it takes, *Choose a folder* focused.
 - **Filters** across the top: *All*, *Recently added*, *Favourites*, each with its count; on the
   Wii U side also *Graphic packs on*. Left and Right on the filter row, or Up from the first shelf. On
-  the 3DS side the shelf's first tile is *Play from your 3DS*: Artic Base, which today has a button on
-  the 3DS side's Home.
+  the 3DS side the shelf's first tile is *Play from your 3DS*: Artic Base.
+- **The DS side** lists `.nds` and `.srl` files from its own folder (`/data/ps5cemu/melonds/games` by
+  default), each with the icon and title from its banner until GameTDB's box art arrives, *DS* on its
+  badge. DSi-only games are listed, dimmed, with why they can't start.
 - **Sort** (Square): *Recently played*, *A to Z*, *Release year*, *How it runs*. **Search** (Triangle)
   opens the on-screen keyboard; results narrow as you type.
 - **The shelf**: covers at their natural shapes on a shared baseline, rows of equal height. The
@@ -607,35 +633,67 @@ art again* · *Show where it is* (the path, and the drive).
 
 ![Settings](ui-redesign/04-settings.jpg)
 
-**Purpose:** everything the app can change, in one list, with each setting showing its effect.
+**Purpose:** what the side you are on can change, found at a glance.
 
-**Structure** (every row of today's two Settings tabs has a place; Appendix A has the mapping). The
-section of the side you are on comes right after General, the other side's after it:
+3.5.0's Settings put every page of both sides in one long list under four headings (General, the
+side you are on, the other side, Help), each page often two or three rows, with a help panel beside
+the rows. Players said it was not simple any more, and a third side would have made the list longer
+still. From 3.5.1, as 3.0.0 had it:
 
-| Section | Pages |
+- **Only the side you are on.** Each side's Settings is one short list of pages down the left, each
+  with an icon, no headings. The pages every side shares (Game files, Online, Launcher, Diagnostics,
+  About) are in every side's list; no side shows another side's pages. The touchpad goes to the next
+  side's Settings.
+- **Rows fill the width**, a label on the left, the value or control on the right; the focused row
+  shows one line saying what it does. The longer help is behind Triangle, in a sheet; there is no
+  panel beside the rows and no preview (the in-game menu shows a change on the game itself).
+- **Rows are still controls:** a toggle for on/off, a slider for volumes and deadzones, a stepper
+  with pips for the 3DS's internal resolution, segments for two or three choices, arrows for longer
+  lists.
+
+| Side | Pages, top to bottom |
 |---|---|
-| General | Display · Sound · Controllers · Games and folders · Online and updates · Accessibility |
-| Wii U | Graphics · Controllers · USB devices · Install updates and DLC |
-| Nintendo 3DS | Graphics · Screens and borders · Controls · System and Home Menu · Install CIA files · Artic Base |
-| Help | Setup check · Diagnostics · About |
+| Wii U | Graphics · Audio · Controls · USB devices · Game files · Online · Launcher · Diagnostics · About |
+| 3DS | Graphics · Screens · Audio · Controls · System · Game files · Artic Base · Online · Launcher · Diagnostics · About |
+| DS | Graphics · Screens · Audio · Controls · System · Game files · Online · Launcher · Diagnostics · About |
 
-**Rows are controls, not text:** a toggle for on/off; a slider for volumes and deadzones (its pitch
-rises with its value); a stepper with pips for the 3DS's internal resolution, with the resulting size
-("2400 × 1440"); segmented choices for two or three options (*Top | Bottom*); swatches for borders;
-pictograms for screen layouts. The focused row grows a help line **inside the same height budget**
-(rows reserve it), so nothing below moves. Triangle still opens the longer help.
+| Page | Rows |
+|---|---|
+| Graphics (Wii U) | Upscaling to 4K · 120 Hz output · Frame pacing · Performance overlay · Async shader compile |
+| Graphics (3DS) | Internal resolution · Texture filter · Custom textures |
+| Graphics (DS) | Screen filter · Recompiler |
+| Screens (3DS, DS) | Screen layout · Border (each side its own) |
+| Audio | This side's games' volume · GamePad speaker (Wii U) · Launcher music · Music volume · Menu sounds |
+| Controls (Wii U) | Vibration · Player 1 to 4 (each player's controller, motion and buttons) |
+| Controls (3DS, DS) | Vibration · Motion controls (3DS) · Stick deadzone · Buttons · Reset to defaults |
+| USB devices (Wii U) | The three portals |
+| System (3DS) | Region · Language · Home Menu |
+| System (DS) | Language · Your DS's BIOS |
+| Game files | This side's folder · Look for games now · Wii U disc keys or Install updates and DLC (Wii U) · Install a CIA file (3DS) |
+| Artic Base (3DS) | Artic Base and Artic Setup |
+| Online | Box art from GameTDB · Community graphic packs (Wii U) · PS5CEMU-HAR updates |
+| Launcher | Start on · Game pictures behind menus · Larger text · High contrast · Reduce motion · Hold to confirm |
+| Diagnostics | Setup check · Copy logs to USB · Clear this side's shader caches, then this session's facts |
+| About | Credits, where things are, the version |
 
-**Previews:** pages with a visual result show it on the right: the 3DS screens in the chosen layout on
-the chosen border, the Wii U's TV and GamePad arrangement, the effect of an upscaling filter on a
-sample.
+Shared values (Vibration, the launcher's music and accessibility) are one setting, shown on every
+side; a side's own (its folder, volume, layout, border, buttons, language) are that side's alone, so
+the DS and the 3DS can differ.
 
-**Game settings** use the same pages, scoped to one game, as ProsperoEden does: every value shows
-*Default (6×)* until changed, going past the last choice comes back to *Default*, and Square resets
-the row. What a game can override: Wii U upscaling, async shaders, accurate barriers, frame pacing
-(its right value is a game's: 60 fps for Breath of the Wild at 4K, Off for one that holds 120,
-`docs/DRIVER-PERFORMANCE.md`), controller types; 3DS internal resolution, texture filter, layout,
-main screen, border, CPU clock, speed limit, A and B. They live in `ps5cemu.json` under
-`games.<title ID>`.
+**Game settings** are the same pages, scoped to one game, as ProsperoEden and desktop emulators have
+them: Options on a game, then *Game settings*. The list shows only the pages with something a game can
+change; every value shows *Default (6×)* until changed, going past the last choice comes back to
+*Default*, Square resets the row, and *Back to defaults* (held) at the end clears the game's settings.
+A game's settings apply at its next start and override the side's; the in-game menu saves its
+changes to the game's settings when the game has some, else to the side's. What a game can override:
+
+| Side | Game settings |
+|---|---|
+| Wii U | Upscaling to 4K · 120 Hz output · Frame pacing (its right value is a game's: 60 fps for Breath of the Wild at 4K, Off for one that holds 120, `docs/DRIVER-PERFORMANCE.md`) · Performance overlay · Async shader compile · Volume |
+| 3DS | Internal resolution · Texture filter · Custom textures · Screen layout · Border · Volume · Region · Language · CPU clock |
+| DS | Screen filter · Recompiler · Screen layout · Border · Volume · Language · Your DS's BIOS |
+
+They live in `ps5cemu.json` under `games`, keyed by side and title ID (9.8).
 
 ### 6.6 Pages kept from today, rebuilt
 
@@ -667,7 +725,7 @@ left, detail right) the current app already uses well.
 
 **Purpose:** answer "why doesn't it work?" before anyone opens an issue.
 
-Shown on the first start, whenever a check fails at start, and from Settings > Help. Each check has a
+Shown on the first start, whenever a check fails at start, and from Settings > Diagnostics. Each check has a
 status (ready, needs a look, optional) and, when focused, what it means, what to do, and a QR code to
 the right part of the README or HEN guide:
 
@@ -677,6 +735,8 @@ the right part of the README or HEN guide:
 | Recompilers | JIT or executable memory found | Interpreter only: slower; which HEN setting gives it |
 | Wii U games | *n* games in *folder* | None found: choose a folder (Cross) |
 | 3DS games | *n* games in *folder* | None found: choose a folder |
+| DS games | *n* games in *folder* | None found: choose a folder (`.nds`, `.srl`) |
+| DS BIOS (optional) | Your DS's `bios7.bin`, `bios9.bin` and `firmware.bin` in `melonds/bios` | Not there: melonDS's own run most games as well |
 | Wii U disc keys | `keys.txt` found | Missing: only encrypted `.wud`/`.wux` need it |
 | 3DS keys | `aes_keys.txt` found | Missing: only encrypted dumps need it |
 | 3DS system files (optional) | Artic Setup has run | Not yet: what needs them (Home Menu, some games) |
@@ -755,12 +815,14 @@ app and `tokens.css` for the mockups. Nothing else defines a colour, a size or a
 | `text` | `#f5f7fb` | All text; secondary at 70 %, tertiary at 46 % opacity |
 | `wiiu` / `wiiu-strong` | `#5aa9ff` / `#2f7fe8` | The Wii U side's accent, its badges and settings |
 | `n3ds` / `n3ds-strong` | `#f4b63f` / `#d9961b` | The 3DS side's accent, its badges and settings |
+| `nds` / `nds-strong` | `#7ed957` / `#4caf38` | The DS side's accent, its badges and settings: melonDS's green |
 | `good` / `warn` / `bad` | `#3dd6a3` / `#ffb547` / `#ff7272` | Compatibility status, checks |
 | `focus` | `#ffffff` | The focus ring |
 
 Hierarchy is by size and opacity, not by colour; the accent appears once per region at most. The side
-you are on sets the accent, sky on the Wii U side and sand on the 3DS side: today's colours
-(`render-layout.py`'s `accent`), so the change keeps the app recognisable.
+you are on sets the accent, sky on the Wii U side, sand on the 3DS side and melon green on the DS side:
+the first two today's colours (`render-layout.py`'s `accent`), so the change keeps the app
+recognisable, the third far from both.
 
 ### 7.2 Type
 
@@ -839,7 +901,7 @@ so the picture is a screenshot, the first of these that exists:
 3. **libretro's title screen** (`Named_Titles`, 1,967), the same way, when there is no snap.
 4. **None:** the cover's ambient colours, as below.
 
-Settings > General > Online and updates has *3DS screenshots from libretro* beside *Box art from
+Settings > Online has *3DS screenshots from libretro* beside *Box art from
 GameTDB*: on by default like it, and off means nothing more is asked for. Nothing is bundled; like the
 covers, every picture is fetched at run time or taken from the player's own games.
 
@@ -857,13 +919,17 @@ Wii U game's hub; the 3DS side's Home is not mocked up yet):
   sits faintly over it, with a film grain at 11 % and a vignette.
 - **Changes** cross-fade over 600 ms as the focus moves, and only once the focus has rested for 150 ms,
   so scrolling through a row doesn't flicker; Reduce motion makes it a 150 ms fade and stops the motif;
-  High contrast dims the picture further; Settings > General > Display > *Game pictures behind menus*
+  High contrast dims the picture further; Settings > Launcher > *Game pictures behind menus*
   turns them off.
 - **Ambient colours:** when a picture or cover arrives, a worker downsamples it to 32 × 32 and picks two
   colours (the most frequent saturated one, and a dark companion) with a small median cut, from the
   picture when there is one, else the cover. Both are kept in `library.json`; their luminance is
   clamped so white text over them keeps at least 4.5:1 contrast. They tint the scrims and fill
   whatever the picture leaves uncovered.
+
+**DS: as the 3DS's.** A DS game's banner holds only a 32-pixel icon, so the DS side takes the same
+sources as the 3DS's, at the DS's 256 × 192 (its top screen); until one exists, the cover, softened,
+as on the 3DS side today.
 
 **What it costs, and when.** Only in the launcher: boot screens are read while the Wii U side is
 open, snaps download through `ps5boxart`'s queue, and both stop before a game, their threads joined
@@ -940,10 +1006,10 @@ the current five.
 
 - **Rumble** (through `ps5pad::SetVibration`): a light 50 ms pulse for a refusal (Cross on something
   unavailable, the edge of a list once), a stronger 120 ms one for a launch and a completed hold.
-  Never on ordinary navigation, and never from the UI in a game. Off when Settings > General >
-  Controllers > Vibration is off.
-- **The light bar** (`ps5pad::SetLightBar`): the side's colour in the launcher, set once at launch for
-  the game, and left alone in a game: neither emulator sets it.
+  Never on ordinary navigation, and never from the UI in a game. Off when Settings > Controls >
+  Vibration is off.
+- **The light bar** (`ps5pad::SetLightBar`): the side's colour in the launcher (blue, gold or green),
+  set once at launch for the game, and left alone in a game: no emulator sets it.
 
 ---
 
@@ -1199,14 +1265,19 @@ of launcher, host, layout script and stylesheet); the Quick Menu about 1,500 (re
   sets, or the check never runs again. **Removed:** the two `gameCount`s (the catalogue has them).
 - **Moved:** each side's `recent` list becomes the catalogue's last-played times for that side; the
   old lists, which have no times, keep their order on migration.
+- **Added in 3.5.1:** `nds`, the DS side's settings (its folder, layout, border, volume, deadzone,
+  buttons, language, screen filter, recompiler, BIOS, last and recent games), in the shape of `n3ds`;
+  `ui.libraryFilter` and `ui.librarySort` get a third entry; `side` and `ui.lastSide` may be `"ds"`;
+  `library.json` a `"ds"` side. `games` holds game settings as `{"wiiu:0005000010145c00": {...},
+  "3ds:0004000000055d00": {...}, "ds:d5...": {...}}`, each object the keys of its side's settings
+  that the game changes, nothing else; an older release drops it on save.
 - **Added:** `games.<title ID>` (game settings, 6.5), `ui.textScale`, `ui.highContrast`,
   `ui.reduceMotion`, `ui.holdMs`, `ui.startOn` (`last` or `ask`), `ui.libraryFilter` and
   `ui.librarySort` (per side), and `ui.classic` (the fallback switch).
 - `library.json` holds the catalogue (5.5); deleting it only costs one full scan of each side.
 - **New caches:** `covers/boot/` (Wii U boot screens), `covers/snaps/` (libretro snaps and title
   screens), `azahar/screenshots/` (the player's captures, and which are kept). **New keys:**
-  `snapDownloads` (Settings > General > Online and updates), `ui.gamePictures` (Settings > General >
-  Display), and
+  `snapDownloads` (Settings > Online), `ui.gamePictures` (Settings > Launcher), and
   `perfHistogram` (the A/B runs' frame-time histogram, off by default).
 
 ### 9.9 Testing
@@ -1310,6 +1381,8 @@ Every feature of today's UI, where it is now, and where it goes. ✓ means uncha
 
 ### Home
 
+Home itself is removed in 3.5.1 (6.1): its rows below now live in the Library and the Game hub.
+
 | Today | Where | In the new UI |
 |---|---|---|
 | Continue: the last game, publisher and year, status, Play and Details | `UpdateHome` | The row's focused cover and the hub preview **+** |
@@ -1340,6 +1413,12 @@ Every feature of today's UI, where it is now, and where it goes. ✓ means uncha
 | Community packs update from GitHub | Settings > Online | ✓ Settings > Online and updates |
 
 ### Settings
+
+From 3.5.1 the pages are each side's own (6.5): read *General > Sound* below as *Audio*, *General >
+Display* and *Accessibility* as *Launcher*, *General > Games and folders* and the side's installs as
+*Game files*, *General > Online and updates* as *Online*, *Help > X* as *X*, and *Wii U > X* or
+*3DS > X* as *X* on that side. The Wii U's performance overlay is on its Graphics page, and each side
+has its own games' volume.
 
 | Today (category > row) | In the new UI |
 |---|---|
