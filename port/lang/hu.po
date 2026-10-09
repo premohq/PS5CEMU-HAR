@@ -2275,556 +2275,558 @@ msgid "Linear"
 msgstr "Lineáris"
 
 msgid "Setup theme"
-msgstr ""
+msgstr "Beüzemelési dallam"
 
 msgid "Language"
-msgstr ""
+msgstr "Nyelv"
 
 msgid "The language of the menus: the PS5's own, unless you choose another."
-msgstr ""
+msgstr "A menük nyelve: a PS5-é, hacsak nem választasz mást."
 
 msgid "Display"
-msgstr ""
+msgstr "Megjelenés"
 
 msgid "How the launcher looks and where it opens."
-msgstr ""
+msgstr "Hogyan néz ki az indító, és hol nyílik meg."
 
 msgid "Sound"
-msgstr ""
+msgstr "Hang"
 
 msgid "The menus' music and sounds, and the games' volume."
-msgstr ""
+msgstr "A menük zenéje és hangjai, és a játékok hangereje."
 
 msgid "The DualSense, for every player."
-msgstr ""
+msgstr "A DualSense, minden játékosnak."
 
 msgid "Games and folders"
-msgstr ""
+msgstr "Játékok és mappák"
 
 msgid "Where each side's games are."
-msgstr ""
+msgstr "Hol vannak az egyes oldalak játékai."
 
 msgid "Online and updates"
-msgstr ""
+msgstr "Online és frissítések"
 
 msgid "Box art, graphic packs and PS5CEMU-HAR itself."
-msgstr ""
+msgstr "Borítók, grafikus csomagok és maga a PS5CEMU-HAR."
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Kisegítő lehetőségek"
 
 msgid "Larger text, more contrast, less motion."
-msgstr ""
+msgstr "Nagyobb szöveg, több kontraszt, kevesebb mozgás."
 
 msgid "For every Wii U game."
-msgstr ""
+msgstr "Minden Wii U-játékhoz."
 
 msgid "What each player's DualSense is to the Wii U."
-msgstr ""
+msgstr "Mi az egyes játékosok DualSense-e a Wii U számára."
 
 msgid "Cemu's emulated portals."
-msgstr ""
+msgstr "A Cemu emulált portáljai."
 
 msgid "Into the Wii U's storage."
-msgstr ""
+msgstr "A Wii U tárhelyére."
 
 msgid "For every 3DS game."
-msgstr ""
+msgstr "Minden 3DS-játékhoz."
 
 msgid "Screens and borders"
-msgstr ""
+msgstr "Képernyők és keretek"
 
 msgid "For every 3DS game; in a game, its menu changes them at once."
-msgstr ""
+msgstr "Minden 3DS-játékhoz; játék közben a menüje azonnal módosítja őket."
 
 msgid "The DualSense as the 3DS."
-msgstr ""
+msgstr "A DualSense mint 3DS."
 
 msgid "System and Home Menu"
-msgstr ""
+msgstr "Rendszer és HOME menü"
 
 msgid "The emulated 3DS's region and language."
-msgstr ""
+msgstr "Az emulált 3DS régiója és nyelve."
 
 msgid "Into the 3DS's storage."
-msgstr ""
+msgstr "A 3DS tárhelyére."
 
 msgid "Play from your 3DS, over your network."
-msgstr ""
+msgstr "Játék a 3DS-edről, a hálózatodon át."
 
 msgid "Why something does not work, before anything else."
-msgstr ""
+msgstr "Miért nem működik valami – mindenekelőtt."
 
 msgid "Logs, caches and what this session is."
-msgstr ""
+msgstr "Naplók, gyorsítótárak, és mi ez a munkamenet."
 
 msgctxt "app"
 msgid "About"
-msgstr ""
+msgstr "Névjegy"
 
 msgid "Who made what."
-msgstr ""
+msgstr "Ki mit készített."
 
 msgid "Checking GitHub…"
-msgstr ""
+msgstr "GitHub ellenőrzése…"
 
 msgid "Downloading: {0}"
-msgstr ""
+msgstr "Letöltés: {0}"
 
 msgid "Downloading: {0} MB"
-msgstr ""
+msgstr "Letöltés: {0} MB"
 
 msgid "Installing…"
-msgstr ""
+msgstr "Telepítés…"
 
 msgid "Up to date: {0}"
-msgstr ""
+msgstr "Naprakész: {0}"
 
 msgid "Installed: {0}"
-msgstr ""
+msgstr "Telepítve: {0}"
 
 msgid "Cross to download"
-msgstr ""
+msgstr "Kereszt: letöltés"
 
 msgid "{0}: Cross to install"
-msgstr ""
+msgstr "{0}: kereszt a telepítéshez"
 
 msgid "Downloading…"
-msgstr ""
+msgstr "Letöltés…"
 
 msgid "Checking the download…"
-msgstr ""
+msgstr "A letöltés ellenőrzése…"
 
 msgid "Installed: Cross to restart"
-msgstr ""
+msgstr "Telepítve: kereszt az újraindításhoz"
 
 msgid "Cross to check"
-msgstr ""
+msgstr "Kereszt: ellenőrzés"
 
 msgid "Cross goes to the 3DS side for it."
-msgstr ""
+msgstr "A kereszt ehhez a 3DS oldalra vált."
 
 msgid "Cross goes to the Wii U side for it."
-msgstr ""
+msgstr "A kereszt ehhez a Wii U oldalra vált."
 
 msgid "On the 3DS side"
-msgstr ""
+msgstr "A 3DS oldalon"
 
 msgid "On the Wii U side"
-msgstr ""
+msgstr "A Wii U oldalon"
 
 msgid "Cemu did not start, so this cannot be changed."
-msgstr ""
+msgstr "A Cemu nem indult el, így ez nem módosítható."
 
 msgid "The menus' language. Game names and descriptions stay as they are."
-msgstr ""
+msgstr "A menük nyelve. A játékok nevei és leírásai úgy maradnak, ahogy vannak."
 
 msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
-msgstr ""
+msgstr "A PS5CEMU-HAR a PS5 nyelvén beszél, hacsak nem választasz itt mást; az első indítás beüzemelési ellenőrzése ugyanezt a választást kínálja. A játékok nevei, leírásai és a grafikus csomagok a GameTDB-ből, magukból a játékokból és a csomagok szerzőitől származnak, és úgy maradnak, ahogy megírták őket."
 
 msgid "Start on"
-msgstr ""
+msgstr "Indítás itt"
 
 msgid "The side last used"
-msgstr ""
+msgstr "A legutóbb használt oldal"
 
 msgid "Ask each time"
-msgstr ""
+msgstr "Kérdezzen mindig"
 
 msgid "Where PS5CEMU-HAR opens."
-msgstr ""
+msgstr "Hol nyílik meg a PS5CEMU-HAR."
 
 msgid ""
 "The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
 "Ask each time: it shows the two sides first, as the start screen did."
 msgstr ""
+"A legutóbb használt oldal: a PS5CEMU-HAR azon az oldalon nyílik meg, ahol legutóbb voltál, egy játék után pedig annál a játéknál.\n"
+"Kérdezzen mindig: először a két oldalt mutatja, ahogy régen a kezdőképernyő."
 
 msgid "Game pictures behind menus"
-msgstr ""
+msgstr "Játékképek a menük mögött"
 
 msgid "The focused game's cover, softened, behind the screens."
-msgstr ""
+msgstr "A kijelölt játék borítója, elmosva, a képernyők mögött."
 
 msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
-msgstr ""
+msgstr "A kijelölt játék képe kitölti a képernyőt a menük mögött, elmosva és elsötétítve, így a kijelölés mozgatása az egész képernyőt megváltoztatja. Ki: csak a játék színei."
 
 msgid "Launcher music"
-msgstr ""
+msgstr "Az indító zenéje"
 
 msgid "The music under the menus."
-msgstr ""
+msgstr "A zene a menük alatt."
 
 msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
-msgstr ""
+msgstr "Az indító saját zenéje, egy konzol beüzemelési képernyőjének hangulatában, vagy semmi."
 
 msgid "Music volume"
-msgstr ""
+msgstr "Zene hangereje"
 
 msgid "How loud the menus' music is."
-msgstr ""
+msgstr "Milyen hangos a menük zenéje."
 
 msgid "How loud the launcher's music is. Left and Right change it by 10%."
-msgstr ""
+msgstr "Milyen hangos az indító zenéje. Balra és jobbra 10%-kal változtatja."
 
 msgid "Menu sounds"
-msgstr ""
+msgstr "Menühangok"
 
 msgid "The sounds of moving and choosing."
-msgstr ""
+msgstr "A mozgás és a választás hangjai."
 
 msgid "The launcher's sounds as you move, choose and go back."
-msgstr ""
+msgstr "Az indító hangjai, amikor mozogsz, választasz és visszalépsz."
 
 msgid "Wii U games' volume"
-msgstr ""
+msgstr "Wii U-játékok hangereje"
 
 msgid "The Wii U games' sound."
-msgstr ""
+msgstr "A Wii U-játékok hangja."
 
 msgid "The Wii U games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "A Wii U-játékok hangja. Balra és jobbra 10%-kal változtatja."
 
 msgid "3DS games' volume"
-msgstr ""
+msgstr "3DS-játékok hangereje"
 
 msgid "The 3DS games' sound."
-msgstr ""
+msgstr "A 3DS-játékok hangja."
 
 msgid "The 3DS games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "A 3DS-játékok hangja. Balra és jobbra 10%-kal változtatja."
 
 msgid "GamePad speaker"
-msgstr ""
+msgstr "GamePad-hangszóró"
 
 msgid "The Wii U GamePad's own sound, on the DualSense."
-msgstr ""
+msgstr "A Wii U GamePad saját hangja, a DualSense-en."
 
 msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
-msgstr ""
+msgstr "A hangok, amelyeket a játékok a Wii U GamePad hangszóróján játszanak le, az 1. játékos DualSense-ének hangszóróján. Sok játék a teljes hangját is oda küldi, ezért ki van kapcsolva, hacsak nem kéred. A következő játéktól érvényes."
 
 msgid "The DualSense's rumble, in games and in the launcher."
-msgstr ""
+msgstr "A DualSense rezgése, a játékokban és az indítóban."
 
 msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
-msgstr ""
+msgstr "Kikapcsolva a DualSense soha nem rezeg: sem egy játék rezgésétől, sem az indítóétól."
 
 msgid "Wii U players"
-msgstr ""
+msgstr "Wii U-játékosok"
 
 msgid "Each player's emulated controller, motion and buttons."
-msgstr ""
+msgstr "Minden játékos emulált kontrollere, mozgása és gombjai."
 
 msgid "What the Wii U sees in each player's hands."
-msgstr ""
+msgstr "Amit a Wii U minden játékos kezében lát."
 
 msgid "3DS controls"
-msgstr ""
+msgstr "3DS-irányítás"
 
 msgid "Motion, deadzone and buttons."
-msgstr ""
+msgstr "Mozgás, holtzóna és gombok."
 
 msgid "Where your Wii U games are. Cross picks another."
-msgstr ""
+msgstr "Hol vannak a Wii U-játékaid. A kereszt másikat választ."
 
 msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
-msgstr ""
+msgstr "A Wii U-játékaid: .wua, .wud, .wux, vagy code, content és meta mappák. A titkosított .wud és .wux fájlokhoz kellenek a kulcsaik a /data/ps5cemu/keys.txt fájlban."
 
 msgid "Where your 3DS games are. Cross picks another."
-msgstr ""
+msgstr "Hol vannak a 3DS-játékaid. A kereszt másikat választ."
 
 msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "A 3DS-játékaid: .3ds vagy .cci, .cxi, .3dsx és az Azahar tömörített dumpjai, visszafejtve, itt vagy az almappákban. A CIA-fájlokat telepíteni kell (CIA-fájlok telepítése). A titkosított dumpokhoz a 3DS aes_keys.txt fájlja kell a /data/ps5cemu/azahar/sysdata mappában."
 
 msgid "Look for games now"
-msgstr ""
+msgstr "Játékok keresése most"
 
 msgid "Looking…"
-msgstr ""
+msgstr "Keresés…"
 
 msgid "This side's folder, again."
-msgstr ""
+msgstr "Ennek az oldalnak a mappája, újra."
 
 msgid "Looks through this side's folder again, as it does each time the side opens."
-msgstr ""
+msgstr "Újra átnézi ennek az oldalnak a mappáját, ahogy minden megnyitáskor."
 
 msgid "Wii U disc keys"
-msgstr ""
+msgstr "Wii U-lemezkulcsok"
 
 msgid "keys.txt found"
-msgstr ""
+msgstr "keys.txt megtalálva"
 
 msgid "keys.txt missing"
-msgstr ""
+msgstr "keys.txt hiányzik"
 
 msgid "Only encrypted .wud and .wux need them."
-msgstr ""
+msgstr "Csak a titkosított .wud és .wux fájlokhoz kellenek."
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
-msgstr ""
+msgstr "A titkosított .wud és .wux dumpokhoz kellenek a lemezkulcsaik a /data/ps5cemu/keys.txt fájlban, soronként egy. A visszafejtett dumpoknak, a .wua fájloknak és a mappáknak nem kell."
 
 msgid "Box art from GameTDB"
-msgstr ""
+msgstr "Borítók a GameTDB-ből"
 
 msgid "Covers for the library, downloaded once."
-msgstr ""
+msgstr "Borítók a könyvtárhoz, egyszer letöltve."
 
 msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
-msgstr ""
+msgstr "Amikor egy játék először megjelenik, a borítója letöltődik a GameTDB-ből (art.gametdb.com) a dobozán lévő azonosító alapján. Ki: semmi több nem töltődik le."
 
 msgid "Community graphic packs"
-msgstr ""
+msgstr "Közösségi grafikus csomagok"
 
 msgid "Cross checks GitHub for newer ones."
-msgstr ""
+msgstr "A kereszt újabbakat keres a GitHubon."
 
 msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
-msgstr ""
+msgstr "A Cemu közösségi grafikus csomagjai a GitHub legújabb kiadásából, ha az újabb a telepítetteknél. Az alkalmazással érkező csomagok tartaléknak maradnak."
 
 msgid "PS5CEMU-HAR updates"
-msgstr ""
+msgstr "PS5CEMU-HAR-frissítések"
 
 msgid "Cross checks GitHub for a newer version."
-msgstr ""
+msgstr "A kereszt újabb verziót keres a GitHubon."
 
 msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "A PS5CEMU-HAR minden indításkor megkérdezi a GitHubot a legújabb kiadásról. A kereszt újra rákérdez, vagy telepíti a talált újabb verziót: a kiadás fájljai letöltődnek, ellenőrződnek és a jelenlegiek helyére kerülnek, az alkalmazás pedig újraindul. A játékaid, mentéseid és beállításaid úgy maradnak, ahogy vannak."
 
 msgid "Larger text"
-msgstr ""
+msgstr "Nagyobb szöveg"
 
 msgid "Every size of text a step up."
-msgstr ""
+msgstr "Minden szövegméret egy fokkal nagyobb."
 
 msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
-msgstr ""
+msgstr "Minden szövegstílus egy fokkal nagyobb: a feliratok 20-ról 23-ra, az olvasandó szöveg 26-ról 30-ra."
 
 msgid "High contrast"
-msgstr ""
+msgstr "Nagy kontraszt"
 
 msgid "Opaque panels, full-strength text, a thicker ring."
-msgstr ""
+msgstr "Átlátszatlan panelek, teljes erejű szöveg, vastagabb gyűrű."
 
 msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
-msgstr ""
+msgstr "Üveg helyett átlátszatlan panelek, minden szöveg teljes erővel, vastagabb kijelölőgyűrű, és se szemcse, se képek a menük mögött."
 
 msgid "Reduce motion"
-msgstr ""
+msgstr "Kevesebb mozgás"
 
 msgid "Fades in place of movement."
-msgstr ""
+msgstr "Áttűnések mozgás helyett."
 
 msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
-msgstr ""
+msgstr "A rugózó animációkból rövid áttűnések lesznek; a menük mögött semmi sem úszik, „lélegzik” vagy emelkedik."
 
 msgid "Hold to confirm"
-msgstr ""
+msgstr "Nyomva tartás a megerősítéshez"
 
 msgid "How long Cross is held for what cannot be undone."
-msgstr ""
+msgstr "Meddig kell nyomva tartani a keresztet ahhoz, ami nem vonható vissza."
 
 msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
-msgstr ""
+msgstr "A gyorsítótárak törlését, az Artic Setupot és az irányítás visszaállítását nyomva tartással kell megerősíteni, soha nem dupla nyomással. Ennyi ideig."
 
 msgid "How the picture is scaled to the TV."
-msgstr ""
+msgstr "Hogyan méreteződik a kép a tévére."
 
 msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
-msgstr ""
+msgstr "A Bikubikus éles, a Bikubikus Hermite kicsit lágyabb, a Lineáris még lágyabb; a Legközelebbi szomszéd négyzetesen tartja a pixeleket."
 
 msgid "120 Hz output"
-msgstr ""
+msgstr "120 Hz-es kimenet"
 
 msgid "For displays that take 120 Hz."
-msgstr ""
+msgstr "120 Hz-et kezelő kijelzőkhöz."
 
 msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
-msgstr ""
+msgstr "A 119,88 Hz-es mód, az azt támogató kijelzőkön. A játékok továbbra is a saját sebességükkel futnak, és a frissítésről lemaradó képkocka 17 helyett 8 ms-ot vár a következőre."
 
 msgid "Holds a game to an even frame rate."
-msgstr ""
+msgstr "Egyenletes képkockasebességen tartja a játékot."
 
 msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
-msgstr ""
+msgstr "Minden képkocka legalább két vagy három frissítésig a képernyőn marad, így az a játék, amely nem bírja a kijelző tempóját, egyenletesen fut: 60 vagy 40 fps 120 Hz-es kimenettel, 30 vagy 20 anélkül. A 60 fps 120 Hz-es kimenettel olyan 4K-s játékhoz illik, amely néha 60 alá esik; a 30 fps 60 Hz-en egy 8K-s játékhoz. A játék menüjében is."
 
 msgid "Frame rate, CPU and memory in a corner."
-msgstr ""
+msgstr "Képkockasebesség, CPU és memória a sarokban."
 
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
-msgstr ""
+msgstr "Képkocka/másodperc, CPU- és memóriahasználat a bal felső sarokban, ahogy a Cemu mutatja. A játék menüjében is."
 
 msgid "No stutter while new shaders build."
-msgstr ""
+msgstr "Nincs akadás, amíg új árnyalók készülnek."
 
 msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
-msgstr ""
+msgstr "Bekapcsolva az új árnyaló a játék futása közben készül, így nem akad, de valami egy pillanatra hiányozhat. Kikapcsolva a játék mindegyikre vár: akadás, de semmi sem rajzolódik rosszul."
 
 msgid "Cross: this player's controller, motion and buttons."
-msgstr ""
+msgstr "Kereszt: ennek a játékosnak a kontrollere, mozgása és gombjai."
 
 msgid "No DualSense for this player yet."
-msgstr ""
+msgstr "Ennek a játékosnak még nincs DualSense-e."
 
 msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
-msgstr ""
+msgstr "Amit a játék e játékos kezében lát, valamint a mozgása, rezgése, holtzónái és gombjai. Az 1. játékos az a bejelentkezett felhasználó, aki elindította az alkalmazást; a többi bejelentkezett felhasználó DualSense-e a 2–4. játékos."
 
 msgid "For the Skylanders games."
-msgstr ""
+msgstr "A Skylanders-játékokhoz."
 
 msgid "For Disney Infinity 3.0."
-msgstr ""
+msgstr "A Disney Infinity 3.0-hoz."
 
 msgid "For LEGO Dimensions."
-msgstr ""
+msgstr "A LEGO Dimensionshöz."
 
 msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
-msgstr ""
+msgstr "A Cemu emulált portálja, a játék indulásakor csatlakozik. Játék közben a menü USB-eszközök kategóriája helyez rá figurákat: dumpok itt: {0}. A PS5 USB-portjára dugott valódi portált nem éri el."
 
 msgid "Install from a folder"
-msgstr ""
+msgstr "Telepítés mappából"
 
 msgid "An update, DLC or game (code, content and meta)."
-msgstr ""
+msgstr "Frissítés, DLC vagy játék (code, content és meta)."
 
 msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "A Wii U tárhelyére (mlc01) telepít, ahogy a Cemu Install game title, update or DLC funkciója. A játékok mappájában lévő frissítések és DLC-k úgy is működnek, ahogy vannak."
 
 msgid "Higher is sharper and asks more of the GPU."
-msgstr ""
+msgstr "A nagyobb élesebb, és jobban terheli a GPU-t."
 
 msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
-msgstr ""
+msgstr "Mekkora méretben készülnek a 3DS 3D-s jelenetei, mielőtt a tévére méreteződnek. A nagyobb élesebb és jobban terheli a GPU-t, és amikor egy játék visszaolvas egy képet, a várakozás is vele nő."
 
 msgid "Smooths textures as they are scaled up."
-msgstr ""
+msgstr "Kisimítja a textúrákat nagyításkor."
 
 msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
-msgstr ""
+msgstr "Kisimítja a játék textúráit nagyításkor; a Nincs úgy hagyja őket, ahogy a 3DS rajzolja. A szűrő minden textúrát újrarajzol a belső felbontáson: nagy felbontáson ez a legköltségesebb beállítás. Ha egy játék akad, először próbáld a Nincs lehetőséget."
 
 msgid "Custom textures"
-msgstr ""
+msgstr "Egyéni textúrák"
 
 msgid "Texture packs from azahar/load/textures."
-msgstr ""
+msgstr "Textúracsomagok az azahar/load/textures mappából."
 
 msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
-msgstr ""
+msgstr "Textúracsomagok a /data/ps5cemu/azahar/load/textures/<címazonosító> mappában, ahogy az asztali Azahar betölti őket."
 
 msgid "Screen layout"
-msgstr ""
+msgstr "Képernyő-elrendezés"
 
 msgid "How the two screens share the TV."
-msgstr ""
+msgstr "Hogyan osztozik a két képernyő a tévén."
 
 msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
-msgstr ""
+msgstr "Egymás alatt, csak a felső, a felső nagyban az alsóval mellette, vagy a kettő egymás mellett. Játék közben az érintőpanel-kattintás + R1 a következőre vált."
 
 msgid "Artwork around the screens."
-msgstr ""
+msgstr "Grafika a képernyők körül."
 
 msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
-msgstr ""
+msgstr "Grafika a 3DS képernyői körül, soha nem rajtuk. Minden elrendezést követ, és a játék menüje is módosítja."
 
 msgid "The DualSense's motion as the 3DS's."
-msgstr ""
+msgstr "A DualSense mozgása a 3DS-é helyett."
 
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
-msgstr ""
+msgstr "A DualSense giroszkópja és gyorsulásmérője magáé a 3DS-é helyett, azokhoz a játékokhoz, ahol a konzol döntésével céloz vagy kormányoz az ember."
 
 msgid "How far a stick moves before it counts."
-msgstr ""
+msgstr "Mennyit mozdul egy kar, mielőtt számít."
 
 msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Mennyit mozdul egy kar, mielőtt a játék észreveszi – a Circle Padhez és a C-karhoz. Növeld, ha valami elcsúszik, miután elengedted a kart; csökkentsd a finomabb irányításért."
 
 msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
-msgstr ""
+msgstr "Melyik DualSense-gomb a 3DS melyik gombja. Alapértelmezés szerint az A a körön, a B a kereszten van, ahol a 3DS-en; a Circle Pad a bal kar, a C-kar a jobb, az érintőpanel pedig az érintőképernyő."
 
 msgid "Default buttons, motion and deadzone."
-msgstr ""
+msgstr "Alapértelmezett gombok, mozgás és holtzóna."
 
 msgid "The default buttons, motion and deadzone."
-msgstr ""
+msgstr "Az alapértelmezett gombok, mozgás és holtzóna."
 
 msgid "Region"
-msgstr ""
+msgstr "Régió"
 
 msgid "The emulated 3DS's region."
-msgstr ""
+msgstr "Az emulált 3DS régiója."
 
 msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
-msgstr ""
+msgstr "Az Automatikus minden játék saját régióját veszi. Egy másik régióra készült játék nem indulhat el, vagy más nyelveket mutathat. A következő játéktól érvényes."
 
 msgid "The emulated 3DS's language."
-msgstr ""
+msgstr "Az emulált 3DS nyelve."
 
 msgid "The language games that follow the console's show their text in. Applies to the next game."
-msgstr ""
+msgstr "Az a nyelv, amelyen a konzolt követő játékok a szövegüket mutatják. A következő játéktól érvényes."
 
 msgid "Home Menu"
-msgstr ""
+msgstr "HOME menü"
 
 msgid "Start"
-msgstr ""
+msgstr "Indítás"
 
 msgid "Run Artic Setup first"
-msgstr ""
+msgstr "Előbb futtasd az Artic Setupot"
 
 msgid "The 3DS Home Menu, from your console's files."
-msgstr ""
+msgstr "A 3DS HOME menüje, a konzolod fájljaiból."
 
 msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
-msgstr ""
+msgstr "Elindítja a 3DS HOME menüjét, miután az Artic Base beállítása átmásolta a saját konzolod rendszerfájljait (Artic Base)."
 
 msgid "Install a CIA file"
-msgstr ""
+msgstr "CIA-fájl telepítése"
 
 msgid "A game, an update or DLC."
-msgstr ""
+msgstr "Játék, frissítés vagy DLC."
 
 msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
-msgstr ""
+msgstr "Telepít egy CIA-t a 3DS tárhelyére, ahogy az Azahar Install CIA funkciója: a frissítés vagy DLC a játékához kerül, a játék pedig a könyvtárba. A kör futás közben megszakítja."
 
 msgid "Play a game from your 3DS, and set up from it."
-msgstr ""
+msgstr "Játék a 3DS-edről, és beállítás róla."
 
 msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
-msgstr ""
+msgstr "Az Artic Base egy játékot futtat a hálózatodon lévő 3DS-ről, a mentései a 3DS-en maradnak; az Artic Setup egy 3DS rendszerfájljait másolja az Azaharba, a HOME menühöz és az azokat igénylő játékokhoz."
 
 msgid "Open the Setup check"
-msgstr ""
+msgstr "Beüzemelési ellenőrzés megnyitása"
 
 msgid "Storage, recompilers, games, keys and box art, checked."
-msgstr ""
+msgstr "Tárhely, újrafordítók, játékok, kulcsok és borítók, ellenőrizve."
 
 msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
-msgstr ""
+msgstr "Minden ellenőrzésnek van állapota, jelentése és teendője. Az első indításkor is megjelenik, és mindig, ha az alkalmazás indulásakor egy ellenőrzés nem sikerül."
 
 msgid "Copy logs to USB"
-msgstr ""
+msgstr "Naplók másolása USB-re"
 
 msgid "The logs a report needs, onto a USB drive."
-msgstr ""
+msgstr "A hibajelentéshez szükséges naplók, USB-meghajtóra."
 
 msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
-msgstr ""
+msgstr "Átmásolja az utolsó öt munkamenet naplóit és a beállításokat egy dátummal ellátott mappába egy USB-meghajtón, hogy egy hibajelentéshez csatolhasd."
 
 msgid "Clear Wii U shader caches"
-msgstr ""
+msgstr "Wii U-árnyaló-gyorsítótárak törlése"
 
 msgid "For a game that crashes on a bad cache."
-msgstr ""
+msgstr "Hibás gyorsítótár miatt összeomló játékhoz."
 
 msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Törli a Cemu árnyaló-gyorsítótárait. A játékok futás közben újraépítik őket: az első percekben akadás lesz."
 
 msgid "Clear 3DS shader caches"
-msgstr ""
+msgstr "3DS-árnyaló-gyorsítótárak törlése"
 
 msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Törli az Azahar árnyaló-gyorsítótárait. A játékok futás közben újraépítik őket: az első percekben akadás lesz."
 
 msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
-msgstr ""
+msgstr "A figuradumpok helye /data/ps5cemu/figures: skylanders, infinity és dimensions. Kapcsolj be itt egy portált, indítsd el a játékot, majd helyezz rá figurákat a játék menüjéből (érintőpanel-kattintás + OPTIONS > USB-eszközök)."
 
 msgid ""
 "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
@@ -2836,495 +2838,503 @@ msgid ""
 "3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
 "\n"
 msgstr ""
+"Cemu, a Wii U-emulátor, a Cemu csapatától és közreműködőitől; RADV a PS5-ön Mihawk-99-tól és mpereiraesaától; a közösségi grafikus csomagok szerzői.\n"
+"Azahar, a 3DS-emulátor, az Azahar csapatától és előtte a Citra közreműködőitől; a PS5-ös portja Mihawk-99-tól, és a dynarmic.\n"
+"Borítók és játékadatok: GameTDB. A betűtípus: Lexend.\n"
+"Nem hivatalos port, nem áll kapcsolatban a Cemu vagy az Azahar csapatával, a Nintendóval vagy a Sonyval.\n"
+"\n"
+"Wii U-játékok: /data/ps5cemu/games, tárhely és mentések: /data/ps5cemu/mlc01, kulcsok: /data/ps5cemu/keys.txt\n"
+"3DS-játékok: /data/ps5cemu/azahar/games, tárhely: /data/ps5cemu/azahar/sdmc\n"
+"\n"
 
 msgid "Version {0}"
-msgstr ""
+msgstr "Verzió: {0}"
 
 msgid "The PS5's language: {0}"
-msgstr ""
+msgstr "A PS5 nyelve: {0}"
 
 msgid "Language: {0}"
-msgstr ""
+msgstr "Nyelv: {0}"
 
 msgctxt "tab"
 msgid "Settings"
-msgstr ""
+msgstr "Beállítások"
 
 msgid "Starting the 3DS"
-msgstr ""
+msgstr "A 3DS indul"
 
 msgid "General"
-msgstr ""
+msgstr "Általános"
 
 msgid "Help"
-msgstr ""
+msgstr "Súgó"
 
 msgid "Preview"
-msgstr ""
+msgstr "Előnézet"
 
 msgid "{0}, with no border."
-msgstr ""
+msgstr "{0}, keret nélkül."
 
 msgid "{0}, on the {1} border."
-msgstr ""
+msgstr "{0}, ezzel a kerettel: {1}."
 
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
-msgstr ""
+msgstr "Az alsó képernyő az érintőpanel: kattintás az érintés, nyomva tartott kattintás a húzás."
 
 msgid "About this setting"
-msgstr ""
+msgstr "Erről a beállításról"
 
 msgid "{0} GB free"
-msgstr ""
+msgstr "{0} GB szabad"
 
 msgid "Storage"
-msgstr ""
+msgstr "Tárhely"
 
 msgid "the HEN setup guide"
-msgstr ""
+msgstr "a HEN beállítási útmutatója"
 
 msgid "/data is reachable"
-msgstr ""
+msgstr "A /data elérhető"
 
 msgid "Where everything is kept"
-msgstr ""
+msgstr "Ahol minden tárolódik"
 
 msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
-msgstr ""
+msgstr "A beállítások, mentések, gyorsítótárak és naplók itt vannak: {0}, amelyet a HEN-ed nyit meg a PS5CEMU-HAR számára: az alkalmazás-jailbreakje, vagy az elfldr az alkalmazással érkező segédprogrammal."
 
 msgid "/data is out of reach: nothing can be kept"
-msgstr ""
+msgstr "A /data nem érhető el: semmit sem lehet megőrizni"
 
 msgid "Let PS5CEMU-HAR out of its sandbox"
-msgstr ""
+msgstr "Engedd ki a PS5CEMU-HAR-t a homokozójából"
 
 msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
-msgstr ""
+msgstr "Add hozzá a PPSA99360-at a HEN-ed alkalmazás-jailbreak listájához (etaHEN: az alkalmazás-jailbreak lista; OnionHEN: a config.ini exact_title_ids sorának végére, utána vessző nélkül), vagy indítsd el az elfldr-t a 9021-es porton. Aztán indítsd újra a PS5CEMU-HAR-t."
 
 msgid "Recompilers"
-msgstr ""
+msgstr "Újrafordítók"
 
 msgid "What runs the games' code"
-msgstr ""
+msgstr "Mi futtatja a játékok kódját"
 
 msgid "JIT memory from your HEN: games run at full speed"
-msgstr ""
+msgstr "JIT-memória a HEN-edtől: a játékok teljes sebességgel futnak"
 
 msgid "Executable memory: games run at full speed, no HEN grant needed"
-msgstr ""
+msgstr "Végrehajtható memória: a játékok teljes sebességgel futnak, HEN-engedély nélkül"
 
 msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
-msgstr ""
+msgstr "A Cemu és az Azahar újrafordítói futás közben a PS5 kódjára alakítják a játékok kódját. Olyan memória kell nekik, amelybe kódot írhatnak és onnan futtathatják: a HEN-ed JIT-memóriája, vagy a PS5CEMU-HAR által létrehozott végrehajtható memória."
 
 msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
-msgstr ""
+msgstr "Nincs JIT- és végrehajtható memória: a Wii U-játékok a sokkal lassabb értelmezőn futnak"
 
 msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
-msgstr ""
+msgstr "Sem a HEN-ed JIT-memóriáját, sem végrehajtható memóriát nem sikerült létrehozni, így a Wii U-játékok a Cemu értelmezőjére váltanak. Add hozzá a PPSA99360-at a HEN-ed alkalmazás-jailbreak listájához, majd indítsd újra a PS5CEMU-HAR-t; a Beállítások > Diagnosztika mutatja, mit kapott."
 
 msgid "{0} game in {1}"
 msgid_plural "{0} games in {1}"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} játék itt: {1}"
+msgstr[1] "{0} játék itt: {1}"
 
 msgid "None in {0} yet"
-msgstr ""
+msgstr "Itt még nincs játék: {0}"
 
 msgid "{0} cannot be read"
-msgstr ""
+msgstr "Nem olvasható: {0}"
 
 msgid "Where your 3DS games go"
-msgstr ""
+msgstr "Hova kerülnek a 3DS-játékaid"
 
 msgid "Where your Wii U games go"
-msgstr ""
+msgstr "Hova kerülnek a Wii U-játékaid"
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
-msgstr ""
+msgstr "Tedd őket ide: {0}, vagy válassz bármelyik mappát, amelyet a PS5 olvasni tud, például egy USB-meghajtón. Az almappákban is keres. A CIA-fájlokat telepíteni kell, a Beállítások > CIA-fájlok telepítése menüben."
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
-msgstr ""
+msgstr "Tedd őket ide: {0}, vagy válassz bármelyik mappát, amelyet a PS5 olvasni tud, például egy USB-meghajtón. A frissítések és DLC-k a Beállítások > Frissítések és DLC telepítése menüben kerülnek fel, vagy egy .wua tartalmazza őket."
 
 msgid "code · content · meta"
-msgstr ""
+msgstr "code · content · meta"
 
 msgid "the game files page"
-msgstr ""
+msgstr "a játékfájlok oldala"
 
 msgid "keys.txt is missing: only encrypted .wud and .wux need it"
-msgstr ""
+msgstr "keys.txt hiányzik: csak a titkosított .wud és .wux fájlokhoz kell"
 
 msgid "How to"
-msgstr ""
+msgstr "Útmutató"
 
 msgid "Keys for encrypted discs"
-msgstr ""
+msgstr "Kulcsok titkosított lemezekhez"
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
-msgstr ""
+msgstr "A titkosított .wud és .wux dumpokhoz kellenek a lemezkulcsaik, soronként egy, ebben a fájlban: {0}/keys.txt. A visszafejtett dumpoknak, a .wua fájloknak és a code, content és meta mappáknak nem kell."
 
 msgid "3DS keys"
-msgstr ""
+msgstr "3DS-kulcsok"
 
 msgid "aes_keys.txt found"
-msgstr ""
+msgstr "aes_keys.txt megtalálva"
 
 msgid "aes_keys.txt is missing: only encrypted dumps need it"
-msgstr ""
+msgstr "aes_keys.txt hiányzik: csak a titkosított dumpokhoz kell"
 
 msgid "Keys for encrypted 3DS dumps"
-msgstr ""
+msgstr "Kulcsok titkosított 3DS-dumpokhoz"
 
 msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
-msgstr ""
+msgstr "A titkosított dumpokhoz a saját konzolod aes_keys.txt fájlja kell ebben a mappában: {0}/sysdata. A visszafejtett dumpoknak, a homebrew-nak és a telepített CIA-knak nem kell. A PS5CEMU-HAR nem tartalmaz kulcsokat."
 
 msgid "3DS system files"
-msgstr ""
+msgstr "3DS-rendszerfájlok"
 
 msgid "Artic Setup has run: the Home Menu can start"
-msgstr ""
+msgstr "Az Artic Setup lefutott: a HOME menü elindulhat"
 
 msgid "Artic Setup copies them from your 3DS, for the Home Menu"
-msgstr ""
+msgstr "Az Artic Setup átmásolja őket a 3DS-edről, a HOME menühöz"
 
 msgid "Your 3DS's own files"
-msgstr ""
+msgstr "A 3DS-ed saját fájljai"
 
 msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
-msgstr ""
+msgstr "A 3DS HOME menüje és az a néhány játék, amelyeknek a konzol rendszerfájljai kellenek, akkor fut, ha az Artic Setup átmásolta őket a saját 3DS-edről a hálózaton: indítsd el az Artic Setup Toolt a 3DS-en, aztán itt az Artic Base-t."
 
 msgid "the 3DS page"
-msgstr ""
+msgstr "a 3DS oldal"
 
 msgid "Box art"
-msgstr ""
+msgstr "Borítók"
 
 msgid "what PS5CEMU-HAR fetches online"
-msgstr ""
+msgstr "mit tölt le a PS5CEMU-HAR az internetről"
 
 msgid "Covers from GameTDB"
-msgstr ""
+msgstr "Borítók a GameTDB-ből"
 
 msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
-msgstr ""
+msgstr "Amikor egy játék először megjelenik, a borítója a GameTDB-ből érkezik (art.gametdb.com), a dobozán lévő azonosító alapján. Kapcsolat nélkül a játékok ikonjai látszanak, és a következő indítás újra próbálkozik."
 
 msgid "Off: the games' icons are shown instead"
-msgstr ""
+msgstr "Ki: helyettük a játékok ikonjai látszanak"
 
 msgid "Turn on"
-msgstr ""
+msgstr "Bekapcsolás"
 
 msgid "GameTDB did not answer: the games' icons are shown instead"
-msgstr ""
+msgstr "A GameTDB nem válaszolt: helyettük a játékok ikonjai látszanak"
 
 msgid "GameTDB is reachable · {0} cover"
 msgid_plural "GameTDB is reachable · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "A GameTDB elérhető · {0} borító"
+msgstr[1] "A GameTDB elérhető · {0} borító"
 
 msgid "On · {0} cover"
 msgid_plural "On · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Be · {0} borító"
+msgstr[1] "Be · {0} borító"
 
 msgid "On: covers come as your games show up"
-msgstr ""
+msgstr "Be: a borítók a játékaid megjelenésével együtt érkeznek"
 
 msgid "Checked again"
-msgstr ""
+msgstr "Újra ellenőrizve"
 
 msgid "Welcome to PS5CEMU-HAR"
-msgstr ""
+msgstr "Üdv a PS5CEMU-HAR-ban"
 
 msgid "Let’s check your setup"
-msgstr ""
+msgstr "Nézzük át a beüzemelést"
 
 msgid "The {0} check is ready."
 msgid_plural "All {0} checks are ready."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} ellenőrzés rendben van."
+msgstr[1] "Minden ellenőrzés rendben van ({0})."
 
 msgid "The {0} check needs a look."
 msgid_plural "All {0} checks need a look."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} ellenőrzés figyelmet igényel."
+msgstr[1] "Minden ellenőrzés figyelmet igényel ({0})."
 
 msgid "{0} of {1} is ready."
 msgid_plural "{0} of {1} are ready."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Rendben: {0} / {1}."
+msgstr[1] "Rendben: {0} / {1}."
 
 msgid "{0} needs a look."
 msgid_plural "{0} need a look."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Figyelmet igényel: {0}."
+msgstr[1] "Figyelmet igényel: {0}."
 
 msgid "{0} · as the PS5"
-msgstr ""
+msgstr "{0} · mint a PS5"
 
 msgid "· optional"
-msgstr ""
+msgstr "· nem kötelező"
 
 msgid "The menus' language"
-msgstr ""
+msgstr "A menük nyelve"
 
 msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
-msgstr ""
+msgstr "A PS5CEMU-HAR azon a nyelven beszél, amelyre a PS5-öd be van állítva. A kereszt mást választ; a Beállítások > Általános > Nyelv bármikor módosítja."
 
 msgid "The guide, on your phone"
-msgstr ""
+msgstr "Az útmutató a telefonodon"
 
 msgid "Scan it for {0}: {1}"
-msgstr ""
+msgstr "Olvasd be ehhez: {0}: {1}"
 
 msgid "Not in this build"
-msgstr ""
+msgstr "Nincs ebben a buildben"
 
 msgid "Open to look for games"
-msgstr ""
+msgstr "Nyisd meg a játékok kereséséhez"
 
 msgid "Saved your place in the library"
-msgstr ""
+msgstr "A helyed a könyvtárban mentve"
 
 msgid "The game could not start"
-msgstr ""
+msgstr "A játék nem tudott elindulni"
 
 msgid "{0} min played"
 msgid_plural "{0} min played"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} perc játék"
+msgstr[1] "{0} perc játék"
 
 msgid "{0} h played"
 msgid_plural "{0} h played"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} óra játék"
+msgstr[1] "{0} óra játék"
 
 msgid "today"
-msgstr ""
+msgstr "ma"
 
 msgid "yesterday"
-msgstr ""
+msgstr "tegnap"
 
 msgid "{0} day ago"
 msgid_plural "{0} days ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} napja"
+msgstr[1] "{0} napja"
 
 msgid "{0} week ago"
 msgid_plural "{0} weeks ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} hete"
+msgstr[1] "{0} hete"
 
 msgid "{0} month ago"
 msgid_plural "{0} months ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} hónapja"
+msgstr[1] "{0} hónapja"
 
 msgid "Cemu is still starting"
-msgstr ""
+msgstr "A Cemu még indul"
 
 msgid "Starting Azahar"
-msgstr ""
+msgstr "Az Azahar indul"
 
 msgctxt "tab"
 msgid "Home"
-msgstr ""
+msgstr "Kezdőlap"
 
 msgid "Done"
-msgstr ""
+msgstr "Kész"
 
 msgid "Close"
-msgstr ""
+msgstr "Bezárás"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Mégse"
 
 msgid "Tabs"
-msgstr ""
+msgstr "Lapok"
 
 msgid "Switch"
-msgstr ""
+msgstr "Váltás"
 
 msgid "Open"
-msgstr ""
+msgstr "Megnyitás"
 
 msgid "Change the language"
-msgstr ""
+msgstr "Nyelv módosítása"
 
 msgid "Check again"
-msgstr ""
+msgstr "Újraellenőrzés"
 
 msgid "Continue"
-msgstr ""
+msgstr "Tovább"
 
 msgid "Continue to Home"
-msgstr ""
+msgstr "Tovább a kezdőlapra"
 
 msgid "Options"
-msgstr ""
+msgstr "Opciók"
 
 msgid "Move"
-msgstr ""
+msgstr "Mozgás"
 
 msgid "Filters"
-msgstr ""
+msgstr "Szűrők"
 
 msgid "Jump by letter"
-msgstr ""
+msgstr "Ugrás betű szerint"
 
 msgid "Back to the buttons"
-msgstr ""
+msgstr "Vissza a gombokhoz"
 
 msgid "Scroll"
-msgstr ""
+msgstr "Görgetés"
 
 msgid "Pages"
-msgstr ""
+msgstr "Oldalak"
 
 msgid "More about it"
-msgstr ""
+msgstr "Bővebben"
 
 msgid "Back to the packs"
-msgstr ""
+msgstr "Vissza a csomagokhoz"
 
 msgid "On / off"
-msgstr ""
+msgstr "Be / ki"
 
 msgid "Assign"
-msgstr ""
+msgstr "Hozzárendelés"
 
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 msgid "Use this folder"
-msgstr ""
+msgstr "Ez a mappa"
 
 msgid "Number"
-msgstr ""
+msgstr "Szám"
 
 msgid "Keep"
-msgstr ""
+msgstr "Mentés"
 
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 msgid "Connect"
-msgstr ""
+msgstr "Kapcsolódás"
 
 msgid "Hold to set up"
-msgstr ""
+msgstr "Tartsd a beállításhoz"
 
 msgid "Not a favourite"
-msgstr ""
+msgstr "Eltávolítás a kedvencek közül"
 
 msgid "Show where it is"
-msgstr ""
+msgstr "Hol van"
 
 msgid "Added to Favourites"
-msgstr ""
+msgstr "Hozzáadva a kedvencekhez"
 
 msgid "Taken out of Favourites"
-msgstr ""
+msgstr "Eltávolítva a kedvencek közül"
 
 msgid "The PS5's storage"
-msgstr ""
+msgstr "A PS5 tárhelye"
 
 msgid "Title ID {0}"
-msgstr ""
+msgstr "Címazonosító: {0}"
 
 msgid "PS5CEMU-HAR {0} is out"
-msgstr ""
+msgstr "Megjelent a PS5CEMU-HAR {0}"
 
 msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "Ez a verzió: {0}. Letöltöd és telepíted most? A játékaid, mentéseid és beállításaid úgy maradnak, ahogy vannak."
 
 msgid "Update now"
-msgstr ""
+msgstr "Frissítés most"
 
 msgid "Later"
-msgstr ""
+msgstr "Később"
 
 msgid "Updating to {0}"
-msgstr ""
+msgstr "Frissítés erre: {0}"
 
 msgid "Downloading: {0} of {1} MB"
-msgstr ""
+msgstr "Letöltés: {0} / {1} MB"
 
 msgid "Checking the download"
-msgstr ""
+msgstr "A letöltés ellenőrzése"
 
 msgid "Installing"
-msgstr ""
+msgstr "Telepítés"
 
 msgid "{0} is installed"
-msgstr ""
+msgstr "Telepítve: {0}"
 
 msgid "PS5CEMU-HAR starts again to finish the update."
-msgstr ""
+msgstr "A PS5CEMU-HAR újraindul a frissítés befejezéséhez."
 
 msgid "Restart now"
-msgstr ""
+msgstr "Újraindítás most"
 
 msgid "The update did not finish"
-msgstr ""
+msgstr "A frissítés nem fejeződött be"
 
 msgid "PS5CEMU-HAR is still {0}."
-msgstr ""
+msgstr "A PS5CEMU-HAR továbbra is {0}."
 
 msgid "Checking for updates"
-msgstr ""
+msgstr "Frissítések keresése"
 
 msgid "PS5CEMU-HAR update"
-msgstr ""
+msgstr "PS5CEMU-HAR-frissítés"
 
 msgid "Select"
-msgstr ""
+msgstr "Kiválasztás"
 
 msgid "Restart"
-msgstr ""
+msgstr "Újraindítás"
 
 msgid "Firmware {0}"
-msgstr ""
+msgstr "Firmware: {0}"
 
 msgid "Logs: {0}, {1}/log.txt"
-msgstr ""
+msgstr "Naplók: {0}, {1}/log.txt"
 
 msgid "Boot log not written (/data is unreachable)"
-msgstr ""
+msgstr "Indítási napló nincs megírva (a /data nem érhető el)"
 
 msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
-msgstr ""
+msgstr "A PS5CEMU-HAR nem éri el a /data mappát. Tölts be egy HEN-t, amelynek alkalmazás-jailbreak listáján szerepel a PPSA99360, vagy az elfldr-t, majd indítsd újra a PS5CEMU-HAR-t."
 
 msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
-msgstr ""
+msgstr "Ez a munkamenet: Azahar (3DS); a Cemu emulált Wii U-ja nincs elindítva"
 
 msgid "This session: Cemu (Wii U); Azahar's core is not started"
-msgstr ""
+msgstr "Ez a munkamenet: Cemu (Wii U); az Azahar magja nincs elindítva"
 
 msgid "Cemu did not start: {0}"
-msgstr ""
+msgstr "A Cemu nem indult el: {0}"
 
 msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
-msgstr ""
+msgstr "Nincs JIT-memória: a Wii U-játékok az értelmezőn futnak, sokkal lassabban. Szerepel a PPSA99360 a HEN-ed alkalmazás-jailbreak listáján?"
 
 msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
-msgstr ""
+msgstr "Az indító nem tudott elindulni. Az okát a /data/ps5cemu/logs mappában lévő indítási napló írja le."
 
 msgid "{0} fps"
-msgstr ""
+msgstr "{0} fps"
 
 msgctxt "compatibility note"
 msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
-msgstr ""
+msgstr "Kb. 60 fps-sel fut 1440p-ben. A 2.0.0 C-ig lefagyott és bezárult, amikor a Magnesis vagy más rúnák, illetve a Sheikah-távcső (R3) kiemeltek tárgyakat; a 2.0.0 C után javítva (egy újabb Cemuban)"
 
 msgctxt "compatibility note"
 msgid "About half the textures are missing during races"
-msgstr ""
+msgstr "A versenyek alatt a textúrák kb. fele hiányzik"
 
 msgctxt "compatibility note"
 msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
-msgstr ""
+msgstr "Kikapcsolt 60 FPS-es grafikus csomaggal játszható; bekapcsolva grafikai hibák jelennek meg, és összeomlik, amint betöltődik a játékmenet. A 2.0.0 C-ig ott így is, úgy is összeomlott (a Cemunak elfogytak a Vulkan-leírói)"
 
 msgctxt "compatibility note"
 msgid "Save states work from the in-game menu"
-msgstr ""
+msgstr "A mentett állapotok a játék menüjéből működnek"
