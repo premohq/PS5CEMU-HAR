@@ -2284,556 +2284,558 @@ msgid "Linear"
 msgstr "Liniar"
 
 msgid "Setup theme"
-msgstr ""
+msgstr "Tema de configurare"
 
 msgid "Language"
-msgstr ""
+msgstr "Limbă"
 
 msgid "The language of the menus: the PS5's own, unless you choose another."
-msgstr ""
+msgstr "Limba meniurilor: cea a PS5, dacă nu alegi alta."
 
 msgid "Display"
-msgstr ""
+msgstr "Afișare"
 
 msgid "How the launcher looks and where it opens."
-msgstr ""
+msgstr "Cum arată lansatorul și unde se deschide."
 
 msgid "Sound"
-msgstr ""
+msgstr "Sunet"
 
 msgid "The menus' music and sounds, and the games' volume."
-msgstr ""
+msgstr "Muzica și sunetele meniurilor și volumul jocurilor."
 
 msgid "The DualSense, for every player."
-msgstr ""
+msgstr "DualSense, pentru fiecare jucător."
 
 msgid "Games and folders"
-msgstr ""
+msgstr "Jocuri și foldere"
 
 msgid "Where each side's games are."
-msgstr ""
+msgstr "Unde sunt jocurile fiecărei părți."
 
 msgid "Online and updates"
-msgstr ""
+msgstr "Online și actualizări"
 
 msgid "Box art, graphic packs and PS5CEMU-HAR itself."
-msgstr ""
+msgstr "Coperte, pachete grafice și PS5CEMU-HAR însuși."
 
 msgid "Accessibility"
-msgstr ""
+msgstr "Accesibilitate"
 
 msgid "Larger text, more contrast, less motion."
-msgstr ""
+msgstr "Text mai mare, mai mult contrast, mai puțină mișcare."
 
 msgid "For every Wii U game."
-msgstr ""
+msgstr "Pentru fiecare joc Wii U."
 
 msgid "What each player's DualSense is to the Wii U."
-msgstr ""
+msgstr "Ce este DualSense-ul fiecărui jucător pentru Wii U."
 
 msgid "Cemu's emulated portals."
-msgstr ""
+msgstr "Portalurile emulate ale Cemu."
 
 msgid "Into the Wii U's storage."
-msgstr ""
+msgstr "În stocarea Wii U."
 
 msgid "For every 3DS game."
-msgstr ""
+msgstr "Pentru fiecare joc 3DS."
 
 msgid "Screens and borders"
-msgstr ""
+msgstr "Ecrane și chenare"
 
 msgid "For every 3DS game; in a game, its menu changes them at once."
-msgstr ""
+msgstr "Pentru fiecare joc 3DS; într-un joc, meniul lui le schimbă imediat."
 
 msgid "The DualSense as the 3DS."
-msgstr ""
+msgstr "DualSense ca 3DS."
 
 msgid "System and Home Menu"
-msgstr ""
+msgstr "Sistem și meniul HOME"
 
 msgid "The emulated 3DS's region and language."
-msgstr ""
+msgstr "Regiunea și limba 3DS-ului emulat."
 
 msgid "Into the 3DS's storage."
-msgstr ""
+msgstr "În stocarea 3DS-ului."
 
 msgid "Play from your 3DS, over your network."
-msgstr ""
+msgstr "Joacă de pe 3DS-ul tău, prin rețeaua ta."
 
 msgid "Why something does not work, before anything else."
-msgstr ""
+msgstr "De ce ceva nu merge, înainte de orice."
 
 msgid "Logs, caches and what this session is."
-msgstr ""
+msgstr "Jurnale, cache-uri și ce este această sesiune."
 
 msgctxt "app"
 msgid "About"
-msgstr ""
+msgstr "Despre"
 
 msgid "Who made what."
-msgstr ""
+msgstr "Cine ce a făcut."
 
 msgid "Checking GitHub…"
-msgstr ""
+msgstr "Se verifică GitHub…"
 
 msgid "Downloading: {0}"
-msgstr ""
+msgstr "Se descarcă: {0}"
 
 msgid "Downloading: {0} MB"
-msgstr ""
+msgstr "Se descarcă: {0} MB"
 
 msgid "Installing…"
-msgstr ""
+msgstr "Se instalează…"
 
 msgid "Up to date: {0}"
-msgstr ""
+msgstr "La zi: {0}"
 
 msgid "Installed: {0}"
-msgstr ""
+msgstr "Instalată: {0}"
 
 msgid "Cross to download"
-msgstr ""
+msgstr "Crucea pentru descărcare"
 
 msgid "{0}: Cross to install"
-msgstr ""
+msgstr "{0}: Crucea pentru instalare"
 
 msgid "Downloading…"
-msgstr ""
+msgstr "Se descarcă…"
 
 msgid "Checking the download…"
-msgstr ""
+msgstr "Se verifică descărcarea…"
 
 msgid "Installed: Cross to restart"
-msgstr ""
+msgstr "Instalată: Crucea pentru repornire"
 
 msgid "Cross to check"
-msgstr ""
+msgstr "Crucea pentru verificare"
 
 msgid "Cross goes to the 3DS side for it."
-msgstr ""
+msgstr "Crucea trece pentru asta pe partea 3DS."
 
 msgid "Cross goes to the Wii U side for it."
-msgstr ""
+msgstr "Crucea trece pentru asta pe partea Wii U."
 
 msgid "On the 3DS side"
-msgstr ""
+msgstr "Pe partea 3DS"
 
 msgid "On the Wii U side"
-msgstr ""
+msgstr "Pe partea Wii U"
 
 msgid "Cemu did not start, so this cannot be changed."
-msgstr ""
+msgstr "Cemu nu a pornit, așa că asta nu poate fi schimbat."
 
 msgid "The menus' language. Game names and descriptions stay as they are."
-msgstr ""
+msgstr "Limba meniurilor. Numele și descrierile jocurilor rămân cum sunt."
 
 msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
-msgstr ""
+msgstr "PS5CEMU-HAR vorbește limba PS5 dacă nu alegi alta aici; verificarea configurării de la prima pornire oferă aceeași alegere. Numele jocurilor, descrierile lor și pachetele grafice vin de la GameTDB, din jocuri și de la autorii pachetelor și rămân așa cum le-au scris."
 
 msgid "Start on"
-msgstr ""
+msgstr "Pornește pe"
 
 msgid "The side last used"
-msgstr ""
+msgstr "Ultima parte folosită"
 
 msgid "Ask each time"
-msgstr ""
+msgstr "Întreabă de fiecare dată"
 
 msgid "Where PS5CEMU-HAR opens."
-msgstr ""
+msgstr "Unde se deschide PS5CEMU-HAR."
 
 msgid ""
 "The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
 "Ask each time: it shows the two sides first, as the start screen did."
 msgstr ""
+"Ultima parte folosită: PS5CEMU-HAR se deschide pe partea pe care erai, iar după un joc, pe acel joc.\n"
+"Întreabă de fiecare dată: arată întâi cele două părți, cum făcea ecranul de start."
 
 msgid "Game pictures behind menus"
-msgstr ""
+msgstr "Imagini de joc în spatele meniurilor"
 
 msgid "The focused game's cover, softened, behind the screens."
-msgstr ""
+msgstr "Coperta jocului selectat, estompată, în spatele ecranelor."
 
 msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
-msgstr ""
+msgstr "Imaginea jocului selectat umple ecranul în spatele meniurilor, estompată și întunecată, așa că mutarea selecției schimbă tot ecranul. Dezactivat: doar culorile jocului."
 
 msgid "Launcher music"
-msgstr ""
+msgstr "Muzica lansatorului"
 
 msgid "The music under the menus."
-msgstr ""
+msgstr "Muzica de sub meniuri."
 
 msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
-msgstr ""
+msgstr "Muzica proprie a lansatorului, în spiritul ecranului de configurare al unei console, sau niciuna."
 
 msgid "Music volume"
-msgstr ""
+msgstr "Volumul muzicii"
 
 msgid "How loud the menus' music is."
-msgstr ""
+msgstr "Cât de tare e muzica meniurilor."
 
 msgid "How loud the launcher's music is. Left and Right change it by 10%."
-msgstr ""
+msgstr "Cât de tare e muzica lansatorului. Stânga și dreapta o schimbă cu 10%."
 
 msgid "Menu sounds"
-msgstr ""
+msgstr "Sunetele meniului"
 
 msgid "The sounds of moving and choosing."
-msgstr ""
+msgstr "Sunetele mișcării și alegerii."
 
 msgid "The launcher's sounds as you move, choose and go back."
-msgstr ""
+msgstr "Sunetele lansatorului când te miști, alegi și te întorci."
 
 msgid "Wii U games' volume"
-msgstr ""
+msgstr "Volumul jocurilor Wii U"
 
 msgid "The Wii U games' sound."
-msgstr ""
+msgstr "Sunetul jocurilor Wii U."
 
 msgid "The Wii U games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Sunetul jocurilor Wii U. Stânga și dreapta îl schimbă cu 10%."
 
 msgid "3DS games' volume"
-msgstr ""
+msgstr "Volumul jocurilor 3DS"
 
 msgid "The 3DS games' sound."
-msgstr ""
+msgstr "Sunetul jocurilor 3DS."
 
 msgid "The 3DS games' sound. Left and Right change it by 10%."
-msgstr ""
+msgstr "Sunetul jocurilor 3DS. Stânga și dreapta îl schimbă cu 10%."
 
 msgid "GamePad speaker"
-msgstr ""
+msgstr "Difuzorul GamePad-ului"
 
 msgid "The Wii U GamePad's own sound, on the DualSense."
-msgstr ""
+msgstr "Sunetul propriu al Wii U GamePad, pe DualSense."
 
 msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
-msgstr ""
+msgstr "Sunetele pe care jocurile le redau în difuzorul Wii U GamePad, din difuzorul DualSense-ului jucătorului 1. Multe jocuri își trimit acolo și tot sunetul, așa că e dezactivat dacă nu îl vrei. Se aplică de la următorul joc."
 
 msgid "The DualSense's rumble, in games and in the launcher."
-msgstr ""
+msgstr "Vibrațiile DualSense, în jocuri și în lansator."
 
 msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
-msgstr ""
+msgstr "Dezactivat, DualSense nu vibrează niciodată: nici pentru vibrațiile unui joc, nici pentru ale lansatorului."
 
 msgid "Wii U players"
-msgstr ""
+msgstr "Jucători Wii U"
 
 msgid "Each player's emulated controller, motion and buttons."
-msgstr ""
+msgstr "Controllerul emulat, mișcarea și butoanele fiecărui jucător."
 
 msgid "What the Wii U sees in each player's hands."
-msgstr ""
+msgstr "Ce vede Wii U în mâinile fiecărui jucător."
 
 msgid "3DS controls"
-msgstr ""
+msgstr "Comenzi 3DS"
 
 msgid "Motion, deadzone and buttons."
-msgstr ""
+msgstr "Mișcare, zonă moartă și butoane."
 
 msgid "Where your Wii U games are. Cross picks another."
-msgstr ""
+msgstr "Unde sunt jocurile tale Wii U. Crucea alege alt folder."
 
 msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
-msgstr ""
+msgstr "Jocurile tale Wii U: .wua, .wud, .wux sau foldere cu code, content și meta. Fișierele .wud și .wux criptate au nevoie de cheile lor în /data/ps5cemu/keys.txt."
 
 msgid "Where your 3DS games are. Cross picks another."
-msgstr ""
+msgstr "Unde sunt jocurile tale 3DS. Crucea alege alt folder."
 
 msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
-msgstr ""
+msgstr "Jocurile tale 3DS: .3ds sau .cci, .cxi, .3dsx și dump-urile comprimate ale Azahar, decriptate, aici sau în subfoldere. Fișierele CIA se instalează (Instalează fișiere CIA). Dump-urile criptate au nevoie de aes_keys.txt al 3DS-ului în /data/ps5cemu/azahar/sysdata."
 
 msgid "Look for games now"
-msgstr ""
+msgstr "Caută jocuri acum"
 
 msgid "Looking…"
-msgstr ""
+msgstr "Se caută…"
 
 msgid "This side's folder, again."
-msgstr ""
+msgstr "Folderul acestei părți, din nou."
 
 msgid "Looks through this side's folder again, as it does each time the side opens."
-msgstr ""
+msgstr "Parcurge din nou folderul acestei părți, cum face de fiecare dată când se deschide partea."
 
 msgid "Wii U disc keys"
-msgstr ""
+msgstr "Chei de disc Wii U"
 
 msgid "keys.txt found"
-msgstr ""
+msgstr "keys.txt găsit"
 
 msgid "keys.txt missing"
-msgstr ""
+msgstr "keys.txt lipsește"
 
 msgid "Only encrypted .wud and .wux need them."
-msgstr ""
+msgstr "Doar .wud și .wux criptate au nevoie de ele."
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
-msgstr ""
+msgstr "Dump-urile .wud și .wux criptate au nevoie de cheile lor de disc în /data/ps5cemu/keys.txt, câte una pe linie. Dump-urile decriptate, .wua și folderele nu au nevoie."
 
 msgid "Box art from GameTDB"
-msgstr ""
+msgstr "Coperte de la GameTDB"
 
 msgid "Covers for the library, downloaded once."
-msgstr ""
+msgstr "Coperte pentru bibliotecă, descărcate o dată."
 
 msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
-msgstr ""
+msgstr "Prima dată când apare un joc, coperta lui e descărcată de la GameTDB (art.gametdb.com) după ID-ul de pe cutie. Dezactivat: nu se mai descarcă nimic."
 
 msgid "Community graphic packs"
-msgstr ""
+msgstr "Pachete grafice ale comunității"
 
 msgid "Cross checks GitHub for newer ones."
-msgstr ""
+msgstr "Crucea caută pe GitHub unele mai noi."
 
 msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
-msgstr ""
+msgstr "Pachetele grafice ale comunității Cemu, din cea mai nouă lansare de pe GitHub când e mai nouă decât cele instalate. Pachetele incluse în aplicație rămân ca rezervă."
 
 msgid "PS5CEMU-HAR updates"
-msgstr ""
+msgstr "Actualizări PS5CEMU-HAR"
 
 msgid "Cross checks GitHub for a newer version."
-msgstr ""
+msgstr "Crucea caută pe GitHub o versiune mai nouă."
 
 msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "PS5CEMU-HAR întreabă GitHub de cea mai nouă lansare la fiecare pornire. Crucea întreabă din nou sau instalează versiunea mai nouă găsită: fișierele lansării sunt descărcate, verificate și puse în locul acestora, iar aplicația repornește. Jocurile, salvările și setările tale rămân cum sunt."
 
 msgid "Larger text"
-msgstr ""
+msgstr "Text mai mare"
 
 msgid "Every size of text a step up."
-msgstr ""
+msgstr "Fiecare mărime de text cu o treaptă mai mare."
 
 msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
-msgstr ""
+msgstr "Fiecare stil de text cu o treaptă mai mare: legendele de la 20 la 23, textul de citit de la 26 la 30."
 
 msgid "High contrast"
-msgstr ""
+msgstr "Contrast ridicat"
 
 msgid "Opaque panels, full-strength text, a thicker ring."
-msgstr ""
+msgstr "Panouri opace, text la intensitate maximă, un inel mai gros."
 
 msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
-msgstr ""
+msgstr "Panouri opace în loc de sticlă, tot textul la intensitate maximă, un inel de selecție mai gros și fără granulație sau imagini în spatele meniurilor."
 
 msgid "Reduce motion"
-msgstr ""
+msgstr "Reduce mișcarea"
 
 msgid "Fades in place of movement."
-msgstr ""
+msgstr "Estompări în loc de mișcare."
 
 msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
-msgstr ""
+msgstr "Arcurile devin estompări scurte; nimic nu plutește, nu „respiră” și nu urcă în spatele meniurilor."
 
 msgid "Hold to confirm"
-msgstr ""
+msgstr "Ține apăsat pentru confirmare"
 
 msgid "How long Cross is held for what cannot be undone."
-msgstr ""
+msgstr "Cât timp se ține Crucea pentru ce nu poate fi anulat."
 
 msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
-msgstr ""
+msgstr "Golirea cache-urilor, Artic Setup și resetarea comenzilor se confirmă ținând apăsat, niciodată apăsând de două ori. Atâta durează."
 
 msgid "How the picture is scaled to the TV."
-msgstr ""
+msgstr "Cum se scalează imaginea pe televizor."
 
 msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
-msgstr ""
+msgstr "Bicubic e clar, Bicubic Hermite puțin mai moale, Liniar și mai moale; Cel mai apropiat vecin păstrează pixelii pătrați."
 
 msgid "120 Hz output"
-msgstr ""
+msgstr "Ieșire la 120 Hz"
 
 msgid "For displays that take 120 Hz."
-msgstr ""
+msgstr "Pentru ecranele care acceptă 120 Hz."
 
 msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
-msgstr ""
+msgstr "Modul de 119,88 Hz, pe ecranele care îl acceptă. Jocurile rulează în continuare cu viteza lor, iar un cadru care ratează o reîmprospătare așteaptă următoarea 8 ms în loc de 17."
 
 msgid "Holds a game to an even frame rate."
-msgstr ""
+msgstr "Ține un joc la un număr constant de cadre."
 
 msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
-msgstr ""
+msgstr "Fiecare cadru rămâne pe ecran cel puțin două sau trei reîmprospătări, ca un joc care nu ține ritmul ecranului să ruleze uniform: 60 sau 40 fps cu ieșire la 120 Hz, 30 sau 20 fără. 60 fps cu ieșire la 120 Hz se potrivește unui joc în 4K care uneori scade sub 60; 30 fps la 60 Hz, unuia în 8K. Și în meniul din joc."
 
 msgid "Frame rate, CPU and memory in a corner."
-msgstr ""
+msgstr "Cadre, CPU și memorie într-un colț."
 
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
-msgstr ""
+msgstr "Cadre pe secundă, utilizarea CPU și a memoriei în colțul din stânga sus, așa cum le arată Cemu. Și în meniul din joc."
 
 msgid "No stutter while new shaders build."
-msgstr ""
+msgstr "Fără sacadări cât se construiesc shadere noi."
 
 msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
-msgstr ""
+msgstr "Activat, un shader nou se construiește în timp ce jocul continuă, deci nu sacadează, dar ceva poate lipsi o clipă. Dezactivat, jocul așteaptă fiecare shader: sacadări, dar nimic desenat greșit."
 
 msgid "Cross: this player's controller, motion and buttons."
-msgstr ""
+msgstr "Crucea: controllerul, mișcarea și butoanele acestui jucător."
 
 msgid "No DualSense for this player yet."
-msgstr ""
+msgstr "Încă niciun DualSense pentru acest jucător."
 
 msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
-msgstr ""
+msgstr "Ce vede jocul în mâinile acestui jucător, plus mișcarea, vibrațiile, zonele moarte și butoanele. Jucătorul 1 e utilizatorul conectat care a pornit aplicația; DualSense-urile celorlalți utilizatori conectați sunt jucătorii 2–4."
 
 msgid "For the Skylanders games."
-msgstr ""
+msgstr "Pentru jocurile Skylanders."
 
 msgid "For Disney Infinity 3.0."
-msgstr ""
+msgstr "Pentru Disney Infinity 3.0."
 
 msgid "For LEGO Dimensions."
-msgstr ""
+msgstr "Pentru LEGO Dimensions."
 
 msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
-msgstr ""
+msgstr "Portalul emulat al Cemu, conectat când pornește un joc. În joc, categoria Dispozitive USB din meniu așază figurine pe el: dump-uri în {0}. Un portal real în portul USB al PS5 nu e folosit."
 
 msgid "Install from a folder"
-msgstr ""
+msgstr "Instalează dintr-un folder"
 
 msgid "An update, DLC or game (code, content and meta)."
-msgstr ""
+msgstr "O actualizare, un DLC sau un joc (code, content și meta)."
 
 msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
-msgstr ""
+msgstr "Instalează în stocarea Wii U (mlc01), cum face Install game title, update or DLC din Cemu. Actualizările și DLC-urile din folderul de jocuri merg și așa cum sunt."
 
 msgid "Higher is sharper and asks more of the GPU."
-msgstr ""
+msgstr "Mai mare e mai clar și cere mai mult de la GPU."
 
 msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
-msgstr ""
+msgstr "La ce mărime se desenează scenele 3D ale 3DS-ului înainte de a fi scalate pe televizor. Mai mare e mai clar și cere mai mult de la GPU, iar de fiecare dată când un joc recitește o imagine, așteptarea crește odată cu ea."
 
 msgid "Smooths textures as they are scaled up."
-msgstr ""
+msgstr "Netezește texturile când sunt mărite."
 
 msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
-msgstr ""
+msgstr "Netezește texturile jocului când sunt mărite; Niciunul le lasă cum le desenează 3DS-ul. Un filtru redesenează fiecare textură la rezoluția internă: la rezoluții mari e cea mai costisitoare setare. Dacă un joc sacadează, încearcă întâi Niciunul."
 
 msgid "Custom textures"
-msgstr ""
+msgstr "Texturi personalizate"
 
 msgid "Texture packs from azahar/load/textures."
-msgstr ""
+msgstr "Pachete de texturi din azahar/load/textures."
 
 msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
-msgstr ""
+msgstr "Pachete de texturi în /data/ps5cemu/azahar/load/textures/<ID titlu>, așa cum le încarcă Azahar pentru desktop."
 
 msgid "Screen layout"
-msgstr ""
+msgstr "Aranjarea ecranelor"
 
 msgid "How the two screens share the TV."
-msgstr ""
+msgstr "Cum își împart cele două ecrane televizorul."
 
 msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
-msgstr ""
+msgstr "Unul deasupra celuilalt, doar cel de sus, cel de sus mare cu cel de jos alături, sau amândouă unul lângă altul. În joc, clic pe touchpad + R1 trece la următoarea."
 
 msgid "Artwork around the screens."
-msgstr ""
+msgstr "Grafică în jurul ecranelor."
 
 msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
-msgstr ""
+msgstr "Grafică în jurul ecranelor 3DS, niciodată peste ele. Urmează fiecare aranjare, iar meniul din joc o schimbă și el."
 
 msgid "The DualSense's motion as the 3DS's."
-msgstr ""
+msgstr "Mișcarea DualSense ca a 3DS-ului."
 
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
-msgstr ""
+msgstr "Giroscopul și accelerometrul DualSense în locul celor ale 3DS-ului, pentru jocurile în care țintești sau conduci înclinând consola."
 
 msgid "How far a stick moves before it counts."
-msgstr ""
+msgstr "Cât se mișcă un stick până să conteze."
 
 msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
-msgstr ""
+msgstr "Cât se mișcă un stick până când jocul observă, pentru Circle Pad și C-Stick. Mărește-o dacă ceva alunecă singur după ce lași stickul; micșoreaz-o pentru control mai fin."
 
 msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
-msgstr ""
+msgstr "Ce buton DualSense corespunde cărui buton 3DS. Implicit, A e pe Cerc și B pe Cruce, unde le are 3DS-ul; Circle Pad e stickul stâng, C-Stick cel drept, iar touchpadul e ecranul tactil."
 
 msgid "Default buttons, motion and deadzone."
-msgstr ""
+msgstr "Butoane, mișcare și zonă moartă implicite."
 
 msgid "The default buttons, motion and deadzone."
-msgstr ""
+msgstr "Butoanele, mișcarea și zona moartă implicite."
 
 msgid "Region"
-msgstr ""
+msgstr "Regiune"
 
 msgid "The emulated 3DS's region."
-msgstr ""
+msgstr "Regiunea 3DS-ului emulat."
 
 msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
-msgstr ""
+msgstr "Automat ia regiunea fiecărui joc. Un joc făcut pentru altă regiune poate refuza să pornească sau poate arăta alte limbi. Se aplică de la următorul joc."
 
 msgid "The emulated 3DS's language."
-msgstr ""
+msgstr "Limba 3DS-ului emulat."
 
 msgid "The language games that follow the console's show their text in. Applies to the next game."
-msgstr ""
+msgstr "Limba în care jocurile care urmează limba consolei își arată textul. Se aplică de la următorul joc."
 
 msgid "Home Menu"
-msgstr ""
+msgstr "Meniul HOME"
 
 msgid "Start"
-msgstr ""
+msgstr "Pornește"
 
 msgid "Run Artic Setup first"
-msgstr ""
+msgstr "Rulează întâi Artic Setup"
 
 msgid "The 3DS Home Menu, from your console's files."
-msgstr ""
+msgstr "Meniul HOME al 3DS-ului, din fișierele consolei tale."
 
 msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
-msgstr ""
+msgstr "Pornește meniul HOME al 3DS-ului, după ce configurarea prin Artic Base a copiat fișierele de sistem ale consolei tale (Artic Base)."
 
 msgid "Install a CIA file"
-msgstr ""
+msgstr "Instalează un fișier CIA"
 
 msgid "A game, an update or DLC."
-msgstr ""
+msgstr "Un joc, o actualizare sau un DLC."
 
 msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
-msgstr ""
+msgstr "Instalează un CIA în stocarea 3DS-ului, cum face Install CIA din Azahar: o actualizare sau un DLC merge cu jocul lui, iar un joc intră în bibliotecă. Cercul anulează în timpul instalării."
 
 msgid "Play a game from your 3DS, and set up from it."
-msgstr ""
+msgstr "Joacă un joc de pe 3DS-ul tău și configurează cu ajutorul lui."
 
 msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
-msgstr ""
+msgstr "Artic Base rulează un joc de pe un 3DS din rețeaua ta, cu salvările rămânând pe 3DS; Artic Setup copiază fișierele de sistem ale unui 3DS în Azahar, pentru meniul HOME și jocurile care au nevoie de ele."
 
 msgid "Open the Setup check"
-msgstr ""
+msgstr "Deschide verificarea configurării"
 
 msgid "Storage, recompilers, games, keys and box art, checked."
-msgstr ""
+msgstr "Stocare, recompilatoare, jocuri, chei și coperte, verificate."
 
 msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
-msgstr ""
+msgstr "Fiecare verificare are o stare, ce înseamnă și ce e de făcut. Apare și la prima pornire și ori de câte ori o verificare eșuează la pornirea aplicației."
 
 msgid "Copy logs to USB"
-msgstr ""
+msgstr "Copiază jurnalele pe USB"
 
 msgid "The logs a report needs, onto a USB drive."
-msgstr ""
+msgstr "Jurnalele de care are nevoie un raport, pe o unitate USB."
 
 msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
-msgstr ""
+msgstr "Copiază jurnalele ultimelor cinci sesiuni și setările într-un folder datat pe o unitate USB, ca să le atașezi la un raport."
 
 msgid "Clear Wii U shader caches"
-msgstr ""
+msgstr "Golește cache-urile de shadere Wii U"
 
 msgid "For a game that crashes on a bad cache."
-msgstr ""
+msgstr "Pentru un joc care se blochează din cauza unui cache stricat."
 
 msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Șterge cache-urile de shadere ale Cemu. Jocurile le refac pe măsură ce rulează: primele minute sacadează."
 
 msgid "Clear 3DS shader caches"
-msgstr ""
+msgstr "Golește cache-urile de shadere 3DS"
 
 msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
-msgstr ""
+msgstr "Șterge cache-urile de shadere ale Azahar. Jocurile le refac pe măsură ce rulează: primele minute sacadează."
 
 msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
-msgstr ""
+msgstr "Dump-urile de figurine merg în /data/ps5cemu/figures: skylanders, infinity și dimensions. Activează aici un portal, pornește jocul, apoi pune figurine pe el din meniul din joc (clic pe touchpad + OPTIONS > Dispozitive USB)."
 
 msgid ""
 "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
@@ -2845,507 +2847,515 @@ msgid ""
 "3DS games: /data/ps5cemu/azahar/games, storage: /data/ps5cemu/azahar/sdmc\n"
 "\n"
 msgstr ""
+"Cemu, emulatorul Wii U, de la echipa Cemu și contribuitorii săi; RADV pe PS5, de la Mihawk-99 și mpereiraesaa; autorii pachetelor grafice ale comunității.\n"
+"Azahar, emulatorul 3DS, de la echipa Azahar și, înaintea lor, contribuitorii Citra; portarea lui pe PS5, de la Mihawk-99, și dynarmic.\n"
+"Coperte și informații despre jocuri: GameTDB. Fontul: Lexend.\n"
+"O portare neoficială, fără legătură cu echipele Cemu sau Azahar, cu Nintendo sau Sony.\n"
+"\n"
+"Jocuri Wii U: /data/ps5cemu/games, stocare și salvări: /data/ps5cemu/mlc01, chei: /data/ps5cemu/keys.txt\n"
+"Jocuri 3DS: /data/ps5cemu/azahar/games, stocare: /data/ps5cemu/azahar/sdmc\n"
+"\n"
 
 msgid "Version {0}"
-msgstr ""
+msgstr "Versiunea {0}"
 
 msgid "The PS5's language: {0}"
-msgstr ""
+msgstr "Limba PS5: {0}"
 
 msgid "Language: {0}"
-msgstr ""
+msgstr "Limbă: {0}"
 
 msgctxt "tab"
 msgid "Settings"
-msgstr ""
+msgstr "Setări"
 
 msgid "Starting the 3DS"
-msgstr ""
+msgstr "Pornește 3DS-ul"
 
 msgid "General"
-msgstr ""
+msgstr "General"
 
 msgid "Help"
-msgstr ""
+msgstr "Ajutor"
 
 msgid "Preview"
-msgstr ""
+msgstr "Previzualizare"
 
 msgid "{0}, with no border."
-msgstr ""
+msgstr "{0}, fără chenar."
 
 msgid "{0}, on the {1} border."
-msgstr ""
+msgstr "{0}, cu chenarul {1}."
 
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
-msgstr ""
+msgstr "Ecranul de jos e touchpadul: clic pentru atingere, ține clicul pentru tragere."
 
 msgid "About this setting"
-msgstr ""
+msgstr "Despre această setare"
 
 msgid "{0} GB free"
-msgstr ""
+msgstr "{0} GB liberi"
 
 msgid "Storage"
-msgstr ""
+msgstr "Stocare"
 
 msgid "the HEN setup guide"
-msgstr ""
+msgstr "ghidul de configurare HEN"
 
 msgid "/data is reachable"
-msgstr ""
+msgstr "/data e accesibil"
 
 msgid "Where everything is kept"
-msgstr ""
+msgstr "Unde se păstrează totul"
 
 msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
-msgstr ""
+msgstr "Setările, salvările, cache-urile și jurnalele stau în {0}, pe care HEN-ul tău îl deschide pentru PS5CEMU-HAR: jailbreak-ul lui de aplicații sau elfldr cu ajutorul care vine cu aplicația."
 
 msgid "/data is out of reach: nothing can be kept"
-msgstr ""
+msgstr "/data nu e accesibil: nu se poate păstra nimic"
 
 msgid "Let PS5CEMU-HAR out of its sandbox"
-msgstr ""
+msgstr "Scoate PS5CEMU-HAR din sandbox"
 
 msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
-msgstr ""
+msgstr "Adaugă PPSA99360 în lista de jailbreak de aplicații a HEN-ului tău (etaHEN: lista lui de jailbreak de aplicații; OnionHEN: la finalul exact_title_ids din config.ini, fără virgulă după), sau pornește elfldr ascultând pe portul 9021. Apoi repornește PS5CEMU-HAR."
 
 msgid "Recompilers"
-msgstr ""
+msgstr "Recompilatoare"
 
 msgid "What runs the games' code"
-msgstr ""
+msgstr "Ce rulează codul jocurilor"
 
 msgid "JIT memory from your HEN: games run at full speed"
-msgstr ""
+msgstr "Memorie JIT de la HEN-ul tău: jocurile rulează la viteză maximă"
 
 msgid "Executable memory: games run at full speed, no HEN grant needed"
-msgstr ""
+msgstr "Memorie executabilă: jocurile rulează la viteză maximă, fără permisiune HEN"
 
 msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
-msgstr ""
+msgstr "Recompilatoarele Cemu și Azahar transformă codul jocurilor în cel al PS5 pe măsură ce rulează. Au nevoie de memorie în care pot scrie cod și din care îl pot rula: memoria JIT a HEN-ului tău sau memorie executabilă pe care PS5CEMU-HAR o creează singur."
 
 msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
-msgstr ""
+msgstr "Fără memorie JIT sau executabilă: jocurile Wii U rulează pe interpretorul mult mai lent"
 
 msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
-msgstr ""
+msgstr "Nu s-a putut obține nici memoria JIT a HEN-ului tău, nici memorie executabilă, așa că jocurile Wii U trec pe interpretorul Cemu. Adaugă PPSA99360 în lista de jailbreak de aplicații a HEN-ului tău, apoi repornește PS5CEMU-HAR; Setări > Diagnosticare spune ce a obținut."
 
 msgid "{0} game in {1}"
 msgid_plural "{0} games in {1}"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} joc în {1}"
+msgstr[1] "{0} jocuri în {1}"
+msgstr[2] "{0} de jocuri în {1}"
 
 msgid "None in {0} yet"
-msgstr ""
+msgstr "Încă niciunul în {0}"
 
 msgid "{0} cannot be read"
-msgstr ""
+msgstr "{0} nu poate fi citit"
 
 msgid "Where your 3DS games go"
-msgstr ""
+msgstr "Unde merg jocurile tale 3DS"
 
 msgid "Where your Wii U games go"
-msgstr ""
+msgstr "Unde merg jocurile tale Wii U"
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
-msgstr ""
+msgstr "Pune-le în {0} sau alege orice folder pe care PS5 îl poate citi, de exemplu pe o unitate USB. Se caută și în subfoldere. Fișierele CIA se instalează, din Setări > Instalează fișiere CIA."
 
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
-msgstr ""
+msgstr "Pune-le în {0} sau alege orice folder pe care PS5 îl poate citi, de exemplu pe o unitate USB. Actualizările și DLC-urile se adaugă din Setări > Instalează actualizări și DLC sau vin cu un .wua."
 
 msgid "code · content · meta"
-msgstr ""
+msgstr "code · content · meta"
 
 msgid "the game files page"
-msgstr ""
+msgstr "pagina despre fișierele jocurilor"
 
 msgid "keys.txt is missing: only encrypted .wud and .wux need it"
-msgstr ""
+msgstr "keys.txt lipsește: doar .wud și .wux criptate au nevoie de el"
 
 msgid "How to"
-msgstr ""
+msgstr "Cum se face"
 
 msgid "Keys for encrypted discs"
-msgstr ""
+msgstr "Chei pentru discuri criptate"
 
 msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
-msgstr ""
+msgstr "Dump-urile .wud și .wux criptate au nevoie de cheile lor de disc în {0}/keys.txt, câte una pe linie. Dump-urile decriptate, fișierele .wua și folderele cu code, content și meta nu au nevoie."
 
 msgid "3DS keys"
-msgstr ""
+msgstr "Chei 3DS"
 
 msgid "aes_keys.txt found"
-msgstr ""
+msgstr "aes_keys.txt găsit"
 
 msgid "aes_keys.txt is missing: only encrypted dumps need it"
-msgstr ""
+msgstr "aes_keys.txt lipsește: doar dump-urile criptate au nevoie de el"
 
 msgid "Keys for encrypted 3DS dumps"
-msgstr ""
+msgstr "Chei pentru dump-uri 3DS criptate"
 
 msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
-msgstr ""
+msgstr "Dump-urile criptate au nevoie de aes_keys.txt de pe propria ta consolă în {0}/sysdata. Dump-urile decriptate, homebrew-urile și CIA-urile instalate nu au nevoie. PS5CEMU-HAR nu vine cu nicio cheie."
 
 msgid "3DS system files"
-msgstr ""
+msgstr "Fișiere de sistem 3DS"
 
 msgid "Artic Setup has run: the Home Menu can start"
-msgstr ""
+msgstr "Artic Setup a rulat: meniul HOME poate porni"
 
 msgid "Artic Setup copies them from your 3DS, for the Home Menu"
-msgstr ""
+msgstr "Artic Setup le copiază de pe 3DS-ul tău, pentru meniul HOME"
 
 msgid "Your 3DS's own files"
-msgstr ""
+msgstr "Fișierele proprii ale 3DS-ului tău"
 
 msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
-msgstr ""
+msgstr "Meniul HOME al 3DS-ului și puținele jocuri care au nevoie de fișierele de sistem ale consolei rulează după ce Artic Setup le copiază prin rețea de pe propriul tău 3DS: pornește Artic Setup Tool pe 3DS, apoi Artic Base aici."
 
 msgid "the 3DS page"
-msgstr ""
+msgstr "pagina despre 3DS"
 
 msgid "Box art"
-msgstr ""
+msgstr "Coperte"
 
 msgid "what PS5CEMU-HAR fetches online"
-msgstr ""
+msgstr "ce descarcă PS5CEMU-HAR online"
 
 msgid "Covers from GameTDB"
-msgstr ""
+msgstr "Coperte de la GameTDB"
 
 msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
-msgstr ""
+msgstr "Prima dată când apare un joc, coperta lui vine de la GameTDB (art.gametdb.com), după ID-ul de pe cutie. Fără conexiune se arată pictogramele jocurilor, iar următoarea pornire încearcă din nou."
 
 msgid "Off: the games' icons are shown instead"
-msgstr ""
+msgstr "Dezactivat: se arată în schimb pictogramele jocurilor"
 
 msgid "Turn on"
-msgstr ""
+msgstr "Activează"
 
 msgid "GameTDB did not answer: the games' icons are shown instead"
-msgstr ""
+msgstr "GameTDB nu a răspuns: se arată în schimb pictogramele jocurilor"
 
 msgid "GameTDB is reachable · {0} cover"
 msgid_plural "GameTDB is reachable · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "GameTDB e accesibil · {0} copertă"
+msgstr[1] "GameTDB e accesibil · {0} coperte"
+msgstr[2] "GameTDB e accesibil · {0} de coperte"
 
 msgid "On · {0} cover"
 msgid_plural "On · {0} covers"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Activat · {0} copertă"
+msgstr[1] "Activat · {0} coperte"
+msgstr[2] "Activat · {0} de coperte"
 
 msgid "On: covers come as your games show up"
-msgstr ""
+msgstr "Activat: copertele vin pe măsură ce apar jocurile tale"
 
 msgid "Checked again"
-msgstr ""
+msgstr "Verificat din nou"
 
 msgid "Welcome to PS5CEMU-HAR"
-msgstr ""
+msgstr "Bun venit în PS5CEMU-HAR"
 
 msgid "Let’s check your setup"
-msgstr ""
+msgstr "Hai să-ți verificăm configurarea"
 
 msgid "The {0} check is ready."
 msgid_plural "All {0} checks are ready."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} verificare e în regulă."
+msgstr[1] "Toate cele {0} verificări sunt în regulă."
+msgstr[2] "Toate cele {0} de verificări sunt în regulă."
 
 msgid "The {0} check needs a look."
 msgid_plural "All {0} checks need a look."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} verificare are nevoie de atenție."
+msgstr[1] "Toate cele {0} verificări au nevoie de atenție."
+msgstr[2] "Toate cele {0} de verificări au nevoie de atenție."
 
 msgid "{0} of {1} is ready."
 msgid_plural "{0} of {1} are ready."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "În regulă: {0} din {1}."
+msgstr[1] "În regulă: {0} din {1}."
+msgstr[2] "În regulă: {0} din {1}."
 
 msgid "{0} needs a look."
 msgid_plural "{0} need a look."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Are nevoie de atenție: {0}."
+msgstr[1] "Au nevoie de atenție: {0}."
+msgstr[2] "Au nevoie de atenție: {0}."
 
 msgid "{0} · as the PS5"
-msgstr ""
+msgstr "{0} · ca PS5"
 
 msgid "· optional"
-msgstr ""
+msgstr "· opțional"
 
 msgid "The menus' language"
-msgstr ""
+msgstr "Limba meniurilor"
 
 msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
-msgstr ""
+msgstr "PS5CEMU-HAR vorbește limba setată pe PS5-ul tău. Crucea alege alta; Setări > General > Limbă o schimbă oricând."
 
 msgid "The guide, on your phone"
-msgstr ""
+msgstr "Ghidul, pe telefonul tău"
 
 msgid "Scan it for {0}: {1}"
-msgstr ""
+msgstr "Scanează-l pentru {0}: {1}"
 
 msgid "Not in this build"
-msgstr ""
+msgstr "Nu e în această versiune"
 
 msgid "Open to look for games"
-msgstr ""
+msgstr "Deschide ca să cauți jocuri"
 
 msgid "Saved your place in the library"
-msgstr ""
+msgstr "Locul tău în bibliotecă a fost salvat"
 
 msgid "The game could not start"
-msgstr ""
+msgstr "Jocul nu a putut porni"
 
 msgid "{0} min played"
 msgid_plural "{0} min played"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} min jucat"
+msgstr[1] "{0} min jucate"
+msgstr[2] "{0} de min jucate"
 
 msgid "{0} h played"
 msgid_plural "{0} h played"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{0} oră jucată"
+msgstr[1] "{0} ore jucate"
+msgstr[2] "{0} de ore jucate"
 
 msgid "today"
-msgstr ""
+msgstr "azi"
 
 msgid "yesterday"
-msgstr ""
+msgstr "ieri"
 
 msgid "{0} day ago"
 msgid_plural "{0} days ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "acum {0} zi"
+msgstr[1] "acum {0} zile"
+msgstr[2] "acum {0} de zile"
 
 msgid "{0} week ago"
 msgid_plural "{0} weeks ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "acum {0} săptămână"
+msgstr[1] "acum {0} săptămâni"
+msgstr[2] "acum {0} de săptămâni"
 
 msgid "{0} month ago"
 msgid_plural "{0} months ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "acum {0} lună"
+msgstr[1] "acum {0} luni"
+msgstr[2] "acum {0} de luni"
 
 msgid "Cemu is still starting"
-msgstr ""
+msgstr "Cemu încă pornește"
 
 msgid "Starting Azahar"
-msgstr ""
+msgstr "Pornește Azahar"
 
 msgctxt "tab"
 msgid "Home"
-msgstr ""
+msgstr "Acasă"
 
 msgid "Done"
-msgstr ""
+msgstr "Gata"
 
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 msgid "Cancel"
-msgstr ""
+msgstr "Anulează"
 
 msgid "Tabs"
-msgstr ""
+msgstr "File"
 
 msgid "Switch"
-msgstr ""
+msgstr "Comută"
 
 msgid "Open"
-msgstr ""
+msgstr "Deschide"
 
 msgid "Change the language"
-msgstr ""
+msgstr "Schimbă limba"
 
 msgid "Check again"
-msgstr ""
+msgstr "Verifică din nou"
 
 msgid "Continue"
-msgstr ""
+msgstr "Continuă"
 
 msgid "Continue to Home"
-msgstr ""
+msgstr "Continuă spre Acasă"
 
 msgid "Options"
-msgstr ""
+msgstr "Opțiuni"
 
 msgid "Move"
-msgstr ""
+msgstr "Mișcare"
 
 msgid "Filters"
-msgstr ""
+msgstr "Filtre"
 
 msgid "Jump by letter"
-msgstr ""
+msgstr "Salt după literă"
 
 msgid "Back to the buttons"
-msgstr ""
+msgstr "Înapoi la butoane"
 
 msgid "Scroll"
-msgstr ""
+msgstr "Derulare"
 
 msgid "Pages"
-msgstr ""
+msgstr "Pagini"
 
 msgid "More about it"
-msgstr ""
+msgstr "Mai multe despre asta"
 
 msgid "Back to the packs"
-msgstr ""
+msgstr "Înapoi la pachete"
 
 msgid "On / off"
-msgstr ""
+msgstr "Activat / dezactivat"
 
 msgid "Assign"
-msgstr ""
+msgstr "Atribuie"
 
 msgid "Clear"
-msgstr ""
+msgstr "Golește"
 
 msgid "Use this folder"
-msgstr ""
+msgstr "Folosește acest folder"
 
 msgid "Number"
-msgstr ""
+msgstr "Număr"
 
 msgid "Keep"
-msgstr ""
+msgstr "Păstrează"
 
 msgid "Edit"
-msgstr ""
+msgstr "Editează"
 
 msgid "Connect"
-msgstr ""
+msgstr "Conectează"
 
 msgid "Hold to set up"
-msgstr ""
+msgstr "Ține apăsat pentru configurare"
 
 msgid "Not a favourite"
-msgstr ""
+msgstr "Scoate de la favorite"
 
 msgid "Show where it is"
-msgstr ""
+msgstr "Arată unde e"
 
 msgid "Added to Favourites"
-msgstr ""
+msgstr "Adăugat la favorite"
 
 msgid "Taken out of Favourites"
-msgstr ""
+msgstr "Scos de la favorite"
 
 msgid "The PS5's storage"
-msgstr ""
+msgstr "Stocarea PS5"
 
 msgid "Title ID {0}"
-msgstr ""
+msgstr "ID titlu {0}"
 
 msgid "PS5CEMU-HAR {0} is out"
-msgstr ""
+msgstr "A apărut PS5CEMU-HAR {0}"
 
 msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
-msgstr ""
+msgstr "Aceasta e {0}. O descarci și o instalezi acum? Jocurile, salvările și setările tale rămân cum sunt."
 
 msgid "Update now"
-msgstr ""
+msgstr "Actualizează acum"
 
 msgid "Later"
-msgstr ""
+msgstr "Mai târziu"
 
 msgid "Updating to {0}"
-msgstr ""
+msgstr "Se actualizează la {0}"
 
 msgid "Downloading: {0} of {1} MB"
-msgstr ""
+msgstr "Se descarcă: {0} din {1} MB"
 
 msgid "Checking the download"
-msgstr ""
+msgstr "Se verifică descărcarea"
 
 msgid "Installing"
-msgstr ""
+msgstr "Se instalează"
 
 msgid "{0} is installed"
-msgstr ""
+msgstr "{0} e instalată"
 
 msgid "PS5CEMU-HAR starts again to finish the update."
-msgstr ""
+msgstr "PS5CEMU-HAR repornește ca să termine actualizarea."
 
 msgid "Restart now"
-msgstr ""
+msgstr "Repornește acum"
 
 msgid "The update did not finish"
-msgstr ""
+msgstr "Actualizarea nu s-a terminat"
 
 msgid "PS5CEMU-HAR is still {0}."
-msgstr ""
+msgstr "PS5CEMU-HAR e încă {0}."
 
 msgid "Checking for updates"
-msgstr ""
+msgstr "Se caută actualizări"
 
 msgid "PS5CEMU-HAR update"
-msgstr ""
+msgstr "Actualizare PS5CEMU-HAR"
 
 msgid "Select"
-msgstr ""
+msgstr "Selectează"
 
 msgid "Restart"
-msgstr ""
+msgstr "Repornește"
 
 msgid "Firmware {0}"
-msgstr ""
+msgstr "Firmware {0}"
 
 msgid "Logs: {0}, {1}/log.txt"
-msgstr ""
+msgstr "Jurnale: {0}, {1}/log.txt"
 
 msgid "Boot log not written (/data is unreachable)"
-msgstr ""
+msgstr "Jurnalul de pornire nu a fost scris (/data inaccesibil)"
 
 msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
-msgstr ""
+msgstr "PS5CEMU-HAR nu poate accesa /data. Încarcă un HEN cu PPSA99360 în lista lui de jailbreak de aplicații, sau elfldr, apoi repornește PS5CEMU-HAR."
 
 msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
-msgstr ""
+msgstr "Această sesiune: Azahar (3DS); Wii U-ul emulat al Cemu nu e pornit"
 
 msgid "This session: Cemu (Wii U); Azahar's core is not started"
-msgstr ""
+msgstr "Această sesiune: Cemu (Wii U); nucleul Azahar nu e pornit"
 
 msgid "Cemu did not start: {0}"
-msgstr ""
+msgstr "Cemu nu a pornit: {0}"
 
 msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
-msgstr ""
+msgstr "Fără memorie JIT: jocurile Wii U rulează pe interpretor, mult mai lent. E PPSA99360 în lista de jailbreak de aplicații a HEN-ului tău?"
 
 msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
-msgstr ""
+msgstr "Lansatorul nu a putut porni. Jurnalul de pornire din /data/ps5cemu/logs spune de ce."
 
 msgid "{0} fps"
-msgstr ""
+msgstr "{0} fps"
 
 msgctxt "compatibility note"
 msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
-msgstr ""
+msgstr "Rulează la aproximativ 60 fps în 1440p. Până la 2.0.0 C îngheța și se închidea când Magnesis sau alte rune, ori luneta Sheikah (R3), evidențiau obiecte; reparat după 2.0.0 C (un Cemu mai nou)"
 
 msgctxt "compatibility note"
 msgid "About half the textures are missing during races"
-msgstr ""
+msgstr "Cam jumătate din texturi lipsesc în timpul curselor"
 
 msgctxt "compatibility note"
 msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
-msgstr ""
+msgstr "Merge cu pachetul grafic de 60 FPS dezactivat; activat, are erori grafice și se blochează imediat ce se încarcă jocul. Până la 2.0.0 C se bloca acolo oricum (Cemu rămânea fără descriptori Vulkan)"
 
 msgctxt "compatibility note"
 msgid "Save states work from the in-game menu"
-msgstr ""
+msgstr "Stările salvate funcționează din meniul din joc"
