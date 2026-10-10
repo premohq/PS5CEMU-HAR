@@ -47,4 +47,6 @@ namespace ps5shell
 	// game list and settings. Before a game is returned, the launcher's background work has stopped.
 	Outcome Run(ps5settings::Launcher& settings, ps5launcher::Status& status, const std::function<void(ps5launcher::System)>& prepare,
 		std::optional<ps5launcher::Choice>& choice);
+	// Why the last Run did not choose a game, as the boot log has it
+	const std::string& LastFailure();
 }

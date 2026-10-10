@@ -271,7 +271,11 @@ int main(int argc, char* argv[])
 			// the launcher could not draw, and there is nothing else to show: the boot log says why. Wait
 			// for the player to close the app from the PS5's menu
 			ps5log::Line("[main] the launcher could not start or stopped drawing");
-			ps5notify::Send("The launcher could not start. The boot log in /data/ps5cemu/logs says why.");
+			// the splash goes, so the notification is seen, and it says why (as 3.0.0's did)
+			sceSystemServiceHideSplashScreen();
+			const std::string& why = ps5shell::LastFailure();
+			ps5notify::Send(why.empty() ? std::string("The launcher could not start. The boot log in /data/ps5cemu/logs says why.") :
+										  "The launcher could not start: " + why + ". The boot log in /data/ps5cemu/logs has more.");
 			for (;;)
 				sceKernelUsleep(1000000);
 		}

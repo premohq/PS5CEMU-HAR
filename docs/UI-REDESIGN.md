@@ -529,7 +529,7 @@ toasts, and the on-screen keyboard.
   and a per-game pack summary. A side draws from it at once while its scan
   runs; the scan's list replaces it when it finishes.
 - **Starting Cemu** takes a few seconds the first time the Wii U side opens in a session. Today the
-  start screen shows "Starting Cemu" on its card meanwhile; the new side shows it on its Home, already
+  start screen shows "Starting Cemu" on its card meanwhile; the new side shows it in its Library, already
   drawn from the catalogue. Whether `InitializeCore` can run off the launcher's thread, so the screen
   stays live meanwhile, is an open question (section 12); if it cannot, the screen holds, as today.
 - **Wii U boot screens** can be read while Cemu's core is up on the Wii U side, the way
@@ -622,9 +622,9 @@ every side opens (6.1).
 ### 6.4 The Game menu (Options)
 
 The PS5 puts a game's secondary actions behind Options; so does this. It opens as a small sheet next
-to the focused cover, from Home, the Library or the hub:
+to the focused cover, from the Library or the hub:
 
-*Play* · *Game hub* · *Graphic packs* (Wii U) · *Game settings* · *Start without graphic packs* (Wii U,
+*Play* · *Game hub* · *Game settings* · *Graphic packs* (Wii U) · *Start without graphic packs* (Wii U,
 when some are on) · *Start without cheats* (3DS, when some are on) · *Keep this picture* (3DS: pins
 the current backdrop, 7.4) · *Favourite* (on or off: the Library's *Favourites*) · *Look for its box
 art again* · *Show where it is* (the path, and the drive).
@@ -832,7 +832,7 @@ fallback for scripts Lexend lacks (CJK, Thai, Arabic), as ProsperoEden loads the
 
 | Style | Size / weight | Use |
 |---|---|---|
-| Display | 64–72, Bold | A game's name on Home and its hub |
+| Display | 64–72, Bold | A game's name on its hub, and the Library's state card |
 | Title | 44, SemiBold | Page titles |
 | Heading | 32, SemiBold | Sheet titles |
 | Body | 26, Regular | Reading text, row labels |
@@ -905,17 +905,17 @@ Settings > Online has *3DS screenshots from libretro* beside *Box art from
 GameTDB*: on by default like it, and off means nothing more is asked for. Nothing is bundled; like the
 covers, every picture is fetched at run time or taken from the player's own games.
 
-**How the picture is shown** (the mockups show the Wii U side's Home, the 3DS side's Library and a
-Wii U game's hub; the 3DS side's Home is not mocked up yet):
+**How the picture is shown** (the mockups show the 3DS and DS sides' Libraries and a Wii U game's hub;
+Home, removed in 3.5.1, showed the first case):
 
-- **Home, Wii U side:** the boot screen is the hero art. It is drawn at its own size (1280 × 720 at
+- **Home, Wii U side (until 3.5.1):** the boot screen is the hero art. It is drawn at its own size (1280 × 720 at
   1.5×: 1920 × 1080 on the layout), moved 21 % right and 14 % down, so a centred logo lands right of
   the game's title and below the row; the top and left edges it uncovers fade into the ambient colour.
   A left-to-right scrim and a top and bottom one keep every word at 4.5:1 contrast or better.
-- **Home, 3DS side; the Library; the Game hub:** the picture is atmosphere: full-bleed, softened by a
+- **The Library and the Game hub, every side:** the picture is atmosphere: full-bleed, softened by a
   light blur and dimmed, so the title, the shelf or the cover leads. A 3DS picture is never scaled up
   sharp: a 400 × 240 snap is softened more than a 1280 × 768 capture.
-- **The side's motif** (bubbles or waves, from `bubbles.cpp` and `wave.cpp`'s parameters, as a shader)
+- **The side's motif** (bubbles, waves or the DS's rising pixels, from `bubbles.cpp` and `wave.cpp`'s parameters, as a shader)
   sits faintly over it, with a film grain at 11 % and a vignette.
 - **Changes** cross-fade over 600 ms as the focus moves, and only once the focus has rested for 150 ms,
   so scrolling through a row doesn't flicker; Reduce motion makes it a 150 ms fade and stops the motif;

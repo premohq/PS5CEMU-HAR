@@ -325,7 +325,9 @@ every 10 seconds with the frame rate, and `[crash]` lines if an emulator crashes
 - **3.5.0 starts again on older firmwares and kstuff setups** (#34). Where the HEN leaves a drive out
   (kstuff and ShadowMount+ on 5.50 and 8.60 among them), the app's sandbox helper opens it, and 3.5.0
   then still looked for its own files where the sandbox had kept them: the launcher found no font and
-  never drew. It now looks for them again after the helper runs.
+  never drew. It now looks for them again after the helper runs. A 3.5.0 hit by this cannot update
+  itself (its launcher never starts): copy the new `PPSA99360` folder over it by hand, or update from
+  3.0.0. If the launcher ever cannot start, the notification now says why.
 - **Nintendo DS games, on melonDS**, as a third side to the right of the 3DS, in green (see
   [Nintendo DS](#nintendo-ds-melonds)).
 - **No Home screen:** every side opens on its Library, the game you played last in focus.

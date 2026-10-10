@@ -31,6 +31,7 @@ namespace ps5shell
 	{
 		Host s_host;
 		bool s_hostSet = false;
+		std::string s_failure; // why the launcher could not start or go on (LastFailure)
 
 		const Host& TheHost()
 		{
@@ -45,6 +46,11 @@ namespace ps5shell
 		// the keyboard's keys (Search)
 		const char* const kKeyRows[] = {"1234567890", "QWERTYUIOP", "ASDFGHJKL'", "ZXCVBNM-:.", nullptr};
 		constexpr int kKeyboardRows = 5; // the last: space, delete, done
+	}
+
+	const std::string& LastFailure()
+	{
+		return s_failure;
 	}
 
 	void SetHost(Host host)
@@ -83,6 +89,7 @@ namespace ps5shell
 		if (!m_fonts.Load(host.assets + "/fonts/lexend.sdf", error))
 		{
 			ps5log::Line("[ui] {}", error);
+			s_failure = error;
 			return Outcome::Classic;
 		}
 		m_fonts.SetFallbackFolders(host.fontFolders);
@@ -96,6 +103,7 @@ namespace ps5shell
 		if (!m_gfx.Start(host.getInstanceProcAddr, target, error))
 		{
 			ps5log::Line("[ui] the new launcher cannot draw: {}", error);
+			s_failure = "it cannot draw: " + error;
 			return m_videoOut ? Outcome::Restart : Outcome::Classic;
 		}
 		m_gfx.SetAtlas(m_fonts.AtlasWidth(), m_fonts.AtlasHeight(), m_fonts.Atlas());
@@ -177,6 +185,7 @@ namespace ps5shell
 			m_images->Stop();
 			ps5sound::Stop();
 			m_gfx.Stop();
+			s_failure = "the GPU stopped drawing it";
 			return Outcome::Restart;
 		}
 		// the background work stops behind the launch (4.2, rule 4), the screen kept drawn
