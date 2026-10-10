@@ -1087,7 +1087,7 @@ namespace ps5shell
 			const auto& candidate = Inspect(m_browseFolder);
 			const bool valid = candidate.kind != ps5emu::InstallCandidate::Kind::None;
 			current = valid && !candidate.name.empty() ? candidate.name : ShortPath(m_browseFolder, 40);
-			lines[0] = {Tr("Type"), valid ? KindName(candidate.kind) : Tr("Nothing to install")};
+			lines[0] = {TrC("kind", "Type"), valid ? KindName(candidate.kind) : Tr("Nothing to install")};
 			lines[1] = {Tr("Title ID"), valid ? Hex(candidate.titleId) : "-"};
 			// tr: a title's version to install ({0}), and the one installed now ({1})
 			lines[2] = {Tr("Version"), !valid ? std::string("-") : candidate.installedVersion < 0 ? TrF("v{0}, not installed yet", candidate.version) :

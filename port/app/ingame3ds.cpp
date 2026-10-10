@@ -772,6 +772,7 @@ namespace ps5ingame3ds
 
 				canvas.draw->AddLine(canvas.At(300, 900), canvas.At(1620, 900), kColours.line, scale);
 				float x = 300;
+				// tr: the 3DS keyboard's hints: Cross types the focused key
 				x = canvas.Hint(g.small, x, 915, "cross", Tr("Type"));
 				x = canvas.Hint(g.small, x, 915, "circle", Tr("Delete"));
 				x = canvas.Hint(g.small, x, 915, "triangle", Tr("Shift"));

@@ -1378,7 +1378,7 @@ msgid "Shift: on"
 msgstr ""
 
 #. the 3DS keyboard's keys
-#: port/app/ingame3ds.cpp:757 port/app/ingame3ds.cpp:777
+#: port/app/ingame3ds.cpp:757 port/app/ingame3ds.cpp:778
 #, menu
 msgid "Shift"
 msgstr ""
@@ -1390,12 +1390,13 @@ msgid "Space"
 msgstr ""
 
 #. the on-screen keyboard's keys
-#: port/app/ingame3ds.cpp:761 port/app/ingame3ds.cpp:776 port/frontend/shell/shell.cpp:903 port/frontend/shell/shell.cpp:1473
+#: port/app/ingame3ds.cpp:761 port/app/ingame3ds.cpp:777 port/frontend/shell/shell.cpp:903 port/frontend/shell/shell.cpp:1473
 #, menu
 msgid "Delete"
 msgstr ""
 
-#: port/app/ingame3ds.cpp:775 port/frontend/shell/pages.cpp:1090 port/frontend/shell/shell.cpp:903
+#. the 3DS keyboard's hints: Cross types the focused key
+#: port/app/ingame3ds.cpp:776 port/frontend/shell/shell.cpp:903
 #, menu
 msgid "Type"
 msgstr ""
@@ -3078,7 +3079,7 @@ msgstr ""
 msgid "Drive"
 msgstr ""
 
-#: port/frontend/shell/pages.cpp:1047
+#: port/frontend/shell/pages.cpp:1047 port/frontend/shell/pages.cpp:1090
 msgctxt "kind"
 msgid "Type"
 msgstr ""
@@ -4078,32 +4079,32 @@ msgid "Starting the 3DS"
 msgstr ""
 
 #. Settings' sections
-#: port/frontend/shell/settings.cpp:1021
+#: port/frontend/shell/settings.cpp:1032
 msgid "General"
 msgstr ""
 
-#: port/frontend/shell/settings.cpp:1022 port/frontend/shell/setup.cpp:421
+#: port/frontend/shell/settings.cpp:1033 port/frontend/shell/setup.cpp:421
 msgid "Help"
 msgstr ""
 
-#: port/frontend/shell/settings.cpp:1092
+#: port/frontend/shell/settings.cpp:1103
 msgid "Preview"
 msgstr ""
 
 #. {0} is a screen layout, {1} a border's name
-#: port/frontend/shell/settings.cpp:1097
+#: port/frontend/shell/settings.cpp:1108
 msgid "{0}, with no border."
 msgstr ""
 
-#: port/frontend/shell/settings.cpp:1098
+#: port/frontend/shell/settings.cpp:1109
 msgid "{0}, on the {1} border."
 msgstr ""
 
-#: port/frontend/shell/settings.cpp:1100
+#: port/frontend/shell/settings.cpp:1111
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
 msgstr ""
 
-#: port/frontend/shell/settings.cpp:1108
+#: port/frontend/shell/settings.cpp:1119
 msgid "About this setting"
 msgstr ""
 

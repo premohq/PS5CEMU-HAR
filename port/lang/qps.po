@@ -7,1875 +7,2811 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. the compatibility list's statuses, as the launcher shows them
+#: port/app/compatibility.cpp:96
 msgctxt "status"
 msgid "Playable"
 msgstr "⟦Plàÿàblé~~~⟧"
 
+#. the compatibility list's statuses, as the launcher shows them
+#: port/app/compatibility.cpp:96
 msgctxt "status"
 msgid "Issues"
 msgstr "⟦Îssûés~~⟧"
 
+#: port/app/compatibility.cpp:97
 msgctxt "status"
 msgid "Crashes"
 msgstr "⟦Çràshés~~⟧"
 
+#: port/app/compatibility.cpp:97
 msgctxt "status"
 msgid "Won't start"
 msgstr "⟦Wöñ't stàrt~~~~⟧"
 
+#: port/app/emulator.cpp:323
 msgid "the PS5 Vulkan driver did not start"
 msgstr "⟦thé PS5 Vûlkàñ drîvér dîd ñöt stàrt~~~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:355
 msgid "PS5CEMU-HAR cannot write to {0}. Is the HEN loaded?"
 msgstr "⟦PS5ÇÉMÜ-HÅR çàññöt wrîté tö ~~~~~~~~~~~{0}. Îs thé HÉÑ löàdéd?~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:378
 msgid "PS5CEMU-HAR cannot create the MLC folder {0}"
 msgstr "⟦PS5ÇÉMÜ-HÅR çàññöt çréàté thé MLÇ földér ~~~~~~~~~~~~~~~~{0}⟧"
 
+#. why a Wii U game did not start
+#: port/app/emulator.cpp:481
 msgid "The game's base files were not found."
 msgstr "⟦Thé gàmé's bàsé fîlés wéré ñöt föûñd.~~~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:487
 msgid "The game could not be mounted. Check that its files are still in the game files folder."
 msgstr "⟦Thé gàmé çöûld ñöt bé möûñtéd. Çhéçk thàt îts fîlés àré stîll îñ thé gàmé fîlés földér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:492 port/azahar/core.cpp:572
+#, menu
 msgid "The game could not be started."
 msgstr "⟦Thé gàmé çöûld ñöt bé stàrtéd.~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:501
 msgid "This is not a Wii U game PS5CEMU-HAR can start."
 msgstr "⟦Thîs îs ñöt à Wîî Ü gàmé PS5ÇÉMÜ-HÅR çàñ stàrt.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:503
 msgid "Its disc key is missing from /data/ps5cemu/keys.txt."
 msgstr "⟦Îts dîsç kéÿ îs mîssîñg fröm /dàtà/ps5çémû/kéÿs.txt.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:505
 msgid "Its title.tik is missing."
 msgstr "⟦Îts tîtlé.tîk îs mîssîñg.~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:510
 msgid "The executable could not be started."
 msgstr "⟦Thé éxéçûtàblé çöûld ñöt bé stàrtéd.~~~~~~~~~~~~~~⟧"
 
+#: port/app/emulator.cpp:523
 msgid "The Vulkan renderer did not start: {0}"
 msgstr "⟦Thé Vûlkàñ réñdérér dîd ñöt stàrt: ~~~~~~~~~~~~~~{0}⟧"
 
+#. the PS5's notification as a Wii U game starts
+#: port/app/emulator.cpp:577
 msgid "Touchpad click + Options: the in-game menu (screens, picture, volume, controls, the library)"
 msgstr "⟦Töûçhpàd çlîçk + Öptîöñs: thé îñ-gàmé méñû (sçrééñs, pîçtûré, völûmé, çöñtröls, thé lîbràrÿ)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:149
 msgctxt "genre"
 msgid "2D platformer"
 msgstr "⟦2D plàtförmér~~~~~⟧"
 
+#: port/app/gameinfo.cpp:149
 msgctxt "genre"
 msgid "3D fighting"
 msgstr "⟦3D fîghtîñg~~~~⟧"
 
+#: port/app/gameinfo.cpp:150
 msgctxt "genre"
 msgid "3D platformer"
 msgstr "⟦3D plàtförmér~~~~~⟧"
 
+#: port/app/gameinfo.cpp:150
 msgctxt "genre"
 msgid "Action"
 msgstr "⟦Åçtîöñ~~⟧"
 
+#: port/app/gameinfo.cpp:151
 msgctxt "genre"
 msgid "Action RPG"
 msgstr "⟦Åçtîöñ RPG~~~~⟧"
 
+#: port/app/gameinfo.cpp:151
 msgctxt "genre"
 msgid "Adventure"
 msgstr "⟦Ådvéñtûré~~~⟧"
 
+#: port/app/gameinfo.cpp:151
 msgctxt "genre"
 msgid "Arcade"
 msgstr "⟦Årçàdé~~⟧"
 
+#: port/app/gameinfo.cpp:152
 msgctxt "genre"
 msgid "Baseball"
 msgstr "⟦Bàsébàll~~~⟧"
 
+#: port/app/gameinfo.cpp:152
 msgctxt "genre"
 msgid "Basketball"
 msgstr "⟦Bàskétbàll~~~~⟧"
 
+#: port/app/gameinfo.cpp:153
 msgctxt "genre"
 msgid "Beat 'em up"
 msgstr "⟦Béàt 'ém ûp~~~~⟧"
 
+#: port/app/gameinfo.cpp:153
 msgctxt "genre"
 msgid "Billiards"
 msgstr "⟦Bîllîàrds~~~⟧"
 
+#: port/app/gameinfo.cpp:154
 msgctxt "genre"
 msgid "Board game"
 msgstr "⟦Böàrd gàmé~~~~⟧"
 
+#: port/app/gameinfo.cpp:154
 msgctxt "genre"
 msgid "Bowling"
 msgstr "⟦Böwlîñg~~⟧"
 
+#: port/app/gameinfo.cpp:154
 msgctxt "genre"
 msgid "Boxing"
 msgstr "⟦Böxîñg~~⟧"
 
+#: port/app/gameinfo.cpp:155
 msgctxt "genre"
 msgid "Business simulation"
 msgstr "⟦Bûsîñéss sîmûlàtîöñ~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:155
 msgctxt "genre"
 msgid "Cards"
 msgstr "⟦Çàrds~~⟧"
 
+#: port/app/gameinfo.cpp:156
 msgctxt "genre"
 msgid "Chess"
 msgstr "⟦Çhéss~~⟧"
 
+#: port/app/gameinfo.cpp:156
 msgctxt "genre"
 msgid "Coaching"
 msgstr "⟦Çöàçhîñg~~~⟧"
 
+#: port/app/gameinfo.cpp:156
 msgctxt "genre"
 msgid "Compilation"
 msgstr "⟦Çömpîlàtîöñ~~~~⟧"
 
+#: port/app/gameinfo.cpp:157
 msgctxt "genre"
 msgid "Construction simulation"
 msgstr "⟦Çöñstrûçtîöñ sîmûlàtîöñ~~~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:157
 msgctxt "genre"
 msgid "Cooking"
 msgstr "⟦Çöökîñg~~⟧"
 
+#: port/app/gameinfo.cpp:158
 msgctxt "genre"
 msgid "Dance"
 msgstr "⟦Dàñçé~~⟧"
 
+#: port/app/gameinfo.cpp:158
 msgctxt "genre"
 msgid "Darts"
 msgstr "⟦Dàrts~~⟧"
 
+#: port/app/gameinfo.cpp:158
 msgctxt "genre"
 msgid "Demo"
 msgstr "⟦Démö~⟧"
 
+#: port/app/gameinfo.cpp:159
 msgctxt "genre"
 msgid "Drawing"
 msgstr "⟦Dràwîñg~~⟧"
 
+#: port/app/gameinfo.cpp:159
 msgctxt "genre"
 msgid "Educational"
 msgstr "⟦Édûçàtîöñàl~~~~⟧"
 
+#: port/app/gameinfo.cpp:159
 msgctxt "genre"
 msgid "Exercise"
 msgstr "⟦Éxérçîsé~~~⟧"
 
+#: port/app/gameinfo.cpp:160
 msgctxt "genre"
 msgid "Fantasy"
 msgstr "⟦Fàñtàsÿ~~⟧"
 
+#: port/app/gameinfo.cpp:160
 msgctxt "genre"
 msgid "Fighting"
 msgstr "⟦Fîghtîñg~~~⟧"
 
+#: port/app/gameinfo.cpp:161
 msgctxt "genre"
 msgid "First-person shooter"
 msgstr "⟦Fîrst-pérsöñ shöötér~~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:161
 msgctxt "genre"
 msgid "Fishing"
 msgstr "⟦Fîshîñg~~⟧"
 
+#: port/app/gameinfo.cpp:162
 msgctxt "genre"
 msgid "Fitness"
 msgstr "⟦Fîtñéss~~⟧"
 
+#: port/app/gameinfo.cpp:162
 msgctxt "genre"
 msgid "Flight simulation"
 msgstr "⟦Flîght sîmûlàtîöñ~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:163
 msgctxt "genre"
 msgid "American football"
 msgstr "⟦Åmérîçàñ föötbàll~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:163
 msgctxt "genre"
 msgid "Futuristic racing"
 msgstr "⟦Fûtûrîstîç ràçîñg~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:164
 msgctxt "genre"
 msgid "Golf"
 msgstr "⟦Gölf~⟧"
 
+#: port/app/gameinfo.cpp:164
 msgctxt "genre"
 msgid "Health"
 msgstr "⟦Héàlth~~⟧"
 
+#: port/app/gameinfo.cpp:164
 msgctxt "genre"
 msgid "Hidden object"
 msgstr "⟦Hîddéñ öbjéçt~~~~~⟧"
 
+#: port/app/gameinfo.cpp:165
 msgctxt "genre"
 msgid "Historic"
 msgstr "⟦Hîstörîç~~~⟧"
 
+#: port/app/gameinfo.cpp:165
 msgctxt "genre"
 msgid "Hockey"
 msgstr "⟦Höçkéÿ~~⟧"
 
+#: port/app/gameinfo.cpp:165
 msgctxt "genre"
 msgid "Horror"
 msgstr "⟦Hörrör~~⟧"
 
+#: port/app/gameinfo.cpp:166
 msgctxt "genre"
 msgid "Hunting"
 msgstr "⟦Hûñtîñg~~⟧"
 
+#: port/app/gameinfo.cpp:166
 msgctxt "genre"
 msgid "Interactive movie"
 msgstr "⟦Îñtéràçtîvé mövîé~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:167
 msgctxt "genre"
 msgid "Karaoke"
 msgstr "⟦Kàràöké~~⟧"
 
+#: port/app/gameinfo.cpp:167
 msgctxt "genre"
 msgid "Kart racing"
 msgstr "⟦Kàrt ràçîñg~~~~⟧"
 
+#: port/app/gameinfo.cpp:168
 msgctxt "genre"
 msgid "Life simulation"
 msgstr "⟦Lîfé sîmûlàtîöñ~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:168
 msgctxt "genre"
 msgid "Management simulation"
 msgstr "⟦Màñàgéméñt sîmûlàtîöñ~~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:169
 msgctxt "genre"
 msgid "Motorcycle racing"
 msgstr "⟦Mötörçÿçlé ràçîñg~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:169
 msgctxt "genre"
 msgid "Multimedia"
 msgstr "⟦Mûltîmédîà~~~~⟧"
 
+#: port/app/gameinfo.cpp:170
 msgctxt "genre"
 msgid "Music"
 msgstr "⟦Mûsîç~~⟧"
 
+#: port/app/gameinfo.cpp:170
 msgctxt "genre"
 msgid "Off-road racing"
 msgstr "⟦Öff-röàd ràçîñg~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:170
 msgctxt "genre"
 msgid "Party"
 msgstr "⟦Pàrtÿ~~⟧"
 
+#: port/app/gameinfo.cpp:171
 msgctxt "genre"
 msgid "Pinball"
 msgstr "⟦Pîñbàll~~⟧"
 
+#: port/app/gameinfo.cpp:171
 msgctxt "genre"
 msgid "Platformer"
 msgstr "⟦Plàtförmér~~~~⟧"
 
+#: port/app/gameinfo.cpp:172
 msgctxt "genre"
 msgid "Point-and-click"
 msgstr "⟦Pöîñt-àñd-çlîçk~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:172
 msgctxt "genre"
 msgid "Poker"
 msgstr "⟦Pökér~~⟧"
 
+#: port/app/gameinfo.cpp:172
 msgctxt "genre"
 msgid "Puzzle"
 msgstr "⟦Pûzzlé~~⟧"
 
+#: port/app/gameinfo.cpp:173
 msgctxt "genre"
 msgid "Racing"
 msgstr "⟦Ràçîñg~~⟧"
 
+#: port/app/gameinfo.cpp:173
 msgctxt "genre"
 msgid "Rail shooter"
 msgstr "⟦Ràîl shöötér~~~~⟧"
 
+#: port/app/gameinfo.cpp:174
 msgctxt "genre"
 msgid "Real-time strategy"
 msgstr "⟦Réàl-tîmé stràtégÿ~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:174
 msgctxt "genre"
 msgid "Rhythm"
 msgstr "⟦Rhÿthm~~⟧"
 
+#: port/app/gameinfo.cpp:175
 msgctxt "genre"
 msgid "Roguelike"
 msgstr "⟦Rögûélîké~~~⟧"
 
+#: port/app/gameinfo.cpp:175
 msgctxt "genre"
 msgid "Role-playing"
 msgstr "⟦Rölé-plàÿîñg~~~~⟧"
 
+#: port/app/gameinfo.cpp:176
 msgctxt "genre"
 msgid "Run and gun"
 msgstr "⟦Rûñ àñd gûñ~~~~⟧"
 
+#: port/app/gameinfo.cpp:176
 msgctxt "genre"
 msgid "Sci-fi"
 msgstr "⟦Sçî-fî~~⟧"
 
+#: port/app/gameinfo.cpp:177
 msgctxt "genre"
 msgid "Shoot 'em up"
 msgstr "⟦Shööt 'ém ûp~~~~⟧"
 
+#: port/app/gameinfo.cpp:177
 msgctxt "genre"
 msgid "Shooter"
 msgstr "⟦Shöötér~~⟧"
 
+#: port/app/gameinfo.cpp:178
 msgctxt "genre"
 msgid "Simulation"
 msgstr "⟦Sîmûlàtîöñ~~~~⟧"
 
+#: port/app/gameinfo.cpp:178
 msgctxt "genre"
 msgid "Skateboarding"
 msgstr "⟦Skàtéböàrdîñg~~~~~⟧"
 
+#: port/app/gameinfo.cpp:179
 msgctxt "genre"
 msgid "Snowboarding"
 msgstr "⟦Sñöwböàrdîñg~~~~⟧"
 
+#: port/app/gameinfo.cpp:179
 msgctxt "genre"
 msgid "Football"
 msgstr "⟦Föötbàll~~~⟧"
 
+#: port/app/gameinfo.cpp:180
 msgctxt "genre"
 msgid "Software"
 msgstr "⟦Söftwàré~~~⟧"
 
+#: port/app/gameinfo.cpp:180
 msgctxt "genre"
 msgid "Sports"
 msgstr "⟦Spörts~~⟧"
 
+#: port/app/gameinfo.cpp:181
 msgctxt "genre"
 msgid "Stealth action"
 msgstr "⟦Stéàlth àçtîöñ~~~~~⟧"
 
+#: port/app/gameinfo.cpp:181
 msgctxt "genre"
 msgid "Strategy"
 msgstr "⟦Stràtégÿ~~~⟧"
 
+#: port/app/gameinfo.cpp:182
 msgctxt "genre"
 msgid "Strategy RPG"
 msgstr "⟦Stràtégÿ RPG~~~~⟧"
 
+#: port/app/gameinfo.cpp:182
 msgctxt "genre"
 msgid "Survival horror"
 msgstr "⟦Sûrvîvàl hörrör~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:183
 msgctxt "genre"
 msgid "Table tennis"
 msgstr "⟦Tàblé téññîs~~~~⟧"
 
+#: port/app/gameinfo.cpp:183
 msgctxt "genre"
 msgid "Tactical RPG"
 msgstr "⟦Tàçtîçàl RPG~~~~⟧"
 
+#: port/app/gameinfo.cpp:184
 msgctxt "genre"
 msgid "Tennis"
 msgstr "⟦Téññîs~~⟧"
 
+#: port/app/gameinfo.cpp:184
 msgctxt "genre"
 msgid "Third-person shooter"
 msgstr "⟦Thîrd-pérsöñ shöötér~~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:185
 msgctxt "genre"
 msgid "Tower defence"
 msgstr "⟦Töwér déféñçé~~~~~⟧"
 
+#: port/app/gameinfo.cpp:185
 msgctxt "genre"
 msgid "Train simulation"
 msgstr "⟦Tràîñ sîmûlàtîöñ~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:186
 msgctxt "genre"
 msgid "Trivia"
 msgstr "⟦Trîvîà~~⟧"
 
+#: port/app/gameinfo.cpp:186
 msgctxt "genre"
 msgid "Truck racing"
 msgstr "⟦Trûçk ràçîñg~~~~⟧"
 
+#: port/app/gameinfo.cpp:187
 msgctxt "genre"
 msgid "Turn-based strategy"
 msgstr "⟦Tûrñ-bàséd stràtégÿ~~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:187
 msgctxt "genre"
 msgid "Virtual pet"
 msgstr "⟦Vîrtûàl pét~~~~⟧"
 
+#: port/app/gameinfo.cpp:188
 msgctxt "genre"
 msgid "Volleyball"
 msgstr "⟦Völléÿbàll~~~~⟧"
 
+#: port/app/gameinfo.cpp:188
 msgctxt "genre"
 msgid "Wargame"
 msgstr "⟦Wàrgàmé~~⟧"
 
+#: port/app/gameinfo.cpp:189
 msgctxt "genre"
 msgid "Watercraft racing"
 msgstr "⟦Wàtérçràft ràçîñg~~~~~~⟧"
 
+#: port/app/gameinfo.cpp:189
 msgctxt "genre"
 msgid "Wrestling"
 msgstr "⟦Wréstlîñg~~~⟧"
 
+#. the Wii U's controllers, by the names Nintendo gave them in the language
+#: port/app/ingame.cpp:134 port/frontend/actions.cpp:299
+#, menu
 msgid "Wii U GamePad"
 msgstr "⟦Wîî Ü GàméPàd~~~~~⟧"
 
+#: port/app/ingame.cpp:135 port/frontend/actions.cpp:300
+#, menu
 msgid "Wii U Pro Controller"
 msgstr "⟦Wîî Ü Prö Çöñtröllér~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:136 port/frontend/actions.cpp:301
+#, menu
 msgid "Classic Controller"
 msgstr "⟦Çlàssîç Çöñtröllér~~~~~~~⟧"
 
+#: port/app/ingame.cpp:137 port/frontend/actions.cpp:302
+#, menu
 msgid "Wii Remote"
 msgstr "⟦Wîî Rémöté~~~~⟧"
 
+#: port/app/ingame.cpp:138 port/frontend/actions.cpp:303
+#, menu
 msgid "Wii Remote + Nunchuk"
 msgstr "⟦Wîî Rémöté + Ñûñçhûk~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:141 port/frontend/actions.cpp:306
+#, menu
 msgid "No controller"
 msgstr "⟦Ñö çöñtröllér~~~~~⟧"
 
+#. how a game's picture is scaled: the methods' names
+#: port/app/ingame.cpp:164
+#, menu
 msgid "Bilinear"
 msgstr "⟦Bîlîñéàr~~~⟧"
 
+#. how a game's picture is scaled: the methods' names
+#. texture filters: None, then the filters' own names
+#: port/app/ingame.cpp:164 port/app/ingame3ds.cpp:119 port/frontend/shell/settings.cpp:47 port/frontend/shell/settings.cpp:49
+#, menu
 msgid "Bicubic"
 msgstr "⟦Bîçûbîç~~⟧"
 
+#. how a game's picture is scaled: the methods' names
+#: port/app/ingame.cpp:164 port/frontend/shell/settings.cpp:49
+#, menu
 msgid "Bicubic Hermite"
 msgstr "⟦Bîçûbîç Hérmîté~~~~~~⟧"
 
+#. how a game's picture is scaled: the methods' names
+#: port/app/ingame.cpp:164 port/frontend/shell/settings.cpp:49
+#, menu
 msgid "Nearest neighbour"
 msgstr "⟦Ñéàrést ñéîghböûr~~~~~~⟧"
 
+#: port/app/ingame.cpp:178 port/app/ingame.cpp:244 port/app/ingame.cpp:244 port/app/ingame3ds.cpp:441 port/frontend/shell/pages.cpp:540 port/frontend/shell/settings.cpp:200
+#, menu
 msgid "On"
 msgstr "⟦Öñ⟧"
 
+#: port/app/ingame.cpp:178 port/app/ingame.cpp:244 port/app/ingame.cpp:244 port/app/ingame.cpp:262 port/app/ingame3ds.cpp:441 port/frontend/shell/pages.cpp:540 port/frontend/shell/pages.cpp:546 port/frontend/shell/settings.cpp:51 port/frontend/shell/settings.cpp:200 port/ps5/display.h:43
+#, menu
 msgid "Off"
 msgstr "⟦Öff~⟧"
 
+#. the screens in the Wii U's menu: the TV's picture and the GamePad's
+#: port/app/ingame.cpp:180
+#, menu
 msgid "TV"
 msgstr "⟦TV⟧"
 
+#. the screens in the Wii U's menu: the TV's picture and the GamePad's
+#: port/app/ingame.cpp:180
+#, menu
 msgid "GamePad"
 msgstr "⟦GàméPàd~~⟧"
 
+#. the quick actions: big tiles at the top of the in-game menu, a word each
+#: port/app/ingame.cpp:181 port/app/ingame.cpp:303 port/app/ingame3ds.cpp:536
+#, menu
 msgid "Screens"
 msgstr "⟦Sçrééñs~~⟧"
 
+#: port/app/ingame.cpp:181 port/app/ingame.cpp:187
+#, menu
 msgid "Stretched"
 msgstr "⟦Strétçhéd~~~⟧"
 
+#: port/app/ingame.cpp:181
+#, menu
 msgid "Its shape"
 msgstr "⟦Îts shàpé~~~⟧"
 
+#: port/app/ingame.cpp:182
+#, menu
 msgid "The TV's and the GamePad's pictures, and how they fill the screen."
 msgstr "⟦Thé TV's àñd thé GàméPàd's pîçtûrés, àñd höw théÿ fîll thé sçrééñ.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. the 3DS's top and bottom screens
+#: port/app/ingame.cpp:183 port/app/ingame3ds.cpp:447
+#, menu
 msgid "Main screen"
 msgstr "⟦Màîñ sçrééñ~~~~⟧"
 
+#: port/app/ingame.cpp:184
+#, menu
 msgid "Which picture fills the TV: the TV's or the GamePad's. In the game, touchpad click + L1 swaps them."
 msgstr "⟦Whîçh pîçtûré fîlls thé TV: thé TV's ör thé GàméPàd's. Îñ thé gàmé, töûçhpàd çlîçk + L1 swàps thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:185
+#, menu
 msgid "TV in a corner"
 msgstr "⟦TV îñ à çörñér~~~~~⟧"
 
+#: port/app/ingame.cpp:185
+#, menu
 msgid "GamePad in a corner"
 msgstr "⟦GàméPàd îñ à çörñér~~~~~~~⟧"
 
+#: port/app/ingame.cpp:186
+#, menu
 msgid "The other screen, small in the bottom right corner. In the game, touchpad click + R1."
 msgstr "⟦Thé öthér sçrééñ, smàll îñ thé böttöm rîght çörñér. Îñ thé gàmé, töûçhpàd çlîçk + R1.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:187
+#, menu
 msgid "Picture"
 msgstr "⟦Pîçtûré~~⟧"
 
+#: port/app/ingame.cpp:187
+#, menu
 msgid "Its own shape"
 msgstr "⟦Îts öwñ shàpé~~~~~⟧"
 
+#: port/app/ingame.cpp:188
+#, menu
 msgid "Its own shape keeps the picture's proportions, with bars where they differ from the screen's; Stretched fills it."
 msgstr "⟦Îts öwñ shàpé kééps thé pîçtûré's pröpörtîöñs, wîth bàrs whéré théÿ dîffér fröm thé sçrééñ's; Strétçhéd fîlls ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:190 port/app/ingame3ds.cpp:452 port/frontend/shell/settings.cpp:96 port/frontend/shell/settings.cpp:102
+#, menu
 msgid "Graphics"
 msgstr "⟦Gràphîçs~~~⟧"
 
+#: port/app/ingame.cpp:191
+#, menu
 msgid "Upscaling, Cemu's accuracy settings and the performance overlay. Kept for the next games."
 msgstr "⟦Üpsçàlîñg, Çémû's àççûràçÿ séttîñgs àñd thé pérförmàñçé övérlàÿ. Képt för thé ñéxt gàmés.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:192 port/frontend/shell/settings.cpp:355
+#, menu
 msgid "Upscaling to 4K"
 msgstr "⟦Üpsçàlîñg tö 4K~~~~~~⟧"
 
+#: port/app/ingame.cpp:193
+#, menu
 msgid "How the picture is scaled to the screen: Bicubic is sharp, Hermite softer, Bilinear softer still."
 msgstr "⟦Höw thé pîçtûré îs sçàléd tö thé sçrééñ: Bîçûbîç îs shàrp, Hérmîté söftér, Bîlîñéàr söftér stîll.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:194
+#, menu
 msgid "Accurate barriers"
 msgstr "⟦Åççûràté bàrrîérs~~~~~~⟧"
 
+#: port/app/ingame.cpp:195
+#, menu
 msgid "Off can raise the frame rate, but some games then flicker or show wrong shadows. It changes at once."
 msgstr "⟦Öff çàñ ràîsé thé fràmé ràté, bût sömé gàmés théñ flîçkér ör shöw wröñg shàdöws. Ît çhàñgés àt öñçé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:196 port/frontend/shell/settings.cpp:370
+#, menu
 msgid "Async shader compile"
 msgstr "⟦Åsÿñç shàdér çömpîlé~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:197
+#, menu
 msgid "On, new shaders build while the game carries on: no stutter, but things may be missing for a moment."
 msgstr "⟦Öñ, ñéw shàdérs bûîld whîlé thé gàmé çàrrîés öñ: ñö stûttér, bût thîñgs màÿ bé mîssîñg för à möméñt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:198 port/frontend/shell/settings.cpp:363
+#, menu
 msgid "Frame pacing"
 msgstr "⟦Fràmé pàçîñg~~~~⟧"
 
+#: port/app/ingame.cpp:199
+#, menu
 msgid "Holds the game to an even rate: 60 fps for 4K at 120 Hz, 30 for 8K at 60 Hz. Off shows each frame when it is done."
 msgstr "⟦Hölds thé gàmé tö àñ évéñ ràté: 60 fps för 4K àt 120 Hz, 30 för 8K àt 60 Hz. Öff shöws éàçh fràmé whéñ ît îs döñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:200 port/app/ingame3ds.cpp:458 port/frontend/shell/settings.cpp:368
+#, menu
 msgid "Performance overlay"
 msgstr "⟦Pérförmàñçé övérlàÿ~~~~~~~⟧"
 
+#: port/app/ingame.cpp:201
+#, menu
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them."
 msgstr "⟦Fràmés pér séçöñd, ÇPÜ àñd mémörÿ ûsé îñ thé töp léft çörñér, às Çémû shöws thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:214 port/app/ingame.cpp:244
+#, menu
 msgid "{0} (next start)"
 msgstr "⟦{0} (ñéxt stàrt)~~~~~⟧"
 
+#: port/app/ingame.cpp:215
+#, menu
 msgid "This pack replaces textures: the game shows the change when it starts again."
 msgstr "⟦Thîs pàçk réplàçés téxtûrés: thé gàmé shöws thé çhàñgé whéñ ît stàrts àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:216
+#, menu
 msgid "Cross turns it on or off; the game shows it at once."
 msgstr "⟦Çröss tûrñs ît öñ ör öff; thé gàmé shöws ît àt öñçé.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:224 port/frontend/shell/pages.cpp:268 port/frontend/shell/pages.cpp:357
+#, menu
 msgid "Preset"
 msgstr "⟦Prését~~⟧"
 
+#: port/app/ingame.cpp:226
+#, menu
 msgid "Left and Right choose another; the game shows it at once."
 msgstr "⟦Léft àñd Rîght çhöösé àñöthér; thé gàmé shöws ît àt öñçé.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:230
+#, menu
 msgid "None for this game"
 msgstr "⟦Ñöñé för thîs gàmé~~~~~~~⟧"
 
+#: port/app/ingame.cpp:230
+#, menu
 msgid "Reading the packs…"
 msgstr "⟦Réàdîñg thé pàçks…~~~~~~~⟧"
 
+#: port/app/ingame.cpp:231
+#, menu
 msgid "The community graphic packs have none for this game."
 msgstr "⟦Thé çömmûñîtÿ gràphîç pàçks hàvé ñöñé för thîs gàmé.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:233 port/app/ingame.cpp:304 port/frontend/shell/home.cpp:469 port/frontend/shell/hub.cpp:224 port/frontend/shell/pages.cpp:292 port/frontend/shell/shell.cpp:1119
+#, menu
 msgid "Graphic packs"
 msgstr "⟦Gràphîç pàçks~~~~~⟧"
 
+#. amiibo is Nintendo's name for its figures, as it writes it in the language
+#: port/app/ingame.cpp:233 port/app/ingame.cpp:269 port/app/ingame.cpp:304 port/app/ingame3ds.cpp:435
+#, menu
 msgid "None"
 msgstr "⟦Ñöñé~⟧"
 
+#: port/app/ingame.cpp:233 port/app/ingame.cpp:262 port/frontend/shell/home.cpp:469
+#, menu
 msgid "{0} on"
 msgid_plural "{0} on"
 msgstr[0] "⟦{0} öñ~⟧"
 msgstr[1] "⟦{0} öñ~⟧"
 
+#: port/app/ingame.cpp:234
+#, menu
 msgid "The game's community graphic packs: resolution, frame rate and mods, as Cemu's Graphic Packs window has them."
 msgstr "⟦Thé gàmé's çömmûñîtÿ gràphîç pàçks: résölûtîöñ, fràmé ràté àñd möds, às Çémû's Gràphîç Pàçks wîñdöw hàs thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:245
+#, menu
 msgid "The game sees the change when it starts again: the portal is plugged in as a game starts."
 msgstr "⟦Thé gàmé séés thé çhàñgé whéñ ît stàrts àgàîñ: thé pörtàl îs plûggéd îñ às à gàmé stàrts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:246
+#, menu
 msgid "Plugged in as a game starts, as in Cemu. Its figures are below while it is on."
 msgstr "⟦Plûggéd îñ às à gàmé stàrts, às îñ Çémû. Îts fîgûrés àré bélöw whîlé ît îs öñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:254 port/app/ingame3ds.cpp:511
+#, menu
 msgid "Empty"
 msgstr "⟦Émptÿ~~⟧"
 
+#: port/app/ingame.cpp:255
+#, menu
 msgid "Put figure dumps in {0} to put them on here."
 msgstr "⟦Pût fîgûré dûmps îñ ~~~~~~~~{0} tö pût thém öñ héré.~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:256
+#, menu
 msgid "Left and Right put the next figure on it; Empty takes it off."
 msgstr "⟦Léft àñd Rîght pût thé ñéxt fîgûré öñ ît; Émptÿ tàkés ît öff.~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:260
+#, menu
 msgid "The last figure could not be put on."
 msgstr "⟦Thé làst fîgûré çöûld ñöt bé pût öñ.~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:262 port/frontend/shell/settings.cpp:98
+#, menu
 msgid "USB devices"
 msgstr "⟦ÜSB dévîçés~~~~⟧"
 
+#: port/app/ingame.cpp:263
+#, menu
 msgid "Skylanders, Disney Infinity and LEGO Dimensions figures on Cemu's emulated portals, as amiibo are scanned."
 msgstr "⟦Skÿlàñdérs, Dîsñéÿ Îñfîñîtÿ àñd LÉGÖ Dîméñsîöñs fîgûrés öñ Çémû's émûlàtéd pörtàls, às àmîîbö àré sçàññéd.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:265 port/app/ingame3ds.cpp:469
+#, menu
 msgid "Volume"
 msgstr "⟦Völûmé~~⟧"
 
+#: port/app/ingame.cpp:265 port/app/ingame3ds.cpp:469
+#, menu
 msgid "The game's sound. Left and Right change it by 10%."
 msgstr "⟦Thé gàmé's söûñd. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. amiibo is Nintendo's name for its figures, as it writes it in the language
+#: port/app/ingame.cpp:269 port/app/ingame.cpp:304 port/app/ingame3ds.cpp:490 port/app/ingame3ds.cpp:491
+#, menu
 msgid "Amiibo"
 msgstr "⟦Åmîîbö~~⟧"
 
+#: port/app/ingame.cpp:271 port/app/ingame3ds.cpp:492
+#, menu
 msgid "Put amiibo dumps (.bin) in /data/ps5cemu/amiibo to scan them here."
 msgstr "⟦Pût àmîîbö dûmps (.bîñ) îñ /dàtà/ps5çémû/àmîîbö tö sçàñ thém héré.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:272
+#, menu
 msgid "Left and Right choose an amiibo dump; Cross touches it to the GamePad when the game asks for one."
 msgstr "⟦Léft àñd Rîght çhöösé àñ àmîîbö dûmp; Çröss töûçhés ît tö thé GàméPàd whéñ thé gàmé àsks för öñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:273 port/app/ingame3ds.cpp:497 port/frontend/shell/pages.cpp:705 port/frontend/shell/settings.cpp:105
+#, menu
 msgid "Controls"
 msgstr "⟦Çöñtröls~~~⟧"
 
+#: port/app/ingame.cpp:274
+#, menu
 msgid "Each player's controller, motion, vibration, deadzones and A and B."
 msgstr "⟦Éàçh plàÿér's çöñtröllér, mötîöñ, vîbràtîöñ, déàdzöñés àñd Å àñd B.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:275
+#, menu
 msgid "Player"
 msgstr "⟦Plàÿér~~⟧"
 
+#: port/app/ingame.cpp:275
+#, menu
 msgid "{0} (no DualSense)"
 msgstr "⟦{0} (ñö DûàlSéñsé)~~~~~~⟧"
 
+#: port/app/ingame.cpp:276
+#, menu
 msgid "Whose controller the settings below are: Left and Right choose the player."
 msgstr "⟦Whösé çöñtröllér thé séttîñgs bélöw àré: Léft àñd Rîght çhöösé thé plàÿér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:277 port/frontend/shell/pages.cpp:431 port/frontend/shell/pages.cpp:468 port/frontend/shell/pages.cpp:539
+#, menu
 msgid "Emulated controller"
 msgstr "⟦Émûlàtéd çöñtröllér~~~~~~~⟧"
 
+#: port/app/ingame.cpp:278
+#, menu
 msgid "What the game sees in this player's hands. Most games want the GamePad for player 1."
 msgstr "⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds. Möst gàmés wàñt thé GàméPàd för plàÿér 1.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:279 port/app/ingame3ds.cpp:499 port/frontend/shell/pages.cpp:431 port/frontend/shell/pages.cpp:540 port/frontend/shell/settings.cpp:435
+#, menu
 msgid "Motion controls"
 msgstr "⟦Mötîöñ çöñtröls~~~~~~⟧"
 
+#: port/app/ingame.cpp:279 port/frontend/shell/pages.cpp:540
+#, menu
 msgid "None on this one"
 msgstr "⟦Ñöñé öñ thîs öñé~~~~~~⟧"
 
+#: port/app/ingame.cpp:280
+#, menu
 msgid "The DualSense's gyroscope and accelerometer, for the games that aim or steer by tilting."
 msgstr "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér, för thé gàmés thàt àîm ör stéér bÿ tîltîñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:281 port/frontend/shell/pages.cpp:431 port/frontend/shell/pages.cpp:546 port/frontend/shell/settings.cpp:301
+#, menu
 msgid "Vibration"
 msgstr "⟦Vîbràtîöñ~~~⟧"
 
+#: port/app/ingame.cpp:282
+#, menu
 msgid "How strongly the DualSense rumbles. Left and Right change it by 10%."
 msgstr "⟦Höw ströñglÿ thé DûàlSéñsé rûmblés. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:283 port/frontend/shell/pages.cpp:432 port/frontend/shell/pages.cpp:549
+#, menu
 msgid "Left stick deadzone"
 msgstr "⟦Léft stîçk déàdzöñé~~~~~~~⟧"
 
+#: port/app/ingame.cpp:284
+#, menu
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts."
 msgstr "⟦Höw fàr thé léft stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf à çhàràçtér drîfts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:285 port/frontend/shell/pages.cpp:432 port/frontend/shell/pages.cpp:552
+#, menu
 msgid "Right stick deadzone"
 msgstr "⟦Rîght stîçk déàdzöñé~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:286
+#, menu
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts."
 msgstr "⟦Höw fàr thé rîght stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf thé çàmérà drîfts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:287 port/app/ingame3ds.cpp:503
+#, menu
 msgid "A and B"
 msgstr "⟦Å àñd B~~⟧"
 
+#: port/app/ingame.cpp:287 port/app/ingame3ds.cpp:497 port/app/ingame3ds.cpp:503
+#, menu
 msgid "A on Circle"
 msgstr "⟦Å öñ Çîrçlé~~~~⟧"
 
+#: port/app/ingame.cpp:287 port/app/ingame3ds.cpp:497 port/app/ingame3ds.cpp:503
+#, menu
 msgid "A on Cross"
 msgstr "⟦Å öñ Çröss~~~~⟧"
 
-msgid "A on Circle as on the Wii U, or on Cross, with X and Y swapped to match. Every button: launcher's Settings > Controls."
-msgstr "⟦Å öñ Çîrçlé às öñ thé Wîî Ü, ör öñ Çröss, wîth X àñd Y swàppéd tö màtçh. Évérÿ bûttöñ: làûñçhér's Séttîñgs > Çöñtröls.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
+#: port/app/ingame.cpp:288
+#, menu
+msgid "A on Circle as on the Wii U, or on Cross, with X and Y swapped to match. Every button: the launcher's Settings > Wii U > Controllers."
+msgstr "⟦Å öñ Çîrçlé às öñ thé Wîî Ü, ör öñ Çröss, wîth X àñd Y swàppéd tö màtçh. Évérÿ bûttöñ: thé làûñçhér's Séttîñgs > Wîî Ü > Çöñtröllérs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame.cpp:290 port/app/ingame3ds.cpp:506
+#, menu
 msgid "Quit to the library"
 msgstr "⟦Qûît tö thé lîbràrÿ~~~~~~~⟧"
 
+#: port/app/ingame.cpp:291 port/app/ingame3ds.cpp:507
+#, menu
 msgid "Leaves the game for the library. What you have not saved in the game is lost, so Cross is held."
 msgstr "⟦Léàvés thé gàmé för thé lîbràrÿ. Whàt ÿöû hàvé ñöt sàvéd îñ thé gàmé îs löst, sö Çröss îs héld.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. the quick actions: big tiles at the top of the in-game menu, a word each
+#. the quick actions: big tiles at the top of the in-game menu, a word or two each
+#: port/app/ingame.cpp:303 port/app/ingame3ds.cpp:533
+#, menu
 msgid "Resume"
 msgstr "⟦Résûmé~~⟧"
 
+#. the quick actions: big tiles at the top of the in-game menu, a word each
+#: port/app/ingame.cpp:303
+#, menu
 msgid "GamePad main"
 msgstr "⟦GàméPàd màîñ~~~~⟧"
 
+#. the quick actions: big tiles at the top of the in-game menu, a word each
+#: port/app/ingame.cpp:303
+#, menu
 msgid "TV main"
 msgstr "⟦TV màîñ~~⟧"
 
+#: port/app/ingame.cpp:304
+#, menu
 msgid "Scan"
 msgstr "⟦Sçàñ~⟧"
 
+#. {0} is an amiibo dump's file name
+#: port/app/ingame.cpp:358 port/azahar/core.cpp:266
+#, menu
 msgid "Scanned {0}"
 msgstr "⟦Sçàññéd ~~~{0}⟧"
 
+#. {0} is an amiibo dump's file name
+#: port/app/ingame.cpp:358
+#, menu
 msgid "Not scanned (error {0})"
 msgstr "⟦Ñöt sçàññéd (érrör ~~~~~~~{0})⟧"
 
+#. the in-game menu's badge: the game goes on behind the menu (Cemu cannot pause it)
+#: port/app/ingame.cpp:489
+#, menu
 msgid "Running"
 msgstr "⟦Rûññîñg~~⟧"
 
+#: port/app/ingame.cpp:499 port/app/ingame3ds.cpp:664 port/frontend/shell/shell.cpp:905 port/frontend/shell/shell.cpp:909 port/frontend/shell/shell.cpp:914 port/frontend/shell/shell.cpp:928 port/frontend/shell/shell.cpp:929 port/frontend/shell/shell.cpp:935 port/frontend/shell/shell.cpp:943 port/frontend/shell/shell.cpp:946 port/frontend/shell/shell.cpp:1550
+#, menu
 msgid "Choose"
 msgstr "⟦Çhöösé~~⟧"
 
+#: port/app/ingame.cpp:499 port/app/ingame3ds.cpp:664 port/frontend/shell/shell.cpp:940 port/frontend/shell/shell.cpp:943 port/frontend/shell/shell.cpp:946 port/frontend/shell/shell.cpp:957
+#, menu
 msgid "Change"
 msgstr "⟦Çhàñgé~~⟧"
 
+#: port/app/ingame.cpp:499 port/app/ingame3ds.cpp:664
+#, menu
 msgid "Back to the game"
 msgstr "⟦Bàçk tö thé gàmé~~~~~~⟧"
 
+#: port/app/ingame.cpp:499 port/app/ingame3ds.cpp:664 port/frontend/shell/shell.cpp:923 port/frontend/shell/shell.cpp:936 port/frontend/shell/shell.cpp:940 port/frontend/shell/shell.cpp:944 port/frontend/shell/shell.cpp:946 port/frontend/shell/shell.cpp:950 port/frontend/shell/shell.cpp:954 port/frontend/shell/shell.cpp:958
+#, menu
 msgid "Back"
 msgstr "⟦Bàçk~⟧"
 
+#. the 3DS's screen layouts
+#: port/app/ingame3ds.cpp:117 port/frontend/shell/settings.cpp:45
+#, menu
 msgid "Top above bottom"
 msgstr "⟦Töp àbövé böttöm~~~~~~⟧"
 
+#. the 3DS's screen layouts
+#: port/app/ingame3ds.cpp:117 port/frontend/shell/settings.cpp:45
+#, menu
 msgid "Top screen only"
 msgstr "⟦Töp sçrééñ öñlÿ~~~~~~⟧"
 
+#. the 3DS's screen layouts
+#: port/app/ingame3ds.cpp:117 port/frontend/shell/settings.cpp:45
+#, menu
 msgid "Large top screen"
 msgstr "⟦Làrgé töp sçrééñ~~~~~~⟧"
 
+#. the 3DS's screen layouts
+#: port/app/ingame3ds.cpp:117 port/frontend/shell/settings.cpp:45
+#, menu
 msgid "Side by side"
 msgstr "⟦Sîdé bÿ sîdé~~~~⟧"
 
+#. texture filters: None, then the filters' own names
+#: port/app/ingame3ds.cpp:119 port/frontend/shell/settings.cpp:47
+#, menu
 msgctxt "texture filter"
 msgid "None"
 msgstr "⟦Ñöñé~⟧"
 
+#: port/app/ingame3ds.cpp:442
+#, menu
 msgid "Screens and border"
 msgstr "⟦Sçrééñs àñd bördér~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:443
+#, menu
 msgid "The screens' layout, which one is the main one, and the border."
 msgstr "⟦Thé sçrééñs' làÿöût, whîçh öñé îs thé màîñ öñé, àñd thé bördér.~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:444
+#, menu
 msgid "Layout"
 msgstr "⟦Làÿöût~~⟧"
 
+#: port/app/ingame3ds.cpp:445
+#, menu
 msgid "How the two screens share the TV. In the game, touchpad click + R1 goes to the next."
 msgstr "⟦Höw thé twö sçrééñs shàré thé TV. Îñ thé gàmé, töûçhpàd çlîçk + R1 göés tö thé ñéxt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. the 3DS's top and bottom screens
+#: port/app/ingame3ds.cpp:447
+#, menu
 msgid "Bottom"
 msgstr "⟦Böttöm~~⟧"
 
+#. the 3DS's top and bottom screens
+#: port/app/ingame3ds.cpp:447
+#, menu
 msgid "Top"
 msgstr "⟦Töp~⟧"
 
+#: port/app/ingame3ds.cpp:448
+#, menu
 msgid "Which screen takes the top screen's place. In the game, touchpad click + L1 swaps them."
 msgstr "⟦Whîçh sçrééñ tàkés thé töp sçrééñ's plàçé. Îñ thé gàmé, töûçhpàd çlîçk + L1 swàps thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:449 port/frontend/shell/settings.cpp:430
+#, menu
 msgid "Border"
 msgstr "⟦Bördér~~⟧"
 
+#: port/app/ingame3ds.cpp:450
+#, menu
 msgid "Artwork around the screens, never over them. Also in the launcher's Settings > Screens and borders."
 msgstr "⟦Årtwörk àröûñd thé sçrééñs, ñévér övér thém. Ålsö îñ thé làûñçhér's Séttîñgs > Sçrééñs àñd bördérs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:453
+#, menu
 msgid "Internal resolution, texture filter and the performance overlay."
 msgstr "⟦Îñtérñàl résölûtîöñ, téxtûré fîltér àñd thé pérförmàñçé övérlàÿ.~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:454 port/frontend/shell/settings.cpp:415
+#, menu
 msgid "Internal resolution"
 msgstr "⟦Îñtérñàl résölûtîöñ~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:455
+#, menu
 msgid "How large the 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU."
 msgstr "⟦Höw làrgé thé 3D sçéñés àré dràwñ béföré théÿ àré sçàléd tö thé TV. Hîghér îs shàrpér àñd àsks möré öf thé GPÜ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:456 port/frontend/shell/settings.cpp:419
+#, menu
 msgid "Texture filter"
 msgstr "⟦Téxtûré fîltér~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:457
+#, menu
 msgid "Smooths textures as they are scaled up. The costliest setting here: if a game stutters, try None first."
 msgstr "⟦Smööths téxtûrés às théÿ àré sçàléd ûp. Thé çöstlîést séttîñg héré: îf à gàmé stûttérs, trÿ Ñöñé fîrst.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:459
+#, menu
 msgid "The frame rate and the emulation's speed, in the top left corner."
 msgstr "⟦Thé fràmé ràté àñd thé émûlàtîöñ's spééd, îñ thé töp léft çörñér.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:461
+#, menu
 msgid "Speed"
 msgstr "⟦Spééd~~⟧"
 
+#: port/app/ingame3ds.cpp:461
+#, menu
 msgid "Unlimited"
 msgstr "⟦Üñlîmîtéd~~~⟧"
 
+#: port/app/ingame3ds.cpp:462
+#, menu
 msgid "The emulated CPU's clock, and how fast the game may run."
 msgstr "⟦Thé émûlàtéd ÇPÜ's çlöçk, àñd höw fàst thé gàmé màÿ rûñ.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:463
+#, menu
 msgid "CPU clock"
 msgstr "⟦ÇPÜ çlöçk~~~⟧"
 
+#: port/app/ingame3ds.cpp:464
+#, menu
 msgid "Below 100% can bring a slow game to full speed; above it smooths games that dropped frames on the 3DS."
 msgstr "⟦Bélöw 100% çàñ brîñg à slöw gàmé tö fûll spééd; àbövé ît smööths gàmés thàt dröppéd fràmés öñ thé 3DS.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. no speed limit
+#: port/app/ingame3ds.cpp:466
+#, menu
 msgid "Speed limit"
 msgstr "⟦Spééd lîmît~~~~⟧"
 
+#. no speed limit
+#: port/app/ingame3ds.cpp:466
+#, menu
 msgctxt "speed limit"
 msgid "None"
 msgstr "⟦Ñöñé~⟧"
 
+#: port/app/ingame3ds.cpp:467
+#, menu
 msgid "Above 100% hurries through slow scenes; None runs as fast as the PS5 can. For this game only."
 msgstr "⟦Åbövé 100% hûrrîés thröûgh slöw sçéñés; Ñöñé rûñs às fàst às thé PS5 çàñ. För thîs gàmé öñlÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:471
+#, menu
 msgid "Save states"
 msgstr "⟦Sàvé stàtés~~~~⟧"
 
+#: port/app/ingame3ds.cpp:471 port/app/ingame3ds.cpp:534 port/app/ingame3ds.cpp:535
+#, menu
 msgid "Slot {0}"
 msgstr "⟦Slöt ~~{0}⟧"
 
+#: port/app/ingame3ds.cpp:472
+#, menu
 msgid "Five slots for this game: save exactly where you are, and come back to it."
 msgstr "⟦Fîvé slöts för thîs gàmé: sàvé éxàçtlÿ whéré ÿöû àré, àñd çömé bàçk tö ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. a save state slot's number, then when it was saved (or empty)
+#: port/app/ingame3ds.cpp:474
+#, menu
 msgid "Slot"
 msgstr "⟦Slöt~⟧"
 
+#. a save state slot's number, then when it was saved (or empty)
+#: port/app/ingame3ds.cpp:474
+#, menu
 msgid "(empty)"
 msgstr "⟦(émptÿ)~~⟧"
 
+#: port/app/ingame3ds.cpp:475
+#, menu
 msgid "Which of this game's five slots to save to or load from."
 msgstr "⟦Whîçh öf thîs gàmé's fîvé slöts tö sàvé tö ör löàd fröm.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:476
+#, menu
 msgid "Save to this slot"
 msgstr "⟦Sàvé tö thîs slöt~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:477
+#, menu
 msgid "Saves the game as it is now, replacing what the slot had. Newer app versions may not load it: keep saving in the game too."
 msgstr "⟦Sàvés thé gàmé às ît îs ñöw, réplàçîñg whàt thé slöt hàd. Ñéwér àpp vérsîöñs màÿ ñöt löàd ît: kéép sàvîñg îñ thé gàmé töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:479
+#, menu
 msgid "Cheats"
 msgstr "⟦Çhéàts~~⟧"
 
+#: port/app/ingame3ds.cpp:479
+#, menu
 msgid "The game's cheats, from azahar/cheats/<title ID>.txt (Gateway format)."
 msgstr "⟦Thé gàmé's çhéàts, fröm àzàhàr/çhéàts/<tîtlé ÎD>.txt (Gàtéwàÿ förmàt).~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:482
+#, menu
 msgid "Cross, Left or Right turns it on or off, at once; it is kept for next time."
 msgstr "⟦Çröss, Léft ör Rîght tûrñs ît öñ ör öff, àt öñçé; ît îs képt för ñéxt tîmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:484
+#, menu
 msgid "No cheats for this game"
 msgstr "⟦Ñö çhéàts för thîs gàmé~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:485
+#, menu
 msgid "Put them in /data/ps5cemu/azahar/cheats/<title ID>.txt, then start the game again."
 msgstr "⟦Pût thém îñ /dàtà/ps5çémû/àzàhàr/çhéàts/<tîtlé ÎD>.txt, théñ stàrt thé gàmé àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. how many of the game's cheats are on: {0} of {1}
+#: port/app/ingame3ds.cpp:488
+#, menu
 msgid "{0} of {1} on"
 msgstr "⟦{0} öf ~{1} öñ~⟧"
 
+#: port/app/ingame3ds.cpp:490
+#, menu
 msgid "Hold an amiibo dump to the 3DS's reader when the game asks for one."
 msgstr "⟦Höld àñ àmîîbö dûmp tö thé 3DS's réàdér whéñ thé gàmé àsks för öñé.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:493
+#, menu
 msgid "Left and Right choose an amiibo dump; Cross holds it to the reader."
 msgstr "⟦Léft àñd Rîght çhöösé àñ àmîîbö dûmp; Çröss hölds ît tö thé réàdér.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:494
+#, menu
 msgid "Take the amiibo away"
 msgstr "⟦Tàké thé àmîîbö àwàÿ~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:494
+#, menu
 msgid "Takes the amiibo off the reader, as lifting it off would."
 msgstr "⟦Tàkés thé àmîîbö öff thé réàdér, às lîftîñg ît öff wöûld.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:498
+#, menu
 msgid "Motion controls, the sticks' deadzone and where A and B are."
 msgstr "⟦Mötîöñ çöñtröls, thé stîçks' déàdzöñé àñd whéré Å àñd B àré.~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:500
+#, menu
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's, for the games that aim or steer by tilting."
 msgstr "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér às thé 3DS's, för thé gàmés thàt àîm ör stéér bÿ tîltîñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:501 port/frontend/shell/settings.cpp:437
+#, menu
 msgid "Stick deadzone"
 msgstr "⟦Stîçk déàdzöñé~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:502
+#, menu
 msgid "How far a stick moves before the game sees it. Raise it if something drifts when you let go."
 msgstr "⟦Höw fàr à stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf söméthîñg drîfts whéñ ÿöû lét gö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:504
+#, menu
 msgid "A on Circle and B on Cross, where the 3DS has them, or the other way round, with X and Y swapped to match."
 msgstr "⟦Å öñ Çîrçlé àñd B öñ Çröss, whéré thé 3DS hàs thém, ör thé öthér wàÿ röûñd, wîth X àñd Y swàppéd tö màtçh.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:511
+#, menu
 msgid "Load this slot"
 msgstr "⟦Löàd thîs slöt~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:512
+#, menu
 msgid "Goes back to the moment the slot was saved. What you did since is lost, so Cross is held."
 msgstr "⟦Göés bàçk tö thé möméñt thé slöt wàs sàvéd. Whàt ÿöû dîd sîñçé îs löst, sö Çröss îs héld.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:534
+#, menu
 msgid "Save state"
 msgstr "⟦Sàvé stàté~~~~⟧"
 
+#: port/app/ingame3ds.cpp:535
+#, menu
 msgid "Load state"
 msgstr "⟦Löàd stàté~~~~⟧"
 
+#: port/app/ingame3ds.cpp:535
+#, menu
 msgid "Slot {0} empty"
 msgstr "⟦Slöt ~~{0} émptÿ~~⟧"
 
+#: port/app/ingame3ds.cpp:542
+#, menu
 msgid "Slot {0}: {1}"
 msgstr "⟦Slöt ~~{0}: {1}⟧"
 
+#: port/app/ingame3ds.cpp:596
+#, menu
 msgid "Slot {0} is empty"
 msgstr "⟦Slöt ~~{0} îs émptÿ~~~⟧"
 
+#: port/app/ingame3ds.cpp:604
+#, menu
 msgid "Saving…"
 msgstr "⟦Sàvîñg…~~⟧"
 
+#: port/app/ingame3ds.cpp:604
+#, menu
 msgid "Loading…"
 msgstr "⟦Löàdîñg…~~~⟧"
 
+#. the in-game menu's badge: the game waits behind the menu
+#: port/app/ingame3ds.cpp:657
+#, menu
 msgid "Paused"
 msgstr "⟦Pàûséd~~⟧"
 
+#: port/app/ingame3ds.cpp:710 port/frontend/shell/shell.cpp:1522 port/frontend/shell/shell.cpp:1551
+#, menu
 msgid "OK"
 msgstr "⟦ÖK⟧"
 
+#. over the 3DS's keyboard: what the game asks to have typed
+#: port/app/ingame3ds.cpp:727
+#, menu
 msgid "The game asks for"
 msgstr "⟦Thé gàmé àsks för~~~~~~⟧"
 
+#: port/app/ingame3ds.cpp:728
+#, menu
 msgid "Some text"
 msgstr "⟦Sömé téxt~~~⟧"
 
+#. the 3DS keyboard's keys
+#: port/app/ingame3ds.cpp:757
+#, menu
 msgid "Shift: on"
 msgstr "⟦Shîft: öñ~~~⟧"
 
+#. the 3DS keyboard's keys
+#: port/app/ingame3ds.cpp:757 port/app/ingame3ds.cpp:778
+#, menu
 msgid "Shift"
 msgstr "⟦Shîft~~⟧"
 
+#. the on-screen keyboard's keys
+#: port/app/ingame3ds.cpp:759 port/frontend/shell/shell.cpp:1473
+#, menu
 msgid "Space"
 msgstr "⟦Spàçé~~⟧"
 
+#. the on-screen keyboard's keys
+#: port/app/ingame3ds.cpp:761 port/app/ingame3ds.cpp:777 port/frontend/shell/shell.cpp:903 port/frontend/shell/shell.cpp:1473
+#, menu
 msgid "Delete"
 msgstr "⟦Délété~~⟧"
 
+#. the 3DS keyboard's hints: Cross types the focused key
+#: port/app/ingame3ds.cpp:776 port/frontend/shell/shell.cpp:903
+#, menu
 msgid "Type"
 msgstr "⟦Tÿpé~⟧"
 
+#. the 3DS borders' names (artwork around the screens)
+#: port/app/ingame3ds.h:106 port/frontend/shell/settings.cpp:34
 msgctxt "border"
 msgid "None"
 msgstr "⟦Ñöñé~⟧"
 
+#. the 3DS borders' names (artwork around the screens)
+#: port/app/ingame3ds.h:106 port/frontend/shell/settings.cpp:34
 msgctxt "border"
 msgid "Midnight"
 msgstr "⟦Mîdñîght~~~⟧"
 
+#. the 3DS borders' names (artwork around the screens)
+#: port/app/ingame3ds.h:107 port/frontend/shell/settings.cpp:34
 msgctxt "border"
 msgid "Waves"
 msgstr "⟦Wàvés~~⟧"
 
+#: port/app/ingame3ds.h:107 port/frontend/shell/settings.cpp:35
 msgctxt "border"
 msgid "Aurora"
 msgstr "⟦Åûrörà~~⟧"
 
+#: port/app/ingame3ds.h:107 port/frontend/shell/settings.cpp:35
 msgctxt "border"
 msgid "Shell"
 msgstr "⟦Shéll~~⟧"
 
+#. {0} and {1} are sizes (2.4 GB)
+#: port/app/install.cpp:103
 msgid "There is not enough space: it needs {0}, and {1} is free."
 msgstr "⟦Théré îs ñöt éñöûgh spàçé: ît ñééds ~~~~~~~~~~~~~~{0}, àñd ~~{1} îs fréé.~~~⟧"
 
+#: port/app/install.cpp:118
 msgid "What is installed there now could not be moved aside: {0}"
 msgstr "⟦Whàt îs îñstàlléd théré ñöw çöûld ñöt bé mövéd àsîdé: ~~~~~~~~~~~~~~~~~~~~~{0}⟧"
 
+#: port/app/install.cpp:176
 msgid "This one is not unpacked (title.tmd and .app files). Cemu reads it from the game files folder as it is: no install needed."
 msgstr "⟦Thîs öñé îs ñöt ûñpàçkéd (tîtlé.tmd àñd .àpp fîlés). Çémû réàds ît fröm thé gàmé fîlés földér às ît îs: ñö îñstàll ñéédéd.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/install.cpp:177
 msgid "There is no title here: a game, update or DLC to install is a folder with code, content and meta."
 msgstr "⟦Théré îs ñö tîtlé héré: à gàmé, ûpdàté ör DLÇ tö îñstàll îs à földér wîth çödé, çöñtéñt àñd métà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/install.cpp:183
 msgid "Its meta folder does not describe a Wii U title (meta.xml)."
 msgstr "⟦Îts métà földér döés ñöt désçrîbé à Wîî Ü tîtlé (métà.xml).~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/install.cpp:202
 msgid "This is where it is installed already."
 msgstr "⟦Thîs îs whéré ît îs îñstàlléd àlréàdÿ.~~~~~~~~~~~~~~~⟧"
 
+#: port/app/install.cpp:218 port/azahar/core.cpp:893
+#, menu
 msgid "An install is already running."
 msgstr "⟦Åñ îñstàll îs àlréàdÿ rûññîñg.~~~~~~~~~~~~⟧"
 
+#. a percentage: where the % goes, and the space before it where the language has one
+#: port/app/lang.cpp:403
+#, menu
 msgctxt "percent"
 msgid "{0}%"
 msgstr "⟦{0}%⟧"
 
+#. the decimal separator, as in 0.4 (a comma in many languages)
+#: port/app/lang.cpp:410
+#, menu
 msgctxt "decimal separator"
 msgid "."
 msgstr "⟦.⟧"
 
+#. a time in seconds, as in 0.4 s
+#: port/app/lang.cpp:420
+#, menu
 msgctxt "seconds"
 msgid "{0} s"
 msgstr "⟦{0} s⟧"
 
+#. the months as a full date has them ("March 3, 2017"; in some languages their genitive)
+#: port/app/lang.cpp:426
+#, menu
 msgctxt "month in a date"
 msgid "January"
 msgstr "⟦Jàñûàrÿ~~⟧"
 
+#. the months as a full date has them ("March 3, 2017"; in some languages their genitive)
+#: port/app/lang.cpp:426
+#, menu
 msgctxt "month in a date"
 msgid "February"
 msgstr "⟦Fébrûàrÿ~~~⟧"
 
+#: port/app/lang.cpp:427
+#, menu
 msgctxt "month in a date"
 msgid "March"
 msgstr "⟦Màrçh~~⟧"
 
+#: port/app/lang.cpp:427
+#, menu
 msgctxt "month in a date"
 msgid "April"
 msgstr "⟦Åprîl~~⟧"
 
+#: port/app/lang.cpp:427
+#, menu
 msgctxt "month in a date"
 msgid "May"
 msgstr "⟦Màÿ~⟧"
 
+#: port/app/lang.cpp:428
+#, menu
 msgctxt "month in a date"
 msgid "June"
 msgstr "⟦Jûñé~⟧"
 
+#: port/app/lang.cpp:428
+#, menu
 msgctxt "month in a date"
 msgid "July"
 msgstr "⟦Jûlÿ~⟧"
 
+#: port/app/lang.cpp:428
+#, menu
 msgctxt "month in a date"
 msgid "August"
 msgstr "⟦Åûgûst~~⟧"
 
+#: port/app/lang.cpp:429
+#, menu
 msgctxt "month in a date"
 msgid "September"
 msgstr "⟦Séptémbér~~~⟧"
 
+#: port/app/lang.cpp:429
+#, menu
 msgctxt "month in a date"
 msgid "October"
 msgstr "⟦Öçtöbér~~⟧"
 
+#: port/app/lang.cpp:429
+#, menu
 msgctxt "month in a date"
 msgid "November"
 msgstr "⟦Ñövémbér~~~⟧"
 
+#: port/app/lang.cpp:430
+#, menu
 msgctxt "month in a date"
 msgid "December"
 msgstr "⟦Déçémbér~~~⟧"
 
+#. the months alone, with a year after them ("March 2017")
+#: port/app/lang.cpp:432
+#, menu
 msgctxt "month alone"
 msgid "January"
 msgstr "⟦Jàñûàrÿ~~⟧"
 
+#. the months alone, with a year after them ("March 2017")
+#: port/app/lang.cpp:432
+#, menu
 msgctxt "month alone"
 msgid "February"
 msgstr "⟦Fébrûàrÿ~~~⟧"
 
+#: port/app/lang.cpp:433
+#, menu
 msgctxt "month alone"
 msgid "March"
 msgstr "⟦Màrçh~~⟧"
 
+#: port/app/lang.cpp:433
+#, menu
 msgctxt "month alone"
 msgid "April"
 msgstr "⟦Åprîl~~⟧"
 
+#: port/app/lang.cpp:433
+#, menu
 msgctxt "month alone"
 msgid "May"
 msgstr "⟦Màÿ~⟧"
 
+#: port/app/lang.cpp:433
+#, menu
 msgctxt "month alone"
 msgid "June"
 msgstr "⟦Jûñé~⟧"
 
+#: port/app/lang.cpp:434
+#, menu
 msgctxt "month alone"
 msgid "July"
 msgstr "⟦Jûlÿ~⟧"
 
+#: port/app/lang.cpp:434
+#, menu
 msgctxt "month alone"
 msgid "August"
 msgstr "⟦Åûgûst~~⟧"
 
+#: port/app/lang.cpp:434
+#, menu
 msgctxt "month alone"
 msgid "September"
 msgstr "⟦Séptémbér~~~⟧"
 
+#: port/app/lang.cpp:435
+#, menu
 msgctxt "month alone"
 msgid "October"
 msgstr "⟦Öçtöbér~~⟧"
 
+#: port/app/lang.cpp:435
+#, menu
 msgctxt "month alone"
 msgid "November"
 msgstr "⟦Ñövémbér~~~⟧"
 
+#: port/app/lang.cpp:435
+#, menu
 msgctxt "month alone"
 msgid "December"
 msgstr "⟦Déçémbér~~~⟧"
 
+#. the months, short, as a save state's date has them ("Oct 9, 14:05")
+#: port/app/lang.cpp:437
+#, menu
 msgctxt "short month"
 msgid "Jan"
 msgstr "⟦Jàñ~⟧"
 
+#. the months, short, as a save state's date has them ("Oct 9, 14:05")
+#: port/app/lang.cpp:437
+#, menu
 msgctxt "short month"
 msgid "Feb"
 msgstr "⟦Féb~⟧"
 
+#. the months, short, as a save state's date has them ("Oct 9, 14:05")
+#: port/app/lang.cpp:437
+#, menu
 msgctxt "short month"
 msgid "Mar"
 msgstr "⟦Màr~⟧"
 
+#: port/app/lang.cpp:438
+#, menu
 msgctxt "short month"
 msgid "Apr"
 msgstr "⟦Åpr~⟧"
 
+#: port/app/lang.cpp:438
+#, menu
 msgctxt "short month"
 msgid "May"
 msgstr "⟦Màÿ~⟧"
 
+#: port/app/lang.cpp:438
+#, menu
 msgctxt "short month"
 msgid "Jun"
 msgstr "⟦Jûñ~⟧"
 
+#: port/app/lang.cpp:438
+#, menu
 msgctxt "short month"
 msgid "Jul"
 msgstr "⟦Jûl~⟧"
 
+#: port/app/lang.cpp:439
+#, menu
 msgctxt "short month"
 msgid "Aug"
 msgstr "⟦Åûg~⟧"
 
+#: port/app/lang.cpp:439
+#, menu
 msgctxt "short month"
 msgid "Sep"
 msgstr "⟦Sép~⟧"
 
+#: port/app/lang.cpp:439
+#, menu
 msgctxt "short month"
 msgid "Oct"
 msgstr "⟦Öçt~⟧"
 
+#: port/app/lang.cpp:439
+#, menu
 msgctxt "short month"
 msgid "Nov"
 msgstr "⟦Ñöv~⟧"
 
+#: port/app/lang.cpp:440
+#, menu
 msgctxt "short month"
 msgid "Dec"
 msgstr "⟦Déç~⟧"
 
+#. a full date: {0} the month, {1} the day, {2} the year
+#: port/app/lang.cpp:450
+#, menu
 msgctxt "date"
 msgid "{0} {1}, {2}"
 msgstr "⟦{0} {1}, {2}⟧"
 
+#. a month ({0}) and a year ({1})
+#: port/app/lang.cpp:458
+#, menu
 msgctxt "month and year"
 msgid "{0} {1}"
 msgstr "⟦{0} {1}⟧"
 
+#. when a save state was made: {0} the month (short), {1} the day, {2} the time (14:05)
+#: port/app/lang.cpp:466
+#, menu
 msgctxt "short date and time"
 msgid "{0} {1}, {2}"
 msgstr "⟦{0} {1}, {2}⟧"
 
+#: port/app/pack_updates.cpp:151 port/app/updates.cpp:303
 msgid "the download is not a ZIP ({0})"
 msgstr "⟦thé döwñlöàd îs ñöt à ZÎP (~~~~~~~~~~{0})⟧"
 
+#: port/app/pack_updates.cpp:179 port/app/updates.cpp:329
 msgid "{0} could not be unpacked"
 msgstr "⟦{0} çöûld ñöt bé ûñpàçkéd~~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:188
 msgid "{0} could not be written"
 msgstr "⟦{0} çöûld ñöt bé wrîttéñ~~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:196 port/app/updates.cpp:349
 msgid "stopped for a game"
 msgstr "⟦stöppéd för à gàmé~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:201
 msgid "the download holds no packs"
 msgstr "⟦thé döwñlöàd hölds ñö pàçks~~~~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:214 port/app/updates.cpp:508
 msgid "GitHub could not be found: is the PS5 online?"
 msgstr "⟦GîtHûb çöûld ñöt bé föûñd: îs thé PS5 öñlîñé?~~~~~~~~~~~~~~~~~~⟧"
 
+#. why an update did not finish
+#: port/app/pack_updates.cpp:247 port/app/updates.cpp:369
 msgid "GitHub did not answer with a release"
 msgstr "⟦GîtHûb dîd ñöt àñswér wîth à réléàsé~~~~~~~~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:285 port/app/updates.cpp:444
 msgid "Stopped for a game"
 msgstr "⟦Stöppéd för à gàmé~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:285
 msgid "The download did not finish"
 msgstr "⟦Thé döwñlöàd dîd ñöt fîñîsh~~~~~~~~~~⟧"
 
+#: port/app/pack_updates.cpp:300 port/frontend/shell/pages.cpp:994
 msgid "It could not be installed: {0}"
 msgstr "⟦Ît çöûld ñöt bé îñstàlléd: ~~~~~~~~~~{0}⟧"
 
+#: port/app/pack_updates.cpp:311
 msgid "The new packs could not take the old ones' place"
 msgstr "⟦Thé ñéw pàçks çöûld ñöt tàké thé öld öñés' plàçé~~~~~~~~~~~~~~~~~~~⟧"
 
+#. beside a row held to confirm: hold Cross
+#: port/app/side_menu.h:348
+#, menu
 msgid "Hold"
 msgstr "⟦Höld~⟧"
 
+#: port/app/side_menu.h:422
+#, menu
 msgid "Hold Cross until the ring fills."
 msgstr "⟦Höld Çröss ûñtîl thé rîñg fîlls.~~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:339
 msgid "{0} could not be written (is /data full?)"
 msgstr "⟦{0} çöûld ñöt bé wrîttéñ (îs /dàtà fûll?)~~~~~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:354
 msgid "the download has no eboot.bin"
 msgstr "⟦thé döwñlöàd hàs ñö ébööt.bîñ~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:376
 msgid "The latest release's version ({0}) is not one this can read"
 msgstr "⟦Thé làtést réléàsé's vérsîöñ (~~~~~~~~~~~~{0}) îs ñöt öñé thîs çàñ réàd~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:401
 msgid "The release's checksums could not be downloaded"
 msgstr "⟦Thé réléàsé's çhéçksûms çöûld ñöt bé döwñlöàdéd~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:416
 msgid "The releases branch has no checksum for {0}"
 msgstr "⟦Thé réléàsés bràñçh hàs ñö çhéçksûm för ~~~~~~~~~~~~~~~~{0}⟧"
 
+#: port/app/updates.cpp:430
 msgid "The download could not start"
 msgstr "⟦Thé döwñlöàd çöûld ñöt stàrt~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:444
 msgid "The download did not finish: is the PS5 online?"
 msgstr "⟦Thé döwñlöàd dîd ñöt fîñîsh: îs thé PS5 öñlîñé?~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:453
 msgid "The download is damaged (SHA-256 {0}, not {1})"
 msgstr "⟦Thé döwñlöàd îs dàmàgéd (SHÅ-256 ~~~~~~~~~~~~~{0}, ñöt ~~{1})⟧"
 
+#: port/app/updates.cpp:463
 msgid "PS5CEMU-HAR runs from an image, whose files can't be replaced: install the new release by hand"
 msgstr "⟦PS5ÇÉMÜ-HÅR rûñs fröm àñ îmàgé, whösé fîlés çàñ't bé réplàçéd: îñstàll thé ñéw réléàsé bÿ hàñd~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/app/updates.cpp:475
 msgid "It could not be unpacked: {0}"
 msgstr "⟦Ît çöûld ñöt bé ûñpàçkéd: ~~~~~~~~~~{0}⟧"
 
+#: port/app/updates.cpp:490
 msgid "{0} could not be replaced ({1}): copy the release's PPSA99360 folder over by hand"
 msgstr "⟦{0} çöûld ñöt bé réplàçéd (~~~~~~~~~{1}): çöpÿ thé réléàsé's PPSÅ99360 földér övér bÿ hàñd~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. the places on the toys' portals that a figure goes on
+#: port/app/usb_devices.cpp:61
+#, menu
 msgid "Slot 1"
 msgstr "⟦Slöt 1~~⟧"
 
+#. the places on the toys' portals that a figure goes on
+#: port/app/usb_devices.cpp:61
+#, menu
 msgid "Slot 2"
 msgstr "⟦Slöt 2~~⟧"
 
+#. the places on the toys' portals that a figure goes on
+#: port/app/usb_devices.cpp:61
+#, menu
 msgid "Slot 3"
 msgstr "⟦Slöt 3~~⟧"
 
+#. the places on the toys' portals that a figure goes on
+#: port/app/usb_devices.cpp:61
+#, menu
 msgid "Slot 4"
 msgstr "⟦Slöt 4~~⟧"
 
+#: port/app/usb_devices.cpp:62
+#, menu
 msgid "Play set / power disc"
 msgstr "⟦Plàÿ sét / pöwér dîsç~~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:62
+#, menu
 msgid "Power disc 2"
 msgstr "⟦Pöwér dîsç 2~~~~⟧"
 
+#: port/app/usb_devices.cpp:62
+#, menu
 msgid "Power disc 3"
 msgstr "⟦Pöwér dîsç 3~~~~⟧"
 
+#: port/app/usb_devices.cpp:63
+#, menu
 msgid "Player 1"
 msgstr "⟦Plàÿér 1~~~⟧"
 
+#: port/app/usb_devices.cpp:63
+#, menu
 msgid "Player 1 ability 1"
 msgstr "⟦Plàÿér 1 àbîlîtÿ 1~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:63
+#, menu
 msgid "Player 1 ability 2"
 msgstr "⟦Plàÿér 1 àbîlîtÿ 2~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:63
+#, menu
 msgid "Player 2"
 msgstr "⟦Plàÿér 2~~~⟧"
 
+#: port/app/usb_devices.cpp:63
+#, menu
 msgid "Player 2 ability 1"
 msgstr "⟦Plàÿér 2 àbîlîtÿ 1~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:64
+#, menu
 msgid "Player 2 ability 2"
 msgstr "⟦Plàÿér 2 àbîlîtÿ 2~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:65
+#, menu
 msgid "Left pad 1"
 msgstr "⟦Léft pàd 1~~~~⟧"
 
+#: port/app/usb_devices.cpp:65
+#, menu
 msgid "Centre pad"
 msgstr "⟦Çéñtré pàd~~~~⟧"
 
+#: port/app/usb_devices.cpp:65
+#, menu
 msgid "Right pad 1"
 msgstr "⟦Rîght pàd 1~~~~⟧"
 
+#: port/app/usb_devices.cpp:66
+#, menu
 msgid "Left pad 2"
 msgstr "⟦Léft pàd 2~~~~⟧"
 
+#: port/app/usb_devices.cpp:66
+#, menu
 msgid "Left pad 3"
 msgstr "⟦Léft pàd 3~~~~⟧"
 
+#: port/app/usb_devices.cpp:66
+#, menu
 msgid "Right pad 2"
 msgstr "⟦Rîght pàd 2~~~~⟧"
 
+#: port/app/usb_devices.cpp:66
+#, menu
 msgid "Right pad 3"
 msgstr "⟦Rîght pàd 3~~~~⟧"
 
+#: port/app/usb_devices.cpp:121
+#, menu
 msgid "{0} could not be opened"
 msgstr "⟦{0} çöûld ñöt bé öpéñéd~~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:128
+#, menu
 msgid "{0} is too small for a Skylander"
 msgstr "⟦{0} îs töö smàll för à Skÿlàñdér~~~~~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:131
+#, menu
 msgid "The portal is full"
 msgstr "⟦Thé pörtàl îs fûll~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:139
+#, menu
 msgid "{0} is too small for an Infinity figure"
 msgstr "⟦{0} îs töö smàll för àñ Îñfîñîtÿ fîgûré~~~~~~~~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:147
+#, menu
 msgid "{0} is too small for a Dimensions figure"
 msgstr "⟦{0} îs töö smàll för à Dîméñsîöñs fîgûré~~~~~~~~~~~~~~⟧"
 
+#. the toys' portals, by the names their makers gave them in the language
+#: port/app/usb_devices.cpp:163
+#, menu
 msgid "Skylanders Portal of Power"
 msgstr "⟦Skÿlàñdérs Pörtàl öf Pöwér~~~~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:164
+#, menu
 msgid "Disney Infinity Base"
 msgstr "⟦Dîsñéÿ Îñfîñîtÿ Bàsé~~~~~~~~⟧"
 
+#: port/app/usb_devices.cpp:165
+#, menu
 msgid "LEGO Dimensions Toypad"
 msgstr "⟦LÉGÖ Dîméñsîöñs Töÿpàd~~~~~~~~⟧"
 
+#. why a 3DS game did not take what was typed on its keyboard
+#: port/azahar/core.cpp:175
+#, menu
 msgid "Too many digits."
 msgstr "⟦Töö màñÿ dîgîts.~~~~~~⟧"
 
+#: port/azahar/core.cpp:176
+#, menu
 msgid "The @ sign is not allowed here."
 msgstr "⟦Thé @ sîgñ îs ñöt àllöwéd héré.~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:177
+#, menu
 msgid "The % sign is not allowed here."
 msgstr "⟦Thé % sîgñ îs ñöt àllöwéd héré.~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:178
+#, menu
 msgid "The \\ sign is not allowed here."
 msgstr "⟦Thé \\ sîgñ îs ñöt àllöwéd héré.~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:179
+#, menu
 msgid "That word is not allowed."
 msgstr "⟦Thàt wörd îs ñöt àllöwéd.~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:180
+#, menu
 msgid "The text must be exactly the length asked for."
 msgstr "⟦Thé téxt mûst bé éxàçtlÿ thé léñgth àskéd för.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:181
+#, menu
 msgid "The text is too long."
 msgstr "⟦Thé téxt îs töö löñg.~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:182
+#, menu
 msgid "The text cannot be only spaces."
 msgstr "⟦Thé téxt çàññöt bé öñlÿ spàçés.~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:183
+#, menu
 msgid "The text cannot be empty."
 msgstr "⟦Thé téxt çàññöt bé émptÿ.~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:184
+#, menu
 msgid "The game did not accept it."
 msgstr "⟦Thé gàmé dîd ñöt àççépt ît.~~~~~~~~~~⟧"
 
+#. a save state's slot whose date is unknown
+#: port/azahar/core.cpp:211
+#, menu
 msgid "saved"
 msgstr "⟦sàvéd~~⟧"
 
+#. in place of a save state's date: it was made by another version of the app
+#: port/azahar/core.cpp:216
+#, menu
 msgid "another version's"
 msgstr "⟦àñöthér vérsîöñ's~~~~~~⟧"
 
+#: port/azahar/core.cpp:256
+#, menu
 msgid "No amiibo reader"
 msgstr "⟦Ñö àmîîbö réàdér~~~~~~⟧"
 
+#. the amiibo was taken off the 3DS's reader
+#: port/azahar/core.cpp:261
+#, menu
 msgid "Taken away"
 msgstr "⟦Tàkéñ àwàÿ~~~~⟧"
 
+#: port/azahar/core.cpp:267
+#, menu
 msgid "Not an amiibo dump"
 msgstr "⟦Ñöt àñ àmîîbö dûmp~~~~~~~⟧"
 
+#. a cheat ({0}) turned on or off
+#: port/azahar/core.cpp:279
+#, menu
 msgid "{0}: on"
 msgstr "⟦{0}: öñ~⟧"
 
+#. a cheat ({0}) turned on or off
+#: port/azahar/core.cpp:279
+#, menu
 msgid "{0}: off"
 msgstr "⟦{0}: öff~~⟧"
 
+#. how a save state's save or load went
+#: port/azahar/core.cpp:357
+#, menu
 msgid "Loaded slot {0}"
 msgstr "⟦Löàdéd slöt ~~~~{0}⟧"
 
+#. how a save state's save or load went
+#: port/azahar/core.cpp:357
+#, menu
 msgid "Saved slot {0}"
 msgstr "⟦Sàvéd slöt ~~~~{0}⟧"
 
+#: port/azahar/core.cpp:358
+#, menu
 msgid "Made by another version"
 msgstr "⟦Màdé bÿ àñöthér vérsîöñ~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:359
+#, menu
 msgid "It did not work"
 msgstr "⟦Ît dîd ñöt wörk~~~~~~⟧"
 
+#. why a 3DS game did not start
+#: port/azahar/core.cpp:558
+#, menu
 msgid "This is not a 3DS game Azahar can start."
 msgstr "⟦Thîs îs ñöt à 3DS gàmé Åzàhàr çàñ stàrt.~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:559
+#, menu
 msgid "The game could not be loaded."
 msgstr "⟦Thé gàmé çöûld ñöt bé löàdéd.~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:561
+#, menu
 msgid "The game is encrypted: decrypt it, or put the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
 msgstr "⟦Thé gàmé îs éñçrÿptéd: déçrÿpt ît, ör pût thé 3DS's àés_kéÿs.txt îñ /dàtà/ps5çémû/àzàhàr/sÿsdàtà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:562
+#, menu
 msgid "The game's format is not supported."
 msgstr "⟦Thé gàmé's förmàt îs ñöt sûppörtéd.~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:563
+#, menu
 msgid "GBA Virtual Console games are not supported."
 msgstr "⟦GBÅ Vîrtûàl Çöñsölé gàmés àré ñöt sûppörtéd.~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:564
+#, menu
 msgid "The game's system mode could not be found."
 msgstr "⟦Thé gàmé's sÿstém mödé çöûld ñöt bé föûñd.~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:565
+#, menu
 msgid "The game needs 3DS system files Azahar does not have."
 msgstr "⟦Thé gàmé ñééds 3DS sÿstém fîlés Åzàhàr döés ñöt hàvé.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:567
+#, menu
 msgid "The game's patches could not be applied."
 msgstr "⟦Thé gàmé's pàtçhés çöûld ñöt bé àpplîéd.~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:568
+#, menu
 msgid "Azahar's renderer or CPU did not start."
 msgstr "⟦Åzàhàr's réñdérér ör ÇPÜ dîd ñöt stàrt.~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:570
+#, menu
 msgid "The Artic Base server did not answer: check the 3DS's address, that Artic Base runs on it, and that the 3DS and the PS5 are on the same network."
 msgstr "⟦Thé Årtîç Bàsé sérvér dîd ñöt àñswér: çhéçk thé 3DS's àddréss, thàt Årtîç Bàsé rûñs öñ ît, àñd thàt thé 3DS àñd thé PS5 àré öñ thé sàmé ñétwörk.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:615
+#, menu
 msgid "The game is busy: try again"
 msgstr "⟦Thé gàmé îs bûsÿ: trÿ àgàîñ~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:630
+#, menu
 msgid "The 3DS game stopped: {0}"
 msgstr "⟦Thé 3DS gàmé stöppéd: ~~~~~~~~{0}⟧"
 
+#: port/azahar/core.cpp:679
+#, menu
 msgid "A CIA file is installed, not played: install it from Settings > Install CIA files, then start the game."
 msgstr "⟦Å ÇÎÅ fîlé îs îñstàlléd, ñöt plàÿéd: îñstàll ît fröm Séttîñgs > Îñstàll ÇÎÅ fîlés, théñ stàrt thé gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:703
+#, menu
 msgid "Azahar did not start: {0}"
 msgstr "⟦Åzàhàr dîd ñöt stàrt: ~~~~~~~~{0}⟧"
 
+#. the PS5's notification as a 3DS game starts
+#: port/azahar/core.cpp:766
+#, menu
 msgid "Touchpad click + Options: the in-game menu. A touchpad click alone: the bottom screen"
 msgstr "⟦Töûçhpàd çlîçk + Öptîöñs: thé îñ-gàmé méñû. Å töûçhpàd çlîçk àlöñé: thé böttöm sçrééñ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. why a CIA file could not be installed, after "It could not be installed:"
+#: port/azahar/core.cpp:932
+#, menu
 msgid "it is encrypted, the CIA or the game inside it. Azahar installs only fully decrypted CIA files: decrypt it with GodMode9 on a 3DS, or play the game's decrypted .3ds or .cci file instead"
 msgstr "⟦ît îs éñçrÿptéd, thé ÇÎÅ ör thé gàmé îñsîdé ît. Åzàhàr îñstàlls öñlÿ fûllÿ déçrÿptéd ÇÎÅ fîlés: déçrÿpt ît wîth GödMödé9 öñ à 3DS, ör plàÿ thé gàmé's déçrÿptéd .3ds ör .ççî fîlé îñstéàd~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:935
+#, menu
 msgid "it is not a CIA file, or it is damaged (check the file's size)"
 msgstr "⟦ît îs ñöt à ÇÎÅ fîlé, ör ît îs dàmàgéd (çhéçk thé fîlé's sîzé)~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:937
+#, menu
 msgid "the file could not be read"
 msgstr "⟦thé fîlé çöûld ñöt bé réàd~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:939
+#, menu
 msgid "Azahar stopped part-way through; /data/ps5cemu/azahar/log/azahar_log.txt says why"
 msgstr "⟦Åzàhàr stöppéd pàrt-wàÿ thröûgh; /dàtà/ps5çémû/àzàhàr/lög/àzàhàr_lög.txt sàÿs whÿ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/azahar/core.cpp:941
+#, menu
 msgid "it is not a CIA Azahar can install"
 msgstr "⟦ît îs ñöt à ÇÎÅ Åzàhàr çàñ îñstàll~~~~~~~~~~~~~⟧"
 
+#: port/cemu/MemMapperPS5.cpp:138
 msgid "The PS5 has no memory left for this Wii U game, so it has to stop. The boot log has the details."
 msgstr "⟦Thé PS5 hàs ñö mémörÿ léft för thîs Wîî Ü gàmé, sö ît hàs tö stöp. Thé bööt lög hàs thé détàîls.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. a size in gigabytes, as in 2.4 GB
+#: port/frontend/actions.cpp:64
 msgctxt "size"
 msgid "{0} GB"
 msgstr "⟦{0} GB~⟧"
 
+#. {1} is the USB drive's number
+#: port/frontend/actions.cpp:140
 msgid "{0} file to USB drive {1}"
 msgid_plural "{0} files to USB drive {1}"
 msgstr[0] "⟦{0} fîlé tö ÜSB drîvé ~~~~~~~{1}⟧"
 msgstr[1] "⟦{0} fîlés tö ÜSB drîvé ~~~~~~~~{1}⟧"
 
+#: port/frontend/actions.cpp:143
 msgid "No USB drive found"
 msgstr "⟦Ñö ÜSB drîvé föûñd~~~~~~~⟧"
 
+#: port/frontend/actions.cpp:170
 msgid "{0} file deleted ({1} MB)"
 msgid_plural "{0} files deleted ({1} MB)"
 msgstr[0] "⟦{0} fîlé délétéd (~~~~~~{1} MB)~⟧"
 msgstr[1] "⟦{0} fîlés délétéd (~~~~~~{1} MB)~⟧"
 
+#: port/frontend/actions.cpp:170
 msgid "None to delete"
 msgstr "⟦Ñöñé tö délété~~~~~⟧"
 
+#: port/frontend/actions.cpp:177
 msgid "USB drive {0}"
 msgstr "⟦ÜSB drîvé ~~~~{0}⟧"
 
+#: port/frontend/actions.cpp:179
 msgid "Extended storage {0}"
 msgstr "⟦Éxtéñdéd störàgé ~~~~~~{0}⟧"
 
+#. what an install is
+#: port/frontend/actions.cpp:314 port/frontend/actions.cpp:393
 msgid "Game"
 msgstr "⟦Gàmé~⟧"
 
+#: port/frontend/actions.cpp:315 port/frontend/actions.cpp:394
 msgid "Update"
 msgstr "⟦Üpdàté~~⟧"
 
+#: port/frontend/actions.cpp:316 port/frontend/actions.cpp:395 port/frontend/shell/home.cpp:487 port/frontend/shell/hub.cpp:202 port/frontend/shell/shell.cpp:580
 msgid "DLC"
 msgstr "⟦DLÇ~⟧"
 
+#: port/frontend/actions.cpp:317 port/frontend/actions.cpp:397
 msgid "System title"
 msgstr "⟦Sÿstém tîtlé~~~~⟧"
 
+#: port/frontend/actions.cpp:396
 msgid "Demo"
 msgstr "⟦Démö~⟧"
 
+#: port/frontend/actions.cpp:397
 msgid "Title"
 msgstr "⟦Tîtlé~~⟧"
 
+#: port/frontend/actions.cpp:405
 msgctxt "button"
 msgid "Cross"
 msgstr "⟦Çröss~~⟧"
 
+#: port/frontend/actions.cpp:405
 msgctxt "button"
 msgid "Circle"
 msgstr "⟦Çîrçlé~~⟧"
 
+#: port/frontend/actions.cpp:405
 msgctxt "button"
 msgid "Square"
 msgstr "⟦Sqûàré~~⟧"
 
+#: port/frontend/actions.cpp:406
 msgctxt "button"
 msgid "Triangle"
 msgstr "⟦Trîàñglé~~~⟧"
 
+#: port/frontend/actions.cpp:406
 msgctxt "button"
 msgid "Create"
 msgstr "⟦Çréàté~~⟧"
 
+#: port/frontend/actions.cpp:406
 msgctxt "button"
 msgid "Options"
 msgstr "⟦Öptîöñs~~⟧"
 
+#: port/frontend/actions.cpp:406
 msgctxt "button"
 msgid "Touchpad"
 msgstr "⟦Töûçhpàd~~~⟧"
 
+#: port/frontend/actions.cpp:407
 msgctxt "button"
 msgid "D-pad up"
 msgstr "⟦D-pàd ûp~~~⟧"
 
+#: port/frontend/actions.cpp:407
 msgctxt "button"
 msgid "D-pad down"
 msgstr "⟦D-pàd döwñ~~~~⟧"
 
+#: port/frontend/actions.cpp:407
 msgctxt "button"
 msgid "D-pad left"
 msgstr "⟦D-pàd léft~~~~⟧"
 
+#: port/frontend/actions.cpp:407
 msgctxt "button"
 msgid "D-pad right"
 msgstr "⟦D-pàd rîght~~~~⟧"
 
+#: port/frontend/actions.cpp:408
 msgctxt "button"
 msgid "Left stick up"
 msgstr "⟦Léft stîçk ûp~~~~~⟧"
 
+#: port/frontend/actions.cpp:408
 msgctxt "button"
 msgid "Left stick down"
 msgstr "⟦Léft stîçk döwñ~~~~~~⟧"
 
+#: port/frontend/actions.cpp:408
 msgctxt "button"
 msgid "Left stick left"
 msgstr "⟦Léft stîçk léft~~~~~~⟧"
 
+#: port/frontend/actions.cpp:409
 msgctxt "button"
 msgid "Left stick right"
 msgstr "⟦Léft stîçk rîght~~~~~~⟧"
 
+#: port/frontend/actions.cpp:409
 msgctxt "button"
 msgid "Left stick click"
 msgstr "⟦Léft stîçk çlîçk~~~~~~⟧"
 
+#: port/frontend/actions.cpp:409
 msgctxt "button"
 msgid "Right stick up"
 msgstr "⟦Rîght stîçk ûp~~~~~⟧"
 
+#: port/frontend/actions.cpp:410
 msgctxt "button"
 msgid "Right stick down"
 msgstr "⟦Rîght stîçk döwñ~~~~~~⟧"
 
+#: port/frontend/actions.cpp:410
 msgctxt "button"
 msgid "Right stick left"
 msgstr "⟦Rîght stîçk léft~~~~~~⟧"
 
+#: port/frontend/actions.cpp:410
 msgctxt "button"
 msgid "Right stick right"
 msgstr "⟦Rîght stîçk rîght~~~~~~⟧"
 
+#: port/frontend/actions.cpp:411
 msgctxt "button"
 msgid "Right stick click"
 msgstr "⟦Rîght stîçk çlîçk~~~~~~⟧"
 
+#: port/frontend/actions.cpp:411
 msgctxt "button"
 msgid "Circle pad up"
 msgstr "⟦Çîrçlé pàd ûp~~~~~⟧"
 
+#: port/frontend/actions.cpp:411
 msgctxt "button"
 msgid "Circle pad down"
 msgstr "⟦Çîrçlé pàd döwñ~~~~~~⟧"
 
+#: port/frontend/actions.cpp:412
 msgctxt "button"
 msgid "Circle pad left"
 msgstr "⟦Çîrçlé pàd léft~~~~~~⟧"
 
+#: port/frontend/actions.cpp:412
 msgctxt "button"
 msgid "Circle pad right"
 msgstr "⟦Çîrçlé pàd rîght~~~~~~⟧"
 
+#: port/frontend/actions.cpp:412
 msgctxt "button"
 msgid "C-stick up"
 msgstr "⟦Ç-stîçk ûp~~~~⟧"
 
+#: port/frontend/actions.cpp:413
 msgctxt "button"
 msgid "C-stick down"
 msgstr "⟦Ç-stîçk döwñ~~~~⟧"
 
+#: port/frontend/actions.cpp:413
 msgctxt "button"
 msgid "C-stick left"
 msgstr "⟦Ç-stîçk léft~~~~⟧"
 
+#: port/frontend/actions.cpp:413
 msgctxt "button"
 msgid "C-stick right"
 msgstr "⟦Ç-stîçk rîght~~~~~⟧"
 
+#: port/frontend/actions.cpp:414
 msgctxt "button"
 msgid "Nunchuk stick up"
 msgstr "⟦Ñûñçhûk stîçk ûp~~~~~~⟧"
 
+#: port/frontend/actions.cpp:414
 msgctxt "button"
 msgid "Nunchuk stick down"
 msgstr "⟦Ñûñçhûk stîçk döwñ~~~~~~~⟧"
 
+#: port/frontend/actions.cpp:414
 msgctxt "button"
 msgid "Nunchuk stick left"
 msgstr "⟦Ñûñçhûk stîçk léft~~~~~~~⟧"
 
+#: port/frontend/actions.cpp:415
 msgctxt "button"
 msgid "Nunchuk stick right"
 msgstr "⟦Ñûñçhûk stîçk rîght~~~~~~~⟧"
 
+#: port/frontend/actions.cpp:415
 msgctxt "button"
 msgid "Nunchuk C"
 msgstr "⟦Ñûñçhûk Ç~~~⟧"
 
+#: port/frontend/actions.cpp:415
 msgctxt "button"
 msgid "Nunchuk Z"
 msgstr "⟦Ñûñçhûk Z~~~⟧"
 
+#: port/frontend/actions.cpp:415
 msgctxt "button"
 msgid "Home"
 msgstr "⟦Hömé~⟧"
 
+#: port/frontend/actions.cpp:416
 msgctxt "button"
 msgid "Start"
 msgstr "⟦Stàrt~~⟧"
 
+#: port/frontend/actions.cpp:416
 msgctxt "button"
 msgid "Select"
 msgstr "⟦Séléçt~~⟧"
 
+#: port/frontend/actions.cpp:416
 msgctxt "button"
 msgid "+ (Start)"
 msgstr "⟦+ (Stàrt)~~~⟧"
 
+#: port/frontend/actions.cpp:416
 msgctxt "button"
 msgid "- (Select)"
 msgstr "⟦- (Séléçt)~~~~⟧"
 
+#: port/frontend/actions.cpp:417
 msgctxt "button"
 msgid "Blow into the mic"
 msgstr "⟦Blöw îñtö thé mîç~~~~~~⟧"
 
+#: port/frontend/actions.cpp:417
 msgctxt "button"
 msgid "Show the GamePad's screen"
 msgstr "⟦Shöw thé GàméPàd's sçrééñ~~~~~~~~~~⟧"
 
+#: port/frontend/actions.cpp:417
 msgctxt "button"
 msgid "None"
 msgstr "⟦Ñöñé~⟧"
 
+#: port/frontend/shell/home.cpp:265 port/frontend/shell/setup.cpp:366
 msgid "Setup"
 msgstr "⟦Sétûp~~⟧"
 
+#: port/frontend/shell/home.cpp:266
 msgid "Something needs a look"
 msgstr "⟦Söméthîñg ñééds à löök~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:268 port/frontend/shell/home.cpp:294 port/frontend/shell/settings.cpp:120
 msgid "Setup check"
 msgstr "⟦Sétûp çhéçk~~~~⟧"
 
+#: port/frontend/shell/home.cpp:268 port/frontend/shell/settings.cpp:121
 msgid "Diagnostics"
 msgstr "⟦Dîàgñöstîçs~~~~⟧"
 
+#: port/frontend/shell/home.cpp:273 port/frontend/shell/shell.cpp:668
 msgid "Starting Cemu"
 msgstr "⟦Stàrtîñg Çémû~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:274
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
 msgstr "⟦Îts séttîñgs, gràphîç pàçks àñd çöñtröllérs àré löàdîñg, àñd théñ ît lööks för ÿöûr gàmés.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:279 port/frontend/shell/library.cpp:391
 msgid "Looking for games…"
 msgstr "⟦Löökîñg för gàmés…~~~~~~~⟧"
 
+#. {0} is a folder
+#: port/frontend/shell/home.cpp:281
 msgid "In {0}."
 msgstr "⟦Îñ ~{0}.⟧"
 
+#: port/frontend/shell/home.cpp:285
 msgid "Welcome"
 msgstr "⟦Wélçömé~~⟧"
 
+#: port/frontend/shell/home.cpp:286
 msgid "Your games go here"
 msgstr "⟦Yöûr gàmés gö héré~~~~~~~⟧"
 
+#. {0} is the games folder
+#: port/frontend/shell/home.cpp:288
 msgid "Put your 3DS games (.3ds, .cci, .cxi, .3dsx, decrypted) in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too."
 msgstr "⟦Pût ÿöûr 3DS gàmés (.3ds, .ççî, .çxî, .3dsx, déçrÿptéd) îñ ~~~~~~~~~~~~~~~~~~~~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé. Földérs îñsîdé ît àré séàrçhéd töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:291
 msgid "Put your Wii U games (.wua, .wud, .wux, or folders with code, content and meta) in {0}, or choose any folder the PS5 can read, such as one on a USB drive."
 msgstr "⟦Pût ÿöûr Wîî Ü gàmés (.wûà, .wûd, .wûx, ör földérs wîth çödé, çöñtéñt àñd métà) îñ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:294 port/frontend/shell/pages.cpp:1003 port/frontend/shell/setup.cpp:231
 msgid "Choose a folder"
 msgstr "⟦Çhöösé à földér~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:364 port/frontend/shell/home.cpp:421
 msgid "All {0} game"
 msgid_plural "All {0} games"
 msgstr[0] "⟦Åll ~{0} gàmé~~⟧"
 msgstr[1] "⟦Åll ~{0} gàmés~~⟧"
 
+#. {0} says when: "today", "2 days ago"
+#: port/frontend/shell/home.cpp:396
 msgid "In your library"
 msgstr "⟦Îñ ÿöûr lîbràrÿ~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:397
 msgid "Continue · last played {0}"
 msgstr "⟦Çöñtîñûé · làst plàÿéd ~~~~~~~~~{0}⟧"
 
+#: port/frontend/shell/home.cpp:398
 msgid "Last played {0}"
 msgstr "⟦Làst plàÿéd ~~~~{0}⟧"
 
+#: port/frontend/shell/home.cpp:419
 msgid "Your library"
 msgstr "⟦Yöûr lîbràrÿ~~~~⟧"
 
+#: port/frontend/shell/home.cpp:423 port/frontend/shell/library.cpp:371
 msgid "Looking for new games…"
 msgstr "⟦Löökîñg för ñéw gàmés…~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:423
 msgid "A to Z, by year, by how they run"
 msgstr "⟦Å tö Z, bÿ ÿéàr, bÿ höw théÿ rûñ~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:433 port/frontend/shell/hub.cpp:218 port/frontend/shell/shell.cpp:929 port/frontend/shell/shell.cpp:934 port/frontend/shell/shell.cpp:1115
 msgid "Play"
 msgstr "⟦Plàÿ~⟧"
 
+#: port/frontend/shell/home.cpp:435 port/frontend/shell/shell.cpp:930 port/frontend/shell/shell.cpp:1117
 msgid "Game hub"
 msgstr "⟦Gàmé hûb~~~⟧"
 
+#: port/frontend/shell/home.cpp:442
 msgid "Open the library"
 msgstr "⟦Öpéñ thé lîbràrÿ~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:469
 msgid "None on"
 msgstr "⟦Ñöñé öñ~~⟧"
 
+#: port/frontend/shell/home.cpp:470
 msgid "{0} pack for this game"
 msgid_plural "{0} packs for this game"
 msgstr[0] "⟦{0} pàçk för thîs gàmé~~~~~~~⟧"
 msgstr[1] "⟦{0} pàçks för thîs gàmé~~~~~~~~⟧"
 
+#. an emulated controller ({0}) on a player (P2: player 2)
+#: port/frontend/shell/home.cpp:478 port/frontend/shell/home.cpp:480
 msgid "{0} on P{1}"
 msgstr "⟦{0} öñ P~~{1}⟧"
 
+#. {0} is an emulated controller (Wii U GamePad)
+#: port/frontend/shell/home.cpp:480 port/frontend/shell/pages.cpp:535 port/frontend/shell/settings.cpp:90 port/frontend/shell/settings.cpp:97
 msgid "Controllers"
 msgstr "⟦Çöñtröllérs~~~~⟧"
 
+#: port/frontend/shell/home.cpp:480
 msgid "One player"
 msgstr "⟦Öñé plàÿér~~~~⟧"
 
+#. the Library's orders (Square)
+#: port/frontend/shell/home.cpp:484 port/frontend/shell/library.cpp:24
 msgid "How it runs"
 msgstr "⟦Höw ît rûñs~~~~⟧"
 
+#: port/frontend/shell/home.cpp:485
 msgid "From the compatibility list"
 msgstr "⟦Fröm thé çömpàtîbîlîtÿ lîst~~~~~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:487
 msgid "Updates and DLC"
 msgstr "⟦Üpdàtés àñd DLÇ~~~~~~⟧"
 
+#: port/frontend/shell/home.cpp:487
 msgid "No update"
 msgstr "⟦Ñö ûpdàté~~~⟧"
 
+#: port/frontend/shell/home.cpp:490
 msgid "This dump"
 msgstr "⟦Thîs dûmp~~~⟧"
 
+#. a chip: the game's update, by its version ("Update v208")
+#: port/frontend/shell/hub.cpp:200
 msgid "Update v{0}"
 msgstr "⟦Üpdàté v~~~{0}⟧"
 
+#: port/frontend/shell/hub.cpp:211 port/frontend/shell/shell.cpp:1120
 msgid "Favourite"
 msgstr "⟦Fàvöûrîté~~~⟧"
 
+#: port/frontend/shell/hub.cpp:224
 msgid "Graphic packs · {0} on"
 msgid_plural "Graphic packs · {0} on"
 msgstr[0] "⟦Gràphîç pàçks · ~~~~~~{0} öñ~⟧"
 msgstr[1] "⟦Gràphîç pàçks · ~~~~~~{0} öñ~⟧"
 
+#. the heading over a game's description
+#: port/frontend/shell/hub.cpp:237
 msgctxt "game"
 msgid "About"
 msgstr "⟦Åböût~~⟧"
 
+#: port/frontend/shell/hub.cpp:240
 msgid "GameTDB knows a game by the ID on its box, which this dump does not have."
 msgstr "⟦GàméTDB kñöws à gàmé bÿ thé ÎD öñ îts böx, whîçh thîs dûmp döés ñöt hàvé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/hub.cpp:241
 msgid "GameTDB has no description of this game yet."
 msgstr "⟦GàméTDB hàs ñö désçrîptîöñ öf thîs gàmé ÿét.~~~~~~~~~~~~~~~~~⟧"
 
+#. a game's facts, from GameTDB
+#: port/frontend/shell/hub.cpp:261
 msgid "Developer"
 msgstr "⟦Dévélöpér~~~⟧"
 
+#. a game's facts, from GameTDB
+#: port/frontend/shell/hub.cpp:261
 msgid "Released"
 msgstr "⟦Réléàséd~~~⟧"
 
+#: port/frontend/shell/hub.cpp:262
 msgid "Genre"
 msgstr "⟦Géñré~~⟧"
 
+#: port/frontend/shell/hub.cpp:262
 msgid "Rating"
 msgstr "⟦Ràtîñg~~⟧"
 
+#: port/frontend/shell/hub.cpp:262
 msgid "Publisher"
 msgstr "⟦Pûblîshér~~~⟧"
 
+#: port/frontend/shell/hub.cpp:263 port/frontend/shell/pages.cpp:571
 msgid "Players"
 msgstr "⟦Plàÿérs~~⟧"
 
+#: port/frontend/shell/hub.cpp:267 port/frontend/shell/pages.cpp:1048 port/frontend/shell/pages.cpp:1091
 msgid "Title ID"
 msgstr "⟦Tîtlé ÎD~~~⟧"
 
+#: port/frontend/shell/hub.cpp:283
 msgid "Runs well on PS5"
 msgstr "⟦Rûñs wéll öñ PS5~~~~~~⟧"
 
+#. {0} is a status from the compatibility list, such as Playable
+#: port/frontend/shell/hub.cpp:286
 msgid "The compatibility list has it as “{0}”."
 msgstr "⟦Thé çömpàtîbîlîtÿ lîst hàs ît às “~~~~~~~~~~~~~{0}”.⟧"
 
+#. the Library's orders (Square)
+#: port/frontend/shell/library.cpp:24
 msgid "Recently played"
 msgstr "⟦Réçéñtlÿ plàÿéd~~~~~~⟧"
 
+#. the Library's orders (Square)
+#: port/frontend/shell/library.cpp:24
 msgid "A to Z"
 msgstr "⟦Å tö Z~~⟧"
 
+#. the Library's orders (Square)
+#: port/frontend/shell/library.cpp:24
 msgid "Release year"
 msgstr "⟦Réléàsé ÿéàr~~~~⟧"
 
+#. the launcher's three tabs
+#: port/frontend/shell/library.cpp:123 port/frontend/shell/shell.cpp:851
 msgctxt "tab"
 msgid "Library"
 msgstr "⟦Lîbràrÿ~~⟧"
 
+#: port/frontend/shell/library.cpp:123 port/frontend/shell/shell.cpp:933
 msgid "Sort"
 msgstr "⟦Sört~⟧"
 
+#. the Library's filters, each with its count after it
+#: port/frontend/shell/library.cpp:325
 msgctxt "filter"
 msgid "All"
 msgstr "⟦Åll~⟧"
 
+#. the Library's filters, each with its count after it
+#: port/frontend/shell/library.cpp:325
 msgid "Recently added"
 msgstr "⟦Réçéñtlÿ àddéd~~~~~⟧"
 
+#. the Library's filters, each with its count after it
+#: port/frontend/shell/library.cpp:325
 msgid "Favourites"
 msgstr "⟦Fàvöûrîtés~~~~⟧"
 
+#. the Library's filters, each with its count after it
+#: port/frontend/shell/library.cpp:325
 msgid "Graphic packs on"
 msgstr "⟦Gràphîç pàçks öñ~~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:331
 msgid "Sort: {0}"
 msgstr "⟦Sört: ~~{0}⟧"
 
+#: port/frontend/shell/library.cpp:332 port/frontend/shell/library.cpp:374 port/frontend/shell/shell.cpp:933 port/frontend/shell/shell.cpp:1454
 msgid "Search"
 msgstr "⟦Séàrçh~~⟧"
 
+#: port/frontend/shell/library.cpp:369
 msgid "Search: {0}"
 msgstr "⟦Séàrçh: ~~~{0}⟧"
 
+#: port/frontend/shell/library.cpp:392
 msgid "Nothing matches “{0}”"
 msgstr "⟦Ñöthîñg màtçhés “~~~~~~{0}”⟧"
 
+#: port/frontend/shell/library.cpp:393
 msgid "None here yet"
 msgstr "⟦Ñöñé héré ÿét~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:394 port/frontend/shell/setup.cpp:653
 msgid "No games yet"
 msgstr "⟦Ñö gàmés ÿét~~~~⟧"
 
+#: port/frontend/shell/library.cpp:397
 msgid "Circle clears the search."
 msgstr "⟦Çîrçlé çléàrs thé séàrçh.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:398
 msgid "Options on a game, then Favourite, puts it here."
 msgstr "⟦Öptîöñs öñ à gàmé, théñ Fàvöûrîté, pûts ît héré.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:399
 msgid "All shows every game."
 msgstr "⟦Åll shöws évérÿ gàmé.~~~~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:400
 msgid "Settings > Games and folders says where they go."
 msgstr "⟦Séttîñgs > Gàmés àñd földérs sàÿs whéré théÿ gö.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:434 port/frontend/shell/library.cpp:449
 msgid "Play from your 3DS"
 msgstr "⟦Plàÿ fröm ÿöûr 3DS~~~~~~~⟧"
 
+#: port/frontend/shell/library.cpp:436 port/frontend/shell/library.cpp:451
 msgid "Artic Base, over your network"
 msgstr "⟦Årtîç Bàsé, övér ÿöûr ñétwörk~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:293
 msgid "Cross turns a pack on or off; Right goes to its presets. Choosing a preset turns its pack on. Changes apply at the next start."
 msgstr "⟦Çröss tûrñs à pàçk öñ ör öff; Rîght göés tö îts préséts. Çhöösîñg à prését tûrñs îts pàçk öñ. Çhàñgés àpplÿ àt thé ñéxt stàrt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:305
 msgid "No graphic packs for this game"
 msgstr "⟦Ñö gràphîç pàçks för thîs gàmé~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:306
 msgid "Settings > Online and updates gets the community's newest."
 msgstr "⟦Séttîñgs > Öñlîñé àñd ûpdàtés géts thé çömmûñîtÿ's ñéwést.~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:312 port/frontend/shell/pages.cpp:715 port/frontend/shell/pages.cpp:1012
 msgid "{0} of {1}"
 msgstr "⟦{0} öf ~{1}⟧"
 
+#: port/frontend/shell/pages.cpp:339 port/frontend/shell/pages.cpp:339
 msgid "Graphic pack"
 msgstr "⟦Gràphîç pàçk~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:345
 msgid "This pack has no description."
 msgstr "⟦Thîs pàçk hàs ñö désçrîptîöñ.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:348
 msgid "No presets"
 msgstr "⟦Ñö préséts~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:348 port/frontend/shell/shell.cpp:944
 msgid "Presets"
 msgstr "⟦Préséts~~⟧"
 
+#: port/frontend/shell/pages.cpp:348
 msgid "Presets · choosing one turns it on"
 msgstr "⟦Préséts · çhöösîñg öñé tûrñs ît öñ~~~~~~~~~~~~~⟧"
 
+#. what a held row says once it has done its work
+#: port/frontend/shell/pages.cpp:385 port/frontend/shell/settings.cpp:799
 msgctxt "finished"
 msgid "Done"
 msgstr "⟦Döñé~⟧"
 
+#: port/frontend/shell/pages.cpp:417
 msgid ""
 "What the game sees in this player's hands.\n"
 "\n"
@@ -1889,6 +2825,7 @@ msgstr ""
 "Å Wîî Rémöté pöîñts whéré à fîñgér résts öñ thé töûçhpàd, ör whéré ÿöû àîm thé DûàlSéñsé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Çémû hàs twö GàméPàds àt möst.~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:421
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
@@ -1896,6 +2833,7 @@ msgstr ""
 "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér às thé çöñtröllér's öwñ, för thé gàmés thàt àîm ör stéér bÿ tîltîñg thé GàméPàd ör thé Wîî Rémöté.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Thé Prö Çöñtröllér àñd thé Çlàssîç Çöñtröllér hàvé ñöñé.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:423
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
@@ -1903,12 +2841,15 @@ msgstr ""
 "⟦Höw ströñglÿ thé DûàlSéñsé rûmblés whéñ thé gàmé màkés thé çöñtröllér vîbràté.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:424
 msgid "How far the left stick moves before the game sees it. Raise it if a character drifts when you let go of the stick; lower it for finer control."
 msgstr "⟦Höw fàr thé léft stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf à çhàràçtér drîfts whéñ ÿöû lét gö öf thé stîçk; löwér ît för fîñér çöñtröl.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:426
 msgid "How far the right stick moves before the game sees it. Raise it if the camera drifts when you let go of the stick; lower it for finer control."
 msgstr "⟦Höw fàr thé rîght stîçk mövés béföré thé gàmé séés ît. Ràîsé ît îf thé çàmérà drîfts whéñ ÿöû lét gö öf thé stîçk; löwér ît för fîñér çöñtröl.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:428
 msgid ""
 "Which DualSense button is which of the controller's.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them."
@@ -1916,97 +2857,130 @@ msgstr ""
 "⟦Whîçh DûàlSéñsé bûttöñ îs whîçh öf thé çöñtröllér's.~~~~~~~~~~~~~~~~~~~~\n"
 "Å îs öñ Çîrçlé àñd B öñ Çröss bÿ défàûlt, whéré thé Wîî Ü hàs thém.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:429
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
 msgstr "⟦Thé défàûlt bûttöñs, vîbràtîöñ, mötîöñ àñd déàdzöñés för thîs çöñtröllér. Héld tö çöñfîrm.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. {0} is the player's number, {1} an emulated controller (Wii U GamePad)
+#: port/frontend/shell/pages.cpp:432 port/frontend/shell/pages.cpp:555 port/frontend/shell/pages.cpp:705 port/frontend/shell/pages.cpp:710 port/frontend/shell/settings.cpp:443
 msgid "Buttons"
 msgstr "⟦Bûttöñs~~⟧"
 
+#: port/frontend/shell/pages.cpp:432 port/frontend/shell/pages.cpp:556 port/frontend/shell/settings.cpp:446
 msgid "Reset to defaults"
 msgstr "⟦Rését tö défàûlts~~~~~~⟧"
 
+#. {0} is an emulated controller (Wii U GamePad)
+#: port/frontend/shell/pages.cpp:468 port/frontend/shell/pages.cpp:535 port/frontend/shell/settings.cpp:380
 msgid "Player {0}"
 msgstr "⟦Plàÿér ~~{0}⟧"
 
+#: port/frontend/shell/pages.cpp:536
 msgid "{0}, on this player's DualSense"
 msgstr "⟦{0}, öñ thîs plàÿér's DûàlSéñsé~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:537
 msgid "{0}, on a DualSense that is not connected"
 msgstr "⟦{0}, öñ à DûàlSéñsé thàt îs ñöt çöññéçtéd~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:539
 msgid "What the game sees in this player's hands."
 msgstr "⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:541
 msgid "The DualSense's motion as the controller's."
 msgstr "⟦Thé DûàlSéñsé's mötîöñ às thé çöñtröllér's.~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:541
 msgid "The Pro and Classic Controllers have none."
 msgstr "⟦Thé Prö àñd Çlàssîç Çöñtröllérs hàvé ñöñé.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:547
 msgid "How strongly the DualSense rumbles."
 msgstr "⟦Höw ströñglÿ thé DûàlSéñsé rûmblés.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:550
 msgid "How far the left stick moves before it counts."
 msgstr "⟦Höw fàr thé léft stîçk mövés béföré ît çöûñts.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:553
 msgid "How far the right stick moves before it counts."
 msgstr "⟦Höw fàr thé rîght stîçk mövés béföré ît çöûñts.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:555 port/frontend/shell/settings.cpp:443
 msgid "{0} button set"
 msgid_plural "{0} buttons set"
 msgstr[0] "⟦{0} bûttöñ sét~~~~⟧"
 msgstr[1] "⟦{0} bûttöñs sét~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:555 port/frontend/shell/settings.cpp:443
 msgid "Which DualSense button is which."
 msgstr "⟦Whîçh DûàlSéñsé bûttöñ îs whîçh.~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:556 port/frontend/shell/pages.cpp:1280 port/frontend/shell/pages.cpp:1284 port/frontend/shell/settings.cpp:446 port/frontend/shell/settings.cpp:488 port/frontend/shell/settings.cpp:491
 msgid "Hold Cross"
 msgstr "⟦Höld Çröss~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:557
 msgid "The default buttons, vibration, motion and deadzones."
 msgstr "⟦Thé défàûlt bûttöñs, vîbràtîöñ, mötîöñ àñd déàdzöñés.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:584
 msgid "Connected"
 msgstr "⟦Çöññéçtéd~~~⟧"
 
+#: port/frontend/shell/pages.cpp:584
 msgid "No DualSense"
 msgstr "⟦Ñö DûàlSéñsé~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:638
 msgid "Cleared: no DualSense button is this one now."
 msgstr "⟦Çléàréd: ñö DûàlSéñsé bûttöñ îs thîs öñé ñöw.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:675
 msgid "No button was pressed, so it stays as it was."
 msgstr "⟦Ñö bûttöñ wàs présséd, sö ît stàÿs às ît wàs.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:682
 msgid "Cancelled: it stays as it was."
 msgstr "⟦Çàñçélléd: ît stàÿs às ît wàs.~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:694
 msgid "Done."
 msgstr "⟦Döñé.~~⟧"
 
+#: port/frontend/shell/pages.cpp:705
 msgid "The DualSense's buttons for the 3DS's"
 msgstr "⟦Thé DûàlSéñsé's bûttöñs för thé 3DS's~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:711
 msgid "Player {0}: the DualSense's buttons for the {1}"
 msgstr "⟦Plàÿér ~~{0}: thé DûàlSéñsé's bûttöñs för thé ~~~~~~~~~~~~~{1}⟧"
 
+#: port/frontend/shell/pages.cpp:722 port/frontend/shell/pages.cpp:740
 msgid "Not set"
 msgstr "⟦Ñöt sét~~⟧"
 
+#: port/frontend/shell/pages.cpp:733
 msgid "This button"
 msgstr "⟦Thîs bûttöñ~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:740
 msgid "Press a button"
 msgstr "⟦Préss à bûttöñ~~~~~⟧"
 
+#. {0} is a button of the Wii U's or the 3DS's controller
+#: port/frontend/shell/pages.cpp:747
 msgid "Press the DualSense button, trigger or stick direction for {0} now."
 msgstr "⟦Préss thé DûàlSéñsé bûttöñ, trîggér ör stîçk dîréçtîöñ för ~~~~~~~~~~~~~~~~~~~~~~~{0} ñöw.~~⟧"
 
+#: port/frontend/shell/pages.cpp:748
 msgid "{0} second left. A touchpad click cancels."
 msgid_plural "{0} seconds left. A touchpad click cancels."
 msgstr[0] "⟦{0} séçöñd léft. Å töûçhpàd çlîçk çàñçéls.~~~~~~~~~~~~~~~⟧"
 msgstr[1] "⟦{0} séçöñds léft. Å töûçhpàd çlîçk çàñçéls.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:752
 msgid ""
 "Cross, then a DualSense button, trigger or stick direction: it becomes this one.\n"
 "Square clears it."
@@ -2014,33 +2988,44 @@ msgstr ""
 "⟦Çröss, théñ à DûàlSéñsé bûttöñ, trîggér ör stîçk dîréçtîöñ: ît béçömés thîs öñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Sqûàré çléàrs ît.~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:835
 msgid "Cancelling: what it copied is removed…"
 msgstr "⟦Çàñçéllîñg: whàt ît çöpîéd îs rémövéd…~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:840
 msgid "Cancelling: what was installed before is put back…"
 msgstr "⟦Çàñçéllîñg: whàt wàs îñstàlléd béföré îs pût bàçk…~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:883
 msgid "This folder cannot be opened."
 msgstr "⟦Thîs földér çàññöt bé öpéñéd.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:923
 msgid "The folder could not be saved. Please try again."
 msgstr "⟦Thé földér çöûld ñöt bé sàvéd. Pléàsé trÿ àgàîñ.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:924
 msgid "Saved. PS5CEMU-HAR is looking for games there."
 msgstr "⟦Sàvéd. PS5ÇÉMÜ-HÅR îs löökîñg för gàmés théré.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:925
 msgid "Saved. That side looks for games there when it opens."
 msgstr "⟦Sàvéd. Thàt sîdé lööks för gàmés théré whéñ ît öpéñs.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:928
 msgid "Looking for games in {0}"
 msgstr "⟦Löökîñg för gàmés îñ ~~~~~~~~{0}⟧"
 
+#: port/frontend/shell/pages.cpp:933
 msgid "Choose a CIA file first."
 msgstr "⟦Çhöösé à ÇÎÅ fîlé fîrst.~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:946
 msgid "Cemu did not start, so nothing can be installed."
 msgstr "⟦Çémû dîd ñöt stàrt, sö ñöthîñg çàñ bé îñstàlléd.~~~~~~~~~~~~~~~~~~~⟧"
 
+#. {0} is a percentage, {1} and {2} sizes (2.4 GB)
+#: port/frontend/shell/pages.cpp:966
 msgid ""
 "Installing: {0}, {1} of {2}.\n"
 "\n"
@@ -2050,128 +3035,177 @@ msgstr ""
 "\n"
 "Çîrçlé çàñçéls.~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:968
 msgid "Installing: counting the files…"
 msgstr "⟦Îñstàllîñg: çöûñtîñg thé fîlés…~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:977
 msgid "Installed. The library has it with its game."
 msgstr "⟦Îñstàlléd. Thé lîbràrÿ hàs ît wîth îts gàmé.~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:986
 msgid "Installed"
 msgstr "⟦Îñstàlléd~~~⟧"
 
+#: port/frontend/shell/pages.cpp:989
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
 msgstr "⟦Çàñçélléd. Whàt ît çöpîéd wàs rémövéd, wîth àñÿ éàrlîér çöpÿ öf thé sàmé tîtlé: îñstàll ît àgàîñ tö plàÿ ît. Îts sàvés àré képt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:992
 msgid "Cancelled. What was installed before is as it was."
 msgstr "⟦Çàñçélléd. Whàt wàs îñstàlléd béföré îs às ît wàs.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1002 port/frontend/shell/shell.cpp:954
 msgid "Install"
 msgstr "⟦Îñstàll~~⟧"
 
+#: port/frontend/shell/pages.cpp:1002 port/frontend/shell/settings.cpp:312 port/frontend/shell/setup.cpp:230
 msgid "3DS games"
 msgstr "⟦3DS gàmés~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1002 port/frontend/shell/settings.cpp:309 port/frontend/shell/setup.cpp:230
 msgid "Wii U games"
 msgstr "⟦Wîî Ü gàmés~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1003 port/frontend/shell/settings.cpp:107
 msgid "Install CIA files"
 msgstr "⟦Îñstàll ÇÎÅ fîlés~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1003 port/frontend/shell/settings.cpp:99
 msgid "Install updates and DLC"
 msgstr "⟦Îñstàll ûpdàtés àñd DLÇ~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1004
 msgid "Choose a CIA file: a game, an update or DLC"
 msgstr "⟦Çhöösé à ÇÎÅ fîlé: à gàmé, àñ ûpdàté ör DLÇ~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1005
 msgid "Choose a folder with an update, DLC or game (code, content and meta)"
 msgstr "⟦Çhöösé à földér wîth àñ ûpdàté, DLÇ ör gàmé (çödé, çöñtéñt àñd métà)~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1006
 msgid "Choose the folder that holds your 3DS games"
 msgstr "⟦Çhöösé thé földér thàt hölds ÿöûr 3DS gàmés~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1007
 msgid "Choose the folder that holds your Wii U games"
 msgstr "⟦Çhöösé thé földér thàt hölds ÿöûr Wîî Ü gàmés~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1014
 msgid "This folder is empty."
 msgstr "⟦Thîs földér îs émptÿ.~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1022
 msgid "Parent folder"
 msgstr "⟦Pàréñt földér~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1024
 msgid "Drive"
 msgstr "⟦Drîvé~~⟧"
 
+#: port/frontend/shell/pages.cpp:1047 port/frontend/shell/pages.cpp:1090
+msgctxt "kind"
+msgid "Type"
+msgstr "⟦Tÿpé~⟧"
+
+#: port/frontend/shell/pages.cpp:1047
 msgid "A folder"
 msgstr "⟦Å földér~~~⟧"
 
+#. a title's version to install ({0}), and the one installed now ({1})
+#: port/frontend/shell/pages.cpp:1049 port/frontend/shell/pages.cpp:1093
 msgid "Version"
 msgstr "⟦Vérsîöñ~~⟧"
 
+#: port/frontend/shell/pages.cpp:1052
 msgid "Triangle installs it into the 3DS's storage: an update or DLC goes with its game, and a game joins the library."
 msgstr "⟦Trîàñglé îñstàlls ît îñtö thé 3DS's störàgé: àñ ûpdàté ör DLÇ göés wîth îts gàmé, àñd à gàmé jöîñs thé lîbràrÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1053
 msgid "Choose a CIA file to install: a game, an update or DLC."
 msgstr "⟦Çhöösé à ÇÎÅ fîlé tö îñstàll: à gàmé, àñ ûpdàté ör DLÇ.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1065
 msgid "Games here"
 msgstr "⟦Gàmés héré~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1065
 msgid "Cannot be read"
 msgstr "⟦Çàññöt bé réàd~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1065 port/frontend/shell/setup.cpp:654
 msgid "{0} game"
 msgid_plural "{0} games"
 msgstr[0] "⟦{0} gàmé~~⟧"
 msgstr[1] "⟦{0} gàmés~~⟧"
 
+#: port/frontend/shell/pages.cpp:1069
 msgid "Found"
 msgstr "⟦Föûñd~~⟧"
 
+#: port/frontend/shell/pages.cpp:1069
 msgid "Missing (only encrypted dumps need it)"
 msgstr "⟦Mîssîñg (öñlÿ éñçrÿptéd dûmps ñééd ît)~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1075
 msgid "Found in /data/ps5cemu"
 msgstr "⟦Föûñd îñ /dàtà/ps5çémû~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1075
 msgid "Missing (only .wud/.wux need it)"
 msgstr "⟦Mîssîñg (öñlÿ .wûd/.wûx ñééd ît)~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1078 port/frontend/shell/shell.cpp:1362 port/frontend/shell/shell.cpp:1389
 msgid "In use"
 msgstr "⟦Îñ ûsé~~⟧"
 
+#: port/frontend/shell/pages.cpp:1082
 msgid "Games can be .3ds or .cci, .cxi, .cia or .3dsx, decrypted, here or in the folders in it. Triangle uses the folder shown."
 msgstr "⟦Gàmés çàñ bé .3ds ör .ççî, .çxî, .çîà ör .3dsx, déçrÿptéd, héré ör îñ thé földérs îñ ît. Trîàñglé ûsés thé földér shöwñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1083
 msgid "Games can be .wua, .wud, .wux, or folders with code, content and meta. Triangle uses the folder shown."
 msgstr "⟦Gàmés çàñ bé .wûà, .wûd, .wûx, ör földérs wîth çödé, çöñtéñt àñd métà. Trîàñglé ûsés thé földér shöwñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1090
 msgid "Nothing to install"
 msgstr "⟦Ñöthîñg tö îñstàll~~~~~~~⟧"
 
+#. a title's version to install ({0}), and the one installed now ({1})
+#: port/frontend/shell/pages.cpp:1093
 msgid "v{0}, not installed yet"
 msgstr "⟦v{0}, ñöt îñstàlléd ÿét~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1094
 msgid "v{0}, v{1} installed now"
 msgstr "⟦v{0}, v~{1} îñstàlléd ñöw~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1098
 msgid "Triangle installs it into the Wii U's storage (mlc01). Updates and DLC in the game files folder work as they are, too."
 msgstr "⟦Trîàñglé îñstàlls ît îñtö thé Wîî Ü's störàgé (mlç01). Üpdàtés àñd DLÇ îñ thé gàmé fîlés földér wörk às théÿ àré, töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1107
 msgid "To install"
 msgstr "⟦Tö îñstàll~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1107
 msgid "This folder"
 msgstr "⟦Thîs földér~~~~⟧"
 
+#. {0} is a 3DS's network address
+#: port/frontend/shell/pages.cpp:1163
 msgid "Connecting to {0}"
 msgstr "⟦Çöññéçtîñg tö ~~~~~{0}⟧"
 
+#: port/frontend/shell/pages.cpp:1257
 msgid "Play a game from your 3DS over your network, or set Azahar up from it"
 msgstr "⟦Plàÿ à gàmé fröm ÿöûr 3DS övér ÿöûr ñétwörk, ör sét Åzàhàr ûp fröm ît~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1273
 msgid "3DS address"
 msgstr "⟦3DS àddréss~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1274
 msgid ""
 "The address Artic Base shows on the 3DS's screen when it is ready.\n"
 "Cross edits it: Left and Right choose a number, Up and Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\n"
@@ -2181,9 +3215,11 @@ msgstr ""
 "Çröss édîts ît: Léft àñd Rîght çhöösé à ñûmbér, Üp àñd Döwñ çhàñgé ît bÿ 1, L1 àñd R1 bÿ 10, àñd Çröss àgàîñ kééps ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Thé 3DS àñd thé PS5 mûst bé öñ thé sàmé ñétwörk.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1276
 msgid "Connect and play"
 msgstr "⟦Çöññéçt àñd plàÿ~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1277
 msgid ""
 "On the 3DS, start the Artic Base app (homebrew, from Azahar's team) and choose a game in it: the cartridge or an installed one. Then connect from here: the game plays on the PS5 from the 3DS, and its saves stay on the 3DS.\n"
 "It is only as smooth as the network: a strong Wi-Fi signal for the 3DS and a wired PS5 help."
@@ -2191,9 +3227,11 @@ msgstr ""
 "⟦Öñ thé 3DS, stàrt thé Årtîç Bàsé àpp (hömébréw, fröm Åzàhàr's téàm) àñd çhöösé à gàmé îñ ît: thé çàrtrîdgé ör àñ îñstàlléd öñé. Théñ çöññéçt fröm héré: thé gàmé plàÿs öñ thé PS5 fröm thé 3DS, àñd îts sàvés stàÿ öñ thé 3DS.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Ît îs öñlÿ às smööth às thé ñétwörk: à ströñg Wî-Fî sîgñàl för thé 3DS àñd à wîréd PS5 hélp.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1280
 msgid "Set up from an Old 3DS"
 msgstr "⟦Sét ûp fröm àñ Öld 3DS~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1281
 msgid ""
 "With the Artic Setup Tool app running on an Old 3DS or 2DS: copies its system files and its own data (system settings, friend code, Mii and eShop data) into Azahar, so games that need the 3DS's system applets or files start, and the Home Menu can (Settings > System and Home Menu).\n"
 "That data is your console's: do not share Azahar's folder afterwards."
@@ -2201,235 +3239,321 @@ msgstr ""
 "⟦Wîth thé Årtîç Sétûp Tööl àpp rûññîñg öñ àñ Öld 3DS ör 2DS: çöpîés îts sÿstém fîlés àñd îts öwñ dàtà (sÿstém séttîñgs, frîéñd çödé, Mîî àñd éShöp dàtà) îñtö Åzàhàr, sö gàmés thàt ñééd thé 3DS's sÿstém àppléts ör fîlés stàrt, àñd thé Hömé Méñû çàñ (Séttîñgs > Sÿstém àñd Hömé Méñû).~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Thàt dàtà îs ÿöûr çöñsölé's: dö ñöt shàré Åzàhàr's földér àftérwàrds.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1284
 msgid "Set up from a New 3DS"
 msgstr "⟦Sét ûp fröm à Ñéw 3DS~~~~~~~~⟧"
 
+#: port/frontend/shell/pages.cpp:1284
 msgid "As above, from a New 3DS or New 2DS running the Artic Setup Tool app."
 msgstr "⟦Ås àbövé, fröm à Ñéw 3DS ör Ñéw 2DS rûññîñg thé Årtîç Sétûp Tööl àpp.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. the languages the emulated 3DS can be set to
+#: port/frontend/shell/settings.cpp:36 port/frontend/shell/settings.cpp:39
 msgid "Automatic"
 msgstr "⟦Åûtömàtîç~~~⟧"
 
+#: port/frontend/shell/settings.cpp:36
 msgid "Japan"
 msgstr "⟦Jàpàñ~~⟧"
 
+#: port/frontend/shell/settings.cpp:36
 msgid "USA"
 msgstr "⟦ÜSÅ~⟧"
 
+#: port/frontend/shell/settings.cpp:36
 msgid "Europe"
 msgstr "⟦Éûröpé~~⟧"
 
+#: port/frontend/shell/settings.cpp:36
 msgid "Australia"
 msgstr "⟦Åûstràlîà~~~⟧"
 
+#: port/frontend/shell/settings.cpp:37
 msgid "China"
 msgstr "⟦Çhîñà~~⟧"
 
+#: port/frontend/shell/settings.cpp:37
 msgid "Korea"
 msgstr "⟦Köréà~~⟧"
 
+#: port/frontend/shell/settings.cpp:37
 msgid "Taiwan"
 msgstr "⟦Tàîwàñ~~⟧"
 
+#. the languages the emulated 3DS can be set to
+#: port/frontend/shell/settings.cpp:39
 msgid "Japanese"
 msgstr "⟦Jàpàñésé~~~⟧"
 
+#. the languages the emulated 3DS can be set to
+#: port/frontend/shell/settings.cpp:39
 msgid "English"
 msgstr "⟦Éñglîsh~~⟧"
 
+#. the languages the emulated 3DS can be set to
+#: port/frontend/shell/settings.cpp:39
 msgid "French"
 msgstr "⟦Fréñçh~~⟧"
 
+#. the languages the emulated 3DS can be set to
+#: port/frontend/shell/settings.cpp:39
 msgid "German"
 msgstr "⟦Gérmàñ~~⟧"
 
+#: port/frontend/shell/settings.cpp:40
 msgid "Italian"
 msgstr "⟦Îtàlîàñ~~⟧"
 
+#: port/frontend/shell/settings.cpp:40
 msgid "Spanish"
 msgstr "⟦Spàñîsh~~⟧"
 
+#: port/frontend/shell/settings.cpp:40
 msgid "Chinese (simplified)"
 msgstr "⟦Çhîñésé (sîmplîfîéd)~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:40
 msgid "Korean"
 msgstr "⟦Köréàñ~~⟧"
 
+#: port/frontend/shell/settings.cpp:40
 msgid "Dutch"
 msgstr "⟦Dûtçh~~⟧"
 
+#: port/frontend/shell/settings.cpp:40
 msgid "Portuguese"
 msgstr "⟦Pörtûgûésé~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:41
 msgid "Russian"
 msgstr "⟦Rûssîàñ~~⟧"
 
+#: port/frontend/shell/settings.cpp:41
 msgid "Chinese (traditional)"
 msgstr "⟦Çhîñésé (tràdîtîöñàl)~~~~~~~~⟧"
 
+#. how a game's picture is scaled: the methods' names
+#: port/frontend/shell/settings.cpp:49
 msgid "Linear"
 msgstr "⟦Lîñéàr~~⟧"
 
+#: port/frontend/shell/settings.cpp:51
 msgid "Setup theme"
 msgstr "⟦Sétûp thémé~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:87 port/frontend/shell/settings.cpp:266 port/frontend/shell/settings.cpp:458 port/frontend/shell/settings.cpp:539 port/frontend/shell/setup.cpp:502
 msgid "Language"
 msgstr "⟦Làñgûàgé~~~⟧"
 
+#: port/frontend/shell/settings.cpp:87
 msgid "The language of the menus: the PS5's own, unless you choose another."
 msgstr "⟦Thé làñgûàgé öf thé méñûs: thé PS5's öwñ, ûñléss ÿöû çhöösé àñöthér.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:88
 msgid "Display"
 msgstr "⟦Dîsplàÿ~~⟧"
 
+#: port/frontend/shell/settings.cpp:88
 msgid "How the launcher looks and where it opens."
 msgstr "⟦Höw thé làûñçhér lööks àñd whéré ît öpéñs.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:89
 msgid "Sound"
 msgstr "⟦Söûñd~~⟧"
 
+#: port/frontend/shell/settings.cpp:89
 msgid "The menus' music and sounds, and the games' volume."
 msgstr "⟦Thé méñûs' mûsîç àñd söûñds, àñd thé gàmés' völûmé.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:90
 msgid "The DualSense, for every player."
 msgstr "⟦Thé DûàlSéñsé, för évérÿ plàÿér.~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:91
 msgid "Games and folders"
 msgstr "⟦Gàmés àñd földérs~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:91
 msgid "Where each side's games are."
 msgstr "⟦Whéré éàçh sîdé's gàmés àré.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:92
 msgid "Online and updates"
 msgstr "⟦Öñlîñé àñd ûpdàtés~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:92
 msgid "Box art, graphic packs and PS5CEMU-HAR itself."
 msgstr "⟦Böx àrt, gràphîç pàçks àñd PS5ÇÉMÜ-HÅR îtsélf.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:93
 msgid "Accessibility"
 msgstr "⟦Åççéssîbîlîtÿ~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:93
 msgid "Larger text, more contrast, less motion."
 msgstr "⟦Làrgér téxt, möré çöñtràst, léss mötîöñ.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:96
 msgid "For every Wii U game."
 msgstr "⟦För évérÿ Wîî Ü gàmé.~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:97
 msgid "What each player's DualSense is to the Wii U."
 msgstr "⟦Whàt éàçh plàÿér's DûàlSéñsé îs tö thé Wîî Ü.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:98
 msgid "Cemu's emulated portals."
 msgstr "⟦Çémû's émûlàtéd pörtàls.~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:99
 msgid "Into the Wii U's storage."
 msgstr "⟦Îñtö thé Wîî Ü's störàgé.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:102
 msgid "For every 3DS game."
 msgstr "⟦För évérÿ 3DS gàmé.~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:103
 msgid "Screens and borders"
 msgstr "⟦Sçrééñs àñd bördérs~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:103
 msgid "For every 3DS game; in a game, its menu changes them at once."
 msgstr "⟦För évérÿ 3DS gàmé; îñ à gàmé, îts méñû çhàñgés thém àt öñçé.~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:105 port/frontend/shell/settings.cpp:305
 msgid "The DualSense as the 3DS."
 msgstr "⟦Thé DûàlSéñsé às thé 3DS.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:106
 msgid "System and Home Menu"
 msgstr "⟦Sÿstém àñd Hömé Méñû~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:106
 msgid "The emulated 3DS's region and language."
 msgstr "⟦Thé émûlàtéd 3DS's régîöñ àñd làñgûàgé.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:107
 msgid "Into the 3DS's storage."
 msgstr "⟦Îñtö thé 3DS's störàgé.~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:108
 msgid "Play from your 3DS, over your network."
 msgstr "⟦Plàÿ fröm ÿöûr 3DS, övér ÿöûr ñétwörk.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:120
 msgid "Why something does not work, before anything else."
 msgstr "⟦Whÿ söméthîñg döés ñöt wörk, béföré àñÿthîñg élsé.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:121
 msgid "Logs, caches and what this session is."
 msgstr "⟦Lögs, çàçhés àñd whàt thîs séssîöñ îs.~~~~~~~~~~~~~~~⟧"
 
+#. Settings' last page: who made the app and its parts
+#: port/frontend/shell/settings.cpp:123
 msgctxt "app"
 msgid "About"
 msgstr "⟦Åböût~~⟧"
 
+#. Settings' last page: who made the app and its parts
+#: port/frontend/shell/settings.cpp:123
 msgid "Who made what."
 msgstr "⟦Whö màdé whàt.~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:146 port/frontend/shell/settings.cpp:165
 msgid "Checking GitHub…"
 msgstr "⟦Çhéçkîñg GîtHûb…~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:148 port/frontend/shell/settings.cpp:170
 msgid "Downloading: {0}"
 msgstr "⟦Döwñlöàdîñg: ~~~~~{0}⟧"
 
+#: port/frontend/shell/settings.cpp:149
 msgid "Downloading: {0} MB"
 msgstr "⟦Döwñlöàdîñg: ~~~~~{0} MB~⟧"
 
+#: port/frontend/shell/settings.cpp:150 port/frontend/shell/settings.cpp:172
 msgid "Installing…"
 msgstr "⟦Îñstàllîñg…~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:151 port/frontend/shell/settings.cpp:166
 msgid "Up to date: {0}"
 msgstr "⟦Üp tö dàté: ~~~~{0}⟧"
 
+#: port/frontend/shell/settings.cpp:152
 msgid "Installed: {0}"
 msgstr "⟦Îñstàlléd: ~~~~{0}⟧"
 
+#: port/frontend/shell/settings.cpp:156
 msgid "Cross to download"
 msgstr "⟦Çröss tö döwñlöàd~~~~~~⟧"
 
+#. {0} is a version, as in 3.5.0
+#: port/frontend/shell/settings.cpp:168
 msgid "{0}: Cross to install"
 msgstr "⟦{0}: Çröss tö îñstàll~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:170 port/frontend/shell/shell.cpp:1501
 msgid "Downloading…"
 msgstr "⟦Döwñlöàdîñg…~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:171
 msgid "Checking the download…"
 msgstr "⟦Çhéçkîñg thé döwñlöàd…~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:173
 msgid "Installed: Cross to restart"
 msgstr "⟦Îñstàlléd: Çröss tö réstàrt~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:177
 msgid "Cross to check"
 msgstr "⟦Çröss tö çhéçk~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:250
 msgid "Cross goes to the 3DS side for it."
 msgstr "⟦Çröss göés tö thé 3DS sîdé för ît.~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:250
 msgid "Cross goes to the Wii U side for it."
 msgstr "⟦Çröss göés tö thé Wîî Ü sîdé för ît.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:252
 msgid "On the 3DS side"
 msgstr "⟦Öñ thé 3DS sîdé~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:252
 msgid "On the Wii U side"
 msgstr "⟦Öñ thé Wîî Ü sîdé~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:257
 msgid "Cemu did not start, so this cannot be changed."
 msgstr "⟦Çémû dîd ñöt stàrt, sö thîs çàññöt bé çhàñgéd.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:266
 msgid "The menus' language. Game names and descriptions stay as they are."
 msgstr "⟦Thé méñûs' làñgûàgé. Gàmé ñàmés àñd désçrîptîöñs stàÿ às théÿ àré.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:267
 msgid "PS5CEMU-HAR speaks the PS5's own language unless you choose another here; the first start's Setup check has the same choice. Game names, their descriptions and graphic packs come from GameTDB, the games and the packs' authors, and stay as they wrote them."
 msgstr "⟦PS5ÇÉMÜ-HÅR spéàks thé PS5's öwñ làñgûàgé ûñléss ÿöû çhöösé àñöthér héré; thé fîrst stàrt's Sétûp çhéçk hàs thé sàmé çhöîçé. Gàmé ñàmés, théîr désçrîptîöñs àñd gràphîç pàçks çömé fröm GàméTDB, thé gàmés àñd thé pàçks' àûthörs, àñd stàÿ às théÿ wröté thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:273
 msgid "Start on"
 msgstr "⟦Stàrt öñ~~~⟧"
 
+#: port/frontend/shell/settings.cpp:273
 msgid "The side last used"
 msgstr "⟦Thé sîdé làst ûséd~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:273
 msgid "Ask each time"
 msgstr "⟦Åsk éàçh tîmé~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:274
 msgid "Where PS5CEMU-HAR opens."
 msgstr "⟦Whéré PS5ÇÉMÜ-HÅR öpéñs.~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:275
 msgid ""
 "The side last used: PS5CEMU-HAR opens on the side you were on, and after a game on that game.\n"
 "Ask each time: it shows the two sides first, as the start screen did."
@@ -2437,393 +3561,523 @@ msgstr ""
 "⟦Thé sîdé làst ûséd: PS5ÇÉMÜ-HÅR öpéñs öñ thé sîdé ÿöû wéré öñ, àñd àftér à gàmé öñ thàt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 "Åsk éàçh tîmé: ît shöws thé twö sîdés fîrst, às thé stàrt sçrééñ dîd.~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:278
 msgid "Game pictures behind menus"
 msgstr "⟦Gàmé pîçtûrés béhîñd méñûs~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:278
 msgid "The focused game's cover, softened, behind the screens."
 msgstr "⟦Thé föçûséd gàmé's çövér, söftéñéd, béhîñd thé sçrééñs.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:279
 msgid "The focused game's picture fills the screen behind the menus, softened and dimmed, so moving the focus changes the whole screen. Off: the game's colours only."
 msgstr "⟦Thé föçûséd gàmé's pîçtûré fîlls thé sçrééñ béhîñd thé méñûs, söftéñéd àñd dîmméd, sö mövîñg thé föçûs çhàñgés thé whölé sçrééñ. Öff: thé gàmé's çölöûrs öñlÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:285
 msgid "Launcher music"
 msgstr "⟦Làûñçhér mûsîç~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:285
 msgid "The music under the menus."
 msgstr "⟦Thé mûsîç ûñdér thé méñûs.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:286
 msgid "The launcher's own music, in the spirit of a console's setup screen, or none."
 msgstr "⟦Thé làûñçhér's öwñ mûsîç, îñ thé spîrît öf à çöñsölé's sétûp sçrééñ, ör ñöñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:287
 msgid "Music volume"
 msgstr "⟦Mûsîç völûmé~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:287
 msgid "How loud the menus' music is."
 msgstr "⟦Höw löûd thé méñûs' mûsîç îs.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:288
 msgid "How loud the launcher's music is. Left and Right change it by 10%."
 msgstr "⟦Höw löûd thé làûñçhér's mûsîç îs. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:289
 msgid "Menu sounds"
 msgstr "⟦Méñû söûñds~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:289
 msgid "The sounds of moving and choosing."
 msgstr "⟦Thé söûñds öf mövîñg àñd çhöösîñg.~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:290
 msgid "The launcher's sounds as you move, choose and go back."
 msgstr "⟦Thé làûñçhér's söûñds às ÿöû mövé, çhöösé àñd gö bàçk.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:291
 msgid "Wii U games' volume"
 msgstr "⟦Wîî Ü gàmés' völûmé~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:291
 msgid "The Wii U games' sound."
 msgstr "⟦Thé Wîî Ü gàmés' söûñd.~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:292
 msgid "The Wii U games' sound. Left and Right change it by 10%."
 msgstr "⟦Thé Wîî Ü gàmés' söûñd. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:293
 msgid "3DS games' volume"
 msgstr "⟦3DS gàmés' völûmé~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:293
 msgid "The 3DS games' sound."
 msgstr "⟦Thé 3DS gàmés' söûñd.~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:294
 msgid "The 3DS games' sound. Left and Right change it by 10%."
 msgstr "⟦Thé 3DS gàmés' söûñd. Léft àñd Rîght çhàñgé ît bÿ 10%.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:295
 msgid "GamePad speaker"
 msgstr "⟦GàméPàd spéàkér~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:295
 msgid "The Wii U GamePad's own sound, on the DualSense."
 msgstr "⟦Thé Wîî Ü GàméPàd's öwñ söûñd, öñ thé DûàlSéñsé.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:296
 msgid "The sounds games play on the Wii U GamePad's speaker, from player 1's DualSense speaker. Many games send their whole sound there too, so it is off unless you want it. Applies to the next game."
 msgstr "⟦Thé söûñds gàmés plàÿ öñ thé Wîî Ü GàméPàd's spéàkér, fröm plàÿér 1's DûàlSéñsé spéàkér. Màñÿ gàmés séñd théîr whölé söûñd théré töö, sö ît îs öff ûñléss ÿöû wàñt ît. Åpplîés tö thé ñéxt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:301
 msgid "The DualSense's rumble, in games and in the launcher."
 msgstr "⟦Thé DûàlSéñsé's rûmblé, îñ gàmés àñd îñ thé làûñçhér.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:302
 msgid "Off, the DualSense never rumbles: not for a game's vibration, nor for the launcher's."
 msgstr "⟦Öff, thé DûàlSéñsé ñévér rûmblés: ñöt för à gàmé's vîbràtîöñ, ñör för thé làûñçhér's.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:303
 msgid "Wii U players"
 msgstr "⟦Wîî Ü plàÿérs~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:303
 msgid "Each player's emulated controller, motion and buttons."
 msgstr "⟦Éàçh plàÿér's émûlàtéd çöñtröllér, mötîöñ àñd bûttöñs.~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:304
 msgid "What the Wii U sees in each player's hands."
 msgstr "⟦Whàt thé Wîî Ü séés îñ éàçh plàÿér's hàñds.~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:305
 msgid "3DS controls"
 msgstr "⟦3DS çöñtröls~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:305
 msgid "Motion, deadzone and buttons."
 msgstr "⟦Mötîöñ, déàdzöñé àñd bûttöñs.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:309
 msgid "Where your Wii U games are. Cross picks another."
 msgstr "⟦Whéré ÿöûr Wîî Ü gàmés àré. Çröss pîçks àñöthér.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:310
 msgid "Your Wii U games: .wua, .wud, .wux, or folders with code, content and meta. Encrypted .wud and .wux need their keys in /data/ps5cemu/keys.txt."
 msgstr "⟦Yöûr Wîî Ü gàmés: .wûà, .wûd, .wûx, ör földérs wîth çödé, çöñtéñt àñd métà. Éñçrÿptéd .wûd àñd .wûx ñééd théîr kéÿs îñ /dàtà/ps5çémû/kéÿs.txt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:312
 msgid "Where your 3DS games are. Cross picks another."
 msgstr "⟦Whéré ÿöûr 3DS gàmés àré. Çröss pîçks àñöthér.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:313
 msgid "Your 3DS games: .3ds or .cci, .cxi, .3dsx and Azahar's compressed dumps, decrypted, here or in the folders in it. CIA files are installed (Install CIA files). Encrypted dumps need the 3DS's aes_keys.txt in /data/ps5cemu/azahar/sysdata."
 msgstr "⟦Yöûr 3DS gàmés: .3ds ör .ççî, .çxî, .3dsx àñd Åzàhàr's çömprésséd dûmps, déçrÿptéd, héré ör îñ thé földérs îñ ît. ÇÎÅ fîlés àré îñstàlléd (Îñstàll ÇÎÅ fîlés). Éñçrÿptéd dûmps ñééd thé 3DS's àés_kéÿs.txt îñ /dàtà/ps5çémû/àzàhàr/sÿsdàtà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:315
 msgid "Look for games now"
 msgstr "⟦Löök för gàmés ñöw~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:315
 msgid "Looking…"
 msgstr "⟦Löökîñg…~~~⟧"
 
+#: port/frontend/shell/settings.cpp:315
 msgid "This side's folder, again."
 msgstr "⟦Thîs sîdé's földér, àgàîñ.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:316
 msgid "Looks through this side's folder again, as it does each time the side opens."
 msgstr "⟦Lööks thröûgh thîs sîdé's földér àgàîñ, às ît döés éàçh tîmé thé sîdé öpéñs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:318 port/frontend/shell/setup.cpp:254
 msgid "Wii U disc keys"
 msgstr "⟦Wîî Ü dîsç kéÿs~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:318 port/frontend/shell/setup.cpp:256
 msgid "keys.txt found"
 msgstr "⟦kéÿs.txt föûñd~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:318
 msgid "keys.txt missing"
 msgstr "⟦kéÿs.txt mîssîñg~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:318
 msgid "Only encrypted .wud and .wux need them."
 msgstr "⟦Öñlÿ éñçrÿptéd .wûd àñd .wûx ñééd thém.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:319
 msgid "Encrypted .wud and .wux dumps need their disc keys in /data/ps5cemu/keys.txt, one a line. Decrypted dumps, .wua and folders need none."
 msgstr "⟦Éñçrÿptéd .wûd àñd .wûx dûmps ñééd théîr dîsç kéÿs îñ /dàtà/ps5çémû/kéÿs.txt, öñé à lîñé. Déçrÿptéd dûmps, .wûà àñd földérs ñééd ñöñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:324
 msgid "Box art from GameTDB"
 msgstr "⟦Böx àrt fröm GàméTDB~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:324
 msgid "Covers for the library, downloaded once."
 msgstr "⟦Çövérs för thé lîbràrÿ, döwñlöàdéd öñçé.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:325
 msgid "The first time a game shows up, its cover is downloaded from GameTDB (art.gametdb.com) by the ID on its box. Off: nothing more is downloaded."
 msgstr "⟦Thé fîrst tîmé à gàmé shöws ûp, îts çövér îs döwñlöàdéd fröm GàméTDB (àrt.gàmétdb.çöm) bÿ thé ÎD öñ îts böx. Öff: ñöthîñg möré îs döwñlöàdéd.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:327
 msgid "Community graphic packs"
 msgstr "⟦Çömmûñîtÿ gràphîç pàçks~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:327
 msgid "Cross checks GitHub for newer ones."
 msgstr "⟦Çröss çhéçks GîtHûb för ñéwér öñés.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:328
 msgid "Cemu's community graphic packs, from GitHub's latest release when it is newer than the ones installed. The packs bundled with the app stay as the fallback."
 msgstr "⟦Çémû's çömmûñîtÿ gràphîç pàçks, fröm GîtHûb's làtést réléàsé whéñ ît îs ñéwér thàñ thé öñés îñstàlléd. Thé pàçks bûñdléd wîth thé àpp stàÿ às thé fàllbàçk.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:330
 msgid "PS5CEMU-HAR updates"
 msgstr "⟦PS5ÇÉMÜ-HÅR ûpdàtés~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:330
 msgid "Cross checks GitHub for a newer version."
 msgstr "⟦Çröss çhéçks GîtHûb för à ñéwér vérsîöñ.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:331
 msgid "PS5CEMU-HAR asks GitHub for its latest release each time it starts. Cross asks again, or installs the newer version it found: the release's files are downloaded, checked and put in place of these, and the app starts again. Your games, saves and settings stay as they are."
 msgstr "⟦PS5ÇÉMÜ-HÅR àsks GîtHûb för îts làtést réléàsé éàçh tîmé ît stàrts. Çröss àsks àgàîñ, ör îñstàlls thé ñéwér vérsîöñ ît föûñd: thé réléàsé's fîlés àré döwñlöàdéd, çhéçkéd àñd pût îñ plàçé öf thésé, àñd thé àpp stàrts àgàîñ. Yöûr gàmés, sàvés àñd séttîñgs stàÿ às théÿ àré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:337
 msgid "Larger text"
 msgstr "⟦Làrgér téxt~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:337
 msgid "Every size of text a step up."
 msgstr "⟦Évérÿ sîzé öf téxt à stép ûp.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:338
 msgid "Every style of text a step larger: captions from 20 to 23, reading text from 26 to 30."
 msgstr "⟦Évérÿ stÿlé öf téxt à stép làrgér: çàptîöñs fröm 20 tö 23, réàdîñg téxt fröm 26 tö 30.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:339
 msgid "High contrast"
 msgstr "⟦Hîgh çöñtràst~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:339
 msgid "Opaque panels, full-strength text, a thicker ring."
 msgstr "⟦Öpàqûé pàñéls, fûll-stréñgth téxt, à thîçkér rîñg.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:340
 msgid "Opaque panels instead of glass, all text at full strength, a thicker focus ring and no grain or pictures behind the menus."
 msgstr "⟦Öpàqûé pàñéls îñstéàd öf glàss, àll téxt àt fûll stréñgth, à thîçkér föçûs rîñg àñd ñö gràîñ ör pîçtûrés béhîñd thé méñûs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:341
 msgid "Reduce motion"
 msgstr "⟦Rédûçé mötîöñ~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:341
 msgid "Fades in place of movement."
 msgstr "⟦Fàdés îñ plàçé öf mövéméñt.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:342
 msgid "Springs become short fades; nothing drifts, breathes or rises behind the menus."
 msgstr "⟦Sprîñgs béçömé shört fàdés; ñöthîñg drîfts, bréàthés ör rîsés béhîñd thé méñûs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:350
 msgid "Hold to confirm"
 msgstr "⟦Höld tö çöñfîrm~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:350
 msgid "How long Cross is held for what cannot be undone."
 msgstr "⟦Höw löñg Çröss îs héld för whàt çàññöt bé ûñdöñé.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:351
 msgid "Clearing caches, Artic Setup and resetting controls are held to confirm, never pressed twice. This is how long."
 msgstr "⟦Çléàrîñg çàçhés, Årtîç Sétûp àñd réséttîñg çöñtröls àré héld tö çöñfîrm, ñévér présséd twîçé. Thîs îs höw löñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:355
 msgid "How the picture is scaled to the TV."
 msgstr "⟦Höw thé pîçtûré îs sçàléd tö thé TV.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:356
 msgid "Bicubic is sharp, Bicubic Hermite a little softer, Linear softer still; Nearest neighbour keeps pixels square."
 msgstr "⟦Bîçûbîç îs shàrp, Bîçûbîç Hérmîté à lîttlé söftér, Lîñéàr söftér stîll; Ñéàrést ñéîghböûr kééps pîxéls sqûàré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:357
 msgid "120 Hz output"
 msgstr "⟦120 Hz öûtpût~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:357
 msgid "For displays that take 120 Hz."
 msgstr "⟦För dîsplàÿs thàt tàké 120 Hz.~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:358
 msgid "The 119.88 Hz mode, on displays that support it. Games still run at their own speed, and a frame that misses a refresh waits 8 ms for the next instead of 17."
 msgstr "⟦Thé 119.88 Hz mödé, öñ dîsplàÿs thàt sûppört ît. Gàmés stîll rûñ àt théîr öwñ spééd, àñd à fràmé thàt mîssés à réfrésh wàîts 8 ms för thé ñéxt îñstéàd öf 17.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:363
 msgid "Holds a game to an even frame rate."
 msgstr "⟦Hölds à gàmé tö àñ évéñ fràmé ràté.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:364
 msgid "Each frame stays on screen for at least two or three refreshes, so a game that cannot hold the display's rate runs at an even one: 60 or 40 fps with 120 Hz output, 30 or 20 without. 60 fps with 120 Hz output suits a game at 4K that sometimes drops under 60; 30 fps at 60 Hz suits one at 8K. Also in the in-game menu."
 msgstr "⟦Éàçh fràmé stàÿs öñ sçrééñ för àt léàst twö ör thréé réfréshés, sö à gàmé thàt çàññöt höld thé dîsplàÿ's ràté rûñs àt àñ évéñ öñé: 60 ör 40 fps wîth 120 Hz öûtpût, 30 ör 20 wîthöût. 60 fps wîth 120 Hz öûtpût sûîts à gàmé àt 4K thàt sömétîmés dröps ûñdér 60; 30 fps àt 60 Hz sûîts öñé àt 8K. Ålsö îñ thé îñ-gàmé méñû.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:368
 msgid "Frame rate, CPU and memory in a corner."
 msgstr "⟦Fràmé ràté, ÇPÜ àñd mémörÿ îñ à çörñér.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:369
 msgid "Frames per second, CPU and memory use in the top left corner, as Cemu shows them. Also in the in-game menu."
 msgstr "⟦Fràmés pér séçöñd, ÇPÜ àñd mémörÿ ûsé îñ thé töp léft çörñér, às Çémû shöws thém. Ålsö îñ thé îñ-gàmé méñû.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:370
 msgid "No stutter while new shaders build."
 msgstr "⟦Ñö stûttér whîlé ñéw shàdérs bûîld.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:371
 msgid "On, a new shader is built while the game carries on, so it does not stutter, but some things may be missing for a moment. Off, the game waits for each one: stutter, but nothing drawn wrong."
 msgstr "⟦Öñ, à ñéw shàdér îs bûîlt whîlé thé gàmé çàrrîés öñ, sö ît döés ñöt stûttér, bût sömé thîñgs màÿ bé mîssîñg för à möméñt. Öff, thé gàmé wàîts för éàçh öñé: stûttér, bût ñöthîñg dràwñ wröñg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:381
 msgid "Cross: this player's controller, motion and buttons."
 msgstr "⟦Çröss: thîs plàÿér's çöñtröllér, mötîöñ àñd bûttöñs.~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:381
 msgid "No DualSense for this player yet."
 msgstr "⟦Ñö DûàlSéñsé för thîs plàÿér ÿét.~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:382
 msgid "What the game sees in this player's hands, and its motion, vibration, deadzones and buttons. Player 1 is the signed-in user who started the app; the other signed-in users' DualSenses are players 2 to 4."
 msgstr "⟦Whàt thé gàmé séés îñ thîs plàÿér's hàñds, àñd îts mötîöñ, vîbràtîöñ, déàdzöñés àñd bûttöñs. Plàÿér 1 îs thé sîgñéd-îñ ûsér whö stàrtéd thé àpp; thé öthér sîgñéd-îñ ûsérs' DûàlSéñsés àré plàÿérs 2 tö 4.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:396
 msgid "For the Skylanders games."
 msgstr "⟦För thé Skÿlàñdérs gàmés.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:397
 msgid "For Disney Infinity 3.0."
 msgstr "⟦För Dîsñéÿ Îñfîñîtÿ 3.0.~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:398
 msgid "For LEGO Dimensions."
 msgstr "⟦För LÉGÖ Dîméñsîöñs.~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:399
 msgid "Cemu's emulated portal, plugged in as a game starts. In the game, the menu's USB devices category puts figures on it: dumps in {0}. A real portal on the PS5's USB is not reached."
 msgstr "⟦Çémû's émûlàtéd pörtàl, plûggéd îñ às à gàmé stàrts. Îñ thé gàmé, thé méñû's ÜSB dévîçés çàtégörÿ pûts fîgûrés öñ ît: dûmps îñ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~{0}. Å réàl pörtàl öñ thé PS5's ÜSB îs ñöt réàçhéd.~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:408
 msgid "Install from a folder"
 msgstr "⟦Îñstàll fröm à földér~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:408
 msgid "An update, DLC or game (code, content and meta)."
 msgstr "⟦Åñ ûpdàté, DLÇ ör gàmé (çödé, çöñtéñt àñd métà).~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:409
 msgid "Installs into the Wii U's storage (mlc01), as Cemu's Install game title, update or DLC does. Updates and DLC in the game files folder work as they are, too."
 msgstr "⟦Îñstàlls îñtö thé Wîî Ü's störàgé (mlç01), às Çémû's Îñstàll gàmé tîtlé, ûpdàté ör DLÇ döés. Üpdàtés àñd DLÇ îñ thé gàmé fîlés földér wörk às théÿ àré, töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:415
 msgid "Higher is sharper and asks more of the GPU."
 msgstr "⟦Hîghér îs shàrpér àñd àsks möré öf thé GPÜ.~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:416
 msgid "How large the 3DS's 3D scenes are drawn before they are scaled to the TV. Higher is sharper and asks more of the GPU, and each time a game reads a picture back the wait grows with it."
 msgstr "⟦Höw làrgé thé 3DS's 3D sçéñés àré dràwñ béföré théÿ àré sçàléd tö thé TV. Hîghér îs shàrpér àñd àsks möré öf thé GPÜ, àñd éàçh tîmé à gàmé réàds à pîçtûré bàçk thé wàît gröws wîth ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:419
 msgid "Smooths textures as they are scaled up."
 msgstr "⟦Smööths téxtûrés às théÿ àré sçàléd ûp.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:420
 msgid "Smooths the game's textures as they are scaled up; None keeps them as the 3DS draws them. A filter redraws every texture at the internal resolution: at high resolutions it is the costliest setting. If a game stutters, try None first."
 msgstr "⟦Smööths thé gàmé's téxtûrés às théÿ àré sçàléd ûp; Ñöñé kééps thém às thé 3DS dràws thém. Å fîltér rédràws évérÿ téxtûré àt thé îñtérñàl résölûtîöñ: àt hîgh résölûtîöñs ît îs thé çöstlîést séttîñg. Îf à gàmé stûttérs, trÿ Ñöñé fîrst.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:422
 msgid "Custom textures"
 msgstr "⟦Çûstöm téxtûrés~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:422
 msgid "Texture packs from azahar/load/textures."
 msgstr "⟦Téxtûré pàçks fröm àzàhàr/löàd/téxtûrés.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:423
 msgid "Texture packs in /data/ps5cemu/azahar/load/textures/<title ID>, as the desktop Azahar loads them."
 msgstr "⟦Téxtûré pàçks îñ /dàtà/ps5çémû/àzàhàr/löàd/téxtûrés/<tîtlé ÎD>, às thé désktöp Åzàhàr löàds thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:427
 msgid "Screen layout"
 msgstr "⟦Sçrééñ làÿöût~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:427
 msgid "How the two screens share the TV."
 msgstr "⟦Höw thé twö sçrééñs shàré thé TV.~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:428
 msgid "One above the other, the top one alone, the top one large with the bottom one beside it, or the two side by side. In a game, touchpad click + R1 goes to the next."
 msgstr "⟦Öñé àbövé thé öthér, thé töp öñé àlöñé, thé töp öñé làrgé wîth thé böttöm öñé bésîdé ît, ör thé twö sîdé bÿ sîdé. Îñ à gàmé, töûçhpàd çlîçk + R1 göés tö thé ñéxt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:430
 msgid "Artwork around the screens."
 msgstr "⟦Årtwörk àröûñd thé sçrééñs.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:431
 msgid "Artwork around the 3DS screens, never over them. It follows every layout, and the in-game menu changes it too."
 msgstr "⟦Årtwörk àröûñd thé 3DS sçrééñs, ñévér övér thém. Ît föllöws évérÿ làÿöût, àñd thé îñ-gàmé méñû çhàñgés ît töö.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:435
 msgid "The DualSense's motion as the 3DS's."
 msgstr "⟦Thé DûàlSéñsé's mötîöñ às thé 3DS's.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:436
 msgid "The DualSense's gyroscope and accelerometer as the 3DS's own, for the games that aim or steer by tilting it."
 msgstr "⟦Thé DûàlSéñsé's gÿrösçöpé àñd àççélérömétér às thé 3DS's öwñ, för thé gàmés thàt àîm ör stéér bÿ tîltîñg ît.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:437
 msgid "How far a stick moves before it counts."
 msgstr "⟦Höw fàr à stîçk mövés béföré ît çöûñts.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:438
 msgid "How far a stick moves before the game sees it, for the circle pad and the C-stick. Raise it if something drifts when you let go of the stick; lower it for finer control."
 msgstr "⟦Höw fàr à stîçk mövés béföré thé gàmé séés ît, för thé çîrçlé pàd àñd thé Ç-stîçk. Ràîsé ît îf söméthîñg drîfts whéñ ÿöû lét gö öf thé stîçk; löwér ît för fîñér çöñtröl.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:444
 msgid "Which DualSense button is which of the 3DS's. A is on Circle and B on Cross by default, where the 3DS has them; the circle pad is the left stick, the C-stick the right one, and the touchpad the touch screen."
 msgstr "⟦Whîçh DûàlSéñsé bûttöñ îs whîçh öf thé 3DS's. Å îs öñ Çîrçlé àñd B öñ Çröss bÿ défàûlt, whéré thé 3DS hàs thém; thé çîrçlé pàd îs thé léft stîçk, thé Ç-stîçk thé rîght öñé, àñd thé töûçhpàd thé töûçh sçrééñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:446
 msgid "Default buttons, motion and deadzone."
 msgstr "⟦Défàûlt bûttöñs, mötîöñ àñd déàdzöñé.~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:447
 msgid "The default buttons, motion and deadzone."
 msgstr "⟦Thé défàûlt bûttöñs, mötîöñ àñd déàdzöñé.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:455
 msgid "Region"
 msgstr "⟦Régîöñ~~⟧"
 
+#: port/frontend/shell/settings.cpp:455
 msgid "The emulated 3DS's region."
 msgstr "⟦Thé émûlàtéd 3DS's régîöñ.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:456
 msgid "Automatic takes each game's own region. A game made for another region may refuse to start or show other languages. Applies to the next game."
 msgstr "⟦Åûtömàtîç tàkés éàçh gàmé's öwñ régîöñ. Å gàmé màdé för àñöthér régîöñ màÿ réfûsé tö stàrt ör shöw öthér làñgûàgés. Åpplîés tö thé ñéxt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:458
 msgid "The emulated 3DS's language."
 msgstr "⟦Thé émûlàtéd 3DS's làñgûàgé.~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:459
 msgid "The language games that follow the console's show their text in. Applies to the next game."
 msgstr "⟦Thé làñgûàgé gàmés thàt föllöw thé çöñsölé's shöw théîr téxt îñ. Åpplîés tö thé ñéxt gàmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:460
 msgid "Home Menu"
 msgstr "⟦Hömé Méñû~~~⟧"
 
+#: port/frontend/shell/settings.cpp:460 port/frontend/shell/shell.cpp:914
 msgid "Start"
 msgstr "⟦Stàrt~~⟧"
 
+#: port/frontend/shell/settings.cpp:460
 msgid "Run Artic Setup first"
 msgstr "⟦Rûñ Årtîç Sétûp fîrst~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:461
 msgid "The 3DS Home Menu, from your console's files."
 msgstr "⟦Thé 3DS Hömé Méñû, fröm ÿöûr çöñsölé's fîlés.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:462
 msgid "Starts the 3DS Home Menu, once Artic Base's setup has copied your own console's system files (Artic Base)."
 msgstr "⟦Stàrts thé 3DS Hömé Méñû, öñçé Årtîç Bàsé's sétûp hàs çöpîéd ÿöûr öwñ çöñsölé's sÿstém fîlés (Årtîç Bàsé).~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:468
 msgid "Install a CIA file"
 msgstr "⟦Îñstàll à ÇÎÅ fîlé~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:468
 msgid "A game, an update or DLC."
 msgstr "⟦Å gàmé, àñ ûpdàté ör DLÇ.~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:469
 msgid "Installs a CIA into the 3DS's storage, as Azahar's Install CIA does: an update or DLC goes with its game, and a game joins the library. Circle cancels while it runs."
 msgstr "⟦Îñstàlls à ÇÎÅ îñtö thé 3DS's störàgé, às Åzàhàr's Îñstàll ÇÎÅ döés: àñ ûpdàté ör DLÇ göés wîth îts gàmé, àñd à gàmé jöîñs thé lîbràrÿ. Çîrçlé çàñçéls whîlé ît rûñs.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:475
 msgid "Play a game from your 3DS, and set up from it."
 msgstr "⟦Plàÿ à gàmé fröm ÿöûr 3DS, àñd sét ûp fröm ît.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:476
 msgid "Artic Base plays a game from a 3DS on your network, its saves staying on the 3DS; Artic Setup copies a 3DS's system files into Azahar, for the Home Menu and the games that need them."
 msgstr "⟦Årtîç Bàsé plàÿs à gàmé fröm à 3DS öñ ÿöûr ñétwörk, îts sàvés stàÿîñg öñ thé 3DS; Årtîç Sétûp çöpîés à 3DS's sÿstém fîlés îñtö Åzàhàr, för thé Hömé Méñû àñd thé gàmés thàt ñééd thém.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:481
 msgid "Open the Setup check"
 msgstr "⟦Öpéñ thé Sétûp çhéçk~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:481
 msgid "Storage, recompilers, games, keys and box art, checked."
 msgstr "⟦Störàgé, réçömpîlérs, gàmés, kéÿs àñd böx àrt, çhéçkéd.~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:482
 msgid "Each check has a status, what it means and what to do. It is also shown on the first start and whenever a check fails as the app starts."
 msgstr "⟦Éàçh çhéçk hàs à stàtûs, whàt ît méàñs àñd whàt tö dö. Ît îs àlsö shöwñ öñ thé fîrst stàrt àñd whéñévér à çhéçk fàîls às thé àpp stàrts.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:486
 msgid "Copy logs to USB"
 msgstr "⟦Çöpÿ lögs tö ÜSB~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:486
 msgid "The logs a report needs, onto a USB drive."
 msgstr "⟦Thé lögs à répört ñééds, öñtö à ÜSB drîvé.~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:487
 msgid "Copies the last five sessions' logs and the settings into a dated folder on a USB drive, to attach to a report."
 msgstr "⟦Çöpîés thé làst fîvé séssîöñs' lögs àñd thé séttîñgs îñtö à dàtéd földér öñ à ÜSB drîvé, tö àttàçh tö à répört.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:488
 msgid "Clear Wii U shader caches"
 msgstr "⟦Çléàr Wîî Ü shàdér çàçhés~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:489 port/frontend/shell/settings.cpp:492
 msgid "For a game that crashes on a bad cache."
 msgstr "⟦För à gàmé thàt çràshés öñ à bàd çàçhé.~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:490
 msgid "Deletes Cemu's shader caches. Games build them again as they run: the first minutes stutter."
 msgstr "⟦Délétés Çémû's shàdér çàçhés. Gàmés bûîld thém àgàîñ às théÿ rûñ: thé fîrst mîñûtés stûttér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:491
 msgid "Clear 3DS shader caches"
 msgstr "⟦Çléàr 3DS shàdér çàçhés~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:493
 msgid "Deletes Azahar's shader caches. Games build them again as they run: the first minutes stutter."
 msgstr "⟦Délétés Åzàhàr's shàdér çàçhés. Gàmés bûîld thém àgàîñ às théÿ rûñ: thé fîrst mîñûtés stûttér.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:508
 msgid "Figure dumps go in /data/ps5cemu/figures: skylanders, infinity and dimensions. Switch a portal on here, start the game, then put figures on it from the in-game menu (touchpad click + Options > USB devices)."
 msgstr "⟦Fîgûré dûmps gö îñ /dàtà/ps5çémû/fîgûrés: skÿlàñdérs, îñfîñîtÿ àñd dîméñsîöñs. Swîtçh à pörtàl öñ héré, stàrt thé gàmé, théñ pût fîgûrés öñ ît fröm thé îñ-gàmé méñû (töûçhpàd çlîçk + Öptîöñs > ÜSB dévîçés).~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:511
 msgid ""
 "Cemu, the Wii U emulator, by the Cemu team and its contributors; RADV on the PS5 by Mihawk-99 and mpereiraesaa; the community graphic packs' authors.\n"
 "Azahar, the 3DS emulator, by the Azahar team and the Citra contributors before them; Mihawk-99's PS5 port of it and dynarmic.\n"
@@ -2844,494 +4098,664 @@ msgstr ""
 "\n"
 "⟧"
 
+#: port/frontend/shell/settings.cpp:517
 msgid "Version {0}"
 msgstr "⟦Vérsîöñ ~~~{0}⟧"
 
+#. the first choice in the language list: the PS5's own ({0}, in its own words)
+#: port/frontend/shell/settings.cpp:524
 msgid "The PS5's language: {0}"
 msgstr "⟦Thé PS5's làñgûàgé: ~~~~~~~~{0}⟧"
 
+#: port/frontend/shell/settings.cpp:552
 msgid "Language: {0}"
 msgstr "⟦Làñgûàgé: ~~~~{0}⟧"
 
+#. the launcher's three tabs
+#: port/frontend/shell/settings.cpp:666 port/frontend/shell/shell.cpp:851
 msgctxt "tab"
 msgid "Settings"
 msgstr "⟦Séttîñgs~~~⟧"
 
+#: port/frontend/shell/settings.cpp:777
 msgid "Starting the 3DS"
 msgstr "⟦Stàrtîñg thé 3DS~~~~~~⟧"
 
+#. Settings' sections
+#: port/frontend/shell/settings.cpp:1032
 msgid "General"
 msgstr "⟦Géñéràl~~⟧"
 
+#: port/frontend/shell/settings.cpp:1033 port/frontend/shell/setup.cpp:421
 msgid "Help"
 msgstr "⟦Hélp~⟧"
 
+#: port/frontend/shell/settings.cpp:1103
 msgid "Preview"
 msgstr "⟦Prévîéw~~⟧"
 
+#. {0} is a screen layout, {1} a border's name
+#: port/frontend/shell/settings.cpp:1108
 msgid "{0}, with no border."
 msgstr "⟦{0}, wîth ñö bördér.~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:1109
 msgid "{0}, on the {1} border."
 msgstr "⟦{0}, öñ thé ~~~{1} bördér.~~~⟧"
 
+#: port/frontend/shell/settings.cpp:1111
 msgid "The bottom screen is the touchpad: click to tap, hold the click to drag."
 msgstr "⟦Thé böttöm sçrééñ îs thé töûçhpàd: çlîçk tö tàp, höld thé çlîçk tö dràg.~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/settings.cpp:1119
 msgid "About this setting"
 msgstr "⟦Åböût thîs séttîñg~~~~~~~⟧"
 
+#. free space on the PS5's storage, as in 412 GB free
+#: port/frontend/shell/setup.cpp:40
 msgid "{0} GB free"
 msgstr "⟦{0} GB fréé~~~⟧"
 
+#: port/frontend/shell/setup.cpp:169
 msgid "Storage"
 msgstr "⟦Störàgé~~⟧"
 
+#. what the QR code opens: "Scan it for the HEN setup guide"
+#: port/frontend/shell/setup.cpp:172 port/frontend/shell/setup.cpp:197
 msgid "the HEN setup guide"
 msgstr "⟦thé HÉÑ sétûp gûîdé~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:177
 msgid "/data is reachable"
 msgstr "⟦/dàtà îs réàçhàblé~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:178
 msgid "Where everything is kept"
 msgstr "⟦Whéré évérÿthîñg îs képt~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:179
 msgid "Settings, saves, caches and logs live in {0}, which your HEN opens to PS5CEMU-HAR: its app jailbreak, or elfldr with the helper that comes with the app."
 msgstr "⟦Séttîñgs, sàvés, çàçhés àñd lögs lîvé îñ ~~~~~~~~~~~~~~~~{0}, whîçh ÿöûr HÉÑ öpéñs tö PS5ÇÉMÜ-HÅR: îts àpp jàîlbréàk, ör élfldr wîth thé hélpér thàt çömés wîth thé àpp.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:186
 msgid "/data is out of reach: nothing can be kept"
 msgstr "⟦/dàtà îs öût öf réàçh: ñöthîñg çàñ bé képt~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:187
 msgid "Let PS5CEMU-HAR out of its sandbox"
 msgstr "⟦Lét PS5ÇÉMÜ-HÅR öût öf îts sàñdböx~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:188
 msgid "Add PPSA99360 to your HEN's app jailbreak list (etaHEN: its app jailbreak list; OnionHEN: the end of exact_title_ids in config.ini, with no comma after it), or have elfldr listening on port 9021. Then start PS5CEMU-HAR again."
 msgstr "⟦Ådd PPSÅ99360 tö ÿöûr HÉÑ's àpp jàîlbréàk lîst (étàHÉÑ: îts àpp jàîlbréàk lîst; ÖñîöñHÉÑ: thé éñd öf éxàçt_tîtlé_îds îñ çöñfîg.îñî, wîth ñö çömmà àftér ît), ör hàvé élfldr lîstéñîñg öñ pört 9021. Théñ stàrt PS5ÇÉMÜ-HÅR àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:195
 msgid "Recompilers"
 msgstr "⟦Réçömpîlérs~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:198
 msgid "What runs the games' code"
 msgstr "⟦Whàt rûñs thé gàmés' çödé~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:202
 msgid "JIT memory from your HEN: games run at full speed"
 msgstr "⟦JÎT mémörÿ fröm ÿöûr HÉÑ: gàmés rûñ àt fûll spééd~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:203
 msgid "Executable memory: games run at full speed, no HEN grant needed"
 msgstr "⟦Éxéçûtàblé mémörÿ: gàmés rûñ àt fûll spééd, ñö HÉÑ gràñt ñéédéd~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:204
 msgid "Cemu's and Azahar's recompilers turn the games' code into the PS5's as they run. They need memory they can write code into and run it from: your HEN's JIT memory, or executable memory PS5CEMU-HAR makes itself."
 msgstr "⟦Çémû's àñd Åzàhàr's réçömpîlérs tûrñ thé gàmés' çödé îñtö thé PS5's às théÿ rûñ. Théÿ ñééd mémörÿ théÿ çàñ wrîté çödé îñtö àñd rûñ ît fröm: ÿöûr HÉÑ's JÎT mémörÿ, ör éxéçûtàblé mémörÿ PS5ÇÉMÜ-HÅR màkés îtsélf.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:210
 msgid "No JIT or executable memory: Wii U games run on the much slower interpreter"
 msgstr "⟦Ñö JÎT ör éxéçûtàblé mémörÿ: Wîî Ü gàmés rûñ öñ thé mûçh slöwér îñtérprétér~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:211
 msgid "Neither your HEN's JIT memory nor executable memory could be made, so Wii U games fall back to Cemu's interpreter. Add PPSA99360 to your HEN's app jailbreak list, then start PS5CEMU-HAR again; Settings > Diagnostics says what it got."
 msgstr "⟦Ñéîthér ÿöûr HÉÑ's JÎT mémörÿ ñör éxéçûtàblé mémörÿ çöûld bé màdé, sö Wîî Ü gàmés fàll bàçk tö Çémû's îñtérprétér. Ådd PPSÅ99360 tö ÿöûr HÉÑ's àpp jàîlbréàk lîst, théñ stàrt PS5ÇÉMÜ-HÅR àgàîñ; Séttîñgs > Dîàgñöstîçs sàÿs whàt ît göt.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. {1} is a folder
+#: port/frontend/shell/setup.cpp:235
 msgid "{0} game in {1}"
 msgid_plural "{0} games in {1}"
 msgstr[0] "⟦{0} gàmé îñ ~~~{1}⟧"
 msgstr[1] "⟦{0} gàmés îñ ~~~~{1}⟧"
 
+#: port/frontend/shell/setup.cpp:236
 msgid "None in {0} yet"
 msgstr "⟦Ñöñé îñ ~~~{0} ÿét~⟧"
 
+#: port/frontend/shell/setup.cpp:237
 msgid "{0} cannot be read"
 msgstr "⟦{0} çàññöt bé réàd~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:238
 msgid "Where your 3DS games go"
 msgstr "⟦Whéré ÿöûr 3DS gàmés gö~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:238
 msgid "Where your Wii U games go"
 msgstr "⟦Whéré ÿöûr Wîî Ü gàmés gö~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:239
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Folders inside it are searched too. CIA files are installed, from Settings > Install CIA files."
 msgstr "⟦Pût thém îñ ~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé. Földérs îñsîdé ît àré séàrçhéd töö. ÇÎÅ fîlés àré îñstàlléd, fröm Séttîñgs > Îñstàll ÇÎÅ fîlés.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:242
 msgid "Put them in {0}, or choose any folder the PS5 can read, such as one on a USB drive. Updates and DLC go in from Settings > Install updates and DLC, or come with a .wua."
 msgstr "⟦Pût thém îñ ~~~~{0}, ör çhöösé àñÿ földér thé PS5 çàñ réàd, sûçh às öñé öñ à ÜSB drîvé. Üpdàtés àñd DLÇ gö îñ fröm Séttîñgs > Îñstàll ûpdàtés àñd DLÇ, ör çömé wîth à .wûà.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:246
 msgid "code · content · meta"
 msgstr "⟦çödé · çöñtéñt · métà~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:248 port/frontend/shell/setup.cpp:263 port/frontend/shell/setup.cpp:276
 msgid "the game files page"
 msgstr "⟦thé gàmé fîlés pàgé~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:256
 msgid "keys.txt is missing: only encrypted .wud and .wux need it"
 msgstr "⟦kéÿs.txt îs mîssîñg: öñlÿ éñçrÿptéd .wûd àñd .wûx ñééd ît~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:257 port/frontend/shell/setup.cpp:270
 msgid "How to"
 msgstr "⟦Höw tö~~⟧"
 
+#: port/frontend/shell/setup.cpp:258
 msgid "Keys for encrypted discs"
 msgstr "⟦Kéÿs för éñçrÿptéd dîsçs~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:259
 msgid "Encrypted .wud and .wux dumps need their disc keys in {0}/keys.txt, one a line. Decrypted dumps, .wua files and folders with code, content and meta need none."
 msgstr "⟦Éñçrÿptéd .wûd àñd .wûx dûmps ñééd théîr dîsç kéÿs îñ ~~~~~~~~~~~~~~~~~~~~~{0}/kéÿs.txt, öñé à lîñé. Déçrÿptéd dûmps, .wûà fîlés àñd földérs wîth çödé, çöñtéñt àñd métà ñééd ñöñé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:267
 msgid "3DS keys"
 msgstr "⟦3DS kéÿs~~~⟧"
 
+#: port/frontend/shell/setup.cpp:269
 msgid "aes_keys.txt found"
 msgstr "⟦àés_kéÿs.txt föûñd~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:269
 msgid "aes_keys.txt is missing: only encrypted dumps need it"
 msgstr "⟦àés_kéÿs.txt îs mîssîñg: öñlÿ éñçrÿptéd dûmps ñééd ît~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:271
 msgid "Keys for encrypted 3DS dumps"
 msgstr "⟦Kéÿs för éñçrÿptéd 3DS dûmps~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:272
 msgid "Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed CIAs need none. No keys come with PS5CEMU-HAR."
 msgstr "⟦Éñçrÿptéd dûmps ñééd àés_kéÿs.txt fröm ÿöûr öwñ çöñsölé îñ ~~~~~~~~~~~~~~~~~~~~~~~{0}/sÿsdàtà. Déçrÿptéd dûmps, hömébréw àñd îñstàlléd ÇÎÅs ñééd ñöñé. Ñö kéÿs çömé wîth PS5ÇÉMÜ-HÅR.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:285
 msgid "3DS system files"
 msgstr "⟦3DS sÿstém fîlés~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:287
 msgid "Artic Setup has run: the Home Menu can start"
 msgstr "⟦Årtîç Sétûp hàs rûñ: thé Hömé Méñû çàñ stàrt~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:287
 msgid "Artic Setup copies them from your 3DS, for the Home Menu"
 msgstr "⟦Årtîç Sétûp çöpîés thém fröm ÿöûr 3DS, för thé Hömé Méñû~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:289
 msgid "Your 3DS's own files"
 msgstr "⟦Yöûr 3DS's öwñ fîlés~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:290
 msgid "The 3DS Home Menu, and the few games that need the console's system files, run once Artic Setup has copied them from your own 3DS over the network: start the Artic Setup Tool on the 3DS, then Artic Base here."
 msgstr "⟦Thé 3DS Hömé Méñû, àñd thé féw gàmés thàt ñééd thé çöñsölé's sÿstém fîlés, rûñ öñçé Årtîç Sétûp hàs çöpîéd thém fröm ÿöûr öwñ 3DS övér thé ñétwörk: stàrt thé Årtîç Sétûp Tööl öñ thé 3DS, théñ Årtîç Bàsé héré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:293
 msgid "the 3DS page"
 msgstr "⟦thé 3DS pàgé~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:297
 msgid "Box art"
 msgstr "⟦Böx àrt~~⟧"
 
+#: port/frontend/shell/setup.cpp:299
 msgid "what PS5CEMU-HAR fetches online"
 msgstr "⟦whàt PS5ÇÉMÜ-HÅR fétçhés öñlîñé~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:300
 msgid "Covers from GameTDB"
 msgstr "⟦Çövérs fröm GàméTDB~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:301
 msgid "The first time a game shows up, its cover comes from GameTDB (art.gametdb.com), by the ID on its box. Without a connection the games' own icons are shown, and the next start tries again."
 msgstr "⟦Thé fîrst tîmé à gàmé shöws ûp, îts çövér çömés fröm GàméTDB (àrt.gàmétdb.çöm), bÿ thé ÎD öñ îts böx. Wîthöût à çöññéçtîöñ thé gàmés' öwñ îçöñs àré shöwñ, àñd thé ñéxt stàrt trîés àgàîñ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:307
 msgid "Off: the games' icons are shown instead"
 msgstr "⟦Öff: thé gàmés' îçöñs àré shöwñ îñstéàd~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:308
 msgid "Turn on"
 msgstr "⟦Tûrñ öñ~~⟧"
 
+#: port/frontend/shell/setup.cpp:313
 msgid "GameTDB did not answer: the games' icons are shown instead"
 msgstr "⟦GàméTDB dîd ñöt àñswér: thé gàmés' îçöñs àré shöwñ îñstéàd~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:318
 msgid "GameTDB is reachable · {0} cover"
 msgid_plural "GameTDB is reachable · {0} covers"
 msgstr[0] "⟦GàméTDB îs réàçhàblé · ~~~~~~~~~{0} çövér~~⟧"
 msgstr[1] "⟦GàméTDB îs réàçhàblé · ~~~~~~~~~{0} çövérs~~⟧"
 
+#: port/frontend/shell/setup.cpp:319
 msgid "On · {0} cover"
 msgid_plural "On · {0} covers"
 msgstr[0] "⟦Öñ · ~~{0} çövér~~⟧"
 msgstr[1] "⟦Öñ · ~~{0} çövérs~~⟧"
 
+#: port/frontend/shell/setup.cpp:320
 msgid "On: covers come as your games show up"
 msgstr "⟦Öñ: çövérs çömé às ÿöûr gàmés shöw ûp~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:397
 msgid "Checked again"
 msgstr "⟦Çhéçkéd àgàîñ~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:421
 msgid "Welcome to PS5CEMU-HAR"
 msgstr "⟦Wélçömé tö PS5ÇÉMÜ-HÅR~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:422
 msgid "Let’s check your setup"
 msgstr "⟦Lét’s çhéçk ÿöûr sétûp~~~~~~~~⟧"
 
+#. the Setup check's progress: how many checks are ready, and how many need a look
+#: port/frontend/shell/setup.cpp:428
 msgid "The {0} check is ready."
 msgid_plural "All {0} checks are ready."
 msgstr[0] "⟦Thé ~{0} çhéçk îs réàdÿ.~~~~~~⟧"
 msgstr[1] "⟦Åll ~{0} çhéçks àré réàdÿ.~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:429
 msgid "The {0} check needs a look."
 msgid_plural "All {0} checks need a look."
 msgstr[0] "⟦Thé ~{0} çhéçk ñééds à löök.~~~~~~~~⟧"
 msgstr[1] "⟦Åll ~{0} çhéçks ñééd à löök.~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:430
 msgid "{0} of {1} is ready."
 msgid_plural "{0} of {1} are ready."
 msgstr[0] "⟦{0} öf ~{1} îs réàdÿ.~~~~⟧"
 msgstr[1] "⟦{0} öf ~{1} àré réàdÿ.~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:431
 msgid "{0} needs a look."
 msgid_plural "{0} need a look."
 msgstr[0] "⟦{0} ñééds à löök.~~~~~⟧"
 msgstr[1] "⟦{0} ñééd à löök.~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:437
 msgid "{0} · as the PS5"
 msgstr "⟦{0} · às thé PS5~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:485 port/frontend/shell/setup.cpp:489
 msgid "· optional"
 msgstr "⟦· öptîöñàl~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:503
 msgid "The menus' language"
 msgstr "⟦Thé méñûs' làñgûàgé~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:504
 msgid "PS5CEMU-HAR speaks the language your PS5 is set to. Cross chooses another; Settings > General > Language changes it at any time."
 msgstr "⟦PS5ÇÉMÜ-HÅR spéàks thé làñgûàgé ÿöûr PS5 îs sét tö. Çröss çhöösés àñöthér; Séttîñgs > Géñéràl > Làñgûàgé çhàñgés ît àt àñÿ tîmé.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:572
 msgid "The guide, on your phone"
 msgstr "⟦Thé gûîdé, öñ ÿöûr phöñé~~~~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:575
 msgid "Scan it for {0}: {1}"
 msgstr "⟦Sçàñ ît för ~~~~{0}: {1}⟧"
 
+#: port/frontend/shell/setup.cpp:651
 msgid "Not in this build"
 msgstr "⟦Ñöt îñ thîs bûîld~~~~~~⟧"
 
+#: port/frontend/shell/setup.cpp:652
 msgid "Open to look for games"
 msgstr "⟦Öpéñ tö löök för gàmés~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:178
 msgid "Saved your place in the library"
 msgstr "⟦Sàvéd ÿöûr plàçé îñ thé lîbràrÿ~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:182
 msgid "The game could not start"
 msgstr "⟦Thé gàmé çöûld ñöt stàrt~~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:589
 msgid "{0} min played"
 msgid_plural "{0} min played"
 msgstr[0] "⟦{0} mîñ plàÿéd~~~~⟧"
 msgstr[1] "⟦{0} mîñ plàÿéd~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:590
 msgid "{0} h played"
 msgid_plural "{0} h played"
 msgstr[0] "⟦{0} h plàÿéd~~~⟧"
 msgstr[1] "⟦{0} h plàÿéd~~~⟧"
 
+#: port/frontend/shell/shell.cpp:605
 msgid "today"
 msgstr "⟦tödàÿ~~⟧"
 
+#: port/frontend/shell/shell.cpp:607
 msgid "yesterday"
 msgstr "⟦ÿéstérdàÿ~~~⟧"
 
+#: port/frontend/shell/shell.cpp:609
 msgid "{0} day ago"
 msgid_plural "{0} days ago"
 msgstr[0] "⟦{0} dàÿ àgö~~~⟧"
 msgstr[1] "⟦{0} dàÿs àgö~~~⟧"
 
+#: port/frontend/shell/shell.cpp:611
 msgid "{0} week ago"
 msgid_plural "{0} weeks ago"
 msgstr[0] "⟦{0} wéék àgö~~~⟧"
 msgstr[1] "⟦{0} wééks àgö~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:612
 msgid "{0} month ago"
 msgid_plural "{0} months ago"
 msgstr[0] "⟦{0} möñth àgö~~~~⟧"
 msgstr[1] "⟦{0} möñths àgö~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:655
 msgid "Cemu is still starting"
 msgstr "⟦Çémû îs stîll stàrtîñg~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:668
 msgid "Starting Azahar"
 msgstr "⟦Stàrtîñg Åzàhàr~~~~~~⟧"
 
+#. the launcher's three tabs
+#: port/frontend/shell/shell.cpp:851 port/frontend/shell/shell.cpp:939
 msgctxt "tab"
 msgid "Home"
 msgstr "⟦Hömé~⟧"
 
+#. the on-screen keyboard's keys
+#: port/frontend/shell/shell.cpp:903 port/frontend/shell/shell.cpp:1473
 msgid "Done"
 msgstr "⟦Döñé~⟧"
 
+#: port/frontend/shell/shell.cpp:903 port/frontend/shell/shell.cpp:907 port/frontend/shell/shell.cpp:909
 msgid "Close"
 msgstr "⟦Çlösé~~⟧"
 
+#: port/frontend/shell/shell.cpp:905 port/frontend/shell/shell.cpp:949 port/frontend/shell/shell.cpp:953
 msgid "Cancel"
 msgstr "⟦Çàñçél~~⟧"
 
+#: port/frontend/shell/shell.cpp:911
 msgid "Tabs"
 msgstr "⟦Tàbs~⟧"
 
+#: port/frontend/shell/shell.cpp:911
 msgid "Switch"
 msgstr "⟦Swîtçh~~⟧"
 
+#: port/frontend/shell/shell.cpp:911 port/frontend/shell/shell.cpp:929 port/frontend/shell/shell.cpp:939 port/frontend/shell/shell.cpp:954
 msgid "Open"
 msgstr "⟦Öpéñ~⟧"
 
+#: port/frontend/shell/shell.cpp:919
 msgid "Change the language"
 msgstr "⟦Çhàñgé thé làñgûàgé~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:922
 msgid "Check again"
 msgstr "⟦Çhéçk àgàîñ~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:923
 msgid "Continue"
 msgstr "⟦Çöñtîñûé~~~⟧"
 
+#: port/frontend/shell/shell.cpp:923
 msgid "Continue to Home"
 msgstr "⟦Çöñtîñûé tö Hömé~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:930 port/frontend/shell/shell.cpp:934 port/frontend/shell/shell.cpp:935
 msgid "Options"
 msgstr "⟦Öptîöñs~~⟧"
 
+#: port/frontend/shell/shell.cpp:930
 msgid "Move"
 msgstr "⟦Mövé~⟧"
 
+#: port/frontend/shell/shell.cpp:933
 msgid "Filters"
 msgstr "⟦Fîltérs~~⟧"
 
+#: port/frontend/shell/shell.cpp:934
 msgid "Jump by letter"
 msgstr "⟦Jûmp bÿ léttér~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:935
 msgid "Back to the buttons"
 msgstr "⟦Bàçk tö thé bûttöñs~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:936
 msgid "Scroll"
 msgstr "⟦Sçröll~~⟧"
 
+#: port/frontend/shell/shell.cpp:939
 msgid "Pages"
 msgstr "⟦Pàgés~~⟧"
 
+#: port/frontend/shell/shell.cpp:940 port/frontend/shell/shell.cpp:946
 msgid "More about it"
 msgstr "⟦Möré àböût ît~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:943
 msgid "Back to the packs"
 msgstr "⟦Bàçk tö thé pàçks~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:944
 msgid "On / off"
 msgstr "⟦Öñ / öff~~~⟧"
 
+#: port/frontend/shell/shell.cpp:950
 msgid "Assign"
 msgstr "⟦Åssîgñ~~⟧"
 
+#: port/frontend/shell/shell.cpp:950
 msgid "Clear"
 msgstr "⟦Çléàr~~⟧"
 
+#: port/frontend/shell/shell.cpp:954
 msgid "Use this folder"
 msgstr "⟦Üsé thîs földér~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:957
 msgid "Number"
 msgstr "⟦Ñûmbér~~⟧"
 
+#: port/frontend/shell/shell.cpp:957
 msgid "Keep"
 msgstr "⟦Kéép~⟧"
 
+#: port/frontend/shell/shell.cpp:958
 msgid "Edit"
 msgstr "⟦Édît~⟧"
 
+#: port/frontend/shell/shell.cpp:958
 msgid "Connect"
 msgstr "⟦Çöññéçt~~⟧"
 
+#: port/frontend/shell/shell.cpp:958
 msgid "Hold to set up"
 msgstr "⟦Höld tö sét ûp~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1120
 msgid "Not a favourite"
 msgstr "⟦Ñöt à fàvöûrîté~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1121
 msgid "Show where it is"
 msgstr "⟦Shöw whéré ît îs~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1310
 msgid "Added to Favourites"
 msgstr "⟦Åddéd tö Fàvöûrîtés~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1310
 msgid "Taken out of Favourites"
 msgstr "⟦Tàkéñ öût öf Fàvöûrîtés~~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1316
 msgid "The PS5's storage"
 msgstr "⟦Thé PS5's störàgé~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1320
 msgid "Title ID {0}"
 msgstr "⟦Tîtlé ÎD ~~~{0}⟧"
 
+#: port/frontend/shell/shell.cpp:1495
 msgid "PS5CEMU-HAR {0} is out"
 msgstr "⟦PS5ÇÉMÜ-HÅR ~~~~{0} îs öût~~⟧"
 
+#: port/frontend/shell/shell.cpp:1496
 msgid "This is {0}. Download and install it now? Your games, saves and settings stay as they are."
 msgstr "⟦Thîs îs ~~~{0}. Döwñlöàd àñd îñstàll ît ñöw? Yöûr gàmés, sàvés àñd séttîñgs stàÿ às théÿ àré.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1497
 msgid "Update now"
 msgstr "⟦Üpdàté ñöw~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1497 port/frontend/shell/shell.cpp:1550
 msgid "Later"
 msgstr "⟦Làtér~~⟧"
 
+#: port/frontend/shell/shell.cpp:1500 port/frontend/shell/shell.cpp:1505 port/frontend/shell/shell.cpp:1510
 msgid "Updating to {0}"
 msgstr "⟦Üpdàtîñg tö ~~~~{0}⟧"
 
+#: port/frontend/shell/shell.cpp:1501
 msgid "Downloading: {0} of {1} MB"
 msgstr "⟦Döwñlöàdîñg: ~~~~~{0} öf ~{1} MB~⟧"
 
+#: port/frontend/shell/shell.cpp:1506
 msgid "Checking the download"
 msgstr "⟦Çhéçkîñg thé döwñlöàd~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1511
 msgid "Installing"
 msgstr "⟦Îñstàllîñg~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1515
 msgid "{0} is installed"
 msgstr "⟦{0} îs îñstàlléd~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1516
 msgid "PS5CEMU-HAR starts again to finish the update."
 msgstr "⟦PS5ÇÉMÜ-HÅR stàrts àgàîñ tö fîñîsh thé ûpdàté.~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1517
 msgid "Restart now"
 msgstr "⟦Réstàrt ñöw~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1520
 msgid "The update did not finish"
 msgstr "⟦Thé ûpdàté dîd ñöt fîñîsh~~~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1521
 msgid "PS5CEMU-HAR is still {0}."
 msgstr "⟦PS5ÇÉMÜ-HÅR îs stîll ~~~~~~~~{0}.⟧"
 
+#: port/frontend/shell/shell.cpp:1524
 msgid "Checking for updates"
 msgstr "⟦Çhéçkîñg för ûpdàtés~~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1530
 msgid "PS5CEMU-HAR update"
 msgstr "⟦PS5ÇÉMÜ-HÅR ûpdàté~~~~~~~⟧"
 
+#: port/frontend/shell/shell.cpp:1550
 msgid "Select"
 msgstr "⟦Séléçt~~⟧"
 
+#: port/frontend/shell/shell.cpp:1551
 msgid "Restart"
 msgstr "⟦Réstàrt~~⟧"
 
+#: port/main_ps5.cpp:84
 msgid "Firmware {0}"
 msgstr "⟦Fîrmwàré ~~~{0}⟧"
 
+#: port/main_ps5.cpp:86
 msgid "Logs: {0}, {1}/log.txt"
 msgstr "⟦Lögs: ~~{0}, {1}/lög.txt~~~⟧"
 
+#: port/main_ps5.cpp:87
 msgid "Boot log not written (/data is unreachable)"
 msgstr "⟦Bööt lög ñöt wrîttéñ (/dàtà îs ûñréàçhàblé)~~~~~~~~~~~~~~~~~⟧"
 
+#: port/main_ps5.cpp:198
 msgid "PS5CEMU-HAR cannot reach /data. Load a HEN with PPSA99360 in its app jailbreak list, or elfldr, then restart PS5CEMU-HAR."
 msgstr "⟦PS5ÇÉMÜ-HÅR çàññöt réàçh /dàtà. Löàd à HÉÑ wîth PPSÅ99360 îñ îts àpp jàîlbréàk lîst, ör élfldr, théñ réstàrt PS5ÇÉMÜ-HÅR.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/main_ps5.cpp:227
 msgid "This session: Azahar (3DS); Cemu's emulated Wii U is not started"
 msgstr "⟦Thîs séssîöñ: Åzàhàr (3DS); Çémû's émûlàtéd Wîî Ü îs ñöt stàrtéd~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/main_ps5.cpp:233
 msgid "This session: Cemu (Wii U); Azahar's core is not started"
 msgstr "⟦Thîs séssîöñ: Çémû (Wîî Ü); Åzàhàr's çöré îs ñöt stàrtéd~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/main_ps5.cpp:239
 msgid "Cemu did not start: {0}"
 msgstr "⟦Çémû dîd ñöt stàrt: ~~~~~~~~{0}⟧"
 
+#: port/main_ps5.cpp:247
 msgid "No JIT memory: Wii U games run on the interpreter, much slower. Is PPSA99360 in your HEN's app jailbreak list?"
 msgstr "⟦Ñö JÎT mémörÿ: Wîî Ü gàmés rûñ öñ thé îñtérprétér, mûçh slöwér. Îs PPSÅ99360 îñ ÿöûr HÉÑ's àpp jàîlbréàk lîst?~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#: port/main_ps5.cpp:266
 msgid "The launcher could not start. The boot log in /data/ps5cemu/logs says why."
 msgstr "⟦Thé làûñçhér çöûld ñöt stàrt. Thé bööt lög îñ /dàtà/ps5çémû/lögs sàÿs whÿ.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. a frame rate: frame pacing holds the game to it
+#: port/ps5/display.h:45
+#, menu
 msgid "{0} fps"
 msgstr "⟦{0} fps~⟧"
 
+#. a note from the compatibility list, about how the game runs
+#: docs/COMPATIBILITY.md:23
 msgctxt "compatibility note"
 msgid "Runs at about 60 fps at 1440p. Up to 2.0.0 C it froze and closed when Magnesis or other runes, or the Sheikah scope (R3), highlighted objects; fixed after 2.0.0 C (a newer Cemu)"
 msgstr "⟦Rûñs àt àböût 60 fps àt 1440p. Üp tö 2.0.0 Ç ît frözé àñd çlöséd whéñ Màgñésîs ör öthér rûñés, ör thé Shéîkàh sçöpé (R3), hîghlîghtéd öbjéçts; fîxéd àftér 2.0.0 Ç (à ñéwér Çémû)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. a note from the compatibility list, about how the game runs
+#: docs/COMPATIBILITY.md:24
 msgctxt "compatibility note"
 msgid "About half the textures are missing during races"
 msgstr "⟦Åböût hàlf thé téxtûrés àré mîssîñg dûrîñg ràçés~~~~~~~~~~~~~~~~~~~⟧"
 
+#. a note from the compatibility list, about how the game runs
+#: docs/COMPATIBILITY.md:25
 msgctxt "compatibility note"
 msgid "Plays with its 60 FPS graphic pack turned off; with it on, it glitches and crashes once gameplay loads. Up to 2.0.0 C it crashed there either way (Cemu ran out of Vulkan descriptors)"
 msgstr "⟦Plàÿs wîth îts 60 FPS gràphîç pàçk tûrñéd öff; wîth ît öñ, ît glîtçhés àñd çràshés öñçé gàméplàÿ löàds. Üp tö 2.0.0 Ç ît çràshéd théré éîthér wàÿ (Çémû ràñ öût öf Vûlkàñ désçrîptörs)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~⟧"
 
+#. a note from the compatibility list, about how the game runs
+#: docs/COMPATIBILITY.md:31
 msgctxt "compatibility note"
 msgid "Save states work from the in-game menu"
 msgstr "⟦Sàvé stàtés wörk fröm thé îñ-gàmé méñû~~~~~~~~~~~~~~~⟧"

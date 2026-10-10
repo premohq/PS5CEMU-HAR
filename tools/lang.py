@@ -327,10 +327,18 @@ def read(path):
             flush()
             field = None
             if line.startswith("#,"):
-                pending.fuzzy |= "fuzzy" in [f.strip() for f in line[2:].split(",")]
+                flags = [f.strip() for f in line[2:].split(",")]
+                pending.fuzzy |= "fuzzy" in flags
+                pending.menu |= "menu" in flags
+            elif line.startswith("#."):
+                pending.comments.append(line[3:])
+            elif line.startswith("#:"):
+                pending.refs += line[2:].split()
             elif line.startswith("# ") or line == "#":
                 pending.translator.append(line[2:])
-            continue  # references, extracted comments and obsolete entries (#~) are the template's
+            # obsolete entries (#~) are dropped; a table's references, comments and flags are the
+            # template's again when it is written (import, update)
+            continue
         if line.startswith('"'):
             if field is not None:
                 field.add(unquote(line))
