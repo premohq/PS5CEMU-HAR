@@ -29,6 +29,7 @@ const GLYPHS = {
 	chevron: '<path d="M12 7 L21 16 L12 25" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>',
 	search: '<circle cx="14" cy="14" r="8" fill="none" stroke="currentColor" stroke-width="2.8"/><path d="M20 20 L27 27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
 	wifi: '<path d="M4 13 a17 17 0 0 1 24 0 M8.5 17.5 a11 11 0 0 1 15 0 M13 22 a4.5 4.5 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><circle cx="16" cy="25.5" r="1.8" fill="currentColor"/>',
+	globe: '<circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2.4"/><ellipse cx="16" cy="16" rx="4.8" ry="11" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5 16 H27 M7.5 10.5 H24.5 M7.5 21.5 H24.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
 	sort: '<path d="M6 9 H26 M9 16 H23 M13 23 H19" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>',
 };
 

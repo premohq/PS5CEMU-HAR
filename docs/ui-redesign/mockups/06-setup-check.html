@@ -32,6 +32,9 @@
 	.qr i { display: block; }
 	.qrtext { font: 400 19px/1.5 Lexend; color: var(--text-2); }
 	.qrtext b { color: var(--text); font-weight: 600; display: block; font-size: 22px; margin-bottom: 6px; }
+	/* the menus' language, above the checks: the PS5's own until another is chosen (7.7) */
+	.lang { position: absolute; right: var(--safe-x); top: 132px; height: 64px; padding: 0 26px 0 28px; border-radius: 32px; background: var(--glass); border: 1.5px solid var(--glass-edge); display: flex; align-items: center; gap: 14px; font: 500 24px Lexend; }
+	.lang .dim { color: var(--text-2); }
 	.progress { position: absolute; left: var(--safe-x); top: 236px; display: flex; gap: 10px; align-items: center; font: 500 20px Lexend; color: var(--text-2); }
 	.progress i { width: 40px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.14); display: inline-block; }
 	.progress i.done { background: var(--text); }
@@ -43,6 +46,7 @@
 		<div class="overline">Welcome to PS5CEMU-HAR</div>
 		<h1 style="margin-top:14px">Let's check your setup</h1>
 	</div>
+	<div class="lang"><span data-glyph="globe" data-size="30" style="display:inline-flex"></span>English (United Kingdom) <span class="dim">· as the PS5</span><span data-glyph="chevron" data-size="24" style="display:inline-flex;transform:rotate(90deg);color:var(--text-2);margin-left:10px"></span></div>
 	<div class="progress"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i>&nbsp; Five of seven are ready. Two need a look.</div>
 
 	<div class="checks">
