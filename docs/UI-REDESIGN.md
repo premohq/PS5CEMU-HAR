@@ -379,7 +379,9 @@ release has neither the `[driver]` lines nor the histogram the A/B run reads.
     on the first open (today the cover is uploaded then: `PS5Cemu_ImguiUploads`,
     `port/app/ingame.cpp:625`). On the 3DS, which holds the game while its menu is open
     (`port/azahar/core.cpp:581`), they are made on the first open, as today, so a game whose menu
-    stays closed pays nothing for them in launch time or memory.
+    stays closed pays nothing for them in launch time or memory. In a language, or for a game name,
+    that needs a script Lexend lacks, the console's font for it is read with the menu's fonts (7.7):
+    the one memory cost a language adds, measured by the A/B run in Japanese too.
 11. No glass in a game: a blur would need a copy of the game's frame. The menu's panels are `ink-1` at
     92 % over one dimming quad. The game's picture is not moved or scaled behind the menu: that would
     change how Cemu and Azahar present their frames.
@@ -614,10 +616,16 @@ section of the side you are on comes right after General, the other side's after
 
 | Section | Pages |
 |---|---|
-| General | Display · Sound · Controllers · Games and folders · Online and updates · Accessibility |
+| General | Language · Display · Sound · Controllers · Games and folders · Online and updates · Accessibility |
 | Wii U | Graphics · Controllers · USB devices · Install updates and DLC |
 | Nintendo 3DS | Graphics · Screens and borders · Controls · System and Home Menu · Install CIA files · Artic Base |
 | Help | Setup check · Diagnostics · About |
+
+**Language** comes first in General, and is marked with a globe rather than a word, so it can be
+found in a language one cannot read. Its one row opens the list (Cross, Left or Right: stepping through
+it would change every word at each press): *The PS5's language: Deutsch* first, then every language in
+its own words. The change applies at once, a toast says it in the new language, and the in-game menus
+follow from the next game (7.7).
 
 **Rows are controls, not text:** a toggle for on/off; a slider for volumes and deadzones (its pitch
 rises with its value); a stepper with pips for the 3DS's internal resolution, with the resulting size
@@ -684,6 +692,11 @@ the right part of the README or HEN guide:
 
 All of these facts exist today (`ps5privilege::Result`, the folder counts in `launcher.cpp`, the
 diagnostics lines); the check puts them in one place, in words.
+
+**The language comes first.** On the first start the focus opens on a pill at the top right, above the
+checks: *Deutsch · as the PS5*, the PS5's own language until another is chosen. Its aside says what it
+is in that language; Cross opens the same list as Settings > General > Language, Down goes on to the
+checks. Anyone who can read the PS5's language needs no step; anyone who cannot sees the pill first.
 
 ### 6.8 Launching, and coming back
 
@@ -779,7 +792,10 @@ fallback for scripts Lexend lacks (CJK, Thai, Arabic), as ProsperoEden loads the
 | Overline | 18, SemiBold, capitals, 3.5 px tracking | Section kickers |
 
 Numbers that change (timers, percentages, progress) use tabular figures so they don't jitter. Text
-never overflows: it wraps to its line limit, then ends in an ellipsis at a word boundary.
+never overflows: it wraps to its line limit; if it still does not fit, it is drawn smaller, down to
+80 % of its size and never under 16 px, and only then ends in an ellipsis at a word boundary. So a
+German or Finnish label fits where the English does, and an ellipsis means a box too small in every
+language, not a long word (7.7).
 
 ### 7.3 Space, shape and depth
 
@@ -894,6 +910,48 @@ Three switches, as ProsperoEden has them, plus one:
   grain.
 - **Reduce motion:** springs become 150 ms fades; nothing drifts, breathes or parallaxes.
 - **Hold to confirm** is always on for destructive actions; the hold time is a setting (0.4 to 1.5 s).
+
+### 7.7 Language
+
+The launcher and the in-game menus speak every language the PS5 offers: Japanese, English (United
+Kingdom, the code's, and United States), French (France and Canada), Spanish (Spain and Latin
+America), German, Italian, Dutch, Portuguese (Portugal and Brazil), Russian, Ukrainian, Polish,
+Czech, Hungarian, Romanian, Greek, Turkish, Finnish, Swedish, Danish, Norwegian, Arabic, Thai,
+Vietnamese, Indonesian, Korean, and Chinese (simplified and traditional).
+
+- **The PS5's language is the default.** With `ui.language` empty, the app follows the console's
+  system language (`sceSystemServiceParamGetInt`'s language), read at every start, so changing the
+  PS5's language changes the app's. Choosing one on the Setup check (6.7) or in Settings > General >
+  Language (6.5) fixes it; choosing *The PS5's language* again follows the console once more.
+- **String tables.** Every word is English in the code (`Tr`, `TrC` for a word that means two things,
+  `TrF` with `{0}` for what goes in it, `TrP` for plurals; `port/app/lang.h`) and is looked up in the
+  language's table, gettext's `.po` format in `port/lang`, packaged as `assets/lang`.
+  `tools/lang.py update` makes the template from the code and merges it into every table; `check`
+  fails on a missing string, a lost `{0}`, a plural form or a line too few; `stats` says what is done.
+  A string a table lacks stays English, so nothing is ever blank. A regional table holds only what
+  differs: Canadian French on French, Latin American Spanish on Spanish, US English on the code's.
+- **Each language's own conventions**, not English's in other words: its plural forms (one in Japanese,
+  three in Russian and Polish, six in Arabic), its numbers (`50 %`, `%50`, `0,4`), dates and
+  punctuation (French's narrow space before `;`, `?` and `!`), Sony's own names for the DualSense's
+  buttons, and Nintendo's for its own things.
+- **Scripts.** Lexend covers the Latin languages, Vietnamese included (9.6). Greek, Cyrillic, CJK, Thai
+  and Arabic come from the console's fonts, the menu language's first, so a Japanese menu's kanji are
+  drawn from the Japanese font and a Chinese menu's from the Chinese one. Arabic is shaped and laid out
+  right to left; Thai breaks where its table marks word boundaries; Chinese and Japanese break between
+  characters, by their rules for what may not start or end a line; Korean breaks at spaces.
+- **Fit.** Every box takes the longest language: the shrink rule (7.2), page headers that take two
+  smaller lines when one will not do, pickers and tiles that widen or shrink their text. The preview
+  has a pseudo-language, `PREVIEW_LANGUAGE=qps` (every string about 40 % longer, accented, in
+  brackets), that shows any box a language could break; it is never packaged.
+- **In a game** (4.2): the menus' fonts are made only with the characters their strings in that
+  language and the game's name need, so an English menu over a Latin-named game costs what it always
+  did. When the language or the name needs a script Lexend lacks, the console's font for it is read
+  once, as the game starts, and kept for ImGui's atlas: memory the size of that font file (a few
+  megabytes for a CJK font), for that game only, which the A/B run's memory metric measures in Japanese
+  as well as English.
+- **What stays as written:** game names and descriptions (GameTDB's), graphic packs (their authors'),
+  and the emulated 3DS's own language, which is a setting of the 3DS (Settings > Nintendo 3DS > System
+  and Home Menu), not the menus'.
 
 ---
 
@@ -1148,13 +1206,17 @@ display.
 ### 9.6 Text
 
 - **Lexend** (regular, medium, semibold and bold) is baked into SDF atlases at build time by a small
-  host tool using FreeType, covering Latin, Latin Extended, Greek, Cyrillic and the typographic marks.
-  One atlas per weight serves every size from 18 to 96.
-- **Everything else** (Japanese, Chinese and Korean titles first) is rasterised on demand with
-  FreeType's SDF renderer from the PS5's system fonts, into a second atlas, cached on `/data` between
-  sessions. pacbrew's FreeType is already in the dependency set.
-- **Layout** is UTF-8 throughout: `Printable` goes. Lines break at spaces (and between CJK characters),
-  and an ellipsis only ever replaces whole words.
+  host tool using FreeType, covering Latin, Latin Extended (Romanian's ș and ț, Turkish's ğ and ı,
+  Vietnamese's letters) and the typographic marks. One atlas per weight serves every size from 18
+  to 96.
+- **Everything else** (Greek, Cyrillic, CJK, Thai, Arabic: a menu in those languages, or a game's
+  name in them) is rasterised on demand with FreeType's SDF renderer from the PS5's system fonts, into
+  a second atlas, the menu language's fonts first (7.7). pacbrew's FreeType is already in the
+  dependency set.
+- **Layout** is UTF-8 throughout: `Printable` goes. Lines break at spaces, zero-width spaces (Thai's
+  word boundaries) and between CJK characters (not before a closing mark or after an opening one);
+  Arabic is shaped and ordered right to left; text too long shrinks before it is cut (7.2), and an
+  ellipsis only ever replaces whole words.
 
 ### 9.7 What happens to each file today
 
@@ -1199,7 +1261,8 @@ of launcher, host, layout script and stylesheet); the Quick Menu about 1,500 (re
   sets, or the check never runs again. **Removed:** the two `gameCount`s (the catalogue has them).
 - **Moved:** each side's `recent` list becomes the catalogue's last-played times for that side; the
   old lists, which have no times, keep their order on migration.
-- **Added:** `games.<title ID>` (game settings, 6.5), `ui.textScale`, `ui.highContrast`,
+- **Added:** `games.<title ID>` (game settings, 6.5), `ui.language` (the menus' language, 7.7: a
+  table's code, or empty for the PS5's), `ui.textScale`, `ui.highContrast`,
   `ui.reduceMotion`, `ui.holdMs`, `ui.startOn` (`last` or `ask`), `ui.libraryFilter` and
   `ui.librarySort` (per side), and `ui.classic` (the fallback switch).
 - `library.json` holds the catalogue (5.5); deleting it only costs one full scan of each side.
@@ -1237,7 +1300,7 @@ held while the app starts, as RetroArch PS5 does for its pre-screen).
 | **1. The shell, at parity** | The catalogue (5.5) and the side switch (5.3); Home, Library, Game hub, Game menu, Settings with every current setting and page, the launch screen, the update sheet; Wii U boot screens as backdrops | Every launcher row of Appendix A ticked; a snapshot for every screen; the A/B run passes (4.2): launch and return no slower, memory at game start no lower, frame rates unchanged | 4–5 weeks |
 | **2. In a game** | The Quick Menu on the kit for both systems; one keyboard; hold to confirm; save-state thumbnails and the 3DS captures, taken while paused; toasts; Cemu's shader-cache screen | Every in-game row of Appendix A ticked; the A/B run passes, including the Wii U with the menu open; the menu within 0.5 ms GPU and 0.3 ms CPU per frame at 4K | 2–3 weeks |
 | **3. The rest of the design** | Setup check; game settings; search, sort and filters; accessibility switches; frame-rate stats; light bar and rumble; touchpad zones and reserved buttons in mapping; libretro snaps and title screens for the 3DS | The principles' tests (section 4) pass on every screen; the A/B run passes | 2–3 weeks |
-| **4. Reach** | The PS5's system language and a string table; an opt-in companion page by QR for long text and game settings (LAN only, off by default, stopped during games: 4.2, rule 8); classic removed after a release with no fallback reports | The A/B run passes | Open |
+| **4. Reach** | The PS5's system language and a string table (done: every PS5 language, 7.7); an opt-in companion page by QR for long text and game settings (LAN only, off by default, stopped during games: 4.2, rule 8); classic removed after a release with no fallback reports | The A/B run passes | Open |
 
 Altogether 10 to 14 weeks for Phases 0 to 3.
 
@@ -1251,6 +1314,7 @@ Altogether 10 to 14 weeks for Phases 0 to 3.
 | The first frame is slow (device and pipeline creation) | Medium | A slower return after every game, which the contract does not allow | One pipeline, a pipeline cache on `/data`, the splash screen held until the first frame; measured in Phase 0 against 3.0.0's return time (the A/B run, 4.2), which binds before the 1.5 s budget |
 | The launcher's GPU memory isn't all freed before a game | Low | Less memory for Cemu | Everything is destroyed with the device; the boot log's `[memory]` line before and after compares with 3.0.0's |
 | The catalogue is out of date | Medium | A removed game shown, or a new one missing, until the side's scan finishes (seconds) | The scan's list replaces the side's when it finishes; a game whose file is gone is dimmed and says so; *Look for games now* in Settings |
+| A translation reads wrong | Medium | A menu that is clumsy, or unclear, in one language | The tables were written without native-speaker review; each is a plain `.po` file anyone can correct, `tools/lang.py check` keeps a correction from breaking it, and the voice rules (Appendix B) are the same in every language |
 | System fonts differ between firmwares | Low | A script falls back to boxes | Probe the known paths at start; log what was found; Settings > About says which fonts are in use |
 | The in-game kit costs the game frames | Low | Menus stutter the game | The batch is a few dozen draws; measure in Phase 2; the ImGui path remains for one release |
 | Scope grows | High | The release slips | The phases are each shippable; Phase 4 is optional by design |
@@ -1446,6 +1510,12 @@ The current copy is one of the app's strengths; the new screens keep its rules.
 - **Sentence case, no exclamation marks, no "please"** except where something failed and must be
   retried.
 - **British spelling**, as the code uses (colour, centre), except in names (the PS5's Control Center).
+  The US English table changes only that.
+- **In every language, the same voice**, written as a native speaker writes these menus, not English
+  word for word: the PS5's own register in that language (its menus' formality, Japanese's です・ます),
+  one word for one thing (Settings, Setup, Options and presets are four), Sony's names for the
+  DualSense's buttons and never "X" for Cross (the Wii U has an X button too), and as short as English
+  or shorter where the room is a label's.
 - **Systems by their names:** "Wii U" and "Nintendo 3DS" (or "3DS" where space is short), never the
   emulators' names in the player's way; Cemu and Azahar are credited in About and named where their
   behaviour matters ("Cemu has two GamePads at most").

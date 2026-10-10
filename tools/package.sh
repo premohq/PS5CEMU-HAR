@@ -15,6 +15,7 @@
 #     assets/cemu/                    Cemu's game profiles and the Wii U system fonts
 #     assets/graphicPacks/            the community graphic packs (installed on first start)
 #     assets/gametdb/                 GameTDB's game information (descriptions, publishers, dates)
+#     assets/lang/                    the menus' translations, one string table a language (<code>.po)
 #
 #   tools/package.sh          the app; the ELF must be linked with RADV (tools/link.sh)
 #   tools/package.sh --check  the same steps for a link check's ELF, into build/app-check: not an app
@@ -129,6 +130,10 @@ cp /etc/ssl/certs/ca-certificates.crt "$app/assets/cacert.pem"
 # committed)
 mkdir -p "$app/assets/gametdb"
 cp "$PS5CEMU_ROOT"/port/app/gametdb/*.tsv.gz "$app/assets/gametdb/"
+# the menus' translations (app/lang.h, tools/lang.py): every table but the pseudo-language's, which
+# only the preview finds text that does not fit with
+mkdir -p "$app/assets/lang"
+find "$PS5CEMU_ROOT/port/lang" -name '*.po' ! -name qps.po -exec cp {} "$app/assets/lang/" \;
 # the compatibility list the game pages show a status from (app/compatibility.h)
 cp "$PS5CEMU_ROOT/docs/COMPATIBILITY.md" "$app/assets/compatibility.md"
 # the 3DS side's border themes (tools/render-borders.py, committed)
