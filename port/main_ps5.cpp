@@ -18,6 +18,7 @@
 #include "app/pack_updates.h"
 #include "app/paths.h"
 #include "app/updates.h"
+#include "app/zip_games.h"
 #include "azahar/azahar.h"
 #include "azahar/library.h"
 #include "frontend/launcher.h"
@@ -205,7 +206,7 @@ namespace
 	{
 		if (tile.rom.empty())
 			return false;
-		return tile.rom.find('/') == std::string::npos ? game.path.filename().string() == tile.rom : game.path.string() == tile.rom;
+		return tile.rom.find('/') == std::string::npos ? game.path.filename().string() == tile.rom : ps5zip::TileKey(game) == tile.rom;
 	}
 }
 
@@ -514,12 +515,37 @@ int main(int argc, char* argv[])
 				ps5log::Line("[main] turbo button: {}", turbo);
 		}
 
+		// Extract on demand, not during library scans. The user can keep ZIPs on USB or
+		// a network share; the checked output lives in /data/ps5cemu/cache/zip-games.
+		// Keep game.titleId and the original path for settings, favourites and tiles.
+		ps5emu::Game preparedGame;
+		if (!ps5zip::Prepare(game, preparedGame, error))
+		{
+			ps5log::Line("[zip] {} could not be prepared: {}", game.name, error);
+			if (choice->system == ps5launcher::System::Nds)
+			{
+				status.noticeDs = error;
+				settings.side = "ds";
+			}
+			else if (choice->system == ps5launcher::System::N3ds)
+			{
+				status.launchError3ds = error;
+				settings.side = "3ds";
+			}
+			else
+			{
+				status.launchError = error;
+				settings.side = "wiiu";
+			}
+			continue;
+		}
+
 		if (choice->system == ps5launcher::System::Nds)
 		{
 			// melonDS, its screens on VideoOut at 59.94 Hz, as Azahar's below; its threads on every CPU
 			SetHighFrameRate(false);
 			ps5threads::EndIsolation();
-			if (ps5melonds::LaunchGame(game, forGame.nds, error))
+			if (ps5melonds::LaunchGame(preparedGame, forGame.nds, error))
 			{
 				ps5melonds::RunGame();
 				afterGame("ds");
@@ -545,7 +571,7 @@ int main(int argc, char* argv[])
 			// on every CPU
 			SetHighFrameRate(false);
 			ps5threads::EndIsolation();
-			if (ps5azahar::LaunchGame(game, forGame.n3ds, error))
+			if (ps5azahar::LaunchGame(preparedGame, forGame.n3ds, error))
 			{
 				ps5azahar::RunGame();
 				afterGame("3ds");
@@ -569,7 +595,7 @@ int main(int argc, char* argv[])
 		SetHighFrameRate(forGame.highFrameRate);
 		ps5display::SetFramePacing(forGame.framePacing);
 		ps5window::Initialize();
-		if (ps5emu::LaunchGame(game, error))
+		if (ps5emu::LaunchGame(preparedGame, error))
 		{
 			ps5emu::RunGame();
 			afterGame("wiiu");

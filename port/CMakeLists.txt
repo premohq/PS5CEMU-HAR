@@ -102,6 +102,8 @@ find_library(TURBOJPEG_LIBRARY turbojpeg REQUIRED)
 add_library(CemuPS5 STATIC
 	app/emulator.cpp
 	app/emulator.h
+	app/zip_games.cpp
+	app/zip_games.h
 	app/accounts.cpp
 	app/achievements.cpp
 	app/achievements.h
@@ -252,6 +254,7 @@ set_source_files_properties(
 	app/boxart.cpp
 	app/saves.cpp
 	app/catalog.cpp
+	app/zip_games.cpp
 	app/compatibility.cpp
 	app/gameinfo.cpp
 	azahar/controls.cpp

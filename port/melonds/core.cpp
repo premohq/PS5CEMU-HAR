@@ -648,6 +648,8 @@ namespace ps5melonds
 			fs::create_directories(Folder(name), ec);
 		const std::string path = game.path.string();
 		s_stem = game.path.stem().string();
+		if (game.archiveFolder || !game.archiveMember.empty())
+			s_stem += fmt::format("-{:016x}", game.titleId);
 		s_folder = game.path.parent_path().string();
 		ps5log::Line("[ds] launching {} ({}) from {}", game.name, game.gameId.empty() ? "no game code" : game.gameId, path);
 

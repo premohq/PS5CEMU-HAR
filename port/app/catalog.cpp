@@ -75,6 +75,8 @@ namespace ps5catalog
 				entry.game.titleId = std::strtoull(String(item, "titleId").c_str(), nullptr, 16);
 				entry.game.name = String(item, "name");
 				entry.game.path = String(item, "path");
+				entry.game.archiveMember = String(item, "archiveMember");
+				entry.game.archiveFolder = item.HasMember("archiveFolder") && item["archiveFolder"].IsBool() && item["archiveFolder"].GetBool();
 				entry.game.version = (uint16_t)Int(item, "version");
 				entry.game.hasUpdate = item.HasMember("hasUpdate") && item["hasUpdate"].IsBool() && item["hasUpdate"].GetBool();
 				entry.game.dlcCount = (uint32_t)Int(item, "dlc");
@@ -116,6 +118,13 @@ namespace ps5catalog
 				writer.String(entry.game.name.c_str());
 				writer.Key("path");
 				writer.String(entry.game.path.string().c_str());
+				if (entry.game.archiveFolder || !entry.game.archiveMember.empty())
+				{
+					writer.Key("archiveMember");
+					writer.String(entry.game.archiveMember.c_str());
+					writer.Key("archiveFolder");
+					writer.Bool(entry.game.archiveFolder);
+				}
 				writer.Key("version");
 				writer.Int(entry.game.version);
 				writer.Key("hasUpdate");

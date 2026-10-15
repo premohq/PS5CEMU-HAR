@@ -74,7 +74,7 @@ The biggest update yet. The full list is in the [release notes](https://github.c
 | | Wii U | Nintendo 3DS | Nintendo DS |
 |---|---|---|---|
 | **Emulator** | Cemu, x64 recompiler, Vulkan | Azahar, dynarmic recompiler, Vulkan | melonDS, ARM recompiler |
-| **Plays** | `.wua`, `.wud`, `.wux`, unpacked games | `.3ds`, `.cci`, `.cxi`, `.app`, `.3dsx`, `.elf`, compressed `.z*`, installed `.cia` | `.nds` |
+| **Plays** | `.wua`, `.wud`, `.wux`, unpacked games, ZIP archives | `.3ds`, `.cci`, `.cxi`, `.app`, `.3dsx`, `.elf`, compressed `.z*`, installed `.cia`, ZIP archives | `.nds`, `.srl`, ZIP archives |
 | **Picture** | 4K output, 120 Hz, FSR 1, graphic packs | up to 10x resolution, texture filters, layouts, borders | sharp, smooth or square pixels, layouts, borders |
 | **Extras** | mods, accounts, amiibo, Skylanders portals, updates and DLC | save states, cheats, amiibo, mods, Artic Base | save states, cheats, RetroAchievements |
 
@@ -83,6 +83,10 @@ The biggest update yet. The full list is in the [release notes](https://github.c
 - **Made for the DualSense:** every button remappable, motion controls, rumble, the touchpad as the
   touch screen, and up to four players on the Wii U.
 - **Updates itself:** a new release installs from inside the app.
+
+### ZIP games (all three systems)
+
+Place a `.zip` containing a supported ROM in the relevant Wii U, 3DS or DS games folder. Nested folders and multiple ROMs per ZIP are supported. A Wii U ZIP of an unpacked game must contain `code/*.rpx` and `meta/meta.xml` (and normally `content/`); it appears as one title. The launcher reads only the ZIP directory when scanning; on first launch, the selected ROM (or the whole unpacked Wii U title) is validated and extracted to `/data/ps5cemu/cache/zip-games/`. Further launches reuse the cache until the ZIP size or timestamp changes. This requires enough free PS5 storage for the uncompressed game. Clear that cache folder to recover storage. ZIPs are **not** streamed or run in place. Encrypted/password-protected ZIPs are unsupported. Compression does not bypass game decryption or BIOS/key requirements; DSi and CIA installation remain subject to the emulators' existing restrictions. ZIP entries use archive/entry filenames as library titles until the game is opened.
 
 ## Install
 

@@ -13,6 +13,7 @@
 #include "../../app/pack_updates.h"
 #include "../../app/paths.h"
 #include "../../app/updates.h"
+#include "../../app/zip_games.h"
 #include "../../azahar/azahar.h"
 #include "../../azahar/library.h"
 #include "../../melonds/library.h"
@@ -907,14 +908,14 @@ namespace ps5shell
 		std::string cover = game.boxArt;
 		if (cover.empty() || !IsFile(cover))
 			cover = IconOf(game);
-		ps5forwarders::Start({game.entry.game.name, game.entry.game.path.string(), cover});
+		ps5forwarders::Start({game.entry.game.name, ps5zip::TileKey(game.entry.game), cover});
 		m_feedback.Play(ui::Cue::Select);
 		Toast(TrF("Making {0}'s home screen tile…", game.entry.game.name));
 	}
 
 	void Shell::RemoveTile(Game& game)
 	{
-		ps5forwarders::StartRemove({game.entry.game.name, game.entry.game.path.string(), {}});
+		ps5forwarders::StartRemove({game.entry.game.name, ps5zip::TileKey(game.entry.game), {}});
 		m_feedback.Play(ui::Cue::Select);
 		Toast(TrF("Removing {0}'s home screen tile…", game.entry.game.name));
 	}
@@ -973,7 +974,7 @@ namespace ps5shell
 		for (int i = 0; i < (int)m_games.size(); i++)
 		{
 			const std::filesystem::path& path = m_games[i].entry.game.path;
-			if (named ? path.filename().string() == rom : path.string() == rom)
+			if (named ? path.filename().string() == rom : ps5zip::TileKey(m_games[i].entry.game) == rom)
 			{
 				m_status.autoLaunch.clear();
 				ps5log::Line("[launcher] starting the tile's game: {}", m_games[i].entry.game.name);
@@ -1617,7 +1618,7 @@ namespace ps5shell
 			m_menu.items.push_back({"updates", Tr("Updates and DLC")});
 		}
 		m_menu.items.push_back({"favourite", g.entry.favourite ? Tr("Not a favourite") : Tr("Favourite")});
-		if (ps5forwarders::HasTile(g.entry.game.path.string()))
+		if (ps5forwarders::HasTile(ps5zip::TileKey(g.entry.game)))
 			m_menu.items.push_back({"untile", Tr("Remove from home screen")});
 		else
 			m_menu.items.push_back({"tile", Tr("Add to home screen")});

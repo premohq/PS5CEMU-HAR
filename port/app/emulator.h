@@ -23,7 +23,9 @@ namespace ps5emu
 	{
 		uint64_t titleId = 0;		 // the base title
 		std::string name;			 // from meta.xml
-		std::filesystem::path path;	 // what Cemu launches
+		std::filesystem::path path;	 // original ZIP or a regular game file
+		std::string archiveMember; // ZIP entry path, empty for a ZIP title at the archive root
+		bool archiveFolder = false; // ZIP contains a full Wii U code/content/meta tree
 		uint16_t version = 0;		 // the base's, or the update's when installed
 		bool hasUpdate = false;
 		uint32_t dlcCount = 0;

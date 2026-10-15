@@ -3,6 +3,7 @@
 #include "azahar.h"
 #include "../app/lang.h"
 #include "../app/paths.h"
+#include "../app/zip_games.h"
 #include "../ps5/log.h"
 
 #include <algorithm>
@@ -469,6 +470,7 @@ namespace ps5azahar
 		std::thread([folder] {
 			std::vector<ps5emu::Game> games;
 			Scan(folder, 0, games);
+			ps5zip::AddArchives(folder, ps5zip::System::N3ds, games);
 			ScanInstalled(games);
 			AddInstalledUpdates(games);
 			std::sort(games.begin(), games.end(), [](const ps5emu::Game& a, const ps5emu::Game& b) { return Lower(a.name) < Lower(b.name); });

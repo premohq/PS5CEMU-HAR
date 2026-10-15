@@ -11,6 +11,7 @@
 #include "pack_updates.h"
 #include "lang.h"
 #include "paths.h"
+#include "zip_games.h"
 #include "updates.h"
 #include "usb_devices.h"
 #include "../frontend/settings.h"
@@ -594,6 +595,10 @@ namespace ps5emu
 			}
 			games.push_back(std::move(game));
 		}
+		// ZIP entries have no Cemu title metadata until the player starts them.
+		// The loader will unpack only the chosen game into the private cache.
+		for (const auto& folder : GetConfig().game_paths)
+			ps5zip::AddArchives(folder, ps5zip::System::WiiU, games);
 		std::sort(games.begin(), games.end(), [](const Game& a, const Game& b) { return boost::ilexicographical_compare(a.name, b.name); });
 		return games;
 	}
