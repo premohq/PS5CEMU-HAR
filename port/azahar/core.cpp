@@ -2,8 +2,9 @@
 // PS5CEMU-HAR: Azahar's core on the PS5 (azahar.h), built in Azahar's tree against its libraries
 // (tools/build-azahar.sh) and linked into the app with Cemu.
 //
-//  - its data under kRoot: the 3DS's storage (sdmc, nand), sysdata (where aes_keys.txt goes, for
-//    amiibo: Azahar plays no encrypted game), the shader cache, its log (log/azahar_log.txt);
+//  - its data under kRoot: the 3DS's storage (sdmc, nand), sysdata (where an aes_keys.txt takes the
+//    place of the keys built in: Azahar plays no encrypted game), the shader cache, its log
+//    (log/azahar_log.txt);
 //  - the window is VideoOut, a VK_KHR_display surface (ps5/vulkan_display.h) for Azahar's own
 //    Vulkan renderer, whose instance takes RADV's vkGetInstanceProcAddr (the hooks below, which
 //    patches/azahar adds to vk_platform.cpp);

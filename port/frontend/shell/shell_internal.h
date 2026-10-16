@@ -746,7 +746,6 @@ namespace ps5shell
 		int m_articRow = 0, m_articOctet = 3;
 		bool m_articEditing = false;
 		std::array<int, 4> m_articOctets{192, 168, 1, 2};
-		std::string m_articMissingKeys; // what Artic Setup needs from aes_keys.txt and lacks, when the page opened
 
 		// Make it yours
 		bool m_welcomeFirst = false; // a first start's (else what is new)

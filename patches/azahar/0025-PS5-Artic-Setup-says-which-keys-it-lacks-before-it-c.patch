@@ -4,19 +4,19 @@ Date: Wed, 14 Oct 2026 16:00:00 +0000
 Subject: [PATCH] PS5: Artic Setup says which keys it lacks before it copies
  anything
 
-The port builds no keys in (ENABLE_BUILTIN_KEYBLOB=OFF), so the OTP the
-3DS sends can only be decrypted, and its CTCert checked, with the
-otpKey, otpIV and the ECC rootPublicXY of the player's aes_keys.txt.
-Without them the setup copied the 3DS's files into the NAND and then
-ended with "Some console unique data is invalid", which named nothing
-(#45). The keys are now checked first, and the 3DS's screen says which
-ones Azahar needs.
+The console unique data the 3DS sends is decrypted, and its CTCert
+checked, with the otpKey, otpIV and the ECC rootPublicXY. Azahar has
+them built in (ENABLE_BUILTIN_KEYBLOB), but an aes_keys.txt takes the
+place of all of its keys, and one without these let the setup copy the
+3DS's files into the NAND and then end with "Some console unique data
+is invalid", which named nothing (#45). The keys are now checked first,
+and the 3DS's screen says which ones the file lacks and what to do.
 ---
- src/core/loader/artic.cpp | 20 ++++++++++++++++++++
- 1 file changed, 20 insertions(+)
+ src/core/loader/artic.cpp | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
 
 diff --git a/src/core/loader/artic.cpp b/src/core/loader/artic.cpp
-index bcd843c..ab78197 100644
+index bcd843c..f51d166 100644
 --- a/src/core/loader/artic.cpp
 +++ b/src/core/loader/artic.cpp
 @@ -32,6 +32,8 @@
@@ -28,14 +28,14 @@ index bcd843c..ab78197 100644
  #include "core/hw/unique_data.h"
  #include "core/loader/artic.h"
  #include "core/loader/smdh.h"
-@@ -412,6 +414,24 @@ ResultStatus Apploader_Artic::Load(std::shared_ptr<Kernel::Process>& process) {
+@@ -412,6 +414,25 @@ ResultStatus Apploader_Artic::Load(std::shared_ptr<Kernel::Process>& process) {
  
      if (is_initial_setup) {
  
-+        // PS5: no keys are built in (ENABLE_BUILTIN_KEYBLOB=OFF), so the console unique data can
-+        // only be checked with the player's aes_keys.txt. Without its OTP key and IV and the ECC
-+        // root key, the setup would copy everything and then end with "Some console unique data
-+        // is invalid": said on the 3DS before anything is copied instead.
++        // PS5: the console unique data is checked with the OTP key and IV and the ECC root key,
++        // Azahar's own (ENABLE_BUILTIN_KEYBLOB) unless an aes_keys.txt takes the place of all of
++        // them. One without these let the setup copy everything and then end with "Some console
++        // unique data is invalid": said on the 3DS before anything is copied instead.
 +        HW::AES::InitKeys();
 +        const auto [otp_key, otp_iv] = HW::AES::GetOTPKeyIV();
 +        const auto all_zero = [](const auto& bytes) {
@@ -45,8 +45,9 @@ index bcd843c..ab78197 100644
 +            LOG_ERROR(Loader, "Artic Setup: aes_keys.txt has no otpKey, otpIV or rootPublicXY");
 +            client->LogOnServer(Network::ArticBaseCommon::LogOnServerType::LOG_ERROR,
 +                                "aes_keys.txt on the PS5 lacks otpKey,\n"
-+                                "    otpIV or rootPublicXY: Azahar\n"
-+                                "    there has no keys of its own.\n    Aborting...");
++                                "    otpIV or rootPublicXY, and takes\n"
++                                "    the place of Azahar's own keys:\n"
++                                "    remove it, or add them.\n    Aborting...");
 +            return ResultStatus::ErrorArtic;
 +        }
 +

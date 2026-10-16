@@ -12,9 +12,11 @@
 #   tools/build-azahar.sh TARGET...     build only those targets
 #
 # Azahar shares Cemu's copies of fmt, glslang, zstd and OpenSSL (USE_SYSTEM_*), so the app links
-# each once. No crypto keys are built in (ENABLE_BUILTIN_KEYBLOB=OFF): games are decrypted dumps,
-# or the player's own aes_keys.txt decrypts them. Dynarmic's code cache comes from the platform
-# layer RADV is linked with (ps5platform/exec.h, in libps5platform.a), whose headers it is given.
+# each once. Azahar's own keys are built in (ENABLE_BUILTIN_KEYBLOB, as in its official builds): the
+# 3DS's system needs them, Artic Setup first (#45), and they decrypt no game (Azahar plays and
+# installs decrypted ones only). An aes_keys.txt in sysdata takes the place of all of them. Dynarmic's
+# code cache comes from the platform layer RADV is linked with (ps5platform/exec.h, in
+# libps5platform.a), whose headers it is given.
 
 set -euo pipefail
 source "$(dirname -- "${BASH_SOURCE[0]}")/env.sh"
@@ -40,7 +42,7 @@ options=(
     -DENABLE_QT=OFF -DENABLE_SDL2=OFF -DENABLE_LIBRETRO=OFF -DENABLE_TESTS=OFF -DENABLE_ROOM=OFF
     -DENABLE_ROOM_STANDALONE=OFF -DENABLE_WEB_SERVICE=OFF -DENABLE_SCRIPTING=OFF -DENABLE_GDBSTUB=OFF
     -DENABLE_CUBEB=OFF -DENABLE_OPENAL=OFF -DENABLE_LIBUSB=OFF -DENABLE_DISCORD_RPC=OFF
-    -DENABLE_OPENGL=OFF -DENABLE_VULKAN=ON -DENABLE_SOFTWARE_RENDERER=OFF -DENABLE_BUILTIN_KEYBLOB=OFF
+    -DENABLE_OPENGL=OFF -DENABLE_VULKAN=ON -DENABLE_SOFTWARE_RENDERER=OFF -DENABLE_BUILTIN_KEYBLOB=ON
     -DENABLE_LTO=OFF -DCITRA_USE_PRECOMPILED_HEADERS=OFF -DCITRA_WARNINGS_AS_ERRORS=OFF
     -DUSE_SYSTEM_FMT=ON -DUSE_SYSTEM_GLSLANG=ON -DUSE_SYSTEM_ZSTD=ON -DUSE_SYSTEM_OPENSSL=ON
     -DPS5_PLATFORM_INCLUDE="$PS5CEMU_ROOT/.deps/PS5_PayloadSDK/platform/include"

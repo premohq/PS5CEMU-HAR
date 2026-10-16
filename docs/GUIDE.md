@@ -97,9 +97,9 @@ work stops before a game starts.
 - Install CIA files (games, updates and DLC) from **Settings > Game files > Install a CIA file**.
 - **Artic Base:** play a game straight from your own 3DS over the network. Start Artic Base on the
   3DS, open **Settings > Artic Base** and enter the address the 3DS shows. The same page runs the Artic Setup Tool, which copies your 3DS's system files.
-  PS5CEMU-HAR comes with no keys, so the setup needs three in your own console's `aes_keys.txt` in
-  `/data/ps5cemu/azahar/sysdata`: `otpKey` and `otpIV` under its `:AES` line, and `rootPublicXY`
-  under its `:ECC` line. The page says which ones are missing.
+  The setup needs no keys from you: Azahar's own are built in, as in its official builds. An
+  `aes_keys.txt` in `/data/ps5cemu/azahar/sysdata` takes the place of all of them, so leave it out
+  unless it is complete; when it lacks what the setup needs, the 3DS's screen says so.
 - An on-screen keyboard for games that ask for text.
 
 ## Nintendo DS (melonDS)
@@ -145,7 +145,8 @@ Put games in `/data/ps5cemu/azahar/games`, or pick another folder in **Settings 
   formats (`.z3ds`, `.zcci`, `.zcxi`, `.z3dsx`) play directly.
 - `.cia` files are installed first from **Settings > Game files > Install a CIA file**; updates and DLC too. Azahar
   only installs fully decrypted CIAs, the game inside included.
-- Encrypted dumps need `aes_keys.txt` from your own console in `/data/ps5cemu/azahar/sysdata`.
+- Dumps must be decrypted too: Azahar plays no encrypted game, whatever keys it has. Decrypt them on
+  your 3DS first (GodMode9).
 
 ### Nintendo DS
 

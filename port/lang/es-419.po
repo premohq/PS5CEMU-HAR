@@ -71,7 +71,7 @@ msgstr "El control de cada jugador, movimiento, vibración, zonas muertas, y A y
 msgid "Whose controller the settings below are: Left and Right choose the player."
 msgstr "De quién es el control de los ajustes de abajo: Izquierda y Derecha eligen el jugador."
 
-#: port/app/ingame.cpp:298 port/frontend/shell/pages.cpp:451 port/frontend/shell/pages.cpp:489 port/frontend/shell/pages.cpp:596
+#: port/app/ingame.cpp:298 port/frontend/shell/pages.cpp:449 port/frontend/shell/pages.cpp:487 port/frontend/shell/pages.cpp:594
 #, menu
 msgid "Emulated controller"
 msgstr "Control emulado"
@@ -90,7 +90,7 @@ msgstr "Un celular o una tableta en la red de la PS5. El sonido se queda en la P
 
 #. Eden's Home, under the cover: the controllers connected
 #. {0} is an emulated controller (Wii U GamePad)
-#: port/frontend/shell/eden.cpp:885 port/frontend/shell/pages.cpp:592
+#: port/frontend/shell/eden.cpp:885 port/frontend/shell/pages.cpp:590
 msgid "Controllers"
 msgstr "Controles"
 
@@ -98,7 +98,7 @@ msgstr "Controles"
 msgid "Its settings, graphic packs and controllers are loading, and then it looks for your games."
 msgstr "Se están cargando sus ajustes, paquetes gráficos y controles, y después buscará tus juegos."
 
-#: port/frontend/shell/pages.cpp:430
+#: port/frontend/shell/pages.cpp:428
 msgid ""
 "What the game sees in this player's hands.\n"
 "\n"
@@ -112,7 +112,7 @@ msgstr ""
 "Un Control remoto Wii apunta donde un dedo se apoya en el panel táctil, o hacia donde apuntes el DualSense.\n"
 "Cemu admite dos GamePads como máximo."
 
-#: port/frontend/shell/pages.cpp:434
+#: port/frontend/shell/pages.cpp:432
 msgid ""
 "The DualSense's gyroscope and accelerometer as the controller's own, for the games that aim or steer by tilting the GamePad or the Wii Remote.\n"
 "The Pro Controller and the Classic Controller have none."
@@ -120,7 +120,7 @@ msgstr ""
 "El giroscopio y el acelerómetro del DualSense como los del control, para los juegos en los que se apunta o se conduce inclinando el GamePad o el Control remoto Wii.\n"
 "El Control Pro y el Control Clásico no tienen."
 
-#: port/frontend/shell/pages.cpp:436
+#: port/frontend/shell/pages.cpp:434
 msgid ""
 "How strongly the DualSense rumbles when the game makes the controller vibrate.\n"
 "Left and Right change it by 10%."
@@ -128,11 +128,11 @@ msgstr ""
 "Con qué fuerza vibra el DualSense cuando el juego hace vibrar el control.\n"
 "Izquierda y Derecha la cambian un 10 %."
 
-#: port/frontend/shell/pages.cpp:441
+#: port/frontend/shell/pages.cpp:439
 msgid "A on Circle and B on Cross, where the Wii U has them, or A on Cross and B on Circle, as PlayStation games confirm with Cross. X and Y swap to match. The Wii Remote has no X and Y: its buttons are under Buttons."
 msgstr "A en Círculo y B en Cruz, donde los tiene la Wii U, o A en Cruz y B en Círculo, como los juegos de PlayStation, que confirman con Cruz. X e Y se intercambian para que coincidan. El Control remoto Wii no tiene X ni Y: sus botones están en Botones."
 
-#: port/frontend/shell/pages.cpp:443
+#: port/frontend/shell/pages.cpp:441
 msgid ""
 "What a click of the touchpad is for this player.\n"
 "Touches the screen: it touches the GamePad's screen where your finger is.\n"
@@ -146,7 +146,7 @@ msgstr ""
 "Automática: un toque con el GamePad y un botón con los demás controles, que no tienen pantalla.\n"
 "En cualquier caso, clic en el panel táctil + OPTIONS, L1 o R1 siguen siendo los atajos."
 
-#: port/frontend/shell/pages.cpp:447
+#: port/frontend/shell/pages.cpp:445
 msgid ""
 "Which DualSense button presses each of the controller's buttons.\n"
 "A is on Circle and B on Cross by default, where the Wii U has them. Giving one button a DualSense input that another already uses swaps the two."
@@ -154,19 +154,19 @@ msgstr ""
 "Qué botón del DualSense pulsa cada botón del control.\n"
 "Por defecto, A está en Círculo y B en Cruz, donde los tiene la Wii U. Si das a un botón una entrada del DualSense que ya usa otro, los dos se intercambian."
 
-#: port/frontend/shell/pages.cpp:449
+#: port/frontend/shell/pages.cpp:447
 msgid "The default buttons, vibration, motion and deadzones for this controller. Held to confirm."
 msgstr "Los botones, la vibración, el movimiento y las zonas muertas por defecto de este control. Se mantiene para confirmar."
 
-#: port/frontend/shell/pages.cpp:598
+#: port/frontend/shell/pages.cpp:596
 msgid "The DualSense's motion as the controller's."
 msgstr "El movimiento del DualSense como el del control."
 
-#: port/frontend/shell/pages.cpp:600
+#: port/frontend/shell/pages.cpp:598
 msgid "The {0} has no motion sensors. For motion, choose the GamePad or a Wii Remote."
 msgstr "El {0} no tiene sensores de movimiento. Para el movimiento, elige el GamePad o un Control remoto Wii."
 
-#: port/frontend/shell/pages.cpp:617
+#: port/frontend/shell/pages.cpp:615
 msgid "The Wii Remote's buttons are under Buttons."
 msgstr "Los botones del Control remoto Wii están en Botones."
 
@@ -208,7 +208,7 @@ msgstr "Una carpeta compartida por una computadora con Windows, macOS o Linux o 
 msgid "On, a QR code here opens the game's second screen in a phone's browser. Nothing to install; the phone must be on the PS5's network."
 msgstr "Activado, un código QR aquí abre la segunda pantalla del juego en el navegador de un celular. No hay que instalar nada; el celular debe estar en la red de la PS5."
 
-#: port/frontend/shell/setup.cpp:553
+#: port/frontend/shell/setup.cpp:541
 msgid "The guide, on your phone"
 msgstr "La guía, en tu celular"
 

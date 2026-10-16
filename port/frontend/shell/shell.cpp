@@ -1306,8 +1306,6 @@ namespace ps5shell
 		case ScreenId::Artic:
 			if (m_articEditing)
 				return {{Icon::LeftRight, Tr("Number")}, {Icon::UpDown, Tr("Change")}, {Icon::Cross, Tr("Keep")}};
-			if (m_articRow >= 2 && !m_articMissingKeys.empty())
-				return {{Icon::Circle, Tr("Back")}}; // a setup row without the keys it needs: it does not start
 			return {{Icon::Cross, m_articRow == 0 ? Tr("Edit") : m_articRow == 1 ? Tr("Connect") : Tr("Hold to set up")}, {Icon::Circle, Tr("Back")}};
 		case ScreenId::Updates: return UpdatesHints();
 		case ScreenId::Shares: return SharesHints();

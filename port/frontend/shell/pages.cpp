@@ -18,9 +18,7 @@
 #include "../../ps5/pad.h"
 
 #include <algorithm>
-#include <cctype>
 #include <cmath>
-#include <fstream>
 
 namespace ps5shell
 {
@@ -1253,9 +1251,13 @@ namespace ps5shell
 			lines[0] = {Tr("Games here"), games < 0 ? std::string(Tr("Cannot be read")) : TrP(games, "{0} game", "{0} games")};
 			if (n3ds)
 			{
-				const bool keys = IsFile(std::string(ps5azahar::kRoot) + "/sysdata/aes_keys.txt");
-				lines[1] = {"aes_keys.txt", keys ? Tr("Found") : Tr("Missing (only encrypted dumps need it)")};
-				ready[1] = keys;
+				// Azahar's own keys are built in, and it plays only decrypted games: an aes_keys.txt is
+				// shown only when there, as it then takes the place of all of them
+				if (IsFile(std::string(ps5azahar::kRoot) + "/sysdata/aes_keys.txt"))
+				{
+					lines[1] = {"aes_keys.txt", Tr("Found")};
+					ready[1] = true;
+				}
 			}
 			else if (nds)
 			{
@@ -1328,60 +1330,11 @@ namespace ps5shell
 
 	// -- Artic Base: a game from a 3DS on the network ----------------------------------------------------
 
-	namespace
-	{
-		// The keys Artic Setup needs that aes_keys.txt lacks, as Azahar reads that file (hw/aes/key.cpp,
-		// hw/ecc.cpp: name=hex lines under a ":AES" or ":ECC" line, a later one in the place of an
-		// earlier, carriage returns dropped by patch 0022). The app builds no keys in, and without these
-		// Azahar cannot read the OTP the 3DS sends: the setup ended with "Some console unique data is
-		// invalid" (#45). Empty when all three are there.
-		std::string ArticSetupMissingKeys()
-		{
-			struct Key
-			{
-				const char* section;
-				const char* name;
-				size_t digits; // the hex digits Azahar reads
-				bool found;
-			} keys[] = {{"AES", "otpKey", 32, false}, {"AES", "otpIV", 32, false}, {"ECC", "rootPublicXY", 120, false}};
-			std::ifstream file(std::string(ps5azahar::kRoot) + "/sysdata/aes_keys.txt", std::ios::binary);
-			std::string section, line;
-			while (std::getline(file, line))
-			{
-				std::erase(line, '\r');
-				if (line.starts_with(':'))
-				{
-					section = line.substr(1);
-					continue;
-				}
-				const size_t equals = line.find('=');
-				if (equals == std::string::npos || line.find('=', equals + 1) != std::string::npos)
-					continue;
-				const std::string_view name = std::string_view(line).substr(0, equals);
-				const std::string_view value = std::string_view(line).substr(equals + 1);
-				for (Key& key : keys)
-				{
-					if (section != key.section || name != key.name || value.size() < key.digits)
-						continue;
-					const std::string_view digits = value.substr(0, key.digits);
-					if (std::all_of(digits.begin(), digits.end(), [](char c) { return std::isxdigit((unsigned char)c) != 0; }))
-						key.found = digits.find_first_not_of('0') != std::string_view::npos; // all zeros is none
-				}
-			}
-			std::string missing;
-			for (const Key& key : keys)
-				if (!key.found)
-					missing += (missing.empty() ? "" : ", ") + std::string(key.name);
-			return missing;
-		}
-	}
-
 	void Shell::ArticOpen()
 	{
 		m_articRow = 0;
 		m_articEditing = false;
 		m_holdProgress = 0;
-		m_articMissingKeys = ArticSetupMissingKeys();
 		if (!ParseAddress(m_settings.n3ds.articAddress, m_articOctets))
 			m_articOctets = OwnAddress();
 		if (m_screen != ScreenId::Settings)
@@ -1406,9 +1359,10 @@ namespace ps5shell
 			// tr: {0} is a 3DS's network address
 			LaunchGame(game, TrF("Connecting to {0}", ArticAddress()), {760, 240, 400, 400});
 		};
-		// Artic Setup writes the 3DS's own data into Azahar's: held to confirm, and only with the keys
-		// it needs (ArticSetupMissingKeys)
-		if (!m_articEditing && (m_articRow == kRowArticSetupOld || m_articRow == kRowArticSetupNew) && m_articMissingKeys.empty())
+		// Artic Setup writes the 3DS's own data into Azahar's: held to confirm. The keys it needs are
+		// Azahar's own, built in; an aes_keys.txt without them stops it, and the 3DS says why
+		// (patches/azahar 0025)
+		if (!m_articEditing && (m_articRow == kRowArticSetupOld || m_articRow == kRowArticSetupNew))
 		{
 			const float seconds = m_settings.ui.holdMs / 1000.0f;
 			m_holdProgress = actions.Held(Button::Cross) ? actions.HeldFor(Button::Cross) / seconds : 0.0f;
@@ -1491,7 +1445,7 @@ namespace ps5shell
 				launch(ps5azahar::kArticBase, Tr("Artic Base"));
 			}
 			else
-				m_feedback.Play(ui::Cue::Denied); // held, not pressed; without the keys, not at all
+				m_feedback.Play(ui::Cue::Denied); // held, not pressed
 			return;
 		default: return;
 		}
@@ -1512,9 +1466,9 @@ namespace ps5shell
 			const char* name;
 			std::string value;
 			Row::Kind kind;
-			std::string help;
+			const char* help;
 		};
-		Item items[kArticRows] = {
+		const Item items[kArticRows] = {
 			{Tr("3DS address"), address, Row::Kind::Action,
 				Tr("The address Artic Base shows on the 3DS's screen when it is ready.\nCross edits it: Left and Right choose a number, Up and "
 				   "Down change it by 1, L1 and R1 by 10, and Cross again keeps it.\nThe 3DS and the PS5 must be on the same network.")},
@@ -1528,19 +1482,6 @@ namespace ps5shell
 				   "can (Settings > System).\nThat data is your console's: do not share Azahar's folder afterwards.")},
 			{Tr("Set up from a New 3DS"), Tr("Hold Cross"), Row::Kind::Hold, Tr("As above, from a New 3DS or New 2DS running the Artic Setup Tool app.")},
 		};
-		const bool keysMissing = !m_articMissingKeys.empty();
-		if (keysMissing)
-			for (const int i : {kRowArticSetupOld, kRowArticSetupNew})
-			{
-				items[i].kind = Row::Kind::Action;
-				// tr: an Artic Setup row's value: it can't start without keys aes_keys.txt lacks
-				items[i].value = Tr("Keys needed");
-				// tr: {0} is a folder, {1} the missing keys' names; otpKey, otpIV, rootPublicXY, :AES and :ECC are written as in the key file
-				const std::string keys = TrF("Azahar here has no keys of its own: the setup needs otpKey and otpIV (under :AES) and "
-											 "rootPublicXY (under :ECC) in aes_keys.txt from your own console, in {0}/sysdata.\nMissing: {1}.",
-					ps5azahar::kRoot, m_articMissingKeys);
-				items[i].help = keys + "\n" + items[i].help;
-			}
 		canvas.PushAlpha(Enter(1));
 		for (int i = 0; i < kArticRows; i++)
 		{
@@ -1548,7 +1489,6 @@ namespace ps5shell
 			row.kind = items[i].kind;
 			row.label = items[i].name;
 			row.value = items[i].value;
-			row.dimmed = keysMissing && (i == kRowArticSetupOld || i == kRowArticSetupNew);
 			const Box box{kListX, kListTop + i * 108.0f, kListWidth, 96};
 			DrawRow(canvas, row, box, i == m_articRow);
 			if (i == m_articRow && items[i].kind == Row::Kind::Hold)
@@ -1556,7 +1496,7 @@ namespace ps5shell
 		}
 		canvas.PopAlpha();
 		canvas.PushAlpha(Enter(2));
-		const ui::TextBlock help = m_fonts.Layout(Style({24, ui::Weight::Regular, 1.45f}), items[m_articRow].help, kDetailWidth - 80, 18);
+		const ui::TextBlock help = m_fonts.Layout(Style({24, ui::Weight::Regular, 1.45f}), items[m_articRow].help, kDetailWidth - 80, 14);
 		const Box panel{kDetailX, kListTop - 10, kDetailWidth, help.height + 130};
 		Panel(canvas, panel, kRadiusSheet);
 		canvas.Text(Style(kOverlineStyle), panel.x + 40, panel.y + 36, items[m_articRow].name, Tertiary(), panel.w - 80, 1);

@@ -103,11 +103,11 @@ Updating: the app offers new releases itself. Everything in `/data/ps5cemu` is k
 | | Games folder | Also needs |
 |---|---|---|
 | **Wii U** | `/data/ps5cemu/games` | disc keys in `/data/ps5cemu/keys.txt` for encrypted `.wud` and `.wux` |
-| **3DS** | `/data/ps5cemu/azahar/games` | decrypted dumps, or your console's `aes_keys.txt` in `/data/ps5cemu/azahar/sysdata`; `.cia` files install from Settings |
+| **3DS** | `/data/ps5cemu/azahar/games` | nothing: games must be decrypted dumps; `.cia` files install from Settings |
 | **DS** | `/data/ps5cemu/melonds/games` | nothing: your own BIOS and firmware in `/data/ps5cemu/melonds/bios` are optional |
 
 Any other folder, a USB drive or a network share works too: **Settings > Game files** on each system.
-No games, keys or firmware are included. Use dumps of games and hardware you own.
+No games, Wii U disc keys or firmware are included. Use dumps of games and hardware you own.
 
 ## Controls
 

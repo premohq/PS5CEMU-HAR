@@ -219,20 +219,8 @@ namespace ps5shell
 		wiiuKeys.guideTitle = Tr("the game files page");
 		if (SideShown(System::WiiU))
 			m_checks.push_back(wiiuKeys);
-
-		const bool aesKeys = IsFile(std::string(ps5azahar::kRoot) + "/sysdata/aes_keys.txt");
-		Check n3dsKeys{"3ds-keys", Tr("3DS keys")};
-		n3dsKeys.state = aesKeys ? 0 : 1;
-		n3dsKeys.detail = aesKeys ? Tr("aes_keys.txt found") : Tr("aes_keys.txt is missing: only encrypted dumps need it");
-		n3dsKeys.action = aesKeys ? "" : Tr("How to");
-		n3dsKeys.aboutTitle = Tr("Keys for encrypted 3DS dumps");
-		n3dsKeys.about = TrF("Encrypted dumps need aes_keys.txt from your own console in {0}/sysdata. Decrypted dumps, homebrew and installed "
-							 "CIAs need none. No keys come with PS5CEMU-HAR.",
-			ps5azahar::kRoot);
-		n3dsKeys.guide = std::string(kRepository) + "#nintendo-3ds";
-		n3dsKeys.guideTitle = Tr("the game files page");
-		if (SideShown(System::N3ds))
-			m_checks.push_back(n3dsKeys);
+		// no 3DS keys to check: Azahar's own are built in (tools/build-azahar.sh), and it plays only
+		// decrypted games whatever keys it has
 
 		// the 3DS's own files, which only the Home Menu and a few games need. Azahar looks for them in its
 		// own files, which only the 3DS side opens (asked from elsewhere, its logging would start and run

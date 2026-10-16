@@ -38,7 +38,7 @@ msgstr "A on Circle and B on Cross, where the 3DS has them, or the other way aro
 msgid "Centre pad"
 msgstr "Center pad"
 
-#: port/frontend/shell/eden.cpp:834 port/frontend/shell/eden.cpp:1351 port/frontend/shell/hub.cpp:218 port/frontend/shell/shell.cpp:1619
+#: port/frontend/shell/eden.cpp:834 port/frontend/shell/eden.cpp:1351 port/frontend/shell/hub.cpp:218 port/frontend/shell/shell.cpp:1617
 msgid "Favourite"
 msgstr "Favorite"
 
@@ -53,23 +53,23 @@ msgstr "Favorites"
 msgid "Options on a game, then Favourite, puts it here."
 msgstr "Options on a game, then Favorite, puts it here."
 
-#: port/frontend/shell/pages.cpp:783
+#: port/frontend/shell/pages.cpp:781
 msgid "Cancelled: it stays as it was."
 msgstr "Canceled: it stays as it was."
 
-#: port/frontend/shell/pages.cpp:967
+#: port/frontend/shell/pages.cpp:965
 msgid "Cancelling: what it copied is removed…"
 msgstr "Canceling: what it copied is removed…"
 
-#: port/frontend/shell/pages.cpp:972
+#: port/frontend/shell/pages.cpp:970
 msgid "Cancelling: what was installed before is put back…"
 msgstr "Canceling: what was installed before is put back…"
 
-#: port/frontend/shell/pages.cpp:1149
+#: port/frontend/shell/pages.cpp:1147
 msgid "Cancelled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
 msgstr "Canceled. What it copied was removed, with any earlier copy of the same title: install it again to play it. Its saves are kept."
 
-#: port/frontend/shell/pages.cpp:1152
+#: port/frontend/shell/pages.cpp:1150
 msgid "Cancelled. What was installed before is as it was."
 msgstr "Canceled. What was installed before is as it was."
 
@@ -99,14 +99,14 @@ msgstr ""
 "{{\"name\": \"Sunset\", \"base\": \"midnight\", \"colors\": {{\"wiiu\": \"#ff7a59\", \"ink-0\": \"#120806\"}}, \"corners\": 0.5, \"motif\": \"slashes\"}}\n"
 "base: a theme to start from (classic, midnight, phantom, terminal). colors: ink-0 to ink-2 (the background), text, wiiu, n3ds and nds (each side's), glass, line, good, warn, bad and focus, as #rrggbb. corners: 0 square to 1.5 round. motif: side, none, slashes or grid."
 
-#: port/frontend/shell/shell.cpp:1619
+#: port/frontend/shell/shell.cpp:1617
 msgid "Not a favourite"
 msgstr "Not a favorite"
 
-#: port/frontend/shell/shell.cpp:1941
+#: port/frontend/shell/shell.cpp:1939
 msgid "Added to Favourites"
 msgstr "Added to Favorites"
 
-#: port/frontend/shell/shell.cpp:1941
+#: port/frontend/shell/shell.cpp:1939
 msgid "Taken out of Favourites"
 msgstr "Taken out of Favorites"
